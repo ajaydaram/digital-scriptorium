@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -14,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture } from "@/services/bibleService";
 import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
 import { studyWord, type WordStudyOutput } from "@/ai/flows/word-study";
+import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
 import { 
   Sparkles, 
   ChevronLeft, 
@@ -29,10 +29,10 @@ import {
   Send,
   Loader2,
   Languages,
-  Zap
+  Zap,
+  List
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useUserProgress } from "@/hooks/use-user-progress";
 import { useAnnotations } from "@/hooks/use-annotations";
 import { useUser, useFirestore } from "@/firebase";
@@ -45,6 +45,7 @@ export default function ReaderPage() {
   const { firestore } = useFirestore();
   const [searchQuery, setSearchQuery] = useState("John 3:16");
   const [currentRef, setCurrentRef] = useState("John 3:16");
+  const [version, setVersion] = useState("kjv");
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
   
@@ -62,17 +63,17 @@ export default function ReaderPage() {
   const { toast } = useToast();
   
   const readingUnitId = currentRef.toLowerCase().replace(/[\s:]/g, "-");
-  const { currentStep, updateProgress } = useUserProgress(readingUnitId);
+  const { currentStep, updateProgress, progress } = useUserProgress(readingUnitId);
   const { annotations, addAnnotation, isLoading: isNotesLoading } = useAnnotations(currentRef);
 
   useEffect(() => {
-    loadScripture(currentRef);
-  }, [currentRef]);
+    loadScripture(currentRef, version);
+  }, [currentRef, version]);
 
-  const loadScripture = async (ref: string) => {
+  const loadScripture = async (ref: string, v: string) => {
     setLoading(true);
     try {
-      const data = await getScripture(ref);
+      const data = await getScripture(ref, v);
       setScripture(data);
       setAiResult(null);
       setWordStudyResult(null);
@@ -81,7 +82,7 @@ export default function ReaderPage() {
       toast({
         variant: "destructive",
         title: "Error",
-        description: `Reference "${ref}" not found in our current library.`
+        description: `Could not fetch "${ref}". Please check the reference format (e.g. John 3:16).`
       });
     } finally {
       setLoading(false);
@@ -120,7 +121,6 @@ export default function ReaderPage() {
       const result = await studyWord({ word: selectedWord, context: scripture.text });
       setWordStudyResult(result);
       
-      // Log the study if user is authenticated
       if (user && firestore) {
         const colRef = collection(firestore, 'users', user.uid, 'word_studies');
         addDocumentNonBlocking(colRef, {
@@ -146,20 +146,13 @@ export default function ReaderPage() {
 
   const handleSaveNote = () => {
     if (!user) {
-      toast({
-        title: "Authentication Required",
-        description: "Please sign in to save your scholarly notes."
-      });
+      toast({ title: "Authentication Required", description: "Please sign in to save your scholarly notes." });
       return;
     }
     if (!newNote.trim()) return;
-    
     addAnnotation(newNote);
     setNewNote("");
-    toast({
-      title: "Note Saved",
-      description: "Your scholarly insight has been added to your collection."
-    });
+    toast({ title: "Note Saved", description: "Your scholarly insight has been added to your collection." });
   };
 
   return (
@@ -167,19 +160,32 @@ export default function ReaderPage() {
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-6xl">
+        {/* Active Path Indicator */}
+        {progress?.pathId && (
+          <div className="mb-6 flex items-center gap-3 bg-white/50 border border-slate-100 p-3 rounded-2xl animate-in fade-in slide-in-from-top-2 duration-500">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <List className="h-4 w-4 text-primary" />
+            </div>
+            <div>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Active Reading Path</p>
+              <p className="text-xs font-bold text-slate-700">{progress.pathId.charAt(0).toUpperCase() + progress.pathId.slice(1)} Study</p>
+            </div>
+          </div>
+        )}
+
         <div className="mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <form onSubmit={handleSearch} className="relative w-full md:w-96 group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-primary transition-colors" />
             <Input 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="e.g. Genesis 1:1, Romans 8:28..."
+              placeholder="e.g. John 3:16, Romans 8:28..."
               className="pl-11 h-12 rounded-xl bg-white border-slate-200 focus:ring-primary/20 transition-all shadow-sm"
             />
           </form>
           
-          <div className="flex items-center gap-2">
-            <Badge variant="outline" className="bg-white font-bold px-3 py-1">KJV</Badge>
+          <div className="flex items-center gap-4">
+            <BibleVersionSwitcher currentVersion={version} onVersionChange={setVersion} />
             <Separator orientation="vertical" className="h-6" />
             <Button variant="ghost" size="icon" className="rounded-xl"><Bookmark className="h-4 w-4" /></Button>
             <Button variant="ghost" size="icon" className="rounded-xl"><Share2 className="h-4 w-4" /></Button>
@@ -192,10 +198,7 @@ export default function ReaderPage() {
               <div className="bg-brand-gradient h-2 w-full" />
               <CardContent className="p-6 md:p-12">
                 <div className="mb-12">
-                  <GuidedAscent 
-                    currentStep={currentStep} 
-                    onStepClick={updateProgress}
-                  />
+                  <GuidedAscent currentStep={currentStep} onStepClick={updateProgress} />
                 </div>
 
                 <div className="prose prose-slate lg:prose-xl max-w-none min-h-[300px]">
@@ -213,12 +216,12 @@ export default function ReaderPage() {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <Badge className="bg-primary/10 text-primary border-none text-[10px] font-bold uppercase tracking-widest px-3 py-1">
-                            ACTIVE PASSAGE
+                            {scripture.translation_name || 'REAL TEXT'}
                           </Badge>
                           <h3 className="text-slate-400 text-sm font-bold uppercase tracking-widest">{scripture.reference}</h3>
                         </div>
                       </div>
-                      <p className="font-serif leading-relaxed text-slate-800 text-3xl selection:bg-accent/20">
+                      <p className="font-serif leading-relaxed text-slate-800 text-3xl selection:bg-accent/20 first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:mr-2 first-letter:float-left">
                         {scripture.text}
                       </p>
                       
@@ -228,11 +231,7 @@ export default function ReaderPage() {
                           disabled={aiLoading}
                           className="btn-gradient font-bold rounded-xl px-8 py-6 h-auto gap-3 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex-1"
                         >
-                          {aiLoading ? (
-                            <Loader2 className="h-5 w-5 animate-spin" />
-                          ) : (
-                            <Sparkles className="h-5 w-5" />
-                          )}
+                          {aiLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Sparkles className="h-5 w-5" />}
                           Consult AI Pedagogical Guide
                         </Button>
 
@@ -259,7 +258,6 @@ export default function ReaderPage() {
               </CardContent>
             </Card>
 
-            {/* AI Result */}
             {aiResult && (
               <Card className="shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <CardHeader className="bg-primary/5 py-4">
@@ -301,7 +299,6 @@ export default function ReaderPage() {
               </Card>
             )}
 
-            {/* Note Entry Area */}
             <Card className="border-none shadow-lg rounded-3xl overflow-hidden">
               <CardHeader className="bg-slate-50/50 py-4">
                 <CardTitle className="text-sm font-bold flex items-center gap-2 text-slate-600">
@@ -316,11 +313,7 @@ export default function ReaderPage() {
                   className="min-h-[120px] rounded-2xl bg-white border-slate-100 focus:ring-primary/20"
                 />
                 <div className="flex justify-end">
-                  <Button 
-                    onClick={handleSaveNote}
-                    disabled={!newNote.trim()}
-                    className="btn-gradient rounded-xl font-bold px-6"
-                  >
+                  <Button onClick={handleSaveNote} disabled={!newNote.trim()} className="btn-gradient rounded-xl font-bold px-6">
                     Save to Journal <Send className="h-4 w-4 ml-2" />
                   </Button>
                 </div>
@@ -329,7 +322,6 @@ export default function ReaderPage() {
           </div>
 
           <div className="space-y-8">
-            {/* Word Study Result */}
             {wordStudyResult && (
               <Card className="shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-right-4 duration-500">
                 <CardHeader className="bg-accent/5 py-4 border-b border-accent/10">
@@ -364,26 +356,11 @@ export default function ReaderPage() {
                         {wordStudyResult.pedagogicalInsight}
                       </p>
                     </div>
-
-                    <div className="space-y-3">
-                      <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Key Occurrences</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {wordStudyResult.relatedVerses.map(v => (
-                          <Badge key={v} variant="secondary" className="bg-white border border-slate-100 cursor-pointer hover:border-accent transition-colors" onClick={() => {
-                            setCurrentRef(v);
-                            setSearchQuery(v);
-                          }}>
-                            {v}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
             )}
 
-            {/* User Annotations Feed */}
             <Card className="shadow-xl border-none rounded-3xl overflow-hidden bg-white">
               <CardHeader className="py-4 border-b border-slate-50">
                 <CardTitle className="text-sm font-bold flex items-center gap-2">
@@ -403,9 +380,7 @@ export default function ReaderPage() {
                               {note.createdAt?.toDate ? format(note.createdAt.toDate(), 'MMM d, p') : 'Just now'}
                             </span>
                           </div>
-                          <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                            {note.content}
-                          </p>
+                          <p className="text-sm text-slate-700 leading-relaxed font-medium">{note.content}</p>
                         </div>
                       ))}
                     </div>
@@ -414,9 +389,7 @@ export default function ReaderPage() {
                       <div className="h-10 w-10 bg-slate-50 rounded-full flex items-center justify-center mx-auto text-slate-300">
                         <MessageSquare className="h-5 w-5" />
                       </div>
-                      <p className="text-xs text-slate-400 font-medium leading-relaxed">
-                        No scholarly notes yet for this passage. Start recording your insights below.
-                      </p>
+                      <p className="text-xs text-slate-400 font-medium leading-relaxed">No scholarly notes for this passage.</p>
                     </div>
                   )}
                 </ScrollArea>

@@ -1,44 +1,56 @@
 /**
- * @fileOverview Bible Service for fetching scripture passages.
- * Currently using mock data, but structured for easy integration with API.Bible or similar services.
+ * @fileOverview Bible Service for fetching scripture passages from a real API.
+ * Uses bible-api.com (public, no-key) as a robust starting point, 
+ * structured to be easily swapped for API.Bible.
  */
 
 export interface Scripture {
   reference: string;
   text: string;
   version: string;
-  bookName?: string;
-  chapter?: number;
+  translation_name?: string;
+  verses?: Array<{
+    book_id: string;
+    book_name: string;
+    chapter: number;
+    verse: number;
+    text: string;
+  }>;
 }
 
-const MOCK_DATA: Record<string, string> = {
-  "John 3:16": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
-  "Psalm 23:1": "The LORD is my shepherd; I shall not want.",
-  "Genesis 1:1": "In the beginning God created the heaven and the earth.",
-  "Matthew 5:3": "Blessed are the poor in spirit: for theirs is the kingdom of heaven.",
-  "Romans 8:28": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
-};
+export const SUPPORTED_VERSIONS = [
+  { id: 'kjv', name: 'King James Version' },
+  { id: 'asv', name: 'American Standard Version' },
+  { id: 'web', name: 'World English Bible' },
+  { id: 'bbe', name: 'Basic English Bible' },
+  { id: 'ylt', name: 'Young\'s Literal Translation' },
+];
 
 /**
- * Fetches a scripture passage by reference.
- * Structuring this with an async pattern to accommodate future Axios/Fetch calls.
+ * Fetches a scripture passage by reference using the bible-api.com service.
  */
-export async function getScripture(reference: string, version: string = "KJV"): Promise<Scripture> {
-  // Simulate network latency
-  await new Promise((resolve) => setTimeout(resolve, 600));
+export async function getScripture(reference: string, version: string = "kjv"): Promise<Scripture> {
+  // Normalize reference for API (e.g. "John 3:16" -> "john+3:16")
+  const query = encodeURIComponent(reference.toLowerCase().trim());
+  const url = `https://bible-api.com/${query}?translation=${version}`;
 
-  // Placeholder for future API implementation:
-  // const response = await axios.get(`https://api.scripture.api.bible/v1/bibles/${bibleId}/passages/${passageId}`, { headers });
-  
-  const text = MOCK_DATA[reference];
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Passage "${reference}" not found.`);
+    }
 
-  if (!text) {
-    throw new Error(`Scripture reference "${reference}" not found in mock database.`);
+    const data = await response.json();
+    
+    return {
+      reference: data.reference,
+      text: data.text,
+      version: version.toUpperCase(),
+      translation_name: data.translation_name,
+      verses: data.verses
+    };
+  } catch (error) {
+    console.error("Bible Service Error:", error);
+    throw error;
   }
-
-  return {
-    reference,
-    text,
-    version
-  };
 }

@@ -6,6 +6,8 @@ import { ArrowRight, History, Library, Lightbulb, CheckCircle2 } from "lucide-re
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
+import { useUserProgress } from "@/hooks/use-user-progress";
+import { useRouter } from "next/navigation";
 
 const PATHS = [
   {
@@ -65,6 +67,14 @@ const PATHS = [
 ];
 
 export function ReadingPathsSection() {
+  const router = useRouter();
+  const { updatePath } = useUserProgress("global-path"); // Using a shared unit for path selection
+
+  const handleBeginPath = (pathId: string) => {
+    updatePath(pathId);
+    router.push('/reader');
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {PATHS.map((path) => (
@@ -118,10 +128,13 @@ export function ReadingPathsSection() {
               </div>
             </CardContent>
             
-            <button className={cn(
-              "flex items-center gap-2 font-headline font-bold text-sm group-hover:gap-3 transition-all w-fit py-1",
-              path.accentColor
-            )}>
+            <button 
+              onClick={() => handleBeginPath(path.id)}
+              className={cn(
+                "flex items-center gap-2 font-headline font-bold text-sm group-hover:gap-3 transition-all w-fit py-1",
+                path.accentColor
+              )}
+            >
               Begin Path <ArrowRight className="h-4 w-4" />
             </button>
           </div>
