@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Search, BookOpen, CheckCircle2, ChevronRight, Globe, Info, Zap } from "lucide-react";
+import { Search, BookOpen, CheckCircle2, ChevronRight, Globe, Info, Zap, Loader2 } from "lucide-react";
 import { getScripture, type Scripture } from "@/services/bibleService";
 import { useToast } from "@/hooks/use-toast";
 
@@ -140,7 +140,7 @@ export default function ApiReaderPage() {
                      <Zap className="h-4 w-4" /> Get Full Access
                    </h4>
                    <p className="text-slate-400 text-xs leading-relaxed">
-                     Sign up for a free API key at <a href="https://api.bible" target="_blank" className="underline hover:text-white transition-colors">api.bible</a> and add it to your .env.local file as NEXT_PUBLIC_BIBLE_API_KEY.
+                     Sign up for a free API key at <a href="https://api.bible" target="_blank" className="underline hover:text-white transition-colors">api.bible</a> and add it to your .env.local file.
                    </p>
                  </div>
 
@@ -164,7 +164,7 @@ export default function ApiReaderPage() {
                   <div className="space-y-1">
                     <h2 className="text-3xl font-headline font-bold text-slate-900">{scripture?.reference || currentRef}</h2>
                     <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                      Berean Standard Bible (Simulated for Demo)
+                      {scripture?.translation_name || "Official Scripture Source"}
                     </p>
                   </div>
                   <Badge variant="outline" className="text-[10px] font-bold py-1 px-3 border-primary/20 text-primary bg-primary/5 uppercase tracking-widest h-fit">
@@ -175,11 +175,9 @@ export default function ApiReaderPage() {
               
               <CardContent className="flex-1 p-8 md:p-12">
                 {loading ? (
-                  <div className="space-y-6 animate-pulse">
-                    <div className="h-6 bg-slate-100 rounded-full w-3/4" />
-                    <div className="h-6 bg-slate-100 rounded-full w-full" />
-                    <div className="h-6 bg-slate-100 rounded-full w-5/6" />
-                    <div className="h-6 bg-slate-100 rounded-full w-4/6" />
+                  <div className="flex flex-col items-center justify-center h-full space-y-4 opacity-40">
+                    <Loader2 className="h-12 w-12 animate-spin text-primary" />
+                    <p className="font-headline font-bold text-lg">Retrieving Sacred Text...</p>
                   </div>
                 ) : scripture ? (
                   <div className="animate-in fade-in duration-700">
@@ -200,7 +198,7 @@ export default function ApiReaderPage() {
               <div className="p-8 pt-4 border-t border-slate-50 flex items-center justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                 <span>Content provided by API.Bible • American Bible Society</span>
                 <span className="flex items-center gap-1.5">
-                  <div className="h-2 w-2 rounded-full bg-emerald-500" /> API VERSION: 1.0.4
+                  <div className="h-2 w-2 rounded-full bg-emerald-500" /> ENGINE: bible-api.com fallback enabled
                 </span>
               </div>
             </Card>
