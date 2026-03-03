@@ -5,134 +5,63 @@
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "UserProfile",
       "type": "object",
-      "description": "Represents a user's profile information, excluding authentication credentials which are managed by an external system like Firebase Auth.",
+      "description": "Represents a user's profile information.",
       "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the UserProfile entity. This typically maps to the Firebase Auth User ID (uid)."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The user's preferred display name."
-        },
-        "email": {
-          "type": "string",
-          "description": "The user's email address.",
-          "format": "email"
-        },
-        "avatarUrl": {
-          "type": "string",
-          "description": "URL to the user's profile picture or avatar.",
-          "format": "uri"
-        },
-        "createdAt": {
-          "type": "string",
-          "description": "Timestamp when the user profile was created.",
-          "format": "date-time"
-        },
-        "updatedAt": {
-          "type": "string",
-          "description": "Timestamp when the user profile was last updated.",
-          "format": "date-time"
-        }
+        "id": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "avatarUrl": { "type": "string", "format": "uri" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
       },
-      "required": [
-        "id",
-        "displayName",
-        "email",
-        "createdAt",
-        "updatedAt"
-      ]
+      "required": ["id", "displayName", "email", "createdAt", "updatedAt"]
     },
     "UserProgress": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "UserProgress",
       "type": "object",
-      "description": "Tracks a specific user's progress through a ReadingUnit within a ReadingPath, including their current stage in the 'Guided Ascent'.",
+      "description": "Tracks a specific user's progress through a ReadingUnit.",
       "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the UserProgress entity."
-        },
-        "userId": {
-          "type": "string",
-          "description": "Reference to the UserProfile making the progress."
-        },
-        "readingUnitId": {
-          "type": "string",
-          "description": "Reference to the ReadingUnit for which progress is being tracked."
-        },
-        "currentStage": {
-          "type": "string",
-          "description": "The current stage of the 'Guided Ascent' (e.g., 'Read', 'Understand', 'Master')."
-        },
-        "startedAt": {
-          "type": "string",
-          "description": "Timestamp when the user first started this reading unit.",
-          "format": "date-time"
-        },
-        "lastAccessedAt": {
-          "type": "string",
-          "description": "Timestamp when this reading unit was last accessed.",
-          "format": "date-time"
-        },
-        "completedAt": {
-          "type": "string",
-          "description": "Optional timestamp when the 'Master' stage was achieved.",
-          "format": "date-time"
-        }
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "readingUnitId": { "type": "string" },
+        "currentStage": { "type": "string", "enum": ["Read", "Understand", "Master"] },
+        "startedAt": { "type": "string", "format": "date-time" },
+        "lastAccessedAt": { "type": "string", "format": "date-time" },
+        "completedAt": { "type": "string", "format": "date-time" }
       },
-      "required": [
-        "id",
-        "userId",
-        "readingUnitId",
-        "currentStage",
-        "startedAt",
-        "lastAccessedAt"
-      ]
+      "required": ["id", "userId", "readingUnitId", "currentStage", "startedAt", "lastAccessedAt"]
     },
     "Annotation": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Annotation",
       "type": "object",
-      "description": "A user-created note or highlight on a specific scripture passage.",
+      "description": "A user-created note or highlight on a scripture passage.",
       "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the annotation."
-        },
-        "userId": {
-          "type": "string",
-          "description": "Reference to the authoring UserProfile."
-        },
-        "passageRef": {
-          "type": "string",
-          "description": "The scripture reference (e.g., 'John 3:16') this annotation belongs to."
-        },
-        "content": {
-          "type": "string",
-          "description": "The text content of the annotation."
-        },
-        "createdAt": {
-          "type": "string",
-          "description": "Timestamp when the annotation was created.",
-          "format": "date-time"
-        }
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "passageRef": { "type": "string" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
       },
-      "required": [
-        "id",
-        "userId",
-        "passageRef",
-        "content",
-        "createdAt"
-      ]
+      "required": ["id", "userId", "passageRef", "content", "createdAt"]
+    },
+    "ReadingPath": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ReadingPath",
+      "type": "object",
+      "description": "A curated study journey.",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "type": { "type": "string", "enum": ["chronological", "thematic", "genre"] }
+      },
+      "required": ["id", "title", "description", "type"]
     }
   },
   "auth": {
-    "providers": [
-      "google.com",
-      "anonymous"
-    ]
+    "providers": ["google.com", "anonymous"]
   },
   "firestore": {
     "/users/{userId}": {
@@ -145,7 +74,11 @@
     },
     "/users/{userId}/annotations/{annotationId}": {
       "schema": "Annotation",
-      "description": "Private study notes and verse highlights."
+      "description": "Private user notes and verse highlights."
+    },
+    "/reading_paths/{pathId}": {
+      "schema": "ReadingPath",
+      "description": "Public curated study paths."
     }
   }
 }
