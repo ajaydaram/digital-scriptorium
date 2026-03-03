@@ -90,6 +90,42 @@
         "startedAt",
         "lastAccessedAt"
       ]
+    },
+    "Annotation": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Annotation",
+      "type": "object",
+      "description": "A user-created note or highlight on a specific scripture passage.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the annotation."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to the authoring UserProfile."
+        },
+        "passageRef": {
+          "type": "string",
+          "description": "The scripture reference (e.g., 'John 3:16') this annotation belongs to."
+        },
+        "content": {
+          "type": "string",
+          "description": "The text content of the annotation."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the annotation was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "passageRef",
+        "content",
+        "createdAt"
+      ]
     }
   },
   "auth": {
@@ -106,6 +142,10 @@
     "/users/{userId}/user_progress/{progressId}": {
       "schema": "UserProgress",
       "description": "Private study progress tracking."
+    },
+    "/users/{userId}/annotations/{annotationId}": {
+      "schema": "Annotation",
+      "description": "Private study notes and verse highlights."
     }
   }
 }

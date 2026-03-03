@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -7,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { 
   BookOpen, 
   MessageSquare, 
@@ -20,16 +21,23 @@ import {
 } from "lucide-react";
 import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
 import { useToast } from "@/hooks/use-toast";
+import { useAnnotations } from "@/hooks/use-annotations";
+import { useUser } from "@/firebase";
+import { formatDistanceToNow } from "date-fns";
 
 export default function StudyHubPage() {
   const [aiLoading, setAiLoading] = useState(false);
   const [aiResult, setAiResult] = useState<AIAnnotatorExplanationOutput | null>(null);
+  const [newAnnotation, setNewAnnotation] = useState("");
   const { toast } = useToast();
+  const { user } = useUser();
 
   const passage = {
     ref: "John 3:16",
     text: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
   };
+
+  const { annotations, addAnnotation, isLoading: isNotesLoading } = useAnnotations(passage.ref);
 
   const handleAskAI = async () => {
     setAiLoading(true);
@@ -50,6 +58,25 @@ export default function StudyHubPage() {
       });
     } finally {
       setAiLoading(false);
+    }
+  };
+
+  const handleAddAnnotation = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!user) {
+      toast({
+        title: "Sign in Required",
+        description: "You must be signed in to add annotations."
+      });
+      return;
+    }
+    if (newAnnotation.trim()) {
+      addAnnotation(newAnnotation);
+      setNewAnnotation("");
+      toast({
+        title: "Annotation Saved",
+        description: "Your insight has been added to your study collection."
+      });
     }
   };
 
@@ -96,32 +123,32 @@ export default function StudyHubPage() {
               </Card>
             </div>
 
-            {/* Right: Social Annotation Feed */}
+            {/* Right: Annotation Feed */}
             <div className="flex flex-col h-full space-y-4">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-headline font-bold flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-accent" /> Social Annotation
+                  <MessageSquare className="h-5 w-5 text-accent" /> My Study Notes
                 </h2>
-                <Badge variant="secondary">4 Active Scholars</Badge>
+                <Badge variant="secondary">{annotations?.length || 0} Insights</Badge>
               </div>
 
               <Card className="flex-1 shadow-xl border-none flex flex-col overflow-hidden">
                 <ScrollArea className="flex-1 p-6">
                   <div className="space-y-6">
                     
-                    {/* Mock Scholar Comment */}
-                    <div className="flex gap-4 animate-in fade-in slide-in-from-right-4 duration-500">
+                    {/* Mock Scholar Comment (Always Visible as a Guide) */}
+                    <div className="flex gap-4 opacity-60">
                       <Avatar className="h-10 w-10 border-2 border-white shadow-sm">
-                        <AvatarFallback className="bg-slate-200 text-slate-600 font-bold">JD</AvatarFallback>
+                        <AvatarFallback className="bg-slate-200 text-slate-600 font-bold text-xs">JD</AvatarFallback>
                       </Avatar>
                       <div className="flex-1 space-y-2">
                         <div className="flex items-center gap-2">
                           <span className="font-bold text-sm text-slate-900">JD (Scholastic Lead)</span>
-                          <span className="text-[10px] text-slate-400 font-medium">10:45 AM</span>
+                          <span className="text-[10px] text-slate-400 font-medium">Ref: John 3:16</span>
                         </div>
                         <div className="bg-white p-4 rounded-2xl rounded-tl-none border border-slate-100 shadow-sm">
-                          <p className="text-sm text-slate-700 leading-relaxed">
-                            The Greek word here is <strong className="text-primary italic">agape</strong> — unconditional love. This is the same word used in 1 Cor 13. It's crucial to understand that this isn't just emotion, but a covenantal commitment from God toward the world.
+                          <p className="text-sm text-slate-700 leading-relaxed italic">
+                            The Greek word here is <strong className="text-primary">agape</strong>. It represents covenantal commitment rather than simple emotion.
                           </p>
                         </div>
                       </div>
@@ -130,7 +157,7 @@ export default function StudyHubPage() {
                     {/* AI Result Inserted into Feed */}
                     {aiResult && (
                       <div className="flex gap-4 animate-in zoom-in-95 duration-700">
-                        <div className="h-10 w-10 rounded-full bg-brand-gradient flex items-center justify-center shadow-lg">
+                        <div className="h-10 w-10 rounded-full bg-brand-gradient flex items-center justify-center shadow-lg shrink-0">
                           <Sparkles className="h-5 w-5 text-white" />
                         </div>
                         <div className="flex-1 space-y-3">
@@ -158,59 +185,67 @@ export default function StudyHubPage() {
                                 {aiResult.theologicalContext}
                               </p>
                             </div>
-
-                            <div className="pt-2">
-                               <h4 className="text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Key Narrative Links</h4>
-                               <div className="space-y-2">
-                                 {aiResult.suggestedReferences.map((ref, i) => (
-                                   <div key={i} className="flex items-start gap-2 group">
-                                      <ChevronRight className="h-3 w-3 mt-1 text-primary/40 group-hover:text-primary transition-colors" />
-                                      <div className="text-xs">
-                                        <span className="font-bold text-primary block">{ref.ref}</span>
-                                        <span className="text-slate-500">{ref.reason}</span>
-                                      </div>
-                                   </div>
-                                 ))}
-                               </div>
-                            </div>
                           </div>
                         </div>
                       </div>
                     )}
 
-                    {!aiResult && !aiLoading && (
+                    {/* Real User Annotations */}
+                    {annotations?.map((note) => (
+                      <div key={note.id} className="flex gap-4 animate-in slide-in-from-right-4 duration-500">
+                        <Avatar className="h-10 w-10 border-2 border-white shadow-sm shrink-0">
+                          <AvatarImage src={user?.photoURL || ""} />
+                          <AvatarFallback className="bg-accent/10 text-accent font-bold text-xs">
+                            {user?.displayName?.[0] || 'U'}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div className="flex-1 space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-sm text-slate-900">{user?.displayName || 'My Note'}</span>
+                            <span className="text-[10px] text-slate-400 font-medium">
+                              {note.createdAt ? formatDistanceToNow(new Date(note.createdAt.seconds * 1000), { addSuffix: true }) : 'just now'}
+                            </span>
+                          </div>
+                          <div className="bg-white p-4 rounded-2xl rounded-tl-none border border-slate-100 shadow-sm group relative">
+                            <p className="text-sm text-slate-700 leading-relaxed">
+                              {note.content}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+
+                    {!aiResult && !aiLoading && (!annotations || annotations.length === 0) && (
                       <div className="flex flex-col items-center justify-center py-12 text-center space-y-4 opacity-40">
                          <Info className="h-12 w-12 text-slate-300" />
                          <p className="text-sm text-slate-500 max-w-[200px]">
-                           Ask the AI Pedagogical Guide to reveal the theological depth of this passage.
+                           Add your first study note below or ask the AI Pedagogical Guide for a deep dive.
                          </p>
-                      </div>
-                    )}
-
-                    {aiLoading && (
-                      <div className="flex gap-4 animate-pulse">
-                         <div className="h-10 w-10 rounded-full bg-slate-200" />
-                         <div className="flex-1 space-y-2">
-                           <div className="h-4 bg-slate-200 rounded w-1/4" />
-                           <div className="h-24 bg-slate-200 rounded-2xl" />
-                         </div>
                       </div>
                     )}
                   </div>
                 </ScrollArea>
 
-                <div className="p-4 border-t border-slate-100 bg-white">
+                <form onSubmit={handleAddAnnotation} className="p-4 border-t border-slate-100 bg-white">
                   <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
                     <input 
                       type="text" 
-                      placeholder="Add an annotation..." 
+                      value={newAnnotation}
+                      onChange={(e) => setNewAnnotation(e.target.value)}
+                      placeholder="Add a scholarly annotation..." 
                       className="bg-transparent border-none focus:ring-0 text-sm flex-1 outline-none"
                     />
-                    <Button size="icon" variant="ghost" className="h-8 w-8 text-primary">
+                    <Button 
+                      type="submit" 
+                      size="icon" 
+                      variant="ghost" 
+                      className="h-8 w-8 text-primary"
+                      disabled={!newAnnotation.trim()}
+                    >
                       <Send className="h-4 w-4" />
                     </Button>
                   </div>
-                </div>
+                </form>
               </Card>
             </div>
           </div>
