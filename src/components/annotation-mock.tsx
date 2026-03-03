@@ -1,4 +1,3 @@
-
 "use client";
 
 import { MessageSquare, User, Sparkles } from "lucide-react";
@@ -35,9 +34,9 @@ export function AnnotationMock() {
           </Card>
         </div>
 
-        {/* User Comment Bubble */}
+        {/* User Comment Bubble - Using Annotation Highlight Color */}
         <div className="absolute bottom-0 left-0 md:-translate-x-12 translate-y-12 animate-in fade-in slide-in-from-top-4 duration-1000 delay-300">
-          <Card className="w-56 p-4 shadow-xl border-slate-100 bg-slate-50 relative">
+          <Card className="w-56 p-4 shadow-xl border-border bg-[#FEF9C3] relative">
              <div className="flex items-center gap-2 mb-2">
               <div className="h-6 w-6 rounded-full bg-slate-200 flex items-center justify-center">
                 <User className="h-3 w-3 text-slate-600" />
@@ -47,7 +46,7 @@ export function AnnotationMock() {
             <p className="text-xs text-slate-500 italic">
               "This reminds me of the 'living water' conversation in the next chapter. The continuity of God's provision."
             </p>
-             <div className="absolute top-0 right-12 w-4 h-4 bg-slate-50 border-l border-t border-slate-100 rotate-45 -translate-y-2" />
+             <div className="absolute top-0 right-12 w-4 h-4 bg-[#FEF9C3] border-l border-t border-border rotate-45 -translate-y-2" />
           </Card>
         </div>
       </div>

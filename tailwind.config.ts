@@ -1,4 +1,3 @@
-
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -27,7 +26,7 @@ export default {
           foreground: 'hsl(var(--popover-foreground))',
         },
         primary: {
-          DEFAULT: '#3A14E0', // Rich Deep Violet
+          DEFAULT: '#3B82F6', // Electric Blue
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
@@ -39,14 +38,14 @@ export default {
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: '#4ABFEE', // Bright Sky Blue
+          DEFAULT: '#A855F7', // Vibrant Purple
           foreground: 'hsl(var(--accent-foreground))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        border: 'hsl(var(--border))',
+        border: '#E5E7EB', // Border Gray
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         chart: {
