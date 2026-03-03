@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Navbar } from "@/components/navbar";
@@ -6,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ReadingPathsSection } from "@/components/reading-paths";
 import { AnnotationMock } from "@/components/annotation-mock";
 import { GuidedAscentStepper } from "@/components/guided-ascent-stepper";
+import { UserJourney } from "@/components/user-journey";
 import { Badge } from "@/components/ui/badge";
 import { 
   ArrowRight, 
@@ -141,6 +141,23 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* User Journey Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/20 text-primary font-bold uppercase tracking-widest">USER JOURNEY</Badge>
+              <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 tracking-tight text-slate-900">
+                Your Learning Journey
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed font-body">
+                From curious beginner to confident Bible student - here's how The Scriptorium guides your growth in biblical understanding and community engagement.
+              </p>
+            </div>
+
+            <UserJourney />
           </div>
         </section>
 
@@ -443,7 +460,7 @@ export default function LandingPage() {
 
         {/* Final CTA */}
         <section className="py-32 bg-slate-900 relative overflow-hidden">
-          <div className="absolute inset-0 bg-brand-gradient opacity-10 blur-[120px]" />
+          <div className="absolute inset-0 bg-brand-gradient opacity-10 blur-[120px] tune-in-glow" />
           <div className="container relative z-10 mx-auto px-4 text-center">
              <h2 className="text-4xl md:text-6xl font-headline font-bold text-white mb-8 tracking-tight">
                Ready to Transform Your Bible Study?
