@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { ReadingPathsSection } from "@/components/reading-paths";
 import { AnnotationMock } from "@/components/annotation-mock";
+import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, Sparkles, BookOpen } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -135,21 +136,59 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="bg-slate-900 text-white py-12">
+      <footer className="bg-[#0F172A] text-slate-300 py-16 border-t border-slate-800">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center space-x-2">
-              <BookOpen className="h-8 w-8 text-accent" />
-              <span className="text-2xl font-headline font-bold">The Scriptorium</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+            <div>
+              <h4 className="text-white font-headline font-bold mb-6">Platform</h4>
+              <ul className="space-y-4 text-sm">
+                <li><Link href="/demo" className="hover:text-primary transition-colors">Interactive Demo</Link></li>
+                <li><Link href="/paths" className="hover:text-primary transition-colors">Reading Paths</Link></li>
+                <li><Link href="/reader" className="hover:text-primary transition-colors">Bible Reader</Link></li>
+                <li><Link href="/hub" className="hover:text-primary transition-colors">Study Hub</Link></li>
+              </ul>
             </div>
-            <div className="flex gap-8 text-slate-400 text-sm">
-              <Link href="#" className="hover:text-white">Privacy Policy</Link>
-              <Link href="#" className="hover:text-white">Terms of Service</Link>
-              <Link href="#" className="hover:text-white">Contact Us</Link>
+            <div>
+              <h4 className="text-white font-headline font-bold mb-6">Community</h4>
+              <ul className="space-y-4 text-sm">
+                <li><Link href="#" className="hover:text-primary transition-colors">Scholar Network</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Study Groups</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Annotation Feed</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Events</Link></li>
+              </ul>
             </div>
-            <p className="text-slate-500 text-sm">
-              © 2024 The Scriptorium. All rights reserved.
-            </p>
+            <div>
+              <h4 className="text-white font-headline font-bold mb-6">Support</h4>
+              <ul className="space-y-4 text-sm">
+                <li><Link href="#" className="hover:text-primary transition-colors">Help Center</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">API Documentation</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Version History</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-headline font-bold mb-6">Legal</h4>
+              <ul className="space-y-4 text-sm">
+                <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
+                <li><Link href="#" className="hover:text-primary transition-colors">Licensing</Link></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-4">
+              <BookOpen className="h-6 w-6 text-accent" />
+              <p className="text-xs text-slate-500">
+                © 2025 The Scriptorium. Powered by API.Bible from American Bible Society.
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-0 px-2 rounded-sm h-5">Next.js 15</Badge>
+              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-0 px-2 rounded-sm h-5">TypeScript</Badge>
+              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-0 px-2 rounded-sm h-5">Tailwind CSS</Badge>
+            </div>
           </div>
         </div>
       </footer>
