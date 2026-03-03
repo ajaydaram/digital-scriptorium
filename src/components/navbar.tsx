@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info, BookCheck } from "lucide-react";
+import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info, BookCheck, Book } from "lucide-react";
 import { useAuth, useUser } from "@/firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -55,7 +55,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2 group">
@@ -85,48 +85,54 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center space-x-4">
+          <Link href="/api-reader">
+            <Button variant="default" className="btn-gradient font-bold px-6 shadow-md shadow-blue-500/10 flex items-center gap-2">
+              <Book className="h-4 w-4" /> Bible Reader
+            </Button>
+          </Link>
+          
           {!isUserLoading && (
             <>
               {user ? (
-                <div className="flex items-center gap-4">
-                  <Link href="/reader" className="hidden sm:block">
-                    <Button variant="default" className="btn-gradient font-semibold px-6 shadow-md shadow-blue-500/10">
-                      Bible Reader
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+                      <Avatar className="h-10 w-10">
+                        <AvatarImage src={user.photoURL || undefined} alt={user.displayName || "User"} />
+                        <AvatarFallback className="bg-primary/10 text-primary font-bold">
+                          {user.displayName?.charAt(0) || user.email?.charAt(0) || "U"}
+                        </AvatarFallback>
+                      </Avatar>
                     </Button>
-                  </Link>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" className="relative h-10 w-10 rounded-full">
-                        <Avatar className="h-10 w-10">
-                          <AvatarImage src={user.photoURL || undefined} alt={user.displayName || "User"} />
-                          <AvatarFallback className="bg-primary/10 text-primary font-bold">
-                            {user.displayName?.charAt(0) || user.email?.charAt(0) || "U"}
-                          </AvatarFallback>
-                        </Avatar>
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-56" align="end" forceMount>
-                      <DropdownMenuLabel className="font-normal">
-                        <div className="flex flex-col space-y-1">
-                          <p className="text-sm font-medium leading-none">{user.displayName}</p>
-                          <p className="text-xs leading-none text-muted-foreground">{user.email}</p>
-                        </div>
-                      </DropdownMenuLabel>
-                      <DropdownMenuSeparator />
-                      <DropdownMenuItem onClick={handleSignOut} className="text-red-600 cursor-pointer">
-                        <LogOut className="mr-2 h-4 w-4" />
-                        <span>Sign Out</span>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56" align="end" forceMount>
+                    <DropdownMenuLabel className="font-normal">
+                      <div className="flex flex-col space-y-1">
+                        <p className="text-sm font-medium leading-none">{user.displayName}</p>
+                        <p className="text-xs leading-none text-muted-foreground">{user.email}</p>
+                      </div>
+                    </DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem asChild>
+                       <Link href="/reader" className="cursor-pointer">
+                         <BookOpen className="mr-2 h-4 w-4" />
+                         <span>Guided Reader</span>
+                       </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600 cursor-pointer">
+                      <LogOut className="mr-2 h-4 w-4" />
+                      <span>Sign Out</span>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               ) : (
                 <Button 
                   onClick={handleSignIn} 
-                  variant="default" 
-                  className="btn-gradient font-semibold px-8 shadow-lg shadow-primary/20"
+                  variant="outline" 
+                  className="font-bold border-slate-200"
                 >
-                  Get Started
+                  Sign In
                 </Button>
               )}
             </>
