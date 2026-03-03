@@ -1,8 +1,9 @@
+
 "use client";
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut } from "lucide-react";
+import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info } from "lucide-react";
 import { useAuth, useUser } from "@/firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -66,7 +67,7 @@ export function Navbar() {
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-6">
           <Link href="/demo" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
             <PlayCircle className="h-4 w-4" /> Demo
           </Link>
@@ -76,8 +77,8 @@ export function Navbar() {
           <Link href="/hub" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
             <GraduationCap className="h-4 w-4" /> Study Hub
           </Link>
-          <Link href="/community" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
-            <Users className="h-4 w-4" /> Community
+          <Link href="/philosophy" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
+            <Info className="h-4 w-4" /> Philosophy
           </Link>
         </div>
 
@@ -86,7 +87,7 @@ export function Navbar() {
             <>
               {user ? (
                 <div className="flex items-center gap-4">
-                  <Link href="/reader">
+                  <Link href="/reader" className="hidden sm:block">
                     <Button variant="default" className="btn-gradient font-semibold px-6 shadow-md shadow-blue-500/10">
                       Bible Reader
                     </Button>
