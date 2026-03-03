@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/navbar";
-import { GuidedAscent } from "@/components/guided-ascent";
+import { GuidedAscent, type StepId } from "@/components/guided-ascent";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +20,8 @@ import {
   MessageSquare,
   Search,
   BookOpen,
-  Info
+  Info,
+  History
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -30,7 +31,7 @@ export default function ReaderPage() {
   const [loading, setLoading] = useState(true);
   const [aiLoading, setAiLoading] = useState(false);
   const [aiResult, setAiResult] = useState<AIAnnotatorExplanationOutput | null>(null);
-  const [currentStep, setCurrentStep] = useState<"Read" | "Understand" | "Master">("Read");
+  const [currentStep, setCurrentStep] = useState<StepId>("Read");
   const { toast } = useToast();
 
   useEffect(() => {
@@ -110,9 +111,12 @@ export default function ReaderPage() {
           <div className="lg:col-span-2 space-y-6">
             <Card className="border-none shadow-xl overflow-hidden">
               <div className="bg-brand-gradient h-2 w-full" />
-              <CardContent className="p-12">
+              <CardContent className="p-6 md:p-12">
                 <div className="mb-8">
-                  <GuidedAscent currentStep={currentStep} />
+                  <GuidedAscent 
+                    currentStep={currentStep} 
+                    onStepClick={(stepId) => setCurrentStep(stepId)}
+                  />
                 </div>
 
                 <div className="prose prose-slate lg:prose-xl max-w-none">
