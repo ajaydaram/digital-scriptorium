@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -9,8 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { fetchScripture, type Scripture } from "@/lib/bible-api";
-import { explainScripture } from "@/ai/flows/ai-annotator-explanation";
+import { getScripture, type Scripture } from "@/services/bibleService";
+import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
 import { 
   Sparkles, 
   ChevronLeft, 
@@ -20,15 +19,17 @@ import {
   Highlighter, 
   MessageSquare,
   Search,
-  BookOpen
+  BookOpen,
+  Info
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function ReaderPage() {
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
   const [aiLoading, setAiLoading] = useState(false);
-  const [explanation, setExplanation] = useState<string | null>(null);
+  const [aiResult, setAiResult] = useState<AIAnnotatorExplanationOutput | null>(null);
   const [currentStep, setCurrentStep] = useState<"Read" | "Understand" | "Master">("Read");
   const { toast } = useToast();
 
@@ -39,9 +40,9 @@ export default function ReaderPage() {
   const loadScripture = async (ref: string) => {
     setLoading(true);
     try {
-      const data = await fetchScripture(ref);
+      const data = await getScripture(ref);
       setScripture(data);
-      setExplanation(null);
+      setAiResult(null);
       setCurrentStep("Read");
     } catch (error) {
       toast({
@@ -59,7 +60,7 @@ export default function ReaderPage() {
     setAiLoading(true);
     try {
       const result = await explainScripture({ scripturePassage: `${scripture.reference}: ${scripture.text}` });
-      setExplanation(result.explanation);
+      setAiResult(result);
       setCurrentStep("Understand");
     } catch (error) {
       toast({
@@ -90,7 +91,7 @@ export default function ReaderPage() {
             <Button variant="outline" size="icon" className="rounded-full">
               <ChevronLeft className="h-4 w-4" />
             </Button>
-            <h2 className="text-3xl font-headline font-bold">John 3</h2>
+            <h2 className="text-3xl font-headline font-bold">{scripture?.reference.split(':')[0] || "Select Text"}</h2>
             <Button variant="outline" size="icon" className="rounded-full">
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -128,14 +129,14 @@ export default function ReaderPage() {
                         {scripture.text}
                       </p>
                       
-                      <div className="flex gap-4 pt-8">
+                      <div className="flex flex-wrap gap-4 pt-8">
                         <Button 
                           onClick={handleAskAI} 
                           disabled={aiLoading}
                           className="btn-gradient font-bold rounded-full px-6 gap-2"
                         >
                           <Sparkles className="h-4 w-4" /> 
-                          {aiLoading ? "Consulting Scholar..." : "AI Annotation"}
+                          {aiLoading ? "Consulting Scholar..." : "Pedagogical Guide"}
                         </Button>
                         <Button 
                           variant="outline" 
@@ -165,26 +166,64 @@ export default function ReaderPage() {
           {/* Side Panels */}
           <div className="space-y-8">
             {/* AI Explanation Card */}
-            {explanation && (
+            {aiResult && (
               <Card className="shadow-lg border-primary/10 overflow-hidden animate-in fade-in slide-in-from-right-4">
                 <CardHeader className="bg-primary/5 py-4 flex flex-row items-center justify-between">
                   <CardTitle className="text-base font-bold flex items-center gap-2">
                     <Sparkles className="h-4 w-4 text-primary" /> AI Annotator
                   </CardTitle>
-                  <Badge variant="secondary" className="bg-white text-[10px]">VERIFIED</Badge>
+                  <Badge variant="secondary" className="bg-white text-[10px]">PEDAGOGICAL GUIDE</Badge>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <ScrollArea className="h-[300px] pr-4">
-                    <div className="text-slate-600 text-sm leading-relaxed whitespace-pre-wrap">
-                      {explanation}
-                    </div>
-                    <div className="mt-6 pt-6 border-t">
-                      <p className="text-xs font-bold text-slate-400 mb-2 uppercase tracking-wider">Suggested Cross-References</p>
-                      <ul className="space-y-2">
-                        <li><button className="text-xs text-primary hover:underline font-semibold">Romans 5:8</button></li>
-                        <li><button className="text-xs text-primary hover:underline font-semibold">1 John 4:9</button></li>
-                        <li><button className="text-xs text-primary hover:underline font-semibold">Ephesians 2:8-9</button></li>
-                      </ul>
+                  <ScrollArea className="h-[450px] pr-4">
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="text-xs font-bold text-slate-400 mb-2 uppercase tracking-wider flex items-center gap-1.5">
+                          <BookOpen className="h-3 w-3" /> Exegesis
+                        </h4>
+                        <p className="text-slate-700 text-sm leading-relaxed">
+                          {aiResult.explanation}
+                        </p>
+                      </div>
+
+                      <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                        <h4 className="text-xs font-bold text-primary mb-2 uppercase tracking-wider flex items-center gap-1.5">
+                          <History className="h-3 w-3" /> Grand Historical Narrative
+                        </h4>
+                        <p className="text-slate-600 text-sm italic leading-relaxed">
+                          {aiResult.theologicalContext}
+                        </p>
+                      </div>
+                      
+                      <div className="pt-2">
+                        <h4 className="text-xs font-bold text-slate-400 mb-3 uppercase tracking-wider">Significant Cross-References</h4>
+                        <div className="space-y-4">
+                          {aiResult.suggestedReferences.map((ref, i) => (
+                            <div key={i} className="group cursor-help">
+                              <TooltipProvider>
+                                <Tooltip>
+                                  <TooltipTrigger asChild>
+                                    <div className="flex items-start gap-2">
+                                      <div className="mt-1 h-2 w-2 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+                                      <div>
+                                        <button className="text-sm text-primary hover:underline font-bold text-left">
+                                          {ref.ref}
+                                        </button>
+                                        <p className="text-xs text-slate-500 mt-1 leading-snug">
+                                          {ref.reason}
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </TooltipTrigger>
+                                  <TooltipContent>
+                                    <p className="text-xs">Pedagogical significance explained</p>
+                                  </TooltipContent>
+                                </Tooltip>
+                              </TooltipProvider>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </ScrollArea>
                   <Button 
@@ -195,6 +234,15 @@ export default function ReaderPage() {
                   >
                     Mark as Mastered
                   </Button>
+                </CardContent>
+              </Card>
+            )}
+
+            {!aiResult && (
+               <Card className="shadow-md border-dashed border-2 border-slate-200 bg-transparent">
+                <CardContent className="p-8 text-center">
+                  <Info className="h-8 w-8 text-slate-300 mx-auto mb-4" />
+                  <p className="text-sm text-slate-400 font-medium">Use the AI Pedagogical Guide to unlock deeper insights and narrative context.</p>
                 </CardContent>
               </Card>
             )}
@@ -210,14 +258,6 @@ export default function ReaderPage() {
                  <button className="w-full text-left px-3 py-2 rounded-md hover:bg-slate-100 text-sm font-medium transition-colors">Interlinear Greek</button>
                  <button className="w-full text-left px-3 py-2 rounded-md hover:bg-slate-100 text-sm font-medium transition-colors">Commentary: Barnes' Notes</button>
                  <button className="w-full text-left px-3 py-2 rounded-md hover:bg-slate-100 text-sm font-medium transition-colors">Matthew Henry's Method</button>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-md border-none bg-brand-gradient text-white">
-              <CardContent className="p-6">
-                <h4 className="font-bold mb-2">Join a Study Cohort</h4>
-                <p className="text-xs text-white/80 mb-4 leading-relaxed">Discuss this passage with our community of students and scholars.</p>
-                <Button variant="secondary" size="sm" className="w-full font-bold bg-white text-primary hover:bg-white/90">Join Community Hub</Button>
               </CardContent>
             </Card>
           </div>

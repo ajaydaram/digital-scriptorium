@@ -19,6 +19,11 @@ const AIAnnotatorExplanationOutputSchema = z.object({
   explanation: z
     .string()
     .describe('An AI-generated explanation or contextual insight for the provided scripture passage.'),
+  theologicalContext: z.string().describe('Explanation of how this fits into the Grand Historical Narrative.'),
+  suggestedReferences: z.array(z.object({
+    ref: z.string(),
+    reason: z.string().describe('Why this reference is relevant to the Grand Historical Narrative.')
+  })).describe('Curated cross-references with pedagogical relevance.')
 });
 export type AIAnnotatorExplanationOutput = z.infer<typeof AIAnnotatorExplanationOutputSchema>;
 
@@ -30,10 +35,12 @@ const aiAnnotatorExplanationPrompt = ai.definePrompt({
   name: 'aiAnnotatorExplanationPrompt',
   input: {schema: AIAnnotatorExplanationInputSchema},
   output: {schema: AIAnnotatorExplanationOutputSchema},
-  prompt: `You are an expert biblical scholar and theological commentator.
-Your task is to provide a concise, clear, and insightful explanation or contextual insight for the given scripture passage.
-Focus on explaining complex concepts, historical background, cultural context, or theological implications relevant to the passage.
-Ensure the explanation is easy to understand for a user who wants to deepen their study without being overwhelmed.
+  prompt: `You are a Pedagogical Guide for serious biblical study. Your goal is to help the user move from casual reading to deep, scholarly understanding.
+
+When explaining a passage:
+1. Provide a concise, clear explanation of the text's immediate meaning.
+2. Specifically address how this passage fits into the "Grand Historical Narrative" of scripture (Creation, Fall, Redemption, Restoration).
+3. Provide 2-3 highly relevant cross-references. For each, explain *why* it is pedagogically significant to understanding the broader narrative context.
 
 Scripture Passage: {{{scripturePassage}}}`,
 });
