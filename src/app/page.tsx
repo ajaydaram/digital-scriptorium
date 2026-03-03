@@ -1,10 +1,10 @@
-
 "use client";
 
 import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { ReadingPathsSection } from "@/components/reading-paths";
 import { AnnotationMock } from "@/components/annotation-mock";
+import { GuidedAscentStepper } from "@/components/guided-ascent-stepper";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, Sparkles, BookOpen } from "lucide-react";
 import Link from "next/link";
@@ -45,18 +45,6 @@ export default function LandingPage() {
                     </Button>
                   </Link>
                 </div>
-
-                <div className="mt-16 flex items-center justify-center lg:justify-start gap-10 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-                   <div className="flex items-center gap-2 font-headline font-bold text-slate-900">
-                    <div className="w-8 h-8 rounded-lg bg-slate-200" /> ACADEMIA
-                   </div>
-                   <div className="flex items-center gap-2 font-headline font-bold text-slate-900">
-                    <div className="w-8 h-8 rounded-lg bg-slate-200" /> THEOLOGOS
-                   </div>
-                   <div className="flex items-center gap-2 font-headline font-bold text-slate-900">
-                    <div className="w-8 h-8 rounded-lg bg-slate-200" /> HERMENEUTICS
-                   </div>
-                </div>
               </div>
 
               <div className="flex-1 w-full max-w-2xl relative">
@@ -69,13 +57,28 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Guided Ascent Stepper Section */}
+        <section className="py-24 bg-slate-50/30 border-y border-slate-100">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 tracking-tight text-slate-900">
+                Your Scholarly Ascent
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto text-lg leading-relaxed font-body">
+                We've mapped the path from reading to mastery. Follow our structured progression to deepen your engagement with the Word.
+              </p>
+            </div>
+            <GuidedAscentStepper />
+          </div>
+        </section>
+
         <ReadingPathsSection />
 
         {/* Feature Highlights */}
-        <section className="py-24 bg-slate-50/50 border-y border-slate-100">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-20 items-center">
-              <div className="flex-1 order-2 md:order-1">
+              <div className="flex-1">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-6 translate-y-12">
                     <div className="p-0.5 rounded-2xl bg-brand-gradient shadow-lg">
@@ -119,8 +122,8 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex-1 order-1 md:order-2">
-                <h2 className="text-4xl md:text-5xl font-headline font-bold mb-8 tracking-tight">Designed for Depth, Built for Modern Life</h2>
+              <div className="flex-1">
+                <h2 className="text-4xl md:text-5xl font-headline font-bold mb-8 tracking-tight text-slate-900">Designed for Depth, Built for Modern Life</h2>
                 <p className="text-lg text-muted-foreground mb-10 leading-relaxed font-body">
                   Most Bible apps focus on streaks and quick verses. We focus on comprehension. Our interface is designed to reduce cognitive load while maximizing scholarly engagement.
                 </p>
@@ -200,9 +203,9 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-1 px-3 rounded-md font-mono">Next.js 15</Badge>
-              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-1 px-3 rounded-md font-mono">TypeScript</Badge>
-              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-1 px-3 rounded-md font-mono">Tailwind CSS</Badge>
+              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-1 px-3 rounded-md font-mono uppercase">Next.js 15</Badge>
+              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-1 px-3 rounded-md font-mono uppercase">TypeScript</Badge>
+              <Badge variant="outline" className="bg-slate-800/50 border-slate-700 text-slate-400 text-[10px] py-1 px-3 rounded-md font-mono uppercase">Tailwind CSS</Badge>
             </div>
           </div>
         </div>
