@@ -7,7 +7,6 @@ import { AnnotationMock } from "@/components/annotation-mock";
 import { ArrowRight, Play, Sparkles, BookOpen } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function LandingPage() {
   return (
@@ -26,20 +25,22 @@ export default function LandingPage() {
                 </div>
                 <h1 className="text-5xl md:text-7xl font-headline font-bold mb-6 leading-[1.1]">
                   Bridge the Gap from <br />
-                  <span className="gradient-text">Casual to Deep Study</span>
+                  <span className="gradient-text font-bold">Casual to Deep Study</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                  The Scriptorium is a pedagogical platform designed to take you beyond surface-level reading. Master the Bible using proven scholarly frameworks.
+                  Most Bible apps are either too simple (like YouVersion) or too complex (like Logos). The Scriptorium is the perfect bridge—helping everyday believers grow without needing a seminary degree.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                  <Link href="/demo">
+                    <Button size="lg" className="btn-gradient text-lg px-8 py-7 h-auto font-bold shadow-xl shadow-primary/20 gap-2">
+                      <Play className="h-5 w-5 fill-current" /> Interactive Demo
+                    </Button>
+                  </Link>
                   <Link href="/reader">
-                    <Button size="lg" className="btn-gradient text-lg px-8 py-7 h-auto font-bold shadow-xl shadow-primary/20">
+                    <Button variant="outline" size="lg" className="text-lg px-8 py-7 h-auto font-bold border-slate-200">
                       Start Your Journey
                     </Button>
                   </Link>
-                  <Button variant="outline" size="lg" className="text-lg px-8 py-7 h-auto font-bold gap-2">
-                    <Play className="h-5 w-5 fill-current" /> Interactive Demo
-                  </Button>
                 </div>
                 <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 opacity-50 grayscale contrast-125">
                    <div className="flex items-center gap-2 font-headline font-bold">
