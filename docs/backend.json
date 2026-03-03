@@ -1,3 +1,4 @@
+
 {
   "entities": {
     "UserProfile": {
@@ -43,102 +44,6 @@
         "updatedAt"
       ]
     },
-    "ReadingPath": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "ReadingPath",
-      "type": "object",
-      "description": "Defines a structured learning path for Bible engagement, such as Chronological, Thematic, or Genre-based paths.",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the ReadingPath entity."
-        },
-        "name": {
-          "type": "string",
-          "description": "The name of the reading path (e.g., 'Chronological Path', 'Thematic Path')."
-        },
-        "description": {
-          "type": "string",
-          "description": "A detailed description of what the reading path covers and its pedagogical approach."
-        },
-        "category": {
-          "type": "string",
-          "description": "The category or framework of the path (e.g., 'Narrative', 'Theological', 'Literary')."
-        },
-        "features": {
-          "type": "array",
-          "description": "A list of key features or highlights offered by this reading path.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "iconUrl": {
-          "type": "string",
-          "description": "URL to an icon representing this reading path.",
-          "format": "uri"
-        },
-        "order": {
-          "type": "number",
-          "description": "The display order of this path relative to other reading paths."
-        }
-      },
-      "required": [
-        "id",
-        "name",
-        "description",
-        "category",
-        "features",
-        "order"
-      ]
-    },
-    "ReadingUnit": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "ReadingUnit",
-      "type": "object",
-      "description": "Represents a specific, digestible unit of study within a ReadingPath, such as a chapter, a themed lesson, or a genre primer.",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the ReadingUnit entity."
-        },
-        "readingPathId": {
-          "type": "string",
-          "description": "Reference to the ReadingPath this unit belongs to. (Relationship: ReadingPath 1:N ReadingUnit)"
-        },
-        "title": {
-          "type": "string",
-          "description": "The title of the reading unit (e.g., 'Genesis 1-11: Creation & Fall')."
-        },
-        "description": {
-          "type": "string",
-          "description": "A brief description of the content covered in this unit."
-        },
-        "order": {
-          "type": "number",
-          "description": "The sequential order of this unit within its parent ReadingPath."
-        },
-        "type": {
-          "type": "string",
-          "description": "The type of content this unit represents (e.g., 'chapter', 'thematic lesson', 'primer')."
-        },
-        "bibleReferences": {
-          "type": "array",
-          "description": "An array of Bible references covered in this unit (e.g., ['GEN.1.1-GEN.11.32', 'ROM.5.12-ROM.5.21']).",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "required": [
-        "id",
-        "readingPathId",
-        "title",
-        "description",
-        "order",
-        "type",
-        "bibleReferences"
-      ]
-    },
     "UserProgress": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "UserProgress",
@@ -151,15 +56,15 @@
         },
         "userId": {
           "type": "string",
-          "description": "Reference to the UserProfile making the progress. (Relationship: UserProfile 1:N UserProgress)"
+          "description": "Reference to the UserProfile making the progress."
         },
         "readingUnitId": {
           "type": "string",
-          "description": "Reference to the ReadingUnit for which progress is being tracked. (Relationship: ReadingUnit 1:N UserProgress)"
+          "description": "Reference to the ReadingUnit for which progress is being tracked."
         },
         "currentStage": {
           "type": "string",
-          "description": "The current stage of the 'Guided Ascent' for this reading unit (e.g., 'Read', 'Understand', 'Master')."
+          "description": "The current stage of the 'Guided Ascent' (e.g., 'Read', 'Understand', 'Master')."
         },
         "startedAt": {
           "type": "string",
@@ -168,12 +73,12 @@
         },
         "lastAccessedAt": {
           "type": "string",
-          "description": "Timestamp when this reading unit was last accessed or progress was updated.",
+          "description": "Timestamp when this reading unit was last accessed.",
           "format": "date-time"
         },
         "completedAt": {
           "type": "string",
-          "description": "Optional timestamp when the 'Master' stage for this reading unit was achieved.",
+          "description": "Optional timestamp when the 'Master' stage was achieved.",
           "format": "date-time"
         }
       },
@@ -185,164 +90,22 @@
         "startedAt",
         "lastAccessedAt"
       ]
-    },
-    "Annotation": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "Annotation",
-      "type": "object",
-      "description": "Represents a user's social annotation (highlight and comment) on a specific Bible verse, potentially enhanced by AI insights.",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the Annotation entity."
-        },
-        "userId": {
-          "type": "string",
-          "description": "Reference to the UserProfile who created the annotation. (Relationship: UserProfile 1:N Annotation)"
-        },
-        "bibleBook": {
-          "type": "string",
-          "description": "The name of the Bible book (e.g., 'John')."
-        },
-        "chapter": {
-          "type": "number",
-          "description": "The chapter number where the annotation is located."
-        },
-        "verse": {
-          "type": "number",
-          "description": "The verse number where the annotation is located."
-        },
-        "highlightedText": {
-          "type": "string",
-          "description": "The exact text highlighted by the user."
-        },
-        "comment": {
-          "type": "string",
-          "description": "The user's personal comment or note attached to the highlighted text."
-        },
-        "aiInsights": {
-          "type": "string",
-          "description": "Optional AI-generated insights, cross-references, or theological context related to the annotation."
-        },
-        "createdAt": {
-          "type": "string",
-          "description": "Timestamp when the annotation was created.",
-          "format": "date-time"
-        },
-        "updatedAt": {
-          "type": "string",
-          "description": "Timestamp when the annotation was last updated.",
-          "format": "date-time"
-        }
-      },
-      "required": [
-        "id",
-        "userId",
-        "bibleBook",
-        "chapter",
-        "verse",
-        "highlightedText",
-        "comment",
-        "createdAt",
-        "updatedAt"
-      ]
     }
   },
   "auth": {
     "providers": [
-      "password",
+      "google.com",
       "anonymous"
     ]
   },
   "firestore": {
-    "structure": [
-      {
-        "path": "/users/{userId}",
-        "definition": {
-          "entityName": "UserProfile",
-          "schema": {
-            "$ref": "#/backend/entities/UserProfile"
-          },
-          "description": "Stores profile information for a specific user. This collection uses path-based ownership, where the `{userId}` wildcard maps directly to the Firebase Auth UID (`request.auth.uid`)."
-        }
-      },
-      {
-        "path": "/reading_paths/{readingPathId}",
-        "definition": {
-          "entityName": "ReadingPath",
-          "schema": {
-            "$ref": "#/backend/entities/ReadingPath"
-          },
-          "description": "Defines globally available, curated Bible reading paths (e.g., Chronological Path). These documents are publicly readable by all users and managed by administrators.",
-          "params": [
-            {
-              "name": "readingPathId",
-              "description": "The unique identifier for a specific reading path."
-            }
-          ]
-        }
-      },
-      {
-        "path": "/reading_paths/{readingPathId}/reading_units/{readingUnitId}",
-        "definition": {
-          "entityName": "ReadingUnit",
-          "schema": {
-            "$ref": "#/backend/entities/ReadingUnit"
-          },
-          "description": "Defines individual study units belonging to a specific ReadingPath (e.g., Genesis 1-11). These documents are publicly readable by all users and managed by administrators.",
-          "params": [
-            {
-              "name": "readingPathId",
-              "description": "The unique identifier of the parent reading path."
-            },
-            {
-              "name": "readingUnitId",
-              "description": "The unique identifier for a specific reading unit within the path."
-            }
-          ]
-        }
-      },
-      {
-        "path": "/users/{userId}/user_progress/{userProgressId}",
-        "definition": {
-          "entityName": "UserProgress",
-          "schema": {
-            "$ref": "#/backend/entities/UserProgress"
-          },
-          "description": "Tracks a specific user's progress through a ReadingUnit, including their current stage in the 'Guided Ascent'. This data is private and owned by the user, with `userId` denormalized in the path and implicitly in the document for authorization independence.",
-          "params": [
-            {
-              "name": "userId",
-              "description": "The unique identifier of the user (Firebase Auth UID) who owns this progress record."
-            },
-            {
-              "name": "userProgressId",
-              "description": "The unique identifier for a specific user's progress record on a reading unit."
-            }
-          ]
-        }
-      },
-      {
-        "path": "/users/{userId}/annotations/{annotationId}",
-        "definition": {
-          "entityName": "Annotation",
-          "schema": {
-            "$ref": "#/backend/entities/Annotation"
-          },
-          "description": "Stores a specific user's private annotations (highlighted text and comments) on Bible verses. This data is private and owned by the user, with `userId` denormalized in the path and implicitly in the document for authorization independence.",
-          "params": [
-            {
-              "name": "userId",
-              "description": "The unique identifier of the user (Firebase Auth UID) who created this annotation."
-            },
-            {
-              "name": "annotationId",
-              "description": "The unique identifier for a specific annotation."
-            }
-          ]
-        }
-      }
-    ],
-    "reasoning": "The Firestore structure for 'The Scriptorium' is designed with core principles of Authorization Independence, Structural Segregation, and consistent Access Modeling to ensure security, scalability, and debuggability. \n\n**Authorization Independence via Denormalization:**\n*   User-specific data such as `UserProfile`, `UserProgress`, and `Annotation` are nested under `/users/{userId}/...` paths. This makes the `userId` directly available from the path wildcard (`{userId}`), which must match `request.auth.uid` for access. This completely eliminates the need for `get()` calls in security rules to determine ownership, a critical mandate for robust and atomic operations.\n*   Furthermore, `UserProgress` and `Annotation` entities explicitly include a `userId` field in their documents. This denormalization, as mandated, provides an additional, explicit check for ownership (`resource.data.userId == request.auth.uid`), reinforcing authorization intent and making rules even clearer and less prone to errors.\n\n**QAPs (Rules are not Filters) and Structural Segregation:**\n*   **Public Data:** `ReadingPath` and `ReadingUnit` entities, representing global pedagogical content definitions, are stored in top-level collections: `/reading_paths/{readingPathId}` and `/reading_paths/{readingPathId}/reading_units/{readingUnitId}`. These collections are designed for public read access (potentially write access only by authenticated administrators). This structural segregation clearly distinguishes globally accessible content from private user data.\n*   **Private User Data:** All user-specific and private data (`UserProfile`, `UserProgress`, `Annotation`) is strictly confined to subcollections under `/users/{userId}/`. This guarantees that `list` operations automatically enforce security by only allowing a user to list documents within their own `/users/{request.auth.uid}/` subtree. The Firestore security rules can simply check that the requested `{userId}` matches `request.auth.uid`, making all `list` operations inherently secure and eliminating the need for complex, inefficient, and often insecure query filters in rules.\n\nThis approach simplifies security rules significantly, making them easier to write, understand, and debug, while providing clear data ownership and access patterns."
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Private user profile data."
+    },
+    "/users/{userId}/user_progress/{progressId}": {
+      "schema": "UserProgress",
+      "description": "Private study progress tracking."
+    }
   }
 }

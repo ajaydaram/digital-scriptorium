@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -25,6 +26,9 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { useFirestore, useUser, useMemoFirebase, useCollection } from "@/firebase";
+import { doc, collection, setDoc, query, where, serverTimestamp } from "firebase/firestore";
+import { setDocumentNonBlocking } from "@/firebase/non-blocking-updates";
 
 export default function ReaderPage() {
   const [scripture, setScripture] = useState<Scripture | null>(null);
@@ -32,7 +36,19 @@ export default function ReaderPage() {
   const [aiLoading, setAiLoading] = useState(false);
   const [aiResult, setAiResult] = useState<AIAnnotatorExplanationOutput | null>(null);
   const [currentStep, setCurrentStep] = useState<StepId>("Read");
+  
   const { toast } = useToast();
+  const { firestore } = useFirestore();
+  const { user } = useUser();
+
+  // Reference for the current reading unit progress
+  // In a real app, readingUnitId would come from the URL or path context
+  const readingUnitId = "john-3-16"; 
+
+  const progressRef = useMemoFirebase(() => {
+    if (!firestore || !user) return null;
+    return doc(firestore, "users", user.uid, "user_progress", readingUnitId);
+  }, [firestore, user, readingUnitId]);
 
   useEffect(() => {
     loadScripture("John 3:16");
@@ -62,7 +78,7 @@ export default function ReaderPage() {
     try {
       const result = await explainScripture({ scripturePassage: `${scripture.reference}: ${scripture.text}` });
       setAiResult(result);
-      setCurrentStep("Understand");
+      updateProgress("Understand");
     } catch (error) {
       toast({
         variant: "destructive",
@@ -74,12 +90,31 @@ export default function ReaderPage() {
     }
   };
 
+  const updateProgress = (step: StepId) => {
+    setCurrentStep(step);
+    if (progressRef && user) {
+      setDocumentNonBlocking(progressRef, {
+        id: readingUnitId,
+        userId: user.uid,
+        readingUnitId: readingUnitId,
+        currentStage: step,
+        lastAccessedAt: serverTimestamp(),
+        startedAt: currentStep === "Read" ? serverTimestamp() : undefined,
+        completedAt: step === "Master" ? serverTimestamp() : undefined,
+      }, { merge: true });
+    }
+  };
+
   const handleMastery = () => {
-    setCurrentStep("Master");
+    updateProgress("Master");
     toast({
       title: "Mastery Achieved",
-      description: "You've completed this study segment. Progress saved."
+      description: "You've completed this study segment. Progress saved to your profile."
     });
+  };
+
+  const handleStepClick = (stepId: StepId) => {
+    updateProgress(stepId);
   };
 
   return (
@@ -115,7 +150,7 @@ export default function ReaderPage() {
                 <div className="mb-8">
                   <GuidedAscent 
                     currentStep={currentStep} 
-                    onStepClick={(stepId) => setCurrentStep(stepId)}
+                    onStepClick={handleStepClick}
                   />
                 </div>
 
