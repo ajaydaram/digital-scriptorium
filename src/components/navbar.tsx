@@ -1,9 +1,8 @@
-
 "use client";
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info } from "lucide-react";
+import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info, BookCheck } from "lucide-react";
 import { useAuth, useUser } from "@/firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -73,6 +72,9 @@ export function Navbar() {
           </Link>
           <Link href="/paths" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
             <Compass className="h-4 w-4" /> Reading Paths
+          </Link>
+          <Link href="/pedagogy" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
+            <BookCheck className="h-4 w-4" /> Pedagogy
           </Link>
           <Link href="/hub" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
             <GraduationCap className="h-4 w-4" /> Study Hub
