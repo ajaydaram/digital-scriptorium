@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -11,7 +12,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        headline: ['Space Grotesk', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -26,7 +27,7 @@ export default {
           foreground: 'hsl(var(--popover-foreground))',
         },
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
+          DEFAULT: '#3A14E0', // Rich Deep Violet
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
@@ -38,7 +39,7 @@ export default {
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
+          DEFAULT: '#4ABFEE', // Bright Sky Blue
           foreground: 'hsl(var(--accent-foreground))',
         },
         destructive: {
@@ -65,6 +66,9 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+      },
+      backgroundImage: {
+        'brand-gradient': 'linear-gradient(to right, #3B82F6, #A855F7)',
       },
       borderRadius: {
         lg: 'var(--radius)',
