@@ -162,7 +162,7 @@ export default function ReaderPage() {
             </Card>
 
             <div className="flex justify-between items-center px-4">
-               <span className="text-sm text-slate-400 font-medium">Reading Path: Chronological > Life of Christ</span>
+               <span className="text-sm text-slate-400 font-medium">Reading Path: Chronological &gt; Life of Christ</span>
                <Button variant="link" className="text-primary font-bold">View Path Progress <ChevronRight className="h-4 w-4" /></Button>
             </div>
           </div>
