@@ -18,10 +18,58 @@ import {
   Users, 
   MessageSquare, 
   MessageCircle,
-  PlayCircle
+  BookText,
+  Milestone,
+  TrendingUp,
+  Library,
+  ChevronRight
 } from "lucide-react";
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
+
+const PLATFORM_FEATURES = [
+  {
+    title: "Clean Reading Interface",
+    description: "Distraction-free Bible reading with beautiful typography, adjustable text size, and focus on content over features.",
+    icon: BookText,
+    color: "text-blue-500",
+    bg: "bg-blue-50"
+  },
+  {
+    title: "Structured Reading Paths",
+    description: "Three research-backed approaches to systematic Bible study with clear progression and skill development.",
+    icon: Milestone,
+    color: "text-emerald-500",
+    bg: "bg-emerald-50"
+  },
+  {
+    title: "Community Study Groups",
+    description: "Join others on the same reading path, share insights, and encourage each other in consistent study habits.",
+    icon: Users,
+    color: "text-purple-500",
+    bg: "bg-purple-50"
+  },
+  {
+    title: "Social Annotations",
+    description: "Collaborative highlighting and note-taking with community insights and moderated discussions.",
+    icon: MessageSquare,
+    color: "text-accent",
+    bg: "bg-purple-50/50"
+  },
+  {
+    title: "Progress Tracking",
+    description: "Visual progress indicators, streak tracking, and completion badges to maintain motivation and accountability.",
+    icon: TrendingUp,
+    color: "text-amber-500",
+    bg: "bg-amber-50"
+  },
+  {
+    title: "Study Hub Resources",
+    description: "Contextual maps, timelines, commentaries, and word studies integrated into the reading experience.",
+    icon: Library,
+    color: "text-primary",
+    bg: "bg-primary/5"
+  }
+];
 
 export default function LandingPage() {
   return (
@@ -113,8 +161,37 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Advanced Features Section */}
+        {/* Platform Features Section */}
         <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-4 px-4 py-1 border-accent/20 text-accent font-bold uppercase tracking-widest">PLATFORM FEATURES</Badge>
+              <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 tracking-tight text-slate-900">
+                Designed for Learning and Spiritual Growth
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed font-body">
+                Every feature is meticulously crafted to support your scholarly journey while fostering community engagement and deep spiritual formation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {PLATFORM_FEATURES.map((feature) => (
+                <div key={feature.title} className="p-8 rounded-3xl bg-slate-50/50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-primary/10 transition-all duration-300 group">
+                  <div className={`h-14 w-14 rounded-2xl ${feature.bg} ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <feature.icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="text-xl font-headline font-bold text-slate-900 mb-4">{feature.title}</h3>
+                  <p className="text-slate-600 font-body leading-relaxed text-sm">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Advanced Features Section */}
+        <section className="py-24 bg-slate-50/30 border-y border-slate-100">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-20 items-center">
               <div className="flex-1 space-y-8">
@@ -219,7 +296,7 @@ export default function LandingPage() {
         </section>
 
         {/* Community Section */}
-        <section className="py-24 bg-slate-50">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
               <Badge variant="outline" className="mb-4 px-4 py-1 border-accent/20 text-accent font-bold uppercase tracking-widest">COMMUNITY FEATURES</Badge>
@@ -319,7 +396,7 @@ export default function LandingPage() {
         </section>
 
         {/* Guided Ascent Intro */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-slate-50 border-y border-slate-100">
           <div className="container mx-auto px-4">
              <div className="flex flex-col lg:flex-row items-center gap-20">
                 <div className="flex-1 space-y-8">
