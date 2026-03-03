@@ -46,6 +46,23 @@
       },
       "required": ["id", "userId", "passageRef", "content", "createdAt"]
     },
+    "UserWordStudy": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserWordStudy",
+      "type": "object",
+      "description": "Saved word studies for a user.",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "word": { "type": "string" },
+        "originalWord": { "type": "string" },
+        "transliteration": { "type": "string" },
+        "definition": { "type": "string" },
+        "theologicalSignificance": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "word", "originalWord", "definition", "createdAt"]
+    },
     "ReadingPath": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "ReadingPath",
@@ -75,6 +92,10 @@
     "/users/{userId}/annotations/{annotationId}": {
       "schema": "Annotation",
       "description": "Private user notes and verse highlights."
+    },
+    "/users/{userId}/word_studies/{studyId}": {
+      "schema": "UserWordStudy",
+      "description": "Private log of performed word studies."
     },
     "/reading_paths/{pathId}": {
       "schema": "ReadingPath",

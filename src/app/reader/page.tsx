@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture } from "@/services/bibleService";
 import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
+import { studyWord, type WordStudyOutput } from "@/ai/flows/word-study";
 import { 
   Sparkles, 
   ChevronLeft, 
@@ -26,28 +27,40 @@ import {
   Info,
   History,
   Send,
-  Loader2
+  Loader2,
+  Languages,
+  Zap
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useUserProgress } from "@/hooks/use-user-progress";
 import { useAnnotations } from "@/hooks/use-annotations";
-import { useUser } from "@/firebase";
+import { useUser, useFirestore } from "@/firebase";
 import { format } from "date-fns";
+import { collection, serverTimestamp } from "firebase/firestore";
+import { addDocumentNonBlocking } from "@/firebase/non-blocking-updates";
 
 export default function ReaderPage() {
   const { user } = useUser();
+  const { firestore } = useFirestore();
   const [searchQuery, setSearchQuery] = useState("John 3:16");
   const [currentRef, setCurrentRef] = useState("John 3:16");
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
+  
+  // AI States
   const [aiLoading, setAiLoading] = useState(false);
   const [aiResult, setAiResult] = useState<AIAnnotatorExplanationOutput | null>(null);
+  
+  // Word Study States
+  const [wordStudyLoading, setWordStudyLoading] = useState(false);
+  const [wordStudyResult, setWordStudyResult] = useState<WordStudyOutput | null>(null);
+  const [selectedWord, setSelectedWord] = useState("");
+
   const [newNote, setNewNote] = useState("");
   
   const { toast } = useToast();
   
-  // Transform ref into a ID-safe string for Firestore
   const readingUnitId = currentRef.toLowerCase().replace(/[\s:]/g, "-");
   const { currentStep, updateProgress } = useUserProgress(readingUnitId);
   const { annotations, addAnnotation, isLoading: isNotesLoading } = useAnnotations(currentRef);
@@ -62,6 +75,8 @@ export default function ReaderPage() {
       const data = await getScripture(ref);
       setScripture(data);
       setAiResult(null);
+      setWordStudyResult(null);
+      setSelectedWord("");
     } catch (error) {
       toast({
         variant: "destructive",
@@ -95,6 +110,37 @@ export default function ReaderPage() {
       });
     } finally {
       setAiLoading(false);
+    }
+  };
+
+  const handleWordStudy = async () => {
+    if (!selectedWord || !scripture) return;
+    setWordStudyLoading(true);
+    try {
+      const result = await studyWord({ word: selectedWord, context: scripture.text });
+      setWordStudyResult(result);
+      
+      // Log the study if user is authenticated
+      if (user && firestore) {
+        const colRef = collection(firestore, 'users', user.uid, 'word_studies');
+        addDocumentNonBlocking(colRef, {
+          userId: user.uid,
+          word: selectedWord,
+          originalWord: result.originalWord,
+          transliteration: result.transliteration,
+          definition: result.definition,
+          theologicalSignificance: result.pedagogicalInsight,
+          createdAt: serverTimestamp()
+        });
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Word Study Error",
+        description: "Could not perform original language study."
+      });
+    } finally {
+      setWordStudyLoading(false);
     }
   };
 
@@ -164,21 +210,23 @@ export default function ReaderPage() {
                     </div>
                   ) : scripture ? (
                     <div className="space-y-8 animate-in fade-in duration-700">
-                      <div className="flex items-center gap-3">
-                        <Badge className="bg-primary/10 text-primary border-none text-[10px] font-bold uppercase tracking-widest px-3 py-1">
-                          ACTIVE PASSAGE
-                        </Badge>
-                        <h3 className="text-slate-400 text-sm font-bold uppercase tracking-widest">{scripture.reference}</h3>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <Badge className="bg-primary/10 text-primary border-none text-[10px] font-bold uppercase tracking-widest px-3 py-1">
+                            ACTIVE PASSAGE
+                          </Badge>
+                          <h3 className="text-slate-400 text-sm font-bold uppercase tracking-widest">{scripture.reference}</h3>
+                        </div>
                       </div>
                       <p className="font-serif leading-relaxed text-slate-800 text-3xl selection:bg-accent/20">
                         {scripture.text}
                       </p>
                       
-                      <div className="flex flex-wrap gap-4 pt-12 border-t border-slate-50">
+                      <div className="flex flex-col sm:flex-row gap-4 pt-12 border-t border-slate-50">
                         <Button 
                           onClick={handleAskAI} 
                           disabled={aiLoading}
-                          className="btn-gradient font-bold rounded-xl px-8 py-6 h-auto gap-3 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform"
+                          className="btn-gradient font-bold rounded-xl px-8 py-6 h-auto gap-3 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex-1"
                         >
                           {aiLoading ? (
                             <Loader2 className="h-5 w-5 animate-spin" />
@@ -187,12 +235,71 @@ export default function ReaderPage() {
                           )}
                           Consult AI Pedagogical Guide
                         </Button>
+
+                        <div className="flex gap-2 flex-1">
+                          <Input 
+                            placeholder="Type a word to study..."
+                            value={selectedWord}
+                            onChange={(e) => setSelectedWord(e.target.value)}
+                            className="h-auto rounded-xl border-slate-200"
+                          />
+                          <Button 
+                            onClick={handleWordStudy}
+                            disabled={wordStudyLoading || !selectedWord}
+                            variant="outline"
+                            className="rounded-xl px-6 h-auto font-bold border-slate-200 hover:bg-slate-50"
+                          >
+                            {wordStudyLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Languages className="h-4 w-4" />}
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   ) : null}
                 </div>
               </CardContent>
             </Card>
+
+            {/* AI Result */}
+            {aiResult && (
+              <Card className="shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <CardHeader className="bg-primary/5 py-4">
+                  <CardTitle className="text-base font-bold flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-primary" /> AI Scholarly Analysis
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                      <div className="space-y-2">
+                        <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Exegetical Summary</h4>
+                        <p className="text-slate-700 text-sm leading-relaxed">{aiResult.explanation}</p>
+                      </div>
+                      <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                        <h4 className="text-[10px] font-bold text-primary mb-3 uppercase tracking-widest flex items-center gap-2">
+                          <History className="h-3 w-3" /> Historical Narrative
+                        </h4>
+                        <p className="text-xs text-slate-600 italic leading-relaxed">{aiResult.theologicalContext}</p>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Cross-References</h4>
+                      {aiResult.suggestedReferences.map((ref, i) => (
+                        <div key={i} className="group p-4 rounded-xl border border-slate-50 hover:bg-white hover:shadow-md transition-all cursor-pointer" onClick={() => {
+                          setCurrentRef(ref.ref);
+                          setSearchQuery(ref.ref);
+                        }}>
+                          <div className="text-sm text-primary font-bold mb-1 flex items-center justify-between">
+                            {ref.ref}
+                            <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                          <p className="text-[11px] text-slate-500 leading-snug">{ref.reason}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
 
             {/* Note Entry Area */}
             <Card className="border-none shadow-lg rounded-3xl overflow-hidden">
@@ -222,56 +329,56 @@ export default function ReaderPage() {
           </div>
 
           <div className="space-y-8">
-            {/* AI Result */}
-            {aiResult && (
+            {/* Word Study Result */}
+            {wordStudyResult && (
               <Card className="shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-right-4 duration-500">
-                <CardHeader className="bg-primary/5 py-4">
-                  <CardTitle className="text-base font-bold flex items-center gap-2">
-                    <Sparkles className="h-4 w-4 text-primary" /> AI Insights
+                <CardHeader className="bg-accent/5 py-4 border-b border-accent/10">
+                  <CardTitle className="text-sm font-bold flex items-center gap-2 text-accent">
+                    <Languages className="h-4 w-4" /> Original Language Study
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <ScrollArea className="h-[400px] pr-4">
-                    <div className="space-y-8">
-                      <div className="space-y-3">
-                        <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                          <BookOpen className="h-3 w-3" /> Exegetical Summary
-                        </h4>
-                        <p className="text-slate-700 text-sm leading-relaxed">
-                          {aiResult.explanation}
-                        </p>
+                  <div className="space-y-6">
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <h2 className="text-3xl font-headline font-bold text-slate-900">{wordStudyResult.originalWord}</h2>
+                        <p className="text-sm font-bold text-accent uppercase tracking-widest">{wordStudyResult.transliteration}</p>
                       </div>
+                      <Badge variant="outline" className="text-[10px] font-bold border-accent/20 text-accent">
+                        {wordStudyResult.language} • {wordStudyResult.strongsNumber}
+                      </Badge>
+                    </div>
 
-                      <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                        <h4 className="text-[10px] font-bold text-primary mb-3 uppercase tracking-widest flex items-center gap-2">
-                          <History className="h-3 w-3" /> Historical Narrative
-                        </h4>
-                        <p className="text-sm text-slate-600 italic leading-relaxed">
-                          {aiResult.theologicalContext}
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Cross-References</h4>
-                        {aiResult.suggestedReferences.map((ref, i) => (
-                          <div key={i} className="group p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                            <button 
-                              onClick={() => {
-                                setCurrentRef(ref.ref);
-                                setSearchQuery(ref.ref);
-                              }}
-                              className="text-sm text-primary font-bold hover:underline block mb-1"
-                            >
-                              {ref.ref}
-                            </button>
-                            <p className="text-[11px] text-slate-500 leading-snug">
-                              {ref.reason}
-                            </p>
-                          </div>
+                    <div className="space-y-2">
+                      <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Lexical Definition</h4>
+                      <p className="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        {wordStudyResult.definition}
+                      </p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <h4 className="text-[10px] font-bold text-accent uppercase tracking-widest flex items-center gap-2">
+                        <Zap className="h-3 w-3" /> Narrative Significance
+                      </h4>
+                      <p className="text-xs text-slate-600 italic leading-relaxed">
+                        {wordStudyResult.pedagogicalInsight}
+                      </p>
+                    </div>
+
+                    <div className="space-y-3">
+                      <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Key Occurrences</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {wordStudyResult.relatedVerses.map(v => (
+                          <Badge key={v} variant="secondary" className="bg-white border border-slate-100 cursor-pointer hover:border-accent transition-colors" onClick={() => {
+                            setCurrentRef(v);
+                            setSearchQuery(v);
+                          }}>
+                            {v}
+                          </Badge>
                         ))}
                       </div>
                     </div>
-                  </ScrollArea>
+                  </div>
                 </CardContent>
               </Card>
             )}
