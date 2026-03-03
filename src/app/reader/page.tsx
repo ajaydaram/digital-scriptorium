@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,21 +11,17 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { getScripture, type Scripture } from "@/services/bibleService";
+import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
 import { studyWord, type WordStudyOutput } from "@/ai/flows/word-study";
 import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
 import { 
   Sparkles, 
-  ChevronLeft, 
   ChevronRight, 
   Bookmark, 
   Share2, 
-  Highlighter, 
   MessageSquare,
   Search,
-  BookOpen,
-  Info,
   History,
   Send,
   Loader2,
@@ -45,7 +42,7 @@ export default function ReaderPage() {
   const { firestore } = useFirestore();
   const [searchQuery, setSearchQuery] = useState("John 3:16");
   const [currentRef, setCurrentRef] = useState("John 3:16");
-  const [version, setVersion] = useState("kjv");
+  const [version, setVersion] = useState(SUPPORTED_VERSIONS[0].id);
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
   
@@ -81,8 +78,8 @@ export default function ReaderPage() {
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "Error",
-        description: `Could not fetch "${ref}". Please check the reference format (e.g. John 3:16).`
+        title: "Passage Not Found",
+        description: `API.Bible could not find "${ref}". Try a different reference.`
       });
     } finally {
       setLoading(false);
