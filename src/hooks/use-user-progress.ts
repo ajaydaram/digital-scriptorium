@@ -7,16 +7,17 @@ import { setDocumentNonBlocking } from '@/firebase/non-blocking-updates';
 import { type StepId } from '@/components/guided-ascent';
 
 /**
- * Custom hook to manage and sync user study progress for a specific reading unit.
- * Automatically initializes progress if none exists.
+ * Custom hook to manage and sync user study progress.
+ * Uses a flattened /user_progress/{userId} structure.
  */
 export function useUserProgress(readingUnitId: string) {
   const { user } = useUser();
-  const { firestore } = useFirestore();
+  const firestore = useFirestore();
 
   const progressRef = useMemoFirebase(() => {
     if (!firestore || !user) return null;
-    return doc(firestore, 'users', user.uid, 'user_progress', readingUnitId);
+    // Flat top-level collection for private progress
+    return doc(firestore, 'user_progress', user.uid, 'units', readingUnitId);
   }, [firestore, user, readingUnitId]);
 
   const { data: progress, isLoading, error } = useDoc(progressRef);
@@ -40,13 +41,14 @@ export function useUserProgress(readingUnitId: string) {
   };
 
   /**
-   * Specifically for setting the global active path.
+   * Specifically for setting the global active path context.
    */
   const updatePath = (pathId: string) => {
-    if (!progressRef || !user) return;
+    if (!user || !firestore) return;
+    const globalRef = doc(firestore, 'user_progress', user.uid);
     setDocumentNonBlocking(
-      progressRef,
-      { pathId, lastAccessedAt: serverTimestamp() },
+      globalRef,
+      { activePathId: pathId, lastAccessedAt: serverTimestamp() },
       { merge: true }
     );
   };

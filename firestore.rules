@@ -2,6 +2,7 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    // Helper functions
     function isSignedIn() {
       return request.auth != null;
     }
@@ -10,14 +11,20 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == userId;
     }
 
-    // --- User Profiles & Data ---
+    // --- User Profiles ---
     match /users/{userId} {
       allow get: if isSignedIn();
       allow list: if isSignedIn();
       allow create, update: if isOwner(userId);
       allow delete: if isOwner(userId);
+    }
 
-      // Allow access to all subcollections for the owner
+    // --- User Progress Tracking ---
+    // Flattened to a top-level collection for easier management
+    match /user_progress/{userId} {
+      allow read, write: if isOwner(userId);
+      
+      // Allow access to specific progress documents
       match /{allPaths=**} {
         allow read, write: if isOwner(userId);
       }
@@ -25,10 +32,13 @@ service cloud.firestore {
 
     // --- Global Social Annotations ---
     match /annotations/{annotationId} {
-      // Allow anyone to read annotations to foster community learning
+      // Publicly readable for community engagement
       allow read: if true; 
-      // Only authenticated users can create, and only owners can update/delete
+      
+      // Only authenticated users can create
       allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      
+      // Only the owner can update or delete
       allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
     }
   }

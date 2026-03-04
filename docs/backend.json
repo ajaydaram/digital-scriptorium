@@ -1,101 +1,54 @@
-
 {
   "entities": {
     "UserProfile": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "UserProfile",
       "type": "object",
-      "description": "Stores profile information and application-specific settings for a user. This entity is distinct from external authentication data.",
+      "description": "Stores profile information and application-specific settings for a user.",
       "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the UserProfile entity, typically linked to an external authentication system's user ID."
-        },
-        "email": {
-          "type": "string",
-          "description": "The user's email address.",
-          "format": "email"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The name chosen by the user for display within the application."
-        },
-        "avatarUrl": {
-          "type": "string",
-          "description": "URL to the user's profile picture.",
-          "format": "uri"
-        },
-        "createdAt": {
-          "type": "string",
-          "description": "Timestamp when the user profile was created.",
-          "format": "date-time"
-        },
-        "updatedAt": {
-          "type": "string",
-          "description": "Timestamp when the user profile was last updated.",
-          "format": "date-time"
-        }
+        "id": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "avatarUrl": { "type": "string", "format": "uri" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
       },
-      "required": [
-        "id",
-        "email",
-        "displayName"
-      ]
+      "required": ["id", "email", "displayName"]
     },
     "Annotation": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "Annotation",
       "type": "object",
-      "description": "Represents a user's highlight and associated comment on a specific scripture passage, supporting the social annotation feature.",
+      "description": "Represents a user's highlight and associated comment on a specific scripture passage.",
       "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the Annotation entity."
-        },
-        "userId": {
-          "type": "string",
-          "description": "Reference to the UserProfile entity, indicating which user created the annotation."
-        },
-        "userDisplayName": {
-          "type": "string",
-          "description": "The display name of the user who created the annotation for quick UI display."
-        },
-        "userAvatarUrl": {
-          "type": "string",
-          "description": "The avatar URL of the user who created the annotation."
-        },
-        "passageRef": {
-          "type": "string",
-          "description": "The full scripture reference (e.g., 'John 3:16')."
-        },
-        "highlightedText": {
-          "type": "string",
-          "description": "The exact text selected and highlighted by the user."
-        },
-        "comment": {
-          "type": "string",
-          "description": "The user's textual comment or note attached to the highlight."
-        },
-        "createdAt": {
-          "type": "string",
-          "description": "Timestamp when the annotation was created.",
-          "format": "date-time"
-        }
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userDisplayName": { "type": "string" },
+        "userAvatarUrl": { "type": "string" },
+        "passageRef": { "type": "string" },
+        "highlightedText": { "type": "string" },
+        "comment": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
       },
-      "required": [
-        "userId",
-        "passageRef",
-        "comment",
-        "createdAt"
-      ]
+      "required": ["userId", "passageRef", "comment", "createdAt"]
+    },
+    "UserProgress": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProgress",
+      "type": "object",
+      "description": "Tracks a user's progress through a reading path or specific passage.",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "pathId": { "type": "string" },
+        "currentDay": { "type": "number" },
+        "currentStage": { "type": "string", "enum": ["read", "understand", "master"] },
+        "lastAccessedAt": { "type": "string", "format": "date-time" }
+      }
     }
   },
   "auth": {
-    "providers": [
-      "password",
-      "anonymous",
-      "google.com"
-    ]
+    "providers": ["google.com"]
   },
   "firestore": {
     "structure": [
@@ -103,35 +56,23 @@
         "path": "/users/{userId}",
         "definition": {
           "entityName": "UserProfile",
-          "schema": {
-            "$ref": "#/backend/entities/UserProfile"
-          },
-          "description": "Stores individual user profiles. Access is restricted to the owning user.",
-          "params": [
-            {
-              "name": "userId",
-              "description": "The unique identifier of the user."
-            }
-          ]
+          "description": "Individual user profiles."
+        }
+      },
+      {
+        "path": "/user_progress/{userId}/units/{unitId}",
+        "definition": {
+          "entityName": "UserProgress",
+          "description": "Detailed progress tracking for reading units."
         }
       },
       {
         "path": "/annotations/{annotationId}",
         "definition": {
           "entityName": "Annotation",
-          "schema": {
-            "$ref": "#/backend/entities/Annotation"
-          },
-          "description": "Global collection for social scripture engagement. Publicly readable, owner-writable.",
-          "params": [
-            {
-              "name": "annotationId",
-              "description": "Unique identifier for the annotation."
-            }
-          ]
+          "description": "Public community insights on scripture."
         }
       }
-    ],
-    "reasoning": "We use a top-level /annotations collection to support the 'Social' aspect of the app. This allows users to see each other's insights on specific verses while maintaining owner-only update/delete permissions. Private data remains in /users/{userId}."
+    ]
   }
 }
