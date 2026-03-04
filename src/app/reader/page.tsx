@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
@@ -14,7 +15,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
 import { getPlanDay, type PathId } from "@/lib/reading-plans";
-import { useUser } from "@/firebase";
+import { useUser, useFirestore, useCollection, useMemoFirebase } from "@/firebase";
+import { saveAnnotation, getAnnotationsQuery } from "@/services/annotationService";
 import { 
   Sparkles, 
   ChevronRight, 
@@ -26,33 +28,12 @@ import {
   Sun,
   Moon,
   MessageSquare,
-  Send,
   AlertCircle,
-  Users,
-  Quote,
   Plus
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-// Local state mock data for v0.1 "Harden UX" phase
-const MOCK_ANNOTATIONS = [
-  {
-    id: "1",
-    userDisplayName: "Dr. Aris Thorne",
-    userAvatarUrl: "https://picsum.photos/seed/scholar1/100/100",
-    comment: "The Greek 'agape' here signifies a sacrificial, covenantal love rather than mere emotion. It's the engine of the entire narrative.",
-    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
-  },
-  {
-    id: "2",
-    userDisplayName: "Sarah Jenkins",
-    userAvatarUrl: "https://picsum.photos/seed/scholar2/100/100",
-    comment: "Note the connection to the 'Living Water' in chapter 4. The theme of eternal life is being meticulously established here.",
-    createdAt: new Date(Date.now() - 1000 * 60 * 30), // 30 mins ago
-  }
-];
 
 function ReaderContent() {
   const searchParams = useSearchParams();
@@ -63,6 +44,7 @@ function ReaderContent() {
   const initialRef = searchParams.get('reference') || "John 3:16";
 
   const { user } = useUser();
+  const { firestore } = useFirestore();
   const { toast } = useToast();
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -73,8 +55,14 @@ function ReaderContent() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [error, setError] = useState<string | null>(null);
   
-  // Annotation Local State for v0.1
-  const [localAnnotations, setLocalAnnotations] = useState(MOCK_ANNOTATIONS);
+  // Real-time Annotations from Firestore
+  const annotationsQuery = useMemoFirebase(() => {
+    if (!firestore || !currentRef) return null;
+    return getAnnotationsQuery(firestore, currentRef);
+  }, [firestore, currentRef]);
+
+  const { data: remoteAnnotations, isLoading: isAnnotationsLoading } = useCollection(annotationsQuery);
+
   const [showAddForm, setShowAddForm] = useState(false);
   const [newComment, setNewComment] = useState("");
 
@@ -123,17 +111,20 @@ function ReaderContent() {
   };
 
   const handleAddInsight = () => {
+    if (!user) {
+      toast({
+        title: "Authentication Required",
+        description: "Please sign in to share your scholarly insights.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!newComment.trim()) return;
     
-    const newEntry = {
-      id: Math.random().toString(),
-      userDisplayName: user?.displayName || "Guest Scholar",
-      userAvatarUrl: user?.photoURL || "https://picsum.photos/seed/guest/100/100",
-      comment: newComment,
-      createdAt: new Date(),
-    };
+    // Save to Firestore (non-blocking)
+    saveAnnotation(firestore, user, currentRef, "", newComment);
 
-    setLocalAnnotations([newEntry, ...localAnnotations]);
     setNewComment("");
     setShowAddForm(false);
     toast({
@@ -304,13 +295,19 @@ function ReaderContent() {
                 {showAddForm && (
                   <div className="p-6 bg-primary/5 border-b border-primary/10 animate-in slide-in-from-top duration-300">
                     <Textarea 
-                      placeholder="Share a scholarly insight..."
+                      placeholder={user ? "Share a scholarly insight..." : "Please sign in to share insights"}
                       className="min-h-[100px] mb-3 text-sm rounded-xl border-primary/20 bg-white"
                       value={newComment}
                       onChange={(e) => setNewComment(e.target.value)}
+                      disabled={!user}
                     />
                     <div className="flex justify-end">
-                      <Button size="sm" className="btn-gradient rounded-lg text-[10px] font-bold uppercase tracking-widest px-4" onClick={handleAddInsight}>
+                      <Button 
+                        size="sm" 
+                        className="btn-gradient rounded-lg text-[10px] font-bold uppercase tracking-widest px-4" 
+                        onClick={handleAddInsight}
+                        disabled={!user || !newComment.trim()}
+                      >
                         Publish Insight
                       </Button>
                     </div>
@@ -318,29 +315,44 @@ function ReaderContent() {
                 )}
 
                 <ScrollArea className="flex-1">
-                  <div className="divide-y divide-slate-100/10">
-                    {localAnnotations.map((ann) => (
-                      <div key={ann.id} className="p-6 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
-                        <div className="flex items-center gap-3 mb-3">
-                          <Avatar className="h-8 w-8 border border-slate-200">
-                            <AvatarImage src={ann.userAvatarUrl} />
-                            <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-bold">
-                              {ann.userDisplayName.charAt(0)}
-                            </AvatarFallback>
-                          </Avatar>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-xs font-bold truncate">{ann.userDisplayName}</p>
-                            <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
-                              {ann.createdAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                            </p>
+                  {isAnnotationsLoading ? (
+                    <div className="p-12 flex flex-col items-center opacity-20">
+                      <Loader2 className="h-6 w-6 animate-spin mb-2" />
+                      <span className="text-[10px] font-bold uppercase">Loading Feed...</span>
+                    </div>
+                  ) : remoteAnnotations && remoteAnnotations.length > 0 ? (
+                    <div className="divide-y divide-slate-100/10">
+                      {remoteAnnotations.map((ann) => (
+                        <div key={ann.id} className="p-6 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <Avatar className="h-8 w-8 border border-slate-200">
+                              <AvatarImage src={ann.userAvatarUrl} />
+                              <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-bold">
+                                {ann.userDisplayName?.charAt(0) || "S"}
+                              </AvatarFallback>
+                            </Avatar>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-xs font-bold truncate">{ann.userDisplayName}</p>
+                              <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+                                {ann.createdAt?.seconds 
+                                  ? new Date(ann.createdAt.seconds * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                                  : 'Just now'}
+                              </p>
+                            </div>
                           </div>
+                          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-body">
+                            {ann.comment}
+                          </p>
                         </div>
-                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-body">
-                          {ann.comment}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="p-12 text-center opacity-40">
+                      <MessageSquare className="h-8 w-8 mx-auto mb-4" />
+                      <p className="text-xs font-bold uppercase tracking-widest">No insights yet for this passage.</p>
+                      <p className="text-[10px] mt-2 leading-relaxed">Be the first scholar to annotate {currentRef}!</p>
+                    </div>
+                  )}
                 </ScrollArea>
               </CardContent>
             </Card>
