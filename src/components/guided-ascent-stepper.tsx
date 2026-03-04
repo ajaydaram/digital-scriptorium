@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, Check, ArrowRight } from "lucide-react";
+import { Star, Check, ArrowRight, BookOpen, Search, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type StageId = "read" | "understand" | "master";
@@ -11,6 +11,7 @@ interface Stage {
   id: StageId;
   label: string;
   description: string;
+  icon: any;
   details: {
     title: string;
     content: string;
@@ -23,30 +24,33 @@ const STAGES: Stage[] = [
     id: "read",
     label: "Read",
     description: "Surface level",
+    icon: BookOpen,
     details: {
       title: "The Initial Encounter",
-      content: "Begin with a distraction-free environment. Our reader removes the noise of modern life, allowing you to encounter the text as it was written—simply and clearly.",
-      action: "Start Reading"
+      content: "Begin with a distraction-free environment. Remove the noise and encounter the text as it was written—simply and clearly. This is the foundation of scholarly engagement.",
+      action: "Focus on the Text"
     }
   },
   {
     id: "understand",
     label: "Understand",
     description: "Context & meaning",
+    icon: Search,
     details: {
       title: "Contextual Clarity",
-      content: "Move beyond the surface. Integrated scholarly annotations provide historical context, original language insights, and cross-references that reveal the author's intent.",
-      action: "Deepen Understanding"
+      content: "Move beyond the surface. Utilize multiple versions to see linguistic nuances and explore cross-references that reveal the biblical author's broader theological intent.",
+      action: "Compare Versions"
     }
   },
   {
     id: "master",
     label: "Master",
     description: "Interpretive skill",
+    icon: GraduationCap,
     details: {
       title: "Hermeneutical Mastery",
-      content: "Achieve mastery through synthesis. Connect individual passages to the Grand Historical Narrative and develop the skill to teach and apply these truths effectively.",
-      action: "Claim Mastery"
+      content: "Achieve mastery through synthesis. Practice interpreting scripture with advanced Genre and Theme tools to develop the skill of systematic biblical engagement.",
+      action: "Explore Themes"
     }
   }
 ];
@@ -56,8 +60,8 @@ export function GuidedAscentStepper() {
   const activeIndex = STAGES.findIndex((s) => s.id === activeStage);
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-12 px-4">
-      <div className="relative mb-16">
+    <div className="w-full max-w-4xl mx-auto py-8">
+      <div className="relative mb-12">
         {/* Track */}
         <div className="absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 rounded-full" />
         
@@ -82,29 +86,24 @@ export function GuidedAscentStepper() {
                 <button
                   onClick={() => setActiveStage(stage.id)}
                   className={cn(
-                    "relative z-10 w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-primary/20 bg-white",
+                    "relative z-10 w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-primary/20 bg-white",
                     isCompleted ? "border-primary text-primary" : 
-                    isActive ? "border-primary text-primary scale-125 shadow-xl shadow-primary/20 ring-4 ring-primary/5" : 
+                    isActive ? "border-primary text-primary scale-110 shadow-lg shadow-primary/20 ring-4 ring-primary/5" : 
                     "border-slate-200 text-slate-400"
                   )}
                 >
                   {isCompleted ? (
-                    <Check className="h-6 w-6" />
-                  ) : isMaster ? (
-                    <Star className={cn("h-6 w-6", isActive ? "fill-amber-400 text-amber-400" : "text-slate-400")} />
+                    <Check className="h-5 w-5" />
                   ) : (
-                    <span className="text-sm font-bold">{index + 1}</span>
+                    <stage.icon className={cn("h-5 w-5", isActive ? "text-primary" : "text-slate-400")} />
                   )}
                 </button>
-                <div className="absolute top-16 text-center w-32 -translate-x-0">
+                <div className="absolute top-14 text-center w-32">
                   <p className={cn(
-                    "text-xs font-bold uppercase tracking-wider mb-1",
+                    "text-[10px] font-bold uppercase tracking-widest",
                     isActive ? "text-slate-900" : "text-slate-400"
                   )}>
                     {stage.label}
-                  </p>
-                  <p className="text-[10px] text-slate-500 font-medium whitespace-nowrap">
-                    {stage.description}
                   </p>
                 </div>
               </div>
@@ -114,48 +113,43 @@ export function GuidedAscentStepper() {
       </div>
 
       {/* Details Section */}
-      <div className="mt-24 min-h-[220px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeStage}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm"
-          >
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="flex-1 space-y-4">
-                <Badge className="bg-primary/10 text-primary border-none font-bold uppercase tracking-widest text-[10px]">
-                  {STAGES[activeIndex].label} Stage
-                </Badge>
-                <h3 className="text-2xl font-headline font-bold text-slate-900">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeStage}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
+          className="bg-slate-50 p-6 rounded-2xl border border-slate-100"
+        >
+          <div className="flex flex-col md:flex-row gap-6 items-start">
+            <div className="flex-1 space-y-3">
+              <div className="flex items-center gap-2">
+                <h3 className="text-lg font-headline font-bold text-slate-900">
                   {STAGES[activeIndex].details.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {STAGES[activeIndex].details.content}
-                </p>
-                <button className="flex items-center gap-2 text-primary font-bold text-sm group">
-                  {STAGES[activeIndex].details.action}
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                <Badge className="bg-primary/10 text-primary border-none font-bold uppercase tracking-widest text-[9px]">
+                  {STAGES[activeIndex].label}
+                </Badge>
               </div>
-              <div className="w-full md:w-1/3 aspect-video bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100">
-                {activeStage === 'read' && <div className="p-4 text-center opacity-40 italic text-sm">Distraction-free Reading Mockup</div>}
-                {activeStage === 'understand' && <div className="p-4 text-center opacity-40 italic text-sm">Annotation Context UI</div>}
-                {activeStage === 'master' && <div className="p-4 text-center opacity-40 italic text-sm">Theological Narrative Map</div>}
-              </div>
+              <p className="text-sm text-slate-600 leading-relaxed font-body">
+                {STAGES[activeIndex].details.content}
+              </p>
+              <button className="flex items-center gap-2 text-primary font-bold text-xs group">
+                {STAGES[activeIndex].details.action}
+                <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
 
 function Badge({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <span className={cn("px-2.5 py-0.5 rounded-full text-xs font-semibold border", className)}>
+    <span className={cn("px-2 py-0.5 rounded-full text-[10px] font-semibold border", className)}>
       {children}
     </span>
   );

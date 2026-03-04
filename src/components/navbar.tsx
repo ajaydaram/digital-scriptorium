@@ -85,7 +85,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center space-x-4">
-          <Link href="/api-reader">
+          <Link href="/reader">
             <Button variant="default" className="btn-gradient font-bold px-6 shadow-md shadow-blue-500/10 flex items-center gap-2">
               <Book className="h-4 w-4" /> Bible Reader
             </Button>
