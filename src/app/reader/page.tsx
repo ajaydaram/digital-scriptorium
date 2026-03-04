@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { GuidedAscent } from "@/components/guided-ascent";
 import { Button } from "@/components/ui/button";
@@ -39,11 +40,16 @@ import { collection, serverTimestamp } from "firebase/firestore";
 import { addDocumentNonBlocking } from "@/firebase/non-blocking-updates";
 import { cn } from "@/lib/utils";
 
-export default function ReaderPage() {
+function ReaderContent() {
   const { user } = useUser();
   const { firestore } = useFirestore();
-  const [searchQuery, setSearchQuery] = useState("John 3:16");
-  const [currentRef, setCurrentRef] = useState("John 3:16");
+  const searchParams = useSearchParams();
+  
+  const initialRef = searchParams.get('reference') || "John 3:16";
+  const initialPath = searchParams.get('path') || null;
+
+  const [searchQuery, setSearchQuery] = useState(initialRef);
+  const [currentRef, setCurrentRef] = useState(initialRef);
   const [version, setVersion] = useState(SUPPORTED_VERSIONS[0].id);
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
@@ -58,8 +64,24 @@ export default function ReaderPage() {
   
   const { toast } = useToast();
   const readingUnitId = currentRef.toLowerCase().replace(/[\s:]/g, "-");
-  const { currentStep, updateProgress, progress } = useUserProgress(readingUnitId);
+  const { currentStep, updateProgress, progress, updatePath } = useUserProgress(readingUnitId);
   const { annotations, addAnnotation, isLoading: isNotesLoading } = useAnnotations(currentRef);
+
+  // Initialize path if provided in URL
+  useEffect(() => {
+    if (initialPath) {
+      updatePath(initialPath);
+    }
+  }, [initialPath]);
+
+  // Handle reference change from URL
+  useEffect(() => {
+    const ref = searchParams.get('reference');
+    if (ref && ref !== currentRef) {
+      setCurrentRef(ref);
+      setSearchQuery(ref);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     loadScripture(currentRef, version);
@@ -163,7 +185,7 @@ export default function ReaderPage() {
       <main className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-             {progress?.pathId && (
+             {(progress?.pathId || initialPath) && (
               <div className={cn(
                 "flex items-center gap-3 border p-2 px-3 rounded-2xl animate-in fade-in slide-in-from-top-2 duration-500",
                 isDark ? "bg-slate-900/50 border-slate-800" : "bg-white border-slate-100 shadow-sm"
@@ -174,7 +196,7 @@ export default function ReaderPage() {
                 <div>
                   <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Path</p>
                   <p className={cn("text-[11px] font-bold", isDark ? "text-slate-300" : "text-slate-700")}>
-                    {progress.pathId.charAt(0).toUpperCase() + progress.pathId.slice(1)}
+                    {((progress?.pathId || initialPath) as string).charAt(0).toUpperCase() + ((progress?.pathId || initialPath) as string).slice(1)}
                   </p>
                 </div>
               </div>
@@ -463,5 +485,13 @@ export default function ReaderPage() {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function ReaderPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-50 flex items-center justify-center"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>}>
+      <ReaderContent />
+    </Suspense>
   );
 }

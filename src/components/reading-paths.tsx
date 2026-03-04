@@ -6,7 +6,6 @@ import { ArrowRight, History, Library, Lightbulb, CheckCircle2 } from "lucide-re
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
-import { useUserProgress } from "@/hooks/use-user-progress";
 import { useRouter } from "next/navigation";
 
 const PATHS = [
@@ -26,7 +25,8 @@ const PATHS = [
     bgClass: "bg-blue-50/50",
     accentColor: "text-blue-600",
     badgeText: "NARRATIVE",
-    badgeClass: "bg-blue-100/50 text-blue-700 border-blue-200/50"
+    badgeClass: "bg-blue-100/50 text-blue-700 border-blue-200/50",
+    startRef: "Genesis 1"
   },
   {
     id: "thematic",
@@ -44,7 +44,8 @@ const PATHS = [
     bgClass: "bg-emerald-50/50",
     accentColor: "text-emerald-600",
     badgeText: "THEOLOGICAL",
-    badgeClass: "bg-emerald-100/50 text-emerald-700 border-emerald-200/50"
+    badgeClass: "bg-emerald-100/50 text-emerald-700 border-emerald-200/50",
+    startRef: "Genesis 1"
   },
   {
     id: "genre",
@@ -62,17 +63,18 @@ const PATHS = [
     bgClass: "bg-purple-50/50",
     accentColor: "text-purple-600",
     badgeText: "LITERARY",
-    badgeClass: "bg-purple-100/50 text-purple-700 border-purple-200/50"
+    badgeClass: "bg-purple-100/50 text-purple-700 border-purple-200/50",
+    startRef: "Genesis 1"
   }
 ];
 
 export function ReadingPathsSection() {
   const router = useRouter();
-  const { updatePath } = useUserProgress("global-path"); // Using a shared unit for path selection
 
-  const handleBeginPath = (pathId: string) => {
-    updatePath(pathId);
-    router.push('/reader');
+  const handleBeginPath = (pathId: string, ref: string) => {
+    // Navigate to the reader with path and reference as smart presets
+    const encodedRef = encodeURIComponent(ref);
+    router.push(`/reader?path=${pathId}&reference=${encodedRef}`);
   };
 
   return (
@@ -129,13 +131,13 @@ export function ReadingPathsSection() {
             </CardContent>
             
             <button 
-              onClick={() => handleBeginPath(path.id)}
+              onClick={() => handleBeginPath(path.id, path.startRef)}
               className={cn(
                 "flex items-center gap-2 font-headline font-bold text-sm group-hover:gap-3 transition-all w-fit py-1",
                 path.accentColor
               )}
             >
-              Begin Path <ArrowRight className="h-4 w-4" />
+              Start Path <ArrowRight className="h-4 w-4" />
             </button>
           </div>
         </Card>
