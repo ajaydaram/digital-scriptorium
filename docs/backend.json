@@ -51,28 +51,21 @@
     "providers": ["google.com"]
   },
   "firestore": {
-    "structure": [
-      {
-        "path": "/users/{userId}",
-        "definition": {
-          "entityName": "UserProfile",
-          "description": "Individual user profiles."
-        }
-      },
-      {
-        "path": "/user_progress/{userId}/units/{unitId}",
-        "definition": {
-          "entityName": "UserProgress",
-          "description": "Detailed progress tracking for reading units."
-        }
-      },
-      {
-        "path": "/annotations/{annotationId}",
-        "definition": {
-          "entityName": "Annotation",
-          "description": "Public community insights on scripture."
-        }
-      }
-    ]
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Individual user profiles and settings."
+    },
+    "/user_progress/{userId}": {
+      "schema": "UserProgress",
+      "description": "Top-level user progress data."
+    },
+    "/user_progress/{userId}/units/{unitId}": {
+      "schema": "UserProgress",
+      "description": "Detailed progress tracking for specific reading units."
+    },
+    "/annotations/{annotationId}": {
+      "schema": "Annotation",
+      "description": "Public community insights on scripture, readable by all, writable by owners."
+    }
   }
 }

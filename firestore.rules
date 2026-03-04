@@ -1,6 +1,7 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Deployment Trigger: 2024-05-22T10:00:00Z - Ensuring public read access for annotations
 
     // Helper functions
     function isSignedIn() {
@@ -11,34 +12,36 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == userId;
     }
 
-    // --- User Profiles ---
+    // --- User Profiles & Private Data ---
     match /users/{userId} {
-      allow get: if isSignedIn();
-      allow list: if isSignedIn();
+      allow get, list: if isSignedIn();
       allow create, update: if isOwner(userId);
       allow delete: if isOwner(userId);
-    }
 
-    // --- User Progress Tracking ---
-    // Flattened to a top-level collection for easier management
-    match /user_progress/{userId} {
-      allow read, write: if isOwner(userId);
-      
-      // Allow access to specific progress documents
+      // Allow access to private subcollections (like private annotations)
       match /{allPaths=**} {
         allow read, write: if isOwner(userId);
       }
     }
 
-    // --- Global Social Annotations ---
+    // --- User Progress Tracking ---
+    match /user_progress/{userId} {
+      allow read, write: if isOwner(userId);
+      
+      match /{allPaths=**} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // --- Global Social Annotations (The Living Commentary) ---
     match /annotations/{annotationId} {
-      // Publicly readable for community engagement
+      // PUBLIC READ: Allow anyone (even guests) to read the community feed
       allow read: if true; 
       
-      // Only authenticated users can create
+      // AUTHENTICATED WRITE: Only logged-in users can create insights
       allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
       
-      // Only the owner can update or delete
+      // OWNER ONLY: Only the original scholar can update or delete their insight
       allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
     }
   }
