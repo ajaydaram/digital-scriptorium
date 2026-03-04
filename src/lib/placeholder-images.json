@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract scholarly background with subtle light patterns",
+      "imageUrl": "https://picsum.photos/seed/scriptorium/1200/800",
+      "imageHint": "abstract library"
+    },
+    {
+      "id": "path-chronological",
+      "description": "Historical timeline representation",
+      "imageUrl": "https://picsum.photos/seed/chron/600/400",
+      "imageHint": "history timeline"
+    },
+    {
+      "id": "path-thematic",
+      "description": "Theological connections and mapping",
+      "imageUrl": "https://picsum.photos/seed/thematic/600/400",
+      "imageHint": "connection map"
+    },
+    {
+      "id": "path-genre",
+      "description": "Literary scrolls and books",
+      "imageUrl": "https://picsum.photos/seed/literary/600/400",
+      "imageHint": "ancient scrolls"
+    }
+  ]
 }
