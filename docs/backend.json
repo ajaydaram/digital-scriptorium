@@ -1,3 +1,4 @@
+
 {
   "entities": {
     "UserProfile": {
@@ -53,19 +54,19 @@
         },
         "userId": {
           "type": "string",
-          "description": "Reference to the UserProfile entity, indicating which user created the annotation. (Relationship: UserProfile 1:N Annotation)"
+          "description": "Reference to the UserProfile entity, indicating which user created the annotation."
         },
-        "bibleBook": {
+        "userDisplayName": {
           "type": "string",
-          "description": "The name of the Bible book (e.g., 'John')."
+          "description": "The display name of the user who created the annotation for quick UI display."
         },
-        "bibleChapter": {
-          "type": "number",
-          "description": "The chapter number of the scripture passage."
+        "userAvatarUrl": {
+          "type": "string",
+          "description": "The avatar URL of the user who created the annotation."
         },
-        "bibleVerse": {
-          "type": "number",
-          "description": "The verse number within the chapter."
+        "passageRef": {
+          "type": "string",
+          "description": "The full scripture reference (e.g., 'John 3:16')."
         },
         "highlightedText": {
           "type": "string",
@@ -75,104 +76,25 @@
           "type": "string",
           "description": "The user's textual comment or note attached to the highlight."
         },
-        "color": {
-          "type": "string",
-          "description": "An optional hexadecimal color code (e.g., '#FFFF00') used for the highlight visually."
-        },
-        "startOffset": {
-          "type": "number",
-          "description": "The character index where the highlight begins within the `bibleVerse` text. This ensures precise highlight placement."
-        },
-        "endOffset": {
-          "type": "number",
-          "description": "The character index where the highlight ends within the `bibleVerse` text."
-        },
         "createdAt": {
           "type": "string",
           "description": "Timestamp when the annotation was created.",
           "format": "date-time"
-        },
-        "updatedAt": {
-          "type": "string",
-          "description": "Timestamp when the annotation was last updated.",
-          "format": "date-time"
         }
       },
       "required": [
-        "id",
         "userId",
-        "bibleBook",
-        "bibleChapter",
-        "bibleVerse",
-        "highlightedText",
+        "passageRef",
         "comment",
-        "startOffset",
-        "endOffset",
         "createdAt"
-      ]
-    },
-    "UserReadingProgress": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "UserReadingProgress",
-      "type": "object",
-      "description": "Tracks a user's progress and interaction with the various reading paths (Chronological, Thematic, Genre) in the application.",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the UserReadingProgress entity."
-        },
-        "userId": {
-          "type": "string",
-          "description": "Reference to the UserProfile entity, indicating which user owns this progress. (Relationship: UserProfile 1:N UserReadingProgress)"
-        },
-        "pathId": {
-          "type": "string",
-          "description": "A unique identifier for the specific reading path (e.g., 'chronological-path', 'thematic-path')."
-        },
-        "currentStage": {
-          "type": "string",
-          "description": "The current stage of progress within 'The Guided Ascent' (e.g., 'Read', 'Understand', 'Master')."
-        },
-        "lastAccessedSection": {
-          "type": "string",
-          "description": "An identifier for the last section, chapter, or topic the user was engaging with within the path."
-        },
-        "progressPercentage": {
-          "type": "number",
-          "description": "The overall completion percentage (0-100) for the specific reading path."
-        },
-        "isCompleted": {
-          "type": "boolean",
-          "description": "Indicates whether the user has fully completed this reading path."
-        },
-        "lastAccessedAt": {
-          "type": "string",
-          "description": "Timestamp when this reading path progress was last accessed or updated.",
-          "format": "date-time"
-        },
-        "startedAt": {
-          "type": "string",
-          "description": "Timestamp when the user first started this reading path.",
-          "format": "date-time"
-        }
-      },
-      "required": [
-        "id",
-        "userId",
-        "pathId",
-        "currentStage",
-        "lastAccessedSection",
-        "progressPercentage",
-        "isCompleted",
-        "startedAt",
-        "lastAccessedAt"
       ]
     }
   },
   "auth": {
     "providers": [
       "password",
-      "anonymous"
+      "anonymous",
+      "google.com"
     ]
   },
   "firestore": {
@@ -184,56 +106,32 @@
           "schema": {
             "$ref": "#/backend/entities/UserProfile"
           },
-          "description": "Stores individual user profiles. Each user's profile document is directly under their unique user ID. Access is restricted to the owning user, where `{userId}` must match `request.auth.uid`. Includes denormalized 'id' field for authorization independence.",
+          "description": "Stores individual user profiles. Access is restricted to the owning user.",
           "params": [
             {
               "name": "userId",
-              "description": "The unique identifier of the user, corresponding to `request.auth.uid`."
+              "description": "The unique identifier of the user."
             }
           ]
         }
       },
       {
-        "path": "/users/{userId}/annotations/{annotationId}",
+        "path": "/annotations/{annotationId}",
         "definition": {
           "entityName": "Annotation",
           "schema": {
             "$ref": "#/backend/entities/Annotation"
           },
-          "description": "Stores individual annotations created by a user. Each annotation document is nested under the owning user's profile. The `userId` field within the document and the `{userId}` in the path must match `request.auth.uid`, ensuring private, user-owned annotations and authorization independence.",
+          "description": "Global collection for social scripture engagement. Publicly readable, owner-writable.",
           "params": [
-            {
-              "name": "userId",
-              "description": "The unique identifier of the user who owns this annotation, corresponding to `request.auth.uid`."
-            },
             {
               "name": "annotationId",
-              "description": "The unique identifier for the specific annotation."
-            }
-          ]
-        }
-      },
-      {
-        "path": "/users/{userId}/readingProgress/{progressId}",
-        "definition": {
-          "entityName": "UserReadingProgress",
-          "schema": {
-            "$ref": "#/backend/entities/UserReadingProgress"
-          },
-          "description": "Tracks a user's progress through various reading paths. Each progress document is nested under the owning user's profile. The `userId` field within the document and the `{userId}` in the path must match `request.auth.uid`, ensuring private, user-owned progress tracking and authorization independence.",
-          "params": [
-            {
-              "name": "userId",
-              "description": "The unique identifier of the user whose reading progress is tracked, corresponding to `request.auth.uid`."
-            },
-            {
-              "name": "progressId",
-              "description": "The unique identifier for a specific user reading progress entry (e.g., for a specific pathId)."
+              "description": "Unique identifier for the annotation."
             }
           ]
         }
       }
     ],
-    "reasoning": "The Firestore structure for 'The Scriptorium' is designed with a strong emphasis on Authorization Independence, Structural Segregation, and clear Access Modeling, ensuring a secure, scalable, and easily debuggable backend. All user-specific data is rooted under a top-level `/users` collection, with each user's unique identifier (`userId`) forming a document path `/users/{userId}`. This pattern is fundamental to achieving authorization independence.\n\n**Authorization Independence:** By nesting all user-owned entities (UserProfile, Annotation, UserReadingProgress) directly under `/users/{userId}`, authorization rules become significantly simpler and more robust. The primary authorization check for any document within these subcollections (`/users/{userId}/profile`, `/users/{userId}/annotations/{annotationId}`, `/users/{userId}/readingProgress/{progressId}`) is to verify that the `{userId}` wildcard in the path matches `request.auth.uid`. This eliminates the need for expensive and potentially complex `get()` calls in security rules to check ownership or permissions on parent documents, thus supporting atomic operations and reducing debugging overhead. Furthermore, critical ownership fields like `userId` are denormalized within the `Annotation` and `UserReadingProgress` documents themselves, reinforcing the invariant that these documents belong to the user specified in the path and aiding in efficient querying.\n\n**QAPs (Rules are not Filters):** This structure inherently supports secure `list` operations without relying on client-side filtering. For example, a user requesting their annotations will query `/users/{request.auth.uid}/annotations`. Firestore Security Rules can directly enforce that only documents where the path's `{userId}` matches `request.auth.uid` are returned. This ensures that a `list` operation will only ever return data the authenticated user is authorized to see, making the `list` operation secure by design rather than depending on data filtering at the rule level, which can be bypassed. Similarly, listing user profiles or reading progress is restricted to the authenticated user's specific subcollections, providing a clear and secure boundary.\n\n**Structural Segregation:** Each subcollection maintains a homogeneous security posture. For instance, the `/users/{userId}/annotations` collection exclusively stores annotations belonging to the user specified by `{userId}`, with no mixing of public, shared, or other users' annotations. If a 'social' aspect were to evolve into shared annotations, a separate top-level collection (e.g., `/shared_annotations/{annotationId}`) would be created, potentially incorporating a `members` map for collaborative access, to avoid diluting the security model of private user data. This segregation simplifies security rules, as all documents within a given collection or subcollection inherently share the same access requirements."
+    "reasoning": "We use a top-level /annotations collection to support the 'Social' aspect of the app. This allows users to see each other's insights on specific verses while maintaining owner-only update/delete permissions. Private data remains in /users/{userId}."
   }
 }

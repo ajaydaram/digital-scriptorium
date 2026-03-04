@@ -1,95 +1,29 @@
+
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    /**
-     * SCRIPTORIUM SECURITY ARCHITECTURE
-     *
-     * Core Philosophy:
-     * This ruleset implements a strict "User-Ownership" model centered around "Authorization Independence." 
-     * By nesting all user-specific data under a primary /users/{userId} path, we ensure that security 
-     * decisions are performant, easy to audit, and decoupled from complex cross-document lookups.
-     *
-     * Data Structure:
-     * - /users/{userId}: Primary profile for a user.
-     * - /users/{userId}/annotations/{annotationId}: Private highlights and comments on scripture.
-     * - /users/{userId}/readingProgress/{progressId}: Personal tracking of reading paths.
-     *
-     * Key Security Decisions:
-     * - Default Deny: All access is denied unless explicitly granted.
-     * - Ownership Verification: All read and write operations require the authenticated user's 
-     *   UID to match the {userId} parameter in the document path.
-     * - Relational Integrity: To prevent data corruption or "identity spoofing," the rules 
-     *   enforce that any internal 'userId' or 'id' fields in the document match the path.
-     * - Prototyping Flexibility: While authorization is strictly enforced, the specific 
-     *   schema of content fields (like comment text or progress percentages) is not 
-     *   validated here to allow for rapid frontend iteration.
-     *
-     * Denormalization for Authorization:
-     * Document IDs and owner UIDs are required to be stored inside the documents. This 
-     * allows the security rules to verify that the data being written matches the 
-     * authorized path without performing additional 'get()' lookups.
-     */
-
-    // --- Global Helper Functions ---
-
-    /** @description Checks if the request is from an authenticated user. */
     function isSignedIn() {
       return request.auth != null;
     }
 
-    /** @description Checks if the authenticated user's UID matches the provided userId. */
     function isOwner(userId) {
       return isSignedIn() && request.auth.uid == userId;
     }
 
-    /** @description Combines ownership check with a verification that the document exists. */
-    function isExistingOwner(userId) {
-      return isOwner(userId) && resource != null;
+    // --- User Profiles ---
+    match /users/{userId} {
+      allow get: if isSignedIn();
+      allow list: if isSignedIn();
+      allow create, update: if isOwner(userId);
+      allow delete: if isOwner(userId);
     }
 
-    // --- Collection Rules ---
-
-    /**
-     * @description Rules for User Profiles. Users can only manage their own profile.
-     * @path /users/{userId}
-     * @allow (create) if auth.uid matches 'userId' and data.id matches 'userId'.
-     * @deny (get) if auth.uid does not match 'userId'.
-     * @principle Self-Creation and Ownership: Ensures users can only create and access their own identity.
-     */
-    match /users/{userId} {
-      allow get, list: if isOwner(userId);
-      allow create: if isOwner(userId) && request.resource.data.id == userId;
-      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
-      allow delete: if isExistingOwner(userId);
-
-      /**
-       * @description Rules for Annotations. Private highlights nested under the user.
-       * @path /users/{userId}/annotations/{annotationId}
-       * @allow (list) if auth.uid matches the parent {userId} path.
-       * @deny (update) if the internal 'userId' field is being changed.
-       * @principle Structural Segregation: Keeps user annotations private and restricted to the owner.
-       */
-      match /annotations/{annotationId} {
-        allow get, list: if isOwner(userId);
-        allow create: if isOwner(userId) && request.resource.data.userId == userId;
-        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
-        allow delete: if isExistingOwner(userId);
-      }
-
-      /**
-       * @description Rules for Reading Progress. Tracks a user's journey through scripture.
-       * @path /users/{userId}/readingProgress/{progressId}
-       * @allow (create) if auth.uid matches {userId} and progress data includes the correct userId.
-       * @deny (delete) if the document does not exist or the user is not the owner.
-       * @principle Relational Integrity: Enforces consistency between the storage path and internal data.
-       */
-      match /readingProgress/{progressId} {
-        allow get, list: if isOwner(userId);
-        allow create: if isOwner(userId) && request.resource.data.userId == userId;
-        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
-        allow delete: if isExistingOwner(userId);
-      }
+    // --- Global Social Annotations ---
+    match /annotations/{annotationId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
     }
   }
 }

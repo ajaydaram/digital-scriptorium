@@ -6,39 +6,46 @@ import { useSearchParams } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { GuidedAscent } from "@/components/guided-ascent";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
+import { saveAnnotation, getAnnotationsQuery } from "@/services/annotationService";
+import { 
+  useUser, 
+  useFirestore, 
+  useCollection, 
+  useMemoFirebase 
+} from "@/firebase";
 import { 
   Sparkles, 
   ChevronRight, 
   Bookmark, 
   Share2, 
   Search, 
-  History, 
   Loader2,
   Sun,
   Moon,
-  List,
-  BookOpen
+  MessageSquare,
+  Send,
+  User as UserIcon
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
-
-const MOCK_CROSS_REFS = [
-  { ref: "1 John 4:9", snippet: "In this was manifested the love of God toward us..." },
-  { ref: "Romans 5:8", snippet: "But God commendeth his love toward us, in that..." },
-  { ref: "Ephesians 2:4", snippet: "But God, who is rich in mercy, for his great love..." }
-];
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 function ReaderContent() {
   const searchParams = useSearchParams();
   const initialRef = searchParams.get('reference') || "John 3:16";
   const initialPath = searchParams.get('path') || null;
+
+  const { user } = useUser();
+  const db = useFirestore();
+  const { toast } = useToast();
 
   const [searchQuery, setSearchQuery] = useState(initialRef);
   const [currentRef, setCurrentRef] = useState(initialRef);
@@ -46,7 +53,18 @@ function ReaderContent() {
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const { toast } = useToast();
+  
+  // Annotation State
+  const [newComment, setNewComment] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Fetch Annotations
+  const annotationsQuery = useMemoFirebase(() => {
+    if (!db || !currentRef) return null;
+    return getAnnotationsQuery(db, currentRef);
+  }, [db, currentRef]);
+
+  const { data: annotations, isLoading: annotationsLoading } = useCollection(annotationsQuery);
 
   useEffect(() => {
     loadScripture(currentRef, version);
@@ -75,6 +93,36 @@ function ReaderContent() {
     }
   };
 
+  const handleAnnotate = () => {
+    if (!user) {
+      toast({
+        title: "Sign In Required",
+        description: "Please sign in to save scholarly annotations.",
+      });
+      return;
+    }
+
+    if (!newComment.trim()) return;
+
+    setIsSubmitting(true);
+    try {
+      saveAnnotation(db!, user, currentRef, scripture?.text || "", newComment);
+      setNewComment("");
+      toast({
+        title: "Annotation Saved",
+        description: "Your scholarly insight has been added to the social feed.",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to save annotation.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const isDark = theme === "dark";
 
   return (
@@ -85,6 +133,7 @@ function ReaderContent() {
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-6xl">
+        {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
             <h1 className="text-2xl font-headline font-bold">Enhanced Reader</h1>
@@ -104,6 +153,7 @@ function ReaderContent() {
           </Button>
         </div>
 
+        {/* Search & Versions */}
         <div className="mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <form onSubmit={handleSearch} className="relative w-full md:w-96 group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-primary transition-colors" />
@@ -127,6 +177,7 @@ function ReaderContent() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Main Reading Column */}
           <div className="lg:col-span-2">
             <Card className={cn(
               "border-none shadow-xl overflow-hidden rounded-3xl min-h-[500px]",
@@ -157,44 +208,100 @@ function ReaderContent() {
                       "prose lg:prose-xl max-w-none leading-relaxed font-serif",
                       isDark ? "prose-invert" : "prose-slate"
                     )}>
-                      <p className="text-2xl italic">
-                        {scripture.text}
-                      </p>
+                      <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
                     </div>
                   </div>
                 ) : null}
               </CardContent>
             </Card>
+
+            {/* Annotation Input */}
+            <Card className={cn("mt-8 border-none shadow-lg", isDark ? "bg-[#1E293B]" : "bg-white")}>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <MessageSquare className="h-5 w-5 text-primary" />
+                  <h4 className="font-headline font-bold">Add Scholarly Annotation</h4>
+                </div>
+                <div className="space-y-4">
+                  <Textarea 
+                    placeholder="Share your theological insight or contextual observation..."
+                    value={newComment}
+                    onChange={(e) => setNewComment(e.target.value)}
+                    className={cn(
+                      "min-h-[100px] rounded-xl focus:ring-primary/20",
+                      isDark ? "bg-slate-900 border-slate-700" : "bg-slate-50 border-slate-200"
+                    )}
+                  />
+                  <div className="flex justify-end">
+                    <Button 
+                      onClick={handleAnnotate} 
+                      disabled={isSubmitting || !newComment.trim()}
+                      className="btn-gradient px-8 py-5 h-auto font-bold rounded-xl gap-2"
+                    >
+                      {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+                      Publish Insight
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
+          {/* Sidebar: Social Feed & AI */}
           <div className="space-y-6">
             <Card className={cn("border-none shadow-lg", isDark ? "bg-[#1E293B]" : "bg-white")}>
               <CardHeader className="pb-4 border-b border-slate-100/10">
                 <CardTitle className="text-sm font-bold flex items-center gap-2">
-                  <List className="h-4 w-4 text-primary" /> Advanced Cross-Refs
+                  <MessageSquare className="h-4 w-4 text-primary" /> Scholarly Study Feed
                 </CardTitle>
+                <CardDescription className="text-[10px] uppercase font-bold tracking-widest">
+                  {currentRef} Insights
+                </CardDescription>
               </CardHeader>
               <CardContent className="p-0">
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[500px]">
                   <div className="divide-y divide-slate-100/10">
-                    {MOCK_CROSS_REFS.map((ref, i) => (
-                      <div key={i} className="p-4 hover:bg-slate-500/5 transition-colors cursor-pointer group">
-                        <div className="flex items-center justify-between mb-1">
-                          <span className="text-xs font-bold text-primary">{ref.ref}</span>
-                          <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </div>
-                        <p className="text-xs text-slate-500 line-clamp-2 italic">"{ref.snippet}"</p>
+                    {annotationsLoading ? (
+                      <div className="p-8 text-center opacity-40">
+                        <Loader2 className="h-5 w-5 animate-spin mx-auto mb-2" />
+                        <p className="text-[10px] font-bold uppercase">Loading Insights...</p>
                       </div>
-                    ))}
-                    <div className="p-6 text-center">
-                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">More Connections Available</p>
-                      <Button variant="outline" size="sm" className="w-full text-[10px] font-bold uppercase">Load Full Mapping</Button>
-                    </div>
+                    ) : annotations && annotations.length > 0 ? (
+                      annotations.map((ann) => (
+                        <div key={ann.id} className="p-5 hover:bg-slate-500/5 transition-colors group">
+                          <div className="flex items-start gap-3 mb-3">
+                            <Avatar className="h-8 w-8">
+                              <AvatarImage src={ann.userAvatarUrl} />
+                              <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-bold">
+                                {ann.userDisplayName.charAt(0)}
+                              </AvatarFallback>
+                            </Avatar>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-xs font-bold text-slate-900 dark:text-white truncate">
+                                {ann.userDisplayName}
+                              </p>
+                              <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+                                {ann.createdAt?.toDate ? new Date(ann.createdAt.toDate()).toLocaleDateString() : 'Just now'}
+                              </p>
+                            </div>
+                          </div>
+                          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic">
+                            "{ann.comment}"
+                          </p>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="p-12 text-center opacity-20">
+                        <MessageSquare className="h-10 w-10 mx-auto mb-4" />
+                        <p className="text-xs font-medium italic">No annotations yet for this passage. Be the first to share an insight!</p>
+                      </div>
+                    )}
                   </div>
                 </ScrollArea>
               </CardContent>
             </Card>
 
+            {/* AI Guide Card */}
             <Card className={cn("border-none shadow-lg bg-primary/5", isDark ? "border-primary/20" : "")}>
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center gap-2 text-primary">
@@ -202,9 +309,11 @@ function ReaderContent() {
                   <span className="text-xs font-bold uppercase tracking-widest">AI Scholarly Guide</span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed font-body">
-                  Click on any verse to see a deep-dive into historical context, original language roots, and theological coherence.
+                  Unlock AI-powered analysis of {currentRef}. Get historical context, original language roots, and theological coherence mapping.
                 </p>
-                <Button className="w-full btn-gradient font-bold h-9 text-xs rounded-xl">Unlock Analysis</Button>
+                <Button className="w-full btn-gradient font-bold h-10 text-xs rounded-xl shadow-lg shadow-primary/20">
+                  Generate Analysis
+                </Button>
               </CardContent>
             </Card>
           </div>
