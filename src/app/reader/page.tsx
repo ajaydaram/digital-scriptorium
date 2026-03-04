@@ -34,7 +34,9 @@ import {
   MessageSquare,
   Send,
   AlertCircle,
-  Calendar
+  Calendar,
+  Users,
+  Quote
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -77,7 +79,7 @@ function ReaderContent() {
     }
   }, [pathParam, dayParam, initialRef]);
 
-  // Fetch Annotations
+  // Fetch Annotations in real-time
   const annotationsQuery = useMemoFirebase(() => {
     if (!db || !currentRef) return null;
     return getAnnotationsQuery(db, currentRef);
@@ -113,7 +115,6 @@ function ReaderContent() {
     e.preventDefault();
     if (searchQuery.trim()) {
       setCurrentRef(searchQuery.trim());
-      // Clear path when manual search occurs
       if (pathParam) {
         router.push(`/reader?reference=${encodeURIComponent(searchQuery.trim())}`);
       }
@@ -134,16 +135,17 @@ function ReaderContent() {
 
   const handleAnnotate = () => {
     if (!user) {
-      toast({ title: "Sign In Required", description: "Please sign in to save scholarly annotations." });
+      toast({ title: "Sign In Required", description: "Please sign in to publish scholarly insights." });
       return;
     }
     if (!newComment.trim()) return;
 
     setIsSubmitting(true);
     try {
+      // Non-blocking save to global annotations
       saveAnnotation(db!, user, currentRef, scripture?.text || "", newComment);
       setNewComment("");
-      toast({ title: "Annotation Saved", description: "Your scholarly insight has been published." });
+      toast({ title: "Insight Published", description: "Your theological note is now part of the living commentary." });
     } catch (error) {
       toast({ variant: "destructive", title: "Error", description: "Failed to save annotation." });
     } finally {
@@ -162,6 +164,7 @@ function ReaderContent() {
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
+        {/* Header Area */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-8">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
@@ -177,11 +180,11 @@ function ReaderContent() {
             {pathParam && (
               <div className="flex items-center gap-2">
                 <Badge variant="outline" className="text-[10px] font-bold uppercase tracking-[0.2em] border-primary/30 text-primary">
-                  {pathParam.toUpperCase()} JOURNEY
+                  {pathParam.toUpperCase()} PATH
                 </Badge>
                 {planDay && (
                   <span className="text-xs text-slate-500 font-bold">
-                    • DAY {dayParam}: {planDay.title}
+                    • {planDay.title}
                   </span>
                 )}
               </div>
@@ -194,7 +197,7 @@ function ReaderContent() {
                 <Input 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Enter reference e.g. Romans 8:28"
+                  placeholder="Reference e.g. Romans 8:28"
                   className={cn(
                     "pl-11 h-11 rounded-xl transition-all shadow-sm border-slate-200 focus:ring-primary/20",
                     isDark ? "bg-slate-900 border-slate-800 text-white" : "bg-white"
@@ -210,9 +213,10 @@ function ReaderContent() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Main Reading Column */}
           <div className="lg:col-span-3 space-y-8">
             <Card className={cn(
-              "border-none shadow-2xl rounded-[2.5rem] overflow-hidden min-h-[600px] flex flex-col",
+              "border-none shadow-2xl rounded-[2.5rem] overflow-hidden min-h-[700px] flex flex-col",
               isDark ? "bg-[#1E293B]" : "bg-white"
             )}>
               <div className="bg-brand-gradient h-1.5 w-full" />
@@ -221,7 +225,7 @@ function ReaderContent() {
                 <GuidedAscentStepper />
               </div>
 
-              <CardContent className="p-12 md:p-24 flex-1 pt-4">
+              <CardContent className="p-8 md:p-20 flex-1 pt-4">
                 {loading ? (
                   <div className="flex flex-col items-center justify-center h-full py-20 opacity-30">
                     <Loader2 className="h-10 w-10 animate-spin mb-4 text-primary" />
@@ -232,9 +236,9 @@ function ReaderContent() {
                     <div className="h-16 w-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
                       <AlertCircle className="h-8 w-8 text-red-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">Retrieval Error</h3>
-                    <p className="text-sm text-slate-500 leading-relaxed mb-6">{error}</p>
-                    <Button variant="outline" onClick={() => loadScripture(currentRef, version)} className="rounded-xl font-bold">Try Again</Button>
+                    <h3 className="text-xl font-bold mb-2">Retrieval Error</h3>
+                    <p className="text-sm text-slate-500 mb-6">{error}</p>
+                    <Button variant="outline" onClick={() => loadScripture(currentRef, version)} className="rounded-xl">Try Again</Button>
                   </div>
                 ) : scripture ? (
                   <article className="max-w-3xl mx-auto space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -242,13 +246,9 @@ function ReaderContent() {
                       <h2 className={cn("text-5xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
                         {scripture.reference}
                       </h2>
-                      <div className="flex items-center justify-center gap-4">
-                        <Separator className="w-12" />
-                        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">
-                          {SUPPORTED_VERSIONS.find(v => v.id === version)?.name}
-                        </span>
-                        <Separator className="w-12" />
-                      </div>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">
+                        {SUPPORTED_VERSIONS.find(v => v.id === version)?.name}
+                      </p>
                     </header>
                     
                     <div className={cn(
@@ -266,59 +266,53 @@ function ReaderContent() {
                           disabled={dayParam <= 1}
                           className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
                         >
-                          <ChevronLeft className="h-4 w-4" /> Previous Day
+                          <ChevronLeft className="h-4 w-4" /> Previous
                         </Button>
-                        <div className="h-10 w-px bg-slate-100 dark:bg-slate-800" />
+                        <Separator orientation="vertical" className="h-10" />
                         <Button 
                           variant="ghost" 
                           onClick={handleNextDay}
                           className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
                         >
-                          Next Day <ChevronRight className="h-4 w-4" />
+                          Next <ChevronRight className="h-4 w-4" />
                         </Button>
                       </div>
                     )}
-
-                    <footer className="pt-12 border-t border-slate-100/10 text-center">
-                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                        End of Passage • Content Provided by API.Bible
-                      </p>
-                    </footer>
                   </article>
                 ) : null}
               </CardContent>
             </Card>
 
-            <Card className={cn("border-none shadow-xl rounded-[2rem]", isDark ? "bg-[#1E293B]" : "bg-white")}>
-              <CardContent className="p-10">
-                <div className="flex items-center gap-3 mb-6">
+            {/* Annotation Input - Horizontal Polish */}
+            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden", isDark ? "bg-[#1E293B]" : "bg-white")}>
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
                   <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                    <MessageSquare className="h-6 w-6" />
+                    <Quote className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-headline font-bold text-xl">Scholarly Annotation</h4>
-                    <p className="text-sm text-slate-500">Capture your theological insights for the community.</p>
+                    <h4 className="font-headline font-bold text-xl">Capture Insight</h4>
+                    <p className="text-sm text-slate-500">Attach your theological observation to {currentRef}.</p>
                   </div>
                 </div>
-                <div className="space-y-4">
+                <div className="flex flex-col gap-4">
                   <Textarea 
-                    placeholder="Attach a contextual observation or theological note to this passage..."
+                    placeholder="What does this passage reveal about the Grand Historical Narrative?"
                     value={newComment}
                     onChange={(e) => setNewComment(e.target.value)}
                     className={cn(
-                      "min-h-[140px] rounded-[1.5rem] p-8 text-base leading-relaxed focus:ring-primary/20 border-slate-200",
+                      "min-h-[120px] rounded-2xl p-6 text-base leading-relaxed focus:ring-primary/20 border-slate-200",
                       isDark ? "bg-slate-900 border-slate-800" : "bg-slate-50"
                     )}
                   />
-                  <div className="flex justify-between items-center">
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">{newComment.length} characters</p>
+                  <div className="flex justify-end">
                     <Button 
                       onClick={handleAnnotate} 
                       disabled={isSubmitting || !newComment.trim()}
-                      className="btn-gradient px-10 py-7 h-auto font-bold rounded-2xl gap-3 shadow-xl shadow-primary/20"
+                      className="btn-gradient px-10 py-6 h-auto font-bold rounded-xl gap-3 shadow-xl shadow-primary/20"
                     >
                       {isSubmitting ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
-                      Publish Insight
+                      Post Insight
                     </Button>
                   </div>
                 </div>
@@ -326,75 +320,90 @@ function ReaderContent() {
             </Card>
           </div>
 
+          {/* Sidebar - Community Feed */}
           <aside className="space-y-6">
-            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden", isDark ? "bg-[#1E293B]" : "bg-white")}>
-              <CardHeader className="p-8 pb-4 border-b border-slate-100/10">
+            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col", isDark ? "bg-[#1E293B]" : "bg-white")}>
+              <CardHeader className="p-6 pb-4 border-b border-slate-100/10 bg-slate-50/50 dark:bg-slate-900/50">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                    <Users className="h-4 w-4 text-primary" /> Community Insights
+                    <Users className="h-4 w-4 text-primary" /> Scholarly Feed
                   </CardTitle>
-                  <Badge variant="outline" className="text-[9px] font-bold">{annotations?.length || 0}</Badge>
+                  <Badge variant="secondary" className="text-[9px] font-bold h-5">
+                    {annotationsLoading ? "..." : annotations?.length || 0}
+                  </Badge>
                 </div>
               </CardHeader>
-              <CardContent className="p-0">
-                <ScrollArea className="h-[600px]">
+              <CardContent className="p-0 flex-1">
+                <ScrollArea className="h-[500px]">
                   <div className="divide-y divide-slate-100/10">
                     {annotationsLoading ? (
-                      <div className="p-12 text-center opacity-30"><Loader2 className="h-6 w-6 animate-spin mx-auto mb-3" /><p className="text-[10px] font-bold uppercase tracking-widest">Reading Stream...</p></div>
+                      <div className="p-12 text-center opacity-30">
+                        <Loader2 className="h-6 w-6 animate-spin mx-auto mb-3" />
+                        <p className="text-[10px] font-bold uppercase tracking-widest">Reading Feed...</p>
+                      </div>
                     ) : annotations && annotations.length > 0 ? (
                       annotations.map((ann) => (
-                        <div key={ann.id} className="p-8 hover:bg-primary/[0.02] transition-colors group">
-                          <div className="flex items-center gap-3 mb-4">
-                            <Avatar className="h-10 w-10 border-2 border-slate-100/10 shadow-sm">
+                        <div key={ann.id} className="p-6 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <Avatar className="h-8 w-8 border border-slate-200">
                               <AvatarImage src={ann.userAvatarUrl} />
-                              <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">{ann.userDisplayName.charAt(0)}</AvatarFallback>
+                              <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-bold">
+                                {ann.userDisplayName.charAt(0)}
+                              </AvatarFallback>
                             </Avatar>
-                            <div>
-                              <p className="text-xs font-bold text-slate-900 dark:text-white mb-0.5">{ann.userDisplayName}</p>
-                              <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">{ann.createdAt?.toDate ? new Date(ann.createdAt.toDate()).toLocaleDateString() : 'Just now'}</p>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-xs font-bold truncate">{ann.userDisplayName}</p>
+                              <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+                                {ann.createdAt?.toDate ? new Date(ann.createdAt.toDate()).toLocaleDateString() : 'Just now'}
+                              </p>
                             </div>
                           </div>
-                          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic border-l-2 border-primary/20 pl-4 py-1">"{ann.comment}"</p>
+                          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-body">
+                            {ann.comment}
+                          </p>
                         </div>
                       ))
                     ) : (
-                      <div className="p-16 text-center opacity-20"><MessageSquare className="h-12 w-12 mx-auto mb-6" /><p className="text-xs font-bold italic uppercase tracking-widest">No Annotations Yet</p></div>
+                      <div className="p-12 text-center opacity-20">
+                        <MessageSquare className="h-10 w-10 mx-auto mb-4" />
+                        <p className="text-xs font-bold italic uppercase tracking-widest leading-loose">
+                          Be the first to share<br />an insight on this passage
+                        </p>
+                      </div>
                     )}
                   </div>
                 </ScrollArea>
               </CardContent>
             </Card>
 
-            <Card className={cn("border-none shadow-xl rounded-[2rem] bg-primary/5 border border-primary/10", isDark ? "bg-slate-900/40" : "")}>
-              <CardContent className="p-8 space-y-6">
+            <Card className={cn("border-none shadow-xl rounded-[2rem] bg-brand-gradient/5 border border-primary/10", isDark ? "bg-slate-900/40" : "")}>
+              <CardContent className="p-6 space-y-4">
                 <div className="flex items-center gap-2 text-primary">
-                  <Sparkles className="h-5 w-5" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em]">AI Pedagogical Guide</span>
+                  <Sparkles className="h-4 w-4" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest">AI Scholarly Guide</span>
                 </div>
-                <div className="space-y-4">
-                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                    Analyze the historical context and original linguistic roots of <strong className="text-primary">{currentRef}</strong>.
-                  </p>
-                  <Button className="w-full btn-gradient font-bold h-12 text-xs rounded-xl shadow-lg shadow-primary/20 group">
-                    Generate Context Analysis <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Generate a deep-dive analysis of the original language and narrative context of <strong>{currentRef}</strong>.
+                </p>
+                <Button className="w-full btn-gradient font-bold h-11 text-[10px] rounded-xl uppercase tracking-widest shadow-lg shadow-primary/20">
+                  Analyze Context
+                </Button>
               </CardContent>
             </Card>
             
             {pathParam && (
-              <Card className={cn("border-none shadow-xl rounded-[2rem] bg-slate-100 border border-slate-200", isDark ? "bg-slate-900/40" : "")}>
-                <CardContent className="p-8 space-y-4">
+              <Card className={cn("border-none shadow-xl rounded-[2rem] bg-slate-100 dark:bg-slate-900/40 border border-slate-200")}>
+                <CardContent className="p-6 space-y-3">
                   <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-                    <Calendar className="h-5 w-5" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Path Progress</span>
+                    <Calendar className="h-4 w-4" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest">Journey Progress</span>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex justify-between text-[10px] font-bold">
-                      <span className="text-slate-500 uppercase">Day {dayParam} of 365</span>
+                    <div className="flex justify-between text-[9px] font-bold uppercase text-slate-400">
+                      <span>Day {dayParam}</span>
                       <span className="text-primary">{Math.round((dayParam / 365) * 100)}%</span>
                     </div>
-                    <div className="h-2 w-full bg-white dark:bg-slate-800 rounded-full overflow-hidden">
+                    <div className="h-1.5 w-full bg-white dark:bg-slate-800 rounded-full overflow-hidden">
                       <div className="h-full bg-brand-gradient" style={{ width: `${(dayParam / 365) * 100}%` }} />
                     </div>
                   </div>
@@ -407,27 +416,27 @@ function ReaderContent() {
 
       <style jsx global>{`
         .bible-reader-text {
-          font-size: 1.4rem;
-          line-height: 2.3;
+          font-size: 1.35rem;
+          line-height: 2.2;
           max-width: 75ch;
           margin-left: auto;
           margin-right: auto;
         }
-        .bible-reader-text p {
-          margin-bottom: 2.5rem;
-        }
         .bible-reader-text sup {
-          font-size: 0.7rem;
+          font-size: 0.65rem;
           font-weight: 800;
           color: #94A3B8;
-          margin-right: 1rem;
+          margin-right: 0.8rem;
           vertical-align: super;
           font-family: 'Space Grotesk', sans-serif;
         }
+        .bible-reader-text p {
+          margin-bottom: 2rem;
+        }
         @media (max-width: 768px) {
           .bible-reader-text {
-            font-size: 1.2rem;
-            line-height: 2;
+            font-size: 1.15rem;
+            line-height: 1.9;
           }
         }
       `}</style>
