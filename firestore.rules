@@ -21,7 +21,9 @@ service cloud.firestore {
 
     // --- Global Social Annotations ---
     match /annotations/{annotationId} {
-      allow read: if isSignedIn();
+      // Allow anyone to read annotations to foster community learning
+      allow read: if true; 
+      // Only authenticated users can create, and only owners can update/delete
       allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
       allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
     }
