@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -27,7 +26,9 @@ import {
   Loader2,
   Languages,
   Zap,
-  List
+  List,
+  Sun,
+  Moon
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useUserProgress } from "@/hooks/use-user-progress";
@@ -36,6 +37,7 @@ import { useUser, useFirestore } from "@/firebase";
 import { format } from "date-fns";
 import { collection, serverTimestamp } from "firebase/firestore";
 import { addDocumentNonBlocking } from "@/firebase/non-blocking-updates";
+import { cn } from "@/lib/utils";
 
 export default function ReaderPage() {
   const { user } = useUser();
@@ -45,20 +47,16 @@ export default function ReaderPage() {
   const [version, setVersion] = useState(SUPPORTED_VERSIONS[0].id);
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   
-  // AI States
   const [aiLoading, setAiLoading] = useState(false);
   const [aiResult, setAiResult] = useState<AIAnnotatorExplanationOutput | null>(null);
-  
-  // Word Study States
   const [wordStudyLoading, setWordStudyLoading] = useState(false);
   const [wordStudyResult, setWordStudyResult] = useState<WordStudyOutput | null>(null);
   const [selectedWord, setSelectedWord] = useState("");
-
   const [newNote, setNewNote] = useState("");
   
   const { toast } = useToast();
-  
   const readingUnitId = currentRef.toLowerCase().replace(/[\s:]/g, "-");
   const { currentStep, updateProgress, progress } = useUserProgress(readingUnitId);
   const { annotations, addAnnotation, isLoading: isNotesLoading } = useAnnotations(currentRef);
@@ -92,6 +90,9 @@ export default function ReaderPage() {
       setCurrentRef(searchQuery.trim());
     }
   };
+
+  const toggleTheme = () => setTheme(prev => prev === "light" ? "dark" : "light");
+  const isDark = theme === "dark";
 
   const handleAskAI = async () => {
     if (!scripture) return;
@@ -153,22 +154,41 @@ export default function ReaderPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className={cn(
+      "min-h-screen transition-colors duration-300",
+      isDark ? "bg-[#0F172A] text-slate-200" : "bg-slate-50 text-slate-900"
+    )}>
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-6xl">
-        {/* Active Path Indicator */}
-        {progress?.pathId && (
-          <div className="mb-6 flex items-center gap-3 bg-white/50 border border-slate-100 p-3 rounded-2xl animate-in fade-in slide-in-from-top-2 duration-500">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <List className="h-4 w-4 text-primary" />
-            </div>
-            <div>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Active Reading Path</p>
-              <p className="text-xs font-bold text-slate-700">{progress.pathId.charAt(0).toUpperCase() + progress.pathId.slice(1)} Study</p>
-            </div>
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+             {progress?.pathId && (
+              <div className={cn(
+                "flex items-center gap-3 border p-2 px-3 rounded-2xl animate-in fade-in slide-in-from-top-2 duration-500",
+                isDark ? "bg-slate-900/50 border-slate-800" : "bg-white border-slate-100 shadow-sm"
+              )}>
+                <div className="p-1.5 bg-primary/10 rounded-lg">
+                  <List className="h-3.5 w-3.5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Path</p>
+                  <p className={cn("text-[11px] font-bold", isDark ? "text-slate-300" : "text-slate-700")}>
+                    {progress.pathId.charAt(0).toUpperCase() + progress.pathId.slice(1)}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
-        )}
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={toggleTheme}
+            className={cn("rounded-full", isDark ? "hover:bg-slate-800 text-slate-400" : "hover:bg-slate-200 text-slate-600")}
+          >
+            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </Button>
+        </div>
 
         <div className="mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <form onSubmit={handleSearch} className="relative w-full md:w-96 group">
@@ -177,7 +197,10 @@ export default function ReaderPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="e.g. John 3:16, Romans 8:28..."
-              className="pl-11 h-12 rounded-xl bg-white border-slate-200 focus:ring-primary/20 transition-all shadow-sm"
+              className={cn(
+                "pl-11 h-12 rounded-xl transition-all shadow-sm",
+                isDark ? "bg-slate-900 border-slate-700 text-white focus:ring-blue-500/20" : "bg-white border-slate-200 focus:ring-primary/20"
+              )}
             />
           </form>
           
@@ -191,59 +214,73 @@ export default function ReaderPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-6">
-            <Card className="border-none shadow-xl overflow-hidden rounded-3xl bg-white">
+            <Card className={cn(
+              "border-none shadow-xl overflow-hidden rounded-3xl transition-colors duration-300",
+              isDark ? "bg-[#1E293B]" : "bg-white"
+            )}>
               <div className="bg-brand-gradient h-2 w-full" />
               <CardContent className="p-6 md:p-12">
                 <div className="mb-12">
                   <GuidedAscent currentStep={currentStep} onStepClick={updateProgress} />
                 </div>
 
-                <div className="prose prose-slate lg:prose-xl max-w-none min-h-[300px]">
+                <div className="prose lg:prose-xl max-w-none min-h-[300px]">
                   {loading ? (
                     <div className="space-y-6 animate-pulse pt-4">
-                      <div className="h-8 bg-slate-100 rounded-full w-48" />
+                      <div className={cn("h-8 rounded-full w-48", isDark ? "bg-slate-800" : "bg-slate-100")} />
                       <div className="space-y-3">
-                        <div className="h-6 bg-slate-50 rounded w-full" />
-                        <div className="h-6 bg-slate-50 rounded w-5/6" />
-                        <div className="h-6 bg-slate-50 rounded w-4/6" />
+                        <div className={cn("h-6 rounded w-full", isDark ? "bg-slate-800/50" : "bg-slate-50")} />
+                        <div className={cn("h-6 rounded w-5/6", isDark ? "bg-slate-800/50" : "bg-slate-50")} />
+                        <div className={cn("h-6 rounded w-4/6", isDark ? "bg-slate-800/50" : "bg-slate-50")} />
                       </div>
                     </div>
                   ) : scripture ? (
                     <div className="space-y-8 animate-in fade-in duration-700">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <Badge className="bg-primary/10 text-primary border-none text-[10px] font-bold uppercase tracking-widest px-3 py-1">
+                          <Badge className={cn("border-none text-[10px] font-bold uppercase tracking-widest px-3 py-1", isDark ? "bg-blue-500/10 text-blue-400" : "bg-primary/10 text-primary")}>
                             {scripture.translation_name || 'REAL TEXT'}
                           </Badge>
-                          <h3 className="text-slate-400 text-sm font-bold uppercase tracking-widest">{scripture.reference}</h3>
+                          <h3 className={cn("text-sm font-bold uppercase tracking-widest", isDark ? "text-slate-500" : "text-slate-400")}>
+                            {scripture.reference}
+                          </h3>
                         </div>
                       </div>
-                      <p className="font-serif leading-relaxed text-slate-800 text-3xl selection:bg-accent/20 first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:mr-2 first-letter:float-left">
+                      <p className={cn(
+                        "font-serif leading-relaxed text-3xl selection:bg-accent/20 first-letter:text-5xl first-letter:font-bold first-letter:mr-2 first-letter:float-left",
+                        isDark ? "text-slate-200 first-letter:text-blue-500" : "text-slate-800 first-letter:text-primary"
+                      )}>
                         {scripture.text}
                       </p>
                       
-                      <div className="flex flex-col sm:flex-row gap-4 pt-12 border-t border-slate-50">
+                      <div className={cn("flex flex-col sm:flex-row gap-4 pt-12 border-t", isDark ? "border-slate-800" : "border-slate-50")}>
                         <Button 
                           onClick={handleAskAI} 
                           disabled={aiLoading}
                           className="btn-gradient font-bold rounded-xl px-8 py-6 h-auto gap-3 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex-1"
                         >
                           {aiLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Sparkles className="h-5 w-5" />}
-                          Consult AI Pedagogical Guide
+                          Consult AI Guide
                         </Button>
 
                         <div className="flex gap-2 flex-1">
                           <Input 
-                            placeholder="Type a word to study..."
+                            placeholder="Study word..."
                             value={selectedWord}
                             onChange={(e) => setSelectedWord(e.target.value)}
-                            className="h-auto rounded-xl border-slate-200"
+                            className={cn(
+                              "h-auto rounded-xl",
+                              isDark ? "bg-slate-900 border-slate-700 text-white" : "bg-white border-slate-200"
+                            )}
                           />
                           <Button 
                             onClick={handleWordStudy}
                             disabled={wordStudyLoading || !selectedWord}
                             variant="outline"
-                            className="rounded-xl px-6 h-auto font-bold border-slate-200 hover:bg-slate-50"
+                            className={cn(
+                              "rounded-xl px-6 h-auto font-bold border-slate-200",
+                              isDark ? "bg-slate-800 border-slate-700 hover:bg-slate-700 text-white" : "hover:bg-slate-50"
+                            )}
                           >
                             {wordStudyLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Languages className="h-4 w-4" />}
                           </Button>
@@ -256,10 +293,13 @@ export default function ReaderPage() {
             </Card>
 
             {aiResult && (
-              <Card className="shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <CardHeader className="bg-primary/5 py-4">
-                  <CardTitle className="text-base font-bold flex items-center gap-2">
-                    <Sparkles className="h-4 w-4 text-primary" /> AI Scholarly Analysis
+              <Card className={cn(
+                "shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500",
+                isDark ? "bg-[#1E293B]" : "bg-white"
+              )}>
+                <CardHeader className={cn("py-4", isDark ? "bg-blue-500/5" : "bg-primary/5")}>
+                  <CardTitle className={cn("text-base font-bold flex items-center gap-2", isDark ? "text-blue-400" : "text-primary")}>
+                    <Sparkles className="h-4 w-4" /> AI Scholarly Analysis
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
@@ -267,27 +307,36 @@ export default function ReaderPage() {
                     <div className="space-y-6">
                       <div className="space-y-2">
                         <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Exegetical Summary</h4>
-                        <p className="text-slate-700 text-sm leading-relaxed">{aiResult.explanation}</p>
+                        <p className={cn("text-sm leading-relaxed", isDark ? "text-slate-300" : "text-slate-700")}>
+                          {aiResult.explanation}
+                        </p>
                       </div>
-                      <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                        <h4 className="text-[10px] font-bold text-primary mb-3 uppercase tracking-widest flex items-center gap-2">
+                      <div className={cn("p-5 rounded-2xl border", isDark ? "bg-slate-900/50 border-slate-800" : "bg-slate-50 border-slate-100")}>
+                        <h4 className={cn("text-[10px] mb-3 uppercase tracking-widest flex items-center gap-2 font-bold", isDark ? "text-blue-400" : "text-primary")}>
                           <History className="h-3 w-3" /> Historical Narrative
                         </h4>
-                        <p className="text-xs text-slate-600 italic leading-relaxed">{aiResult.theologicalContext}</p>
+                        <p className={cn("text-xs italic leading-relaxed", isDark ? "text-slate-400" : "text-slate-600")}>
+                          {aiResult.theologicalContext}
+                        </p>
                       </div>
                     </div>
                     <div className="space-y-4">
                       <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Cross-References</h4>
                       {aiResult.suggestedReferences.map((ref, i) => (
-                        <div key={i} className="group p-4 rounded-xl border border-slate-50 hover:bg-white hover:shadow-md transition-all cursor-pointer" onClick={() => {
+                        <div key={i} className={cn(
+                          "group p-4 rounded-xl border transition-all cursor-pointer",
+                          isDark ? "bg-slate-900/30 border-slate-800 hover:bg-slate-800" : "border-slate-50 hover:bg-white hover:shadow-md"
+                        )} onClick={() => {
                           setCurrentRef(ref.ref);
                           setSearchQuery(ref.ref);
                         }}>
-                          <div className="text-sm text-primary font-bold mb-1 flex items-center justify-between">
+                          <div className={cn("text-sm font-bold mb-1 flex items-center justify-between", isDark ? "text-blue-400" : "text-primary")}>
                             {ref.ref}
                             <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
-                          <p className="text-[11px] text-slate-500 leading-snug">{ref.reason}</p>
+                          <p className={cn("text-[11px] leading-snug", isDark ? "text-slate-500" : "text-slate-500")}>
+                            {ref.reason}
+                          </p>
                         </div>
                       ))}
                     </div>
@@ -296,9 +345,12 @@ export default function ReaderPage() {
               </Card>
             )}
 
-            <Card className="border-none shadow-lg rounded-3xl overflow-hidden">
-              <CardHeader className="bg-slate-50/50 py-4">
-                <CardTitle className="text-sm font-bold flex items-center gap-2 text-slate-600">
+            <Card className={cn(
+              "border-none shadow-lg rounded-3xl overflow-hidden",
+              isDark ? "bg-[#1E293B]" : "bg-white"
+            )}>
+              <CardHeader className={cn("py-4", isDark ? "bg-slate-900/50" : "bg-slate-50/50")}>
+                <CardTitle className={cn("text-sm font-bold flex items-center gap-2", isDark ? "text-slate-400" : "text-slate-600")}>
                   <MessageSquare className="h-4 w-4" /> Add Scholarly Annotation
                 </CardTitle>
               </CardHeader>
@@ -307,7 +359,10 @@ export default function ReaderPage() {
                   value={newNote}
                   onChange={(e) => setNewNote(e.target.value)}
                   placeholder="Record your cross-references, historical insights, or theological reflections..."
-                  className="min-h-[120px] rounded-2xl bg-white border-slate-100 focus:ring-primary/20"
+                  className={cn(
+                    "min-h-[120px] rounded-2xl focus:ring-primary/20",
+                    isDark ? "bg-slate-900 border-slate-800 text-white" : "bg-white border-slate-100"
+                  )}
                 />
                 <div className="flex justify-end">
                   <Button onClick={handleSaveNote} disabled={!newNote.trim()} className="btn-gradient rounded-xl font-bold px-6">
@@ -320,9 +375,12 @@ export default function ReaderPage() {
 
           <div className="space-y-8">
             {wordStudyResult && (
-              <Card className="shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-right-4 duration-500">
-                <CardHeader className="bg-accent/5 py-4 border-b border-accent/10">
-                  <CardTitle className="text-sm font-bold flex items-center gap-2 text-accent">
+              <Card className={cn(
+                "shadow-2xl border-none rounded-3xl overflow-hidden animate-in fade-in slide-in-from-right-4 duration-500",
+                isDark ? "bg-[#1E293B]" : "bg-white"
+              )}>
+                <CardHeader className={cn("py-4 border-b", isDark ? "bg-purple-500/5 border-purple-500/10" : "bg-accent/5 border-accent/10")}>
+                  <CardTitle className={cn("text-sm font-bold flex items-center gap-2", isDark ? "text-purple-400" : "text-accent")}>
                     <Languages className="h-4 w-4" /> Original Language Study
                   </CardTitle>
                 </CardHeader>
@@ -330,26 +388,30 @@ export default function ReaderPage() {
                   <div className="space-y-6">
                     <div className="flex items-end justify-between">
                       <div>
-                        <h2 className="text-3xl font-headline font-bold text-slate-900">{wordStudyResult.originalWord}</h2>
-                        <p className="text-sm font-bold text-accent uppercase tracking-widest">{wordStudyResult.transliteration}</p>
+                        <h2 className={cn("text-3xl font-headline font-bold", isDark ? "text-white" : "text-slate-900")}>
+                          {wordStudyResult.originalWord}
+                        </h2>
+                        <p className={cn("text-sm font-bold uppercase tracking-widest", isDark ? "text-purple-400" : "text-accent")}>
+                          {wordStudyResult.transliteration}
+                        </p>
                       </div>
-                      <Badge variant="outline" className="text-[10px] font-bold border-accent/20 text-accent">
+                      <Badge variant="outline" className={cn("text-[10px] font-bold", isDark ? "border-purple-500/20 text-purple-400" : "border-accent/20 text-accent")}>
                         {wordStudyResult.language} • {wordStudyResult.strongsNumber}
                       </Badge>
                     </div>
 
                     <div className="space-y-2">
                       <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Lexical Definition</h4>
-                      <p className="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                      <p className={cn("text-sm leading-relaxed p-4 rounded-xl border", isDark ? "bg-slate-900/50 border-slate-800 text-slate-300" : "bg-slate-50 border-slate-100 text-slate-700")}>
                         {wordStudyResult.definition}
                       </p>
                     </div>
 
                     <div className="space-y-2">
-                      <h4 className="text-[10px] font-bold text-accent uppercase tracking-widest flex items-center gap-2">
+                      <h4 className={cn("text-[10px] uppercase tracking-widest flex items-center gap-2 font-bold", isDark ? "text-purple-400" : "text-accent")}>
                         <Zap className="h-3 w-3" /> Narrative Significance
                       </h4>
-                      <p className="text-xs text-slate-600 italic leading-relaxed">
+                      <p className={cn("text-xs italic leading-relaxed", isDark ? "text-slate-400" : "text-slate-600")}>
                         {wordStudyResult.pedagogicalInsight}
                       </p>
                     </div>
@@ -358,9 +420,12 @@ export default function ReaderPage() {
               </Card>
             )}
 
-            <Card className="shadow-xl border-none rounded-3xl overflow-hidden bg-white">
-              <CardHeader className="py-4 border-b border-slate-50">
-                <CardTitle className="text-sm font-bold flex items-center gap-2">
+            <Card className={cn(
+              "shadow-xl border-none rounded-3xl overflow-hidden",
+              isDark ? "bg-[#1E293B]" : "bg-white"
+            )}>
+              <CardHeader className={cn("py-4 border-b", isDark ? "border-slate-800" : "border-slate-50")}>
+                <CardTitle className={cn("text-sm font-bold flex items-center gap-2", isDark ? "text-slate-400" : "text-slate-600")}>
                   <History className="h-4 w-4 text-accent" /> Your Annotations
                 </CardTitle>
               </CardHeader>
@@ -369,21 +434,23 @@ export default function ReaderPage() {
                   {isNotesLoading ? (
                     <div className="p-8 text-center text-slate-400 text-xs italic">Syncing with Scriptorium...</div>
                   ) : annotations && annotations.length > 0 ? (
-                    <div className="divide-y divide-slate-50">
+                    <div className={cn("divide-y", isDark ? "divide-slate-800" : "divide-slate-50")}>
                       {annotations.map((note) => (
-                        <div key={note.id} className="p-5 hover:bg-slate-50/50 transition-colors">
+                        <div key={note.id} className={cn("p-5 transition-colors", isDark ? "hover:bg-slate-800/50" : "hover:bg-slate-50/50")}>
                           <div className="flex justify-between items-center mb-2">
                             <span className="text-[10px] font-bold text-slate-400 uppercase">
                               {note.createdAt?.toDate ? format(note.createdAt.toDate(), 'MMM d, p') : 'Just now'}
                             </span>
                           </div>
-                          <p className="text-sm text-slate-700 leading-relaxed font-medium">{note.content}</p>
+                          <p className={cn("text-sm leading-relaxed font-medium", isDark ? "text-slate-300" : "text-slate-700")}>
+                            {note.content}
+                          </p>
                         </div>
                       ))}
                     </div>
                   ) : (
                     <div className="p-12 text-center space-y-3">
-                      <div className="h-10 w-10 bg-slate-50 rounded-full flex items-center justify-center mx-auto text-slate-300">
+                      <div className={cn("h-10 w-10 rounded-full flex items-center justify-center mx-auto", isDark ? "bg-slate-800 text-slate-700" : "bg-slate-50 text-slate-300")}>
                         <MessageSquare className="h-5 w-5" />
                       </div>
                       <p className="text-xs text-slate-400 font-medium leading-relaxed">No scholarly notes for this passage.</p>
