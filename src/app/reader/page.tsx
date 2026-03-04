@@ -13,14 +13,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
-import { saveAnnotation, getAnnotationsQuery } from "@/services/annotationService";
 import { getPlanDay, type PathId } from "@/lib/reading-plans";
-import { 
-  useUser, 
-  useFirestore, 
-  useCollection, 
-  useMemoFirebase 
-} from "@/firebase";
+import { useUser } from "@/firebase";
 import { 
   Sparkles, 
   ChevronRight, 
@@ -34,13 +28,31 @@ import {
   MessageSquare,
   Send,
   AlertCircle,
-  Calendar,
   Users,
-  Quote
+  Quote,
+  Plus
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+// Local state mock data for v0.1 "Harden UX" phase
+const MOCK_ANNOTATIONS = [
+  {
+    id: "1",
+    userDisplayName: "Dr. Aris Thorne",
+    userAvatarUrl: "https://picsum.photos/seed/scholar1/100/100",
+    comment: "The Greek 'agape' here signifies a sacrificial, covenantal love rather than mere emotion. It's the engine of the entire narrative.",
+    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
+  },
+  {
+    id: "2",
+    userDisplayName: "Sarah Jenkins",
+    userAvatarUrl: "https://picsum.photos/seed/scholar2/100/100",
+    comment: "Note the connection to the 'Living Water' in chapter 4. The theme of eternal life is being meticulously established here.",
+    createdAt: new Date(Date.now() - 1000 * 60 * 30), // 30 mins ago
+  }
+];
 
 function ReaderContent() {
   const searchParams = useSearchParams();
@@ -51,7 +63,6 @@ function ReaderContent() {
   const initialRef = searchParams.get('reference') || "John 3:16";
 
   const { user } = useUser();
-  const db = useFirestore();
   const { toast } = useToast();
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -62,9 +73,10 @@ function ReaderContent() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [error, setError] = useState<string | null>(null);
   
-  // Annotation State
+  // Annotation Local State for v0.1
+  const [localAnnotations, setLocalAnnotations] = useState(MOCK_ANNOTATIONS);
+  const [showAddForm, setShowAddForm] = useState(false);
   const [newComment, setNewComment] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Sync reference with plan if path and day are present
   useEffect(() => {
@@ -78,14 +90,6 @@ function ReaderContent() {
       setSearchQuery(initialRef);
     }
   }, [pathParam, dayParam, initialRef]);
-
-  // Fetch Annotations in real-time
-  const annotationsQuery = useMemoFirebase(() => {
-    if (!db || !currentRef) return null;
-    return getAnnotationsQuery(db, currentRef);
-  }, [db, currentRef]);
-
-  const { data: annotations, isLoading: annotationsLoading } = useCollection(annotationsQuery);
 
   useEffect(() => {
     if (currentRef) {
@@ -115,42 +119,27 @@ function ReaderContent() {
     e.preventDefault();
     if (searchQuery.trim()) {
       setCurrentRef(searchQuery.trim());
-      if (pathParam) {
-        router.push(`/reader?reference=${encodeURIComponent(searchQuery.trim())}`);
-      }
     }
   };
 
-  const handleNextDay = () => {
-    if (pathParam && dayParam) {
-      router.push(`/reader?path=${pathParam}&day=${dayParam + 1}`);
-    }
-  };
-
-  const handlePrevDay = () => {
-    if (pathParam && dayParam > 1) {
-      router.push(`/reader?path=${pathParam}&day=${dayParam - 1}`);
-    }
-  };
-
-  const handleAnnotate = () => {
-    if (!user) {
-      toast({ title: "Sign In Required", description: "Please sign in to publish scholarly insights." });
-      return;
-    }
+  const handleAddInsight = () => {
     if (!newComment.trim()) return;
+    
+    const newEntry = {
+      id: Math.random().toString(),
+      userDisplayName: user?.displayName || "Guest Scholar",
+      userAvatarUrl: user?.photoURL || "https://picsum.photos/seed/guest/100/100",
+      comment: newComment,
+      createdAt: new Date(),
+    };
 
-    setIsSubmitting(true);
-    try {
-      // Non-blocking save to global annotations
-      saveAnnotation(db!, user, currentRef, scripture?.text || "", newComment);
-      setNewComment("");
-      toast({ title: "Insight Published", description: "Your theological note is now part of the living commentary." });
-    } catch (error) {
-      toast({ variant: "destructive", title: "Error", description: "Failed to save annotation." });
-    } finally {
-      setIsSubmitting(false);
-    }
+    setLocalAnnotations([newEntry, ...localAnnotations]);
+    setNewComment("");
+    setShowAddForm(false);
+    toast({
+      title: "Insight Shared",
+      description: "Your theological note has been added to the living commentary.",
+    });
   };
 
   const isDark = theme === "dark";
@@ -252,7 +241,7 @@ function ReaderContent() {
                     </header>
                     
                     <div className={cn(
-                      "bible-reader-text leading-[2.2] font-serif transition-colors duration-500",
+                      "bible-reader-text font-serif transition-colors duration-500",
                       isDark ? "text-slate-300" : "text-slate-800"
                     )}>
                       <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
@@ -262,7 +251,9 @@ function ReaderContent() {
                       <div className="pt-12 flex items-center justify-center gap-6">
                         <Button 
                           variant="ghost" 
-                          onClick={handlePrevDay} 
+                          onClick={() => {
+                            if (dayParam > 1) router.push(`/reader?path=${pathParam}&day=${dayParam - 1}`);
+                          }} 
                           disabled={dayParam <= 1}
                           className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
                         >
@@ -271,7 +262,9 @@ function ReaderContent() {
                         <Separator orientation="vertical" className="h-10" />
                         <Button 
                           variant="ghost" 
-                          onClick={handleNextDay}
+                          onClick={() => {
+                            router.push(`/reader?path=${pathParam}&day=${dayParam + 1}`);
+                          }}
                           className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
                         >
                           Next <ChevronRight className="h-4 w-4" />
@@ -282,95 +275,71 @@ function ReaderContent() {
                 ) : null}
               </CardContent>
             </Card>
-
-            {/* Annotation Input - Horizontal Polish */}
-            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden", isDark ? "bg-[#1E293B]" : "bg-white")}>
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                    <Quote className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-headline font-bold text-xl">Capture Insight</h4>
-                    <p className="text-sm text-slate-500">Attach your theological observation to {currentRef}.</p>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <Textarea 
-                    placeholder="What does this passage reveal about the Grand Historical Narrative?"
-                    value={newComment}
-                    onChange={(e) => setNewComment(e.target.value)}
-                    className={cn(
-                      "min-h-[120px] rounded-2xl p-6 text-base leading-relaxed focus:ring-primary/20 border-slate-200",
-                      isDark ? "bg-slate-900 border-slate-800" : "bg-slate-50"
-                    )}
-                  />
-                  <div className="flex justify-end">
-                    <Button 
-                      onClick={handleAnnotate} 
-                      disabled={isSubmitting || !newComment.trim()}
-                      className="btn-gradient px-10 py-6 h-auto font-bold rounded-xl gap-3 shadow-xl shadow-primary/20"
-                    >
-                      {isSubmitting ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
-                      Post Insight
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
-          {/* Sidebar - Community Feed */}
+          {/* Sidebar - Community Annotations */}
           <aside className="space-y-6">
-            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col", isDark ? "bg-[#1E293B]" : "bg-white")}>
-              <CardHeader className="p-6 pb-4 border-b border-slate-100/10 bg-slate-50/50 dark:bg-slate-900/50">
+            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col min-h-[600px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
+              <CardHeader className="p-6 pb-4 border-b border-slate-100/10">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                    <Users className="h-4 w-4 text-primary" /> Scholarly Feed
-                  </CardTitle>
-                  <Badge variant="secondary" className="text-[9px] font-bold h-5">
-                    {annotationsLoading ? "..." : annotations?.length || 0}
-                  </Badge>
+                  <div className="space-y-1">
+                    <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                      <MessageSquare className="h-4 w-4 text-primary" /> Community Feed
+                    </CardTitle>
+                    <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">{currentRef}</p>
+                  </div>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="h-8 w-8 rounded-full bg-primary/5 text-primary"
+                    onClick={() => setShowAddForm(!showAddForm)}
+                  >
+                    <Plus className={cn("h-4 w-4 transition-transform", showAddForm && "rotate-45")} />
+                  </Button>
                 </div>
               </CardHeader>
-              <CardContent className="p-0 flex-1">
-                <ScrollArea className="h-[500px]">
+              
+              <CardContent className="p-0 flex-1 flex flex-col">
+                {/* Add Insight Form (Expanding) */}
+                {showAddForm && (
+                  <div className="p-6 bg-primary/5 border-b border-primary/10 animate-in slide-in-from-top duration-300">
+                    <Textarea 
+                      placeholder="Share a scholarly insight..."
+                      className="min-h-[100px] mb-3 text-sm rounded-xl border-primary/20 bg-white"
+                      value={newComment}
+                      onChange={(e) => setNewComment(e.target.value)}
+                    />
+                    <div className="flex justify-end">
+                      <Button size="sm" className="btn-gradient rounded-lg text-[10px] font-bold uppercase tracking-widest px-4" onClick={handleAddInsight}>
+                        Publish Insight
+                      </Button>
+                    </div>
+                  </div>
+                )}
+
+                <ScrollArea className="flex-1">
                   <div className="divide-y divide-slate-100/10">
-                    {annotationsLoading ? (
-                      <div className="p-12 text-center opacity-30">
-                        <Loader2 className="h-6 w-6 animate-spin mx-auto mb-3" />
-                        <p className="text-[10px] font-bold uppercase tracking-widest">Reading Feed...</p>
-                      </div>
-                    ) : annotations && annotations.length > 0 ? (
-                      annotations.map((ann) => (
-                        <div key={ann.id} className="p-6 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
-                          <div className="flex items-center gap-3 mb-3">
-                            <Avatar className="h-8 w-8 border border-slate-200">
-                              <AvatarImage src={ann.userAvatarUrl} />
-                              <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-bold">
-                                {ann.userDisplayName.charAt(0)}
-                              </AvatarFallback>
-                            </Avatar>
-                            <div className="flex-1 min-w-0">
-                              <p className="text-xs font-bold truncate">{ann.userDisplayName}</p>
-                              <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
-                                {ann.createdAt?.toDate ? new Date(ann.createdAt.toDate()).toLocaleDateString() : 'Just now'}
-                              </p>
-                            </div>
+                    {localAnnotations.map((ann) => (
+                      <div key={ann.id} className="p-6 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
+                        <div className="flex items-center gap-3 mb-3">
+                          <Avatar className="h-8 w-8 border border-slate-200">
+                            <AvatarImage src={ann.userAvatarUrl} />
+                            <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-bold">
+                              {ann.userDisplayName.charAt(0)}
+                            </AvatarFallback>
+                          </Avatar>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs font-bold truncate">{ann.userDisplayName}</p>
+                            <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+                              {ann.createdAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                            </p>
                           </div>
-                          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-body">
-                            {ann.comment}
-                          </p>
                         </div>
-                      ))
-                    ) : (
-                      <div className="p-12 text-center opacity-20">
-                        <MessageSquare className="h-10 w-10 mx-auto mb-4" />
-                        <p className="text-xs font-bold italic uppercase tracking-widest leading-loose">
-                          Be the first to share<br />an insight on this passage
+                        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-body">
+                          {ann.comment}
                         </p>
                       </div>
-                    )}
+                    ))}
                   </div>
                 </ScrollArea>
               </CardContent>
@@ -390,35 +359,15 @@ function ReaderContent() {
                 </Button>
               </CardContent>
             </Card>
-            
-            {pathParam && (
-              <Card className={cn("border-none shadow-xl rounded-[2rem] bg-slate-100 dark:bg-slate-900/40 border border-slate-200")}>
-                <CardContent className="p-6 space-y-3">
-                  <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-                    <Calendar className="h-4 w-4" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Journey Progress</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-[9px] font-bold uppercase text-slate-400">
-                      <span>Day {dayParam}</span>
-                      <span className="text-primary">{Math.round((dayParam / 365) * 100)}%</span>
-                    </div>
-                    <div className="h-1.5 w-full bg-white dark:bg-slate-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-brand-gradient" style={{ width: `${(dayParam / 365) * 100}%` }} />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
           </aside>
         </div>
       </main>
 
       <style jsx global>{`
         .bible-reader-text {
-          font-size: 1.35rem;
-          line-height: 2.2;
-          max-width: 75ch;
+          font-size: 1.25rem;
+          line-height: 2.1;
+          max-width: 65ch;
           margin-left: auto;
           margin-right: auto;
         }
