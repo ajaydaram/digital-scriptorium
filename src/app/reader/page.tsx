@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
@@ -6,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { GuidedAscentStepper } from "@/components/guided-ascent-stepper";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
@@ -15,8 +14,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
 import { getPlanDay, type PathId } from "@/lib/reading-plans";
-import { useUser, useFirestore, useCollection, useMemoFirebase } from "@/firebase";
+import { useUser, useFirestore, useCollection, useMemoFirebase, useAuth } from "@/firebase";
 import { saveAnnotation, getAnnotationsQuery } from "@/services/annotationService";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { 
   Sparkles, 
   ChevronRight, 
@@ -29,7 +29,8 @@ import {
   Moon,
   MessageSquare,
   AlertCircle,
-  Plus
+  Plus,
+  LogIn
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -44,6 +45,7 @@ function ReaderContent() {
   const initialRef = searchParams.get('reference') || "John 3:16";
 
   const { user } = useUser();
+  const auth = useAuth();
   const { firestore } = useFirestore();
   const { toast } = useToast();
 
@@ -66,7 +68,6 @@ function ReaderContent() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [newComment, setNewComment] = useState("");
 
-  // Sync reference with plan if path and day are present
   useEffect(() => {
     if (pathParam && dayParam > 0) {
       const planDay = getPlanDay(pathParam, dayParam);
@@ -93,11 +94,6 @@ function ReaderContent() {
       setScripture(data);
     } catch (error: any) {
       setError(error.message || "Could not retrieve this passage. Please try a different reference.");
-      toast({
-        variant: "destructive",
-        title: "Passage Error",
-        description: `Could not retrieve "${ref}".`
-      });
     } finally {
       setLoading(false);
     }
@@ -110,26 +106,34 @@ function ReaderContent() {
     }
   };
 
+  const handleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Sign In Error",
+        description: error.message,
+      });
+    }
+  };
+
   const handleAddInsight = () => {
     if (!user) {
-      toast({
-        title: "Authentication Required",
-        description: "Please sign in to share your scholarly insights.",
-        variant: "destructive",
-      });
+      handleSignIn();
       return;
     }
 
     if (!newComment.trim()) return;
     
-    // Save to Firestore (non-blocking)
     saveAnnotation(firestore, user, currentRef, "", newComment);
 
     setNewComment("");
     setShowAddForm(false);
     toast({
       title: "Insight Shared",
-      description: "Your theological note has been added to the living commentary.",
+      description: "Your note has been added to the living commentary.",
     });
   };
 
@@ -144,7 +148,6 @@ function ReaderContent() {
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
-        {/* Header Area */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-8">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
@@ -193,7 +196,6 @@ function ReaderContent() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Main Reading Column */}
           <div className="lg:col-span-3 space-y-8">
             <Card className={cn(
               "border-none shadow-2xl rounded-[2.5rem] overflow-hidden min-h-[700px] flex flex-col",
@@ -226,9 +228,6 @@ function ReaderContent() {
                       <h2 className={cn("text-5xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
                         {scripture.reference}
                       </h2>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">
-                        {SUPPORTED_VERSIONS.find(v => v.id === version)?.name}
-                      </p>
                     </header>
                     
                     <div className={cn(
@@ -268,7 +267,6 @@ function ReaderContent() {
             </Card>
           </div>
 
-          {/* Sidebar - Community Annotations */}
           <aside className="space-y-6">
             <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col min-h-[600px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
               <CardHeader className="p-6 pb-4 border-b border-slate-100/10">
@@ -279,34 +277,34 @@ function ReaderContent() {
                     </CardTitle>
                     <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">{currentRef}</p>
                   </div>
-                  <Button 
-                    variant="ghost" 
-                    size="icon" 
-                    className="h-8 w-8 rounded-full bg-primary/5 text-primary"
-                    onClick={() => setShowAddForm(!showAddForm)}
-                  >
-                    <Plus className={cn("h-4 w-4 transition-transform", showAddForm && "rotate-45")} />
-                  </Button>
+                  {user && (
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className="h-8 w-8 rounded-full bg-primary/5 text-primary"
+                      onClick={() => setShowAddForm(!showAddForm)}
+                    >
+                      <Plus className={cn("h-4 w-4 transition-transform", showAddForm && "rotate-45")} />
+                    </Button>
+                  )}
                 </div>
               </CardHeader>
               
               <CardContent className="p-0 flex-1 flex flex-col">
-                {/* Add Insight Form (Expanding) */}
-                {showAddForm && (
+                {showAddForm && user && (
                   <div className="p-6 bg-primary/5 border-b border-primary/10 animate-in slide-in-from-top duration-300">
                     <Textarea 
-                      placeholder={user ? "Share a scholarly insight..." : "Please sign in to share insights"}
+                      placeholder="Share a scholarly insight..."
                       className="min-h-[100px] mb-3 text-sm rounded-xl border-primary/20 bg-white"
                       value={newComment}
                       onChange={(e) => setNewComment(e.target.value)}
-                      disabled={!user}
                     />
                     <div className="flex justify-end">
                       <Button 
                         size="sm" 
                         className="btn-gradient rounded-lg text-[10px] font-bold uppercase tracking-widest px-4" 
                         onClick={handleAddInsight}
-                        disabled={!user || !newComment.trim()}
+                        disabled={!newComment.trim()}
                       >
                         Publish Insight
                       </Button>
@@ -315,6 +313,18 @@ function ReaderContent() {
                 )}
 
                 <ScrollArea className="flex-1">
+                  {!user && (
+                    <div className="p-10 text-center space-y-4">
+                      <LogIn className="h-8 w-8 mx-auto text-slate-300" />
+                      <p className="text-xs font-bold text-slate-500 uppercase tracking-widest leading-relaxed">
+                        Sign in to share your scholarly insights
+                      </p>
+                      <Button variant="outline" size="sm" onClick={handleSignIn} className="rounded-xl text-[10px] font-bold uppercase tracking-widest">
+                        Sign In with Google
+                      </Button>
+                    </div>
+                  )}
+
                   {isAnnotationsLoading ? (
                     <div className="p-12 flex flex-col items-center opacity-20">
                       <Loader2 className="h-6 w-6 animate-spin mb-2" />
@@ -350,7 +360,6 @@ function ReaderContent() {
                     <div className="p-12 text-center opacity-40">
                       <MessageSquare className="h-8 w-8 mx-auto mb-4" />
                       <p className="text-xs font-bold uppercase tracking-widest">No insights yet for this passage.</p>
-                      <p className="text-[10px] mt-2 leading-relaxed">Be the first scholar to annotate {currentRef}!</p>
                     </div>
                   )}
                 </ScrollArea>
@@ -364,7 +373,7 @@ function ReaderContent() {
                   <span className="text-[10px] font-bold uppercase tracking-widest">AI Scholarly Guide</span>
                 </div>
                 <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Generate a deep-dive analysis of the original language and narrative context of <strong>{currentRef}</strong>.
+                  Generate a deep-dive analysis of <strong>{currentRef}</strong>.
                 </p>
                 <Button className="w-full btn-gradient font-bold h-11 text-[10px] rounded-xl uppercase tracking-widest shadow-lg shadow-primary/20">
                   Analyze Context
@@ -393,12 +402,6 @@ function ReaderContent() {
         }
         .bible-reader-text p {
           margin-bottom: 2rem;
-        }
-        @media (max-width: 768px) {
-          .bible-reader-text {
-            font-size: 1.15rem;
-            line-height: 1.9;
-          }
         }
       `}</style>
     </div>
