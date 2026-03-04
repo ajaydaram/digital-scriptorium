@@ -13,17 +13,18 @@ import {
 } from "@/components/ui/select";
 import { 
   BookOpen, 
-  Headphones, 
-  BookMarked, 
   ChevronLeft, 
   ChevronRight,
   Loader2,
   Sun,
-  Moon
+  Moon,
+  Zap,
+  Layout
 } from "lucide-react";
 import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const BIBLE_BOOKS = [
   "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy",
@@ -38,7 +39,7 @@ const BIBLE_BOOKS = [
   "1 John", "2 John", "3 John", "Jude", "Revelation"
 ];
 
-export default function ApiReaderPage() {
+export default function SimpleReaderPage() {
   const [book, setBook] = useState("John");
   const [chapter, setChapter] = useState("1");
   const [version, setVersion] = useState(SUPPORTED_VERSIONS[0].id);
@@ -91,18 +92,29 @@ export default function ApiReaderPage() {
       <main className="flex-1 container mx-auto px-4 py-8 max-w-5xl">
         {/* Header Section */}
         <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-3">
-            <BookOpen className={cn("h-6 w-6", isDark ? "text-blue-500" : "text-primary")} />
-            <h1 className="text-2xl font-bold tracking-tight">Bible Reader</h1>
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-3">
+              <Zap className={cn("h-6 w-6", isDark ? "text-blue-500" : "text-primary")} />
+              <h1 className="text-2xl font-bold tracking-tight">Simple Reader</h1>
+            </div>
+            <p className="text-xs text-slate-500 font-medium">Distraction-free quick reference</p>
           </div>
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={toggleTheme}
-            className={cn("rounded-full", isDark ? "hover:bg-slate-800 text-slate-400" : "hover:bg-slate-200 text-slate-600")}
-          >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
+          
+          <div className="flex items-center gap-3">
+            <Link href="/reader">
+              <Button variant="outline" size="sm" className="hidden md:flex gap-2 rounded-xl border-slate-200 font-bold text-xs uppercase tracking-widest">
+                <Layout className="h-4 w-4" /> Switch to Enhanced
+              </Button>
+            </Link>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={toggleTheme}
+              className={cn("rounded-full h-10 w-10", isDark ? "hover:bg-slate-800 text-slate-400" : "hover:bg-slate-200 text-slate-600")}
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
 
         {/* Controls Bar */}
@@ -112,7 +124,7 @@ export default function ApiReaderPage() {
         )}>
           <Select value={book} onValueChange={setBook}>
             <SelectTrigger className={cn(
-              "w-[160px] h-10 text-xs font-medium focus:ring-blue-500",
+              "w-[160px] h-10 text-xs font-bold uppercase tracking-widest focus:ring-blue-500 rounded-lg",
               isDark ? "bg-slate-800 border-slate-700" : "bg-slate-50 border-slate-200"
             )}>
               <SelectValue placeholder="Select Book" />
@@ -122,7 +134,7 @@ export default function ApiReaderPage() {
               isDark ? "bg-slate-900 border-slate-700 text-slate-200" : "bg-white border-slate-200"
             )}>
               {BIBLE_BOOKS.map((b) => (
-                <SelectItem key={b} value={b} className="text-xs">
+                <SelectItem key={b} value={b} className="text-xs font-bold uppercase tracking-widest">
                   {b}
                 </SelectItem>
               ))}
@@ -131,7 +143,7 @@ export default function ApiReaderPage() {
 
           <Select value={chapter} onValueChange={setChapter}>
             <SelectTrigger className={cn(
-              "w-[110px] h-10 text-xs font-medium focus:ring-blue-500",
+              "w-[110px] h-10 text-xs font-bold uppercase tracking-widest focus:ring-blue-500 rounded-lg",
               isDark ? "bg-slate-800 border-slate-700" : "bg-slate-50 border-slate-200"
             )}>
               <SelectValue placeholder="Chapter" />
@@ -140,8 +152,8 @@ export default function ApiReaderPage() {
               isDark ? "bg-slate-900 border-slate-700 text-slate-200" : "bg-white border-slate-200"
             )}>
               {[...Array(150)].map((_, i) => (
-                <SelectItem key={i + 1} value={(i + 1).toString()} className="text-xs">
-                  Chapter {i + 1}
+                <SelectItem key={i + 1} value={(i + 1).toString()} className="text-xs font-bold uppercase tracking-widest">
+                  {i + 1}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -149,7 +161,7 @@ export default function ApiReaderPage() {
 
           <Select value={version} onValueChange={setVersion}>
             <SelectTrigger className={cn(
-              "w-[110px] h-10 text-[10px] font-bold uppercase tracking-wider focus:ring-blue-500",
+              "w-[110px] h-10 text-[10px] font-bold uppercase tracking-wider focus:ring-blue-500 rounded-lg",
               isDark ? "bg-slate-800 border-slate-700" : "bg-slate-50 border-slate-200"
             )}>
               <SelectValue placeholder="Version" />
@@ -158,7 +170,7 @@ export default function ApiReaderPage() {
               isDark ? "bg-slate-900 border-slate-700 text-slate-200" : "bg-white border-slate-200"
             )}>
               {SUPPORTED_VERSIONS.map((v) => (
-                <SelectItem key={v.id} value={v.id} className="text-[10px] font-bold uppercase">
+                <SelectItem key={v.id} value={v.id} className="text-[10px] font-bold uppercase tracking-widest">
                   {v.name.split(' ').map(word => word[0]).join('')} ({v.name})
                 </SelectItem>
               ))}
@@ -168,22 +180,8 @@ export default function ApiReaderPage() {
           <div className="flex-1" />
 
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" className={cn(
-              "gap-2 h-10 px-4 rounded-lg transition-colors",
-              isDark ? "bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300" : "bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-600"
-            )}>
-              <Headphones className="h-4 w-4" />
-              <span className="text-xs font-semibold">Listen</span>
-            </Button>
-            <Button variant="outline" size="sm" className={cn(
-              "gap-2 h-10 px-4 rounded-lg transition-colors",
-              isDark ? "bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300" : "bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-600"
-            )}>
-              <BookMarked className="h-4 w-4" />
-              <span className="text-xs font-semibold">Study</span>
-            </Button>
             <div className={cn(
-              "flex items-center border rounded-lg overflow-hidden h-10",
+              "flex items-center border rounded-lg overflow-hidden h-10 shadow-sm",
               isDark ? "border-slate-700" : "border-slate-200"
             )}>
               <Button 
@@ -221,18 +219,18 @@ export default function ApiReaderPage() {
             {loading ? (
               <div className="flex flex-col items-center justify-center h-full space-y-4 opacity-40">
                 <Loader2 className={cn("h-10 w-10 animate-spin", isDark ? "text-blue-500" : "text-primary")} />
-                <p className="text-sm font-medium tracking-wide">Retrieving Sacred Text...</p>
+                <p className="text-sm font-bold uppercase tracking-[0.2em]">Consulting the Scriptorium...</p>
               </div>
             ) : scripture ? (
               <div className="max-w-2xl mx-auto space-y-12 animate-in fade-in duration-700">
                 <div className="space-y-4">
-                  <h2 className={cn("text-4xl font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
+                  <h2 className={cn("text-5xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
                     {scripture.reference}
                   </h2>
-                  <p className={cn("text-[10px] font-bold uppercase tracking-[0.2em]", isDark ? "text-slate-400" : "text-slate-500")}>
+                  <p className={cn("text-[10px] font-bold uppercase tracking-[0.3em]", isDark ? "text-slate-400" : "text-slate-500")}>
                     {SUPPORTED_VERSIONS.find(v => v.id === version)?.name || "OFFICIAL VERSION"}
                   </p>
-                  <div className={cn("w-1/4 h-px mx-auto mt-8", isDark ? "bg-slate-700" : "bg-slate-200")} />
+                  <div className={cn("w-16 h-1 mx-auto mt-8 rounded-full", isDark ? "bg-blue-500/20" : "bg-primary/10")} />
                 </div>
                 
                 <div className="text-left">
@@ -260,7 +258,7 @@ export default function ApiReaderPage() {
           )}>
             <span>Content provided by API.Bible • American Bible Society</span>
             <span className="flex items-center gap-1.5 italic">
-              Powered by Scripture Engine v1.0
+              Powered by Scriptorium Engine v1.1
             </span>
           </div>
         </Card>
@@ -270,17 +268,17 @@ export default function ApiReaderPage() {
         .bible-text-display {
           font-family: 'Inter', sans-serif;
           font-size: 1.25rem;
-          line-height: 1.85;
+          line-height: 2.1;
         }
         .bible-text-display sup {
           font-size: 0.7rem;
-          font-weight: 700;
-          color: #64748B;
-          margin-right: 0.6rem;
+          font-weight: 800;
+          color: #94A3B8;
+          margin-right: 0.8rem;
           vertical-align: super;
         }
         .bible-text-display p {
-          margin-bottom: 1.75rem;
+          margin-bottom: 2rem;
         }
       `}</style>
     </div>

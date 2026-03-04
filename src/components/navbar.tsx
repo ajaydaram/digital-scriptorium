@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info, BookCheck, Book } from "lucide-react";
+import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info, BookCheck, Book, Zap } from "lucide-react";
 import { useAuth, useUser } from "@/firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -79,17 +79,40 @@ export function Navbar() {
           <Link href="/hub" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
             <GraduationCap className="h-4 w-4" /> Study Hub
           </Link>
-          <Link href="/philosophy" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
-            <Info className="h-4 w-4" /> Philosophy
-          </Link>
         </div>
 
         <div className="flex items-center space-x-4">
-          <Link href="/reader">
-            <Button variant="default" className="btn-gradient font-bold px-6 shadow-md shadow-blue-500/10 flex items-center gap-2">
-              <Book className="h-4 w-4" /> Bible Reader
-            </Button>
-          </Link>
+          <div className="hidden sm:flex items-center gap-2">
+            <Link href="/api-reader">
+              <Button variant="ghost" className="font-bold px-4 text-slate-500 hover:text-primary flex items-center gap-2">
+                <Zap className="h-4 w-4" /> Simple Reader
+              </Button>
+            </Link>
+            <Link href="/reader">
+              <Button variant="default" className="btn-gradient font-bold px-6 shadow-md shadow-blue-500/10 flex items-center gap-2 rounded-xl">
+                <Book className="h-4 w-4" /> Enhanced Reader
+              </Button>
+            </Link>
+          </div>
+          
+          {/* Mobile Reader Switcher */}
+          <div className="sm:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon" className="rounded-xl border-slate-200">
+                  <Book className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuItem asChild>
+                  <Link href="/api-reader" className="cursor-pointer font-bold">Simple Reader</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/reader" className="cursor-pointer font-bold">Enhanced Reader</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
           
           {!isUserLoading && (
             <>
