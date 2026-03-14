@@ -60,14 +60,14 @@ export function GuidedAscentStepper() {
   const activeIndex = STAGES.findIndex((s) => s.id === activeStage);
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-8">
-      <div className="relative mb-12">
+    <div className="w-full max-w-4xl mx-auto py-10">
+      <div className="relative mb-16">
         {/* Track */}
-        <div className="absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 rounded-full" />
+        <div className="absolute top-1/2 left-0 w-full h-1.5 bg-slate-100 -translate-y-1/2 rounded-full" />
         
         {/* Progress Fill */}
         <motion.div
-          className="absolute top-1/2 left-0 h-1 bg-brand-gradient -translate-y-1/2 rounded-full origin-left"
+          className="absolute top-1/2 left-0 h-1.5 bg-brand-gradient -translate-y-1/2 rounded-full origin-left"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: activeIndex / (STAGES.length - 1) }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -79,28 +79,27 @@ export function GuidedAscentStepper() {
           {STAGES.map((stage, index) => {
             const isCompleted = index < activeIndex;
             const isActive = index === activeIndex;
-            const isMaster = stage.id === "master";
 
             return (
               <div key={stage.id} className="flex flex-col items-center">
                 <button
                   onClick={() => setActiveStage(stage.id)}
                   className={cn(
-                    "relative z-10 w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-primary/20 bg-white",
+                    "relative z-10 w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-primary/20 bg-white shadow-sm",
                     isCompleted ? "border-primary text-primary" : 
-                    isActive ? "border-primary text-primary scale-110 shadow-lg shadow-primary/20 ring-4 ring-primary/5" : 
+                    isActive ? "border-primary text-primary scale-110 shadow-xl shadow-primary/20 ring-4 ring-primary/5" : 
                     "border-slate-200 text-slate-400"
                   )}
                 >
                   {isCompleted ? (
-                    <Check className="h-5 w-5" />
+                    <Check className="h-6 w-6" />
                   ) : (
-                    <stage.icon className={cn("h-5 w-5", isActive ? "text-primary" : "text-slate-400")} />
+                    <stage.icon className={cn("h-6 w-6", isActive ? "text-primary" : "text-slate-400")} />
                   )}
                 </button>
-                <div className="absolute top-14 text-center w-32">
+                <div className="absolute top-16 text-center w-36">
                   <p className={cn(
-                    "text-[10px] font-bold uppercase tracking-widest",
+                    "text-xs font-bold uppercase tracking-widest transition-colors",
                     isActive ? "text-slate-900" : "text-slate-400"
                   )}>
                     {stage.label}
@@ -120,24 +119,24 @@ export function GuidedAscentStepper() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="bg-slate-50 p-6 rounded-2xl border border-slate-100"
+          className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm"
         >
-          <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="flex-1 space-y-3">
-              <div className="flex items-center gap-2">
-                <h3 className="text-lg font-headline font-bold text-slate-900">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex-1 space-y-4">
+              <div className="flex items-center gap-4">
+                <h3 className="text-xl font-headline font-bold text-slate-900">
                   {STAGES[activeIndex].details.title}
                 </h3>
-                <Badge className="bg-primary/10 text-primary border-none font-bold uppercase tracking-widest text-[9px]">
+                <Badge className="bg-primary/10 text-primary border-none font-bold uppercase tracking-widest text-[11px] px-3 py-1">
                   {STAGES[activeIndex].label}
                 </Badge>
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed font-body">
+              <p className="text-base text-slate-600 leading-relaxed font-body">
                 {STAGES[activeIndex].details.content}
               </p>
-              <button className="flex items-center gap-2 text-primary font-bold text-xs group">
+              <button className="flex items-center gap-2 text-primary font-bold text-sm group hover:underline decoration-2 underline-offset-4">
                 {STAGES[activeIndex].details.action}
-                <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
@@ -149,7 +148,7 @@ export function GuidedAscentStepper() {
 
 function Badge({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <span className={cn("px-2 py-0.5 rounded-full text-[10px] font-semibold border", className)}>
+    <span className={cn("px-2 py-0.5 rounded-full text-xs font-bold border", className)}>
       {children}
     </span>
   );
