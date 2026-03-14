@@ -186,26 +186,26 @@ function ReaderContent() {
         {/* Path-Specific Header */}
         {pathParam && (
           <div className={cn(
-            "mb-8 p-4 rounded-2xl border flex items-center gap-4 transition-all animate-in fade-in slide-in-from-top-4",
+            "mb-8 p-6 rounded-2xl border flex items-center gap-6 transition-all animate-in fade-in slide-in-from-top-4",
             pathParam === 'chronological' ? "bg-blue-50/50 border-blue-100 text-blue-700" : 
             pathParam === 'thematic' ? "bg-emerald-50/50 border-emerald-100 text-emerald-700" :
             "bg-purple-50/50 border-purple-100 text-purple-700"
           )}>
-            <div className="p-2 bg-white rounded-xl shadow-sm">
-              {pathParam === 'chronological' ? <History className="h-5 w-5" /> : 
-               pathParam === 'thematic' ? <Link2 className="h-5 w-5" /> :
-               <Library className="h-5 w-5" />}
+            <div className="p-3 bg-white rounded-xl shadow-sm">
+              {pathParam === 'chronological' ? <History className="h-6 w-6" /> : 
+               pathParam === 'thematic' ? <Link2 className="h-6 w-6" /> :
+               <Library className="h-6 w-6" />}
             </div>
             <div className="flex-1">
-              <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">Scribal Strategy Active: {pathParam.toUpperCase()}</p>
-              <h3 className="text-sm font-bold">
+              <p className="text-xs font-bold uppercase tracking-widest opacity-60">Scribal Strategy Active: {pathParam.toUpperCase()}</p>
+              <h3 className="text-base font-bold">
                 {pathParam === 'chronological' ? "Historical Contextualization: Follow the sequence of the Grand Narrative." : 
                  pathParam === 'thematic' ? "Canonical Reading: Trace the 'Golden Threads' across the canon." :
                  "Genre Awareness: Adjusting lineation for literary form."}
               </h3>
             </div>
             {planDay && (
-              <Badge variant="outline" className="bg-white/50 border-none font-bold">
+              <Badge variant="outline" className="bg-white/50 border-none font-bold text-sm px-4 py-1.5">
                 Day {planDay.day}: {planDay.title}
               </Badge>
             )}
@@ -214,76 +214,76 @@ function ReaderContent() {
 
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-8">
           <div className="space-y-1">
-            <div className="flex items-center gap-3">
-              <h1 className="text-3xl font-headline font-bold tracking-tight">Scriptorium Reader</h1>
+            <div className="flex items-center gap-4">
+              <h1 className="text-4xl font-headline font-bold tracking-tight">Scriptorium Reader</h1>
               <Button 
                 variant="ghost" size="icon" 
                 onClick={() => setTheme(prev => prev === "light" ? "dark" : "light")}
-                className="rounded-full hover:bg-primary/10"
+                className="rounded-full hover:bg-primary/10 h-11 w-11"
               >
-                {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                {isDark ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />}
               </Button>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
-             <form onSubmit={handleSearch} className="relative flex-1 lg:w-80 group">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 group-focus-within:text-primary transition-colors" />
+          <div className="flex flex-wrap items-center gap-4 w-full lg:w-auto">
+             <form onSubmit={handleSearch} className="relative flex-1 lg:w-96 group">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 group-focus-within:text-primary transition-colors" />
                 <Input 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Reference e.g. Romans 8:28"
                   className={cn(
-                    "pl-11 h-11 rounded-xl transition-all shadow-sm border-slate-200 focus:ring-primary/20",
+                    "pl-12 h-12 rounded-xl text-base transition-all shadow-sm border-slate-200 focus:ring-primary/20",
                     isDark ? "bg-slate-900 border-slate-800 text-white" : "bg-white"
                   )}
                 />
               </form>
               <BibleVersionSwitcher currentVersion={version} onVersionChange={setVersion} />
-              <div className="flex items-center gap-2">
-                <Button variant="outline" size="icon" className="rounded-xl border-slate-200 h-11 w-11 shadow-sm"><Bookmark className="h-4 w-4" /></Button>
-                <Button variant="outline" size="icon" className="rounded-xl border-slate-200 h-11 w-11 shadow-sm"><Share2 className="h-4 w-4" /></Button>
+              <div className="flex items-center gap-3">
+                <Button variant="outline" size="icon" className="rounded-xl border-slate-200 h-12 w-12 shadow-sm"><Bookmark className="h-5 w-5" /></Button>
+                <Button variant="outline" size="icon" className="rounded-xl border-slate-200 h-12 w-12 shadow-sm"><Share2 className="h-5 w-5" /></Button>
               </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-3 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+          <div className="lg:col-span-3 space-y-10">
             <Card className={cn(
               "border-none shadow-2xl rounded-[2.5rem] overflow-hidden min-h-[700px] flex flex-col",
               isDark ? "bg-[#1E293B]" : "bg-white"
             )}>
-              <div className="bg-brand-gradient h-1.5 w-full" />
+              <div className="bg-brand-gradient h-2 w-full" />
               
-              <div className="px-8 md:px-16 pt-12">
+              <div className="px-10 md:px-20 pt-14">
                 <GuidedAscentStepper />
               </div>
 
-              <CardContent className="p-8 md:p-20 flex-1 pt-4">
+              <CardContent className="p-10 md:p-24 flex-1 pt-6">
                 {loading ? (
                   <div className="flex flex-col items-center justify-center h-full py-20 opacity-30">
-                    <Loader2 className="h-10 w-10 animate-spin mb-4 text-primary" />
-                    <p className="text-sm font-bold uppercase tracking-widest">Consulting the Scriptorium...</p>
+                    <Loader2 className="h-12 w-12 animate-spin mb-6 text-primary" />
+                    <p className="text-base font-bold uppercase tracking-widest">Consulting the Scriptorium...</p>
                   </div>
                 ) : error ? (
                   <div className="flex flex-col items-center justify-center h-full py-20 text-center max-w-md mx-auto">
-                    <div className="h-16 w-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
-                      <AlertCircle className="h-8 w-8 text-red-500" />
+                    <div className="h-20 w-20 bg-red-50 rounded-full flex items-center justify-center mb-8">
+                      <AlertCircle className="h-10 w-10 text-red-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Retrieval Error</h3>
-                    <p className="text-sm text-slate-500 mb-6">{error}</p>
-                    <Button variant="outline" onClick={() => loadScripture(currentRef, version)} className="rounded-xl">Try Again</Button>
+                    <h3 className="text-2xl font-bold mb-3">Retrieval Error</h3>
+                    <p className="text-base text-slate-500 mb-8">{error}</p>
+                    <Button variant="outline" onClick={() => loadScripture(currentRef, version)} className="rounded-xl h-12 px-8">Try Again</Button>
                   </div>
                 ) : scripture ? (
-                  <article className="max-w-3xl mx-auto space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                    <header className="text-center space-y-4">
+                  <article className="max-w-4xl mx-auto space-y-14 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                    <header className="text-center space-y-6">
                       {planDay?.audience && (
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 border border-purple-100 text-purple-600 mb-4">
-                          <Users className="h-4 w-4" />
-                          <span className="text-[10px] font-bold uppercase tracking-widest">Audience: {planDay.audience}</span>
+                        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-purple-50 border border-purple-100 text-purple-600 mb-4">
+                          <Users className="h-5 w-5" />
+                          <span className="text-xs font-bold uppercase tracking-widest">Audience: {planDay.audience}</span>
                         </div>
                       )}
-                      <h2 className={cn("text-5xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
+                      <h2 className={cn("text-6xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
                         {scripture.reference}
                       </h2>
                     </header>
@@ -297,62 +297,62 @@ function ReaderContent() {
                     </div>
 
                     {planDay?.mainTruth && (
-                      <div className="p-8 rounded-3xl bg-slate-50 border border-dashed border-slate-200 text-center space-y-4">
-                        <div className="flex items-center justify-center gap-2 text-slate-400">
-                          <Sparkles className="h-4 w-4" />
-                          <span className="text-[10px] font-bold uppercase tracking-widest">The One Main Truth</span>
+                      <div className="p-10 rounded-3xl bg-slate-50 border border-dashed border-slate-200 text-center space-y-6">
+                        <div className="flex items-center justify-center gap-3 text-slate-400">
+                          <Sparkles className="h-5 w-5" />
+                          <span className="text-xs font-bold uppercase tracking-widest">The One Main Truth</span>
                         </div>
-                        <p className="text-xl font-headline font-bold text-slate-900 leading-relaxed italic text-center">
+                        <p className="text-2xl font-headline font-bold text-slate-900 leading-relaxed italic text-center">
                           "{planDay.mainTruth}"
                         </p>
                       </div>
                     )}
                     
-                    <div className="mt-20 pt-10 border-t border-slate-100/10">
-                      <div className="flex items-center gap-2 mb-6">
-                        <PenTool className="h-4 w-4 text-primary" />
-                        <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Scribe's Reflection</span>
+                    <div className="mt-24 pt-12 border-t border-slate-100/10">
+                      <div className="flex items-center gap-3 mb-8">
+                        <PenTool className="h-5 w-5 text-primary" />
+                        <span className="text-sm font-bold uppercase tracking-widest text-slate-400">Scribe's Reflection</span>
                       </div>
-                      <div className="space-y-4">
+                      <div className="space-y-6">
                         {planDay?.reflectionQuestion && (
-                          <div className="p-4 bg-primary/5 rounded-xl border border-primary/10">
-                            <p className="text-xs font-bold text-primary italic">Scribe's Illumination: {planDay.reflectionQuestion}</p>
+                          <div className="p-5 bg-primary/5 rounded-xl border border-primary/10">
+                            <p className="text-sm font-bold text-primary italic leading-relaxed">Scribe's Illumination: {planDay.reflectionQuestion}</p>
                           </div>
                         )}
                         <Textarea 
                           placeholder={planDay?.reflectionQuestion ? "Answer the Illumination question or reflect on today's strategy..." : "What did you learn about how this text works today? Reflect on the strategy and the narrative..."}
                           className={cn(
-                            "min-h-[120px] rounded-2xl border-dashed transition-all",
+                            "min-h-[160px] rounded-2xl border-dashed transition-all text-base p-6",
                             isDark ? "bg-slate-900/50 border-slate-800" : "bg-slate-50/50 border-slate-200"
                           )}
                           value={scribeReflection}
                           onChange={(e) => setScribeReflection(e.target.value)}
                         />
                       </div>
-                      <p className="mt-3 text-[10px] text-slate-400 font-medium italic">Metacognition: Teaching yourself how to learn scripture.</p>
+                      <p className="mt-4 text-xs text-slate-400 font-medium italic">Metacognition: Teaching yourself how to learn scripture.</p>
                     </div>
 
                     {pathParam && (
-                      <div className="pt-12 flex items-center justify-center gap-6">
+                      <div className="pt-16 flex items-center justify-center gap-8">
                         <Button 
                           variant="ghost" 
                           onClick={() => {
                             if (dayParam > 1) router.push(`/reader?path=${pathParam}&day=${dayParam - 1}`);
                           }} 
                           disabled={dayParam <= 1}
-                          className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
+                          className="rounded-xl gap-3 font-bold text-sm uppercase tracking-widest h-12"
                         >
-                          <ChevronLeft className="h-4 w-4" /> Previous Day
+                          <ChevronLeft className="h-5 w-5" /> Previous Day
                         </Button>
-                        <Separator orientation="vertical" className="h-10" />
+                        <Separator orientation="vertical" className="h-12" />
                         <Button 
                           variant="ghost" 
                           onClick={() => {
                             router.push(`/reader?path=${pathParam}&day=${dayParam + 1}`);
                           }}
-                          className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
+                          className="rounded-xl gap-3 font-bold text-sm uppercase tracking-widest h-12"
                         >
-                          Next Day <ChevronRight className="h-4 w-4" />
+                          Next Day <ChevronRight className="h-5 w-5" />
                         </Button>
                       </div>
                     )}
@@ -362,26 +362,26 @@ function ReaderContent() {
             </Card>
           </div>
 
-          <aside className="space-y-6">
+          <aside className="space-y-8">
             {/* Thematic Ledger - Specific for Thematic Path */}
             {planDay?.thematicLedger && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-white border border-slate-100")}>
-                <CardHeader className="p-6 pb-2">
+                <CardHeader className="p-8 pb-4">
                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
-                    <ListChecks className="h-4 w-4" /> Covenant Tracker
+                    <ListChecks className="h-5 w-5" /> Covenant Tracker
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-4">
-                  <p className="text-[10px] text-slate-400 italic">Tracing the Golden Thread of Redemption.</p>
-                  <div className="space-y-2">
+                <CardContent className="p-8 pt-0 space-y-5">
+                  <p className="text-xs text-slate-400 italic">Tracing the Golden Thread of Redemption.</p>
+                  <div className="space-y-3">
                     {planDay.thematicLedger.map((item, i) => (
-                      <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100">
-                        <span className="text-[10px] font-bold text-slate-500">{item.label}</span>
-                        <span className="text-[10px] font-bold text-primary">{item.value}</span>
+                      <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <span className="text-xs font-bold text-slate-500">{item.label}</span>
+                        <span className="text-xs font-bold text-primary">{item.value}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="p-3 rounded-xl bg-primary/5 border border-primary/10 text-[9px] text-primary italic leading-relaxed">
+                  <div className="p-4 rounded-xl bg-primary/5 border border-primary/10 text-xs text-primary italic leading-relaxed">
                     Covenants are the relational 'glue' of the 66 books.
                   </div>
                 </CardContent>
@@ -391,19 +391,19 @@ function ReaderContent() {
             {/* Historical Snapshot - For Chronological Path */}
             {planDay?.historicalSnapshot && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-slate-900 text-white")}>
-                <CardHeader className="p-6 pb-2">
+                <CardHeader className="p-8 pb-4">
                    <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
-                    <History className="h-4 w-4" /> Historical Snapshot
+                    <History className="h-5 w-5" /> Historical Snapshot
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-4">
-                  <div className="p-4 bg-white/5 rounded-xl border border-white/10 space-y-3">
-                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">{planDay.historicalSnapshot.ref}</p>
-                    <p className="text-sm font-serif italic text-slate-300 leading-relaxed">
+                <CardContent className="p-8 pt-0 space-y-5">
+                  <div className="p-5 bg-white/5 rounded-xl border border-white/10 space-y-4">
+                    <p className="text-xs font-bold text-primary uppercase tracking-widest">{planDay.historicalSnapshot.ref}</p>
+                    <p className="text-base font-serif italic text-slate-300 leading-relaxed">
                       "{planDay.historicalSnapshot.text}"
                     </p>
                   </div>
-                  <p className="text-[9px] text-slate-500 italic leading-relaxed">
+                  <p className="text-xs text-slate-500 italic leading-relaxed">
                     Contextualizing the prayer within the pressure of the moment.
                   </p>
                 </CardContent>
@@ -413,22 +413,22 @@ function ReaderContent() {
             {/* Symbolic Mapping Ledger */}
             {planDay?.symbolicMapping && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-slate-50 border border-slate-100", isDark ? "bg-slate-950/20" : "")}>
-                <CardHeader className="p-6 pb-2">
+                <CardHeader className="p-8 pb-4">
                    <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
-                    <TableProperties className="h-4 w-4" /> Parallel Ledger
+                    <TableProperties className="h-5 w-5" /> Parallel Ledger
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-4">
-                  <p className="text-[10px] text-slate-400 leading-relaxed italic mb-4">Translating physical symbols to spiritual realities.</p>
-                  <div className="space-y-4">
+                <CardContent className="p-8 pt-0 space-y-5">
+                  <p className="text-xs text-slate-400 leading-relaxed italic mb-6">Translating physical symbols to spiritual realities.</p>
+                  <div className="space-y-5">
                     {planDay.symbolicMapping.map((map, i) => (
-                      <div key={i} className="space-y-1.5 p-3 rounded-xl bg-white/50 border border-white dark:bg-white/5 dark:border-white/10">
+                      <div key={i} className="space-y-2 p-4 rounded-xl bg-white/50 border border-white dark:bg-white/5 dark:border-white/10">
                         <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-bold text-slate-900 dark:text-white">{map.symbol}</span>
-                          <ArrowRight className="h-3 w-3 text-primary" />
-                          <span className="text-[10px] font-bold text-primary">{map.reality}</span>
+                          <span className="text-xs font-bold text-slate-900 dark:text-white">{map.symbol}</span>
+                          <ArrowRight className="h-4 w-4 text-primary" />
+                          <span className="text-xs font-bold text-primary">{map.reality}</span>
                         </div>
-                        <p className="text-[9px] text-slate-500 italic leading-snug">{map.insight}</p>
+                        <p className="text-xs text-slate-500 italic leading-snug">{map.insight}</p>
                       </div>
                     ))}
                   </div>
@@ -439,16 +439,16 @@ function ReaderContent() {
             {/* Cultural Insights - Marginalia */}
             {planDay?.culturalInsights && (
                <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-amber-50 border border-amber-100", isDark ? "bg-amber-950/20" : "")}>
-                <CardHeader className="p-6 pb-2">
+                <CardHeader className="p-8 pb-4">
                    <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-amber-600">
-                    <Compass className="h-4 w-4" /> Scribe's Marginalia
+                    <Compass className="h-5 w-5" /> Scribe's Marginalia
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-4">
+                <CardContent className="p-8 pt-0 space-y-5">
                   {planDay.culturalInsights.map((insight, i) => (
-                    <div key={i} className="space-y-1">
-                      <p className="text-[10px] font-bold text-amber-800">{insight.title}</p>
-                      <p className="text-[9px] text-amber-700/80 leading-relaxed italic">{insight.note}</p>
+                    <div key={i} className="space-y-2">
+                      <p className="text-xs font-bold text-amber-800">{insight.title}</p>
+                      <p className="text-xs text-amber-700/80 leading-relaxed italic">{insight.note}</p>
                     </div>
                   ))}
                 </CardContent>
@@ -458,17 +458,17 @@ function ReaderContent() {
             {/* Scribal Strategy Panel */}
             {planDay?.scribalStrategy && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-purple-50 border border-purple-100", isDark ? "bg-purple-950/20" : "")}>
-                <CardHeader className="p-6 pb-2">
+                <CardHeader className="p-8 pb-4">
                    <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-purple-600">
-                    <PenTool className="h-4 w-4" /> {planDay.scribalStrategy.title}
+                    <PenTool className="h-5 w-5" /> {planDay.scribalStrategy.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-3">
-                  <div className="space-y-3">
+                <CardContent className="p-8 pt-0 space-y-4">
+                  <div className="space-y-4">
                     {planDay.scribalStrategy.instructions.map((step, i) => (
-                      <div key={i} className="space-y-1">
-                        <p className="text-[10px] font-bold text-purple-800">{i + 1}. {step.split(':')[0]}</p>
-                        <p className="text-[9px] text-purple-600/80">{step.includes(':') ? step.split(':')[1] : step}</p>
+                      <div key={i} className="space-y-1.5">
+                        <p className="text-xs font-bold text-purple-800">{i + 1}. {step.split(':')[0]}</p>
+                        <p className="text-xs text-purple-600/80 leading-relaxed">{step.includes(':') ? step.split(':')[1] : step}</p>
                       </div>
                     ))}
                   </div>
@@ -479,29 +479,29 @@ function ReaderContent() {
             {/* AI Analysis Result */}
             {aiAnalysis && (
               <Card className="border-none shadow-xl rounded-[2rem] overflow-hidden bg-primary/5 border border-primary/10 animate-in slide-in-from-right duration-500">
-                <CardHeader className="p-6 pb-2">
+                <CardHeader className="p-8 pb-4">
                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
-                    <Sparkles className="h-4 w-4" /> Scholarly Deep-Dive
+                    <Sparkles className="h-5 w-5" /> Scholarly Deep-Dive
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-4">
-                  <div className="space-y-3">
+                <CardContent className="p-8 pt-0 space-y-6">
+                  <div className="space-y-5">
                     <div>
-                      <p className="text-[10px] font-bold uppercase text-slate-400 mb-1">Explanation</p>
-                      <p className="text-xs text-slate-700 leading-relaxed">{aiAnalysis.explanation}</p>
+                      <p className="text-xs font-bold uppercase text-slate-400 mb-2">Explanation</p>
+                      <p className="text-sm text-slate-700 leading-relaxed">{aiAnalysis.explanation}</p>
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase text-slate-400 mb-1">Grand Narrative Context</p>
-                      <p className="text-xs text-slate-700 leading-relaxed italic">{aiAnalysis.theologicalContext}</p>
+                      <p className="text-xs font-bold uppercase text-slate-400 mb-2">Grand Narrative Context</p>
+                      <p className="text-sm text-slate-700 leading-relaxed italic">{aiAnalysis.theologicalContext}</p>
                     </div>
                     {aiAnalysis.suggestedReferences.length > 0 && (
-                      <div className="pt-2">
-                        <p className="text-[10px] font-bold uppercase text-slate-400 mb-2">Cross References</p>
-                        <div className="space-y-2">
+                      <div className="pt-3">
+                        <p className="text-xs font-bold uppercase text-slate-400 mb-3">Cross References</p>
+                        <div className="space-y-3">
                           {aiAnalysis.suggestedReferences.map((ref, i) => (
-                            <div key={i} className="p-2 rounded-lg bg-white border border-slate-100">
-                              <p className="text-[10px] font-bold text-primary">{ref.ref}</p>
-                              <p className="text-[9px] text-slate-500 italic">{ref.reason}</p>
+                            <div key={i} className="p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+                              <p className="text-xs font-bold text-primary">{ref.ref}</p>
+                              <p className="text-xs text-slate-500 italic mt-1 leading-snug">{ref.reason}</p>
                             </div>
                           ))}
                         </div>
@@ -513,22 +513,22 @@ function ReaderContent() {
             )}
 
             <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col min-h-[500px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
-              <CardHeader className="p-6 pb-4 border-b border-slate-100/10">
+              <CardHeader className="p-8 pb-6 border-b border-slate-100/10">
                 <div className="flex items-center justify-between">
-                  <div className="space-y-1">
+                  <div className="space-y-1.5">
                     <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                      <MessageSquare className="h-4 w-4 text-primary" /> Community Feed
+                      <MessageSquare className="h-5 w-5 text-primary" /> Community Feed
                     </CardTitle>
-                    <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">{currentRef}</p>
+                    <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">{currentRef}</p>
                   </div>
                   {user && (
                     <Button 
                       variant="ghost" 
                       size="icon" 
-                      className="h-8 w-8 rounded-full bg-primary/5 text-primary"
+                      className="h-10 w-10 rounded-full bg-primary/5 text-primary"
                       onClick={() => setShowAddForm(!showAddForm)}
                     >
-                      <Plus className={cn("h-4 w-4 transition-transform", showAddForm && "rotate-45")} />
+                      <Plus className={cn("h-5 w-5 transition-transform", showAddForm && "rotate-45")} />
                     </Button>
                   )}
                 </div>
@@ -536,17 +536,17 @@ function ReaderContent() {
               
               <CardContent className="p-0 flex-1 flex flex-col">
                 {showAddForm && user && (
-                  <div className="p-6 bg-primary/5 border-b border-primary/10 animate-in slide-in-from-top duration-300">
+                  <div className="p-8 bg-primary/5 border-b border-primary/10 animate-in slide-in-from-top duration-300">
                     <Textarea 
                       placeholder="Share a scholarly insight..."
-                      className="min-h-[100px] mb-3 text-sm rounded-xl border-primary/20 bg-white"
+                      className="min-h-[120px] mb-4 text-base rounded-xl border-primary/20 bg-white p-4"
                       value={newComment}
                       onChange={(e) => setNewComment(e.target.value)}
                     />
                     <div className="flex justify-end">
                       <Button 
                         size="sm" 
-                        className="btn-gradient rounded-lg text-[10px] font-bold uppercase tracking-widest px-4" 
+                        className="btn-gradient rounded-lg text-xs font-bold uppercase tracking-widest px-6 h-10" 
                         onClick={handleAddInsight}
                         disabled={!newComment.trim()}
                       >
@@ -558,52 +558,52 @@ function ReaderContent() {
 
                 <ScrollArea className="flex-1">
                   {!user && (
-                    <div className="p-10 text-center space-y-4">
-                      <LogIn className="h-8 w-8 mx-auto text-slate-300" />
-                      <p className="text-xs font-bold text-slate-500 uppercase tracking-widest leading-relaxed">
+                    <div className="p-12 text-center space-y-6">
+                      <LogIn className="h-10 w-10 mx-auto text-slate-300" />
+                      <p className="text-sm font-bold text-slate-500 uppercase tracking-widest leading-relaxed">
                         Sign in to share your scholarly insights
                       </p>
-                      <Button variant="outline" size="sm" onClick={handleSignIn} className="rounded-xl text-[10px] font-bold uppercase tracking-widest">
+                      <Button variant="outline" size="sm" onClick={handleSignIn} className="rounded-xl text-xs font-bold uppercase tracking-widest h-10 px-6">
                         Sign In with Google
                       </Button>
                     </div>
                   )}
 
                   {isAnnotationsLoading ? (
-                    <div className="p-12 flex flex-col items-center opacity-20">
-                      <Loader2 className="h-6 w-6 animate-spin mb-2" />
-                      <span className="text-[10px] font-bold uppercase">Loading Feed...</span>
+                    <div className="p-16 flex flex-col items-center opacity-20">
+                      <Loader2 className="h-8 w-8 animate-spin mb-4" />
+                      <span className="text-xs font-bold uppercase">Loading Feed...</span>
                     </div>
                   ) : remoteAnnotations && remoteAnnotations.length > 0 ? (
                     <div className="divide-y divide-slate-100/10">
                       {remoteAnnotations.map((ann) => (
-                        <div key={ann.id} className="p-6 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
-                          <div className="flex items-center gap-3 mb-3">
-                            <Avatar className="h-8 w-8 border border-slate-200">
+                        <div key={ann.id} className="p-8 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
+                          <div className="flex items-center gap-4 mb-4">
+                            <Avatar className="h-10 w-10 border border-slate-200">
                               <AvatarImage src={ann.userAvatarUrl} />
-                              <AvatarFallback className="bg-primary/10 text-primary text-[10px] font-bold">
+                              <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">
                                 {ann.userDisplayName?.charAt(0) || "S"}
                               </AvatarFallback>
                             </Avatar>
                             <div className="flex-1 min-w-0">
-                              <p className="text-xs font-bold truncate">{ann.userDisplayName}</p>
-                              <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+                              <p className="text-sm font-bold truncate">{ann.userDisplayName}</p>
+                              <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">
                                 {ann.createdAt?.seconds 
                                   ? new Date(ann.createdAt.seconds * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                                   : 'Just now'}
                               </p>
                             </div>
                           </div>
-                          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-body">
+                          <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed font-body">
                             {ann.comment}
                           </p>
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <div className="p-12 text-center opacity-40">
-                      <MessageSquare className="h-8 w-8 mx-auto mb-4" />
-                      <p className="text-xs font-bold uppercase tracking-widest">No insights yet for this passage.</p>
+                    <div className="p-16 text-center opacity-40">
+                      <MessageSquare className="h-10 w-10 mx-auto mb-6" />
+                      <p className="text-sm font-bold uppercase tracking-widest">No insights yet for this passage.</p>
                     </div>
                   )}
                 </ScrollArea>
@@ -611,20 +611,20 @@ function ReaderContent() {
             </Card>
 
             <Card className={cn("border-none shadow-xl rounded-[2rem] bg-brand-gradient/5 border border-primary/10", isDark ? "bg-slate-900/40" : "")}>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-center gap-2 text-primary">
-                  <Sparkles className="h-4 w-4" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest">AI Scholarly Guide</span>
+              <CardContent className="p-8 space-y-5">
+                <div className="flex items-center gap-3 text-primary">
+                  <Sparkles className="h-5 w-5" />
+                  <span className="text-xs font-bold uppercase tracking-widest">AI Scholarly Guide</span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   Generate a deep-dive analysis of <strong>{currentRef}</strong>.
                 </p>
                 <Button 
-                  className="w-full btn-gradient font-bold h-11 text-[10px] rounded-xl uppercase tracking-widest shadow-lg shadow-primary/20"
+                  className="w-full btn-gradient font-bold h-12 text-xs rounded-xl uppercase tracking-widest shadow-lg shadow-primary/20"
                   onClick={handleAiAnalysis}
                   disabled={isAiLoading || !scripture}
                 >
-                  {isAiLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Analyze Context"}
+                  {isAiLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : "Analyze Context"}
                 </Button>
               </CardContent>
             </Card>
@@ -634,28 +634,28 @@ function ReaderContent() {
 
       <style jsx global>{`
         .bible-reader-text {
-          font-size: 1.25rem;
-          line-height: 2.1;
-          max-width: 75ch;
+          font-size: 1.5rem;
+          line-height: 2.2;
+          max-width: 80ch;
           margin-left: auto;
           margin-right: auto;
         }
         .bible-reader-text sup {
-          font-size: 0.65rem;
+          font-size: 0.85rem;
           font-weight: 800;
           color: #94A3B8;
-          margin-right: 0.8rem;
+          margin-right: 1rem;
           vertical-align: super;
           font-family: 'Space Grotesk', sans-serif;
         }
         .bible-reader-text p {
-          margin-bottom: 2rem;
+          margin-bottom: 2.5rem;
         }
         .poetic-lineation p {
-          padding-left: 2rem;
-          text-indent: -2rem;
-          margin-bottom: 1rem;
-          line-height: 1.8;
+          padding-left: 2.5rem;
+          text-indent: -2.5rem;
+          margin-bottom: 1.5rem;
+          line-height: 2;
         }
       `}</style>
     </div>

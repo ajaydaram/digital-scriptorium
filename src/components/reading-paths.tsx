@@ -14,7 +14,7 @@ const PATHS = [
     title: "The Narrative Arc: Historical Sequence",
     subtitle: "Chronological Path",
     description: "Align your pen with history. Scribe the Bible in the order events unfolded to witness God's plan through the millennia.",
-    icon: <History className="h-5 w-5 text-blue-600" />,
+    icon: <History className="h-6 w-6 text-blue-600" />,
     strategy: "Historical Contextualization",
     features: [
       "Timeline Headers for every passage", 
@@ -35,7 +35,7 @@ const PATHS = [
     title: "The Thematic Ledger: Golden Threads",
     subtitle: "Thematic Path",
     description: "Trace the 'Golden Threads' of scripture. Use wide margins for cross-referencing and canonical echoes from Genesis to Revelation.",
-    icon: <Lightbulb className="h-5 w-5 text-emerald-600" />,
+    icon: <Lightbulb className="h-6 w-6 text-emerald-600" />,
     strategy: "Canonical Reading",
     features: [
       "Cross-referencing margins", 
@@ -56,7 +56,7 @@ const PATHS = [
     title: "Literary Form: The Genre Portfolio",
     subtitle: "Genre Path",
     description: "Master the Parables of Jesus. Adapt your lineation for poetry and parables to prevent misinterpretation.",
-    icon: <Library className="h-5 w-5 text-purple-600" />,
+    icon: <Library className="h-6 w-6 text-purple-600" />,
     strategy: "Genre Awareness",
     features: [
       "Stanza-based poetic lineation", 
@@ -82,16 +82,16 @@ export function ReadingPathsSection() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
       {PATHS.map((path) => (
         <Card 
           key={path.id} 
           className={cn(
-            "group overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl flex flex-col",
+            "group overflow-hidden border border-border shadow-md hover:shadow-2xl transition-all duration-500 rounded-3xl flex flex-col",
             path.bgClass
           )}
         >
-          <div className="relative h-48 w-full overflow-hidden">
+          <div className="relative h-56 w-full overflow-hidden">
             <Image 
               src={path.image || "https://picsum.photos/seed/scripture/600/400"} 
               alt={path.title}
@@ -99,40 +99,40 @@ export function ReadingPathsSection() {
               className="object-cover group-hover:scale-105 transition-transform duration-700"
               data-ai-hint={path.id === "chronological" ? "history timeline" : path.id === "thematic" ? "theology connections" : "ancient scrolls"}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white">
-              <div className="p-2 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 flex items-center gap-3 text-white">
+              <div className="p-2.5 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
                 {path.icon}
               </div>
-              <span className="font-headline font-bold text-xs uppercase tracking-widest">{path.subtitle}</span>
+              <span className="font-headline font-bold text-sm uppercase tracking-widest">{path.subtitle}</span>
             </div>
-            <div className="absolute top-4 right-4">
-              <Badge className={cn("text-[10px] font-bold tracking-widest px-2.5 py-0.5", path.badgeClass)}>
+            <div className="absolute top-6 right-6">
+              <Badge className={cn("text-xs font-bold tracking-widest px-3 py-1", path.badgeClass)}>
                 {path.badgeText}
               </Badge>
             </div>
           </div>
           
-          <div className="flex-1 flex flex-col p-6">
-            <CardHeader className="p-0 mb-4">
-              <div className="flex items-center gap-2 mb-2">
-                <PenTool className={cn("h-3 w-3", path.accentColor)} />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Strategy: {path.strategy}</span>
+          <div className="flex-1 flex flex-col p-8">
+            <CardHeader className="p-0 mb-6">
+              <div className="flex items-center gap-2.5 mb-3">
+                <PenTool className={cn("h-4 w-4", path.accentColor)} />
+                <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Strategy: {path.strategy}</span>
               </div>
-              <CardTitle className="text-xl font-headline font-bold leading-tight text-slate-900">
+              <CardTitle className="text-2xl font-headline font-bold leading-tight text-slate-900">
                 {path.title}
               </CardTitle>
-              <CardDescription className="text-slate-600 pt-2 font-body text-sm leading-relaxed">
+              <CardDescription className="text-slate-600 pt-3 font-body text-base leading-relaxed">
                 {path.description}
               </CardDescription>
             </CardHeader>
             
             <CardContent className="p-0 flex-1">
-              <div className="space-y-2.5 mb-6">
+              <div className="space-y-3.5 mb-8">
                 {path.features.map((feature, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <CheckCircle2 className={cn("h-4 w-4 mt-0.5 shrink-0", path.accentColor)} />
-                    <span className="text-xs font-semibold text-slate-700 font-body">{feature}</span>
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className={cn("h-5 w-5 mt-0.5 shrink-0", path.accentColor)} />
+                    <span className="text-sm font-semibold text-slate-700 font-body">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -141,11 +141,11 @@ export function ReadingPathsSection() {
             <button 
               onClick={() => handleBeginPath(path.id, path.day)}
               className={cn(
-                "flex items-center gap-2 font-headline font-bold text-sm group-hover:gap-3 transition-all w-fit py-1",
+                "flex items-center gap-3 font-headline font-bold text-base group-hover:gap-4 transition-all w-fit py-2",
                 path.accentColor
               )}
             >
-              Start Scribal Path <ArrowRight className="h-4 w-4" />
+              Start Scribal Path <ArrowRight className="h-5 w-5" />
             </button>
           </div>
         </Card>

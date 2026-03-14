@@ -56,41 +56,41 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="bg-brand-gradient p-1.5 rounded-lg shadow-sm group-hover:scale-105 transition-transform">
-              <BookOpen className="h-6 w-6 text-white" />
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="bg-brand-gradient p-2 rounded-xl shadow-sm group-hover:scale-105 transition-transform">
+              <BookOpen className="h-7 w-7 text-white" />
             </div>
-            <span className="text-xl font-headline font-bold">The Scriptorium</span>
+            <span className="text-2xl font-headline font-bold tracking-tight">The Scriptorium</span>
           </Link>
         </div>
 
-        <div className="hidden lg:flex items-center space-x-6">
-          <Link href="/demo" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
-            <PlayCircle className="h-4 w-4" /> Demo
+        <div className="hidden lg:flex items-center space-x-8">
+          <Link href="/demo" className="text-base font-semibold hover:text-primary transition-colors flex items-center gap-2 text-slate-600">
+            <PlayCircle className="h-5 w-5" /> Demo
           </Link>
-          <Link href="/paths" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
-            <Compass className="h-4 w-4" /> Reading Paths
+          <Link href="/paths" className="text-base font-semibold hover:text-primary transition-colors flex items-center gap-2 text-slate-600">
+            <Compass className="h-5 w-5" /> Reading Paths
           </Link>
-          <Link href="/pedagogy" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
-            <BookCheck className="h-4 w-4" /> Pedagogy
+          <Link href="/pedagogy" className="text-base font-semibold hover:text-primary transition-colors flex items-center gap-2 text-slate-600">
+            <BookCheck className="h-5 w-5" /> Pedagogy
           </Link>
-          <Link href="/hub" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5 text-slate-600">
-            <GraduationCap className="h-4 w-4" /> Study Hub
+          <Link href="/hub" className="text-base font-semibold hover:text-primary transition-colors flex items-center gap-2 text-slate-600">
+            <GraduationCap className="h-5 w-5" /> Study Hub
           </Link>
         </div>
 
-        <div className="flex items-center space-x-4">
-          <div className="hidden sm:flex items-center gap-2">
+        <div className="flex items-center space-x-5">
+          <div className="hidden sm:flex items-center gap-3">
             <Link href="/api-reader">
-              <Button variant="ghost" className="font-bold px-4 text-slate-500 hover:text-primary flex items-center gap-2">
-                <Zap className="h-4 w-4" /> Simple Reader
+              <Button variant="ghost" className="font-bold h-12 px-5 text-slate-500 hover:text-primary flex items-center gap-2.5 text-sm">
+                <Zap className="h-5 w-5" /> Simple Reader
               </Button>
             </Link>
             <Link href="/reader">
-              <Button variant="default" className="btn-gradient font-bold px-6 shadow-md shadow-blue-500/10 flex items-center gap-2 rounded-xl">
-                <Book className="h-4 w-4" /> Enhanced Reader
+              <Button variant="default" className="btn-gradient font-bold h-12 px-7 shadow-lg shadow-blue-500/15 flex items-center gap-2.5 rounded-xl text-sm">
+                <Book className="h-5 w-5" /> Enhanced Reader
               </Button>
             </Link>
           </div>
@@ -99,16 +99,16 @@ export function Navbar() {
           <div className="sm:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon" className="rounded-xl border-slate-200">
-                  <Book className="h-5 w-5" />
+                <Button variant="outline" size="icon" className="rounded-xl border-slate-200 h-11 w-11">
+                  <Book className="h-6 w-6" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
+              <DropdownMenuContent align="end" className="w-56 p-2">
                 <DropdownMenuItem asChild>
-                  <Link href="/api-reader" className="cursor-pointer font-bold">Simple Reader</Link>
+                  <Link href="/api-reader" className="cursor-pointer font-bold py-3">Simple Reader</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/reader" className="cursor-pointer font-bold">Enhanced Reader</Link>
+                  <Link href="/reader" className="cursor-pointer font-bold py-3">Enhanced Reader</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -119,8 +119,8 @@ export function Navbar() {
               {user ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-10 w-10 rounded-full">
-                      <Avatar className="h-10 w-10">
+                    <Button variant="ghost" className="relative h-11 w-11 rounded-full">
+                      <Avatar className="h-11 w-11">
                         <AvatarImage src={user.photoURL || undefined} alt={user.displayName || "User"} />
                         <AvatarFallback className="bg-primary/10 text-primary font-bold">
                           {user.displayName?.charAt(0) || user.email?.charAt(0) || "U"}
@@ -128,23 +128,23 @@ export function Navbar() {
                       </Avatar>
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56" align="end" forceMount>
-                    <DropdownMenuLabel className="font-normal">
-                      <div className="flex flex-col space-y-1">
-                        <p className="text-sm font-medium leading-none">{user.displayName}</p>
-                        <p className="text-xs leading-none text-muted-foreground">{user.email}</p>
+                  <DropdownMenuContent className="w-64 p-2" align="end" forceMount>
+                    <DropdownMenuLabel className="font-normal p-3">
+                      <div className="flex flex-col space-y-1.5">
+                        <p className="text-base font-semibold leading-none">{user.displayName}</p>
+                        <p className="text-sm leading-none text-muted-foreground">{user.email}</p>
                       </div>
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
-                       <Link href="/reader" className="cursor-pointer">
-                         <BookOpen className="mr-2 h-4 w-4" />
+                       <Link href="/reader" className="cursor-pointer py-3 text-sm">
+                         <BookOpen className="mr-3 h-5 w-5" />
                          <span>Guided Reader</span>
                        </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600 cursor-pointer">
-                      <LogOut className="mr-2 h-4 w-4" />
+                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600 cursor-pointer py-3 text-sm">
+                      <LogOut className="mr-3 h-5 w-5" />
                       <span>Sign Out</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -153,7 +153,7 @@ export function Navbar() {
                 <Button 
                   onClick={handleSignIn} 
                   variant="outline" 
-                  className="font-bold border-slate-200"
+                  className="font-bold border-slate-200 h-11 px-6 text-sm"
                 >
                   Sign In
                 </Button>
