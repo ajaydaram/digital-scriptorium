@@ -575,9 +575,30 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
     reference: "Genesis 9:8-17",
     title: "The Noahic Covenant",
     mainTruth: "God's unilateral promise to preserve the earth ensures stability for the unfolding plan of redemption.",
+    culturalInsights: [
+      { 
+        title: "The Warrior's Bow", 
+        note: "The word for rainbow (qeshet) is the same as for a warrior’s bow. Crucially, it is pointed upward toward heaven, signifying that the weapon of judgment has been 'hung up' and retired." 
+      },
+      { 
+        title: "Common Grace", 
+        note: "This is a universal covenant with all living creatures. It guarantees natural stability—seasons, harvest, and time—as a 'stage' for the history of redemption." 
+      }
+    ],
+    scribalStrategy: {
+      title: "The Covenant of the Clouds",
+      instructions: [
+        "Header: Write 'The Noahic Covenant: Preservation and Peace' in a sweeping hand.",
+        "The Rainbow Arch: Transcribe verses 12-15 in an arching shape across the center.",
+        "Color Code: If possible, use the seven colors of the spectrum for your lines.",
+        "God's Memory: Transcribe verse 16 at the bottom, highlighting that the covenant depends on God's sight, not ours."
+      ]
+    },
     thematicLedger: [
+      { label: "Covenant", value: "Adam: Creation" },
       { label: "Covenant", value: "Noah: Preservation" }
-    ]
+    ],
+    reflectionQuestion: "The covenant depends on God's memory, not ours. How does the 'reliability' of the natural order build my trust in God's spiritual promises?"
   },
   24: {
     day: 24,
