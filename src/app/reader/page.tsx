@@ -35,7 +35,9 @@ import {
   Link2,
   Library,
   PenTool,
-  Users
+  Users,
+  Compass,
+  Lightbulb
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -284,15 +286,22 @@ function ReaderContent() {
                         <PenTool className="h-4 w-4 text-primary" />
                         <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Scribe's Reflection</span>
                       </div>
-                      <Textarea 
-                        placeholder="What did you learn about how this text works today? Reflect on the strategy and the narrative..."
-                        className={cn(
-                          "min-h-[120px] rounded-2xl border-dashed transition-all",
-                          isDark ? "bg-slate-900/50 border-slate-800" : "bg-slate-50/50 border-slate-200"
+                      <div className="space-y-4">
+                        {planDay?.reflectionQuestion && (
+                          <div className="p-4 bg-primary/5 rounded-xl border border-primary/10">
+                            <p className="text-xs font-bold text-primary italic">Scribe's Illumination: {planDay.reflectionQuestion}</p>
+                          </div>
                         )}
-                        value={scribeReflection}
-                        onChange={(e) => setScribeReflection(e.target.value)}
-                      />
+                        <Textarea 
+                          placeholder={planDay?.reflectionQuestion ? "Answer the Illumination question or reflect on today's strategy..." : "What did you learn about how this text works today? Reflect on the strategy and the narrative..."}
+                          className={cn(
+                            "min-h-[120px] rounded-2xl border-dashed transition-all",
+                            isDark ? "bg-slate-900/50 border-slate-800" : "bg-slate-50/50 border-slate-200"
+                          )}
+                          value={scribeReflection}
+                          onChange={(e) => setScribeReflection(e.target.value)}
+                        />
+                      </div>
                       <p className="mt-3 text-[10px] text-slate-400 font-medium italic">Metacognition: Teaching yourself how to learn scripture.</p>
                     </div>
 
@@ -327,6 +336,25 @@ function ReaderContent() {
           </div>
 
           <aside className="space-y-6">
+            {/* Cultural Insights - Marginalia */}
+            {planDay?.culturalInsights && (
+               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-amber-50 border border-amber-100", isDark ? "bg-amber-950/20" : "")}>
+                <CardHeader className="p-6 pb-2">
+                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-amber-600">
+                    <Compass className="h-4 w-4" /> Scribe's Marginalia
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-4">
+                  {planDay.culturalInsights.map((insight, i) => (
+                    <div key={i} className="space-y-1">
+                      <p className="text-[10px] font-bold text-amber-800">{insight.title}</p>
+                      <p className="text-[9px] text-amber-700/80 leading-relaxed italic">{insight.note}</p>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            )}
+
             {/* Thematic Echoes Panel - Dynamic based on path */}
             {pathParam === 'thematic' && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-emerald-50 border border-emerald-100", isDark ? "bg-emerald-950/20" : "")}>

@@ -9,6 +9,8 @@ export interface ReadingPlanDay {
   title: string;
   audience?: string;
   mainTruth?: string;
+  culturalInsights?: { title: string; note: string }[];
+  reflectionQuestion?: string;
 }
 
 export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
@@ -25,7 +27,14 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     reference: "Matthew 13:1-9", 
     title: "The Sower", 
     audience: "Jesus speaking to a large crowd by the sea",
-    mainTruth: "The receptivity of the heart determines the fruitfulness of the Word."
+    mainTruth: "The receptivity of the heart determines the fruitfulness of the Word.",
+    culturalInsights: [
+      { title: "The Sower’s Method", note: "Ancient farmers threw seeds in a wide arc (broadcast). The sower is extravagantly generous with the seed, not careless." },
+      { title: "The 'Path'", note: "Communal footpaths became as hard as concrete. Represents a heart hardened by the world until nothing can penetrate." },
+      { title: "The 'Rocky Ground'", note: "Thin topsoil over solid limestone shelves. The plant looks healthy initially but has no depth; it's a shallow faith." },
+      { title: "The 'Thorns'", note: "Bell-Thorns grow faster than wheat. The soil is actually 'too good'—the problem is competition for the plant’s attention." }
+    ],
+    reflectionQuestion: "Which soil is my heart today?"
   },
   2: { 
     day: 2, 
