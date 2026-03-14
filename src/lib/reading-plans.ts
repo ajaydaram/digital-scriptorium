@@ -605,9 +605,34 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
     reference: "Genesis 15",
     title: "The Abrahamic Covenant",
     mainTruth: "God binds Himself by an oath to create a people and a place through one man's faith.",
+    culturalInsights: [
+      { 
+        title: "The Ritual of the Pieces", 
+        note: "In the ancient East, a treaty was 'cut.' Parties walked through halved animals, stating: 'May I be torn asunder if I break this promise.'" 
+      },
+      { 
+        title: "The Solo Walk", 
+        note: "Abraham is in a deep sleep. God alone passes through as a smoking fire pot, taking the entire penalty of the covenant upon Himself." 
+      }
+    ],
+    symbolicMapping: [
+      { symbol: "The Stars", reality: "Offspring", insight: "Infinite promise in a barren reality." },
+      { symbol: "Smoking Fire Pot", reality: "God's Presence", insight: "God taking on the risk of man's failure." }
+    ],
+    scribalStrategy: {
+      title: "The Starry Night Ledger",
+      instructions: [
+        "Upper Section: Use dark ink for the 'Stars' (v. 5). Dots of light represent offspring.",
+        "Lower Section: Create a 'Path of Blood' layout by splitting the text into two distant columns.",
+        "Highlight 'BELIEVED' (v. 6) in gold as the hinge of faith."
+      ]
+    },
     thematicLedger: [
-      { label: "Covenant", value: "Abraham: Promise" }
-    ]
+      { label: "Covenant", value: "Adam: Creation" },
+      { label: "Covenant", value: "Noah: Preservation" },
+      { label: "Covenant", value: "Abraham: Promise (Substitution)" }
+    ],
+    reflectionQuestion: "God walked the path of blood alone. How does His 'solo commitment' change my fear of failing Him?"
   },
   25: {
     day: 25,
