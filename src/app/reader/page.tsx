@@ -34,7 +34,8 @@ import {
   History,
   Link2,
   Library,
-  PenTool
+  PenTool,
+  Users
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -72,12 +73,14 @@ function ReaderContent() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [newComment, setNewComment] = useState("");
 
+  const planDay = pathParam && dayParam > 0 ? getPlanDay(pathParam, dayParam) : null;
+
   useEffect(() => {
     if (pathParam && dayParam > 0) {
-      const planDay = getPlanDay(pathParam, dayParam);
-      if (planDay) {
-        setCurrentRef(planDay.reference);
-        setSearchQuery(planDay.reference);
+      const dayData = getPlanDay(pathParam, dayParam);
+      if (dayData) {
+        setCurrentRef(dayData.reference);
+        setSearchQuery(dayData.reference);
       }
     } else if (!searchQuery) {
       setSearchQuery(initialRef);
@@ -142,7 +145,6 @@ function ReaderContent() {
   };
 
   const isDark = theme === "dark";
-  const planDay = pathParam && dayParam > 0 ? getPlanDay(pathParam, dayParam) : null;
 
   return (
     <div className={cn(
@@ -165,14 +167,19 @@ function ReaderContent() {
                pathParam === 'thematic' ? <Link2 className="h-5 w-5" /> :
                <Library className="h-5 w-5" />}
             </div>
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">Scribal Strategy Active</p>
+            <div className="flex-1">
+              <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">Scribal Strategy Active: {pathParam.toUpperCase()}</p>
               <h3 className="text-sm font-bold">
                 {pathParam === 'chronological' ? "Historical Contextualization: Follow the sequence of the Grand Narrative." : 
                  pathParam === 'thematic' ? "Canonical Reading: Trace the 'Golden Threads' across the canon." :
-                 "Genre Awareness: Adjusting lineation for literary form."}
+                 "Genre Awareness: Adjusting lineation for literary form (Parables)."}
               </h3>
             </div>
+            {planDay && (
+              <Badge variant="outline" className="bg-white/50 border-none font-bold">
+                Day {planDay.day}: {planDay.title}
+              </Badge>
+            )}
           </div>
         )}
 
@@ -241,6 +248,12 @@ function ReaderContent() {
                 ) : scripture ? (
                   <article className="max-w-3xl mx-auto space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                     <header className="text-center space-y-4">
+                      {pathParam === 'genre' && planDay?.audience && (
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 border border-purple-100 text-purple-600 mb-4">
+                          <Users className="h-4 w-4" />
+                          <span className="text-[10px] font-bold uppercase tracking-widest">Audience: {planDay.audience}</span>
+                        </div>
+                      )}
                       <h2 className={cn("text-5xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
                         {scripture.reference}
                       </h2>
@@ -253,6 +266,18 @@ function ReaderContent() {
                     )}>
                       <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
                     </div>
+
+                    {pathParam === 'genre' && planDay?.mainTruth && (
+                      <div className="p-8 rounded-3xl bg-slate-50 border border-dashed border-slate-200 text-center space-y-4">
+                        <div className="flex items-center justify-center gap-2 text-slate-400">
+                          <Sparkles className="h-4 w-4" />
+                          <span className="text-[10px] font-bold uppercase tracking-widest">The One Main Truth</span>
+                        </div>
+                        <p className="text-xl font-headline font-bold text-slate-900 leading-relaxed italic">
+                          "{planDay.mainTruth}"
+                        </p>
+                      </div>
+                    )}
                     
                     <div className="mt-20 pt-10 border-t border-slate-100/10">
                       <div className="flex items-center gap-2 mb-6">
@@ -281,7 +306,7 @@ function ReaderContent() {
                           disabled={dayParam <= 1}
                           className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
                         >
-                          <ChevronLeft className="h-4 w-4" /> Previous
+                          <ChevronLeft className="h-4 w-4" /> Previous Day
                         </Button>
                         <Separator orientation="vertical" className="h-10" />
                         <Button 
@@ -291,7 +316,7 @@ function ReaderContent() {
                           }}
                           className="rounded-xl gap-2 font-bold text-xs uppercase tracking-widest"
                         >
-                          Next <ChevronRight className="h-4 w-4" />
+                          Next Day <ChevronRight className="h-4 w-4" />
                         </Button>
                       </div>
                     )}
@@ -315,6 +340,33 @@ function ReaderContent() {
                   <div className="space-y-2">
                     <Badge variant="outline" className="text-[9px] border-emerald-200 text-emerald-600 w-full justify-start py-1 px-2">Genesis 12:1-3 (Covenant)</Badge>
                     <Badge variant="outline" className="text-[9px] border-emerald-200 text-emerald-600 w-full justify-start py-1 px-2">Hebrews 6:13-20 (Promise)</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Genre-specific tips */}
+            {pathParam === 'genre' && (
+              <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-purple-50 border border-purple-100", isDark ? "bg-purple-950/20" : "")}>
+                <CardHeader className="p-6 pb-2">
+                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-purple-600">
+                    <PenTool className="h-4 w-4" /> Parable Scribing Tips
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-3">
+                  <div className="space-y-3">
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-bold text-purple-800">1. Separate the Story</p>
+                      <p className="text-[9px] text-purple-600/80">Identify symbols vs. spiritual meanings.</p>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-bold text-purple-800">2. Indent Dialogue</p>
+                      <p className="text-[9px] text-purple-600/80">Use lineation to see characters' hearts.</p>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-bold text-purple-800">3. Find the Main Truth</p>
+                      <p className="text-[9px] text-purple-600/80">Look for the "earthly story with a heavenly meaning."</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { 
   History, 
   Lightbulb, 
-  Library,
+  Library, 
   ChevronRight,
   Sparkles
 } from "lucide-react";
@@ -42,12 +42,12 @@ const PATH_CARDS = [
     id: "genre",
     title: "Genre Path",
     subtitle: "LITERARY PRECISION",
-    description: "Learn to read literature types. Master poetry, prophecy, parables, and letters.",
+    description: "Learn to read literature types. 7-Day Starter: Master the Parables of Jesus.",
     icon: Library,
     color: "text-purple-500",
     bg: "bg-purple-50/50",
-    link: "/reader?path=genre",
-    active: false
+    link: "/reader?path=genre&day=1",
+    active: true
   }
 ];
 

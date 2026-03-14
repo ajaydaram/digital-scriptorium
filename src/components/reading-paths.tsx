@@ -27,7 +27,8 @@ const PATHS = [
     accentColor: "text-blue-600",
     badgeText: "SCRIBAL HISTORY",
     badgeClass: "bg-blue-100/50 text-blue-700 border-blue-200/50",
-    startRef: "Genesis 1"
+    startRef: "Genesis 1",
+    day: 1
   },
   {
     id: "thematic",
@@ -47,36 +48,37 @@ const PATHS = [
     accentColor: "text-emerald-600",
     badgeText: "CANONICAL UNITY",
     badgeClass: "bg-emerald-100/50 text-emerald-700 border-emerald-200/50",
-    startRef: "Genesis 1"
+    startRef: "Genesis 1",
+    day: 1
   },
   {
     id: "genre",
     title: "Literary Form: The Genre Portfolio",
     subtitle: "Genre Path",
-    description: "Master the 'rules of the game.' Adapt your lineation for poetry, law, parables, and epistles to prevent misinterpretation.",
+    description: "Master the Parables of Jesus. Adapt your lineation for poetry and parables to prevent misinterpretation.",
     icon: <Library className="h-5 w-5 text-purple-600" />,
     strategy: "Genre Awareness",
     features: [
       "Stanza-based poetic lineation", 
-      "Epistle logical-connector highlights",
+      "Audience identification headers",
       "Narrative arc sketches",
-      "Literary sensitivity training"
+      "The 'One Main Truth' reflection"
     ],
     image: PlaceHolderImages.find(i => i.id === "path-genre")?.imageUrl,
     bgClass: "bg-purple-50/50",
     accentColor: "text-purple-600",
     badgeText: "LITERARY PRECISION",
     badgeClass: "bg-purple-100/50 text-purple-700 border-purple-200/50",
-    startRef: "Genesis 1"
+    startRef: "Matthew 13:1",
+    day: 1
   }
 ];
 
 export function ReadingPathsSection() {
   const router = useRouter();
 
-  const handleBeginPath = (pathId: string, ref: string) => {
-    const encodedRef = encodeURIComponent(ref);
-    router.push(`/reader?path=${pathId}&reference=${encodedRef}`);
+  const handleBeginPath = (pathId: string, day: number) => {
+    router.push(`/reader?path=${pathId}&day=${day}`);
   };
 
   return (
@@ -137,7 +139,7 @@ export function ReadingPathsSection() {
             </CardContent>
             
             <button 
-              onClick={() => handleBeginPath(path.id, path.startRef)}
+              onClick={() => handleBeginPath(path.id, path.day)}
               className={cn(
                 "flex items-center gap-2 font-headline font-bold text-sm group-hover:gap-3 transition-all w-fit py-1",
                 path.accentColor
