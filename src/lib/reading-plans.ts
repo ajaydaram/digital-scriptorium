@@ -78,7 +78,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     culturalInsights: [
       { title: "The Shepherd’s Risk", note: "A mature sheep weighs 50-100 lbs. The shepherd doesn't lead it; he carries it. Grace has a physical cost." },
       { title: "The Woman’s Dowry", note: "Coins were often woven into hair as a safety net. Losing one was a catastrophe of stewardship and future security." },
-      { title: "The Dark House", note: "Basalt floors and few windows made finding a small coin nearly impossible without a lamp and diligent sweeping." }
+      { title: "The Dark House", note: "Basalt floors and few windows made finding a small coin nearly impossible without a lamp and a broom." }
     ],
     scribalStrategy: {
       title: "The Joy Journal",
@@ -118,8 +118,24 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     day: 5, 
     reference: "Luke 15:25-32", 
     title: "The Older Brother (Part 2)", 
-    audience: "Direct challenge to the Pharisees' heart attitude",
-    mainTruth: "Religious legalism can blind us to the beauty of redemption."
+    audience: "The Pharisees (The 'Older Brothers' grumbling about Jesus)",
+    mainTruth: "Religious legalism and self-righteousness can be just as lost as outward rebellion.",
+    culturalInsights: [
+      { title: "Lost in the Backyard", note: "The older brother was 'serving as a slave' (douleuō), working for the 'pay' of the inheritance rather than out of love for his father." },
+      { title: "The Refusal", note: "By refusing to enter the feast, he publicly insulted his father, forcing the father to 'go out' a second time to entreat him." },
+      { title: "The 'Kid' (Goat)", note: "He complained about a young goat while ignoring that 'all the father has' was already his. He saw a boss, not a father." },
+      { title: "The Unfinished Ending", note: "We never find out if the older brother went inside. Jesus leaves the choice to the Pharisees (the audience)." }
+    ],
+    scribalStrategy: {
+      title: "The Contrast Page",
+      instructions: [
+        "Left Margin: Write 'Younger Brother: Rebellion'.",
+        "Right Margin: Write 'Older Brother: Self-Righteousness'.",
+        "Center Column: Transcribe the Father’s final plea in Luke 15:31-32.",
+        "The Scribe's Silence: Leave significant white space at the bottom for the unfinished choice."
+      ]
+    },
+    reflectionQuestion: "Am I working for the 'pay' of the inheritance (blessings) or out of love for the Father Himself?"
   },
   6: { 
     day: 6, 
