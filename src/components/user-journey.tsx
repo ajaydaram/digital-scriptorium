@@ -8,7 +8,6 @@ import {
   Library, 
   TrendingUp, 
   GraduationCap,
-  ChevronRight,
   ArrowRight
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -19,7 +18,7 @@ const JOURNEY_STEPS = [
   {
     number: "1",
     title: "Discover & Choose Your Path",
-    description: "Start by exploring our Three Paths framework. Take the quick assessment to find which approach best matches your learning style and current biblical familiarity.",
+    description: "Start by exploring our Three Paths framework. Take the quick assessment to find which approach best matches your learning style and current biblical familiarity. Each path offers a different lens through which to understand Scripture.",
     icon: Search,
     tags: ["Chronological Path", "Thematic Path", "Genre Path"],
     color: "text-blue-500",
@@ -28,7 +27,7 @@ const JOURNEY_STEPS = [
   {
     number: "2",
     title: "Begin Daily Reading",
-    description: "Start with Day 1 of your chosen path. Each daily reading includes carefully selected Bible passages, historical context, reflection prompts, and study questions.",
+    description: "Start with Day 1 of your chosen path. Each daily reading includes carefully selected Bible passages, historical context, reflection prompts, and study questions. The clean interface keeps you focused on the text while providing helpful resources when needed.",
     icon: BookOpen,
     tags: ["Daily Passages", "Context Notes", "Reflection Prompts"],
     color: "text-emerald-500",
@@ -37,7 +36,7 @@ const JOURNEY_STEPS = [
   {
     number: "3",
     title: "Engage with Community",
-    description: "Join study groups following the same reading path. Share insights through social annotations, participate in weekly discussions, and build relationships.",
+    description: "Join study groups following the same reading path. Share insights through social annotations, participate in weekly discussions, and build relationships with fellow learners. Community wisdom enriches individual understanding.",
     icon: Users,
     tags: ["Study Groups", "Social Annotations", "Weekly Discussions"],
     color: "text-purple-500",
@@ -46,7 +45,7 @@ const JOURNEY_STEPS = [
   {
     number: "4",
     title: "Deepen with Study Hub",
-    description: "Access contextual resources as your curiosity grows. Explore historical maps, archaeological insights, word studies, and theological commentaries.",
+    description: "Access contextual resources as your curiosity grows. Explore historical maps, archaeological insights, word studies, and theological commentaries. The Study Hub provides depth without overwhelming the reading experience.",
     icon: Library,
     tags: ["Historical Maps", "Word Studies", "Commentaries"],
     color: "text-primary",
@@ -55,7 +54,7 @@ const JOURNEY_STEPS = [
   {
     number: "5",
     title: "Track Progress & Celebrate Growth",
-    description: "Watch your biblical literacy grow through visual progress tracking, completion badges, and reflection on insights gained.",
+    description: "Watch your biblical literacy grow through visual progress tracking, completion badges, and reflection on insights gained. Share milestones with your community and celebrate the journey of spiritual and intellectual growth.",
     icon: TrendingUp,
     tags: ["Progress Tracking", "Achievement Badges", "Growth Reflection"],
     color: "text-amber-500",
@@ -64,7 +63,7 @@ const JOURNEY_STEPS = [
   {
     number: "6",
     title: "Lead & Mentor Others",
-    description: "As your confidence grows, consider leadership roles. Create study groups, mentor new users, and help others discover the joy of systematic Bible study.",
+    description: "As your confidence grows, consider leadership roles. Create study groups, mentor new users, contribute to community discussions, and help others discover the joy of systematic Bible study. Teaching deepens your own understanding.",
     icon: GraduationCap,
     tags: ["Group Leadership", "Mentorship", "Community Contribution"],
     color: "text-accent",
@@ -84,25 +83,25 @@ export function UserJourney() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
           >
-            <Card className="h-full border-slate-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300 group overflow-hidden">
-              <CardContent className="p-8">
-                <div className="flex items-start justify-between mb-6">
-                  <div className={cn("h-14 w-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform", step.bg, step.color)}>
-                    <step.icon className="h-7 w-7" />
+            <Card className="h-full border-slate-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300 group overflow-hidden rounded-[2.5rem]">
+              <CardContent className="p-10">
+                <div className="flex items-start justify-between mb-8">
+                  <div className={cn("h-16 w-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform", step.bg, step.color)}>
+                    <step.icon className="h-8 w-8" />
                   </div>
-                  <span className="text-4xl font-headline font-bold opacity-10 group-hover:opacity-20 transition-opacity">
+                  <span className="text-5xl font-headline font-bold opacity-10 group-hover:opacity-20 transition-opacity">
                     {step.number}
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-headline font-bold text-slate-900 mb-4">{step.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 font-body">
+                <h3 className="text-2xl font-headline font-bold text-slate-900 mb-4">{step.title}</h3>
+                <p className="text-slate-600 text-base leading-relaxed mb-8 font-body">
                   {step.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2.5 mt-auto">
                   {step.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="bg-slate-50 text-[10px] text-slate-500 font-bold border-none">
+                    <Badge key={tag} variant="secondary" className="bg-slate-100 text-xs text-slate-500 font-bold border-none px-3 py-1">
                       {tag}
                     </Badge>
                   ))}
@@ -114,10 +113,10 @@ export function UserJourney() {
       </div>
       
       <div className="flex justify-center pt-8">
-        <div className="p-1.5 rounded-full bg-slate-50 border border-slate-200 flex items-center gap-4 px-6">
-          <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">Ready to start step 1?</span>
-          <button className="flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all">
-            Find Your Path <ArrowRight className="h-4 w-4" />
+        <div className="p-2 rounded-full bg-slate-50 border border-slate-200 flex items-center gap-6 px-8">
+          <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Ready to start step 1?</span>
+          <button className="flex items-center gap-2 text-primary font-bold text-base hover:gap-4 transition-all">
+            Find Your Path <ArrowRight className="h-5 w-5" />
           </button>
         </div>
       </div>

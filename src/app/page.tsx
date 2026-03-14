@@ -4,25 +4,19 @@ import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { ReadingPathsSection } from "@/components/reading-paths";
 import { AnnotationMock } from "@/components/annotation-mock";
-import { GuidedAscentStepper } from "@/components/guided-ascent-stepper";
 import { UserJourney } from "@/components/user-journey";
 import { Badge } from "@/components/ui/badge";
 import { 
   ArrowRight, 
-  Play, 
-  Sparkles, 
   BookOpen, 
   Search, 
   Globe, 
-  Link2, 
   Users, 
   MessageSquare, 
-  MessageCircle,
   BookText,
   Milestone,
   TrendingUp,
-  Library,
-  ChevronRight
+  Library
 } from "lucide-react";
 import Link from "next/link";
 
@@ -125,7 +119,7 @@ export default function LandingPage() {
                     <Search className="h-4 w-4" /> Advanced Search
                   </div>
                   <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest">
-                    <Globe className="h-4 w-4" /> Multi-Language
+                     Globe Multi-Language
                   </div>
                 </div>
               </div>
@@ -141,15 +135,15 @@ export default function LandingPage() {
         </section>
 
         {/* User Journey Section */}
-        <section className="py-24 bg-white">
+        <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/20 text-primary font-bold uppercase tracking-widest">USER JOURNEY</Badge>
-              <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 tracking-tight text-slate-900">
+            <div className="text-center mb-20">
+              <Badge variant="outline" className="mb-6 px-6 py-2 border-primary/20 text-primary font-bold uppercase tracking-widest">USER JOURNEY</Badge>
+              <h2 className="text-4xl md:text-6xl font-headline font-bold mb-8 tracking-tight text-slate-900">
                 Your Learning Journey
               </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed font-body">
-                From curious beginner to confident Bible student - here's how The Scriptorium guides your growth.
+              <p className="text-muted-foreground max-w-3xl mx-auto text-xl leading-relaxed font-body">
+                From curious beginner to confident Bible student - here's how The Scriptorium guides your growth in biblical understanding and community engagement.
               </p>
             </div>
 
