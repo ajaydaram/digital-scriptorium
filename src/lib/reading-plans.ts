@@ -129,7 +129,35 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "Saul is protected by 3,000 men and a spear, yet he is vulnerable. David is protected by his integrity and God. Where am I tempted to take a 'short-cut' to get what God has promised?"
   },
-  19: { day: 19, reference: "2 Samuel 7:1-17", title: "The Royal Covenant" },
+  19: { 
+    day: 19, 
+    reference: "2 Samuel 7:1-17", 
+    title: "The Royal Covenant: A House for a House",
+    historicalSnapshot: {
+      ref: "2 Samuel 7:18",
+      text: "Then King David went in and sat before the Lord and said, 'Who am I, O Lord God, and what is my house, that you have brought me thus far?'"
+    },
+    culturalInsights: [
+      {
+        title: "Bayit (House)",
+        note: "In Hebrew, 'bayit' means both a physical building and a family lineage. David wanted to build a building; God promised to build a dynasty."
+      },
+      {
+        title: "Palace of Cedar",
+        note: "Cedar of Lebanon was the most prestigious building material—aromatic, durable, and imported. David’s luxury contrasted with the Ark’s humble tent."
+      }
+    ],
+    scribalStrategy: {
+      title: "The Royal Dynasty",
+      instructions: [
+        "Use your most formal, elegant script for the title: 'The Covenant of the Eternal Throne'.",
+        "Transcribe 2 Samuel 7:12–16 in the center of the page.",
+        "Highlight the word 'FOREVER' in gold or a distinct color—it appears three times as the anchor of the promise.",
+        "Draw a Crown or Throne to symbolize the eternal dynasty leading to the Messiah."
+      ]
+    },
+    reflectionQuestion: "David wanted to build God a temple of stone; God built David a temple of people. Where am I trying to work for God when He wants to work for me?"
+  },
   20: { day: 20, reference: "2 Samuel 11", title: "The Great Fall" },
   21: { day: 21, reference: "2 Samuel 12:1-15", title: "The Confrontation" }
 };
