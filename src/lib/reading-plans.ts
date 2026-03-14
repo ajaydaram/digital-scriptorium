@@ -241,20 +241,23 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "The Covenant People (Special Revelation)",
     mainTruth: "God's Word is perfect, sure, right, pure, clean, and true—transforming the whole person.",
     symbolicMapping: [
-      { symbol: "The Torah (Law)", reality: "Reviving the Soul", insight: "Instruction that brings life back to the weary." },
+      { symbol: "The Law", reality: "Reviving the Soul", insight: "Instruction that brings life back to the weary." },
       { symbol: "The Testimony", reality: "Making Wise the Simple", insight: "God's standard provides clarity for the unlearned." },
       { symbol: "The Precepts", reality: "Rejoicing the Heart", insight: "The specific 'pathways' that lead to inner joy." },
-      { symbol: "The Commandment", reality: "Enlightening the Eyes", insight: "Purity that clears away the moral fog." }
+      { symbol: "The Commandment", reality: "Enlightening the Eyes", insight: "Purity that clears away the moral fog." },
+      { symbol: "The Fear of the Lord", reality: "Enduring Forever", insight: "Holy reverence that provides a permanent foundation." },
+      { symbol: "The Rules", reality: "Righteous Altogether", insight: "Judgments that are completely reliable and fair." }
     ],
     scribalStrategy: { 
-      title: "The Law Bullets", 
+      title: "The Golden List", 
       instructions: [
-        "Use a more disciplined, neat handwriting for this section.",
-        "Bullet point the different names and characteristics of the Law.",
-        "Underline the effects of the Word (reviving, making wise, rejoicing, etc.)."
+        "Create six distinct 'blocks' or pillars on your page.",
+        "In each block, pair the Noun with its Attribute and Effect.",
+        "Use a disciplined, neat handwriting to reflect the order of the Law.",
+        "Box in the final prayer (v. 14) at the bottom center."
       ] 
     },
-    reflectionQuestion: "Let the words of my mouth and the meditation of my heart be acceptable in your sight."
+    reflectionQuestion: "David says the Word makes wise 'the simple' (pethi), meaning an 'open door.' In what area of my life is my heart an 'open door' that needs the structure of God's Word?"
   },
   11: { day: 11, reference: "Psalm 23", title: "The Shepherd's Provision", scribalStrategy: { title: "Comfort Script", instructions: ["Use a gentle, cursive 'Comfort Script' for this entire transcription."] } },
   12: { day: 12, reference: "Psalm 42", title: "Thirsting in Despair", scribalStrategy: { title: "Indent Refrains", instructions: ["Indent the refrains in v. 5 and 11 to notice the soul's self-talk."] } },
