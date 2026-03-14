@@ -335,11 +335,13 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { title: "The Sheep of His Pasture", note: "Reflects Israel's identity as a flock under the total care and ownership of Yahweh." }
     ],
     scribalStrategy: { 
-      title: "The Shout & Celebration", 
+      title: "The Temple Entry", 
       instructions: [
-        "Use ALL-CAPS or bold script for every instance of 'SHOUT', 'JOY', or 'GLADNESS'.",
-        "Draw a decorative border of vines and fruit to represent the goodness of God.",
-        "End with a large, centered 'AMEN'."
+        "Draw two vertical lines on the left and right sides of your page to represent the Temple gates.",
+        "Transcribe the 'Shout' and 'Serve' commands at the very top, centered between your 'gates'.",
+        "Write the central truth—'Know that the LORD, he is God!'—in a distinct, boxy script.",
+        "Transcribe the entrance into the courts. Use ALL CAPS for GOOD, STEADFAST LOVE, FAITHFULNESS.",
+        "At the bottom of the page, write the word 'AMEN' or 'HALLELUJAH' as your signature for the week."
       ] 
     },
     reflectionQuestion: "What is my 'joyful shout' to God today as I enter His presence?"
