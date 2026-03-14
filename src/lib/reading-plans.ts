@@ -158,7 +158,35 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "David wanted to build God a temple of stone; God built David a temple of people. Where am I trying to work for God when He wants to work for me?"
   },
-  20: { day: 20, reference: "2 Samuel 11", title: "The Great Fall" },
+  20: { 
+    day: 20, 
+    reference: "2 Samuel 11", 
+    title: "The Great Fall",
+    historicalSnapshot: {
+      ref: "2 Samuel 11:1",
+      text: "In the spring of the year, the time when kings go out to battle, David sent Joab... but David remained at Jerusalem."
+    },
+    culturalInsights: [
+      {
+        title: "The King's Absence",
+        note: "A king's primary role was as military leader. By staying behind, David abandoned his post, creating the idleness that led to his downfall."
+      },
+      {
+        title: "The Shadow of Uriah",
+        note: "Uriah the Hittite was one of David's 'Mighty Men'. His refusal to sleep in his own house while the Ark and the army were in tents was a silent rebuke to David's own lack of discipline."
+      }
+    ],
+    scribalStrategy: {
+      title: "The Darkened Page",
+      instructions: [
+        "Use a heavy black or dark grey border around the entire page to represent the gravity of the fall.",
+        "On the left side, transcribe the 'Progress of Sin' in a descending staircase pattern: He Remained -> He Saw -> He Took -> He Lied -> He Murdered.",
+        "Leave the center of the page largely empty to represent the 'spiritual desert' David inhabited while hiding his sin.",
+        "At the very bottom, write 2 Samuel 11:27 in a small, stark script: 'But the thing that David had done displeased the Lord.'"
+      ]
+    },
+    reflectionQuestion: "Where am I currently tempted by 'palace life'—the moments when I think I've 'arrived' and no longer need to be on guard?"
+  },
   21: { day: 21, reference: "2 Samuel 12:1-15", title: "The Confrontation" }
 };
 
