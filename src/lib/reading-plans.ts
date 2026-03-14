@@ -75,11 +75,39 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "What are the 'Adullams' in your life where you feel hidden or forgotten? How can you move from complaint to confidence today?"
   },
-  17: { day: 17, reference: "Psalm 57", title: "En-Gedi: The Sword and the Song" },
+  17: { 
+    day: 17, 
+    reference: "Psalm 57", 
+    title: "En-Gedi: The Sword and the Song",
+    historicalSnapshot: {
+      ref: "1 Samuel 24:4-6",
+      text: "And the men of David said to him, 'Here is the day of which the Lord said to you...' Then David arose and stealthily cut off a corner of Saul's robe. And afterward David's heart struck him..."
+    },
+    culturalInsights: [
+      {
+        title: "The Royal Corner (Kanaph)",
+        note: "In the ancient East, the hem or 'corner' (kanaph) of a royal robe represented the king’s authority. By cutting it, David was showing he had the power to take the kingdom."
+      },
+      {
+        title: "The Shadow of Wings",
+        note: "The word for 'wings' (kanaph) is the same word for the 'corners' of a garment. While David cut Saul's robe, he prayed to be hidden under God's robe."
+      }
+    ],
+    scribalStrategy: {
+      title: "The Wing and the Sword",
+      instructions: [
+        "Transcribe 1 Samuel 24:4–6 as a Historical Header in an angular script.",
+        "Draw a Wing and a Sword crossed in the margin.",
+        "Center the 'Chorus' (v. 7 & 11) in a High Praise Box.",
+        "Refuse vengeance: Write 'Grace over Force' in the margin."
+      ]
+    },
+    reflectionQuestion: "David refused to take by force what God had promised to give by grace. Where am I tempted to 'cut the robe' instead of waiting for God?"
+  },
   18: { day: 18, reference: "Psalm 7", title: "The Pursuit of Integrity" },
   19: { day: 19, reference: "2 Samuel 7:1-17", title: "The Royal Covenant" },
   20: { day: 20, reference: "2 Samuel 11", title: "The Great Fall" },
-  21: { day: 21, reference: "2 Samuel 12:1-15", title: "Nathan's Confrontation" }
+  21: { day: 21, reference: "2 Samuel 12:1-15", title: "The Confrontation" }
 };
 
 export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
@@ -144,8 +172,8 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       title: "The Joy Journal",
       instructions: [
         "Write REJOICE in large script in the center of the page.",
-        "Transcribe the Lost Sheep (v. 3-7) on the top half.",
-        "Transcribe the Lost Coin (v. 8-10) on the bottom half.",
+        "Transcribe the Parable of the Lost Sheep (v. 3-7) on the top half.",
+        "Transcribe the Parable of the Lost Coin (v. 8-10) on the bottom half.",
         "Note the shared phrase: 'There is joy before the angels of God...'"
       ]
     },
