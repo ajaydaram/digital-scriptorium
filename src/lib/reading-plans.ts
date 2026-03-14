@@ -286,9 +286,35 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "How does the 'physical reality' of the Judean wilderness change my understanding of the Shepherd's protection?"
   },
-  12: { day: 12, reference: "Psalm 42", title: "Thirsting in Despair", scribalStrategy: { title: "Indent Refrains", instructions: ["Indent the refrains in v. 5 and 11 to notice the soul's self-talk."] } },
+  12: { 
+    day: 12, 
+    reference: "Psalm 42", 
+    title: "Thirsting in Despair", 
+    audience: "The thirsting soul in exile",
+    mainTruth: "Biblical lament involves talking to your soul rather than just listening to its despair.",
+    culturalInsights: [
+      { title: "The Panting Deer", note: "A deer ($ayyal$) in the Judean hills doesn't just drink; it submerges itself to hide its scent from predators and cool its blood during a chase. This is 'survival' thirst." },
+      { title: "The Cataracts of Hermon", note: "The 'deep calls to deep' at the roar of waterfalls refers to the Jordan's source. The crashing spring melt represents emotional chaos and feeling swept away." },
+      { title: "Soul-Talk vs. Soul-Listening", note: "David models a shift from passive despair to active reminders of God's character. He 'interrogates' his own soul." }
+    ],
+    symbolicMapping: [
+      { symbol: "Thirst", reality: "Desperate Need for God", insight: "Survival depends on God's presence as much as water for a hunted deer." },
+      { symbol: "Waves & Billows", reality: "Overwhelming Sorrow", insight: "God's sovereignty over the 'flood' of our emotions." },
+      { symbol: "The Refrain", reality: "Hopeful Interrogation", insight: "Directly challenging our feelings with the truth of God's salvation." }
+    ],
+    scribalStrategy: { 
+      title: "The Echo & Refrain", 
+      instructions: [
+        "Use a slanted, 'distressed' script for the verses of despair (v. 3, 7, 10).",
+        "Stop and draw a decorative box for the Refrains (v. 5, 11).",
+        "In the right margin, list your 'Ebenezers'—past moments of God's faithfulness.",
+        "Draw water waves at the bottom with the word 'HOPE' rising above them."
+      ] 
+    },
+    reflectionQuestion: "Am I currently 'listening' to my soul or 'talking' to it with the truth of God's character?"
+  },
   13: { day: 13, reference: "Psalm 51", title: "A Prayer of Repentance", scribalStrategy: { title: "Narrow Margins", instructions: ["Use narrow margins to represent the humility of a broken spirit."] } },
-  14: { day: 14, reference: "Psalm 100", title: "Liturgy of Thanksgiving", scribalStrategy: { title: "The Shout", instructions: ["Use ALL-CAPS or bold script for every instance of 'SHOUT' or 'JOY'."] } },
+  14: { day: 14, reference: "Psalm 100", title: "A Liturgy of Thanksgiving", scribalStrategy: { title: "The Shout", instructions: ["Use ALL-CAPS or bold script for every instance of 'SHOUT' or 'JOY'."] } },
 };
 
 export type PathId = 'chronological' | 'thematic' | 'genre';
