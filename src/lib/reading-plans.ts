@@ -11,6 +11,7 @@ export interface ReadingPlanDay {
   mainTruth?: string;
   culturalInsights?: { title: string; note: string }[];
   symbolicMapping?: { symbol: string; reality: string; insight: string }[];
+  scribalStrategy?: { title: string; instructions: string[] };
   reflectionQuestion?: string;
 }
 
@@ -32,9 +33,17 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     culturalInsights: [
       { title: "The Sower’s Method", note: "Ancient farmers threw seeds in a wide arc (broadcast). The sower is extravagantly generous with the seed, not careless." },
       { title: "The 'Path'", note: "Communal footpaths became as hard as concrete. Represents a heart hardened by the world until nothing can penetrate." },
-      { title: "The 'Rocky Ground'", note: "Thin topsoil over solid limestone shelves. The plant looks healthy initially but has no depth; it's a shallow faith." },
-      { title: "The 'Thorns'", note: "Bell-Thorns grow faster than wheat. The soil is actually 'too good'—the problem is competition for the plant’s attention." }
+      { title: "The 'Rocky Ground'", note: "Thin topsoil over solid limestone shelves. The plant looks healthy initially but has no depth." },
+      { title: "The 'Thorns'", note: "Bell-Thorns grow faster than wheat. The problem is competition for the plant’s attention." }
     ],
+    scribalStrategy: {
+      title: "Parable Mapping",
+      instructions: [
+        "Leave a wide margin to sketch the four soil types.",
+        "Use block text for the narrative description.",
+        "Indent dialogue to distinguish characters."
+      ]
+    },
     reflectionQuestion: "Which soil is my heart today?"
   },
   2: { 
@@ -49,14 +58,38 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { symbol: "The Thorns", reality: "Cares & Deceitfulness", insight: "Distraction is as deadly to faith as outright persecution." },
       { symbol: "The Harvest", reality: "Spiritual Fruitfulness", insight: "Growth is the natural result of hearing AND understanding." }
     ],
+    scribalStrategy: {
+      title: "The Parallel Ledger",
+      instructions: [
+        "Use a split-column layout.",
+        "Re-list the four ground types on the left.",
+        "Transcribe Jesus's explanation on the right.",
+        "Draw connecting lines between image and meaning."
+      ]
+    },
     reflectionQuestion: "What 'distraction' is currently competing for the nutrients in my heart's soil?"
   },
   3: { 
     day: 3, 
     reference: "Luke 15:1-10", 
-    title: "The Lost Sheep & Coin", 
-    audience: "Tax collectors, sinners, and grumbling Pharisees",
-    mainTruth: "There is immense joy in heaven over one sinner who repents."
+    title: "The Search and the Joy", 
+    audience: "Tax collectors, sinners, and grumbling Pharisees (v. 1-2)",
+    mainTruth: "God proactively and exhaustively searches for the lost, and all of heaven rejoices when one is found.",
+    culturalInsights: [
+      { title: "The Shepherd’s Risk", note: "A mature sheep weighs 50-100 lbs. The shepherd doesn't lead it; he carries it. Grace has a physical cost." },
+      { title: "The Woman’s Dowry", note: "Coins were often woven into hair as a safety net. Losing one was a catastrophe of stewardship and future security." },
+      { title: "The Dark House", note: "Basalt floors and few windows made finding a small coin nearly impossible without a lamp and diligent sweeping." }
+    ],
+    scribalStrategy: {
+      title: "The Joy Journal",
+      instructions: [
+        "Write REJOICE in large script in the center of the page.",
+        "Transcribe the Lost Sheep (v. 3-7) on the top half.",
+        "Transcribe the Lost Coin (v. 8-10) on the bottom half.",
+        "Note the shared phrase: 'There is joy before the angels of God...'"
+      ]
+    },
+    reflectionQuestion: "How does the 'physical cost' of the shepherd carrying the sheep change my view of God's search for me?"
   },
   4: { 
     day: 4, 

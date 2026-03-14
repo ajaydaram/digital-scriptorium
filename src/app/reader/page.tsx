@@ -175,7 +175,7 @@ function ReaderContent() {
               <h3 className="text-sm font-bold">
                 {pathParam === 'chronological' ? "Historical Contextualization: Follow the sequence of the Grand Narrative." : 
                  pathParam === 'thematic' ? "Canonical Reading: Trace the 'Golden Threads' across the canon." :
-                 "Genre Awareness: Adjusting lineation for literary form (Parables)."}
+                 "Genre Awareness: Adjusting lineation for literary form."}
               </h3>
             </div>
             {planDay && (
@@ -251,7 +251,7 @@ function ReaderContent() {
                 ) : scripture ? (
                   <article className="max-w-3xl mx-auto space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                     <header className="text-center space-y-4">
-                      {pathParam === 'genre' && planDay?.audience && (
+                      {planDay?.audience && (
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 border border-purple-100 text-purple-600 mb-4">
                           <Users className="h-4 w-4" />
                           <span className="text-[10px] font-bold uppercase tracking-widest">Audience: {planDay.audience}</span>
@@ -270,7 +270,7 @@ function ReaderContent() {
                       <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
                     </div>
 
-                    {pathParam === 'genre' && planDay?.mainTruth && (
+                    {planDay?.mainTruth && (
                       <div className="p-8 rounded-3xl bg-slate-50 border border-dashed border-slate-200 text-center space-y-4">
                         <div className="flex items-center justify-center gap-2 text-slate-400">
                           <Sparkles className="h-4 w-4" />
@@ -337,7 +337,7 @@ function ReaderContent() {
           </div>
 
           <aside className="space-y-6">
-            {/* Symbolic Mapping Ledger (Day 2 specific) */}
+            {/* Symbolic Mapping Ledger */}
             {planDay?.symbolicMapping && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-slate-50 border border-slate-100", isDark ? "bg-slate-950/20" : "")}>
                 <CardHeader className="p-6 pb-2">
@@ -382,46 +382,22 @@ function ReaderContent() {
               </Card>
             )}
 
-            {/* Thematic Echoes Panel - Dynamic based on path */}
-            {pathParam === 'thematic' && (
-              <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-emerald-50 border border-emerald-100", isDark ? "bg-emerald-950/20" : "")}>
-                <CardHeader className="p-6 pb-2">
-                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-emerald-600">
-                    <Link2 className="h-4 w-4" /> Thematic Echoes
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-3">
-                  <p className="text-[10px] text-emerald-700/60 leading-relaxed italic">Canonical Reading: scripture interpreting scripture.</p>
-                  <div className="space-y-2">
-                    <Badge variant="outline" className="text-[9px] border-emerald-200 text-emerald-600 w-full justify-start py-1 px-2">Genesis 12:1-3 (Covenant)</Badge>
-                    <Badge variant="outline" className="text-[9px] border-emerald-200 text-emerald-600 w-full justify-start py-1 px-2">Hebrews 6:13-20 (Promise)</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
-            {/* Genre-specific tips */}
-            {pathParam === 'genre' && (
+            {/* Scribal Strategy Panel */}
+            {planDay?.scribalStrategy && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-purple-50 border border-purple-100", isDark ? "bg-purple-950/20" : "")}>
                 <CardHeader className="p-6 pb-2">
                    <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-purple-600">
-                    <PenTool className="h-4 w-4" /> Parable Scribing Tips
+                    <PenTool className="h-4 w-4" /> {planDay.scribalStrategy.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 pt-0 space-y-3">
                   <div className="space-y-3">
-                    <div className="space-y-1">
-                      <p className="text-[10px] font-bold text-purple-800">1. Separate the Story</p>
-                      <p className="text-[9px] text-purple-600/80">Identify symbols vs. spiritual meanings.</p>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-[10px] font-bold text-purple-800">2. Indent Dialogue</p>
-                      <p className="text-[9px] text-purple-600/80">Use lineation to see characters' hearts.</p>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-[10px] font-bold text-purple-800">3. Find the Main Truth</p>
-                      <p className="text-[9px] text-purple-600/80">Look for the "earthly story with a heavenly meaning."</p>
-                    </div>
+                    {planDay.scribalStrategy.instructions.map((step, i) => (
+                      <div key={i} className="space-y-1">
+                        <p className="text-[10px] font-bold text-purple-800">{i + 1}. {step.split(':')[0]}</p>
+                        <p className="text-[9px] text-purple-600/80">{step.includes(':') ? step.split(':')[1] : step}</p>
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
