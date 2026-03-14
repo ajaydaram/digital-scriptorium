@@ -15,10 +15,6 @@ export const SUPPORTED_VERSIONS = [
   { id: '41926a4aa3831714-01', name: 'Young\'s Literal Translation', code: 'ylt' },
 ];
 
-/**
- * Standardizes common Bible book names and abbreviations to the 
- * 3-letter codes used by API.Bible (ABS).
- */
 const BOOK_MAP: Record<string, string> = {
   'genesis': 'GEN', 'gen': 'GEN',
   'exodus': 'EXO', 'exo': 'EXO',
@@ -89,38 +85,40 @@ const BOOK_MAP: Record<string, string> = {
 };
 
 function normalizeForABS(reference: string): string {
+  // Handle complex references like "Genesis 1:26-31; 2:15-17"
   const normalized = reference.toLowerCase().trim();
   
-  // Regex to match Book Chapter:Verse-Verse (e.g., "1 John 1:1-5" or "John 3:16" or "John 1")
-  const regex = /^(\d?\s?[a-z]+)\s?(\d+)?(?::(\d+))?(-(\d+))?$/;
-  const match = normalized.match(regex);
+  // Try simple single range first
+  const simpleRegex = /^(\d?\s?[a-z]+)\s?(\d+)?(?::(\d+))?(-(\d+))?$/;
+  const match = normalized.match(simpleRegex);
   
-  if (!match) {
-    // Fallback for messy strings: just replace spaces with periods
-    return reference.toUpperCase().replace(/\s/g, '.');
-  }
-
-  const bookName = match[1].trim();
-  const chapter = match[2] || '1';
-  const verse = match[3];
-  const endVerse = match[5];
-  
-  const bookId = BOOK_MAP[bookName] || bookName.toUpperCase().substring(0, 3);
-  let passageId = `${bookId}.${chapter}`;
-  
-  if (verse) {
-    passageId += `.${verse}`;
-    if (endVerse) {
-      passageId += `-${bookId}.${chapter}.${endVerse}`;
+  if (match) {
+    const bookName = match[1].trim();
+    const chapter = match[2] || '1';
+    const verse = match[3];
+    const endVerse = match[5];
+    const bookId = BOOK_MAP[bookName] || bookName.toUpperCase().substring(0, 3);
+    let passageId = `${bookId}.${chapter}`;
+    if (verse) {
+      passageId += `.${verse}`;
+      if (endVerse) passageId += `-${bookId}.${chapter}.${endVerse}`;
     }
+    return passageId;
   }
 
-  return passageId;
+  // For complex multiline/multirange references, we clean and pass a best-effort string
+  // ABS actually prefers dot notation, but for fallbacks we need the original.
+  const bookMatch = normalized.match(/^[0-9]*\s*[a-z]+/);
+  const bookName = bookMatch ? bookMatch[0] : '';
+  const bookId = BOOK_MAP[bookName] || bookName.toUpperCase().substring(0, 3);
+  
+  // Take just the first range for the ABS passageId to avoid 400s
+  const firstChapter = normalized.match(/\d+/)?.[0] || '1';
+  return `${bookId}.${firstChapter}`;
 }
 
 export async function getScripture(reference: string, versionId: string): Promise<Scripture> {
   const passageId = normalizeForABS(reference);
-  // Pass the original reference to help the fallback API (bible-api.com)
   const response = await fetch(`/api/bible?versionId=${versionId}&passageId=${passageId}&originalRef=${encodeURIComponent(reference)}`);
 
   if (!response.ok) {
