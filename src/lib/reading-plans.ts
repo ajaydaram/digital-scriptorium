@@ -104,7 +104,31 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "David refused to take by force what God had promised to give by grace. Where am I tempted to 'cut the robe' instead of waiting for God?"
   },
-  18: { day: 18, reference: "Psalm 7", title: "The Pursuit of Integrity" },
+  18: { 
+    day: 18, 
+    reference: "Psalm 7", 
+    title: "The Midnight Test: Integrity over Opportunity",
+    historicalSnapshot: {
+      ref: "1 Samuel 26:12",
+      text: "So David took the spear and the jar of water from Saul’s head, and they went their way."
+    },
+    culturalInsights: [
+      {
+        title: "The Spear and the Jar",
+        note: "Saul's spear symbolized his royal military power, while the water jar represented his life and sustenance in the desert. David took the evidence of his mercy, not the life of his enemy."
+      }
+    ],
+    scribalStrategy: {
+      title: "The Shield of Integrity",
+      instructions: [
+        "Transcribe 1 Samuel 26:12 as a Historical Footer in a steady, firm hand.",
+        "Draw a simple Shield in the center of the page.",
+        "Box in verse 10: 'My shield is with God, who saves the upright in heart.'",
+        "Contrast the Spear and the Shield in your margins."
+      ]
+    },
+    reflectionQuestion: "Saul is protected by 3,000 men and a spear, yet he is vulnerable. David is protected by his integrity and God. Where am I tempted to take a 'short-cut' to get what God has promised?"
+  },
   19: { day: 19, reference: "2 Samuel 7:1-17", title: "The Royal Covenant" },
   20: { day: 20, reference: "2 Samuel 11", title: "The Great Fall" },
   21: { day: 21, reference: "2 Samuel 12:1-15", title: "The Confrontation" }
@@ -197,7 +221,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
         "Far Left: Transcribe the son's demand and departure (v. 11-13).",
         "The Valley: In smaller, lower script, transcribe the famine and the pig pen (v. 14-16).",
         "The Ascent: Transcribe the 'coming to himself' and the journey back (v. 17-20).",
-        "The Climax: In your most beautiful, bold script, transcribe the father’s embrace (v. 20)."
+        "The Climax: In your most beautiful, bold script, transcribe the father’s response: 'But while he was still a long way off, his father saw him and felt compassion, and ran and embraced him and kissed him.' (v. 20)."
       ]
     },
     reflectionQuestion: "How does the father's willingness to take on public shame (by running) change my understanding of God's pursuit of me?"
