@@ -95,8 +95,24 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     day: 4, 
     reference: "Luke 15:11-24", 
     title: "The Prodigal Son (Part 1)", 
-    audience: "The same crowd of sinners and religious leaders",
-    mainTruth: "God's grace welcomes the repentant home with open arms."
+    audience: "Tax collectors, sinners, and the grumbling religious elite",
+    mainTruth: "God's grace welcomes the repentant home with open arms, taking the shame of the journey upon Himself.",
+    culturalInsights: [
+      { title: "The Inheritance Request", note: "Asking for inheritance early was a public 'death wish' toward the father. It required liquidating family assets, causing public shame for the household." },
+      { title: "Distant Country & Pigs", note: "Feeding pigs (unclean) represented a total loss of Jewish identity and dignity. Carob pods were animal fodder, indigestible for humans." },
+      { title: "The Running Father", note: "A patriarch *never* ran. He ran to shield his son from the 'Qetsatsah' ceremony—a community banishment where a pot was broken to signify eternal exile." }
+    ],
+    scribalStrategy: {
+      title: "The Journey Home Timeline",
+      instructions: [
+        "Use a horizontal timeline layout across your page.",
+        "Far Left: Transcribe the son's demand and departure (v. 11-13).",
+        "The Valley: In smaller, lower script, transcribe the famine and pig pen (v. 14-16).",
+        "The Ascent: Transcribe the 'coming to himself' and the journey back (v. 17-20).",
+        "The Climax: In your most beautiful, bold script, transcribe the father’s embrace (v. 20)."
+      ]
+    },
+    reflectionQuestion: "How does the father's willingness to take on public shame (by running) change my understanding of God's pursuit of me?"
   },
   5: { 
     day: 5, 
