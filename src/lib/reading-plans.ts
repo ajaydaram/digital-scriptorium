@@ -49,7 +49,32 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "When I am afraid, I put my trust in you. What is the specific fear I am 'bottling' up for God today?"
   },
-  16: { day: 16, reference: "Psalm 142", title: "The Cave of Adullam" },
+  16: { 
+    day: 16, 
+    reference: "Psalm 142", 
+    title: "The Cave of Adullam",
+    historicalSnapshot: {
+      ref: "1 Samuel 22:1-2",
+      text: "David departed from there and escaped to the cave of Adullam... And everyone who was in distress, and everyone who was in debt, and everyone who was bitter in soul, gathered to him."
+    },
+    culturalInsights: [
+      {
+        title: "The Shephelah Caves",
+        note: "The Judean foothills (Shephelah) are honeycombed with limestone caves. Adullam was a 'stronghold'—a natural fortress, cold and damp, where echoes were constant."
+      }
+    ],
+    scribalStrategy: {
+      title: "The Cave Walls Layout",
+      instructions: [
+        "Use a heavy, dark border on the edges of your page to represent the cave mouth.",
+        "Transcribe 1 Samuel 22:1-2 in the left margin.",
+        "Write the Psalm verses in a way that 'widens' toward the bottom (hope of escape).",
+        "Box verse 5: 'I say, \"You are my refuge, my portion in the land of the living.\"'",
+        "Use a slanted, distressed script for the complaint (v. 1-4)."
+      ]
+    },
+    reflectionQuestion: "What are the 'Adullams' in your life where you feel hidden or forgotten? How can you move from complaint to confidence today?"
+  },
   17: { day: 17, reference: "Psalm 57", title: "En-Gedi: The Sword and the Song" },
   18: { day: 18, reference: "Psalm 7", title: "The Pursuit of Integrity" },
   19: { day: 19, reference: "2 Samuel 7:1-17", title: "The Royal Covenant" },
