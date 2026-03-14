@@ -28,8 +28,9 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(data);
     }
 
-    // Attempt 2: Fallback to Bible-API.com if ABS fails
+    // Attempt 2: Fallback to Bible-API.com if ABS fails (401, 404, etc)
     // We use the original human-readable reference for better success rate on bible-api.com
+    // bible-api.com is an open service and doesn't require a 401-vulnerable key.
     const queryRef = originalRef || passageId.replace(/\./g, ' ');
     console.warn(`API.Bible failed (Status: ${response.status}). Attempting fallback to Bible-API.com for "${queryRef}".`);
     

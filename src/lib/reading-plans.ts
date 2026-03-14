@@ -208,7 +208,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       instructions: [
         "Indent the second line of every verse by one inch to show Parallelism.",
         "Draw a Tree in the center; write 'Meditation' on the roots.",
-        "Write the 'Wicked' verses in a thin, wispy script to represent Chaff."
+        "Use a bolder, stronger script for the righteous and a 'wispy' script for chaff."
       ]
     },
     reflectionQuestion: "In what area of my life am I currently 'walking, standing, or sitting' with the wrong influence?"
@@ -266,14 +266,9 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "A song of trust in a harsh landscape",
     mainTruth: "God’s protection and provision are absolute, even in the most treacherous environments.",
     culturalInsights: [
-      { title: "Green Pastures & Still Waters", note: "In the Judean wilderness, these are small tufts of grass and calm Wadi pools, not rolling meadows. The shepherd must lead intentionally to find them." },
+      { title: "Green Pastures & Still Waters", note: "In the Judean wilderness, these are small tufts of grass and calm Wadi pools. The shepherd must lead intentionally to find them." },
       { title: "The Valley of the Shadow", note: "Refers to the Wadi Qelt, a deep canyon with high walls that create deep shadows even at noon—a place of predators and flash floods." },
-      { title: "The Table in the Desert", note: "The leather mat ($shulchan$) in a host's tent. Desert hospitality was absolute; once anointed, you were under the host's total protection from enemies." }
-    ],
-    symbolicMapping: [
-      { symbol: "The Rod", reality: "Protection", insight: "A short club used to fend off wolves and predators." },
-      { symbol: "The Staff", reality: "Guidance", insight: "A long crook used to gently nudge sheep or pull them from thickets." },
-      { symbol: "Oil & Cup", reality: "Abundance & Hospitality", insight: "Signs of a host's extravagant care and security in the desert." }
+      { title: "The Table in the Desert", note: "The leather mat (shulchan) in a host's tent. Desert hospitality was absolute; once anointed, you were under the host's total protection." }
     ],
     scribalStrategy: {
       title: "Comfort Script & Shadowing",
@@ -293,14 +288,8 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "The thirsting soul in exile",
     mainTruth: "Biblical lament involves talking to your soul rather than just listening to its despair.",
     culturalInsights: [
-      { title: "The Panting Deer", note: "A deer ($ayyal$) in the Judean hills doesn't just drink; it submerges itself to hide its scent from predators and cool its blood during a chase. This is 'survival' thirst." },
-      { title: "The Cataracts of Hermon", note: "The 'deep calls to deep' at the roar of waterfalls refers to the Jordan's source. The crashing spring melt represents emotional chaos and feeling swept away." },
-      { title: "Soul-Talk vs. Soul-Listening", note: "David models a shift from passive despair to active reminders of God's character. He 'interrogates' his own soul." }
-    ],
-    symbolicMapping: [
-      { symbol: "Thirst", reality: "Desperate Need for God", insight: "Survival depends on God's presence as much as water for a hunted deer." },
-      { symbol: "Waves & Billows", reality: "Overwhelming Sorrow", insight: "God's sovereignty over the 'flood' of our emotions." },
-      { symbol: "The Refrain", reality: "Hopeful Interrogation", insight: "Directly challenging our feelings with the truth of God's salvation." }
+      { title: "The Panting Deer", note: "A deer (ayyal) in the dry hills pants to submerge itself to hide its scent and cool its blood. This is survival thirst." },
+      { title: "Cataracts of Hermon", note: "The crashing spring melt represents emotional chaos and feeling swept away by God's sovereignty." }
     ],
     scribalStrategy: { 
       title: "The Echo & Refrain", 
@@ -320,15 +309,17 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "A broken king seeking restoration",
     mainTruth: "True repentance is based on God's steadfast love, not the size of our sacrifice.",
     culturalInsights: [
-      { title: "Hyssop", note: "A small, aromatic plant used in ritual cleansing. To be 'washed with hyssop' was a plea for total ceremonial and moral restoration." },
-      { title: "Broken Bones", note: "David describes his guilt as physical agony. The 'bones that you have broken' refers to God's heavy hand of conviction." }
+      { title: "Blotting Out", note: "Ancient carbon-based ink could be literally sponged off parchment. To 'blot out' was to wipe the record completely clean." },
+      { title: "Hyssop", note: "A ritual plant used for sprinkling blood or water. Being 'purged with hyssop' meant being declared ceremonially and morally fit for God's presence." },
+      { title: "Broken & Contrite", note: "The word 'contrite' means 'crushed' or 'powdered'. God wants a heart broken open, not a religious performance." }
     ],
     scribalStrategy: { 
-      title: "Narrow Margins & Humility", 
+      title: "The Clean Slate", 
       instructions: [
-        "Use narrow margins to represent the humility of a broken spirit.",
-        "Write in a small, tight, disciplined script.",
-        "Transcribe v. 10-12 in the exact center of the page."
+        "Write MERCY in large, bold script at the top of the page.",
+        "Transcribe v. 1-12 with justified, neat lines to represent a restored life.",
+        "Use a lighter touch or grey wash for v. 7 ('Wash me...').",
+        "Transcribe v. 10 ('Create in me a clean heart...') in the exact center of the page."
       ] 
     },
     reflectionQuestion: "Is my repentance focused on the 'steadfast love' of God or the 'severity' of my mistake?"
@@ -340,7 +331,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "The gathered community entering the temple",
     mainTruth: "We enter God's presence with joy because He is the Creator and we are His people.",
     culturalInsights: [
-      { title: "The Joyful Shout", note: "The 'shout' ($ruwa$) is a triumphal blast, like a trumpet. It's an active, energetic invitation to the entire earth." },
+      { title: "The Joyful Shout", note: "The 'shout' (ruwa) is a triumphal blast, like a trumpet. It's an active, energetic invitation to the entire earth." },
       { title: "The Sheep of His Pasture", note: "Reflects Israel's identity as a flock under the total care and ownership of Yahweh." }
     ],
     scribalStrategy: { 
