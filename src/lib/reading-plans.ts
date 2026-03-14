@@ -259,7 +259,33 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "David says the Word makes wise 'the simple' (pethi), meaning an 'open door.' In what area of my life is my heart an 'open door' that needs the structure of God's Word?"
   },
-  11: { day: 11, reference: "Psalm 23", title: "The Shepherd's Provision", scribalStrategy: { title: "Comfort Script", instructions: ["Use a gentle, cursive 'Comfort Script' for this entire transcription."] } },
+  11: {
+    day: 11,
+    reference: "Psalm 23",
+    title: "The Shepherd's Provision",
+    audience: "A song of trust in a harsh landscape",
+    mainTruth: "God’s protection and provision are absolute, even in the most treacherous environments.",
+    culturalInsights: [
+      { title: "Green Pastures & Still Waters", note: "In the Judean wilderness, these are small tufts of grass and calm Wadi pools, not rolling meadows. The shepherd must lead intentionally to find them." },
+      { title: "The Valley of the Shadow", note: "Refers to the Wadi Qelt, a deep canyon with high walls that create deep shadows even at noon—a place of predators and flash floods." },
+      { title: "The Table in the Desert", note: "The leather mat ($shulchan$) in a host's tent. Desert hospitality was absolute; once anointed, you were under the host's total protection from enemies." }
+    ],
+    symbolicMapping: [
+      { symbol: "The Rod", reality: "Protection", insight: "A short club used to fend off wolves and predators." },
+      { symbol: "The Staff", reality: "Guidance", insight: "A long crook used to gently nudge sheep or pull them from thickets." },
+      { symbol: "Oil & Cup", reality: "Abundance & Hospitality", insight: "Signs of a host's extravagant care and security in the desert." }
+    ],
+    scribalStrategy: {
+      title: "Comfort Script & Shadowing",
+      instructions: [
+        "Use a fluid, cursive-style 'Comfort Script' with no sharp angles.",
+        "For v. 4, use a slightly darker ink or heavier touch to represent the valley's shadows.",
+        "Draw a Shepherd’s Crook next to v. 4 and an Oil Jar next to v. 5.",
+        "Transcribe the final word: 'FOREVER' in your largest, most beautiful script."
+      ]
+    },
+    reflectionQuestion: "How does the 'physical reality' of the Judean wilderness change my understanding of the Shepherd's protection?"
+  },
   12: { day: 12, reference: "Psalm 42", title: "Thirsting in Despair", scribalStrategy: { title: "Indent Refrains", instructions: ["Indent the refrains in v. 5 and 11 to notice the soul's self-talk."] } },
   13: { day: 13, reference: "Psalm 51", title: "A Prayer of Repentance", scribalStrategy: { title: "Narrow Margins", instructions: ["Use narrow margins to represent the humility of a broken spirit."] } },
   14: { day: 14, reference: "Psalm 100", title: "Liturgy of Thanksgiving", scribalStrategy: { title: "The Shout", instructions: ["Use ALL-CAPS or bold script for every instance of 'SHOUT' or 'JOY'."] } },
