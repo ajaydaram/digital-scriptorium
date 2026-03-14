@@ -213,8 +213,49 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "In what area of my life am I currently 'walking, standing, or sitting' with the wrong influence?"
   },
-  9: { day: 9, reference: "Psalm 19:1-6", title: "Nature's Speech", scribalStrategy: { title: "Spaced Lines", instructions: ["Space your lines widely to represent the vastness of the heavens."] } },
-  10: { day: 10, reference: "Psalm 19:7-14", title: "The Perfection of the Word", scribalStrategy: { title: "Law Bullets", instructions: ["Bullet point the different names and characteristics of the Law."] } },
+  9: { 
+    day: 9, 
+    reference: "Psalm 19:1-6", 
+    title: "Nature's Speech", 
+    audience: "General Revelation (The World)",
+    mainTruth: "The heavens are a continuous, wordless broadcast of God's glory.",
+    culturalInsights: [
+      { title: "The Silent Broadcast", note: "In Hebrew, 'declare' (saphar) means to count or recount a story. The heavens are telling an ongoing story." },
+      { title: "Universal Language", note: "Because nature has no 'words,' it has no language barrier. Its 'voice' is heard by every tribe and tongue." },
+      { title: "The Champion Sun", note: "The metaphors of 'Bridegroom' and 'Champion' emphasize the sun's joy and unstoppable energy." }
+    ],
+    scribalStrategy: { 
+      title: "The Celestial Arch", 
+      instructions: [
+        "Write the opening verses in a gentle arch across the top of your page.",
+        "Space your lines widely to represent the vastness of the heavens.",
+        "Use a bolder, stronger script for 'Bridegroom' and 'Strong Man'."
+      ] 
+    },
+    reflectionQuestion: "If the silent stars say this much about God, how much more should my words say?"
+  },
+  10: { 
+    day: 10, 
+    reference: "Psalm 19:7-14", 
+    title: "The Perfection of the Word", 
+    audience: "The Covenant People (Special Revelation)",
+    mainTruth: "God's Word is perfect, sure, right, pure, clean, and true—transforming the whole person.",
+    symbolicMapping: [
+      { symbol: "The Torah (Law)", reality: "Reviving the Soul", insight: "Instruction that brings life back to the weary." },
+      { symbol: "The Testimony", reality: "Making Wise the Simple", insight: "God's standard provides clarity for the unlearned." },
+      { symbol: "The Precepts", reality: "Rejoicing the Heart", insight: "The specific 'pathways' that lead to inner joy." },
+      { symbol: "The Commandment", reality: "Enlightening the Eyes", insight: "Purity that clears away the moral fog." }
+    ],
+    scribalStrategy: { 
+      title: "The Law Bullets", 
+      instructions: [
+        "Use a more disciplined, neat handwriting for this section.",
+        "Bullet point the different names and characteristics of the Law.",
+        "Underline the effects of the Word (reviving, making wise, rejoicing, etc.)."
+      ] 
+    },
+    reflectionQuestion: "Let the words of my mouth and the meditation of my heart be acceptable in your sight."
+  },
   11: { day: 11, reference: "Psalm 23", title: "The Shepherd's Provision", scribalStrategy: { title: "Comfort Script", instructions: ["Use a gentle, cursive 'Comfort Script' for this entire transcription."] } },
   12: { day: 12, reference: "Psalm 42", title: "Thirsting in Despair", scribalStrategy: { title: "Indent Refrains", instructions: ["Indent the refrains in v. 5 and 11 to notice the soul's self-talk."] } },
   13: { day: 13, reference: "Psalm 51", title: "A Prayer of Repentance", scribalStrategy: { title: "Narrow Margins", instructions: ["Use narrow margins to represent the humility of a broken spirit."] } },
