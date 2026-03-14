@@ -10,6 +10,7 @@ export interface ReadingPlanDay {
   audience?: string;
   mainTruth?: string;
   culturalInsights?: { title: string; note: string }[];
+  symbolicMapping?: { symbol: string; reality: string; insight: string }[];
   reflectionQuestion?: string;
 }
 
@@ -41,7 +42,14 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     reference: "Matthew 13:18-23", 
     title: "The Sower (Explanation)", 
     audience: "Jesus speaking privately to His disciples",
-    mainTruth: "True understanding leads to a life that produces a hundredfold return."
+    mainTruth: "True understanding leads to a life that produces a hundredfold return.",
+    symbolicMapping: [
+      { symbol: "The Birds", reality: "The Evil One (Satan)", insight: "What is heard but not understood is easily stolen." },
+      { symbol: "The Scorching Sun", reality: "Tribulation / Persecution", insight: "Pressure reveals the root's depth, it doesn't create the problem." },
+      { symbol: "The Thorns", reality: "Cares & Deceitfulness", insight: "Distraction is as deadly to faith as outright persecution." },
+      { symbol: "The Harvest", reality: "Spiritual Fruitfulness", insight: "Growth is the natural result of hearing AND understanding." }
+    ],
+    reflectionQuestion: "What 'distraction' is currently competing for the nutrients in my heart's soil?"
   },
   3: { 
     day: 3, 

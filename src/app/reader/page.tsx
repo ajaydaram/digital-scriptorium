@@ -37,7 +37,8 @@ import {
   PenTool,
   Users,
   Compass,
-  Lightbulb
+  Lightbulb,
+  TableProperties
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -275,7 +276,7 @@ function ReaderContent() {
                           <Sparkles className="h-4 w-4" />
                           <span className="text-[10px] font-bold uppercase tracking-widest">The One Main Truth</span>
                         </div>
-                        <p className="text-xl font-headline font-bold text-slate-900 leading-relaxed italic">
+                        <p className="text-xl font-headline font-bold text-slate-900 leading-relaxed italic text-center">
                           "{planDay.mainTruth}"
                         </p>
                       </div>
@@ -336,6 +337,32 @@ function ReaderContent() {
           </div>
 
           <aside className="space-y-6">
+            {/* Symbolic Mapping Ledger (Day 2 specific) */}
+            {planDay?.symbolicMapping && (
+              <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-slate-50 border border-slate-100", isDark ? "bg-slate-950/20" : "")}>
+                <CardHeader className="p-6 pb-2">
+                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
+                    <TableProperties className="h-4 w-4" /> Parallel Ledger
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-4">
+                  <p className="text-[10px] text-slate-400 leading-relaxed italic mb-4">Translating physical symbols to spiritual realities.</p>
+                  <div className="space-y-4">
+                    {planDay.symbolicMapping.map((map, i) => (
+                      <div key={i} className="space-y-1.5 p-3 rounded-xl bg-white/50 border border-white dark:bg-white/5 dark:border-white/10">
+                        <div className="flex items-center justify-between">
+                          <span className="text-[10px] font-bold text-slate-900 dark:text-white">{map.symbol}</span>
+                          <ArrowRight className="h-3 w-3 text-primary" />
+                          <span className="text-[10px] font-bold text-primary">{map.reality}</span>
+                        </div>
+                        <p className="text-[9px] text-slate-500 italic leading-snug">{map.insight}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Cultural Insights - Marginalia */}
             {planDay?.culturalInsights && (
                <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-amber-50 border border-amber-100", isDark ? "bg-amber-950/20" : "")}>
