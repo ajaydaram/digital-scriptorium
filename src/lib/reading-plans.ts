@@ -1,6 +1,6 @@
 /**
  * @fileOverview Defines the structured reading plans for The Scriptorium.
- * Implements Chronological and Genre-specific (Parables) paths.
+ * Implements Chronological and Genre-specific (Parables & Psalms) paths.
  */
 
 export interface ReadingPlanDay {
@@ -24,6 +24,7 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
 };
 
 export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
+  // --- Week 1: The Parables of Jesus ---
   1: { 
     day: 1, 
     reference: "Matthew 13:1-9", 
@@ -184,6 +185,40 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "Being a neighbor isn't about 'who' deserves my help, but about 'what' kind of person I am becoming."
   },
+
+  // --- Week 2: The Language of the Heart (Hebrew Poetry) ---
+  8: {
+    day: 8,
+    reference: "Psalm 1",
+    title: "The Two Ways",
+    audience: "The 'Porch' to the entire Psalter",
+    mainTruth: "Human existence is a binary choice: flourishing in the Word or vanishing like chaff.",
+    culturalInsights: [
+      { title: "The Irrigation Stream", note: "In Israel's arid climate, a flourishing tree is usually 'transplanted' by a man-made channel (peleg). Flourishing is intentional, not accidental." },
+      { title: "The Threshing Floor", note: "Winnowing occurred on hilltops. Chaff (the light, useless husk) was tossed into the wind to be blown into nothingness." },
+      { title: "Walk, Stand, Sit", note: "A Hebrew progression of settling into sin. It begins casual and ends with a fixed seat among mockers." }
+    ],
+    symbolicMapping: [
+      { symbol: "The Tree", reality: "The Righteous Life", insight: "Strength comes from a source outside oneself (the Water)." },
+      { symbol: "The Chaff", reality: "The Wicked Life", insight: "Useless, weightless, and ultimately forgotten by the wind." },
+      { symbol: "The Water", reality: "The Torah (Instruction)", insight: "Continuous meditation is the root that reaches the stream." }
+    ],
+    scribalStrategy: {
+      title: "Parallel Lines & Contrast",
+      instructions: [
+        "Indent the second line of every verse by one inch to show Parallelism.",
+        "Draw a Tree in the center; write 'Meditation' on the roots.",
+        "Write the 'Wicked' verses in a thin, wispy script to represent Chaff."
+      ]
+    },
+    reflectionQuestion: "In what area of my life am I currently 'walking, standing, or sitting' with the wrong influence?"
+  },
+  9: { day: 9, reference: "Psalm 19:1-6", title: "Nature's Speech", scribalStrategy: { title: "Spaced Lines", instructions: ["Space your lines widely to represent the vastness of the heavens."] } },
+  10: { day: 10, reference: "Psalm 19:7-14", title: "The Perfection of the Word", scribalStrategy: { title: "Law Bullets", instructions: ["Bullet point the different names and characteristics of the Law."] } },
+  11: { day: 11, reference: "Psalm 23", title: "The Shepherd's Provision", scribalStrategy: { title: "Comfort Script", instructions: ["Use a gentle, cursive 'Comfort Script' for this entire transcription."] } },
+  12: { day: 12, reference: "Psalm 42", title: "Thirsting in Despair", scribalStrategy: { title: "Indent Refrains", instructions: ["Indent the refrains in v. 5 and 11 to notice the soul's self-talk."] } },
+  13: { day: 13, reference: "Psalm 51", title: "A Prayer of Repentance", scribalStrategy: { title: "Narrow Margins", instructions: ["Use narrow margins to represent the humility of a broken spirit."] } },
+  14: { day: 14, reference: "Psalm 100", title: "Liturgy of Thanksgiving", scribalStrategy: { title: "The Shout", instructions: ["Use ALL-CAPS or bold script for every instance of 'SHOUT' or 'JOY'."] } },
 };
 
 export type PathId = 'chronological' | 'thematic' | 'genre';
