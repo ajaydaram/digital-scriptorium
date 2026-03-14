@@ -38,7 +38,8 @@ import {
   Users,
   Compass,
   Lightbulb,
-  TableProperties
+  TableProperties,
+  ArrowRight
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -337,6 +338,28 @@ function ReaderContent() {
           </div>
 
           <aside className="space-y-6">
+            {/* Historical Snapshot - For Chronological Path */}
+            {planDay?.historicalSnapshot && (
+              <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-slate-900 text-white")}>
+                <CardHeader className="p-6 pb-2">
+                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
+                    <History className="h-4 w-4" /> Historical Snapshot
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-4">
+                  <div className="p-4 bg-white/5 rounded-xl border border-white/10 space-y-3">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">{planDay.historicalSnapshot.ref}</p>
+                    <p className="text-sm font-serif italic text-slate-300 leading-relaxed">
+                      "{planDay.historicalSnapshot.text}"
+                    </p>
+                  </div>
+                  <p className="text-[9px] text-slate-500 italic leading-relaxed">
+                    Contextualizing the prayer within the pressure of the moment.
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Symbolic Mapping Ledger */}
             {planDay?.symbolicMapping && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-slate-50 border border-slate-100", isDark ? "bg-slate-950/20" : "")}>

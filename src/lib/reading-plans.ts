@@ -13,6 +13,7 @@ export interface ReadingPlanDay {
   symbolicMapping?: { symbol: string; reality: string; insight: string }[];
   scribalStrategy?: { title: string; instructions: string[] };
   reflectionQuestion?: string;
+  historicalSnapshot?: { ref: string; text: string };
 }
 
 export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
@@ -21,6 +22,39 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
   3: { day: 3, reference: "Genesis 8-11", title: "Tower of Babel" },
   4: { day: 4, reference: "Genesis 12-15", title: "The Call of Abraham" },
   5: { day: 5, reference: "Genesis 16-19", title: "Sodom and Gomorrah" },
+  
+  // --- Week 3: The King in the Caves ---
+  15: {
+    day: 15,
+    reference: "Psalm 56",
+    title: "David at Gath: Faith in the Midst of Fear",
+    historicalSnapshot: {
+      ref: "1 Samuel 21:13",
+      text: "So he changed his behavior before them and pretended to be insane in their hands and made marks on the doors of the gate and let his spittle run down his beard."
+    },
+    culturalInsights: [
+      { 
+        title: "The Tear Bottle", 
+        note: "In the ancient Near East, 'lachrymatories' (tear bottles) were small ceramic or glass vials. People believed God was so attentive to their suffering that He 'collected' their tears as a record of their pain." 
+      }
+    ],
+    scribalStrategy: {
+      title: "The Tear Bottle Page",
+      instructions: [
+        "Use 'Cramp-Script' (tight, slightly fearful handwriting) for the first few verses.",
+        "Draw a small Bottle or Vial in the margin.",
+        "Draw an arrow from the historical snapshot to verse 3: 'When I am afraid, I put my trust in you.'",
+        "Write the word 'GRACE' inside your drawn bottle."
+      ]
+    },
+    reflectionQuestion: "When I am afraid, I put my trust in you. What is the specific fear I am 'bottling' up for God today?"
+  },
+  16: { day: 16, reference: "Psalm 142", title: "The Cave of Adullam" },
+  17: { day: 17, reference: "Psalm 57", title: "En-Gedi: The Sword and the Song" },
+  18: { day: 18, reference: "Psalm 7", title: "The Pursuit of Integrity" },
+  19: { day: 19, reference: "2 Samuel 7:1-17", title: "The Royal Covenant" },
+  20: { day: 20, reference: "2 Samuel 11", title: "The Great Fall" },
+  21: { day: 21, reference: "2 Samuel 12:1-15", title: "Nathan's Confrontation" }
 };
 
 export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
