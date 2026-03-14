@@ -639,36 +639,110 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
     reference: "Exodus 19:1-8; 20:1-17",
     title: "The Mosaic Covenant",
     mainTruth: "The Law reveals God's holy character and provides a framework for life as His set-apart people.",
+    culturalInsights: [
+      { title: "Suzerain-Vassal Treaty", note: "An ancient legal form where a great King (Suzerain) enters a bond with a smaller nation (Vassal). Grace (the rescue from Egypt) always precedes the Law (the stipulations)." },
+      { title: "Kingdom of Priests", note: "Israel was called to be a 'set apart' people, functioning as a bridge between God and the nations by living out His wisdom." }
+    ],
+    scribalStrategy: {
+      title: "The Tablets of Stone",
+      instructions: [
+        "Divide your page into two columns representing the two tablets.",
+        "Left Tablet: Transcribe Commandments 1-4 (Relationship with God).",
+        "Right Tablet: Transcribe Commandments 5-10 (Relationship with Man).",
+        "At the top, draw a Mountain with Smoke; at the bottom, draw a Lamb."
+      ]
+    },
     thematicLedger: [
-      { label: "Covenant", value: "Moses: Law" }
-    ]
+      { label: "Covenant", value: "Adam: Creation" },
+      { label: "Covenant", value: "Noah: Preservation" },
+      { label: "Covenant", value: "Abraham: Promise" },
+      { label: "Covenant", value: "Moses: Law (Holiness)" }
+    ],
+    reflectionQuestion: "As you scribe the 'Thou shalts,' notice they are singular. How does God's Law act as a personal mirror for you today?"
   },
   26: {
     day: 26,
     reference: "2 Samuel 7:12-16",
-    title: "The Davidic Covenant",
-    mainTruth: "The promise of an eternal dynasty ensures the coming of the King of Kings.",
+    title: "The Davidic Covenant (Thematic Lens)",
+    mainTruth: "The promise of an eternal dynasty bridges the gap between the Law and the ultimate King of Grace.",
+    culturalInsights: [
+      { title: "House for a House", note: "A play on words in Hebrew. David wanted to build a 'house' (temple), but God promised to build him a 'house' (a royal lineage)." },
+      { title: "The Messianic Hinge", note: "This covenant anchors the hope of Israel in a person—the Son of David—who would rule with perfect justice and mercy." }
+    ],
+    scribalStrategy: {
+      title: "The Royal Bridge",
+      instructions: [
+        "Transcribe the core promise (v. 12-16) in a central column.",
+        "On the left margin, write 'MOSES (The Law)'.",
+        "On the right margin, write 'JESUS (The Fulfillment)'.",
+        "Draw a Crown spanning across all three sections."
+      ]
+    },
     thematicLedger: [
-      { label: "Covenant", value: "David: Kingdom" }
-    ]
+      { label: "Covenant", value: "Adam: Creation" },
+      { label: "Covenant", value: "Noah: Preservation" },
+      { label: "Covenant", value: "Abraham: Promise" },
+      { label: "Covenant", value: "Moses: Law" },
+      { label: "Covenant", value: "David: Kingdom (Dynasty)" }
+    ],
+    reflectionQuestion: "God builds the house. How does resting in His building project change your anxiety about your own legacy?"
   },
   27: {
     day: 27,
     reference: "Jeremiah 31:31-34",
     title: "The New Covenant Promise",
-    mainTruth: "A promise of internal transformation where the law is written on hearts, not just stone.",
+    mainTruth: "A promise of internal transformation where the law is written on the heart, not just on stone.",
+    culturalInsights: [
+      { title: "Inward Transformation", note: "The Mosaic Law was external (stone). The New Covenant is internal (Spirit). It provides the power to do what the Law could only command." },
+      { title: "Universal Knowledge", note: "Under the New Covenant, every believer has direct access to the knowledge of God without needing a human intermediary." }
+    ],
+    scribalStrategy: {
+      title: "The Heart Focal Point",
+      instructions: [
+        "Draw a large Heart in the center of your page.",
+        "Write the text of verses 33-34 INSIDE the heart.",
+        "Use a lighter, more organic script compared to the 'Stone' layout of the Mosaic covenant.",
+        "Write 'I WILL BE THEIR GOD' at the very top."
+      ]
+    },
     thematicLedger: [
-      { label: "Covenant", value: "Jeremiah: Transformation" }
-    ]
+      { label: "Covenant", value: "Adam: Creation" },
+      { label: "Covenant", value: "Noah: Preservation" },
+      { label: "Covenant", value: "Abraham: Promise" },
+      { label: "Covenant", value: "Moses: Law" },
+      { label: "Covenant", value: "David: Kingdom" },
+      { label: "Covenant", value: "New Covenant: Internal Transformation" }
+    ],
+    reflectionQuestion: "Is the Word of God an external pressure for you, or an internal passion?"
   },
   28: {
     day: 28,
     reference: "Luke 22:14-20",
     title: "The New Covenant Fulfilled",
-    mainTruth: "The covenant is sealed in the blood of Christ, bringing the thread to its final fulfillment.",
+    mainTruth: "The 'Golden Thread' reaches its climax in the blood of Christ, shed for the forgiveness of many.",
+    culturalInsights: [
+      { title: "The Passover Shift", note: "Jesus takes the traditional Passover elements and reinterprets them. The bread is His body; the cup is the New Covenant in His blood." },
+      { title: "Substitution Fulfilled", note: "The blood path of Genesis 15 is finally walked by God the Son. He takes the penalty of every broken covenant upon Himself." }
+    ],
+    scribalStrategy: {
+      title: "The Cup of Completion",
+      instructions: [
+        "Header: Write 'The Golden Thread: IT IS FINISHED' in your boldest script.",
+        "Transcription: Write verses 19-20 in the center.",
+        "Visual: Draw a Cup and a Bread loaf.",
+        "The Full Ledger: Complete your margin with 'CHRIST: Fulfillment (Grace)'."
+      ]
+    },
     thematicLedger: [
-      { label: "Covenant", value: "Christ: Fulfillment" }
-    ]
+      { label: "Covenant", value: "Adam: Creation" },
+      { label: "Covenant", value: "Noah: Preservation" },
+      { label: "Covenant", value: "Abraham: Promise" },
+      { label: "Covenant", value: "Moses: Law" },
+      { label: "Covenant", value: "David: Kingdom" },
+      { label: "Covenant", value: "New Covenant: Promised" },
+      { label: "Covenant", value: "Christ: Fulfillment (The End of the Thread)" }
+    ],
+    reflectionQuestion: "As you write the final words of the week, look back at the ledger. How does seeing the whole plan build your assurance?"
   }
 };
 

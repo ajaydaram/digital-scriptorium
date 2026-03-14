@@ -35,8 +35,8 @@ const PATH_CARDS = [
     icon: Lightbulb,
     color: "text-emerald-500",
     bg: "bg-emerald-50/50",
-    link: "/reader?path=thematic",
-    active: false
+    link: "/reader?path=thematic&day=22",
+    active: true
   },
   {
     id: "genre",
