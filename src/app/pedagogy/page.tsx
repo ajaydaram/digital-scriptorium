@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Navbar } from "@/components/navbar";
@@ -17,7 +16,9 @@ import {
   BookOpen,
   Brain,
   ShieldCheck,
-  Zap
+  Zap,
+  Table,
+  PenTool
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -25,17 +26,18 @@ import { cn } from "@/lib/utils";
 const PEDAGOGICAL_PATHS = [
   {
     title: "Chronological Path",
-    subtitle: "Follow the Bible's Timeline",
-    learn: "Read the Bible in the order events actually happened",
+    subtitle: "Focus: The Narrative Arc",
+    learn: "Read in the order events occurred to master historical context.",
     duration: "365 days",
-    bestFor: "First-time Bible readers and history lovers",
+    bestFor: "History lovers and narrative thinkers",
+    strategy: "Ink-coded historical links & Timeline Headers",
     discoveries: [
-      "How Old Testament stories connect to Jesus",
-      "Why the prophets said what they did",
-      "The amazing flow of God's plan through history",
-      "Cultural context that makes stories come alive"
+      "Psalms integrated with David's life",
+      "Prophets placed in their historical setting",
+      "Historical link identification",
+      "Grand Narrative visualization"
     ],
-    example: "Read about King David's life, then immediately read the psalms he wrote during those experiences!",
+    example: "Read 2 Samuel alongside the specific Psalms David wrote during those events.",
     icon: History,
     color: "text-blue-500",
     bg: "bg-blue-50/50",
@@ -43,17 +45,18 @@ const PEDAGOGICAL_PATHS = [
   },
   {
     title: "Thematic Path",
-    subtitle: "Trace Big Ideas Through Scripture",
-    learn: "Follow major themes like God's kingdom, justice, or love",
+    subtitle: "Focus: Interconnectivity",
+    learn: "Trace 'Golden Threads' across the canon for theological unity.",
     duration: "260 days",
-    bestFor: "Those wanting deeper theological understanding",
+    bestFor: "Theologians and systematic thinkers",
+    strategy: "Cross-referencing margins & Thematic Echoes",
     discoveries: [
-      "How topics like 'covenant' appear throughout Scripture",
-      "Connections between Old and New Testament themes",
-      "The Bible's unified message across different books",
-      "How to find all verses related to any topic"
+      "Canonical reading (Scripture interpreting Scripture)",
+      "Covenantal progression mapping",
+      "Thematic interconnectivity",
+      "Systematic doctrine building"
     ],
-    example: "Week 1 might explore 'God as Father' through Genesis, Psalms, and the Gospels all in one study!",
+    example: "Study the 'Covenant' in Genesis while noting its echoes in Hebrews.",
     icon: Lightbulb,
     color: "text-emerald-500",
     bg: "bg-emerald-50/50",
@@ -61,17 +64,18 @@ const PEDAGOGICAL_PATHS = [
   },
   {
     title: "Genre Path",
-    subtitle: "Learn to Read Different Types of Biblical Literature",
-    learn: "How to read poetry, prophecy, parables, and letters",
+    subtitle: "Focus: Literary Form",
+    learn: "Learn distinct lineation for Poetry, Law, and Epistles.",
     duration: "180 days",
-    bestFor: "Those who want to interpret Scripture accurately",
+    bestFor: "Literary students and hermeneutics enthusiasts",
+    strategy: "Stanza lineation & Narrative Arc sketches",
     discoveries: [
-      "Why you shouldn't read poetry like history",
-      "How to understand Jesus's parables properly",
-      "The difference between prophecy and fortune-telling",
-      "Why knowing the genre prevents misinterpretation"
+      "Indented parallel lines for Hebrew poetry",
+      "Logical connector highlights in Epistles",
+      "Narrative arc mapping for parables",
+      "Form-based interpretive precision"
     ],
-    example: "Learn why 'the mountains will sing' (Psalm 98) isn't about literal singing mountains!",
+    example: "Write Psalms in stanzas to visualize the underlying poetic structure.",
     icon: Library,
     color: "text-purple-500",
     bg: "bg-purple-50/50",
@@ -79,20 +83,10 @@ const PEDAGOGICAL_PATHS = [
   }
 ];
 
-const RESEARCH_PRINCIPLES = [
-  { title: "Scaffolded Learning", desc: "Progressive complexity building for mastery.", icon: Brain },
-  { title: "Multiple Intelligences", desc: "Various learning style accommodation.", icon: Zap },
-  { title: "Spaced Repetition", desc: "Long-term retention optimization.", icon: History },
-  { title: "Social Learning", desc: "Community-based knowledge construction.", icon: Users },
-  { title: "Metacognitive Development", desc: "Teaching students how to learn.", icon: GraduationCap }
-];
-
-const LITERACY_RESEARCH = [
-  { title: "Genre Awareness", desc: "Critical for accurate interpretation.", icon: BookOpen },
-  { title: "Historical Context", desc: "Essential for understanding meaning.", icon: Search },
-  { title: "Canonical Reading", desc: "Scripture interpreting Scripture.", icon: Library },
-  { title: "Community Hermeneutics", desc: "Collective interpretive wisdom.", icon: Users },
-  { title: "Formative Reading", desc: "Scripture shaping life and character.", icon: ShieldCheck }
+const IMPLEMENTATION_TIPS = [
+  { element: "Scaffolded Learning", application: "Start with the 180-day Genre path to learn HOW to read before the 365-day trek.", icon: Brain },
+  { element: "Spaced Repetition", application: "At the start of each session, re-read (out loud) the last three pages you scribed.", icon: History },
+  { element: "Metacognition", application: "Use the bottom 'Scribe's Reflection' for daily growth notes.", icon: GraduationCap }
 ];
 
 export default function PedagogyPage() {
@@ -105,13 +99,13 @@ export default function PedagogyPage() {
         <section className="py-24 bg-slate-50 border-b border-slate-200">
           <div className="container mx-auto px-4 text-center">
             <Badge variant="outline" className="mb-6 px-4 py-1 border-primary/20 text-primary font-bold uppercase tracking-widest">
-              OUR METHODOLOGY
+              OUR SCRIPTORIUM METHODOLOGY
             </Badge>
             <h1 className="text-4xl md:text-6xl font-headline font-bold text-slate-900 mb-6 tracking-tight">
-              Our <span className="gradient-text">Pedagogy</span>
+              Scribal <span className="gradient-text">Pedagogy</span>
             </h1>
             <p className="text-xl text-slate-500 max-w-3xl mx-auto font-body leading-relaxed">
-              We bridge the gap from casual reading to deep study through a structured, research-backed framework that respects both the text and the learner.
+              We transform the act of reading into a deep, meditative study by aligning your pen with chosen learning logic.
             </p>
           </div>
         </section>
@@ -120,9 +114,9 @@ export default function PedagogyPage() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-slate-900 mb-4">Three Guided Learning Paths</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-slate-900 mb-4">The Three Scriptorium Paths</h2>
               <p className="text-slate-500 max-w-2xl mx-auto">
-                Instead of random Bible reading, choose a structured path that teaches you how to read the Bible well. Each path builds specific skills while keeping you engaged and growing.
+                Each path physically changes how you engage with the text, building specialized interpretive skills through scribal strategy.
               </p>
             </div>
 
@@ -143,8 +137,8 @@ export default function PedagogyPage() {
                   </CardHeader>
                   <CardContent className="flex-1 space-y-6">
                     <div className="space-y-2">
-                      <p className="text-xs font-bold text-slate-400 uppercase">What You'll Learn</p>
-                      <p className="text-sm text-slate-700 font-medium">{path.learn}</p>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase">Scribe's Strategy</p>
+                      <p className="text-sm text-slate-700 font-bold">{path.strategy}</p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 pb-4 border-b border-slate-200">
@@ -153,13 +147,13 @@ export default function PedagogyPage() {
                         <p className="text-xs font-bold text-slate-900">{path.duration}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase">Best For</p>
-                        <p className="text-xs font-bold text-slate-900">{path.bestFor}</p>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase">Focus</p>
+                        <p className="text-xs font-bold text-slate-900">{path.subtitle.split(": ")[1]}</p>
                       </div>
                     </div>
 
                     <div className="space-y-4">
-                      <p className="text-[10px] font-bold text-slate-400 uppercase">You'll Discover</p>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase">Scribal Mastery</p>
                       <ul className="space-y-3">
                         {path.discoveries.map((item, i) => (
                           <li key={i} className="flex items-start gap-3">
@@ -172,7 +166,7 @@ export default function PedagogyPage() {
 
                     <div className="pt-4 mt-auto">
                       <div className="p-4 bg-white/60 rounded-xl border border-white/40 italic">
-                        <p className="text-[10px] font-bold text-slate-400 uppercase not-italic mb-1">Example</p>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase not-italic mb-1">Layout Example</p>
                         <p className="text-xs text-slate-700 leading-relaxed">{path.example}</p>
                       </div>
                     </div>
@@ -183,90 +177,65 @@ export default function PedagogyPage() {
           </div>
         </section>
 
-        {/* Research Foundation */}
+        {/* Implementation Table Section */}
         <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-brand-gradient opacity-5 blur-[120px]" />
           <div className="container relative z-10 mx-auto px-4">
-            <div className="text-center mb-20">
-              <Badge className="bg-primary/20 text-primary border-primary/30 font-bold uppercase tracking-widest mb-4">RESEARCH FOUNDATION</Badge>
-              <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight mb-6">Grounded in Biblical Literacy and Educational Research</h2>
-              <p className="text-xl text-slate-400 max-w-3xl mx-auto font-body leading-relaxed">
-                Our Three Paths approach is not just a plan—it's a scientifically grounded methodology for holistic spiritual formation.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Educational Principles */}
-              <div className="space-y-8">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                    <Brain className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-2xl font-headline font-bold">Educational Principles</h3>
-                </div>
-                <div className="grid gap-4">
-                  {RESEARCH_PRINCIPLES.map((item) => (
-                    <Card key={item.title} className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
-                      <CardContent className="p-4 flex items-center gap-4">
-                        <div className="h-8 w-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400">
-                          <item.icon className="h-4 w-4" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                 <Badge className="bg-primary/20 text-primary border-primary/30 font-bold uppercase tracking-widest mb-4">WORKFLOW</Badge>
+                 <h2 className="text-4xl font-headline font-bold mb-6">Workspace Implementation</h2>
+                 <p className="text-slate-400 text-lg mb-10">Apply these scribal principles to your daily study rhythm for long-term retention and theological growth.</p>
+                 
+                 <div className="space-y-6">
+                   {IMPLEMENTATION_TIPS.map((tip) => (
+                     <div key={tip.element} className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:bg-white/10 transition-colors">
+                        <div className="p-3 bg-slate-800 rounded-xl text-primary group-hover:scale-110 transition-transform">
+                          <tip.icon className="h-5 w-5" />
                         </div>
                         <div>
-                          <p className="text-sm font-bold text-white">{item.title}</p>
-                          <p className="text-xs text-slate-400">{item.desc}</p>
+                          <h4 className="font-bold text-white mb-1">{tip.element}</h4>
+                          <p className="text-sm text-slate-400">{tip.application}</p>
                         </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                     </div>
+                   ))}
+                 </div>
               </div>
 
-              {/* Biblical Literacy Research */}
-              <div className="space-y-8">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
-                    <ShieldCheck className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-2xl font-headline font-bold">Biblical Literacy Research</h3>
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 space-y-8">
+                <h3 className="text-2xl font-headline font-bold text-center">Implementation Summary</h3>
+                <div className="overflow-hidden rounded-xl border border-white/10">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-white/5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                      <tr>
+                        <th className="p-4">Element</th>
+                        <th className="p-4">Scriptorium Application</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/10">
+                      <tr>
+                        <td className="p-4 font-bold">Lineation</td>
+                        <td className="p-4 text-slate-400">Poetry indented; Epistles in dense logical blocks.</td>
+                      </tr>
+                      <tr>
+                        <td className="p-4 font-bold">Margins</td>
+                        <td className="p-4 text-slate-400">Wide left for Cross-Refs; Bottom for Reflection.</td>
+                      </tr>
+                      <tr>
+                        <td className="p-4 font-bold">Metacognition</td>
+                        <td className="p-4 text-slate-400">Scribe's Reflection area for learning assessment.</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div className="grid gap-4">
-                  {LITERACY_RESEARCH.map((item) => (
-                    <Card key={item.title} className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
-                      <CardContent className="p-4 flex items-center gap-4">
-                        <div className="h-8 w-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400">
-                          <item.icon className="h-4 w-4" />
-                        </div>
-                        <div>
-                          <p className="text-sm font-bold text-white">{item.title}</p>
-                          <p className="text-xs text-slate-400">{item.desc}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+                <div className="text-center">
+                  <Link href="/reader">
+                    <Button className="btn-gradient px-8 py-6 h-auto font-bold rounded-xl shadow-xl shadow-primary/20">
+                      Launch Scriptorium Reader <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 tracking-tight">Ready to Begin Your Scholarly Journey?</h2>
-            <p className="text-slate-500 max-w-xl mx-auto mb-10 text-lg font-body">
-              Join thousands who are moving beyond surface-level reading through our proven pedagogical framework.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Link href="/reader">
-                <Button size="lg" className="btn-gradient px-12 py-8 h-auto font-bold rounded-xl shadow-xl shadow-primary/20 text-lg">
-                  Launch Bible Reader
-                </Button>
-              </Link>
-              <Link href="/paths">
-                <Button variant="outline" size="lg" className="px-12 py-8 h-auto font-bold rounded-xl border-slate-200 text-lg">
-                  Explore Learning Paths
-                </Button>
-              </Link>
             </div>
           </div>
         </section>

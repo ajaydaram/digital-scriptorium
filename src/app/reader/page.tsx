@@ -30,7 +30,11 @@ import {
   MessageSquare,
   AlertCircle,
   Plus,
-  LogIn
+  LogIn,
+  History,
+  Link2,
+  Library,
+  PenTool
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -56,8 +60,8 @@ function ReaderContent() {
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [error, setError] = useState<string | null>(null);
+  const [scribeReflection, setScribeReflection] = useState("");
   
-  // Real-time Annotations from Firestore
   const annotationsQuery = useMemoFirebase(() => {
     if (!firestore || !currentRef) return null;
     return getAnnotationsQuery(firestore, currentRef);
@@ -148,10 +152,34 @@ function ReaderContent() {
       <Navbar />
       
       <main className="container mx-auto px-4 py-8 max-w-7xl">
+        {/* Path-Specific Header */}
+        {pathParam && (
+          <div className={cn(
+            "mb-8 p-4 rounded-2xl border flex items-center gap-4 transition-all animate-in fade-in slide-in-from-top-4",
+            pathParam === 'chronological' ? "bg-blue-50/50 border-blue-100 text-blue-700" : 
+            pathParam === 'thematic' ? "bg-emerald-50/50 border-emerald-100 text-emerald-700" :
+            "bg-purple-50/50 border-purple-100 text-purple-700"
+          )}>
+            <div className="p-2 bg-white rounded-xl shadow-sm">
+              {pathParam === 'chronological' ? <History className="h-5 w-5" /> : 
+               pathParam === 'thematic' ? <Link2 className="h-5 w-5" /> :
+               <Library className="h-5 w-5" />}
+            </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-widest opacity-60">Scribal Strategy Active</p>
+              <h3 className="text-sm font-bold">
+                {pathParam === 'chronological' ? "Historical Contextualization: Follow the sequence of the Grand Narrative." : 
+                 pathParam === 'thematic' ? "Canonical Reading: Trace the 'Golden Threads' across the canon." :
+                 "Genre Awareness: Adjusting lineation for literary form."}
+              </h3>
+            </div>
+          </div>
+        )}
+
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-8">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
-              <h1 className="text-3xl font-headline font-bold tracking-tight">Enhanced Reader</h1>
+              <h1 className="text-3xl font-headline font-bold tracking-tight">Scriptorium Reader</h1>
               <Button 
                 variant="ghost" size="icon" 
                 onClick={() => setTheme(prev => prev === "light" ? "dark" : "light")}
@@ -160,18 +188,6 @@ function ReaderContent() {
                 {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
             </div>
-            {pathParam && (
-              <div className="flex items-center gap-2">
-                <Badge variant="outline" className="text-[10px] font-bold uppercase tracking-[0.2em] border-primary/30 text-primary">
-                  {pathParam.toUpperCase()} PATH
-                </Badge>
-                {planDay && (
-                  <span className="text-xs text-slate-500 font-bold">
-                    • {planDay.title}
-                  </span>
-                )}
-              </div>
-            )}
           </div>
 
           <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
@@ -232,11 +248,29 @@ function ReaderContent() {
                     
                     <div className={cn(
                       "bible-reader-text font-serif transition-colors duration-500",
-                      isDark ? "text-slate-300" : "text-slate-800"
+                      isDark ? "text-slate-300" : "text-slate-800",
+                      pathParam === 'genre' && "poetic-lineation"
                     )}>
                       <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
                     </div>
                     
+                    <div className="mt-20 pt-10 border-t border-slate-100/10">
+                      <div className="flex items-center gap-2 mb-6">
+                        <PenTool className="h-4 w-4 text-primary" />
+                        <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Scribe's Reflection</span>
+                      </div>
+                      <Textarea 
+                        placeholder="What did you learn about how this text works today? Reflect on the strategy and the narrative..."
+                        className={cn(
+                          "min-h-[120px] rounded-2xl border-dashed transition-all",
+                          isDark ? "bg-slate-900/50 border-slate-800" : "bg-slate-50/50 border-slate-200"
+                        )}
+                        value={scribeReflection}
+                        onChange={(e) => setScribeReflection(e.target.value)}
+                      />
+                      <p className="mt-3 text-[10px] text-slate-400 font-medium italic">Metacognition: Teaching yourself how to learn scripture.</p>
+                    </div>
+
                     {pathParam && (
                       <div className="pt-12 flex items-center justify-center gap-6">
                         <Button 
@@ -268,7 +302,25 @@ function ReaderContent() {
           </div>
 
           <aside className="space-y-6">
-            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col min-h-[600px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
+            {/* Thematic Echoes Panel - Dynamic based on path */}
+            {pathParam === 'thematic' && (
+              <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-emerald-50 border border-emerald-100", isDark ? "bg-emerald-950/20" : "")}>
+                <CardHeader className="p-6 pb-2">
+                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-emerald-600">
+                    <Link2 className="h-4 w-4" /> Thematic Echoes
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-3">
+                  <p className="text-[10px] text-emerald-700/60 leading-relaxed italic">Canonical Reading: scripture interpreting scripture.</p>
+                  <div className="space-y-2">
+                    <Badge variant="outline" className="text-[9px] border-emerald-200 text-emerald-600 w-full justify-start py-1 px-2">Genesis 12:1-3 (Covenant)</Badge>
+                    <Badge variant="outline" className="text-[9px] border-emerald-200 text-emerald-600 w-full justify-start py-1 px-2">Hebrews 6:13-20 (Promise)</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col min-h-[500px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
               <CardHeader className="p-6 pb-4 border-b border-slate-100/10">
                 <div className="flex items-center justify-between">
                   <div className="space-y-1">
@@ -388,7 +440,7 @@ function ReaderContent() {
         .bible-reader-text {
           font-size: 1.25rem;
           line-height: 2.1;
-          max-width: 65ch;
+          max-width: 75ch;
           margin-left: auto;
           margin-right: auto;
         }
@@ -402,6 +454,12 @@ function ReaderContent() {
         }
         .bible-reader-text p {
           margin-bottom: 2rem;
+        }
+        .poetic-lineation p {
+          padding-left: 2rem;
+          text-indent: -2rem;
+          margin-bottom: 1rem;
+          line-height: 1.8;
         }
       `}</style>
     </div>
