@@ -107,7 +107,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       instructions: [
         "Use a horizontal timeline layout across your page.",
         "Far Left: Transcribe the son's demand and departure (v. 11-13).",
-        "The Valley: In smaller, lower script, transcribe the famine and pig pen (v. 14-16).",
+        "The Valley: In smaller, lower script, transcribe the famine and the pig pen (v. 14-16).",
         "The Ascent: Transcribe the 'coming to himself' and the journey back (v. 17-20).",
         "The Climax: In your most beautiful, bold script, transcribe the father’s embrace (v. 20)."
       ]
@@ -168,7 +168,21 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     reference: "Luke 10:25-37", 
     title: "The Good Samaritan", 
     audience: "An expert in the law seeking to justify himself",
-    mainTruth: "Our 'neighbor' is anyone in need, regardless of boundaries."
+    mainTruth: "Our 'neighbor' is anyone in need, regardless of boundaries.",
+    culturalInsights: [
+      { title: "The Road to Jericho", note: "The 'Way of Blood' drops 3,000 ft in 17 miles. Treacherous cliffs notorious for highwaymen." },
+      { title: "Priest & Levite", note: "Chose ritual purity over mercy. Touching a dead body would have made them 'ceremonially unclean' for temple duties." },
+      { title: "The Samaritan", note: "A scandal. Jews and Samaritans had a centuries-old blood feud. Oil acted as balm, wine as antiseptic." }
+    ],
+    scribalStrategy: {
+      title: "The Heart Exam",
+      instructions: [
+        "Header: Write the lawyer's original question: 'And who is my neighbor?' (v. 29).",
+        "Body: Transcribe the Samaritan's actions (v. 33-35) in a list format.",
+        "Footer: Transcribe Jesus's final command: 'Go, and do likewise' (v. 37)."
+      ]
+    },
+    reflectionQuestion: "Being a neighbor isn't about 'who' deserves my help, but about 'what' kind of person I am becoming."
   },
 };
 
