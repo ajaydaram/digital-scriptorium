@@ -142,7 +142,26 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     reference: "Matthew 20:1-16", 
     title: "The Workers in the Vineyard", 
     audience: "Disciples, following Peter's question about rewards",
-    mainTruth: "The kingdom operates on grace, not human concepts of fairness."
+    mainTruth: "The kingdom operates on grace, not human concepts of fairness.",
+    culturalInsights: [
+      { title: "The 11th Hour", note: "5:00 PM, one hour before sunset. If you weren't hired by now, your family would likely go hungry that night." },
+      { title: "The Denarius", note: "A standard daily wage—just enough to provide food for a family for one day." },
+      { title: "The Payroll Twist", note: "The Master insists on paying the last workers first, intentionally letting the early workers see the grace given to others." }
+    ],
+    symbolicMapping: [
+      { symbol: "Marketplace", reality: "The World", insight: "Where we wait for purpose and provision." },
+      { symbol: "The Master", reality: "God's Character", insight: "He is governed by His own generosity, not our 'fairness'." },
+      { symbol: "The Denarius", reality: "The Gift of Grace", insight: "Salvation is an equal gift to all who enter the Kingdom, regardless of time served." }
+    ],
+    scribalStrategy: {
+      title: "The Grace Ledger",
+      instructions: [
+        "Header: Write 'The First shall be Last' in bold script.",
+        "Body: Transcribe the Master's dialogue in v. 13-15.",
+        "The Tipped Scale: Sketch a balance tipped heavily toward 'The Master's Character' over 'Effort'."
+      ]
+    },
+    reflectionQuestion: "Is my security based on my performance or the Master's promise?"
   },
   7: { 
     day: 7, 
