@@ -313,8 +313,46 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "Am I currently 'listening' to my soul or 'talking' to it with the truth of God's character?"
   },
-  13: { day: 13, reference: "Psalm 51", title: "A Prayer of Repentance", scribalStrategy: { title: "Narrow Margins", instructions: ["Use narrow margins to represent the humility of a broken spirit."] } },
-  14: { day: 14, reference: "Psalm 100", title: "A Liturgy of Thanksgiving", scribalStrategy: { title: "The Shout", instructions: ["Use ALL-CAPS or bold script for every instance of 'SHOUT' or 'JOY'."] } },
+  13: { 
+    day: 13, 
+    reference: "Psalm 51", 
+    title: "A Prayer of Repentance", 
+    audience: "A broken king seeking restoration",
+    mainTruth: "True repentance is based on God's steadfast love, not the size of our sacrifice.",
+    culturalInsights: [
+      { title: "Hyssop", note: "A small, aromatic plant used in ritual cleansing. To be 'washed with hyssop' was a plea for total ceremonial and moral restoration." },
+      { title: "Broken Bones", note: "David describes his guilt as physical agony. The 'bones that you have broken' refers to God's heavy hand of conviction." }
+    ],
+    scribalStrategy: { 
+      title: "Narrow Margins & Humility", 
+      instructions: [
+        "Use narrow margins to represent the humility of a broken spirit.",
+        "Write in a small, tight, disciplined script.",
+        "Transcribe v. 10-12 in the exact center of the page."
+      ] 
+    },
+    reflectionQuestion: "Is my repentance focused on the 'steadfast love' of God or the 'severity' of my mistake?"
+  },
+  14: { 
+    day: 14, 
+    reference: "Psalm 100", 
+    title: "A Liturgy of Thanksgiving", 
+    audience: "The gathered community entering the temple",
+    mainTruth: "We enter God's presence with joy because He is the Creator and we are His people.",
+    culturalInsights: [
+      { title: "The Joyful Shout", note: "The 'shout' ($ruwa$) is a triumphal blast, like a trumpet. It's an active, energetic invitation to the entire earth." },
+      { title: "The Sheep of His Pasture", note: "Reflects Israel's identity as a flock under the total care and ownership of Yahweh." }
+    ],
+    scribalStrategy: { 
+      title: "The Shout & Celebration", 
+      instructions: [
+        "Use ALL-CAPS or bold script for every instance of 'SHOUT', 'JOY', or 'GLADNESS'.",
+        "Draw a decorative border of vines and fruit to represent the goodness of God.",
+        "End with a large, centered 'AMEN'."
+      ] 
+    },
+    reflectionQuestion: "What is my 'joyful shout' to God today as I enter His presence?"
+  },
 };
 
 export type PathId = 'chronological' | 'thematic' | 'genre';

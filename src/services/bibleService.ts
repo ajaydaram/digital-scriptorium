@@ -120,7 +120,8 @@ function normalizeForABS(reference: string): string {
 
 export async function getScripture(reference: string, versionId: string): Promise<Scripture> {
   const passageId = normalizeForABS(reference);
-  const response = await fetch(`/api/bible?versionId=${versionId}&passageId=${passageId}`);
+  // Pass the original reference to help the fallback API (bible-api.com)
+  const response = await fetch(`/api/bible?versionId=${versionId}&passageId=${passageId}&originalRef=${encodeURIComponent(reference)}`);
 
   if (!response.ok) {
     const errorData = await response.json();

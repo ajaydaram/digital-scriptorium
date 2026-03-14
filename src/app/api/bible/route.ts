@@ -7,6 +7,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const versionId = searchParams.get('versionId');
   const passageId = searchParams.get('passageId');
+  const originalRef = searchParams.get('originalRef');
 
   if (!versionId || !passageId) {
     return NextResponse.json({ error: 'Missing parameters' }, { status: 400 });
@@ -27,14 +28,12 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(data);
     }
 
-    // Attempt 2: Fallback to Bible-API.com if ABS fails (using simpler passage reference)
-    console.warn(`API.Bible failed (Status: ${response.status}). Attempting fallback to Bible-API.com.`);
+    // Attempt 2: Fallback to Bible-API.com if ABS fails
+    // We use the original human-readable reference for better success rate on bible-api.com
+    const queryRef = originalRef || passageId.replace(/\./g, ' ');
+    console.warn(`API.Bible failed (Status: ${response.status}). Attempting fallback to Bible-API.com for "${queryRef}".`);
     
-    // Bible-API.com uses plain text references like "John 3:16"
-    // We convert JHN.3.16 back to a readable format
-    const plainRef = passageId.replace(/\./g, ' ');
-    const fallbackUrl = `https://bible-api.com/${encodeURIComponent(plainRef)}`;
-    
+    const fallbackUrl = `https://bible-api.com/${encodeURIComponent(queryRef)}`;
     const fallbackResponse = await fetch(fallbackUrl);
     
     if (fallbackResponse.ok) {
@@ -42,7 +41,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(fallbackData);
     }
 
-    throw new Error(`Primary and fallback APIs failed. (ABS Status: ${response.status})`);
+    throw new Error(`Primary and fallback APIs failed. (ABS Status: ${response.status}, Fallback Status: ${fallbackResponse.status})`);
 
   } catch (error: any) {
     console.error('Scripture Retrieval Error:', error.message);
