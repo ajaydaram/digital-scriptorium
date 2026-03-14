@@ -409,52 +409,6 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "In what area of my life am I currently 'walking, standing, or sitting' with the wrong influence?"
   },
-  9: { 
-    day: 9, 
-    reference: "Psalm 19:1-6", 
-    title: "Nature's Speech", 
-    audience: "General Revelation (The World)",
-    mainTruth: "The heavens are a continuous, wordless broadcast of God's glory.",
-    culturalInsights: [
-      { title: "The Silent Broadcast", note: "In Hebrew, 'declare' (saphar) means to count or recount a story. The heavens are telling an ongoing story." },
-      { title: "Universal Language", note: "Because nature has no 'words,' it has no language barrier. Its 'voice' is heard by every tribe and tongue." },
-      { title: "The Champion Sun", note: "The metaphors of 'Bridegroom' and 'Champion' emphasize the sun's joy and unstoppable energy." }
-    ],
-    scribalStrategy: { 
-      title: "The Celestial Arch", 
-      instructions: [
-        "Write the first few verses in a gentle arch across the top of your page.",
-        "Space your lines widely to represent the vastness of the heavens.",
-        "Use a bolder, stronger script for 'Bridegroom' and 'Strong Man'."
-      ] 
-    },
-    reflectionQuestion: "If the silent stars say this much about God, how much more should my words say?"
-  },
-  10: { 
-    day: 10, 
-    reference: "Psalm 19:7-14", 
-    title: "The Perfection of the Word", 
-    audience: "The Covenant People (Special Revelation)",
-    mainTruth: "God's Word is perfect, sure, right, pure, clean, and true—transforming the whole person.",
-    symbolicMapping: [
-      { symbol: "The Law", reality: "Reviving the Soul", insight: "Instruction that brings life back to the weary." },
-      { symbol: "The Testimony", reality: "Making Wise the Simple", insight: "God's standard provides clarity for the unlearned." },
-      { symbol: "The Precepts", reality: "Rejoicing the Heart", insight: "The specific 'pathways' that lead to inner joy." },
-      { symbol: "The Commandment", reality: "Enlightening the Eyes", insight: "Purity that clears away the moral fog." },
-      { symbol: "The Fear of the Lord", reality: "Enduring Forever", insight: "Holy reverence that provides a permanent foundation." },
-      { symbol: "The Rules", reality: "Righteous Altogether", insight: "Judgments that are completely reliable and fair." }
-    ],
-    scribalStrategy: { 
-      title: "The Golden List", 
-      instructions: [
-        "Create six distinct 'blocks' or pillars on your page.",
-        "In each block, pair the Noun with its Attribute and Effect.",
-        "Use a disciplined, neat handwriting to reflect the order of the Law.",
-        "Box in the final prayer (v. 14) at the bottom center."
-      ] 
-    },
-    reflectionQuestion: "David says the Word makes wise 'the simple' (pethi), meaning an 'open door.' In what area of my life is my heart an 'open door' that needs the structure of God's Word?"
-  },
   11: {
     day: 11,
     reference: "Psalm 23",
@@ -477,27 +431,6 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "How does the 'physical reality' of the Judean wilderness change my understanding of the Shepherd's protection?"
   },
-  12: { 
-    day: 12, 
-    reference: "Psalm 42", 
-    title: "Thirsting in Despair", 
-    audience: "The thirsting soul in exile",
-    mainTruth: "Biblical lament involves talking to your soul rather than just listening to its despair.",
-    culturalInsights: [
-      { title: "The Panting Deer", note: "A deer (ayyal) in the dry hills pants to submerge itself to hide its scent and cool its blood. This is survival thirst." },
-      { title: "Cataracts of Hermon", note: "The crashing spring melt represents emotional chaos and feeling swept away by God's sovereignty." }
-    ],
-    scribalStrategy: { 
-      title: "The Echo & Refrain", 
-      instructions: [
-        "Use a slanted, 'distressed' script for the verses of despair (v. 3, 7, 10).",
-        "Stop and draw a decorative box for the Refrains (v. 5, 11).",
-        "In the right margin, list your 'Ebenezers'—past moments of God's faithfulness.",
-        "Draw water waves at the bottom with the word 'HOPE' rising above them."
-      ] 
-    },
-    reflectionQuestion: "Am I currently 'listening' to my soul or 'talking' to it with the truth of God's character?"
-  },
   13: { 
     day: 13, 
     reference: "Psalm 51", 
@@ -514,7 +447,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       instructions: [
         "Write MERCY in large, bold script at the top of the page.",
         "Transcribe v. 1-12 with justified, neat lines to represent a restored life.",
-        "Use a lighter touch or grey wash for v. 7 ('Wash me...').",
+        "The 'Wash' Effect: Lightly blur the edges of verse 7 ('Wash me...') to symbolize the cleansing process.",
         "Transcribe v. 10 ('Create in me a clean heart...') in the exact center of the page."
       ] 
     },
@@ -527,7 +460,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "The gathered community entering the temple",
     mainTruth: "We enter God's presence with joy because He is the Creator and we are His people.",
     culturalInsights: [
-      { title: "The Joyful Shout", note: "The 'shout' (ruwa) is a triumphal blast, like a trumpet. It's an active, energetic invitation to the entire earth." },
+      { title: "The Joyful Shout", note: "The 'shout' (rua) is a triumphal blast, like a trumpet. It's an active, energetic invitation to the entire earth." },
       { title: "The Sheep of His Pasture", note: "Reflects Israel's identity as a flock under the total care and ownership of Yahweh." }
     ],
     scribalStrategy: { 
@@ -536,8 +469,8 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
         "Draw two vertical lines on the left and right sides of your page to represent the Temple gates.",
         "Transcribe the 'Shout' and 'Serve' commands at the very top, centered between your 'gates'.",
         "Write the central truth—'Know that the LORD, he is God!'—in a distinct, boxy script.",
-        "Transcribe the entrance into the courts. Use ALL CAPS for GOOD, STEADFAST LOVE, FAITHFULNESS.",
-        "At the bottom of the page, write the word 'AMEN' or 'HALLELUJAH' as your signature for the week."
+        "Calligraphic Emphasis: For GOOD, STEADFAST LOVE, and FAITHFULNESS, use ALL CAPS or a different color.",
+        "At the bottom of the page, write 'AMEN' as your signature for the week."
       ] 
     },
     reflectionQuestion: "What is my 'joyful shout' to God today as I enter His presence?"
@@ -698,12 +631,12 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
       { title: "Universal Knowledge", note: "Under the New Covenant, every believer has direct access to the knowledge of God without needing a human intermediary." }
     ],
     scribalStrategy: {
-      title: "The Heart Focal Point",
+      title: "The Heart Scroll",
       instructions: [
         "Draw a large Heart in the center of your page.",
-        "Write the text of verses 33-34 INSIDE the heart.",
-        "Use a lighter, more organic script compared to the 'Stone' layout of the Mosaic covenant.",
-        "Write 'I WILL BE THEIR GOD' at the very top."
+        "Transcribe Jeremiah 31:33-34 INSIDE the heart following its curve.",
+        "Contrast Margin: Left: Write 'STONE' in jagged script. Right: Write 'FLESH' in warm, smooth script.",
+        "Header: Write 'Transformation from Within' in a soft, flowing hand."
       ]
     },
     thematicLedger: [
@@ -712,7 +645,7 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
       { label: "Covenant", value: "Abraham: Promise" },
       { label: "Covenant", value: "Moses: Law" },
       { label: "Covenant", value: "David: Kingdom" },
-      { label: "Covenant", value: "New Covenant: Internal Transformation" }
+      { label: "Covenant", value: "New Covenant: Promised" }
     ],
     reflectionQuestion: "Is the Word of God an external pressure for you, or an internal passion?"
   },
@@ -741,7 +674,7 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
       { label: "Covenant", value: "Moses: Law" },
       { label: "Covenant", value: "David: Kingdom" },
       { label: "Covenant", value: "New Covenant: Promised" },
-      { label: "Covenant", value: "Christ: Fulfillment (The End of the Thread)" }
+      { label: "Covenant", value: "Christ: Fulfillment (Grace)" }
     ],
     reflectionQuestion: "As you write the final words of the week, look back at the ledger. How does seeing the whole plan build your assurance?"
   }
