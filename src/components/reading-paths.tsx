@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -23,6 +24,7 @@ const PATHS = [
       "Archaeological context cues"
     ],
     image: PlaceHolderImages.find(i => i.id === "path-chronological")?.imageUrl,
+    imageHint: PlaceHolderImages.find(i => i.id === "path-chronological")?.imageHint,
     bgClass: "bg-blue-50/50",
     accentColor: "text-blue-600",
     badgeText: "SCRIBAL HISTORY",
@@ -44,6 +46,7 @@ const PATHS = [
       "Covenantal progression tracking"
     ],
     image: PlaceHolderImages.find(i => i.id === "path-thematic")?.imageUrl,
+    imageHint: PlaceHolderImages.find(i => i.id === "path-thematic")?.imageHint,
     bgClass: "bg-emerald-50/50",
     accentColor: "text-emerald-600",
     badgeText: "CANONICAL UNITY",
@@ -65,6 +68,7 @@ const PATHS = [
       "The 'One Main Truth' reflection"
     ],
     image: PlaceHolderImages.find(i => i.id === "path-genre")?.imageUrl,
+    imageHint: PlaceHolderImages.find(i => i.id === "path-genre")?.imageHint,
     bgClass: "bg-purple-50/50",
     accentColor: "text-purple-600",
     badgeText: "LITERARY PRECISION",
@@ -97,7 +101,7 @@ export function ReadingPathsSection() {
               alt={path.title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
-              data-ai-hint={path.id === "chronological" ? "history timeline" : path.id === "thematic" ? "theology connections" : "ancient scrolls"}
+              data-ai-hint={path.imageHint}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 flex items-center gap-3 text-white">
@@ -117,7 +121,7 @@ export function ReadingPathsSection() {
             <CardHeader className="p-0 mb-6">
               <div className="flex items-center gap-2.5 mb-3">
                 <PenTool className={cn("h-4 w-4", path.accentColor)} />
-                <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Strategy: {path.strategy}</span>
+                <span className="text-sm font-bold uppercase tracking-widest text-slate-400">Strategy: {path.strategy}</span>
               </div>
               <CardTitle className="text-2xl font-headline font-bold leading-tight text-slate-900">
                 {path.title}

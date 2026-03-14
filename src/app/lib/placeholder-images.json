@@ -4,25 +4,25 @@
     {
       "id": "hero-bg",
       "description": "Abstract scholarly background with subtle light patterns",
-      "imageUrl": "https://picsum.photos/seed/scriptorium/1200/800",
-      "imageHint": "abstract library"
+      "imageUrl": "https://picsum.photos/seed/scriptorium-monastery/1200/800",
+      "imageHint": "ancient library"
     },
     {
       "id": "path-chronological",
-      "description": "Historical timeline representation",
-      "imageUrl": "https://picsum.photos/seed/chron/600/400",
-      "imageHint": "history timeline"
+      "description": "Historical timeline with ancient artifacts",
+      "imageUrl": "https://picsum.photos/seed/ancient-timeline/600/400",
+      "imageHint": "ancient history"
     },
     {
       "id": "path-thematic",
-      "description": "Theological connections and mapping",
-      "imageUrl": "https://picsum.photos/seed/thematic/600/400",
-      "imageHint": "connection map"
+      "description": "Intricate weaving representing theological connections",
+      "imageUrl": "https://picsum.photos/seed/theological-weaving/600/400",
+      "imageHint": "weaving connections"
     },
     {
       "id": "path-genre",
-      "description": "Literary scrolls and books",
-      "imageUrl": "https://picsum.photos/seed/literary/600/400",
+      "description": "Ancient scrolls and parchment",
+      "imageUrl": "https://picsum.photos/seed/sacred-scrolls/600/400",
       "imageHint": "ancient scrolls"
     }
   ]
