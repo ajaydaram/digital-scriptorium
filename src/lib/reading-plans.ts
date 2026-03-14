@@ -348,7 +348,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     symbolicMapping: [
       { symbol: "Marketplace", reality: "The World", insight: "Where we wait for purpose and provision." },
       { symbol: "The Master", reality: "God's Character", insight: "He is governed by His own generosity, not our 'fairness'." },
-      { symbol: "The Denarius", reality: "The Gift of Grace", insight: "Salvation is an equal gift to all who enter the Kingdom, regardless of time served." }
+      { symbol: "The Denarius", reality: "The gift of Grace", insight: "Salvation is an equal gift to all who enter the Kingdom, regardless of time served." }
     ],
     scribalStrategy: {
       title: "The Grace Ledger",
@@ -666,16 +666,17 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
     title: "The Davidic Covenant (Thematic Lens)",
     mainTruth: "The promise of an eternal dynasty bridges the gap between the Law and the ultimate King of Grace.",
     culturalInsights: [
-      { title: "House for a House", note: "A play on words in Hebrew. David wanted to build a 'house' (temple), but God promised to build him a 'house' (a royal lineage)." },
-      { title: "The Messianic Hinge", note: "This covenant anchors the hope of Israel in a person—the Son of David—who would rule with perfect justice and mercy." }
+      { title: "Son of God Language", note: "Functional, not biological. The King acts as God's representative. God promises discipline without taking away His steadfast love (hesed)." },
+      { title: "From Tent to House", note: "Thematic shift from a nomadic tent (people on the move) to a permanent House (people who have arrived in the land)." },
+      { title: "Covenant Security", note: "The throne is secure not because the Kings are perfect, but because God’s promise is permanent." }
     ],
     scribalStrategy: {
-      title: "The Royal Bridge",
+      title: "The Royal Bridge (Triptych)",
       instructions: [
-        "Transcribe the core promise (v. 12-16) in a central column.",
-        "On the left margin, write 'MOSES (The Law)'.",
-        "On the right margin, write 'JESUS (The Fulfillment)'.",
-        "Draw a Crown spanning across all three sections."
+        "Left Panel (The Past): Write the names Abraham (Promise) and Moses (Law).",
+        "Center Panel (The Present): Transcribe 2 Samuel 7:12–13 and anchor with a Crown icon.",
+        "Right Panel (The Future): Write 'The Son of David' in faint or shimmering ink.",
+        "Connection: Draw a Crown spanning across all three sections."
       ]
     },
     thematicLedger: [
@@ -683,7 +684,7 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
       { label: "Covenant", value: "Noah: Preservation" },
       { label: "Covenant", value: "Abraham: Promise" },
       { label: "Covenant", value: "Moses: Law" },
-      { label: "Covenant", value: "David: Kingdom (Dynasty)" }
+      { label: "Covenant", value: "David: Kingdom (Eternal Throne)" }
     ],
     reflectionQuestion: "God builds the house. How does resting in His building project change your anxiety about your own legacy?"
   },
