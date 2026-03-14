@@ -1,6 +1,6 @@
 /**
  * @fileOverview Defines the structured reading plans for The Scriptorium.
- * Implements Chronological and Genre-specific (Parables & Psalms) paths.
+ * Implements Chronological, Genre-specific, and Thematic paths.
  */
 
 export interface ReadingPlanDay {
@@ -14,6 +14,7 @@ export interface ReadingPlanDay {
   scribalStrategy?: { title: string; instructions: string[] };
   reflectionQuestion?: string;
   historicalSnapshot?: { ref: string; text: string };
+  thematicLedger?: { label: string; value: string }[];
 }
 
 export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
@@ -543,6 +544,88 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
   },
 };
 
+export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
+  // --- Week 4: The Covenant Thread ---
+  22: {
+    day: 22,
+    reference: "Genesis 1:26-31; 2:15-17",
+    title: "The Creation Covenant",
+    mainTruth: "Man is a Vice-Regent, made to represent God's rule and enjoy His provision through obedience.",
+    culturalInsights: [
+      { title: "Vice-Regent", note: "Man is placed in the garden as a representive ruler. We were made to reflect God's authority over the created order." },
+      { title: "Work and Keep", note: "These words (abad and shamar) are the same used later for priests serving in the Tabernacle. Work is an act of worship." },
+      { title: "The Probative Tree", note: "The command wasn't about fruit, but about Authority. Who defines 'good' and 'evil'—the Creator or the creature?" }
+    ],
+    scribalStrategy: {
+      title: "The Blueprint of Life",
+      instructions: [
+        "Header: Write 'The Covenant of Works: Life and Image' in an elegant hand.",
+        "Dual Columns: Transcribe Blessing (1:26-28) on the left and Duty (2:15-17) on the right.",
+        "Marginal Symbols: Draw a Leaf and a Crown.",
+        "Connection: Write 1 Corinthians 15:45 at the bottom."
+      ]
+    },
+    thematicLedger: [
+      { label: "Covenant", value: "Adam: Creation" }
+    ],
+    reflectionQuestion: "Would I rather define 'good' for myself, or trust God's definition today?"
+  },
+  23: {
+    day: 23,
+    reference: "Genesis 9:8-17",
+    title: "The Noahic Covenant",
+    mainTruth: "God's unilateral promise to preserve the earth ensures stability for the unfolding plan of redemption.",
+    thematicLedger: [
+      { label: "Covenant", value: "Noah: Preservation" }
+    ]
+  },
+  24: {
+    day: 24,
+    reference: "Genesis 15",
+    title: "The Abrahamic Covenant",
+    mainTruth: "God binds Himself by an oath to create a people and a place through one man's faith.",
+    thematicLedger: [
+      { label: "Covenant", value: "Abraham: Promise" }
+    ]
+  },
+  25: {
+    day: 25,
+    reference: "Exodus 19:1-8; 20:1-17",
+    title: "The Mosaic Covenant",
+    mainTruth: "The Law reveals God's holy character and provides a framework for life as His set-apart people.",
+    thematicLedger: [
+      { label: "Covenant", value: "Moses: Law" }
+    ]
+  },
+  26: {
+    day: 26,
+    reference: "2 Samuel 7:12-16",
+    title: "The Davidic Covenant",
+    mainTruth: "The promise of an eternal dynasty ensures the coming of the King of Kings.",
+    thematicLedger: [
+      { label: "Covenant", value: "David: Kingdom" }
+    ]
+  },
+  27: {
+    day: 27,
+    reference: "Jeremiah 31:31-34",
+    title: "The New Covenant Promise",
+    mainTruth: "A promise of internal transformation where the law is written on hearts, not just stone.",
+    thematicLedger: [
+      { label: "Covenant", value: "Jeremiah: Transformation" }
+    ]
+  },
+  28: {
+    day: 28,
+    reference: "Luke 22:14-20",
+    title: "The New Covenant Fulfilled",
+    mainTruth: "The covenant is sealed in the blood of Christ, bringing the thread to its final fulfillment.",
+    thematicLedger: [
+      { label: "Covenant", value: "Christ: Fulfillment" }
+    ]
+  }
+};
+
 export type PathId = 'chronological' | 'thematic' | 'genre';
 
 export function getPlanDay(path: PathId, day: number): ReadingPlanDay | null {
@@ -551,6 +634,9 @@ export function getPlanDay(path: PathId, day: number): ReadingPlanDay | null {
   }
   if (path === 'genre') {
     return GENRE_PLAN[day] || null;
+  }
+  if (path === 'thematic') {
+    return THEMATIC_PLAN[day] || null;
   }
   return null;
 }

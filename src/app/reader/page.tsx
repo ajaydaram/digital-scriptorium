@@ -37,9 +37,9 @@ import {
   PenTool,
   Users,
   Compass,
-  Lightbulb,
   TableProperties,
-  ArrowRight
+  ArrowRight,
+  ListChecks
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -338,6 +338,31 @@ function ReaderContent() {
           </div>
 
           <aside className="space-y-6">
+            {/* Thematic Ledger - Specific for Thematic Path */}
+            {pathParam === 'thematic' && planDay?.thematicLedger && (
+              <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-white border border-slate-100")}>
+                <CardHeader className="p-6 pb-2">
+                  <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
+                    <ListChecks className="h-4 w-4" /> Covenant Tracker
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-4">
+                  <p className="text-[10px] text-slate-400 italic">Tracing the Golden Thread of Redemption.</p>
+                  <div className="space-y-2">
+                    {planDay.thematicLedger.map((item, i) => (
+                      <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100">
+                        <span className="text-[10px] font-bold text-slate-500">{item.label}</span>
+                        <span className="text-[10px] font-bold text-primary">{item.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="p-3 rounded-xl bg-primary/5 border border-primary/10 text-[9px] text-primary italic leading-relaxed">
+                    Covenants are the relational 'glue' of the 66 books.
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Historical Snapshot - For Chronological Path */}
             {planDay?.historicalSnapshot && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-slate-900 text-white")}>
