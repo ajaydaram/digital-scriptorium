@@ -27,8 +27,8 @@ const PATHS = [
     accentColor: "text-blue-600",
     badgeText: "SCRIBAL HISTORY",
     badgeClass: "bg-blue-100/50 text-blue-700 border-blue-200/50",
-    startRef: "Genesis 1",
-    day: 1
+    startRef: "Psalm 56",
+    day: 15
   },
   {
     id: "thematic",
@@ -48,8 +48,8 @@ const PATHS = [
     accentColor: "text-emerald-600",
     badgeText: "CANONICAL UNITY",
     badgeClass: "bg-emerald-100/50 text-emerald-700 border-emerald-200/50",
-    startRef: "Genesis 1",
-    day: 1
+    startRef: "Genesis 1:26",
+    day: 22
   },
   {
     id: "genre",

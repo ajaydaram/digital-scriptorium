@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { GuidedAscentStepper } from "@/components/guided-ascent-stepper";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
@@ -17,6 +17,7 @@ import { getPlanDay, type PathId } from "@/lib/reading-plans";
 import { useUser, useFirestore, useCollection, useMemoFirebase, useAuth } from "@/firebase";
 import { saveAnnotation, getAnnotationsQuery } from "@/services/annotationService";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
 import { 
   Sparkles, 
   ChevronRight, 
@@ -39,7 +40,8 @@ import {
   Compass,
   TableProperties,
   ArrowRight,
-  ListChecks
+  ListChecks,
+  CheckCircle2
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -67,6 +69,10 @@ function ReaderContent() {
   const [error, setError] = useState<string | null>(null);
   const [scribeReflection, setScribeReflection] = useState("");
   
+  // AI Flow State
+  const [aiAnalysis, setAiAnalysis] = useState<AIAnnotatorExplanationOutput | null>(null);
+  const [isAiLoading, setIsAiLoading] = useState(false);
+
   const annotationsQuery = useMemoFirebase(() => {
     if (!firestore || !currentRef) return null;
     return getAnnotationsQuery(firestore, currentRef);
@@ -94,6 +100,8 @@ function ReaderContent() {
   useEffect(() => {
     if (currentRef) {
       loadScripture(currentRef, version);
+      setScribeReflection(""); // Reset reflection on passage change
+      setAiAnalysis(null); // Reset AI analysis
     }
   }, [currentRef, version]);
 
@@ -146,6 +154,23 @@ function ReaderContent() {
       title: "Insight Shared",
       description: "Your note has been added to the living commentary.",
     });
+  };
+
+  const handleAiAnalysis = async () => {
+    if (!scripture) return;
+    setIsAiLoading(true);
+    try {
+      const result = await explainScripture({ scripturePassage: scripture.text });
+      setAiAnalysis(result);
+    } catch (err: any) {
+      toast({
+        variant: "destructive",
+        title: "AI Error",
+        description: "The AI guide is currently offline. Please try again later.",
+      });
+    } finally {
+      setIsAiLoading(false);
+    }
   };
 
   const isDark = theme === "dark";
@@ -339,7 +364,7 @@ function ReaderContent() {
 
           <aside className="space-y-6">
             {/* Thematic Ledger - Specific for Thematic Path */}
-            {pathParam === 'thematic' && planDay?.thematicLedger && (
+            {planDay?.thematicLedger && (
               <Card className={cn("border-none shadow-xl rounded-[2rem] overflow-hidden bg-white border border-slate-100")}>
                 <CardHeader className="p-6 pb-2">
                   <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
@@ -446,6 +471,42 @@ function ReaderContent() {
                         <p className="text-[9px] text-purple-600/80">{step.includes(':') ? step.split(':')[1] : step}</p>
                       </div>
                     ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* AI Analysis Result */}
+            {aiAnalysis && (
+              <Card className="border-none shadow-xl rounded-[2rem] overflow-hidden bg-primary/5 border border-primary/10 animate-in slide-in-from-right duration-500">
+                <CardHeader className="p-6 pb-2">
+                  <CardTitle className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-primary">
+                    <Sparkles className="h-4 w-4" /> Scholarly Deep-Dive
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-4">
+                  <div className="space-y-3">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase text-slate-400 mb-1">Explanation</p>
+                      <p className="text-xs text-slate-700 leading-relaxed">{aiAnalysis.explanation}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-bold uppercase text-slate-400 mb-1">Grand Narrative Context</p>
+                      <p className="text-xs text-slate-700 leading-relaxed italic">{aiAnalysis.theologicalContext}</p>
+                    </div>
+                    {aiAnalysis.suggestedReferences.length > 0 && (
+                      <div className="pt-2">
+                        <p className="text-[10px] font-bold uppercase text-slate-400 mb-2">Cross References</p>
+                        <div className="space-y-2">
+                          {aiAnalysis.suggestedReferences.map((ref, i) => (
+                            <div key={i} className="p-2 rounded-lg bg-white border border-slate-100">
+                              <p className="text-[10px] font-bold text-primary">{ref.ref}</p>
+                              <p className="text-[9px] text-slate-500 italic">{ref.reason}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -558,8 +619,12 @@ function ReaderContent() {
                 <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                   Generate a deep-dive analysis of <strong>{currentRef}</strong>.
                 </p>
-                <Button className="w-full btn-gradient font-bold h-11 text-[10px] rounded-xl uppercase tracking-widest shadow-lg shadow-primary/20">
-                  Analyze Context
+                <Button 
+                  className="w-full btn-gradient font-bold h-11 text-[10px] rounded-xl uppercase tracking-widest shadow-lg shadow-primary/20"
+                  onClick={handleAiAnalysis}
+                  disabled={isAiLoading || !scripture}
+                >
+                  {isAiLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Analyze Context"}
                 </Button>
               </CardContent>
             </Card>
