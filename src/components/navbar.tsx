@@ -1,8 +1,9 @@
+
 "use client";
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, Info, BookCheck, Book, Zap } from "lucide-react";
+import { BookOpen, Users, Compass, GraduationCap, PlayCircle, LogOut, BookCheck, Book, Zap, LayoutDashboard } from "lucide-react";
 import { useAuth, useUser } from "@/firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -27,13 +28,13 @@ export function Navbar() {
       await signInWithPopup(auth, provider);
       toast({
         title: "Welcome to The Scriptorium",
-        description: "You have successfully signed in.",
+        description: "Your scholarly profile is active.",
       });
     } catch (error: any) {
       toast({
         variant: "destructive",
         title: "Sign In Error",
-        description: error.message || "Failed to sign in with Google.",
+        description: error.message || "Failed to sign in.",
       });
     }
   };
@@ -43,7 +44,7 @@ export function Navbar() {
       await signOut(auth);
       toast({
         title: "Signed Out",
-        description: "You have been signed out of your account.",
+        description: "Session closed.",
       });
     } catch (error: any) {
       toast({
@@ -55,42 +56,45 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center space-x-4 group">
-            <div className="bg-brand-gradient p-2.5 rounded-xl shadow-sm group-hover:scale-105 transition-transform">
-              <BookOpen className="h-7 w-7 text-white" />
+    <nav className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60">
+      <div className="container mx-auto flex h-16 items-center justify-between px-6">
+        <div className="flex items-center gap-8">
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="bg-brand-gradient p-2 rounded-lg shadow-md group-hover:scale-105 transition-all duration-300">
+              <BookOpen className="h-5 w-5 text-white" />
             </div>
-            <span className="text-2xl font-headline font-bold tracking-tight">The Scriptorium</span>
+            <span className="text-xl font-headline font-bold tracking-tight text-slate-900">The Scriptorium</span>
           </Link>
+
+          <div className="hidden lg:flex items-center space-x-1">
+            <Link href="/paths">
+              <Button variant="ghost" className="text-sm font-semibold text-slate-600 hover:text-primary hover:bg-primary/5 transition-all">
+                Reading Paths
+              </Button>
+            </Link>
+            <Link href="/pedagogy">
+              <Button variant="ghost" className="text-sm font-semibold text-slate-600 hover:text-primary hover:bg-primary/5 transition-all">
+                Pedagogy
+              </Button>
+            </Link>
+            <Link href="/hub">
+              <Button variant="ghost" className="text-sm font-semibold text-slate-600 hover:text-primary hover:bg-primary/5 transition-all">
+                Study Hub
+              </Button>
+            </Link>
+          </div>
         </div>
 
-        <div className="hidden lg:flex items-center space-x-10">
-          <Link href="/demo" className="text-lg font-bold hover:text-primary transition-colors flex items-center gap-2.5 text-slate-600">
-            <PlayCircle className="h-5 w-5" /> Demo
-          </Link>
-          <Link href="/paths" className="text-lg font-bold hover:text-primary transition-colors flex items-center gap-2.5 text-slate-600">
-            <Compass className="h-5 w-5" /> Reading Paths
-          </Link>
-          <Link href="/pedagogy" className="text-lg font-bold hover:text-primary transition-colors flex items-center gap-2.5 text-slate-600">
-            <BookCheck className="h-5 w-5" /> Pedagogy
-          </Link>
-          <Link href="/hub" className="text-lg font-bold hover:text-primary transition-colors flex items-center gap-2.5 text-slate-600">
-            <GraduationCap className="h-5 w-5" /> Study Hub
-          </Link>
-        </div>
-
-        <div className="flex items-center space-x-6">
-          <div className="hidden sm:flex items-center gap-4">
+        <div className="flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-2">
             <Link href="/api-reader">
-              <Button variant="ghost" className="font-bold h-12 px-6 text-slate-500 hover:text-primary flex items-center gap-3 text-base">
-                <Zap className="h-5 w-5" /> Simple Reader
+              <Button variant="ghost" className="text-sm font-semibold text-slate-500 h-9 px-4 gap-2">
+                <Zap className="h-4 w-4" /> Simple
               </Button>
             </Link>
             <Link href="/reader">
-              <Button variant="default" className="btn-gradient font-bold h-12 px-8 shadow-lg shadow-blue-500/15 flex items-center gap-3 rounded-xl text-base">
-                <Book className="h-5 w-5" /> Enhanced Reader
+              <Button variant="default" className="btn-gradient text-sm font-bold h-9 px-5 gap-2 rounded-full shadow-md">
+                <Book className="h-4 w-4" /> Enhanced Reader
               </Button>
             </Link>
           </div>
@@ -100,33 +104,33 @@ export function Navbar() {
               {user ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-12 w-12 rounded-full ring-2 ring-primary/10">
-                      <Avatar className="h-12 w-12">
+                    <Button variant="ghost" className="relative h-9 w-9 rounded-full ring-2 ring-primary/10 hover:ring-primary/30 transition-all">
+                      <Avatar className="h-9 w-9">
                         <AvatarImage src={user.photoURL || undefined} alt={user.displayName || "User"} />
-                        <AvatarFallback className="bg-primary/10 text-primary font-bold text-lg">
+                        <AvatarFallback className="bg-primary/10 text-primary font-bold text-xs uppercase">
                           {user.displayName?.charAt(0) || user.email?.charAt(0) || "U"}
                         </AvatarFallback>
                       </Avatar>
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-72 p-3" align="end" forceMount>
-                    <DropdownMenuLabel className="font-normal p-4">
-                      <div className="flex flex-col space-y-2">
-                        <p className="text-lg font-bold leading-none">{user.displayName}</p>
-                        <p className="text-sm leading-none text-muted-foreground">{user.email}</p>
+                  <DropdownMenuContent className="w-64 p-2 mt-2" align="end" forceMount>
+                    <DropdownMenuLabel className="font-normal px-2 py-3">
+                      <div className="flex flex-col space-y-1">
+                        <p className="text-sm font-bold leading-none text-slate-900">{user.displayName}</p>
+                        <p className="text-xs leading-none text-slate-500 truncate">{user.email}</p>
                       </div>
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem asChild>
-                       <Link href="/reader" className="cursor-pointer py-4 text-base font-medium">
-                         <BookOpen className="mr-4 h-6 w-6 text-primary" />
-                         <span>Guided Reader</span>
+                    <DropdownMenuItem asChild className="cursor-pointer py-3 rounded-md focus:bg-primary/5 focus:text-primary">
+                       <Link href="/reader" className="flex items-center">
+                         <LayoutDashboard className="mr-3 h-4 w-4" />
+                         <span className="text-sm font-semibold">Scholar Dashboard</span>
                        </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600 cursor-pointer py-4 text-base font-medium">
-                      <LogOut className="mr-4 h-6 w-6" />
-                      <span>Sign Out</span>
+                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600 cursor-pointer py-3 rounded-md focus:bg-red-50 focus:text-red-700">
+                      <LogOut className="mr-3 h-4 w-4" />
+                      <span className="text-sm font-semibold">Sign Out</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -134,7 +138,7 @@ export function Navbar() {
                 <Button 
                   onClick={handleSignIn} 
                   variant="outline" 
-                  className="font-bold border-slate-200 h-12 px-8 text-base shadow-sm"
+                  className="text-sm font-bold border-slate-200 h-9 px-5 rounded-full hover:bg-slate-50"
                 >
                   Sign In
                 </Button>

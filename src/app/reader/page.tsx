@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
@@ -31,17 +32,16 @@ import {
   MessageSquare,
   AlertCircle,
   Plus,
-  LogIn,
   History,
   Link2,
   Library,
   PenTool,
   Users,
   Compass,
-  TableProperties,
-  ArrowRight,
   ListChecks,
-  CheckCircle2
+  TableProperties,
+  BookOpen,
+  Send
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -112,7 +112,7 @@ function ReaderContent() {
       const data = await getScripture(ref, v);
       setScripture(data);
     } catch (error: any) {
-      setError(error.message || "Could not retrieve this passage. Please try a different reference.");
+      setError(error.message || "Could not retrieve this passage.");
     } finally {
       setLoading(false);
     }
@@ -152,7 +152,7 @@ function ReaderContent() {
     setShowAddForm(false);
     toast({
       title: "Insight Shared",
-      description: "Your note has been added to the living commentary.",
+      description: "Note added to the community feed.",
     });
   };
 
@@ -165,8 +165,8 @@ function ReaderContent() {
     } catch (err: any) {
       toast({
         variant: "destructive",
-        title: "AI Error",
-        description: "The AI guide is currently offline. Please try again later.",
+        title: "AI Analysis Offline",
+        description: "The guide is currently resting.",
       });
     } finally {
       setIsAiLoading(false);
@@ -177,118 +177,117 @@ function ReaderContent() {
 
   return (
     <div className={cn(
-      "min-h-screen transition-colors duration-300 selection:bg-primary/20",
-      isDark ? "bg-[#0F172A] text-slate-200" : "bg-slate-50 text-slate-900"
+      "min-h-screen transition-all duration-500",
+      isDark ? "bg-[#0B0F1A] text-slate-200" : "bg-[#F8FAFC] text-slate-900"
     )}>
       <Navbar />
       
-      <main className="container mx-auto px-4 py-8 max-w-7xl">
+      <main className="container mx-auto px-6 py-10 max-w-[1400px]">
         {pathParam && (
           <div className={cn(
-            "mb-8 p-10 rounded-2xl border flex items-center gap-8 transition-all animate-in fade-in slide-in-from-top-4",
-            pathParam === 'chronological' ? "bg-blue-50/50 border-blue-100 text-blue-700" : 
-            pathParam === 'thematic' ? "bg-emerald-50/50 border-emerald-100 text-emerald-700" :
-            "bg-purple-50/50 border-purple-100 text-purple-700"
+            "mb-10 p-8 rounded-3xl border shadow-sm flex items-center gap-8 animate-in fade-in slide-in-from-top-4",
+            pathParam === 'chronological' ? "bg-blue-50/40 border-blue-100 text-blue-900" : 
+            pathParam === 'thematic' ? "bg-emerald-50/40 border-emerald-100 text-emerald-900" :
+            "bg-purple-50/40 border-purple-100 text-purple-900"
           )}>
-            <div className="p-5 bg-white rounded-xl shadow-sm">
-              {pathParam === 'chronological' ? <History className="h-10 w-10" /> : 
-               pathParam === 'thematic' ? <Link2 className="h-10 w-10" /> :
-               <Library className="h-10 w-10" />}
+            <div className="p-4 bg-white rounded-2xl shadow-sm">
+              {pathParam === 'chronological' ? <History className="h-8 w-8 text-blue-600" /> : 
+               pathParam === 'thematic' ? <Link2 className="h-8 w-8 text-emerald-600" /> :
+               <Library className="h-8 w-8 text-purple-600" />}
             </div>
             <div className="flex-1">
-              <p className="text-sm font-bold uppercase tracking-widest opacity-60 mb-1">Scribal Strategy Active: {pathParam.toUpperCase()}</p>
-              <h3 className="text-2xl font-bold">
-                {pathParam === 'chronological' ? "Historical Contextualization: Follow the sequence of the Grand Narrative." : 
-                 pathParam === 'thematic' ? "Canonical Reading: Trace the 'Golden Threads' across the canon." :
-                 "Genre Awareness: Adjusting lineation for literary form."}
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-1">Path: {pathParam}</p>
+              <h3 className="text-xl font-bold font-headline">
+                {pathParam === 'chronological' ? "Historical Contextualization: Sequence of the Grand Narrative." : 
+                 pathParam === 'thematic' ? "Canonical Reading: Tracing 'Golden Threads' through Scripture." :
+                 "Genre Awareness: Adapting lineation for literary form."}
               </h3>
             </div>
             {planDay && (
-              <Badge variant="outline" className="bg-white/50 border-none font-bold text-xl px-6 py-3">
+              <Badge variant="outline" className="bg-white border-slate-200 font-bold text-lg px-6 py-2.5 rounded-full">
                 Day {planDay.day}: {planDay.title}
               </Badge>
             )}
           </div>
         )}
 
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12">
-          <div className="space-y-1">
-            <div className="flex items-center gap-6">
-              <h1 className="text-6xl font-headline font-bold tracking-tight">Scriptorium Reader</h1>
-              <Button 
-                variant="ghost" size="icon" 
-                onClick={() => setTheme(prev => prev === "light" ? "dark" : "light")}
-                className="rounded-full hover:bg-primary/10 h-14 w-14"
-              >
-                {isDark ? <Sun className="h-8 w-8" /> : <Moon className="h-8 w-8" />}
-              </Button>
-            </div>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-12">
+          <div className="flex items-center gap-6">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-slate-900">Scriptorium</h1>
+            <Button 
+              variant="outline" size="icon" 
+              onClick={() => setTheme(prev => prev === "light" ? "dark" : "light")}
+              className="rounded-full h-11 w-11 hover:bg-slate-100 transition-colors"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 w-full lg:w-auto">
-             <form onSubmit={handleSearch} className="relative flex-1 lg:w-[450px] group">
-                <Search className="absolute left-5 top-1/2 -translate-y-1/2 h-6 w-6 text-slate-400 group-focus-within:text-primary transition-colors" />
+          <div className="flex flex-wrap items-center gap-4 w-full lg:w-auto">
+             <form onSubmit={handleSearch} className="relative flex-1 lg:w-[400px]">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
                 <Input 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Reference e.g. Romans 8:28"
+                  placeholder="e.g., Genesis 1:1"
                   className={cn(
-                    "pl-14 h-16 rounded-xl text-xl transition-all shadow-sm border-slate-200 focus:ring-primary/20",
+                    "pl-11 h-12 rounded-xl text-base shadow-sm border-slate-200 transition-all focus:ring-2 focus:ring-primary/10",
                     isDark ? "bg-slate-900 border-slate-800 text-white" : "bg-white"
                   )}
                 />
               </form>
               <BibleVersionSwitcher currentVersion={version} onVersionChange={setVersion} />
-              <div className="flex items-center gap-4">
-                <Button variant="outline" size="icon" className="rounded-xl border-slate-200 h-16 w-16 shadow-sm"><Bookmark className="h-7 w-7" /></Button>
-                <Button variant="outline" size="icon" className="rounded-xl border-slate-200 h-16 w-16 shadow-sm"><Share2 className="h-7 w-7" /></Button>
+              <div className="flex items-center gap-3">
+                <Button variant="outline" size="icon" className="rounded-xl h-12 w-12 hover:bg-slate-50"><Bookmark className="h-5 w-5" /></Button>
+                <Button variant="outline" size="icon" className="rounded-xl h-12 w-12 hover:bg-slate-50"><Share2 className="h-5 w-5" /></Button>
               </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-          <div className="lg:col-span-3 space-y-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-8 space-y-10">
             <Card className={cn(
-              "border-none shadow-2xl rounded-[3rem] overflow-hidden min-h-[800px] flex flex-col",
+              "border-none shadow-xl rounded-[2.5rem] overflow-hidden flex flex-col min-h-[800px]",
               isDark ? "bg-[#1E293B]" : "bg-white"
             )}>
-              <div className="bg-brand-gradient h-3 w-full" />
+              <div className="bg-brand-gradient h-1.5 w-full" />
               
-              <div className="px-12 md:px-24 pt-20">
+              <div className="px-10 pt-16">
                 <GuidedAscentStepper />
               </div>
 
-              <CardContent className="p-12 md:p-28 flex-1 pt-12">
+              <CardContent className="p-10 md:p-20 flex-1 pt-10">
                 {loading ? (
-                  <div className="flex flex-col items-center justify-center h-full py-32 opacity-30">
-                    <Loader2 className="h-20 w-20 animate-spin mb-8 text-primary" />
-                    <p className="text-2xl font-bold uppercase tracking-widest">Consulting the Scriptorium...</p>
+                  <div className="flex flex-col items-center justify-center h-full py-40 opacity-40">
+                    <Loader2 className="h-12 w-12 animate-spin mb-6 text-primary" />
+                    <p className="text-sm font-bold uppercase tracking-[0.3em]">Consulting the Scriptorium...</p>
                   </div>
                 ) : error ? (
-                  <div className="flex flex-col items-center justify-center h-full py-32 text-center max-w-xl mx-auto">
-                    <div className="h-28 w-28 bg-red-50 rounded-full flex items-center justify-center mb-10">
-                      <AlertCircle className="h-14 w-14 text-red-500" />
+                  <div className="flex flex-col items-center justify-center h-full py-32 text-center space-y-8">
+                    <div className="h-20 w-20 bg-red-50 rounded-full flex items-center justify-center">
+                      <AlertCircle className="h-10 w-10 text-red-500" />
                     </div>
-                    <h3 className="text-4xl font-bold mb-6">Retrieval Error</h3>
-                    <p className="text-xl text-slate-500 mb-12">{error}</p>
-                    <Button variant="outline" onClick={() => loadScripture(currentRef, version)} className="rounded-2xl h-16 px-12 text-lg font-bold">Try Again</Button>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold">Passage Not Found</h3>
+                      <p className="text-slate-500 max-w-sm">{error}</p>
+                    </div>
+                    <Button variant="outline" onClick={() => loadScripture(currentRef, version)} className="rounded-full px-8 h-12 font-bold">Retry Retrieval</Button>
                   </div>
                 ) : scripture ? (
-                  <article className="max-w-4xl mx-auto space-y-20 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                    <header className="text-center space-y-10">
+                  <article className="max-w-3xl mx-auto space-y-16 animate-in fade-in duration-700">
+                    <header className="text-center space-y-6">
                       {planDay?.audience && (
-                        <div className="inline-flex items-center gap-5 px-8 py-4 rounded-2xl bg-purple-50 border border-purple-100 text-purple-600 mb-6">
-                          <Users className="h-8 w-8" />
-                          <span className="text-xl font-bold uppercase tracking-widest">Audience: {planDay.audience}</span>
-                        </div>
+                        <Badge variant="secondary" className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-slate-100 text-slate-600 border-none">
+                          Audience: {planDay.audience}
+                        </Badge>
                       )}
-                      <h2 className={cn("text-8xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
+                      <h2 className={cn("text-5xl md:text-7xl font-headline font-bold tracking-tight", isDark ? "text-white" : "text-slate-900")}>
                         {scripture.reference}
                       </h2>
                     </header>
                     
                     <div className={cn(
-                      "bible-reader-text font-serif transition-colors duration-500",
+                      "bible-reader-text leading-relaxed font-serif transition-all duration-300",
                       isDark ? "text-slate-300" : "text-slate-800",
                       pathParam === 'genre' && "poetic-lineation"
                     )}>
@@ -296,62 +295,57 @@ function ReaderContent() {
                     </div>
 
                     {planDay?.mainTruth && (
-                      <div className="p-14 rounded-[3rem] bg-slate-50 border border-dashed border-slate-200 text-center space-y-10">
-                        <div className="flex items-center justify-center gap-5 text-slate-400">
-                          <Sparkles className="h-8 w-8" />
-                          <span className="text-lg font-bold uppercase tracking-widest">The One Main Truth</span>
-                        </div>
-                        <p className="text-4xl font-headline font-bold text-slate-900 leading-relaxed italic text-center">
+                      <div className="p-10 rounded-3xl bg-slate-50/50 border border-slate-100 text-center space-y-6">
+                        <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">The Core Truth</span>
+                        <p className="text-2xl font-headline font-bold text-slate-900 leading-snug italic">
                           "{planDay.mainTruth}"
                         </p>
                       </div>
                     )}
                     
-                    <div className="mt-32 pt-20 border-t border-slate-100/10">
-                      <div className="flex items-center gap-5 mb-12">
-                        <PenTool className="h-8 w-8 text-primary" />
-                        <span className="text-2xl font-bold uppercase tracking-widest text-slate-400">Scribe's Reflection</span>
+                    <div className="mt-24 pt-16 border-t border-slate-100">
+                      <div className="flex items-center gap-4 mb-8">
+                        <PenTool className="h-6 w-6 text-primary" />
+                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">Scribe's Reflection</span>
                       </div>
-                      <div className="space-y-10">
+                      <div className="space-y-6">
                         {planDay?.reflectionQuestion && (
-                          <div className="p-10 bg-primary/5 rounded-3xl border border-primary/10">
-                            <p className="text-2xl font-bold text-primary italic leading-relaxed">Scribe's Illumination: {planDay.reflectionQuestion}</p>
+                          <div className="p-8 bg-primary/5 rounded-2xl border border-primary/10">
+                            <p className="text-lg font-bold text-primary italic">Reflection: {planDay.reflectionQuestion}</p>
                           </div>
                         )}
                         <Textarea 
-                          placeholder={planDay?.reflectionQuestion ? "Answer the Illumination question..." : "What did you learn today?"}
+                          placeholder="Your study notes..."
                           className={cn(
-                            "min-h-[250px] rounded-[2rem] border-dashed transition-all text-xl p-10",
-                            isDark ? "bg-slate-900/50 border-slate-800" : "bg-slate-50/50 border-slate-200"
+                            "min-h-[200px] rounded-2xl transition-all p-8 text-lg border-slate-200 focus:ring-primary/10",
+                            isDark ? "bg-slate-900/50 border-slate-800" : "bg-white"
                           )}
                           value={scribeReflection}
                           onChange={(e) => setScribeReflection(e.target.value)}
                         />
                       </div>
-                      <p className="mt-8 text-lg text-slate-400 font-medium italic">Metacognition: Teaching yourself how to learn scripture.</p>
                     </div>
 
                     {pathParam && (
-                      <div className="pt-24 flex items-center justify-center gap-12">
+                      <div className="pt-20 flex items-center justify-between border-t border-slate-100">
                         <Button 
                           variant="ghost" 
                           onClick={() => {
                             if (dayParam > 1) router.push(`/reader?path=${pathParam}&day=${dayParam - 1}`);
                           }} 
                           disabled={dayParam <= 1}
-                          className="rounded-2xl gap-5 font-bold text-xl uppercase tracking-widest h-16 px-10"
+                          className="rounded-full gap-3 font-bold text-sm h-11 px-6 hover:bg-slate-50"
                         >
-                          <ChevronLeft className="h-8 w-8" /> Previous Day
+                          <ChevronLeft className="h-5 w-5" /> Previous Day
                         </Button>
-                        <Separator orientation="vertical" className="h-16" />
                         <Button 
                           variant="ghost" 
                           onClick={() => {
                             router.push(`/reader?path=${pathParam}&day=${dayParam + 1}`);
                           }}
-                          className="rounded-2xl gap-5 font-bold text-xl uppercase tracking-widest h-16 px-10"
+                          className="rounded-full gap-3 font-bold text-sm h-11 px-6 hover:bg-slate-50"
                         >
-                          Next Day <ChevronRight className="h-8 w-8" />
+                          Next Day <ChevronRight className="h-5 w-5" />
                         </Button>
                       </div>
                     )}
@@ -361,40 +355,37 @@ function ReaderContent() {
             </Card>
           </div>
 
-          <aside className="space-y-12">
+          <aside className="lg:col-span-4 space-y-10">
             {planDay?.thematicLedger && (
-              <Card className="border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white border border-slate-100">
-                <CardHeader className="p-10 pb-6">
-                  <CardTitle className="text-xl font-bold uppercase tracking-widest flex items-center gap-4 text-primary">
-                    <ListChecks className="h-8 w-8" /> Covenant Tracker
+              <Card className="border-none shadow-lg rounded-3xl overflow-hidden bg-white border border-slate-100">
+                <CardHeader className="p-8 pb-4">
+                  <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-primary">
+                    <ListChecks className="h-5 w-5" /> Covenant Tracker
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-10 pt-0 space-y-8">
-                  <p className="text-lg text-slate-400 italic">Tracing the Golden Thread of Redemption.</p>
-                  <div className="space-y-5">
-                    {planDay.thematicLedger.map((item, i) => (
-                      <div key={i} className="flex items-center justify-between p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                        <span className="text-lg font-bold text-slate-500">{item.label}</span>
-                        <span className="text-lg font-bold text-primary">{item.value}</span>
-                      </div>
-                    ))}
-                  </div>
+                <CardContent className="p-8 pt-0 space-y-4">
+                  {planDay.thematicLedger.map((item, i) => (
+                    <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-100">
+                      <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{item.label}</span>
+                      <span className="text-sm font-bold text-primary">{item.value}</span>
+                    </div>
+                  ))}
                 </CardContent>
               </Card>
             )}
 
             {planDay?.culturalInsights && (
-               <Card className="border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-amber-50 border border-amber-100">
-                <CardHeader className="p-10 pb-6">
-                   <CardTitle className="text-xl font-bold uppercase tracking-widest flex items-center gap-4 text-amber-600">
-                    <Compass className="h-8 w-8" /> Scribe's Marginalia
+               <Card className="border-none shadow-lg rounded-3xl overflow-hidden bg-white border border-slate-100">
+                <CardHeader className="p-8 pb-4">
+                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-amber-600">
+                    <Compass className="h-5 w-5" /> Marginalia
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-10 pt-0 space-y-10">
+                <CardContent className="p-8 pt-0 space-y-6">
                   {planDay.culturalInsights.map((insight, i) => (
-                    <div key={i} className="space-y-4">
-                      <p className="text-2xl font-bold text-amber-800">{insight.title}</p>
-                      <p className="text-lg text-amber-700/90 leading-relaxed italic">{insight.note}</p>
+                    <div key={i} className="space-y-2">
+                      <p className="text-sm font-bold text-slate-900">{insight.title}</p>
+                      <p className="text-sm text-slate-500 leading-relaxed italic">{insight.note}</p>
                     </div>
                   ))}
                 </CardContent>
@@ -402,18 +393,18 @@ function ReaderContent() {
             )}
 
             {planDay?.scribalStrategy && (
-              <Card className="border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-purple-50 border border-purple-100">
-                <CardHeader className="p-10 pb-6">
-                   <CardTitle className="text-xl font-bold uppercase tracking-widest flex items-center gap-4 text-purple-600">
-                    <PenTool className="h-8 w-8" /> Scribal Strategy
+              <Card className="border-none shadow-lg rounded-3xl overflow-hidden bg-[#F1F5F9] border border-slate-200">
+                <CardHeader className="p-8 pb-4">
+                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-slate-700">
+                    <PenTool className="h-5 w-5" /> Scribal Strategy
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-10 pt-0 space-y-8">
-                  <div className="space-y-6">
+                <CardContent className="p-8 pt-0 space-y-5">
+                  <div className="space-y-4">
                     {planDay.scribalStrategy.instructions.map((step, i) => (
-                      <div key={i} className="space-y-3">
-                        <p className="text-lg font-bold text-purple-800">{i + 1}. {step.split(':')[0]}</p>
-                        <p className="text-lg text-purple-600/90 leading-relaxed">{step.includes(':') ? step.split(':')[1] : step}</p>
+                      <div key={i} className="flex gap-3">
+                        <span className="h-5 w-5 shrink-0 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200">{i + 1}</span>
+                        <p className="text-sm text-slate-600 leading-relaxed">{step}</p>
                       </div>
                     ))}
                   </div>
@@ -421,22 +412,20 @@ function ReaderContent() {
               </Card>
             )}
 
-            <Card className={cn("border-none shadow-xl rounded-[2.5rem] overflow-hidden flex flex-col min-h-[600px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
-              <CardHeader className="p-10 pb-8 border-b border-slate-100/10">
+            <Card className={cn("border-none shadow-xl rounded-3xl overflow-hidden flex flex-col min-h-[500px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
+              <CardHeader className="p-8 pb-6 border-b border-slate-50">
                 <div className="flex items-center justify-between">
-                  <div className="space-y-3">
-                    <CardTitle className="text-xl font-bold uppercase tracking-widest flex items-center gap-4">
-                      <MessageSquare className="h-8 w-8 text-primary" /> Community Feed
-                    </CardTitle>
-                  </div>
+                  <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3">
+                    <MessageSquare className="h-5 w-5 text-primary" /> Community
+                  </CardTitle>
                   {user && (
                     <Button 
                       variant="ghost" 
                       size="icon" 
-                      className="h-14 w-14 rounded-full bg-primary/5 text-primary"
+                      className="h-10 w-10 rounded-full hover:bg-primary/5 text-primary"
                       onClick={() => setShowAddForm(!showAddForm)}
                     >
-                      <Plus className={cn("h-8 w-8 transition-transform", showAddForm && "rotate-45")} />
+                      <Plus className={cn("h-5 w-5 transition-transform duration-300", showAddForm && "rotate-45")} />
                     </Button>
                   )}
                 </div>
@@ -444,21 +433,21 @@ function ReaderContent() {
               
               <CardContent className="p-0 flex-1 flex flex-col">
                 {showAddForm && user && (
-                  <div className="p-10 bg-primary/5 border-b border-primary/10 animate-in slide-in-from-top duration-300">
+                  <div className="p-6 bg-slate-50/50 border-b border-slate-50 animate-in slide-in-from-top duration-300">
                     <Textarea 
                       placeholder="Share a scholarly insight..."
-                      className="min-h-[160px] mb-8 text-xl rounded-2xl border-primary/20 bg-white p-8"
+                      className="min-h-[120px] mb-4 text-base rounded-xl border-slate-200 bg-white p-4"
                       value={newComment}
                       onChange={(e) => setNewComment(e.target.value)}
                     />
                     <div className="flex justify-end">
                       <Button 
-                        size="lg" 
-                        className="btn-gradient rounded-xl text-xl font-bold uppercase tracking-widest px-10 h-14" 
+                        size="sm" 
+                        className="btn-gradient rounded-full font-bold px-6 h-10 gap-2" 
                         onClick={handleAddInsight}
                         disabled={!newComment.trim()}
                       >
-                        Publish Insight
+                        Post <Send className="h-3.5 w-3.5" />
                       </Button>
                     </div>
                   </div>
@@ -466,40 +455,40 @@ function ReaderContent() {
 
                 <ScrollArea className="flex-1">
                   {isAnnotationsLoading ? (
-                    <div className="p-24 flex flex-col items-center opacity-20">
-                      <Loader2 className="h-12 w-12 animate-spin mb-8" />
-                      <span className="text-lg font-bold uppercase tracking-widest">Loading Feed...</span>
+                    <div className="p-20 flex flex-col items-center opacity-20">
+                      <Loader2 className="h-8 w-8 animate-spin mb-4" />
+                      <span className="text-xs font-bold uppercase tracking-widest">Updating...</span>
                     </div>
                   ) : remoteAnnotations && remoteAnnotations.length > 0 ? (
-                    <div className="divide-y divide-slate-100/10">
+                    <div className="divide-y divide-slate-50">
                       {remoteAnnotations.map((ann) => (
-                        <div key={ann.id} className="p-12 hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors">
-                          <div className="flex items-center gap-6 mb-8">
-                            <Avatar className="h-14 w-14 border border-slate-200">
+                        <div key={ann.id} className="p-6 hover:bg-slate-50/30 transition-colors">
+                          <div className="flex items-center gap-4 mb-4">
+                            <Avatar className="h-10 w-10 border border-slate-100 shadow-sm">
                               <AvatarImage src={ann.userAvatarUrl} />
-                              <AvatarFallback className="bg-primary/10 text-primary text-xl font-bold">
+                              <AvatarFallback className="bg-primary/5 text-primary text-xs font-bold">
                                 {ann.userDisplayName?.charAt(0) || "S"}
                               </AvatarFallback>
                             </Avatar>
                             <div className="flex-1 min-w-0">
-                              <p className="text-2xl font-bold truncate">{ann.userDisplayName}</p>
-                              <p className="text-sm text-slate-400 font-bold uppercase tracking-widest mt-1">
+                              <p className="text-sm font-bold truncate text-slate-900">{ann.userDisplayName}</p>
+                              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
                                 {ann.createdAt?.seconds 
                                   ? new Date(ann.createdAt.seconds * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                                   : 'Just now'}
                               </p>
                             </div>
                           </div>
-                          <p className="text-2xl text-slate-600 dark:text-slate-400 leading-relaxed font-body">
+                          <p className="text-sm text-slate-600 leading-relaxed font-body">
                             {ann.comment}
                           </p>
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <div className="p-24 text-center opacity-40">
-                      <MessageSquare className="h-14 w-14 mx-auto mb-10" />
-                      <p className="text-xl font-bold uppercase tracking-widest">No insights yet for this passage.</p>
+                    <div className="p-20 text-center opacity-30 flex flex-col items-center space-y-4">
+                      <BookOpen className="h-10 w-10" />
+                      <p className="text-xs font-bold uppercase tracking-widest">No insights yet.</p>
                     </div>
                   )}
                 </ScrollArea>
@@ -511,28 +500,26 @@ function ReaderContent() {
 
       <style jsx global>{`
         .bible-reader-text {
-          font-size: 2.25rem;
-          line-height: 2.6;
-          max-width: 80ch;
-          margin-left: auto;
-          margin-right: auto;
+          font-size: 1.75rem;
+          line-height: 2.4;
+          max-width: 75ch;
+          margin: 0 auto;
         }
         .bible-reader-text sup {
-          font-size: 1.25rem;
+          font-size: 1.1rem;
           font-weight: 800;
           color: #94A3B8;
-          margin-right: 1.5rem;
+          margin-right: 1.25rem;
           vertical-align: super;
           font-family: 'Space Grotesk', sans-serif;
         }
         .bible-reader-text p {
-          margin-bottom: 3.5rem;
+          margin-bottom: 2.5rem;
         }
         .poetic-lineation p {
-          padding-left: 4rem;
-          text-indent: -4rem;
-          margin-bottom: 2.5rem;
-          line-height: 2.4;
+          padding-left: 3.5rem;
+          text-indent: -3.5rem;
+          margin-bottom: 2rem;
         }
       `}</style>
     </div>
@@ -541,7 +528,7 @@ function ReaderContent() {
 
 export default function ReaderPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-slate-50"><Loader2 className="h-16 w-16 animate-spin text-primary" /></div>}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]"><Loader2 className="h-12 w-12 animate-spin text-primary" /></div>}>
       <ReaderContent />
     </Suspense>
   );
