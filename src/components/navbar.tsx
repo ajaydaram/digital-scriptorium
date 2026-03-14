@@ -62,20 +62,20 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-2">
-            <BookOpen className="h-6 w-6 text-primary" />
-            <span className="hidden font-headline font-bold sm:inline-block text-xl">The Scriptorium</span>
+        <div className="flex items-center gap-8">
+          <Link href="/" className="flex items-center space-x-3 group">
+            <BookOpen className="h-6 w-6 text-primary group-hover:scale-110 transition-transform" />
+            <span className="font-headline font-bold text-xl tracking-tight">The Scriptorium</span>
           </Link>
 
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-8">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </Link>
@@ -84,14 +84,14 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="hidden sm:flex items-center gap-3">
             <Link href="/api-reader">
-              <Button variant="ghost" size="sm" className="gap-2 h-9 px-4 font-semibold text-muted-foreground">
+              <Button variant="ghost" size="sm" className="gap-2 font-semibold">
                 <Zap className="h-4 w-4" /> Simple
               </Button>
             </Link>
             <Link href="/reader">
-              <Button variant="default" size="sm" className="gap-2 h-9 px-4 font-bold rounded-md">
+              <Button variant="default" size="sm" className="gap-2 font-bold px-5">
                 <Book className="h-4 w-4" /> Enhanced Reader
               </Button>
             </Link>
@@ -100,28 +100,24 @@ export function Navbar() {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-9 w-9">
+                <Button variant="ghost" size="icon">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <nav className="flex flex-col gap-4 mt-8">
+              <SheetContent side="right">
+                <nav className="flex flex-col gap-6 mt-10">
                   {navLinks.map((link) => (
-                    <Link 
-                      key={link.href}
-                      href={link.href}
-                      className="text-lg font-semibold"
-                    >
+                    <Link key={link.href} href={link.href} className="text-lg font-bold">
                       {link.label}
                     </Link>
                   ))}
-                  <div className="flex flex-col gap-2 pt-4 border-t">
-                    <Link href="/api-reader">
-                      <Button variant="ghost" className="w-full justify-start gap-3">
+                  <div className="flex flex-col gap-3 pt-6 border-t">
+                    <Link href="/api-reader" className="w-full">
+                      <Button variant="outline" className="w-full justify-start gap-3">
                         <Zap className="h-4 w-4" /> Simple Reader
                       </Button>
                     </Link>
-                    <Link href="/reader">
+                    <Link href="/reader" className="w-full">
                       <Button variant="default" className="w-full justify-start gap-3">
                         <Book className="h-4 w-4" /> Enhanced Reader
                       </Button>
@@ -137,31 +133,31 @@ export function Navbar() {
               {user ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-9 w-9 rounded-full ring-1 ring-border hover:ring-primary/20 transition-all">
+                    <Button variant="ghost" className="relative h-9 w-9 rounded-full ring-1 ring-border">
                       <Avatar className="h-9 w-9">
                         <AvatarImage src={user.photoURL || undefined} alt={user.displayName || "User"} />
-                        <AvatarFallback className="bg-muted text-muted-foreground font-bold text-xs uppercase">
-                          {user.displayName?.charAt(0) || user.email?.charAt(0) || "U"}
+                        <AvatarFallback className="text-[10px] font-bold">
+                          {user.displayName?.charAt(0) || "U"}
                         </AvatarFallback>
                       </Avatar>
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56" align="end" forceMount>
+                  <DropdownMenuContent className="w-56" align="end">
                     <DropdownMenuLabel className="font-normal">
                       <div className="flex flex-col space-y-1">
-                        <p className="text-sm font-medium leading-none">{user.displayName}</p>
-                        <p className="text-xs leading-none text-muted-foreground truncate">{user.email}</p>
+                        <p className="text-sm font-bold">{user.displayName}</p>
+                        <p className="text-xs text-muted-foreground truncate">{user.email}</p>
                       </div>
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
-                       <Link href="/reader">
+                       <Link href="/reader" className="w-full">
                          <LayoutDashboard className="mr-2 h-4 w-4" />
                          <span>Scholar Dashboard</span>
                        </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600 focus:bg-red-50 focus:text-red-600">
+                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600">
                       <LogOut className="mr-2 h-4 w-4" />
                       <span>Sign Out</span>
                     </DropdownMenuItem>
@@ -172,7 +168,7 @@ export function Navbar() {
                   onClick={handleSignIn} 
                   variant="outline" 
                   size="sm"
-                  className="font-bold h-9 px-4 rounded-md"
+                  className="font-bold px-5"
                 >
                   Sign In
                 </Button>

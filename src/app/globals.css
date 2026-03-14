@@ -54,7 +54,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased selection:bg-primary/10;
+    @apply bg-background text-foreground font-body antialiased selection:bg-primary/10 m-0 p-0;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline tracking-tight;
@@ -73,8 +73,15 @@
   @apply bg-white/70 backdrop-blur-md border border-white/20 dark:bg-zinc-950/70 dark:border-zinc-800/50;
 }
 
-.bible-text-display {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 2.2;
+/* Enhanced Reader Typography */
+.bible-reader-text {
+  @apply font-serif text-[1.75rem] leading-[2.4] max-w-[75ch] mx-auto;
+}
+
+.bible-reader-text sup {
+  @apply text-[1.1rem] font-bold text-muted-foreground mr-5 align-super font-headline;
+}
+
+.bible-reader-text p {
+  @apply mb-10;
 }

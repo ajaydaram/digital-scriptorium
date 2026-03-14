@@ -10,66 +10,61 @@ import {
   ArrowRight, 
   BookOpen, 
   Users, 
-  BookText,
-  Milestone,
-  TrendingUp,
-  Library
+  Zap,
+  CheckCircle2
 } from "lucide-react";
 import Link from "next/link";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <Navbar />
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-background">
+        <section className="relative py-24 md:py-40 overflow-hidden">
           <div className="container relative z-10 mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              <div className="text-center lg:text-left space-y-8 animate-in fade-in slide-in-from-bottom-5 duration-700">
-                <Badge variant="secondary" className="px-4 py-1.5 text-xs font-bold uppercase tracking-widest bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
-                  Powered by API.Bible
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="text-center lg:text-left space-y-10 animate-in fade-in slide-in-from-bottom-5 duration-700">
+                <Badge variant="secondary" className="px-5 py-2 text-xs font-bold uppercase tracking-widest bg-muted text-muted-foreground border-none">
+                  Academic Bible Engagement
                 </Badge>
                 
-                <h1 className="text-5xl md:text-7xl font-headline font-bold leading-[1.1] tracking-tighter">
-                  Bridge the Gap from <br /> 
-                  <span className="gradient-text">Casual to Deep Study</span>
+                <h1 className="text-5xl md:text-8xl font-headline font-bold leading-[1] tracking-tighter">
+                  From Casual to <br /> 
+                  <span className="gradient-text">Deep Study</span>
                 </h1>
                 
-                <p className="text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                  The Scriptorium is a research-backed Bible study platform helping everyday believers grow from reading to meaningful engagement.
+                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body">
+                  A research-backed platform for serious scripture engagement. Master the Bible through structured paths, community hermeneutics, and AI insights.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <Link href="/reader">
-                    <Button size="lg" className="h-14 px-8 font-bold text-lg rounded-md w-full sm:w-auto">
-                      Start Enhanced Reading
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">
+                  <Link href="/reader" className="w-full sm:w-auto">
+                    <Button size="lg" className="h-16 px-10 font-bold text-lg rounded-xl w-full">
+                      Launch Enhanced Reader
                     </Button>
                   </Link>
-                  <Link href="/paths">
-                    <Button variant="outline" size="lg" className="h-14 px-8 font-bold text-lg rounded-md w-full sm:w-auto">
-                      Explore Paths
+                  <Link href="/paths" className="w-full sm:w-auto">
+                    <Button variant="outline" size="lg" className="h-16 px-10 font-bold text-lg rounded-xl w-full border-border">
+                      Explore 3 Paths
                     </Button>
                   </Link>
                 </div>
 
-                <div className="pt-8 flex flex-wrap justify-center lg:justify-start gap-8 opacity-60">
-                  <div className="flex items-center gap-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
-                    <Users className="h-4 w-4" /> Collaborative
+                <div className="pt-10 flex flex-wrap justify-center lg:justify-start gap-10">
+                  <div className="flex items-center gap-3 text-sm font-bold text-muted-foreground uppercase tracking-widest">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500" /> Research-Backed
                   </div>
-                  <div className="flex items-center gap-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
-                    <BookOpen className="h-4 w-4" /> Research-Backed
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
-                     285+ Versions
+                  <div className="flex items-center gap-3 text-sm font-bold text-muted-foreground uppercase tracking-widest">
+                    <CheckCircle2 className="h-5 w-5 text-blue-500" /> Collaborative
                   </div>
                 </div>
               </div>
 
-              <div className="relative group perspective-1000">
-                <div className="absolute -inset-4 bg-brand-gradient/10 blur-[60px] rounded-full group-hover:bg-brand-gradient/20 transition-all duration-700" />
-                <div className="relative z-10 bg-card border border-border rounded-2xl shadow-2xl overflow-hidden transition-transform duration-500 hover:rotate-y-2">
+              <div className="relative group">
+                <div className="absolute -inset-10 bg-brand-gradient/10 blur-[100px] rounded-full opacity-50 group-hover:opacity-75 transition-opacity" />
+                <div className="relative z-10 border border-border rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] overflow-hidden bg-white">
                   <AnnotationMock />
                 </div>
               </div>
@@ -78,40 +73,41 @@ export default function LandingPage() {
         </section>
 
         {/* User Journey Section */}
-        <section className="py-24 bg-zinc-50 dark:bg-zinc-900/50">
+        <section className="py-32 border-t border-border bg-muted/30">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 tracking-tight">Your Learning Journey</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-16">
-              From curious beginner to confident mentor - guided growth in biblical understanding.
+            <h2 className="text-4xl md:text-6xl font-headline font-bold mb-8 tracking-tighter">The Scholar's Journey</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-20 leading-relaxed">
+              From initial curiosity to authoritative mentorship—a scaffolded approach to biblical literacy.
             </p>
             <UserJourney />
           </div>
         </section>
 
         {/* Framework Section */}
-        <section className="py-24 border-y border-border">
+        <section className="py-32 border-t border-border">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <Badge variant="outline" className="mb-4 px-4 py-1 text-primary font-bold uppercase tracking-widest border-primary/20">METHODOLOGY</Badge>
-              <h2 className="text-3xl md:text-5xl font-headline font-bold tracking-tight">Three Structured Paths</h2>
+            <div className="text-center mb-20">
+              <Badge variant="outline" className="mb-6 px-5 py-1.5 text-primary font-bold uppercase tracking-widest border-border">PEDAGOGICAL FRAMEWORK</Badge>
+              <h2 className="text-4xl md:text-6xl font-headline font-bold tracking-tighter">Three Structured Paths</h2>
             </div>
             <ReadingPathsSection />
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center space-y-8">
-             <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">
-               Transform Your Study Today
+        <section className="py-40 bg-primary text-primary-foreground relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-1/2" />
+          <div className="container relative z-10 mx-auto px-4 text-center space-y-12">
+             <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter">
+               Ready to Deepen Your Study?
              </h2>
-             <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-               Join a community moving beyond surface-level reading into deep Scripture engagement.
+             <p className="text-2xl text-primary-foreground/70 max-w-2xl mx-auto leading-relaxed">
+               Join a global community of students moving beyond the surface into the riches of God's Word.
              </p>
-             <div className="flex justify-center pt-4">
+             <div className="flex justify-center pt-8">
                 <Link href="/reader">
-                  <Button size="lg" variant="secondary" className="h-16 px-12 font-bold text-lg rounded-md shadow-xl hover:scale-105 transition-transform">
-                    Launch Bible Reader <ArrowRight className="h-5 w-5 ml-2" />
+                  <Button size="lg" variant="secondary" className="h-20 px-16 font-bold text-xl rounded-2xl shadow-2xl hover:scale-105 transition-transform">
+                    Start Your Journey Today <ArrowRight className="h-6 w-6 ml-3" />
                   </Button>
                 </Link>
              </div>
@@ -119,15 +115,20 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="bg-background py-12 border-t border-border">
+      <footer className="bg-background py-20 border-t border-border">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-2">
-              <BookOpen className="h-6 w-6 text-primary" />
-              <span className="font-headline font-bold text-lg uppercase tracking-wider">The Scriptorium</span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+            <div className="flex items-center gap-3">
+              <BookOpen className="h-7 w-7 text-primary" />
+              <span className="font-headline font-bold text-2xl tracking-tighter">The Scriptorium</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              © 2025 Scriptorium Platform. Powered by API.Bible.
+            <div className="flex gap-10 text-sm font-bold text-muted-foreground uppercase tracking-widest">
+              <Link href="/paths" className="hover:text-primary transition-colors">Paths</Link>
+              <Link href="/pedagogy" className="hover:text-primary transition-colors">Pedagogy</Link>
+              <Link href="/hub" className="hover:text-primary transition-colors">Study Hub</Link>
+            </div>
+            <p className="text-sm text-muted-foreground font-medium">
+              © 2025 Scriptorium. Content by API.Bible.
             </p>
           </div>
         </div>
