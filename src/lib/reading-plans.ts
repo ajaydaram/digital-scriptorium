@@ -187,7 +187,35 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "Where am I currently tempted by 'palace life'—the moments when I think I've 'arrived' and no longer need to be on guard?"
   },
-  21: { day: 21, reference: "2 Samuel 12:1-15", title: "The Confrontation" }
+  21: { 
+    day: 21, 
+    reference: "2 Samuel 12:1-15", 
+    title: "The Holy Ambush",
+    historicalSnapshot: {
+      ref: "2 Samuel 12:7",
+      text: "Nathan said to David, 'You are the man!'"
+    },
+    culturalInsights: [
+      { 
+        title: "The Parable of the Ewe Lamb", 
+        note: "Nathan uses a story about a poor man's only pet lamb to bypass David's royal defenses and reach his shepherd's heart." 
+      },
+      { 
+        title: "The Holy Ambush", 
+        note: "The four words 'You are the man!' broke a year of spiritual silence and led to the birth of Psalm 51." 
+      }
+    ],
+    scribalStrategy: {
+      title: "The Mirror of Truth",
+      instructions: [
+        "Transcribe Nathan's parable (v. 1-4) in an indented, storytelling script.",
+        "Write 'YOU ARE THE MAN' in the center of the page in large, stark letters.",
+        "Transcribe David's confession (v. 13) and the opening of Psalm 51:1-2 at the bottom.",
+        "Draw a small Ewe Lamb as a symbol of both the parable and the Lamb of God."
+      ]
+    },
+    reflectionQuestion: "David could have killed the prophet, but he chose to kill his pride. Where is God using a 'mirror' to show me a truth I've been hiding from?"
+  }
 };
 
 export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
@@ -394,7 +422,7 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     scribalStrategy: { 
       title: "The Celestial Arch", 
       instructions: [
-        "Write the opening verses in a gentle arch across the top of your page.",
+        "Write the first few verses in a gentle arch across the top of your page.",
         "Space your lines widely to represent the vastness of the heavens.",
         "Use a bolder, stronger script for 'Bridegroom' and 'Strong Man'."
       ] 
