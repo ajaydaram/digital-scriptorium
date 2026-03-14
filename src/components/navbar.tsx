@@ -91,7 +91,7 @@ export function Navbar() {
               </Button>
             </Link>
             <Link href="/reader">
-              <Button variant="default" size="sm" className="gap-2 font-bold px-5">
+              <Button size="sm" className="btn-gradient gap-2 font-bold px-6">
                 <Book className="h-4 w-4" /> Enhanced Reader
               </Button>
             </Link>
@@ -118,7 +118,7 @@ export function Navbar() {
                       </Button>
                     </Link>
                     <Link href="/reader" className="w-full">
-                      <Button variant="default" className="w-full justify-start gap-3">
+                      <Button className="btn-gradient w-full justify-start gap-3">
                         <Book className="h-4 w-4" /> Enhanced Reader
                       </Button>
                     </Link>
@@ -133,10 +133,10 @@ export function Navbar() {
               {user ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-9 w-9 rounded-full ring-1 ring-border">
-                      <Avatar className="h-9 w-9">
+                    <Button variant="ghost" className="relative h-10 w-10 rounded-full border border-border overflow-hidden">
+                      <Avatar className="h-full w-full">
                         <AvatarImage src={user.photoURL || undefined} alt={user.displayName || "User"} />
-                        <AvatarFallback className="text-[10px] font-bold">
+                        <AvatarFallback className="text-xs font-bold">
                           {user.displayName?.charAt(0) || "U"}
                         </AvatarFallback>
                       </Avatar>
@@ -151,13 +151,13 @@ export function Navbar() {
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
-                       <Link href="/reader" className="w-full">
+                       <Link href="/reader" className="w-full cursor-pointer">
                          <LayoutDashboard className="mr-2 h-4 w-4" />
                          <span>Scholar Dashboard</span>
                        </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600">
+                    <DropdownMenuItem onClick={handleSignOut} className="text-red-600 cursor-pointer">
                       <LogOut className="mr-2 h-4 w-4" />
                       <span>Sign Out</span>
                     </DropdownMenuItem>
@@ -168,7 +168,7 @@ export function Navbar() {
                   onClick={handleSignIn} 
                   variant="outline" 
                   size="sm"
-                  className="font-bold px-5"
+                  className="font-bold px-6 rounded-xl"
                 >
                   Sign In
                 </Button>
