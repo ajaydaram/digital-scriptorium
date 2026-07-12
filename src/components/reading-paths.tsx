@@ -3,7 +3,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, History, Library, Lightbulb, CheckCircle2, PenTool } from "lucide-react";
+import { ArrowRight, History, Library, Lightbulb, CheckCircle2, PenTool, BookOpen } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
@@ -62,10 +62,10 @@ const PATHS = [
     icon: <Library className="h-6 w-6 text-purple-600" />,
     strategy: "Genre Awareness",
     features: [
-      "Stanza-based poetic lineation", 
-      "Audience identification headers",
-      "Narrative arc sketches",
-      "The 'One Main Truth' reflection"
+      "Poetic lineation frameworks", 
+      "Audience identification panels",
+      "Narrative context indicators",
+      "Poetic and narrative styles"
     ],
     image: PlaceHolderImages.find(i => i.id === "path-genre")?.imageUrl,
     imageHint: PlaceHolderImages.find(i => i.id === "path-genre")?.imageHint,
@@ -74,6 +74,28 @@ const PATHS = [
     badgeText: "LITERARY PRECISION",
     badgeClass: "bg-purple-100/50 text-purple-700 border-purple-200/50",
     startRef: "Matthew 13:1",
+    day: 1
+  },
+  {
+    id: "entire",
+    title: "The Great Codex: Entire Bible Plan",
+    subtitle: "The Great Codex",
+    description: "Transcribe the entire Bible. A 3-year plan covering all 1,189 chapters sequentially from Genesis 1 to Revelation 22.",
+    icon: <BookOpen className="h-6 w-6 text-amber-600" />,
+    strategy: "Canonical Completeness",
+    features: [
+      "Chapter-by-chapter progression",
+      "Deterministic vocabulary keys",
+      "Dynamic scribal instructions",
+      "Complete offline concordance"
+    ],
+    image: PlaceHolderImages.find(i => i.id === "path-thematic")?.imageUrl, // fallback to thematic image
+    imageHint: "Scribe reading a large ancient Bible codex scroll",
+    bgClass: "bg-amber-50/50",
+    accentColor: "text-amber-600",
+    badgeText: "CANONICAL TEXT",
+    badgeClass: "bg-amber-100/50 text-amber-700 border-amber-200/50",
+    startRef: "Genesis 1",
     day: 1
   }
 ];
@@ -86,7 +108,7 @@ export function ReadingPathsSection() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
       {PATHS.map((path) => (
         <Card 
           key={path.id} 

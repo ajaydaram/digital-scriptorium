@@ -9,19 +9,19 @@
     {
       "id": "path-chronological",
       "description": "Historical timeline representation",
-      "imageUrl": "https://picsum.photos/seed/chron/600/400",
+      "imageUrl": "/images/path-chronological.jpg",
       "imageHint": "history timeline"
     },
     {
       "id": "path-thematic",
       "description": "Theological connections and mapping",
-      "imageUrl": "https://picsum.photos/seed/thematic/600/400",
+      "imageUrl": "/images/path-thematic.jpg",
       "imageHint": "connection map"
     },
     {
       "id": "path-genre",
       "description": "Literary scrolls and books",
-      "imageUrl": "https://picsum.photos/seed/literary/600/400",
+      "imageUrl": "/images/path-genre.jpg",
       "imageHint": "ancient scrolls"
     }
   ]

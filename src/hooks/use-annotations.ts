@@ -10,7 +10,7 @@ import { addDocumentNonBlocking } from '@/firebase/non-blocking-updates';
  */
 export function useAnnotations(passageRef: string) {
   const { user } = useUser();
-  const { firestore } = useFirestore();
+  const firestore = useFirestore();
 
   const annotationsQuery = useMemoFirebase(() => {
     if (!firestore || !user) return null;

@@ -9,7 +9,8 @@ import {
   Lightbulb, 
   Library, 
   ChevronRight,
-  Sparkles
+  Sparkles,
+  BookOpen
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -24,7 +25,7 @@ const PATH_CARDS = [
     icon: History,
     color: "text-blue-500",
     bg: "bg-blue-50/50",
-    link: "/reader?path=chronological&day=1",
+    link: "/reader?path=chronological&day=15",
     active: true
   },
   {
@@ -42,11 +43,22 @@ const PATH_CARDS = [
     id: "genre",
     title: "Genre Path",
     subtitle: "LITERARY PRECISION",
-    description: "Learn to read literature types. 7-Day Starter: Master the Parables of Jesus.",
+    description: "Learn to read literature types. 56-Day Syllabus: Wisdom, poetry, and parables.",
     icon: Library,
     color: "text-purple-500",
     bg: "bg-purple-50/50",
     link: "/reader?path=genre&day=1",
+    active: true
+  },
+  {
+    id: "entire",
+    title: "The Great Codex",
+    subtitle: "CANONICAL COMPLETENESS",
+    description: "Read through the entire Bible chapter-by-chapter. A sustainable 3-year plan for serious, daily scribing.",
+    icon: BookOpen,
+    color: "text-amber-600",
+    bg: "bg-amber-50/50",
+    link: "/reader?path=entire&day=1",
     active: true
   }
 ];
@@ -70,9 +82,9 @@ export default function ReadingPathsPage() {
             </p>
           </div>
         </section>
-
+        
         <div className="container mx-auto px-4 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {PATH_CARDS.map((path) => (
               <Card key={path.id} className={cn(
                 "border-none shadow-xl rounded-[2rem] overflow-hidden flex flex-col group hover:scale-[1.02] transition-all duration-500",

@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { GuidedAscentStepper } from "@/components/guided-ascent-stepper";
@@ -14,11 +14,24 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
-import { getPlanDay, type PathId } from "@/lib/reading-plans";
+import { getPlanDay, getPlanDays, type PathId } from "@/lib/reading-plans";
 import { useUser, useFirestore, useCollection, useMemoFirebase, useAuth } from "@/firebase";
-import { saveAnnotation, getAnnotationsQuery } from "@/services/annotationService";
+import { saveAnnotation, getAnnotationsQuery, toggleAnnotationReaction } from "@/services/annotationService";
+import { getUserCirclesQuery } from "@/services/circleService";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
+import { studyWord, type WordStudyOutput } from "@/ai/flows/word-study";
+import { getInterlinearAnalysis, type InterlinearOutput } from "@/ai/flows/interlinear";
+import { Switch } from "@/components/ui/switch";
+import ChronologicalDesk from "@/components/chronological-desk";
+import JudeanMap from "@/components/judean-map";
+import AnnotationFeed from "@/components/reader/annotation-feed";
+import ScribeReflection from "@/components/reader/scribe-reflection";
+import AIAssistantPanel from "@/components/reader/ai-assistant-panel";
+import ComparativeView from "@/components/reader/comparative-view";
+import { CHRONOLOGICAL_DAYS_DATA } from "@/lib/chronological-linkages";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { 
   Sparkles, 
   ChevronRight, 
@@ -53,32 +66,144 @@ function ReaderContent() {
   
   const pathParam = searchParams.get('path') as PathId | null;
   const dayParam = parseInt(searchParams.get('day') || "0");
-  const initialRef = searchParams.get('reference') || "John 3:16";
+  
+  const getInitialRef = () => {
+    if (pathParam && dayParam > 0) {
+      const dayData = getPlanDay(pathParam, dayParam);
+      if (dayData) return dayData.reference;
+    }
+    return searchParams.get('reference') || "John 3:16";
+  };
+
+  const initialRef = getInitialRef();
 
   const { user } = useUser();
   const auth = useAuth();
-  const { firestore } = useFirestore();
+  const firestore = useFirestore();
   const { toast } = useToast();
 
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(initialRef);
   const [currentRef, setCurrentRef] = useState(initialRef);
   const [version, setVersion] = useState(SUPPORTED_VERSIONS[0].id);
   const [scripture, setScripture] = useState<Scripture | null>(null);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "sepia" | "dark" | "byzantine" | "irish" | "gutenberg">("light");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const saved = localStorage.getItem("theme");
+    if (saved === "light" || saved === "sepia" || saved === "dark" || saved === "byzantine" || saved === "irish" || saved === "gutenberg") {
+      setTheme(saved as any);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme, mounted]);
+
+  const getThemeClass = (
+    light: string, 
+    sepia: string, 
+    dark: string, 
+    byzantine?: string, 
+    irish?: string, 
+    gutenberg?: string
+  ) => {
+    if (!mounted) return light;
+    if (theme === "dark") return dark;
+    if (theme === "sepia") return sepia;
+    if (theme === "byzantine") return byzantine !== undefined ? byzantine : dark;
+    if (theme === "irish") return irish !== undefined ? irish : sepia;
+    if (theme === "gutenberg") return gutenberg !== undefined ? gutenberg : light;
+    return light;
+  };
   const [error, setError] = useState<string | null>(null);
   const [scribeReflection, setScribeReflection] = useState("");
   
   // AI Flow State
   const [aiAnalysis, setAiAnalysis] = useState<AIAnnotatorExplanationOutput | null>(null);
   const [isAiLoading, setIsAiLoading] = useState(false);
+  const [selectedWord, setSelectedWord] = useState<string | null>(null);
+  const [wordStudyResult, setWordStudyResult] = useState<WordStudyOutput | null>(null);
+  const [isWordStudyLoading, setIsWordStudyLoading] = useState(false);
+  const [customWordQuery, setCustomWordQuery] = useState("");
+
+  // Comparative & Interlinear State
+  const [isComparative, setIsComparative] = useState(false);
+  const [secondaryVersion, setSecondaryVersion] = useState(SUPPORTED_VERSIONS[1]?.id || SUPPORTED_VERSIONS[0].id);
+  const [secondaryScripture, setSecondaryScripture] = useState<Scripture | null>(null);
+  const [isSecondaryLoading, setIsSecondaryLoading] = useState(false);
+  const [secondaryError, setSecondaryError] = useState<string | null>(null);
+
+  const [isInterlinear, setIsInterlinear] = useState(false);
+  const [interlinearData, setInterlinearData] = useState<InterlinearOutput | null>(null);
+  const [isInterlinearLoading, setIsInterlinearLoading] = useState(false);
+  const [interlinearError, setInterlinearError] = useState<string | null>(null);
+
+  // Wax Seal States for Day 21
+  const [isSealBroken, setIsSealBroken] = useState(false);
+  const [isShaking, setIsShaking] = useState(false);
+
+  useEffect(() => {
+    if (dayParam === 21) {
+      const saved = localStorage.getItem("scriptorium-seal-broken-21");
+      setIsSealBroken(saved === "true");
+    } else {
+      setIsSealBroken(false);
+    }
+  }, [dayParam]);
+
+  // Circles & Threads State
+  const [selectedCircleId, setSelectedCircleId] = useState<string | null>(null); // null = Public Feed
+  const [replyingToId, setReplyingToId] = useState<string | null>(null);
+  const [replyComment, setReplyComment] = useState("");
+
+  const userCirclesQuery = useMemoFirebase(() => {
+    if (!firestore || !user) return null;
+    return getUserCirclesQuery(firestore, user.uid);
+  }, [firestore, user]);
+
+  const { data: userCircles } = useCollection(userCirclesQuery);
 
   const annotationsQuery = useMemoFirebase(() => {
     if (!firestore || !currentRef) return null;
-    return getAnnotationsQuery(firestore, currentRef);
-  }, [firestore, currentRef]);
+    return getAnnotationsQuery(firestore, currentRef, selectedCircleId);
+  }, [firestore, currentRef, selectedCircleId]);
 
   const { data: remoteAnnotations, isLoading: isAnnotationsLoading } = useCollection(annotationsQuery);
+
+  const filteredAnnotations = useMemo(() => {
+    if (!remoteAnnotations) return [];
+    return [...(remoteAnnotations as any[])].sort((a: any, b: any) => {
+      const aTime = a.createdAt?.seconds || 0;
+      const bTime = b.createdAt?.seconds || 0;
+      return bTime - aTime;
+    });
+  }, [remoteAnnotations]);
+
+  const annotationThreads = useMemo(() => {
+    const list = filteredAnnotations || [];
+    const map: Record<string, any> = {};
+    const roots: any[] = [];
+
+    list.forEach((ann: any) => {
+      map[ann.id] = { ...ann, replies: [] };
+    });
+
+    list.forEach((ann: any) => {
+      const mapped = map[ann.id];
+      if (ann.parentId && map[ann.parentId]) {
+        map[ann.parentId].replies.push(mapped);
+      } else {
+        roots.push(mapped);
+      }
+    });
+
+    return roots;
+  }, [filteredAnnotations]);
 
   const [showAddForm, setShowAddForm] = useState(false);
   const [newComment, setNewComment] = useState("");
@@ -100,10 +225,61 @@ function ReaderContent() {
   useEffect(() => {
     if (currentRef) {
       loadScripture(currentRef, version);
+      setSecondaryScripture(null);
+      setInterlinearData(null);
+      if (isComparative) {
+        loadSecondaryScripture(currentRef, secondaryVersion);
+      }
+      if (isInterlinear) {
+        loadInterlinearData(currentRef);
+      }
       setScribeReflection(""); 
       setAiAnalysis(null); 
+      setSelectedWord(null);
+      setWordStudyResult(null);
+      setCustomWordQuery(""); 
+      setReplyingToId(null);
+      setReplyComment("");
     }
   }, [currentRef, version]);
+
+  useEffect(() => {
+    if (currentRef && isComparative) {
+      loadSecondaryScripture(currentRef, secondaryVersion);
+    }
+  }, [currentRef, secondaryVersion, isComparative]);
+
+  useEffect(() => {
+    if (currentRef && isInterlinear && !interlinearData) {
+      loadInterlinearData(currentRef);
+    }
+  }, [currentRef, isInterlinear]);
+
+  const loadSecondaryScripture = async (ref: string, v: string) => {
+    setIsSecondaryLoading(true);
+    setSecondaryError(null);
+    try {
+      const data = await getScripture(ref, v);
+      setSecondaryScripture(data);
+    } catch (error: any) {
+      setSecondaryError(error.message || "Could not retrieve secondary passage.");
+    } finally {
+      setIsSecondaryLoading(false);
+    }
+  };
+
+  const loadInterlinearData = async (ref: string) => {
+    setIsInterlinearLoading(true);
+    setInterlinearError(null);
+    try {
+      const data = await getInterlinearAnalysis({ reference: ref });
+      setInterlinearData(data);
+    } catch (error: any) {
+      setInterlinearError("Could not retrieve original language data.");
+    } finally {
+      setIsInterlinearLoading(false);
+    }
+  };
 
   const loadScripture = async (ref: string, v: string) => {
     setLoading(true);
@@ -138,22 +314,63 @@ function ReaderContent() {
     }
   };
 
-  const handleAddInsight = () => {
+  const handleAddInsight = (commentText: string) => {
     if (!user) {
       handleSignIn();
       return;
     }
 
-    if (!newComment.trim()) return;
-    
-    saveAnnotation(firestore, user, currentRef, "", newComment);
+    saveAnnotation(firestore, user, currentRef, "", commentText, selectedCircleId);
 
-    setNewComment("");
-    setShowAddForm(false);
     toast({
       title: "Insight Shared",
-      description: "Note added to the community feed.",
+      description: selectedCircleId ? "Note added to your study circle feed." : "Note added to the community feed.",
     });
+  };
+
+  const handleAddReply = (commentText: string, parentId: string) => {
+    if (!user) {
+      handleSignIn();
+      return;
+    }
+
+    saveAnnotation(firestore, user, currentRef, "", commentText, selectedCircleId, parentId);
+
+    toast({
+      title: "Reply Shared",
+      description: "Your reply has been posted.",
+    });
+  };
+
+  const handleToggleAnnotationReaction = async (annId: string, type: 'insightful' | 'needsContext') => {
+    if (!user) {
+      handleSignIn();
+      return;
+    }
+    try {
+      await toggleAnnotationReaction(firestore, annId, user.uid, type);
+    } catch (e: any) {
+      console.error(e);
+    }
+  };
+
+  const handleWordStudy = async (word: string) => {
+    if (!word.trim()) return;
+    setSelectedWord(word);
+    setIsWordStudyLoading(true);
+    setWordStudyResult(null);
+    try {
+      const result = await studyWord({ word, context: scripture?.text || "" });
+      setWordStudyResult(result);
+    } catch (err: any) {
+      toast({
+        variant: "destructive",
+        title: "Word Study Offline",
+        description: "The lexical tutor is currently resting.",
+      });
+    } finally {
+      setIsWordStudyLoading(false);
+    }
   };
 
   const handleAiAnalysis = async () => {
@@ -173,19 +390,22 @@ function ReaderContent() {
     }
   };
 
-  const isDark = theme === "dark";
+  const isDark = theme === "dark" || theme === "byzantine";
 
   return (
     <div className={cn(
       "min-h-screen transition-all duration-500",
-      isDark ? "bg-[#0B0F1A] text-slate-200" : "bg-[#F8FAFC] text-slate-900"
+      theme === "byzantine" && "theme-byzantine",
+      theme === "irish" && "theme-irish",
+      theme === "gutenberg" && "theme-gutenberg",
+      getThemeClass("bg-[#F8FAFC] text-slate-900", "bg-[#F4ECD8] text-[#433422]", "bg-[#0B0F1A] text-slate-200")
     )}>
       <Navbar />
       
-      <main className="container mx-auto px-6 py-10 max-w-[1400px]">
+      <main className="container mx-auto px-4 py-6 max-w-[1300px]">
         {pathParam && (
           <div className={cn(
-            "mb-10 p-8 rounded-3xl border shadow-sm flex items-center gap-8 animate-in fade-in slide-in-from-top-4",
+            "mb-6 p-5 rounded-2xl border shadow-sm flex items-center gap-4 animate-in fade-in slide-in-from-top-4",
             pathParam === 'chronological' ? "bg-blue-50/40 border-blue-100 text-blue-900" : 
             pathParam === 'thematic' ? "bg-emerald-50/40 border-emerald-100 text-emerald-900" :
             "bg-purple-50/40 border-purple-100 text-purple-900"
@@ -211,16 +431,38 @@ function ReaderContent() {
           </div>
         )}
 
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-12">
+        {pathParam === 'chronological' && (
+          <div className="mb-6">
+            <JudeanMap
+              currentDay={dayParam}
+              onDaySelect={(selectedDay) => router.push(`/reader?path=chronological&day=${selectedDay}`)}
+              getThemeClass={getThemeClass}
+            />
+          </div>
+        )}
+
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-6">
-            <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-slate-900">Scriptorium</h1>
-            <Button 
-              variant="outline" size="icon" 
-              onClick={() => setTheme(prev => prev === "light" ? "dark" : "light")}
-              className="rounded-full h-11 w-11 hover:bg-slate-100 transition-colors"
-            >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </Button>
+            <h1 className={cn(
+              "text-4xl md:text-5xl font-headline font-bold tracking-tight",
+              getThemeClass("text-slate-900", "text-[#433422]", "text-white")
+            )}>Scriptorium</h1>
+            <Select value={theme} onValueChange={(val: any) => setTheme(val)}>
+              <SelectTrigger className={cn(
+                "w-[180px] h-11 rounded-full font-bold text-xs uppercase tracking-wider",
+                getThemeClass("bg-white border-slate-200 text-slate-800", "bg-[#FAF6EE] border-[#E6D7B8] text-[#433422]", "bg-slate-900 border-slate-800 text-slate-200")
+              )}>
+                <SelectValue placeholder="Theme" />
+              </SelectTrigger>
+              <SelectContent className="rounded-xl">
+                <SelectItem value="light" className="text-xs font-bold uppercase">☀️ Light</SelectItem>
+                <SelectItem value="sepia" className="text-xs font-bold uppercase">📖 Sepia</SelectItem>
+                <SelectItem value="dark" className="text-xs font-bold uppercase">🌙 Dark Scholar</SelectItem>
+                <SelectItem value="byzantine" className="text-xs font-bold uppercase">👑 Byzantine Desk</SelectItem>
+                <SelectItem value="irish" className="text-xs font-bold uppercase">☘️ Irish Monastery</SelectItem>
+                <SelectItem value="gutenberg" className="text-xs font-bold uppercase">🖨️ Gutenberg Press</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="flex flex-wrap items-center gap-4 w-full lg:w-auto">
@@ -244,19 +486,78 @@ function ReaderContent() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-8 space-y-10">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-6 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+          <div className="flex flex-wrap items-center gap-6">
+            {/* Comparative Mode toggle */}
+            <div className="flex items-center gap-3">
+              <Switch 
+                id="comparative-mode"
+                checked={isComparative}
+                onCheckedChange={(checked) => {
+                  setIsComparative(checked);
+                  if (checked) {
+                    setIsInterlinear(false); // disable interlinear when comparative is active
+                  }
+                }}
+              />
+              <label htmlFor="comparative-mode" className="text-sm font-bold cursor-pointer select-none text-slate-700 dark:text-slate-200">
+                Comparative Mode
+              </label>
+            </div>
+            
+            {isComparative && (
+              <div className="flex items-center gap-3 animate-in fade-in slide-in-from-left-2 duration-300">
+                <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">Compare with:</span>
+                <Select
+                  value={secondaryVersion}
+                  onValueChange={(val) => setSecondaryVersion(val)}
+                >
+                  <SelectTrigger className="w-[200px] h-10 text-xs rounded-xl bg-slate-50 dark:bg-slate-950 border-slate-100 dark:border-slate-850">
+                    <SelectValue placeholder="Select Translation" />
+                  </SelectTrigger>
+                  <SelectContent className="rounded-xl">
+                    {SUPPORTED_VERSIONS.map((v) => (
+                      <SelectItem key={v.id} value={v.id} disabled={v.id === version} className="text-xs">
+                        {v.name} ({v.code.toUpperCase()})
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+          </div>
+
+          <div className="flex items-center gap-3">
+            {/* Interlinear view toggle */}
+            <Switch 
+              id="interlinear-mode"
+              checked={isInterlinear}
+              onCheckedChange={(checked) => {
+                setIsInterlinear(checked);
+                if (checked) {
+                  setIsComparative(false); // disable comparative when interlinear is active
+                }
+              }}
+            />
+            <label htmlFor="interlinear-mode" className="text-sm font-bold cursor-pointer select-none text-slate-700 dark:text-slate-200">
+              Interlinear View (Original Language)
+            </label>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="lg:col-span-8 space-y-6">
             <Card className={cn(
-              "border-none shadow-xl rounded-[2.5rem] overflow-hidden flex flex-col min-h-[800px]",
-              isDark ? "bg-[#1E293B]" : "bg-white"
+              "border-none shadow-md rounded-2xl overflow-hidden flex flex-col min-h-[800px]",
+              getThemeClass("bg-white", "bg-[#FAF6EE] border border-[#E6D7B8]", "bg-[#1E293B]")
             )}>
               <div className="bg-brand-gradient h-1.5 w-full" />
               
-              <div className="px-10 pt-16">
+              <div className="px-6 pt-8">
                 <GuidedAscentStepper />
               </div>
 
-              <CardContent className="p-10 md:p-20 flex-1 pt-10">
+              <CardContent className="p-6 md:p-8 flex-1 pt-4">
                 {loading ? (
                   <div className="flex flex-col items-center justify-center h-full py-40 opacity-40">
                     <Loader2 className="h-12 w-12 animate-spin mb-6 text-primary" />
@@ -274,7 +575,7 @@ function ReaderContent() {
                     <Button variant="outline" onClick={() => loadScripture(currentRef, version)} className="rounded-full px-8 h-12 font-bold">Retry Retrieval</Button>
                   </div>
                 ) : scripture ? (
-                  <article className="max-w-3xl mx-auto space-y-16 animate-in fade-in duration-700">
+                  <article className={cn("mx-auto space-y-16 animate-in fade-in duration-700", !isComparative && !isInterlinear ? "max-w-3xl" : "w-full")}>
                     <header className="text-center space-y-6">
                       {planDay?.audience && (
                         <Badge variant="secondary" className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-slate-100 text-slate-600 border-none">
@@ -286,13 +587,89 @@ function ReaderContent() {
                       </h2>
                     </header>
                     
-                    <div className={cn(
-                      "bible-reader-text leading-relaxed font-serif transition-all duration-300",
-                      isDark ? "text-slate-300" : "text-slate-800",
-                      pathParam === 'genre' && "poetic-lineation"
-                    )}>
-                      <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
-                    </div>
+                    {isComparative ? (
+                      <ComparativeView
+                        scripture={scripture}
+                        version={version}
+                        secondaryScripture={secondaryScripture}
+                        secondaryVersion={secondaryVersion}
+                        isSecondaryLoading={isSecondaryLoading}
+                        secondaryError={secondaryError}
+                        getThemeClass={getThemeClass}
+                        SUPPORTED_VERSIONS={SUPPORTED_VERSIONS}
+                      />
+                    ) : isInterlinear ? (
+                      <div className="space-y-8 animate-in fade-in duration-500">
+                        {isInterlinearLoading ? (
+                          <div className="flex flex-col items-center justify-center py-40 space-y-4">
+                            <Loader2 className="h-10 w-10 animate-spin text-primary" />
+                            <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Loading original language analysis...</span>
+                          </div>
+                        ) : interlinearError ? (
+                          <div className="text-center py-20 space-y-4">
+                            <AlertCircle className="h-10 w-10 text-red-500 mx-auto" />
+                            <p className="text-sm text-slate-500">{interlinearError}</p>
+                            <Button onClick={() => loadInterlinearData(currentRef)} variant="outline" size="sm" className="rounded-full">Retry Analysis</Button>
+                          </div>
+                        ) : interlinearData && interlinearData.verses ? (
+                          <TooltipProvider delayDuration={150}>
+                            <div className="space-y-8">
+                              {interlinearData.verses.map((verse) => (
+                                <div key={verse.verseNumber} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
+                                  <span className="text-xs font-bold font-headline text-slate-400 bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded shrink-0">
+                                    Verse {verse.verseNumber}
+                                  </span>
+                                  <div className="flex flex-wrap gap-x-6 gap-y-8 leading-loose">
+                                    {verse.words.map((wordObj, wIdx) => (
+                                      <Tooltip key={wIdx}>
+                                        <TooltipTrigger asChild>
+                                          <div className="flex flex-col items-center cursor-help border-b border-dashed border-slate-300 hover:border-primary/50 pb-1 transition-all">
+                                            {/* Original (Hebrew/Greek) */}
+                                            <span className="text-2xl font-bold font-serif text-slate-900 dark:text-white pb-1 select-all">
+                                              {wordObj.original}
+                                            </span>
+                                            {/* Transliteration */}
+                                            <span className="text-xs text-slate-400 italic">
+                                              {wordObj.transliteration}
+                                            </span>
+                                            {/* English Equivalent */}
+                                            <span className="text-xs font-bold text-primary dark:text-slate-300">
+                                              {wordObj.english}
+                                            </span>
+                                          </div>
+                                        </TooltipTrigger>
+                                        <TooltipContent className="p-3 max-w-[260px] space-y-2 rounded-xl">
+                                          <div className="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-1">
+                                            <span className="font-bold text-xs font-headline text-primary">Concordance</span>
+                                            <Badge variant="outline" className="text-[10px] font-bold px-1.5 py-0 border-none rounded-full bg-slate-100">
+                                              {wordObj.strongs}
+                                            </Badge>
+                                          </div>
+                                          <div className="space-y-1 text-xs">
+                                            <p className="text-slate-400 font-bold uppercase tracking-wider text-[9px]">Grammatical Parsing</p>
+                                            <p className="font-mono text-slate-800 dark:text-slate-200">{wordObj.parsing}</p>
+                                          </div>
+                                        </TooltipContent>
+                                      </Tooltip>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </TooltipProvider>
+                        ) : null}
+                      </div>
+                    ) : pathParam === 'chronological' && (CHRONOLOGICAL_DAYS_DATA[dayParam] || dayParam === 20) ? (
+                      <ChronologicalDesk day={dayParam} theme={theme} version={version} getThemeClass={getThemeClass} />
+                    ) : (
+                      <div className={cn(
+                        "bible-reader-text leading-relaxed font-serif transition-all duration-300",
+                        getThemeClass("text-slate-800", "text-[#433422]", "text-slate-300"),
+                        pathParam === 'genre' && "poetic-lineation"
+                      )}>
+                        <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
+                      </div>
+                    )}
 
                     {planDay?.mainTruth && (
                       <div className="p-10 rounded-3xl bg-slate-50/50 border border-slate-100 text-center space-y-6">
@@ -303,50 +680,52 @@ function ReaderContent() {
                       </div>
                     )}
                     
-                    <div className="mt-24 pt-16 border-t border-slate-100">
-                      <div className="flex items-center gap-4 mb-8">
-                        <PenTool className="h-6 w-6 text-primary" />
-                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">Scribe's Reflection</span>
-                      </div>
-                      <div className="space-y-6">
-                        {planDay?.reflectionQuestion && (
-                          <div className="p-8 bg-primary/5 rounded-2xl border border-primary/10">
-                            <p className="text-lg font-bold text-primary italic">Reflection: {planDay.reflectionQuestion}</p>
-                          </div>
-                        )}
-                        <Textarea 
-                          placeholder="Your study notes..."
-                          className={cn(
-                            "min-h-[200px] rounded-2xl transition-all p-8 text-lg border-slate-200 focus:ring-primary/10",
-                            isDark ? "bg-slate-900/50 border-slate-800" : "bg-white"
-                          )}
-                          value={scribeReflection}
-                          onChange={(e) => setScribeReflection(e.target.value)}
-                        />
-                      </div>
-                    </div>
+                    <ScribeReflection
+                      dayParam={dayParam}
+                      planDay={planDay}
+                      scribeReflection={scribeReflection}
+                      setScribeReflection={setScribeReflection}
+                      isSealBroken={isSealBroken}
+                      setIsSealBroken={setIsSealBroken}
+                      isShaking={isShaking}
+                      setIsShaking={setIsShaking}
+                      getThemeClass={getThemeClass}
+                      toast={toast}
+                    />
 
                     {pathParam && (
-                      <div className="pt-20 flex items-center justify-between border-t border-slate-100">
-                        <Button 
-                          variant="ghost" 
-                          onClick={() => {
-                            if (dayParam > 1) router.push(`/reader?path=${pathParam}&day=${dayParam - 1}`);
-                          }} 
-                          disabled={dayParam <= 1}
-                          className="rounded-full gap-3 font-bold text-sm h-11 px-6 hover:bg-slate-50"
-                        >
-                          <ChevronLeft className="h-5 w-5" /> Previous Day
-                        </Button>
-                        <Button 
-                          variant="ghost" 
-                          onClick={() => {
-                            router.push(`/reader?path=${pathParam}&day=${dayParam + 1}`);
-                          }}
-                          className="rounded-full gap-3 font-bold text-sm h-11 px-6 hover:bg-slate-50"
-                        >
-                          Next Day <ChevronRight className="h-5 w-5" />
-                        </Button>
+                      <div className="flex items-center justify-between border-t border-slate-100 pt-6">
+                        {(() => {
+                          const pathDays = getPlanDays(pathParam);
+                          const currentIndex = pathDays.indexOf(dayParam);
+                          const prevDay = currentIndex > 0 ? pathDays[currentIndex - 1] : null;
+                          const nextDay = currentIndex < pathDays.length - 1 ? pathDays[currentIndex + 1] : null;
+
+                          return (
+                            <>
+                              <Button 
+                                variant="ghost" 
+                                onClick={() => {
+                                  if (prevDay !== null) router.push(`/reader?path=${pathParam}&day=${prevDay}`);
+                                }} 
+                                disabled={prevDay === null}
+                                className="rounded-full gap-3 font-bold text-sm h-11 px-6 hover:bg-slate-50"
+                              >
+                                <ChevronLeft className="h-5 w-5" /> Previous Day
+                              </Button>
+                              <Button 
+                                variant="ghost" 
+                                onClick={() => {
+                                  if (nextDay !== null) router.push(`/reader?path=${pathParam}&day=${nextDay}`);
+                                }}
+                                disabled={nextDay === null}
+                                className="rounded-full gap-3 font-bold text-sm h-11 px-6 hover:bg-slate-50"
+                              >
+                                Next Day <ChevronRight className="h-5 w-5" />
+                              </Button>
+                            </>
+                          );
+                        })()}
                       </div>
                     )}
                   </article>
@@ -355,18 +734,50 @@ function ReaderContent() {
             </Card>
           </div>
 
-          <aside className="lg:col-span-4 space-y-10">
+          <aside className="lg:col-span-4 space-y-6">
+            {planDay?.historicalSnapshot && (
+              <Card className={cn(
+                "border-none shadow-md rounded-2xl overflow-hidden border animate-in fade-in slide-in-from-right-4 duration-500",
+                getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+              )}>
+                <CardHeader className="p-5 pb-3">
+                  <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-blue-600 dark:text-blue-400">
+                    <History className="h-5 w-5" /> Narrative Anchor
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-5 pt-0 space-y-3">
+                  <div className={cn(
+                    "p-4 rounded-xl border text-xs leading-relaxed italic font-serif",
+                    getThemeClass("bg-slate-50 border-slate-100 text-slate-650", "bg-[#F4ECD8] border-[#E6D7B8] text-[#5C4033]", "bg-slate-900/50 border-slate-800 text-slate-355")
+                  )}>
+                    "{planDay.historicalSnapshot.text}"
+                  </div>
+                  <div className="text-right">
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">
+                      Background: {planDay.historicalSnapshot.ref}
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {planDay?.thematicLedger && (
-              <Card className="border-none shadow-lg rounded-3xl overflow-hidden bg-white border border-slate-100">
-                <CardHeader className="p-8 pb-4">
+              <Card className={cn(
+                "border-none shadow-md rounded-2xl overflow-hidden border",
+                getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+              )}>
+                <CardHeader className="p-5 pb-3">
                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-primary">
                     <ListChecks className="h-5 w-5" /> Covenant Tracker
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-8 pt-0 space-y-4">
+                <CardContent className="p-5 pt-0 space-y-3">
                   {planDay.thematicLedger.map((item, i) => (
-                    <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-100">
-                      <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{item.label}</span>
+                    <div key={i} className={cn(
+                      "flex items-center justify-between p-4 rounded-xl border",
+                      getThemeClass("bg-slate-50 border-slate-100", "bg-[#F4ECD8] border-[#E6D7B8] text-[#433422]", "bg-slate-900 border-slate-800 text-slate-200")
+                    )}>
+                      <span className={cn("text-xs font-bold uppercase tracking-wider", getThemeClass("text-slate-500", "text-[#8C6D58]", "text-slate-400"))}>{item.label}</span>
                       <span className="text-sm font-bold text-primary">{item.value}</span>
                     </div>
                   ))}
@@ -375,17 +786,20 @@ function ReaderContent() {
             )}
 
             {planDay?.culturalInsights && (
-               <Card className="border-none shadow-lg rounded-3xl overflow-hidden bg-white border border-slate-100">
-                <CardHeader className="p-8 pb-4">
+               <Card className={cn(
+                 "border-none shadow-md rounded-2xl overflow-hidden border",
+                 getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+               )}>
+                <CardHeader className="p-5 pb-3">
                    <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-amber-600">
                     <Compass className="h-5 w-5" /> Marginalia
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-8 pt-0 space-y-6">
+                <CardContent className="p-5 pt-0 space-y-4">
                   {planDay.culturalInsights.map((insight, i) => (
                     <div key={i} className="space-y-2">
-                      <p className="text-sm font-bold text-slate-900">{insight.title}</p>
-                      <p className="text-sm text-slate-500 leading-relaxed italic">{insight.note}</p>
+                      <p className={cn("text-sm font-bold", getThemeClass("text-slate-900", "text-[#433422]", "text-white"))}>{insight.title}</p>
+                      <p className={cn("text-sm leading-relaxed italic", getThemeClass("text-slate-500", "text-[#5C4033]", "text-slate-400"))}>{insight.note}</p>
                     </div>
                   ))}
                 </CardContent>
@@ -393,18 +807,24 @@ function ReaderContent() {
             )}
 
             {planDay?.scribalStrategy && (
-              <Card className="border-none shadow-lg rounded-3xl overflow-hidden bg-[#F1F5F9] border border-slate-200">
-                <CardHeader className="p-8 pb-4">
-                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-slate-700">
+              <Card className={cn(
+                "border-none shadow-md rounded-2xl overflow-hidden border",
+                getThemeClass("bg-[#F1F5F9] border-slate-200", "bg-[#EAE1C9] border-[#D6C5A2]", "bg-slate-900 border-slate-800")
+              )}>
+                <CardHeader className="p-5 pb-3">
+                   <CardTitle className={cn("text-sm font-bold uppercase tracking-widest flex items-center gap-3", getThemeClass("text-slate-700", "text-[#433422]", "text-slate-200"))}>
                     <PenTool className="h-5 w-5" /> Scribal Strategy
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-8 pt-0 space-y-5">
+                <CardContent className="p-5 pt-0 space-y-4">
                   <div className="space-y-4">
                     {planDay.scribalStrategy.instructions.map((step, i) => (
-                      <div key={i} className="flex gap-3">
-                        <span className="h-5 w-5 shrink-0 rounded-full bg-white flex items-center justify-center text-[10px] font-bold text-slate-400 border border-slate-200">{i + 1}</span>
-                        <p className="text-sm text-slate-600 leading-relaxed">{step}</p>
+                      <div key={i} className="flex gap-3 animate-in fade-in duration-300">
+                        <span className={cn(
+                          "h-5 w-5 shrink-0 rounded-full flex items-center justify-center text-[10px] font-bold border",
+                          getThemeClass("bg-white text-slate-400 border-slate-200", "bg-[#FAF6EE] text-[#8C6D58] border-[#E6D7B8]", "bg-slate-800 text-slate-450 border-slate-750")
+                        )}>{i + 1}</span>
+                        <p className={cn("text-sm leading-relaxed", getThemeClass("text-slate-600", "text-[#5C4033]", "text-slate-300"))}>{step}</p>
                       </div>
                     ))}
                   </div>
@@ -412,116 +832,52 @@ function ReaderContent() {
               </Card>
             )}
 
-            <Card className={cn("border-none shadow-xl rounded-3xl overflow-hidden flex flex-col min-h-[500px]", isDark ? "bg-[#1E293B]" : "bg-white")}>
-              <CardHeader className="p-8 pb-6 border-b border-slate-50">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3">
-                    <MessageSquare className="h-5 w-5 text-primary" /> Community
-                  </CardTitle>
-                  {user && (
-                    <Button 
-                      variant="ghost" 
-                      size="icon" 
-                      className="h-10 w-10 rounded-full hover:bg-primary/5 text-primary"
-                      onClick={() => setShowAddForm(!showAddForm)}
-                    >
-                      <Plus className={cn("h-5 w-5 transition-transform duration-300", showAddForm && "rotate-45")} />
-                    </Button>
-                  )}
-                </div>
-              </CardHeader>
-              
-              <CardContent className="p-0 flex-1 flex flex-col">
-                {showAddForm && user && (
-                  <div className="p-6 bg-slate-50/50 border-b border-slate-50 animate-in slide-in-from-top duration-300">
-                    <Textarea 
-                      placeholder="Share a scholarly insight..."
-                      className="min-h-[120px] mb-4 text-base rounded-xl border-slate-200 bg-white p-4"
-                      value={newComment}
-                      onChange={(e) => setNewComment(e.target.value)}
-                    />
-                    <div className="flex justify-end">
-                      <Button 
-                        size="sm" 
-                        className="btn-gradient rounded-full font-bold px-6 h-10 gap-2" 
-                        onClick={handleAddInsight}
-                        disabled={!newComment.trim()}
-                      >
-                        Post <Send className="h-3.5 w-3.5" />
-                      </Button>
-                    </div>
-                  </div>
-                )}
+            <AIAssistantPanel
+              planDay={planDay}
+              aiAnalysis={aiAnalysis}
+              isAiLoading={isAiLoading}
+              selectedWord={selectedWord}
+              wordStudyResult={wordStudyResult}
+              isWordStudyLoading={isWordStudyLoading}
+              customWordQuery={customWordQuery}
+              setCustomWordQuery={setCustomWordQuery}
+              version={version}
+              setCurrentRef={setCurrentRef}
+              setSearchQuery={setSearchQuery}
+              loadScripture={loadScripture}
+              onAiAnalysis={handleAiAnalysis}
+              onWordStudy={handleWordStudy}
+              getThemeClass={getThemeClass}
+            />
 
-                <ScrollArea className="flex-1">
-                  {isAnnotationsLoading ? (
-                    <div className="p-20 flex flex-col items-center opacity-20">
-                      <Loader2 className="h-8 w-8 animate-spin mb-4" />
-                      <span className="text-xs font-bold uppercase tracking-widest">Updating...</span>
-                    </div>
-                  ) : remoteAnnotations && remoteAnnotations.length > 0 ? (
-                    <div className="divide-y divide-slate-50">
-                      {remoteAnnotations.map((ann) => (
-                        <div key={ann.id} className="p-6 hover:bg-slate-50/30 transition-colors">
-                          <div className="flex items-center gap-4 mb-4">
-                            <Avatar className="h-10 w-10 border border-slate-100 shadow-sm">
-                              <AvatarImage src={ann.userAvatarUrl} />
-                              <AvatarFallback className="bg-primary/5 text-primary text-xs font-bold">
-                                {ann.userDisplayName?.charAt(0) || "S"}
-                              </AvatarFallback>
-                            </Avatar>
-                            <div className="flex-1 min-w-0">
-                              <p className="text-sm font-bold truncate text-slate-900">{ann.userDisplayName}</p>
-                              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                                {ann.createdAt?.seconds 
-                                  ? new Date(ann.createdAt.seconds * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-                                  : 'Just now'}
-                              </p>
-                            </div>
-                          </div>
-                          <p className="text-sm text-slate-600 leading-relaxed font-body">
-                            {ann.comment}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="p-20 text-center opacity-30 flex flex-col items-center space-y-4">
-                      <BookOpen className="h-10 w-10" />
-                      <p className="text-xs font-bold uppercase tracking-widest">No insights yet.</p>
-                    </div>
-                  )}
-                </ScrollArea>
-              </CardContent>
-            </Card>
+            <AnnotationFeed
+              currentRef={currentRef}
+              user={user}
+              selectedCircleId={selectedCircleId}
+              userCircles={userCircles || []}
+              setSelectedCircleId={setSelectedCircleId}
+              annotationThreads={annotationThreads}
+              replyingToId={replyingToId}
+              setReplyingToId={setReplyingToId}
+              replyComment={replyComment}
+              setReplyComment={setReplyComment}
+              newComment={newComment}
+              setNewComment={setNewComment}
+              showAddForm={showAddForm}
+              setShowAddForm={setShowAddForm}
+              onSaveAnnotation={async (text, parentId) => {
+                if (parentId) {
+                  handleAddReply(text, parentId);
+                } else {
+                  handleAddInsight(text);
+                }
+              }}
+              onToggleReaction={handleToggleAnnotationReaction}
+              getThemeClass={getThemeClass}
+            />
           </aside>
         </div>
       </main>
-
-      <style jsx global>{`
-        .bible-reader-text {
-          font-size: 1.75rem;
-          line-height: 2.4;
-          max-width: 75ch;
-          margin: 0 auto;
-        }
-        .bible-reader-text sup {
-          font-size: 1.1rem;
-          font-weight: 800;
-          color: #94A3B8;
-          margin-right: 1.25rem;
-          vertical-align: super;
-          font-family: 'Space Grotesk', sans-serif;
-        }
-        .bible-reader-text p {
-          margin-bottom: 2.5rem;
-        }
-        .poetic-lineation p {
-          padding-left: 3.5rem;
-          text-indent: -3.5rem;
-          margin-bottom: 2rem;
-        }
-      `}</style>
     </div>
   );
 }

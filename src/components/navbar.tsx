@@ -62,7 +62,7 @@ export function Navbar() {
     { href: "/demo", label: "Demo" },
     { href: "/paths", label: "Reading Paths" },
     { href: "/hub", label: "Study Hub" },
-    { href: "/community", label: "Community" },
+    { href: "/pedagogy", label: "Pedagogy" },
   ];
 
   return (

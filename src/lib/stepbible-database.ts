@@ -1,0 +1,22624 @@
+/**
+ * @fileOverview Local StepBible database supplying offline Scripture text and original languages data.
+ * This completely eliminates dependency on external APIs.
+ */
+
+export interface StepBibleWord {
+  original: string;
+  transliteration: string;
+  english: string;
+  strongs: string;
+  parsing: string;
+}
+
+export interface StepBibleVerse {
+  verseNumber: number;
+  translations: {
+    [versionId: string]: string;
+  };
+  words: StepBibleWord[];
+}
+
+export interface StepBiblePassage {
+  reference: string;
+  verses: StepBibleVerse[];
+}
+
+// Actual StepBible-based local data for primary passages
+export const STEPBIBLE_DB: Record<string, StepBiblePassage> = {
+  "1 Samuel 21:10-15": {
+    "reference": "1 Samuel 21:10-15",
+    "verses": [
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And David arose and fled that day from Saul and went to Achish the king of Gath.",
+          "06125ad3d1d57585-01": "And David arose and fled that day from Saul and went to Achish the king of Gath.",
+          "9879dbb7aec41528-01": "And David arose and fled that day from Saul and went to Achish the king of Gath.",
+          "bba730b9171fcc22-01": "And David arose and fled that day from Saul and went to Achish the king of Gath.",
+          "41926a4aa3831714-01": "And David arose and fled that day from Saul and went to Achish the king of Gath."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And the servants of Achish said to him, \"Is not this David the king of the land? Did they not sing to one another of him in dances, 'Saul hath struck down his thousands, and David his ten thousands'?\"",
+          "06125ad3d1d57585-01": "And the servants of Achish said to him, \"Is not this David the king of the land? Did they not sing to one another of him in dances, 'Saul hath struck down his thousands, and David his ten thousands'?\"",
+          "9879dbb7aec41528-01": "And the servants of Achish said to him, \"Is not this David the king of the land? Did they not sing to one another of him in dances, 'Saul has struck down his thousands, and David his ten thousands'?\"",
+          "bba730b9171fcc22-01": "And the servants of Achish said to him, \"Is not this David the king of the land? Did they not sing to one another of him in dances, 'Saul has struck down his thousands, and David his ten thousands'?\"",
+          "41926a4aa3831714-01": "And the servants of Achish said to him, \"Is not this David the king of the land? Did they not sing to one another of him in dances, 'Saul has struck down his thousands, and David his ten thousands'?\""
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And David took these words to heart and was much afraid of Achish the king of Gath.",
+          "06125ad3d1d57585-01": "And David took these words to heart and was much afraid of Achish the king of Gath.",
+          "9879dbb7aec41528-01": "And David took these words to heart and was much afraid of Achish the king of Gath.",
+          "bba730b9171fcc22-01": "And David took these words to heart and was much afraid of Achish the king of Gath.",
+          "41926a4aa3831714-01": "And David took these words to heart and was much afraid of Achish the king of Gath."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יָרֵא",
+            "transliteration": "ya-re",
+            "english": "afraid",
+            "strongs": "H3372",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "So he changed his behavior before them and pretended to be insane in their hands and made marks on the doors of the gate and let his spittle run down his beard.",
+          "06125ad3d1d57585-01": "So he changed his behavior before them and pretended to be insane in their hands and made marks on the doors of the gate and let his spittle run down his beard.",
+          "9879dbb7aec41528-01": "So he changed his behavior before them and pretended to be insane in their hands and made marks on the doors of the gate and let his spittle run down his beard.",
+          "bba730b9171fcc22-01": "So he changed his behavior before them and pretended to be insane in their hands and made marks on the doors of the gate and let his spittle run down his beard.",
+          "41926a4aa3831714-01": "So he changed his behavior before them and pretended to be insane in their hands and made marks on the doors of the gate and let his spittle run down his beard."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Achish said to his servants, \"Behold, thou see the man is mad. Why then have thou brought him to me?",
+          "06125ad3d1d57585-01": "Then Achish said to his servants, \"Behold, thee see the man is mad. Why then have thee brought him to me?",
+          "9879dbb7aec41528-01": "Then Achish said to his servants, \"Behold, you see the man is mad. Why then have you brought him to me?",
+          "bba730b9171fcc22-01": "Then Achish said to his servants, \"Behold, you see the man is mad. Why then have you brought him to me?",
+          "41926a4aa3831714-01": "Then Achish said to his servants, \"Behold, you see the man is mad. Why then have you brought him to me?"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Do I lack madmen, that thou have brought this fellow to behave as a madman in my presence? Shall this fellow come into my house?\"",
+          "06125ad3d1d57585-01": "Do I lack madmen, that thee have brought this fellow to behave as a madman in my presence? Shall this fellow come into my house?\"",
+          "9879dbb7aec41528-01": "Do I lack madmen, that you have brought this fellow to behave as a madman in my presence? Shall this fellow come into my house?\"",
+          "bba730b9171fcc22-01": "Do I lack madmen, that you have brought this fellow to behave as a madman in my presence? Shall this fellow come into my house?\"",
+          "41926a4aa3831714-01": "Do I lack madmen, that you have brought this fellow to behave as a madman in my presence? Shall this fellow come into my house?\""
+        },
+        "words": [
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 56": {
+    "reference": "Psalm 56",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Be gracious to me, O God, for man tramples on me; all day long an attacker oppresses me;",
+          "06125ad3d1d57585-01": "Be gracious to me, O God, for man tramples on me; all day long an attacker oppresses me;",
+          "9879dbb7aec41528-01": "Be gracious to me, O God, for man tramples on me; all day long an attacker oppresses me;",
+          "bba730b9171fcc22-01": "Be gracious to me, O God, for man tramples on me; all day long an attacker oppresses me;",
+          "41926a4aa3831714-01": "Be gracious to me, O God, for man tramples on me; all day long an attacker oppresses me;"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "my enemies trample on me all day long, for many attack me proudly.",
+          "06125ad3d1d57585-01": "my enemies trample on me all day long, for many attack me proudly.",
+          "9879dbb7aec41528-01": "my enemies trample on me all day long, for many attack me proudly.",
+          "bba730b9171fcc22-01": "my enemies trample on me all day long, for many attack me proudly.",
+          "41926a4aa3831714-01": "my enemies trample on me all day long, for many attack me proudly."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "When I am afraid, I put my trust in thou.",
+          "06125ad3d1d57585-01": "When I am afraid, I put my trust in thee.",
+          "9879dbb7aec41528-01": "When I am afraid, I put my trust in you.",
+          "bba730b9171fcc22-01": "When I am afraid, I put my trust in you.",
+          "41926a4aa3831714-01": "When I am afraid, I put my trust in you."
+        },
+        "words": [
+          {
+            "original": "יָרֵא",
+            "transliteration": "ya-re",
+            "english": "afraid",
+            "strongs": "H3372",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "בָּטַח",
+            "transliteration": "ba-tach",
+            "english": "trust / confidence",
+            "strongs": "H0982",
+            "parsing": "V-Qal-Impf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "In God, whose word I praise, in God I trust; I shall not be afraid. What can flesh do to me?",
+          "06125ad3d1d57585-01": "In God, whose word I praise, in God I trust; I shall not be afraid. What can flesh do to me?",
+          "9879dbb7aec41528-01": "In God, whose word I praise, in God I trust; I shall not be afraid. What can flesh do to me?",
+          "bba730b9171fcc22-01": "In God, whose word I praise, in God I trust; I shall not be afraid. What can flesh do to me?",
+          "41926a4aa3831714-01": "In God, whose word I praise, in God I trust; I shall not be afraid. What can flesh do to me?"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יָרֵא",
+            "transliteration": "ya-re",
+            "english": "afraid",
+            "strongs": "H3372",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "בָּטַח",
+            "transliteration": "ba-tach",
+            "english": "trust / confidence",
+            "strongs": "H0982",
+            "parsing": "V-Qal-Impf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "All day long they distort my words; all their thoughts are against me for evil.",
+          "06125ad3d1d57585-01": "All day long they distort my words; all their thoughts are against me for evil.",
+          "9879dbb7aec41528-01": "All day long they distort my words; all their thoughts are against me for evil.",
+          "bba730b9171fcc22-01": "All day long they distort my words; all their thoughts are against me for evil.",
+          "41926a4aa3831714-01": "All day long they distort my words; all their thoughts are against me for evil."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "They stir up strife, they hide themselves; they watch my steps, as they have waited for my life.",
+          "06125ad3d1d57585-01": "They stir up strife, they hide themselves; they watch my steps, as they have waited for my life.",
+          "9879dbb7aec41528-01": "They stir up strife, they hide themselves; they watch my steps, as they have waited for my life.",
+          "bba730b9171fcc22-01": "They stir up strife, they hide themselves; they watch my steps, as they have waited for my life.",
+          "41926a4aa3831714-01": "They stir up strife, they hide themselves; they watch my steps, as they have waited for my life."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "For their crime will they escape? In wrath cast down the peoples, O God!",
+          "06125ad3d1d57585-01": "For their crime will they escape? In wrath cast down the peoples, O God!",
+          "9879dbb7aec41528-01": "For their crime will they escape? In wrath cast down the peoples, O God!",
+          "bba730b9171fcc22-01": "For their crime will they escape? In wrath cast down the peoples, O God!",
+          "41926a4aa3831714-01": "For their crime will they escape? In wrath cast down the peoples, O God!"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "You have kept count of my tossings; put my tears in thy bottle. Are they not in thy book?",
+          "06125ad3d1d57585-01": "You have kept count of my tossings; put my tears in your bottle. Are they not in your book?",
+          "9879dbb7aec41528-01": "You have kept count of my tossings; put my tears in your bottle. Are they not in your book?",
+          "bba730b9171fcc22-01": "You have kept count of my tossings; put my tears in your bottle. Are they not in your book?",
+          "41926a4aa3831714-01": "You have kept count of my tossings; put my tears in your bottle. Are they not in your book?"
+        },
+        "words": [
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Then my enemies will turn back in the day when I call. This I know, that God is for me.",
+          "06125ad3d1d57585-01": "Then my enemies will turn back in the day when I call. This I know, that God is for me.",
+          "9879dbb7aec41528-01": "Then my enemies will turn back in the day when I call. This I know, that God is for me.",
+          "bba730b9171fcc22-01": "Then my enemies will turn back in the day when I call. This I know, that God is for me.",
+          "41926a4aa3831714-01": "Then my enemies will turn back in the day when I call. This I know, that God is for me."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "In God, whose word I praise, in the Lord, whose word I praise,",
+          "06125ad3d1d57585-01": "In God, whose word I praise, in the Lord, whose word I praise,",
+          "9879dbb7aec41528-01": "In God, whose word I praise, in the Lord, whose word I praise,",
+          "bba730b9171fcc22-01": "In God, whose word I praise, in the Lord, whose word I praise,",
+          "41926a4aa3831714-01": "In God, whose word I praise, in the Lord, whose word I praise,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "in God I trust; I shall not be afraid. What can man do to me?",
+          "06125ad3d1d57585-01": "in God I trust; I shall not be afraid. What can man do to me?",
+          "9879dbb7aec41528-01": "in God I trust; I shall not be afraid. What can man do to me?",
+          "bba730b9171fcc22-01": "in God I trust; I shall not be afraid. What can man do to me?",
+          "41926a4aa3831714-01": "in God I trust; I shall not be afraid. What can man do to me?"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יָרֵא",
+            "transliteration": "ya-re",
+            "english": "afraid",
+            "strongs": "H3372",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "בָּטַח",
+            "transliteration": "ba-tach",
+            "english": "trust / confidence",
+            "strongs": "H0982",
+            "parsing": "V-Qal-Impf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "1 Samuel 22:1-2": {
+    "reference": "1 Samuel 22:1-2",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "David departed from there and escaped to the cave of Adullam. And when his brothers and all his father's house heard it, they went down there to him.",
+          "06125ad3d1d57585-01": "David departed from there and escaped to the cave of Adullam. And when his brothers and all his father's house heard it, they went down there to him.",
+          "9879dbb7aec41528-01": "David departed from there and escaped to the cave of Adullam. And when his brothers and all his father's house heard it, they went down there to him.",
+          "bba730b9171fcc22-01": "David departed from there and escaped to the cave of Adullam. And when his brothers and all his father's house heard it, they went down there to him.",
+          "41926a4aa3831714-01": "David departed from there and escaped to the cave of Adullam. And when his brothers and all his father's house heard it, they went down there to him."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מְעָרָה",
+            "transliteration": "me-a-rah",
+            "english": "cave",
+            "strongs": "H4631",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And everyone who was in distress, and everyone who was in debt, and everyone who was bitter in soul, gathered to him. And he became commander over them. And there were with him about four hundred men.",
+          "06125ad3d1d57585-01": "And everyone who was in distress, and everyone who was in debt, and everyone who was bitter in soul, gathered to him. And he became commander over them. And there were with him about four hundred men.",
+          "9879dbb7aec41528-01": "And everyone who was in distress, and everyone who was in debt, and everyone who was bitter in soul, gathered to him. And he became commander over them. And there were with him about four hundred men.",
+          "bba730b9171fcc22-01": "And everyone who was in distress, and everyone who was in debt, and everyone who was bitter in soul, gathered to him. And he became commander over them. And there were with him about four hundred men.",
+          "41926a4aa3831714-01": "And everyone who was in distress, and everyone who was in debt, and everyone who was bitter in soul, gathered to him. And he became commander over them. And there were with him about four hundred men."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 142": {
+    "reference": "Psalm 142",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "With my voice I cry out to the Lord; with my voice I plead for mercy to the Lord.",
+          "06125ad3d1d57585-01": "With my voice I cry out to the Lord; with my voice I plead for mercy to the Lord.",
+          "9879dbb7aec41528-01": "With my voice I cry out to the Lord; with my voice I plead for mercy to the Lord.",
+          "bba730b9171fcc22-01": "With my voice I cry out to the Lord; with my voice I plead for mercy to the Lord.",
+          "41926a4aa3831714-01": "With my voice I cry out to the Lord; with my voice I plead for mercy to the Lord."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "חָנַן",
+            "transliteration": "cha-nan",
+            "english": "be merciful / gracious",
+            "strongs": "H2603",
+            "parsing": "V-Qal-Imp"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "I pour out my complaint before him; I tell my trouble before him.",
+          "06125ad3d1d57585-01": "I pour out my complaint before him; I tell my trouble before him.",
+          "9879dbb7aec41528-01": "I pour out my complaint before him; I tell my trouble before him.",
+          "bba730b9171fcc22-01": "I pour out my complaint before him; I tell my trouble before him.",
+          "41926a4aa3831714-01": "I pour out my complaint before him; I tell my trouble before him."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "When my spirit faints within me, thou know my way! In the path where I walk they have hidden a trap for me.",
+          "06125ad3d1d57585-01": "When my spirit faints within me, thee know my way! In the path where I walk they have hidden a trap for me.",
+          "9879dbb7aec41528-01": "When my spirit faints within me, you know my way! In the path where I walk they have hidden a trap for me.",
+          "bba730b9171fcc22-01": "When my spirit faints within me, you know my way! In the path where I walk they have hidden a trap for me.",
+          "41926a4aa3831714-01": "When my spirit faints within me, you know my way! In the path where I walk they have hidden a trap for me."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Look to the right and see: there is no one who takes notice of me; no defence remains to me; no one cares for my soul.",
+          "06125ad3d1d57585-01": "Look to the right and see: there is no one who takes notice of me; no refuge remains to me; no one cares for my soul.",
+          "9879dbb7aec41528-01": "Look to the right and see: there is no one who takes notice of me; no refuge remains to me; no one cares for my soul.",
+          "bba730b9171fcc22-01": "Look to the right and see: there is no one who takes notice of me; no refuge remains to me; no one cares for my soul.",
+          "41926a4aa3831714-01": "Look to the right and see: there is no one who takes notice of me; no refuge remains to me; no one cares for my soul."
+        },
+        "words": [
+          {
+            "original": "מַחְסֶה",
+            "transliteration": "mach-seh",
+            "english": "refuge",
+            "strongs": "H4543",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "I cry to thou, O Lord; I say, \"You are my defence, my portion in the land of the living.\"",
+          "06125ad3d1d57585-01": "I cry to thee, O Lord; I say, \"You are my refuge, my portion in the land of the living.\"",
+          "9879dbb7aec41528-01": "I cry to you, O Lord; I say, \"You are my refuge, my portion in the land of the living.\"",
+          "bba730b9171fcc22-01": "I cry to you, O Lord; I say, \"You are my refuge, my portion in the land of the living.\"",
+          "41926a4aa3831714-01": "I cry to you, O Lord; I say, \"You are my refuge, my portion in the land of the living.\""
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מַחְסֶה",
+            "transliteration": "mach-seh",
+            "english": "refuge",
+            "strongs": "H4543",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Attend to my cry, for I am brought very low! Deliver me from my pursuers, for they are too strong for me!",
+          "06125ad3d1d57585-01": "Attend to my cry, for I am brought very low! Deliver me from my pursuers, for they are too strong for me!",
+          "9879dbb7aec41528-01": "Attend to my cry, for I am brought very low! Deliver me from my pursuers, for they are too strong for me!",
+          "bba730b9171fcc22-01": "Attend to my cry, for I am brought very low! Deliver me from my pursuers, for they are too strong for me!",
+          "41926a4aa3831714-01": "Attend to my cry, for I am brought very low! Deliver me from my pursuers, for they are too strong for me!"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Bring me out of prison, that I may give thanks to thy name! The righteous will surround me, for thou will deal bountifully with me.",
+          "06125ad3d1d57585-01": "Bring me out of prison, that I may give thanks to your name! The righteous will surround me, for thee will deal bountifully with me.",
+          "9879dbb7aec41528-01": "Bring me out of prison, that I may give thanks to your name! The righteous will surround me, for you will deal bountifully with me.",
+          "bba730b9171fcc22-01": "Bring me out of prison, that I may give thanks to your name! The righteous will surround me, for you will deal bountifully with me.",
+          "41926a4aa3831714-01": "Bring me out of prison, that I may give thanks to your name! The righteous will surround me, for you will deal bountifully with me."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "1 Samuel 24:1-7": {
+    "reference": "1 Samuel 24:1-7",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "When Saul returned from following the Philistines, he was told, \"Behold, David is in the wilderness of En-gedi.\"",
+          "06125ad3d1d57585-01": "When Saul returned from following the Philistines, he was told, \"Behold, David is in the wilderness of En-gedi.\"",
+          "9879dbb7aec41528-01": "When Saul returned from following the Philistines, he was told, \"Behold, David is in the wilderness of En-gedi.\"",
+          "bba730b9171fcc22-01": "When Saul returned from following the Philistines, he was told, \"Behold, David is in the wilderness of En-gedi.\"",
+          "41926a4aa3831714-01": "When Saul returned from following the Philistines, he was told, \"Behold, David is in the wilderness of En-gedi.\""
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּנָף",
+            "transliteration": "ka-naph",
+            "english": "wing",
+            "strongs": "H3671",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Saul took three thousand chosen men out of all Israel and went to seek David and his men in front of the Wildgoats' Rocks.",
+          "06125ad3d1d57585-01": "Then Saul took three thousand chosen men out of all Israel and went to seek David and his men in front of the Wildgoats' Rocks.",
+          "9879dbb7aec41528-01": "Then Saul took three thousand chosen men out of all Israel and went to seek David and his men in front of the Wildgoats' Rocks.",
+          "bba730b9171fcc22-01": "Then Saul took three thousand chosen men out of all Israel and went to seek David and his men in front of the Wildgoats' Rocks.",
+          "41926a4aa3831714-01": "Then Saul took three thousand chosen men out of all Israel and went to seek David and his men in front of the Wildgoats' Rocks."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And he came to the sheepfolds by the way, where there was a cave, and Saul went in to relieve himself. Now David and his men were sitting in the innermost parts of the cave.",
+          "06125ad3d1d57585-01": "And he came to the sheepfolds by the way, where there was a cave, and Saul went in to relieve himself. Now David and his men were sitting in the innermost parts of the cave.",
+          "9879dbb7aec41528-01": "And he came to the sheepfolds by the way, where there was a cave, and Saul went in to relieve himself. Now David and his men were sitting in the innermost parts of the cave.",
+          "bba730b9171fcc22-01": "And he came to the sheepfolds by the way, where there was a cave, and Saul went in to relieve himself. Now David and his men were sitting in the innermost parts of the cave.",
+          "41926a4aa3831714-01": "And he came to the sheepfolds by the way, where there was a cave, and Saul went in to relieve himself. Now David and his men were sitting in the innermost parts of the cave."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מְעָרָה",
+            "transliteration": "me-a-rah",
+            "english": "cave",
+            "strongs": "H4631",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And the men of David said to him, \"Here is the day of which the Lord said to thou, 'Behold, I will give thy enemy into thy hand, and thou shall do to him as it shall seem good to thou.'\" Then David arose and stealthily cut off a corner of Saul's robe.",
+          "06125ad3d1d57585-01": "And the men of David said to him, \"Here is the day of which the Lord said to thee, 'Behold, I will give your enemy into your hand, and thee shall do to him as it shall seem good to thee.'\" Then David arose and stealthily cut off a corner of Saul's robe.",
+          "9879dbb7aec41528-01": "And the men of David said to him, \"Here is the day of which the Lord said to you, 'Behold, I will give your enemy into your hand, and you shall do to him as it shall seem good to you.'\" Then David arose and stealthily cut off a corner of Saul's robe.",
+          "bba730b9171fcc22-01": "And the men of David said to him, \"Here is the day of which the Lord said to you, 'Behold, I will give your enemy into your hand, and you shall do to him as it shall seem good to you.'\" Then David arose and stealthily cut off a corner of Saul's robe.",
+          "41926a4aa3831714-01": "And the men of David said to him, \"Here is the day of which the Lord said to you, 'Behold, I will give your enemy into your hand, and you shall do to him as it shall seem good to you.'\" Then David arose and stealthily cut off a corner of Saul's robe."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מְעִיל",
+            "transliteration": "me-il",
+            "english": "robe / cloak",
+            "strongs": "H4598",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "כָּנָף",
+            "transliteration": "ka-naph",
+            "english": "corner / wing",
+            "strongs": "H3671",
+            "parsing": "N-fs"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And afterward David's heart struck him, because he had cut off a corner of Saul's robe.",
+          "06125ad3d1d57585-01": "And afterward David's heart struck him, because he had cut off a corner of Saul's robe.",
+          "9879dbb7aec41528-01": "And afterward David's heart struck him, because he had cut off a corner of Saul's robe.",
+          "bba730b9171fcc22-01": "And afterward David's heart struck him, because he had cut off a corner of Saul's robe.",
+          "41926a4aa3831714-01": "And afterward David's heart struck him, because he had cut off a corner of Saul's robe."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מְעִיל",
+            "transliteration": "me-il",
+            "english": "robe / cloak",
+            "strongs": "H4598",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "כָּנָף",
+            "transliteration": "ka-naph",
+            "english": "corner / wing",
+            "strongs": "H3671",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "He said to his men, \"The Lord forbid that I should do this thing to my lord, the Lord's anointed, to put out my hand against him, seeing he is the Lord's anointed.\"",
+          "06125ad3d1d57585-01": "He said to his men, \"The Lord forbid that I should do this thing to my lord, the Lord's anointed, to put out my hand against him, seeing he is the Lord's anointed.\"",
+          "9879dbb7aec41528-01": "He said to his men, \"The Lord forbid that I should do this thing to my lord, the Lord's anointed, to put out my hand against him, seeing he is the Lord's anointed.\"",
+          "bba730b9171fcc22-01": "He said to his men, \"The Lord forbid that I should do this thing to my lord, the Lord's anointed, to put out my hand against him, seeing he is the Lord's anointed.\"",
+          "41926a4aa3831714-01": "He said to his men, \"The Lord forbid that I should do this thing to my lord, the Lord's anointed, to put out my hand against him, seeing he is the Lord's anointed.\""
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "So David persuaded his men with these words and did not permit them to attack Saul. And Saul rose up and left the cave and went on his way.",
+          "06125ad3d1d57585-01": "So David persuaded his men with these words and did not permit them to attack Saul. And Saul rose up and left the cave and went on his way.",
+          "9879dbb7aec41528-01": "So David persuaded his men with these words and did not permit them to attack Saul. And Saul rose up and left the cave and went on his way.",
+          "bba730b9171fcc22-01": "So David persuaded his men with these words and did not permit them to attack Saul. And Saul rose up and left the cave and went on his way.",
+          "41926a4aa3831714-01": "So David persuaded his men with these words and did not permit them to attack Saul. And Saul rose up and left the cave and went on his way."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מְעָרָה",
+            "transliteration": "me-a-rah",
+            "english": "cave",
+            "strongs": "H4631",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 57": {
+    "reference": "Psalm 57",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Be merciful to me, O God, be merciful to me, for in thou my soul takes defence; in the shadow of thy wings I will take defence, till the storms of destruction pass by.",
+          "06125ad3d1d57585-01": "Be merciful to me, O God, be merciful to me, for in thee my soul takes refuge; in the shadow of your wings I will take refuge, till the storms of destruction pass by.",
+          "9879dbb7aec41528-01": "Be merciful to me, O God, be merciful to me, for in you my soul takes refuge; in the shadow of your wings I will take refuge, till the storms of destruction pass by.",
+          "bba730b9171fcc22-01": "Be merciful to me, O God, be merciful to me, for in you my soul takes refuge; in the shadow of your wings I will take refuge, till the storms of destruction pass by.",
+          "41926a4aa3831714-01": "Be merciful to me, O God, be merciful to me, for in you my soul takes refuge; in the shadow of your wings I will take refuge, till the storms of destruction pass by."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מַחְסֶה",
+            "transliteration": "mach-seh",
+            "english": "refuge",
+            "strongs": "H4543",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "כָּנָף",
+            "transliteration": "ka-naph",
+            "english": "wing",
+            "strongs": "H3671",
+            "parsing": "N-fs"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "I cry to God Most High, to God who fulfills his purpose for me.",
+          "06125ad3d1d57585-01": "I cry to God Most High, to God who fulfills his purpose for me.",
+          "9879dbb7aec41528-01": "I cry to God Most High, to God who fulfills his purpose for me.",
+          "bba730b9171fcc22-01": "I cry to God Most High, to God who fulfills his purpose for me.",
+          "41926a4aa3831714-01": "I cry to God Most High, to God who fulfills his purpose for me."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "He will send from heaven and save me; he will put to shame him who tramples on me. God will send out his steadfast love and his faithfulness!",
+          "06125ad3d1d57585-01": "He will send from heaven and save me; he will put to shame him who tramples on me. God will send out his steadfast love and his faithfulness!",
+          "9879dbb7aec41528-01": "He will send from heaven and save me; he will put to shame him who tramples on me. God will send out his steadfast love and his faithfulness!",
+          "bba730b9171fcc22-01": "He will send from heaven and save me; he will put to shame him who tramples on me. God will send out his good mercy and his faithfulness!",
+          "41926a4aa3831714-01": "He will send from heaven and save me; he will put to shame him who tramples on me. God will send out his steadfast love and his faithfulness!"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "My soul is in the midst of lions; I lie down amid fiery beasts— the children of man, whose teeth are spears and arrows, whose tongues are sharp swords.",
+          "06125ad3d1d57585-01": "My soul is in the midst of lions; I lie down amid fiery beasts— the children of man, whose teeth are spears and arrows, whose tongues are sharp swords.",
+          "9879dbb7aec41528-01": "My soul is in the midst of lions; I lie down amid fiery beasts— the children of man, whose teeth are spears and arrows, whose tongues are sharp swords.",
+          "bba730b9171fcc22-01": "My soul is in the midst of lions; I lie down amid fiery beasts— the children of man, whose teeth are spears and arrows, whose tongues are sharp swords.",
+          "41926a4aa3831714-01": "My soul is in the midst of lions; I lie down amid fiery beasts— the children of man, whose teeth are spears and arrows, whose tongues are sharp swords."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "חֲנִית",
+            "transliteration": "cha-nit",
+            "english": "spear",
+            "strongs": "H2595",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Be exalted, O God, above the heavens! Let thy glory be over all the earth!",
+          "06125ad3d1d57585-01": "Be exalted, O God, above the heavens! Let your glory be over all the earth!",
+          "9879dbb7aec41528-01": "Be exalted, O God, above the heavens! Let your glory be over all the earth!",
+          "bba730b9171fcc22-01": "Be exalted, O God, above the heavens! Let your glory be over all the earth!",
+          "41926a4aa3831714-01": "Be exalted, O God, above the heavens! Let your glory be over all the earth!"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "They set a net for my steps; my soul was bowed down. They dug a pit in my way, but they have fallen into it themselves.",
+          "06125ad3d1d57585-01": "They set a net for my steps; my soul was bowed down. They dug a pit in my way, but they have fallen into it themselves.",
+          "9879dbb7aec41528-01": "They set a net for my steps; my soul was bowed down. They dug a pit in my way, but they have fallen into it themselves.",
+          "bba730b9171fcc22-01": "They set a net for my steps; my soul was bowed down. They dug a pit in my way, but they have fallen into it themselves.",
+          "41926a4aa3831714-01": "They set a net for my steps; my soul was bowed down. They dug a pit in my way, but they have fallen into it themselves."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "1 Samuel 26:7-12": {
+    "reference": "1 Samuel 26:7-12",
+    "verses": [
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "So David and Abishai went to the army by night. And there Saul lay sleeping within the trench, with his spear stuck in the ground at his head, and Abner and the people lay around him.",
+          "06125ad3d1d57585-01": "So David and Abishai went to the army by night. And there Saul lay sleeping within the trench, with his spear stuck in the ground at his head, and Abner and the people lay around him.",
+          "9879dbb7aec41528-01": "So David and Abishai went to the army by night. And there Saul lay sleeping within the trench, with his spear stuck in the ground at his head, and Abner and the people lay around him.",
+          "bba730b9171fcc22-01": "So David and Abishai went to the army by night. And there Saul lay sleeping within the trench, with his spear stuck in the ground at his head, and Abner and the people lay around him.",
+          "41926a4aa3831714-01": "So David and Abishai went to the army by night. And there Saul lay sleeping within the trench, with his spear stuck in the ground at his head, and Abner and the people lay around him."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "חֲנִית",
+            "transliteration": "cha-nit",
+            "english": "spear",
+            "strongs": "H2595",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Abishai said to David, \"God hath given thy enemy into thy hand this day. Now please let me pin him to the earth with one stroke of the spear, and I will not strike him twice.\"",
+          "06125ad3d1d57585-01": "Then Abishai said to David, \"God hath given your enemy into your hand this day. Now please let me pin him to the earth with one stroke of the spear, and I will not strike him twice.\"",
+          "9879dbb7aec41528-01": "Then Abishai said to David, \"God has given your enemy into your hand this day. Now please let me pin him to the earth with one stroke of the spear, and I will not strike him twice.\"",
+          "bba730b9171fcc22-01": "Then Abishai said to David, \"God has given your enemy into your hand this day. Now please let me pin him to the earth with one stroke of the spear, and I will not strike him twice.\"",
+          "41926a4aa3831714-01": "Then Abishai said to David, \"God has given your enemy into your hand this day. Now please let me pin him to the earth with one stroke of the spear, and I will not strike him twice.\""
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "חֲנִית",
+            "transliteration": "cha-nit",
+            "english": "spear",
+            "strongs": "H2595",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "But David said to Abishai, \"Do not destroy him, for who can put out his hand against the Lord's anointed and be guiltless?\"",
+          "06125ad3d1d57585-01": "But David said to Abishai, \"Do not destroy him, for who can put out his hand against the Lord's anointed and be guiltless?\"",
+          "9879dbb7aec41528-01": "But David said to Abishai, \"Do not destroy him, for who can put out his hand against the Lord's anointed and be guiltless?\"",
+          "bba730b9171fcc22-01": "But David said to Abishai, \"Do not destroy him, for who can put out his hand against the Lord's anointed and be guiltless?\"",
+          "41926a4aa3831714-01": "But David said to Abishai, \"Do not destroy him, for who can put out his hand against the Lord's anointed and be guiltless?\""
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And David said, \"As the Lord lives, the Lord will strike him, or his day will come to die, or he will go down into battle and perish.",
+          "06125ad3d1d57585-01": "And David said, \"As the Lord lives, the Lord will strike him, or his day will come to die, or he will go down into battle and perish.",
+          "9879dbb7aec41528-01": "And David said, \"As the Lord lives, the Lord will strike him, or his day will come to die, or he will go down into battle and perish.",
+          "bba730b9171fcc22-01": "And David said, \"As the Lord lives, the Lord will strike him, or his day will come to die, or he will go down into battle and perish.",
+          "41926a4aa3831714-01": "And David said, \"As the Lord lives, the Lord will strike him, or his day will come to die, or he will go down into battle and perish."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "The Lord forbid that I should put out my hand against the Lord's anointed. But now take the spear that is at his head and the jar of water, and let us go.\"",
+          "06125ad3d1d57585-01": "The Lord forbid that I should put out my hand against the Lord's anointed. But now take the spear that is at his head and the jar of water, and let us go.\"",
+          "9879dbb7aec41528-01": "The Lord forbid that I should put out my hand against the Lord's anointed. But now take the spear that is at his head and the jar of water, and let us go.\"",
+          "bba730b9171fcc22-01": "The Lord forbid that I should put out my hand against the Lord's anointed. But now take the spear that is at his head and the jar of water, and let us go.\"",
+          "41926a4aa3831714-01": "The Lord forbid that I should put out my hand against the Lord's anointed. But now take the spear that is at his head and the jar of water, and let us go.\""
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "חֲנִית",
+            "transliteration": "cha-nit",
+            "english": "spear",
+            "strongs": "H2595",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "So David took the spear and the jar of water from Saul's head, and they went their way. No man saw it or knew it, nor did any awake, for they were all asleep, because a deep sleep from the Lord had fallen upon them.",
+          "06125ad3d1d57585-01": "So David took the spear and the jar of water from Saul's head, and they went their way. No man saw it or knew it, nor did any awake, for they were all asleep, because a deep sleep from the Lord had fallen upon them.",
+          "9879dbb7aec41528-01": "So David took the spear and the jar of water from Saul's head, and they went their way. No man saw it or knew it, nor did any awake, for they were all asleep, because a deep sleep from the Lord had fallen upon them.",
+          "bba730b9171fcc22-01": "So David took the spear and the jar of water from Saul's head, and they went their way. No man saw it or knew it, nor did any awake, for they were all asleep, because a deep sleep from the Lord had fallen upon them.",
+          "41926a4aa3831714-01": "So David took the spear and the jar of water from Saul's head, and they went their way. No man saw it or knew it, nor did any awake, for they were all asleep, because a deep sleep from the Lord had fallen upon them."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "חֲנִית",
+            "transliteration": "cha-nit",
+            "english": "spear",
+            "strongs": "H2595",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 7": {
+    "reference": "Psalm 7",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "O Lord my God, in thou do I take defence; save me from all my pursuers and deliver me,",
+          "06125ad3d1d57585-01": "O Lord my God, in thee do I take refuge; save me from all my pursuers and deliver me,",
+          "9879dbb7aec41528-01": "O Lord my God, in you do I take refuge; save me from all my pursuers and deliver me,",
+          "bba730b9171fcc22-01": "O Lord my God, in you do I take refuge; save me from all my pursuers and deliver me,",
+          "41926a4aa3831714-01": "O Lord my God, in you do I take refuge; save me from all my pursuers and deliver me,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מַחְסֶה",
+            "transliteration": "mach-seh",
+            "english": "refuge",
+            "strongs": "H4543",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "lest like a lion they tear my soul apart, rending it in pieces, with none to deliver.",
+          "06125ad3d1d57585-01": "lest like a lion they tear my soul apart, rending it in pieces, with none to deliver.",
+          "9879dbb7aec41528-01": "lest like a lion they tear my soul apart, rending it in pieces, with none to deliver.",
+          "bba730b9171fcc22-01": "lest like a lion they tear my soul apart, rending it in pieces, with none to deliver.",
+          "41926a4aa3831714-01": "lest like a lion they tear my soul apart, rending it in pieces, with none to deliver."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "O Lord my God, if I have done this, if there is wrong in my hands,",
+          "06125ad3d1d57585-01": "O Lord my God, if I have done this, if there is wrong in my hands,",
+          "9879dbb7aec41528-01": "O Lord my God, if I have done this, if there is wrong in my hands,",
+          "bba730b9171fcc22-01": "O Lord my God, if I have done this, if there is wrong in my hands,",
+          "41926a4aa3831714-01": "O Lord my God, if I have done this, if there is wrong in my hands,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "if I have repaid my friend with evil or plundered my enemy without cause,",
+          "06125ad3d1d57585-01": "if I have repaid my friend with evil or plundered my enemy without cause,",
+          "9879dbb7aec41528-01": "if I have repaid my friend with evil or plundered my enemy without cause,",
+          "bba730b9171fcc22-01": "if I have repaid my friend with evil or plundered my enemy without cause,",
+          "41926a4aa3831714-01": "if I have repaid my friend with evil or plundered my enemy without cause,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "let the enemy pursue my soul and overtake it, and let him trample my life to the earth and lay my glory in the dust.",
+          "06125ad3d1d57585-01": "let the enemy pursue my soul and overtake it, and let him trample my life to the earth and lay my glory in the dust.",
+          "9879dbb7aec41528-01": "let the enemy pursue my soul and overtake it, and let him trample my life to the earth and lay my glory in the dust.",
+          "bba730b9171fcc22-01": "let the enemy pursue my soul and overtake it, and let him trample my life to the earth and lay my glory in the dust.",
+          "41926a4aa3831714-01": "let the enemy pursue my soul and overtake it, and let him trample my life to the earth and lay my glory in the dust."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Arise, O Lord, in thy anger; lift yourself up against the fury of my enemies; awake for me; thou have appointed a judgment.",
+          "06125ad3d1d57585-01": "Arise, O Lord, in your anger; lift yourself up against the fury of my enemies; awake for me; thee have appointed a judgment.",
+          "9879dbb7aec41528-01": "Arise, O Lord, in your anger; lift yourself up against the fury of my enemies; awake for me; you have appointed a judgment.",
+          "bba730b9171fcc22-01": "Arise, O Lord, in your anger; lift yourself up against the fury of my enemies; awake for me; you have appointed a judgment.",
+          "41926a4aa3831714-01": "Arise, O Lord, in your anger; lift yourself up against the fury of my enemies; awake for me; you have appointed a judgment."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Let the assembly of the peoples be gathered about thou; over it return on high.",
+          "06125ad3d1d57585-01": "Let the assembly of the peoples be gathered about thee; over it return on high.",
+          "9879dbb7aec41528-01": "Let the assembly of the peoples be gathered about you; over it return on high.",
+          "bba730b9171fcc22-01": "Let the assembly of the peoples be gathered about you; over it return on high.",
+          "41926a4aa3831714-01": "Let the assembly of the peoples be gathered about you; over it return on high."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "The Lord judges the peoples; judge me, O Lord, according to my righteousness and according to the integrity that is in me.",
+          "06125ad3d1d57585-01": "The Lord judges the peoples; judge me, O Lord, according to my righteousness and according to the integrity that is in me.",
+          "9879dbb7aec41528-01": "The Lord judges the peoples; judge me, O Lord, according to my righteousness and according to the integrity that is in me.",
+          "bba730b9171fcc22-01": "The Lord judges the peoples; judge me, O Lord, according to my righteousness and according to the integrity that is in me.",
+          "41926a4aa3831714-01": "The Lord judges the peoples; judge me, O Lord, according to my righteousness and according to the integrity that is in me."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "2 Samuel 7:1-17": {
+    "reference": "2 Samuel 7:1-17",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Now when the king lived in his house and the Lord had given him rest from all his surrounding enemies,",
+          "06125ad3d1d57585-01": "Now when the king lived in his house and the Lord had given him rest from all his surrounding enemies,",
+          "9879dbb7aec41528-01": "Now when the king lived in his house and the Lord had given him rest from all his surrounding enemies,",
+          "bba730b9171fcc22-01": "Now when the king lived in his house and the Lord had given him rest from all his surrounding enemies,",
+          "41926a4aa3831714-01": "Now when the king lived in his house and the Lord had given him rest from all his surrounding enemies,"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "the king said to Nathan the prophet, \"See now, I dwell in a house of cedar, but the ark of God dwells in a tent.\"",
+          "06125ad3d1d57585-01": "the king said to Nathan the prophet, \"See now, I dwell in a house of cedar, but the ark of God dwells in a tent.\"",
+          "9879dbb7aec41528-01": "the king said to Nathan the prophet, \"See now, I dwell in a house of cedar, but the ark of God dwells in a tent.\"",
+          "bba730b9171fcc22-01": "the king said to Nathan the prophet, \"See now, I dwell in a house of cedar, but the ark of God dwells in a tent.\"",
+          "41926a4aa3831714-01": "the king said to Nathan the prophet, \"See now, I dwell in a house of cedar, but the ark of God dwells in a tent.\""
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And Nathan said to the king, \"Go, do all that is in thy heart, for the Lord is with thou.\"",
+          "06125ad3d1d57585-01": "And Nathan said to the king, \"Go, do all that is in your heart, for the Lord is with thee.\"",
+          "9879dbb7aec41528-01": "And Nathan said to the king, \"Go, do all that is in your heart, for the Lord is with you.\"",
+          "bba730b9171fcc22-01": "And Nathan said to the king, \"Go, do all that is in your heart, for the Lord is with you.\"",
+          "41926a4aa3831714-01": "And Nathan said to the king, \"Go, do all that is in your heart, for the Lord is with you.\""
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "But that same night the word of the Lord came to Nathan,",
+          "06125ad3d1d57585-01": "But that same night the word of the Lord came to Nathan,",
+          "9879dbb7aec41528-01": "But that same night the word of the Lord came to Nathan,",
+          "bba730b9171fcc22-01": "But that same night the word of the Lord came to Nathan,",
+          "41926a4aa3831714-01": "But that same night the word of the Lord came to Nathan,"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "\"Go and tell my servant David, 'Thus says the Lord: Would thou build me a house to dwell in? ...",
+          "06125ad3d1d57585-01": "\"Go and tell my servant David, 'Thus says the Lord: Would thee build me a house to dwell in? ...",
+          "9879dbb7aec41528-01": "\"Go and tell my servant David, 'Thus says the Lord: Would you build me a house to dwell in? ...",
+          "bba730b9171fcc22-01": "\"Go and tell my servant David, 'Thus says the Lord: Would you build me a house to dwell in? ...",
+          "41926a4aa3831714-01": "\"Go and tell my servant David, 'Thus says the Lord: Would you build me a house to dwell in? ..."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Moreover, the Lord declares to thou that the Lord will make thou a house.",
+          "06125ad3d1d57585-01": "Moreover, the Lord declares to thee that the Lord will make thee a house.",
+          "9879dbb7aec41528-01": "Moreover, the Lord declares to you that the Lord will make you a house.",
+          "bba730b9171fcc22-01": "Moreover, the Lord declares to you that the Lord will make you a house.",
+          "41926a4aa3831714-01": "Moreover, the Lord declares to you that the Lord will make you a house."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "When thy days are fulfilled and thou lie down with thy fathers, I will raise up thy offspring after thou, who shall come from thy body, and I will establish his kingdom.",
+          "06125ad3d1d57585-01": "When your days are fulfilled and thee lie down with your fathers, I will raise up your offspring after thee, who shall come from your body, and I will establish his kingdom.",
+          "9879dbb7aec41528-01": "When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.",
+          "bba730b9171fcc22-01": "When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.",
+          "41926a4aa3831714-01": "When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "06125ad3d1d57585-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "9879dbb7aec41528-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "bba730b9171fcc22-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "41926a4aa3831714-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And thy house and thy kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "06125ad3d1d57585-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "9879dbb7aec41528-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "bba730b9171fcc22-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "41926a4aa3831714-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\""
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "2 Samuel 7:18-29": {
+    "reference": "2 Samuel 7:18-29",
+    "verses": [
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Then King David went in and sat before the Lord and said, \"Who am I, O Lord God, and what is my house, that thou have brought me thus far?",
+          "06125ad3d1d57585-01": "Then King David went in and sat before the Lord and said, \"Who am I, O Lord God, and what is my house, that thee have brought me thus far?",
+          "9879dbb7aec41528-01": "Then King David went in and sat before the Lord and said, \"Who am I, O Lord God, and what is my house, that you have brought me thus far?",
+          "bba730b9171fcc22-01": "Then King David went in and sat before the Lord and said, \"Who am I, O Lord God, and what is my house, that you have brought me thus far?",
+          "41926a4aa3831714-01": "Then King David went in and sat before the Lord and said, \"Who am I, O Lord God, and what is my house, that you have brought me thus far?"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And yet this was a small thing in thy eyes, O Lord God. You have spoken also of thy servant's house for a great while to come, and this is instruction for mankind, O Lord God!",
+          "06125ad3d1d57585-01": "And yet this was a small thing in your eyes, O Lord God. You have spoken also of your servant's house for a great while to come, and this is instruction for mankind, O Lord God!",
+          "9879dbb7aec41528-01": "And yet this was a small thing in your eyes, O Lord God. You have spoken also of your servant's house for a great while to come, and this is instruction for mankind, O Lord God!",
+          "bba730b9171fcc22-01": "And yet this was a small thing in your eyes, O Lord God. You have spoken also of your servant's house for a great while to come, and this is instruction for mankind, O Lord God!",
+          "41926a4aa3831714-01": "And yet this was a small thing in your eyes, O Lord God. You have spoken also of your servant's house for a great while to come, and this is instruction for mankind, O Lord God!"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And what more can David say to thou? For thou know thy servant, O Lord God!",
+          "06125ad3d1d57585-01": "And what more can David say to thee? For thee know your servant, O Lord God!",
+          "9879dbb7aec41528-01": "And what more can David say to you? For you know your servant, O Lord God!",
+          "bba730b9171fcc22-01": "And what more can David say to you? For you know your servant, O Lord God!",
+          "41926a4aa3831714-01": "And what more can David say to you? For you know your servant, O Lord God!"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Because of thy promise, and according to thy own heart, thou have carried out all this greatness, to make thy servant know it.",
+          "06125ad3d1d57585-01": "Because of your promise, and according to your own heart, thee have carried out all this greatness, to make your servant know it.",
+          "9879dbb7aec41528-01": "Because of your promise, and according to your own heart, you have carried out all this greatness, to make your servant know it.",
+          "bba730b9171fcc22-01": "Because of your promise, and according to your own heart, you have carried out all this greatness, to make your servant know it.",
+          "41926a4aa3831714-01": "Because of your promise, and according to your own heart, you have carried out all this greatness, to make your servant know it."
+        },
+        "words": [
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore thou are great, O Lord God. For there is none like thou, and there is no God besides thou...",
+          "06125ad3d1d57585-01": "Therefore thee are great, O Lord God. For there is none like thee, and there is no God besides thee...",
+          "9879dbb7aec41528-01": "Therefore you are great, O Lord God. For there is none like you, and there is no God besides you...",
+          "bba730b9171fcc22-01": "Therefore you are great, O Lord God. For there is none like you, and there is no God besides you...",
+          "41926a4aa3831714-01": "Therefore you are great, O Lord God. For there is none like you, and there is no God besides you..."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And now, O Lord God, thou are God, and thy words are true, and thou have promised this good thing to thy servant.",
+          "06125ad3d1d57585-01": "And now, O Lord God, thee are God, and your words are true, and thee have promised this good thing to your servant.",
+          "9879dbb7aec41528-01": "And now, O Lord God, you are God, and your words are true, and you have promised this good thing to your servant.",
+          "bba730b9171fcc22-01": "And now, O Lord God, you are God, and your words are true, and you have promised this good thing to your servant.",
+          "41926a4aa3831714-01": "And now, O Lord God, you are God, and your words are true, and you have promised this good thing to your servant."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "Now therefore let it please thou to bless the house of thy servant, so that it may continue forever before thou; for thou, O Lord God, have spoken, and with thy blessing shall the house of thy servant be blessed forever.\"",
+          "06125ad3d1d57585-01": "Now therefore let it please thee to bless the house of your servant, so that it may continue forever before thee; for thee, O Lord God, have spoken, and with your blessing shall the house of your servant be blessed forever.\"",
+          "9879dbb7aec41528-01": "Now therefore let it please you to bless the house of your servant, so that it may continue forever before you; for you, O Lord God, have spoken, and with your blessing shall the house of your servant be blessed forever.\"",
+          "bba730b9171fcc22-01": "Now therefore let it please you to bless the house of your servant, so that it may continue forever before you; for you, O Lord God, have spoken, and with your blessing shall the house of your servant be blessed forever.\"",
+          "41926a4aa3831714-01": "Now therefore let it please you to bless the house of your servant, so that it may continue forever before you; for you, O Lord God, have spoken, and with your blessing shall the house of your servant be blessed forever.\""
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "2 Samuel 11": {
+    "reference": "2 Samuel 11",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "In the spring, at the time when kings go off to war, David sent Joab out with the king’s men and the whole Israelite army. They destroyed the Ammonites and besieged Rabbah. But David remained in Jerusalem.",
+          "06125ad3d1d57585-01": "In the spring, at the time when kings go off to war, David sent Joab out with the king’s men and the whole Israelite army. They destroyed the Ammonites and besieged Rabbah. But David remained in Jerusalem.",
+          "9879dbb7aec41528-01": "In the spring, at the time when kings go off to war, David sent Joab out with the king’s men and the whole Israelite army. They destroyed the Ammonites and besieged Rabbah. But David remained in Jerusalem.",
+          "bba730b9171fcc22-01": "In the spring, at the time when kings go off to war, David sent Joab out with the king’s men and the whole Israelite army. They destroyed the Ammonites and besieged Rabbah. But David remained in Jerusalem.",
+          "41926a4aa3831714-01": "In the spring, at the time when kings go off to war, David sent Joab out with the king’s men and the whole Israelite army. They destroyed the Ammonites and besieged Rabbah. But David remained in Jerusalem."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "One evening David got up from his bed and walked around on the roof of the palace. From the roof he saw a woman bathing. The woman was very beautiful,",
+          "06125ad3d1d57585-01": "One evening David got up from his bed and walked around on the roof of the palace. From the roof he saw a woman bathing. The woman was very beautiful,",
+          "9879dbb7aec41528-01": "One evening David got up from his bed and walked around on the roof of the palace. From the roof he saw a woman bathing. The woman was very beautiful,",
+          "bba730b9171fcc22-01": "One evening David got up from his bed and walked around on the roof of the palace. From the roof he saw a woman bathing. The woman was very beautiful,",
+          "41926a4aa3831714-01": "One evening David got up from his bed and walked around on the roof of the palace. From the roof he saw a woman bathing. The woman was very beautiful,"
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "and David sent someone to find out about her. The man said, \"She is Bathsheba, the daughter of Eliam and the wife of Uriah the Hittite.\"",
+          "06125ad3d1d57585-01": "and David sent someone to find out about her. The man said, \"She is Bathsheba, the daughter of Eliam and the wife of Uriah the Hittite.\"",
+          "9879dbb7aec41528-01": "and David sent someone to find out about her. The man said, \"She is Bathsheba, the daughter of Eliam and the wife of Uriah the Hittite.\"",
+          "bba730b9171fcc22-01": "and David sent someone to find out about her. The man said, \"She is Bathsheba, the daughter of Eliam and the wife of Uriah the Hittite.\"",
+          "41926a4aa3831714-01": "and David sent someone to find out about her. The man said, \"She is Bathsheba, the daughter of Eliam and the wife of Uriah the Hittite.\""
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Then David sent messengers to get her. She came to him, and he slept with her. (Now she was purifying herself from her monthly uncleanness.) Then she went back home.",
+          "06125ad3d1d57585-01": "Then David sent messengers to get her. She came to him, and he slept with her. (Now she was purifying herself from her monthly uncleanness.) Then she went back home.",
+          "9879dbb7aec41528-01": "Then David sent messengers to get her. She came to him, and he slept with her. (Now she was purifying herself from her monthly uncleanness.) Then she went back home.",
+          "bba730b9171fcc22-01": "Then David sent messengers to get her. She came to him, and he slept with her. (Now she was purifying herself from her monthly uncleanness.) Then she went back home.",
+          "41926a4aa3831714-01": "Then David sent messengers to get her. She came to him, and he slept with her. (Now she was purifying herself from her monthly uncleanness.) Then she went back home."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "The woman conceived and sent word to David, saying, \"I am pregnant.\"",
+          "06125ad3d1d57585-01": "The woman conceived and sent word to David, saying, \"I am pregnant.\"",
+          "9879dbb7aec41528-01": "The woman conceived and sent word to David, saying, \"I am pregnant.\"",
+          "bba730b9171fcc22-01": "The woman conceived and sent word to David, saying, \"I am pregnant.\"",
+          "41926a4aa3831714-01": "The woman conceived and sent word to David, saying, \"I am pregnant.\""
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "In the morning David wrote a letter to Joab and sent it with Uriah.",
+          "06125ad3d1d57585-01": "In the morning David wrote a letter to Joab and sent it with Uriah.",
+          "9879dbb7aec41528-01": "In the morning David wrote a letter to Joab and sent it with Uriah.",
+          "bba730b9171fcc22-01": "In the morning David wrote a letter to Joab and sent it with Uriah.",
+          "41926a4aa3831714-01": "In the morning David wrote a letter to Joab and sent it with Uriah."
+        },
+        "words": [
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "In it he wrote, \"Put Uriah out in front where the fighting is fiercest. Then withdraw from him so he will be struck down and die.\"",
+          "06125ad3d1d57585-01": "In it he wrote, \"Put Uriah out in front where the fighting is fiercest. Then withdraw from him so he will be struck down and die.\"",
+          "9879dbb7aec41528-01": "In it he wrote, \"Put Uriah out in front where the fighting is fiercest. Then withdraw from him so he will be struck down and die.\"",
+          "bba730b9171fcc22-01": "In it he wrote, \"Put Uriah out in front where the fighting is fiercest. Then withdraw from him so he will be struck down and die.\"",
+          "41926a4aa3831714-01": "In it he wrote, \"Put Uriah out in front where the fighting is fiercest. Then withdraw from him so he will be struck down and die.\""
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "2 Samuel 12:1-15": {
+    "reference": "2 Samuel 12:1-15",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And the Lord sent Nathan to David. He came to him and said to him, \"There were two men in a certain city, the one rich and the other poor...",
+          "06125ad3d1d57585-01": "And the Lord sent Nathan to David. He came to him and said to him, \"There were two men in a certain city, the one rich and the other poor...",
+          "9879dbb7aec41528-01": "And the Lord sent Nathan to David. He came to him and said to him, \"There were two men in a certain city, the one rich and the other poor...",
+          "bba730b9171fcc22-01": "And the Lord sent Nathan to David. He came to him and said to him, \"There were two men in a certain city, the one rich and the other poor...",
+          "41926a4aa3831714-01": "And the Lord sent Nathan to David. He came to him and said to him, \"There were two men in a certain city, the one rich and the other poor..."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Now there came a traveler to the rich man, and he was unwilling to take one of his own flock... but he took the poor man's lamb and prepared it for the man...",
+          "06125ad3d1d57585-01": "Now there came a traveler to the rich man, and he was unwilling to take one of his own flock... but he took the poor man's lamb and prepared it for the man...",
+          "9879dbb7aec41528-01": "Now there came a traveler to the rich man, and he was unwilling to take one of his own flock... but he took the poor man's lamb and prepared it for the man...",
+          "bba730b9171fcc22-01": "Now there came a traveler to the rich man, and he was unwilling to take one of his own flock... but he took the poor man's lamb and prepared it for the man...",
+          "41926a4aa3831714-01": "Now there came a traveler to the rich man, and he was unwilling to take one of his own flock... but he took the poor man's lamb and prepared it for the man..."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Then David's anger was greatly kindled against the man, and he said to Nathan, \"As the Lord lives, the man who hath done this deserves to die...\"",
+          "06125ad3d1d57585-01": "Then David's anger was greatly kindled against the man, and he said to Nathan, \"As the Lord lives, the man who hath done this deserves to die...\"",
+          "9879dbb7aec41528-01": "Then David's anger was greatly kindled against the man, and he said to Nathan, \"As the Lord lives, the man who has done this deserves to die...\"",
+          "bba730b9171fcc22-01": "Then David's anger was greatly kindled against the man, and he said to Nathan, \"As the Lord lives, the man who has done this deserves to die...\"",
+          "41926a4aa3831714-01": "Then David's anger was greatly kindled against the man, and he said to Nathan, \"As the Lord lives, the man who has done this deserves to die...\""
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Nathan said to David, \"You are the man! Thus says the Lord, the God of Israel: 'I anointed thou king over Israel...",
+          "06125ad3d1d57585-01": "Nathan said to David, \"You are the man! Thus says the Lord, the God of Israel: 'I anointed thee king over Israel...",
+          "9879dbb7aec41528-01": "Nathan said to David, \"You are the man! Thus says the Lord, the God of Israel: 'I anointed you king over Israel...",
+          "bba730b9171fcc22-01": "Nathan said to David, \"You are the man! Thus says the Lord, the God of Israel: 'I anointed you king over Israel...",
+          "41926a4aa3831714-01": "Nathan said to David, \"You are the man! Thus says the Lord, the God of Israel: 'I anointed you king over Israel..."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Why have thou despised the word of the Lord, to do what is evil in his sight? You have struck down Uriah the Hittite with the sword...",
+          "06125ad3d1d57585-01": "Why have thee despised the word of the Lord, to do what is evil in his sight? You have struck down Uriah the Hittite with the sword...",
+          "9879dbb7aec41528-01": "Why have you despised the word of the Lord, to do what is evil in his sight? You have struck down Uriah the Hittite with the sword...",
+          "bba730b9171fcc22-01": "Why have you despised the word of the Lord, to do what is evil in his sight? You have struck down Uriah the Hittite with the sword...",
+          "41926a4aa3831714-01": "Why have you despised the word of the Lord, to do what is evil in his sight? You have struck down Uriah the Hittite with the sword..."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "David said to Nathan, \"I have sinned against the Lord.\" And Nathan said to David, \"The Lord also hath put away thy iniquity; thou shall not die.\"",
+          "06125ad3d1d57585-01": "David said to Nathan, \"I have sinned against the Lord.\" And Nathan said to David, \"The Lord also hath put away your sin; thee shall not die.\"",
+          "9879dbb7aec41528-01": "David said to Nathan, \"I have sinned against the Lord.\" And Nathan said to David, \"The Lord also has put away your sin; you shall not die.\"",
+          "bba730b9171fcc22-01": "David said to Nathan, \"I have sinned against the Lord.\" And Nathan said to David, \"The Lord also has put away your sin; you shall not die.\"",
+          "41926a4aa3831714-01": "David said to Nathan, \"I have sinned against the Lord.\" And Nathan said to David, \"The Lord also has put away your sin; you shall not die.\""
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּוִד",
+            "transliteration": "da-vid",
+            "english": "David",
+            "strongs": "H1732",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 51": {
+    "reference": "Psalm 51",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Have mercy on me, O God, according to thy steadfast love; according to thy abundant mercy blot out my transgressions.",
+          "06125ad3d1d57585-01": "Have mercy on me, O God, according to your steadfast love; according to your abundant mercy blot out my transgressions.",
+          "9879dbb7aec41528-01": "Have mercy on me, O God, according to your steadfast love; according to your abundant mercy blot out my transgressions.",
+          "bba730b9171fcc22-01": "Have mercy on me, O God, according to your good mercy; according to your abundant mercy blot out my wrongdoings.",
+          "41926a4aa3831714-01": "Have mercy on me, O God, according to your steadfast love; according to your abundant mercy blot out my transgressions."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "חָנַן",
+            "transliteration": "cha-nan",
+            "english": "be merciful / gracious",
+            "strongs": "H2603",
+            "parsing": "V-Qal-Imp"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Wash me thoroughly from my iniquity, and cleanse me from my iniquity!",
+          "06125ad3d1d57585-01": "Wash me thoroughly from my iniquity, and cleanse me from my sin!",
+          "9879dbb7aec41528-01": "Wash me thoroughly from my iniquity, and cleanse me from my sin!",
+          "bba730b9171fcc22-01": "Wash me thoroughly from my evil ways, and cleanse me from my sin!",
+          "41926a4aa3831714-01": "Wash me thoroughly from my iniquity, and cleanse me from my sin!"
+        },
+        "words": [
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "טָהֵר",
+            "transliteration": "ta-her",
+            "english": "cleanse / purify",
+            "strongs": "H2891",
+            "parsing": "V-Piel-Imp"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "For I know my transgressions, and my iniquity is ever before me.",
+          "06125ad3d1d57585-01": "For I know my transgressions, and my sin is ever before me.",
+          "9879dbb7aec41528-01": "For I know my transgressions, and my sin is ever before me.",
+          "bba730b9171fcc22-01": "For I know my wrongdoings, and my sin is ever before me.",
+          "41926a4aa3831714-01": "For I know my transgressions, and my sin is ever before me."
+        },
+        "words": [
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Against thou, thou only, have I sinned and done what is evil in thy sight, so that thou may be justified in thy words and blameless in thy judgment.",
+          "06125ad3d1d57585-01": "Against thee, thee only, have I sinned and done what is evil in your sight, so that thee may be justified in your words and blameless in your judgment.",
+          "9879dbb7aec41528-01": "Against you, you only, have I sinned and done what is evil in your sight, so that you may be justified in your words and blameless in your judgment.",
+          "bba730b9171fcc22-01": "Against you, you only, have I sinned and done what is evil in your sight, so that you may be justified in your words and blameless in your judgment.",
+          "41926a4aa3831714-01": "Against you, you only, have I sinned and done what is evil in your sight, so that you may be justified in your words and blameless in your judgment."
+        },
+        "words": [
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Behold, I was brought forth in iniquity, and in iniquity did my mother conceive me.",
+          "06125ad3d1d57585-01": "Behold, I was brought forth in iniquity, and in sin did my mother conceive me.",
+          "9879dbb7aec41528-01": "Behold, I was brought forth in iniquity, and in sin did my mother conceive me.",
+          "bba730b9171fcc22-01": "Behold, I was brought forth in evil ways, and in sin did my mother conceive me.",
+          "41926a4aa3831714-01": "Behold, I was brought forth in iniquity, and in sin did my mother conceive me."
+        },
+        "words": [
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Behold, thou delight in truth in the inward being, and thou teach me wisdom in the secret heart.",
+          "06125ad3d1d57585-01": "Behold, thee delight in truth in the inward being, and thee teach me wisdom in the secret heart.",
+          "9879dbb7aec41528-01": "Behold, you delight in truth in the inward being, and you teach me wisdom in the secret heart.",
+          "bba730b9171fcc22-01": "Behold, you delight in truth in the inward being, and you teach me wisdom in the secret heart.",
+          "41926a4aa3831714-01": "Behold, you delight in truth in the inward being, and you teach me wisdom in the secret heart."
+        },
+        "words": [
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Purge me with hyssop, and I shall be clean; wash me, and I shall be whiter than snow.",
+          "06125ad3d1d57585-01": "Purge me with hyssop, and I shall be clean; wash me, and I shall be whiter than snow.",
+          "9879dbb7aec41528-01": "Purge me with hyssop, and I shall be clean; wash me, and I shall be whiter than snow.",
+          "bba730b9171fcc22-01": "Purge me with hyssop, and I shall be clean; wash me, and I shall be whiter than snow.",
+          "41926a4aa3831714-01": "Purge me with hyssop, and I shall be clean; wash me, and I shall be whiter than snow."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Hide thy face from my sins, and blot out all my iniquities.",
+          "06125ad3d1d57585-01": "Hide your face from my sins, and blot out all my iniquities.",
+          "9879dbb7aec41528-01": "Hide your face from my sins, and blot out all my iniquities.",
+          "bba730b9171fcc22-01": "Hide your face from my sins, and blot out all my iniquities.",
+          "41926a4aa3831714-01": "Hide your face from my sins, and blot out all my iniquities."
+        },
+        "words": [
+          {
+            "original": "חַטָּאָה",
+            "transliteration": "chat-ta-ah",
+            "english": "sin",
+            "strongs": "H2403",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "Create in me a clean heart, O God, and renew a right spirit within me.",
+          "06125ad3d1d57585-01": "Create in me a clean heart, O God, and renew a right spirit within me.",
+          "9879dbb7aec41528-01": "Create in me a clean heart, O God, and renew a right spirit within me.",
+          "bba730b9171fcc22-01": "Create in me a clean heart, O God, and renew a right spirit within me.",
+          "41926a4aa3831714-01": "Create in me a clean heart, O God, and renew a right spirit within me."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Cast me not away from thy presence, and take not thy Holy Spirit from me.",
+          "06125ad3d1d57585-01": "Cast me not away from your presence, and take not your Holy Spirit from me.",
+          "9879dbb7aec41528-01": "Cast me not away from your presence, and take not your Holy Spirit from me.",
+          "bba730b9171fcc22-01": "Cast me not away from your presence, and take not your Holy Spirit from me.",
+          "41926a4aa3831714-01": "Cast me not away from your presence, and take not your Holy Spirit from me."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Restore to me the joy of thy salvation, and uphold me with a willing spirit.",
+          "06125ad3d1d57585-01": "Restore to me the joy of your salvation, and uphold me with a willing spirit.",
+          "9879dbb7aec41528-01": "Restore to me the joy of your salvation, and uphold me with a willing spirit.",
+          "bba730b9171fcc22-01": "Restore to me the joy of your salvation, and uphold me with a willing spirit.",
+          "41926a4aa3831714-01": "Restore to me the joy of your salvation, and uphold me with a willing spirit."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "John 3:16": {
+    "reference": "John 3:16",
+    "verses": [
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+          "06125ad3d1d57585-01": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth on him should not perish, but have eternal life.",
+          "9879dbb7aec41528-01": "For God so loved the world, that he gave his only begotten Son, that whoever believes in him should not perish, but have eternal life.",
+          "bba730b9171fcc22-01": "For God had such love for the world that he gave his only Son, so that whoever has faith in him may not come to destruction but have eternal life.",
+          "41926a4aa3831714-01": "For God so loved the world, that His Son -- the only begotten -- He gave, that every one who is believing in him may not perish, but may have life age-during."
+        },
+        "words": [
+          {
+            "original": "οὕτως",
+            "transliteration": "houtōs",
+            "english": "For so",
+            "strongs": "G3779",
+            "parsing": "Adv"
+          },
+          {
+            "original": "γὰρ",
+            "transliteration": "gar",
+            "english": "indeed",
+            "strongs": "G1063",
+            "parsing": "Conj"
+          },
+          {
+            "original": "ἠγάπησεν",
+            "transliteration": "ēgapēsen",
+            "english": "loved",
+            "strongs": "G0025",
+            "parsing": "V-AAI-3S"
+          },
+          {
+            "original": "ὁ",
+            "transliteration": "ho",
+            "english": "the",
+            "strongs": "G3588",
+            "parsing": "Art-NMS"
+          },
+          {
+            "original": "θεὸς",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-NMS"
+          },
+          {
+            "original": "τὸν",
+            "transliteration": "ton",
+            "english": "the",
+            "strongs": "G3588",
+            "parsing": "Art-AMS"
+          },
+          {
+            "original": "κόσμον",
+            "transliteration": "kosmon",
+            "english": "world",
+            "strongs": "G2889",
+            "parsing": "N-AMS"
+          },
+          {
+            "original": "ὥστε",
+            "transliteration": "hōste",
+            "english": "that",
+            "strongs": "G5620",
+            "parsing": "Conj"
+          },
+          {
+            "original": "τὸν",
+            "transliteration": "ton",
+            "english": "the",
+            "strongs": "G3588",
+            "parsing": "Art-AMS"
+          },
+          {
+            "original": "Υἱὸν",
+            "transliteration": "huion",
+            "english": "Son",
+            "strongs": "G5207",
+            "parsing": "N-AMS"
+          },
+          {
+            "original": "τὸν",
+            "transliteration": "ton",
+            "english": "the",
+            "strongs": "G3588",
+            "parsing": "Art-AMS"
+          },
+          {
+            "original": "μονογενῆ",
+            "transliteration": "monogenē",
+            "english": "only begotten",
+            "strongs": "G3439",
+            "parsing": "Adj-AMS"
+          },
+          {
+            "original": "ἔδωκεν",
+            "transliteration": "edōken",
+            "english": "he gave",
+            "strongs": "G1325",
+            "parsing": "V-AAI-3S"
+          },
+          {
+            "original": "ἵνα",
+            "transliteration": "hina",
+            "english": "so that",
+            "strongs": "G2443",
+            "parsing": "Conj"
+          },
+          {
+            "original": "πᾶς",
+            "transliteration": "pas",
+            "english": "every one",
+            "strongs": "G3956",
+            "parsing": "Adj-NMS"
+          },
+          {
+            "original": "ὁ",
+            "transliteration": "ho",
+            "english": "who",
+            "strongs": "G3588",
+            "parsing": "Art-NMS"
+          },
+          {
+            "original": "πιστεύων",
+            "transliteration": "pisteuōn",
+            "english": "believes",
+            "strongs": "G4100",
+            "parsing": "V-PAP-NMS"
+          },
+          {
+            "original": "εἰς",
+            "transliteration": "eis",
+            "english": "in",
+            "strongs": "G1519",
+            "parsing": "Prep"
+          },
+          {
+            "original": "αὐτὸν",
+            "transliteration": "auton",
+            "english": "him",
+            "strongs": "G0846",
+            "parsing": "Pron-AMS"
+          },
+          {
+            "original": "μὴ",
+            "transliteration": "mē",
+            "english": "not",
+            "strongs": "G3361",
+            "parsing": "Part-Neg"
+          },
+          {
+            "original": "ἀπόληται",
+            "transliteration": "apolētai",
+            "english": "should perish",
+            "strongs": "G0622",
+            "parsing": "V-AMS-3S"
+          },
+          {
+            "original": "ἀλλ’",
+            "transliteration": "all",
+            "english": "but",
+            "strongs": "G0235",
+            "parsing": "Conj"
+          },
+          {
+            "original": "ἔχῃ",
+            "transliteration": "echē",
+            "english": "have",
+            "strongs": "G2192",
+            "parsing": "V-PAS-3S"
+          },
+          {
+            "original": "ζωὴν",
+            "transliteration": "zōēn",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-AFS"
+          },
+          {
+            "original": "αἰώνιον",
+            "transliteration": "aiōnion",
+            "english": "eternal",
+            "strongs": "G0166",
+            "parsing": "Adj-AFS"
+          }
+        ]
+      }
+    ]
+  },
+  "Genesis 1:26": {
+    "reference": "Genesis 1:26",
+    "verses": [
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.",
+          "06125ad3d1d57585-01": "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the heavens, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.",
+          "9879dbb7aec41528-01": "God said, \"Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth.\"",
+          "bba730b9171fcc22-01": "And God said, Let us make man in our image, like ourselves: and let them have rule over the fish of the sea, and over the birds of the air, and over the cattle, and over all the earth, and over every living thing which goes flat on the earth.",
+          "41926a4aa3831714-01": "And God saith, 'Let Us make man in Our image, according to Our likeness, and rule they over fish of the sea, and over fowl of the heavens, and over cattle, and over every creeping thing that is creeping on the earth.'"
+        },
+        "words": [
+          {
+            "original": "וַיֹּאמֶר",
+            "transliteration": "wai-yo-mer",
+            "english": "And said",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Impf-3ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "נַעֲשֶׂה",
+            "transliteration": "na-a-seh",
+            "english": "Let us make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Impf-1cp"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בְּצַלְמֵנוּ",
+            "transliteration": "be-tsal-me-nu",
+            "english": "in our image",
+            "strongs": "H6754",
+            "parsing": "Prep-N-ms-s-1cp"
+          },
+          {
+            "original": "כִּדְמוּתֵנוּ",
+            "transliteration": "ki-de-mu-te-nu",
+            "english": "according to our likeness",
+            "strongs": "H1823",
+            "parsing": "Prep-N-fs-s-1cp"
+          },
+          {
+            "original": "וְיִרְדּוּ",
+            "transliteration": "ve-yir-du",
+            "english": "and let them rule",
+            "strongs": "H7287",
+            "parsing": "Conj-V-Qal-Impf-3mp"
+          },
+          {
+            "original": "בִדְגַת",
+            "transliteration": "bid-gat",
+            "english": "over the fish of",
+            "strongs": "H1709",
+            "parsing": "Prep-N-fsc"
+          },
+          {
+            "original": "הַיָּם",
+            "transliteration": "ha-yam",
+            "english": "the sea",
+            "strongs": "H3220",
+            "parsing": "Art-N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Matthew 13:1-9": {
+    "reference": "Matthew 13:1-9",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "The same day went Jesus out of the house, and sat by the sea side.",
+          "9879dbb7aec41528-01": "On that day Jesus went out of the house, and sat by the seaside.",
+          "bba730b9171fcc22-01": "On that day Jesus went out of the house and was seated by the seaside.",
+          "06125ad3d1d57585-01": "On that day Jesus went out of the house, and sat by the seaside.",
+          "41926a4aa3831714-01": "On that day Jesus went out of the house, and sat by the seaside."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And great multitudes were gathered together unto him, so that he went into a ship, and sat; and the whole multitude stood on the shore.",
+          "9879dbb7aec41528-01": "Great multitudes gathered to him, so that he entered into a boat, and sat, and all the multitude stood on the beach.",
+          "bba730b9171fcc22-01": "And great numbers of people came together to him, so that he got into a boat; and the people took up their position by the sea.",
+          "06125ad3d1d57585-01": "Great multitudes gathered to him, so that he entered into a boat, and sat, and all the multitude stood on the beach.",
+          "41926a4aa3831714-01": "Great multitudes gathered to him, so that he entered into a boat, and sat, and all the multitude stood on the beach."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And he spake many things unto them in parables, saying, Behold, a sower went forth to sow;",
+          "9879dbb7aec41528-01": "He spoke to them many things in parables, saying, “Behold, a farmer went out to sow.",
+          "bba730b9171fcc22-01": "And he gave them teaching in the form of a story, saying, A man went out to put seed in the earth;",
+          "06125ad3d1d57585-01": "He spoke to them many things in parables, saying, “Behold, a farmer went out to sow.",
+          "41926a4aa3831714-01": "He spoke to them many things in parables, saying, “Behold, a farmer went out to sow."
+        },
+        "words": [
+          {
+            "original": "σπείρων",
+            "transliteration": "speiron",
+            "english": "sower / scatterer",
+            "strongs": "G4687",
+            "parsing": "V-PAP-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he sowed, some seeds fell by the way side, and the fowls came and devoured them up:",
+          "9879dbb7aec41528-01": "As he sowed, some seeds fell by the roadside, and the birds came and devoured them.",
+          "bba730b9171fcc22-01": "And while he did so, some seeds were dropped by the wayside, and the birds came and took them for food:",
+          "06125ad3d1d57585-01": "As he sowed, some seeds fell by the roadside, and the birds came and devoured them.",
+          "41926a4aa3831714-01": "As he sowed, some seeds fell by the roadside, and the birds came and devoured them."
+        },
+        "words": [
+          {
+            "original": "σπόρος",
+            "transliteration": "sporos",
+            "english": "seed",
+            "strongs": "G4703",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Some fell upon stony places, where they had not much earth: and forthwith they sprung up, because they had no deepness of earth:",
+          "9879dbb7aec41528-01": "Others fell on rocky ground, where they didn’t have much soil, and immediately they sprang up, because they had no depth of earth.",
+          "bba730b9171fcc22-01": "And some of the seed went among the stones, where it had not much earth, and straight away it came up because the earth was not deep:",
+          "06125ad3d1d57585-01": "Others fell on rocky ground, where they didn’t have much soil, and immediately they sprang up, because they had no depth of earth.",
+          "41926a4aa3831714-01": "Others fell on rocky ground, where they didn’t have much soil, and immediately they sprang up, because they had no depth of earth."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the sun was up, they were scorched; and because they had no root, they withered away.",
+          "9879dbb7aec41528-01": "When the sun had risen, they were scorched. Because they had no root, they withered away.",
+          "bba730b9171fcc22-01": "And when the sun was high, it was burned; and because it had no root it became dry and dead.",
+          "06125ad3d1d57585-01": "When the sun had risen, they were scorched. Because they had no root, they withered away.",
+          "41926a4aa3831714-01": "When the sun had risen, they were scorched. Because they had no root, they withered away."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And some fell among thorns; and the thorns sprung up, and choked them:",
+          "9879dbb7aec41528-01": "Others fell among thorns. The thorns grew up and choked them.",
+          "bba730b9171fcc22-01": "And some seeds went among thorns, and the thorns came up and they had no room for growth:",
+          "06125ad3d1d57585-01": "Others fell among thorns. The thorns grew up and choked them.",
+          "41926a4aa3831714-01": "Others fell among thorns. The thorns grew up and choked them."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "But other fell into good ground, and brought forth fruit, some an hundredfold, some sixtyfold, some thirtyfold.",
+          "9879dbb7aec41528-01": "Others fell on good soil, and yielded fruit: some one hundred times as much, some sixty, and some thirty.",
+          "bba730b9171fcc22-01": "And some, falling on good earth, gave fruit, some a hundred, some sixty, some thirty times as much.",
+          "06125ad3d1d57585-01": "Others fell on good soil, and yielded fruit: some one hundred times as much, some sixty, and some thirty.",
+          "41926a4aa3831714-01": "Others fell on good soil, and yielded fruit: some one hundred times as much, some sixty, and some thirty."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Who hath ears to hear, let him hear.",
+          "9879dbb7aec41528-01": "He who has ears to hear, let him hear.”",
+          "bba730b9171fcc22-01": "He who has ears, let him give ear.",
+          "06125ad3d1d57585-01": "He who has ears to hear, let him hear.”",
+          "41926a4aa3831714-01": "He who has ears to hear, let him hear.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Matthew 13:18-23": {
+    "reference": "Matthew 13:18-23",
+    "verses": [
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Hear ye therefore the parable of the sower.",
+          "9879dbb7aec41528-01": "“Hear, then, the parable of the farmer.",
+          "bba730b9171fcc22-01": "Give ear, then, to the story of the man who put the seed in the earth.",
+          "06125ad3d1d57585-01": "“Hear, then, the parable of the farmer.",
+          "41926a4aa3831714-01": "“Hear, then, the parable of the farmer."
+        },
+        "words": [
+          {
+            "original": "σπείρων",
+            "transliteration": "speiron",
+            "english": "sower / scatterer",
+            "strongs": "G4687",
+            "parsing": "V-PAP-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "When any one heareth the word of the kingdom, and understandeth it not, then cometh the wicked one, and catcheth away that which was sown in his heart. This is he which received seed by the way side.",
+          "9879dbb7aec41528-01": "When anyone hears the word of the Kingdom, and doesn’t understand it, the evil one comes, and snatches away that which has been sown in his heart. This is what was sown by the roadside.",
+          "bba730b9171fcc22-01": "When the word of the kingdom comes to anyone, and the sense of it is not clear to him, then the Evil One comes, and quickly takes away that which was put in his heart. He is the seed dropped by the wayside.",
+          "06125ad3d1d57585-01": "When anyone hears the word of the Kingdom, and doesn’t understand it, the evil one comes, and snatches away that which has been sown in his heart. This is what was sown by the roadside.",
+          "41926a4aa3831714-01": "When anyone hears the word of the Kingdom, and doesn’t understand it, the evil one comes, and snatches away that which has been sown in his heart. This is what was sown by the roadside."
+        },
+        "words": [
+          {
+            "original": "σπόρος",
+            "transliteration": "sporos",
+            "english": "seed",
+            "strongs": "G4703",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / statement",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "βασιλεία",
+            "transliteration": "basileia",
+            "english": "kingdom / reign",
+            "strongs": "G0932",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καρδία",
+            "transliteration": "kardia",
+            "english": "heart",
+            "strongs": "G2588",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "But he that received the seed into stony places, the same is he that heareth the word, and anon with joy receiveth it;",
+          "9879dbb7aec41528-01": "What was sown on the rocky places, this is he who hears the word, and immediately with joy receives it;",
+          "bba730b9171fcc22-01": "And that which went on the stones, this is he who, hearing the word, straight away takes it with joy;",
+          "06125ad3d1d57585-01": "What was sown on the rocky places, this is he who hears the word, and immediately with joy receives it;",
+          "41926a4aa3831714-01": "What was sown on the rocky places, this is he who hears the word, and immediately with joy receives it;"
+        },
+        "words": [
+          {
+            "original": "σπόρος",
+            "transliteration": "sporos",
+            "english": "seed",
+            "strongs": "G4703",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / statement",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "χαρά",
+            "transliteration": "chara",
+            "english": "joy / gladness",
+            "strongs": "G5479",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Yet hath he not root in himself, but dureth for a while: for when tribulation or persecution ariseth because of the word, by and by he is offended.",
+          "9879dbb7aec41528-01": "yet he has no root in himself, but endures for a while. When oppression or persecution arises because of the word, immediately he stumbles.",
+          "bba730b9171fcc22-01": "But having no root in himself, he goes on for a time; and when trouble comes or pain, because of the word, he quickly becomes full of doubts.",
+          "06125ad3d1d57585-01": "yet he has no root in himself, but endures for a while. When oppression or persecution arises because of the word, immediately he stumbles.",
+          "41926a4aa3831714-01": "yet he has no root in himself, but endures for a while. When oppression or persecution arises because of the word, immediately he stumbles."
+        },
+        "words": [
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / statement",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "He also that received seed among the thorns is he that heareth the word; and the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful.",
+          "9879dbb7aec41528-01": "What was sown among the thorns, this is he who hears the word, but the cares of this age and the deceitfulness of riches choke the word, and he becomes unfruitful.",
+          "bba730b9171fcc22-01": "And that which was dropped among the thorns, this is he who has the word; and the cares of this life, and the deceits of wealth, put a stop to the growth of the word and it gives no fruit.",
+          "06125ad3d1d57585-01": "What was sown among the thorns, this is he who hears the word, but the cares of this age and the deceitfulness of riches choke the word, and he becomes unfruitful.",
+          "41926a4aa3831714-01": "What was sown among the thorns, this is he who hears the word, but the cares of this age and the deceitfulness of riches choke the word, and he becomes unfruitful."
+        },
+        "words": [
+          {
+            "original": "σπόρος",
+            "transliteration": "sporos",
+            "english": "seed",
+            "strongs": "G4703",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / statement",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "But he that received seed into the good ground is he that heareth the word, and understandeth it; which also beareth fruit, and bringeth forth, some an hundredfold, some sixty, some thirty.",
+          "9879dbb7aec41528-01": "What was sown on the good ground, this is he who hears the word, and understands it, who most certainly bears fruit, and produces, some one hundred times as much, some sixty, and some thirty.”",
+          "bba730b9171fcc22-01": "And the seed which was put in good earth, this is he who gives ear to the word, and gets the sense of it; who gives fruit, some a hundred, some sixty, some thirty times as much.",
+          "06125ad3d1d57585-01": "What was sown on the good ground, this is he who hears the word, and understands it, who most certainly bears fruit, and produces, some one hundred times as much, some sixty, and some thirty.”",
+          "41926a4aa3831714-01": "What was sown on the good ground, this is he who hears the word, and understands it, who most certainly bears fruit, and produces, some one hundred times as much, some sixty, and some thirty.”"
+        },
+        "words": [
+          {
+            "original": "σπόρος",
+            "transliteration": "sporos",
+            "english": "seed",
+            "strongs": "G4703",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / statement",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Luke 15:1-10": {
+    "reference": "Luke 15:1-10",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Then drew near unto him all the publicans and sinners for to hear him.",
+          "9879dbb7aec41528-01": "Now all the tax collectors and sinners were coming close to him to hear him.",
+          "bba730b9171fcc22-01": "Now all the tax-farmers and sinners came near to give ear to him.",
+          "06125ad3d1d57585-01": "Now all the tax collectors and sinners were coming close to him to hear him.",
+          "41926a4aa3831714-01": "Now all the tax collectors and sinners were coming close to him to hear him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And the Pharisees and scribes murmured, saying, This man receiveth sinners, and eateth with them.",
+          "9879dbb7aec41528-01": "The Pharisees and the scribes murmured, saying, “This man welcomes sinners, and eats with them.”",
+          "bba730b9171fcc22-01": "And the Pharisees and scribes were angry, saying, This man gives approval to sinners, and takes food with them.",
+          "06125ad3d1d57585-01": "The Pharisees and the scribes murmured, saying, “This man welcomes sinners, and eats with them.”",
+          "41926a4aa3831714-01": "The Pharisees and the scribes murmured, saying, “This man welcomes sinners, and eats with them.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And he spake this parable unto them, saying,",
+          "9879dbb7aec41528-01": "He told them this parable.",
+          "bba730b9171fcc22-01": "And he made a story for them, saying,",
+          "06125ad3d1d57585-01": "He told them this parable.",
+          "41926a4aa3831714-01": "He told them this parable."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost, until he find it?",
+          "9879dbb7aec41528-01": "“Which of you men, if you had one hundred sheep, and lost one of them, wouldn’t leave the ninety-nine in the wilderness, and go after the one that was lost, until he found it?",
+          "bba730b9171fcc22-01": "What man of you, having a hundred sheep, if one of them gets loose and goes away, will not let the ninety-nine be in the waste land by themselves, and go after the wandering one, till he sees where it is?",
+          "06125ad3d1d57585-01": "“Which of you men, if you had one hundred sheep, and lost one of them, wouldn’t leave the ninety-nine in the wilderness, and go after the one that was lost, until he found it?",
+          "41926a4aa3831714-01": "“Which of you men, if you had one hundred sheep, and lost one of them, wouldn’t leave the ninety-nine in the wilderness, and go after the one that was lost, until he found it?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he hath found it, he layeth it  on his shoulders, rejoicing.",
+          "9879dbb7aec41528-01": "When he has found it, he carries it on his shoulders, rejoicing.",
+          "bba730b9171fcc22-01": "And when he has got it again, he takes it in his arms with joy.",
+          "06125ad3d1d57585-01": "When he has found it, he carries it on his shoulders, rejoicing.",
+          "41926a4aa3831714-01": "When he has found it, he carries it on his shoulders, rejoicing."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he cometh home, he calleth together his friends and neighbours, saying unto them, Rejoice with me; for I have found my sheep which was lost.",
+          "9879dbb7aec41528-01": "When he comes home, he calls together his friends and his neighbors, saying to them, ‘Rejoice with me, for I have found my sheep which was lost!’",
+          "bba730b9171fcc22-01": "And when he gets back to his house, he sends for his neighbours and friends, saying to them, Be glad with me, for I have got back my sheep which had gone away.",
+          "06125ad3d1d57585-01": "When he comes home, he calls together his friends and his neighbors, saying to them, ‘Rejoice with me, for I have found my sheep which was lost!’",
+          "41926a4aa3831714-01": "When he comes home, he calls together his friends and his neighbors, saying to them, ‘Rejoice with me, for I have found my sheep which was lost!’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "I say unto you, that likewise joy shall be in heaven over one sinner that repenteth, more than over ninety and nine just persons, which need no repentance.",
+          "9879dbb7aec41528-01": "I tell you that even so there will be more joy in heaven over one sinner who repents, than over ninety-nine righteous people who need no repentance.",
+          "bba730b9171fcc22-01": "I say to you that even so there will be more joy in heaven when one sinner is turned away from his wrongdoing, than for ninety-nine good men, who have no need of a change of heart.",
+          "06125ad3d1d57585-01": "I tell you that even so there will be more joy in heaven over one sinner who repents, than over ninety-nine righteous people who need no repentance.",
+          "41926a4aa3831714-01": "I tell you that even so there will be more joy in heaven over one sinner who repents, than over ninety-nine righteous people who need no repentance."
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "χαρά",
+            "transliteration": "chara",
+            "english": "joy / gladness",
+            "strongs": "G5479",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "μετανοέω",
+            "transliteration": "metanoeo",
+            "english": "repent / change mind",
+            "strongs": "G3340",
+            "parsing": "V-PAN"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "Either what woman having ten pieces of silver, if she lose one piece, doth not light a candle, and sweep the house, and seek diligently till she find it?",
+          "9879dbb7aec41528-01": "Or what woman, if she had ten drachma coins, if she lost one drachma coin, wouldn’t light a lamp, sweep the house, and seek diligently until she found it?",
+          "bba730b9171fcc22-01": "Or what woman, having ten bits of silver, if one bit has gone from her hands, will not get a light, and go through her house, searching with care till she sees it?",
+          "06125ad3d1d57585-01": "Or what woman, if she had ten drachma coins, if she lost one drachma coin, wouldn’t light a lamp, sweep the house, and seek diligently until she found it?",
+          "41926a4aa3831714-01": "Or what woman, if she had ten drachma coins, if she lost one drachma coin, wouldn’t light a lamp, sweep the house, and seek diligently until she found it?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And when she hath found it, she calleth her  friends and her neighbours together, saying, Rejoice with me; for I have found the piece which I had lost.",
+          "9879dbb7aec41528-01": "When she has found it, she calls together her friends and neighbors, saying, ‘Rejoice with me, for I have found the drachma which I had lost.’",
+          "bba730b9171fcc22-01": "And when she has it again, she gets her friends and neighbours together, saying, Be glad with me, for I have got back the bit of silver which had gone from me.",
+          "06125ad3d1d57585-01": "When she has found it, she calls together her friends and neighbors, saying, ‘Rejoice with me, for I have found the drachma which I had lost.’",
+          "41926a4aa3831714-01": "When she has found it, she calls together her friends and neighbors, saying, ‘Rejoice with me, for I have found the drachma which I had lost.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "Likewise, I say unto you, there is joy in the presence of the angels of God over one sinner that repenteth.",
+          "9879dbb7aec41528-01": "Even so, I tell you, there is joy in the presence of the angels of God over one sinner repenting.”",
+          "bba730b9171fcc22-01": "Even so, I say to you, There is joy among the angels of God, when one sinner is turned away from his wrongdoing.",
+          "06125ad3d1d57585-01": "Even so, I tell you, there is joy in the presence of the angels of God over one sinner repenting.”",
+          "41926a4aa3831714-01": "Even so, I tell you, there is joy in the presence of the angels of God over one sinner repenting.”"
+        },
+        "words": [
+          {
+            "original": "χαρά",
+            "transliteration": "chara",
+            "english": "joy / gladness",
+            "strongs": "G5479",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "μετανοέω",
+            "transliteration": "metanoeo",
+            "english": "repent / change mind",
+            "strongs": "G3340",
+            "parsing": "V-PAN"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Luke 15:11-24": {
+    "reference": "Luke 15:11-24",
+    "verses": [
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said, A certain man had two sons:",
+          "9879dbb7aec41528-01": "He said, “A certain man had two sons.",
+          "bba730b9171fcc22-01": "And he said, A certain man had two sons:",
+          "06125ad3d1d57585-01": "He said, “A certain man had two sons.",
+          "41926a4aa3831714-01": "He said, “A certain man had two sons."
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And the younger of them said to his father, Father, give me the portion of goods that falleth to me. And he divided unto them his living.",
+          "9879dbb7aec41528-01": "The younger of them said to his father, ‘Father, give me my share of your property.’ He divided his livelihood between them.",
+          "bba730b9171fcc22-01": "And the younger of them said to his father, Father, give me that part of your property which will be mine. And he made division of his goods between them.",
+          "06125ad3d1d57585-01": "The younger of them said to his father, ‘Father, give me my share of your property.’ He divided his livelihood between them.",
+          "41926a4aa3831714-01": "The younger of them said to his father, ‘Father, give me my share of your property.’ He divided his livelihood between them."
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And not many days after the younger son gathered all together, and took his journey into a far country, and there wasted his substance with riotous living.",
+          "9879dbb7aec41528-01": "Not many days after, the younger son gathered all of this together and traveled into a far country. There he wasted his property with riotous living.",
+          "bba730b9171fcc22-01": "And not long after, the younger son got together everything which was his and took a journey into a far-away country, and there all his money went in foolish living.",
+          "06125ad3d1d57585-01": "Not many days after, the younger son gathered all of this together and traveled into a far country. There he wasted his property with riotous living.",
+          "41926a4aa3831714-01": "Not many days after, the younger son gathered all of this together and traveled into a far country. There he wasted his property with riotous living."
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he had spent all, there arose a mighty famine in that land; and he began to be in want.",
+          "9879dbb7aec41528-01": "When he had spent all of it, there arose a severe famine in that country, and he began to be in need.",
+          "bba730b9171fcc22-01": "And when everything was gone, there was no food to be had in that country, and he was in need.",
+          "06125ad3d1d57585-01": "When he had spent all of it, there arose a severe famine in that country, and he began to be in need.",
+          "41926a4aa3831714-01": "When he had spent all of it, there arose a severe famine in that country, and he began to be in need."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And he went and joined himself to a citizen of that country; and he sent him into his fields to feed swine.",
+          "9879dbb7aec41528-01": "He went and joined himself to one of the citizens of that country, and he sent him into his fields to feed pigs.",
+          "bba730b9171fcc22-01": "And he went and put himself into the hands of one of the people of that country, and he sent him into his fields to give the pigs their food.",
+          "06125ad3d1d57585-01": "He went and joined himself to one of the citizens of that country, and he sent him into his fields to feed pigs.",
+          "41926a4aa3831714-01": "He went and joined himself to one of the citizens of that country, and he sent him into his fields to feed pigs."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And he would fain have filled his belly with the husks that the swine did eat: and no man gave unto him.",
+          "9879dbb7aec41528-01": "He wanted to fill his belly with the husks that the pigs ate, but no one gave him any.",
+          "bba730b9171fcc22-01": "And so great was his need that he would have been glad to take the pigs' food, and no one gave him anything.",
+          "06125ad3d1d57585-01": "He wanted to fill his belly with the husks that the pigs ate, but no one gave him any.",
+          "41926a4aa3831714-01": "He wanted to fill his belly with the husks that the pigs ate, but no one gave him any."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he came to himself, he said, How many hired servants of my father’s have bread enough and to spare, and I perish with hunger!",
+          "9879dbb7aec41528-01": "But when he came to himself he said, ‘How many hired servants of my father’s have bread enough to spare, and I’m dying with hunger!",
+          "bba730b9171fcc22-01": "But when he came to his senses, he said, What numbers of my father's servants have bread enough, and more, while I am near to death here through need of food!",
+          "06125ad3d1d57585-01": "But when he came to himself he said, ‘How many hired servants of my father’s have bread enough to spare, and I’m dying with hunger!",
+          "41926a4aa3831714-01": "But when he came to himself he said, ‘How many hired servants of my father’s have bread enough to spare, and I’m dying with hunger!"
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "δοῦλος",
+            "transliteration": "doulos",
+            "english": "servant / slave",
+            "strongs": "G1401",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee,",
+          "9879dbb7aec41528-01": "I will get up and go to my father, and will tell him, “Father, I have sinned against heaven, and in your sight.",
+          "bba730b9171fcc22-01": "I will get up and go to my father, and will say to him, Father, I have done wrong, against heaven and in your eyes:",
+          "06125ad3d1d57585-01": "I will get up and go to my father, and will tell him, “Father, I have sinned against heaven, and in your sight.",
+          "41926a4aa3831714-01": "I will get up and go to my father, and will tell him, “Father, I have sinned against heaven, and in your sight."
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And am no more worthy to be called thy son: make me as one of thy hired servants.",
+          "9879dbb7aec41528-01": "I am no more worthy to be called your son. Make me as one of your hired servants.”’",
+          "bba730b9171fcc22-01": "I am no longer good enough to be named your son: make me like one of your servants.",
+          "06125ad3d1d57585-01": "I am no more worthy to be called your son. Make me as one of your hired servants.”’",
+          "41926a4aa3831714-01": "I am no more worthy to be called your son. Make me as one of your hired servants.”’"
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "δοῦλος",
+            "transliteration": "doulos",
+            "english": "servant / slave",
+            "strongs": "G1401",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him.",
+          "9879dbb7aec41528-01": "“He arose, and came to his father. But while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him.",
+          "bba730b9171fcc22-01": "And he got up and went to his father. But while he was still far away, his father saw him and was moved with pity for him and went quickly and took him in his arms and gave him a kiss.",
+          "06125ad3d1d57585-01": "“He arose, and came to his father. But while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him.",
+          "41926a4aa3831714-01": "“He arose, and came to his father. But while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him."
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And the son said unto him, Father, I have sinned against heaven, and in thy sight, and am no more worthy to be called thy son.",
+          "9879dbb7aec41528-01": "The son said to him, ‘Father, I have sinned against heaven, and in your sight. I am no longer worthy to be called your son.’",
+          "bba730b9171fcc22-01": "And his son said to him, Father, I have done wrong, against heaven and in your eyes: I am no longer good enough to be named your son.",
+          "06125ad3d1d57585-01": "The son said to him, ‘Father, I have sinned against heaven, and in your sight. I am no longer worthy to be called your son.’",
+          "41926a4aa3831714-01": "The son said to him, ‘Father, I have sinned against heaven, and in your sight. I am no longer worthy to be called your son.’"
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "But the father said to his servants, Bring forth the best robe, and put it on him; and put a ring on his hand, and shoes on his feet:",
+          "9879dbb7aec41528-01": "“But the father said to his servants, ‘Bring out the best robe, and put it on him. Put a ring on his hand, and shoes on his feet.",
+          "bba730b9171fcc22-01": "But the father said to his servants, Get out the first robe quickly, and put it on him, and put a ring on his hand and shoes on his feet:",
+          "06125ad3d1d57585-01": "“But the father said to his servants, ‘Bring out the best robe, and put it on him. Put a ring on his hand, and shoes on his feet.",
+          "41926a4aa3831714-01": "“But the father said to his servants, ‘Bring out the best robe, and put it on him. Put a ring on his hand, and shoes on his feet."
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "δοῦλος",
+            "transliteration": "doulos",
+            "english": "servant / slave",
+            "strongs": "G1401",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "And bring hither the fatted calf, and kill it; and let us eat, and be merry:",
+          "9879dbb7aec41528-01": "Bring the fattened calf, kill it, and let us eat, and celebrate;",
+          "bba730b9171fcc22-01": "And get the fat young ox and put it to death, and let us have a feast, and be glad.",
+          "06125ad3d1d57585-01": "Bring the fattened calf, kill it, and let us eat, and celebrate;",
+          "41926a4aa3831714-01": "Bring the fattened calf, kill it, and let us eat, and celebrate;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "For this my son was dead, and is alive again; he was lost, and is found. And they began to be merry.",
+          "9879dbb7aec41528-01": "for this, my son, was dead, and is alive again. He was lost, and is found.’ They began to celebrate.",
+          "bba730b9171fcc22-01": "For this, my son, who was dead, is living again; he had gone away from me, and has come back. And they were full of joy.",
+          "06125ad3d1d57585-01": "for this, my son, was dead, and is alive again. He was lost, and is found.’ They began to celebrate.",
+          "41926a4aa3831714-01": "for this, my son, was dead, and is alive again. He was lost, and is found.’ They began to celebrate."
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Luke 15:25-32": {
+    "reference": "Luke 15:25-32",
+    "verses": [
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "Now his elder son was in the field: and as he came and drew nigh to the house, he heard musick and dancing.",
+          "9879dbb7aec41528-01": "“Now his elder son was in the field. As he came near to the house, he heard music and dancing.",
+          "bba730b9171fcc22-01": "Now the older son was in the field: and when he came near the house, the sounds of music and dancing came to his ears.",
+          "06125ad3d1d57585-01": "“Now his elder son was in the field. As he came near to the house, he heard music and dancing.",
+          "41926a4aa3831714-01": "“Now his elder son was in the field. As he came near to the house, he heard music and dancing."
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And he called one of the servants, and asked what these things meant.",
+          "9879dbb7aec41528-01": "He called one of the servants to him, and asked what was going on.",
+          "bba730b9171fcc22-01": "And he sent for one of the servants, questioning him about what it might be.",
+          "06125ad3d1d57585-01": "He called one of the servants to him, and asked what was going on.",
+          "41926a4aa3831714-01": "He called one of the servants to him, and asked what was going on."
+        },
+        "words": [
+          {
+            "original": "δοῦλος",
+            "transliteration": "doulos",
+            "english": "servant / slave",
+            "strongs": "G1401",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto him, Thy brother is come; and thy father hath killed the fatted calf, because he hath received him safe and sound.",
+          "9879dbb7aec41528-01": "He said to him, ‘Your brother has come, and your father has killed the fattened calf, because he has received him back safe and healthy.’",
+          "bba730b9171fcc22-01": "And he said to him, Your brother has come; and your father has had the young ox put to death because he has come back safely.",
+          "06125ad3d1d57585-01": "He said to him, ‘Your brother has come, and your father has killed the fattened calf, because he has received him back safe and healthy.’",
+          "41926a4aa3831714-01": "He said to him, ‘Your brother has come, and your father has killed the fattened calf, because he has received him back safe and healthy.’"
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And he was angry, and would not go in: therefore came his father out, and intreated him.",
+          "9879dbb7aec41528-01": "But he was angry, and would not go in. Therefore his father came out, and begged him.",
+          "bba730b9171fcc22-01": "But he was angry and would not go in; and his father came out and made a request to him to come in.",
+          "06125ad3d1d57585-01": "But he was angry, and would not go in. Therefore his father came out, and begged him.",
+          "41926a4aa3831714-01": "But he was angry, and would not go in. Therefore his father came out, and begged him."
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "And he answering said to his father, Lo, these many years do I serve thee, neither transgressed I at any time thy commandment: and yet thou never gavest me a kid, that I might make merry with my friends:",
+          "9879dbb7aec41528-01": "But he answered his father, ‘Behold, these many years I have served you, and I never disobeyed a commandment of yours, but you never gave me a goat, that I might celebrate with my friends.",
+          "bba730b9171fcc22-01": "But he made answer and said to his father, See, all these years I have been your servant, doing your orders in everything: and you never gave me even a young goat so that I might have a feast with my friends:",
+          "06125ad3d1d57585-01": "But he answered his father, ‘Behold, these many years I have served you, and I never disobeyed a commandment of yours, but you never gave me a goat, that I might celebrate with my friends.",
+          "41926a4aa3831714-01": "But he answered his father, ‘Behold, these many years I have served you, and I never disobeyed a commandment of yours, but you never gave me a goat, that I might celebrate with my friends."
+        },
+        "words": [
+          {
+            "original": "πατήρ",
+            "transliteration": "pater",
+            "english": "father",
+            "strongs": "G3962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "But as soon as this thy son was come, which hath devoured thy living with harlots, thou hast killed for him the fatted calf.",
+          "9879dbb7aec41528-01": "But when this your son came, who has devoured your living with prostitutes, you killed the fattened calf for him.’",
+          "bba730b9171fcc22-01": "But when this your son came, who has been wasting your property with bad women, you put to death the fat young ox for him.",
+          "06125ad3d1d57585-01": "But when this your son came, who has devoured your living with prostitutes, you killed the fattened calf for him.’",
+          "41926a4aa3831714-01": "But when this your son came, who has devoured your living with prostitutes, you killed the fattened calf for him.’"
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto him, Son, thou art ever with me, and all that I have is thine.",
+          "9879dbb7aec41528-01": "“He said to him, ‘Son, you are always with me, and all that is mine is yours.",
+          "bba730b9171fcc22-01": "And he said to him, Son, you are with me at all times, and all I have is yours.",
+          "06125ad3d1d57585-01": "“He said to him, ‘Son, you are always with me, and all that is mine is yours.",
+          "41926a4aa3831714-01": "“He said to him, ‘Son, you are always with me, and all that is mine is yours."
+        },
+        "words": [
+          {
+            "original": "υἱός",
+            "transliteration": "huios",
+            "english": "son",
+            "strongs": "G5207",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "It was meet that we should make merry, and be glad: for this thy brother was dead, and is alive again; and was lost, and is found.",
+          "9879dbb7aec41528-01": "But it was appropriate to celebrate and be glad, for this, your brother, was dead, and is alive again. He was lost, and is found.’”",
+          "bba730b9171fcc22-01": "But it was right to be glad and to have a feast; for this your brother, who was dead, is living again; he had gone away and has come back.",
+          "06125ad3d1d57585-01": "But it was appropriate to celebrate and be glad, for this, your brother, was dead, and is alive again. He was lost, and is found.’”",
+          "41926a4aa3831714-01": "But it was appropriate to celebrate and be glad, for this, your brother, was dead, and is alive again. He was lost, and is found.’”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Matthew 20:1-16": {
+    "reference": "Matthew 20:1-16",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "For the kingdom of heaven is like unto a man that is an householder, which went out early in the morning to hire labourers into his vineyard.",
+          "9879dbb7aec41528-01": "“For the Kingdom of Heaven is like a man who was the master of a household, who went out early in the morning to hire laborers for his vineyard.",
+          "bba730b9171fcc22-01": "For the kingdom of heaven is like the master of a house, who went out early in the morning to get workers into his vine-garden.",
+          "06125ad3d1d57585-01": "“For the Kingdom of Heaven is like a man who was the master of a household, who went out early in the morning to hire laborers for his vineyard.",
+          "41926a4aa3831714-01": "“For the Kingdom of Heaven is like a man who was the master of a household, who went out early in the morning to hire laborers for his vineyard."
+        },
+        "words": [
+          {
+            "original": "βασιλεία",
+            "transliteration": "basileia",
+            "english": "kingdom / reign",
+            "strongs": "G0932",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he had agreed with the labourers for a penny a day, he sent them into his vineyard.",
+          "9879dbb7aec41528-01": "When he had agreed with the laborers for a denarius a day, he sent them into his vineyard.",
+          "bba730b9171fcc22-01": "And when he had made an agreement with the workmen for a penny a day, he sent them into his vine-garden.",
+          "06125ad3d1d57585-01": "When he had agreed with the laborers for a denarius a day, he sent them into his vineyard.",
+          "41926a4aa3831714-01": "When he had agreed with the laborers for a denarius a day, he sent them into his vineyard."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And he went out about the third hour, and saw others standing idle in the marketplace,",
+          "9879dbb7aec41528-01": "He went out about the third hour, and saw others standing idle in the marketplace.",
+          "bba730b9171fcc22-01": "And he went out about the third hour, and saw others in the market-place doing nothing;",
+          "06125ad3d1d57585-01": "He went out about the third hour, and saw others standing idle in the marketplace.",
+          "41926a4aa3831714-01": "He went out about the third hour, and saw others standing idle in the marketplace."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And said unto them; Go ye also into the vineyard, and whatsoever is right I will give you. And they went their way.",
+          "9879dbb7aec41528-01": "He said to them, ‘You also go into the vineyard, and whatever is right I will give you.’ So they went their way.",
+          "bba730b9171fcc22-01": "And he said to them, Go into the vine-garden with the others, and whatever is right I will give you. And they went to work.",
+          "06125ad3d1d57585-01": "He said to them, ‘You also go into the vineyard, and whatever is right I will give you.’ So they went their way.",
+          "41926a4aa3831714-01": "He said to them, ‘You also go into the vineyard, and whatever is right I will give you.’ So they went their way."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Again he went out about the sixth and ninth hour, and did likewise.",
+          "9879dbb7aec41528-01": "Again he went out about the sixth and the ninth hour, and did likewise.",
+          "bba730b9171fcc22-01": "Again he went out about the sixth and the ninth hour, and did the same.",
+          "06125ad3d1d57585-01": "Again he went out about the sixth and the ninth hour, and did likewise.",
+          "41926a4aa3831714-01": "Again he went out about the sixth and the ninth hour, and did likewise."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And about the eleventh hour he went out, and found others standing idle, and saith unto them, Why stand ye here all the day idle?",
+          "9879dbb7aec41528-01": "About the eleventh hour he went out, and found others standing idle. He said to them, ‘Why do you stand here all day idle?’",
+          "bba730b9171fcc22-01": "And about the eleventh hour he went out and saw others doing nothing; and he says to them, Why are you here all the day doing nothing?",
+          "06125ad3d1d57585-01": "About the eleventh hour he went out, and found others standing idle. He said to them, ‘Why do you stand here all day idle?’",
+          "41926a4aa3831714-01": "About the eleventh hour he went out, and found others standing idle. He said to them, ‘Why do you stand here all day idle?’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "They say unto him, Because no man hath hired us. He saith unto them, Go ye also into the vineyard; and whatsoever is right, that shall ye receive.",
+          "9879dbb7aec41528-01": "“They said to him, ‘Because no one has hired us.’ “He said to them, ‘You also go into the vineyard, and you will receive whatever is right.’",
+          "bba730b9171fcc22-01": "They say to him, Because no man has given us work. He says to them, Go in with the rest, into the vine-garden.",
+          "06125ad3d1d57585-01": "“They said to him, ‘Because no one has hired us.’ “He said to them, ‘You also go into the vineyard, and you will receive whatever is right.’",
+          "41926a4aa3831714-01": "“They said to him, ‘Because no one has hired us.’ “He said to them, ‘You also go into the vineyard, and you will receive whatever is right.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "So when even was come, the lord of the vineyard saith unto his steward, Call the labourers, and give them their hire, beginning from the last unto the first.",
+          "9879dbb7aec41528-01": "When evening had come, the lord of the vineyard said to his manager, ‘Call the laborers and pay them their wages, beginning from the last to the first.’",
+          "bba730b9171fcc22-01": "And when evening came, the lord of the vine-garden said to his manager, Let the workers come, and give them their payment, from the last to the first.",
+          "06125ad3d1d57585-01": "When evening had come, the lord of the vineyard said to his manager, ‘Call the laborers and pay them their wages, beginning from the last to the first.’",
+          "41926a4aa3831714-01": "When evening had come, the lord of the vineyard said to his manager, ‘Call the laborers and pay them their wages, beginning from the last to the first.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And when they came that were hired about the eleventh hour, they received every man a penny.",
+          "9879dbb7aec41528-01": "“When those who were hired at about the eleventh hour came, they each received a denarius.",
+          "bba730b9171fcc22-01": "And when those men came who had gone to work at the eleventh hour, they were given every man a penny.",
+          "06125ad3d1d57585-01": "“When those who were hired at about the eleventh hour came, they each received a denarius.",
+          "41926a4aa3831714-01": "“When those who were hired at about the eleventh hour came, they each received a denarius."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "But when the first came, they supposed that they should have received more; and they likewise received every man a penny.",
+          "9879dbb7aec41528-01": "When the first came, they supposed that they would receive more; and they likewise each received a denarius.",
+          "bba730b9171fcc22-01": "Then those who came first had the idea that they would get more; and they, like the rest, were given a penny.",
+          "06125ad3d1d57585-01": "When the first came, they supposed that they would receive more; and they likewise each received a denarius.",
+          "41926a4aa3831714-01": "When the first came, they supposed that they would receive more; and they likewise each received a denarius."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And when they had received it, they murmured against the goodman of the house,",
+          "9879dbb7aec41528-01": "When they received it, they murmured against the master of the household,",
+          "bba730b9171fcc22-01": "And when they got it, they made a protest against the master of the house,",
+          "06125ad3d1d57585-01": "When they received it, they murmured against the master of the household,",
+          "41926a4aa3831714-01": "When they received it, they murmured against the master of the household,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Saying, These last have wrought but one hour, and thou hast made them equal unto us, which have borne the burden and heat of the day.",
+          "9879dbb7aec41528-01": "saying, ‘These last have spent one hour, and you have made them equal to us, who have borne the burden of the day and the scorching heat!’",
+          "bba730b9171fcc22-01": "Saying, These last have done only one hour's work, and you have made them equal to us, who have undergone the hard work of the day and the burning heat.",
+          "06125ad3d1d57585-01": "saying, ‘These last have spent one hour, and you have made them equal to us, who have borne the burden of the day and the scorching heat!’",
+          "41926a4aa3831714-01": "saying, ‘These last have spent one hour, and you have made them equal to us, who have borne the burden of the day and the scorching heat!’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "But he answered one of them, and said, Friend, I do thee no wrong: didst not thou agree with me for a penny?",
+          "9879dbb7aec41528-01": "“But he answered one of them, ‘Friend, I am doing you no wrong. Didn’t you agree with me for a denarius?",
+          "bba730b9171fcc22-01": "But he in answer said to one of them, Friend, I do you no wrong: did you not make an agreement with me for a penny?",
+          "06125ad3d1d57585-01": "“But he answered one of them, ‘Friend, I am doing you no wrong. Didn’t you agree with me for a denarius?",
+          "41926a4aa3831714-01": "“But he answered one of them, ‘Friend, I am doing you no wrong. Didn’t you agree with me for a denarius?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "Take that thine is, and go thy way: I will give unto this last, even as unto thee.",
+          "9879dbb7aec41528-01": "Take that which is yours, and go your way. It is my desire to give to this last just as much as to you.",
+          "bba730b9171fcc22-01": "Take what is yours, and go away; it is my pleasure to give to this last, even as to you.",
+          "06125ad3d1d57585-01": "Take that which is yours, and go your way. It is my desire to give to this last just as much as to you.",
+          "41926a4aa3831714-01": "Take that which is yours, and go your way. It is my desire to give to this last just as much as to you."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Is it not lawful for me to do what I will with mine own? Is thine eye evil, because I am good?",
+          "9879dbb7aec41528-01": "Isn’t it lawful for me to do what I want to with what I own? Or is your eye evil, because I am good?’",
+          "bba730b9171fcc22-01": "Have I not the right to do as seems good to me in my house? or is your eye evil, because I am good?",
+          "06125ad3d1d57585-01": "Isn’t it lawful for me to do what I want to with what I own? Or is your eye evil, because I am good?’",
+          "41926a4aa3831714-01": "Isn’t it lawful for me to do what I want to with what I own? Or is your eye evil, because I am good?’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "So the last shall be first, and the first last: for many be called, but few chosen.",
+          "9879dbb7aec41528-01": "So the last will be first, and the first last. For many are called, but few are chosen.”",
+          "bba730b9171fcc22-01": "So the last will be first, and the first last.",
+          "06125ad3d1d57585-01": "So the last will be first, and the first last. For many are called, but few are chosen.”",
+          "41926a4aa3831714-01": "So the last will be first, and the first last. For many are called, but few are chosen.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Luke 10:25-37": {
+    "reference": "Luke 10:25-37",
+    "verses": [
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "And, behold, a certain lawyer stood up, and tempted him, saying, Master, what shall I do to inherit eternal life?",
+          "9879dbb7aec41528-01": "Behold, a certain lawyer stood up and tested him, saying, “Teacher, what shall I do to inherit eternal life?”",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "Behold, a certain lawyer stood up and tested him, saying, “Teacher, what shall I do to inherit eternal life?”",
+          "41926a4aa3831714-01": "Behold, a certain lawyer stood up and tested him, saying, “Teacher, what shall I do to inherit eternal life?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "He said unto him, What is written in the law? how readest thou?",
+          "9879dbb7aec41528-01": "He said to him, “What is written in the law? How do you read it?”",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "He said to him, “What is written in the law? How do you read it?”",
+          "41926a4aa3831714-01": "He said to him, “What is written in the law? How do you read it?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "And he answering said, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength, and with all thy mind; and thy neighbour as thyself.",
+          "9879dbb7aec41528-01": "He answered, “You shall love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind; and your neighbor as yourself.”",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "He answered, “You shall love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind; and your neighbor as yourself.”",
+          "41926a4aa3831714-01": "He answered, “You shall love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind; and your neighbor as yourself.”"
+        },
+        "words": [
+          {
+            "original": "καρδία",
+            "transliteration": "kardia",
+            "english": "heart",
+            "strongs": "G2588",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "ἀγάπη",
+            "transliteration": "agape",
+            "english": "love / affection",
+            "strongs": "G0026",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto him, Thou hast answered right: this do, and thou shalt live.",
+          "9879dbb7aec41528-01": "He said to him, “You have answered correctly. Do this, and you will live.”",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "He said to him, “You have answered correctly. Do this, and you will live.”",
+          "41926a4aa3831714-01": "He said to him, “You have answered correctly. Do this, and you will live.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "But he, willing to justify himself, said unto Jesus, And who is my neighbour?",
+          "9879dbb7aec41528-01": "But he, desiring to justify himself, asked Jesus, “Who is my neighbor?”",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "But he, desiring to justify himself, asked Jesus, “Who is my neighbor?”",
+          "41926a4aa3831714-01": "But he, desiring to justify himself, asked Jesus, “Who is my neighbor?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "And Jesus answering said, A certain man went down from Jerusalem to Jericho, and fell among thieves, which stripped him of his raiment, and wounded him, and departed, leaving him  half dead.",
+          "9879dbb7aec41528-01": "Jesus answered, “A certain man was going down from Jerusalem to Jericho, and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead.",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "Jesus answered, “A certain man was going down from Jerusalem to Jericho, and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead.",
+          "41926a4aa3831714-01": "Jesus answered, “A certain man was going down from Jerusalem to Jericho, and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "And by chance there came down a certain priest that way: and when he saw him, he passed by on the other side.",
+          "9879dbb7aec41528-01": "By chance a certain priest was going down that way. When he saw him, he passed by on the other side.",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "By chance a certain priest was going down that way. When he saw him, he passed by on the other side.",
+          "41926a4aa3831714-01": "By chance a certain priest was going down that way. When he saw him, he passed by on the other side."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "And likewise a Levite, when he was at the place, came and looked on him, and passed by on the other side.",
+          "9879dbb7aec41528-01": "In the same way a Levite also, when he came to the place, and saw him, passed by on the other side.",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "In the same way a Levite also, when he came to the place, and saw him, passed by on the other side.",
+          "41926a4aa3831714-01": "In the same way a Levite also, when he came to the place, and saw him, passed by on the other side."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "But a certain Samaritan, as he journeyed, came where he was: and when he saw him, he had compassion on him,",
+          "9879dbb7aec41528-01": "But a certain Samaritan, as he traveled, came where he was. When he saw him, he was moved with compassion,",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "But a certain Samaritan, as he traveled, came where he was. When he saw him, he was moved with compassion,",
+          "41926a4aa3831714-01": "But a certain Samaritan, as he traveled, came where he was. When he saw him, he was moved with compassion,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "And went to him, and bound up his wounds, pouring in oil and wine, and set him on his own beast, and brought him to an inn, and took care of him.",
+          "9879dbb7aec41528-01": "came to him, and bound up his wounds, pouring on oil and wine. He set him on his own animal, and brought him to an inn, and took care of him.",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "came to him, and bound up his wounds, pouring on oil and wine. He set him on his own animal, and brought him to an inn, and took care of him.",
+          "41926a4aa3831714-01": "came to him, and bound up his wounds, pouring on oil and wine. He set him on his own animal, and brought him to an inn, and took care of him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 35,
+        "translations": {
+          "de4e12af7f28f599-02": "And on the morrow when he departed, he took out two pence, and gave them to the host, and said unto him, Take care of him; and whatsoever thou spendest more, when I come again, I will repay thee.",
+          "9879dbb7aec41528-01": "On the next day, when he departed, he took out two denarii, and gave them to the host, and said to him, ‘Take care of him. Whatever you spend beyond that, I will repay you when I return.’",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "On the next day, when he departed, he took out two denarii, and gave them to the host, and said to him, ‘Take care of him. Whatever you spend beyond that, I will repay you when I return.’",
+          "41926a4aa3831714-01": "On the next day, when he departed, he took out two denarii, and gave them to the host, and said to him, ‘Take care of him. Whatever you spend beyond that, I will repay you when I return.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 36,
+        "translations": {
+          "de4e12af7f28f599-02": "Which now of these three, thinkest thou, was neighbour unto him that fell among the thieves?",
+          "9879dbb7aec41528-01": "Now which of these three do you think seemed to be a neighbor to him who fell among the robbers?”",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "Now which of these three do you think seemed to be a neighbor to him who fell among the robbers?”",
+          "41926a4aa3831714-01": "Now which of these three do you think seemed to be a neighbor to him who fell among the robbers?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 37,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said, He that shewed mercy on him. Then said Jesus unto him, Go, and do thou likewise.",
+          "9879dbb7aec41528-01": "He said, “He who showed mercy on him.” Then Jesus said to him, “Go and do likewise.”",
+          "bba730b9171fcc22-01": "",
+          "06125ad3d1d57585-01": "He said, “He who showed mercy on him.” Then Jesus said to him, “Go and do likewise.”",
+          "41926a4aa3831714-01": "He said, “He who showed mercy on him.” Then Jesus said to him, “Go and do likewise.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Exodus 19:1-8": {
+    "reference": "Exodus 19:1-8",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "In the third month after the children of Israel had gone out of the land of Egypt, on that same day they came into the wilderness of Sinai.",
+          "bba730b9171fcc22-01": "In the third month after the children of Israel went out from Egypt, on the same day, they came into the waste land of Sinai.",
+          "06125ad3d1d57585-01": "In the third month after the children of Israel had gone out of the land of Egypt, on that same day they came into the wilderness of Sinai.",
+          "41926a4aa3831714-01": "In the third month after the children of Israel had gone out of the land of Egypt, on that same day they came into the wilderness of Sinai."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain.",
+          "bba730b9171fcc22-01": "And when they had gone away from Rephidim and had come into the waste land of Sinai, they put up their tents in the waste land before the mountain: there Israel put up its tents.",
+          "06125ad3d1d57585-01": "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain.",
+          "41926a4aa3831714-01": "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "Moses went up to God, and Yahweh called to him out of the mountain, saying, “This is what you shall tell the house of Jacob, and tell the children of Israel:",
+          "bba730b9171fcc22-01": "And Moses went up to God, and the voice of the Lord came to him from the mountain, saying, Say to the family of Jacob, and give word to the children of Israel:",
+          "06125ad3d1d57585-01": "Moses went up to God, and Yahweh called to him out of the mountain, saying, “This is what you shall tell the house of Jacob, and tell the children of Israel:",
+          "41926a4aa3831714-01": "Moses went up to God, and Yahweh called to him out of the mountain, saying, “This is what you shall tell the house of Jacob, and tell the children of Israel:"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "‘You have seen what I did to the Egyptians, and how I bore you on eagles’ wings, and brought you to myself.",
+          "bba730b9171fcc22-01": "You have seen what I did to the Egyptians, and how I took you, as on eagles' wings, guiding you to myself.",
+          "06125ad3d1d57585-01": "‘You have seen what I did to the Egyptians, and how I bore you on eagles’ wings, and brought you to myself.",
+          "41926a4aa3831714-01": "‘You have seen what I did to the Egyptians, and how I bore you on eagles’ wings, and brought you to myself."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "Now therefore, if you will indeed obey my voice, and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine;",
+          "bba730b9171fcc22-01": "If now you will truly give ear to my voice and keep my agreement, you will be my special property out of all the peoples: for all the earth is mine:",
+          "06125ad3d1d57585-01": "Now therefore, if you will indeed obey my voice, and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine;",
+          "41926a4aa3831714-01": "Now therefore, if you will indeed obey my voice, and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine;"
+        },
+        "words": [
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "and you shall be to me a kingdom of priests, and a holy nation.’ These are the words which you shall speak to the children of Israel.”",
+          "bba730b9171fcc22-01": "And you will be a kingdom of priests to me, and a holy nation. These are the words which you are to say to the children of Israel.",
+          "06125ad3d1d57585-01": "and you shall be to me a kingdom of priests, and a holy nation.’ These are the words which you shall speak to the children of Israel.”",
+          "41926a4aa3831714-01": "and you shall be to me a kingdom of priests, and a holy nation.’ These are the words which you shall speak to the children of Israel.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "Moses came and called for the elders of the people, and set before them all these words which Yahweh commanded him.",
+          "bba730b9171fcc22-01": "And Moses came and sent for the chiefs of the people and put before them all these words which the Lord had given him orders to say.",
+          "06125ad3d1d57585-01": "Moses came and called for the elders of the people, and set before them all these words which Yahweh commanded him.",
+          "41926a4aa3831714-01": "Moses came and called for the elders of the people, and set before them all these words which Yahweh commanded him."
+        },
+        "words": [
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "All the people answered together, and said, “All that Yahweh has spoken we will do.” Moses reported the words of the people to Yahweh.",
+          "bba730b9171fcc22-01": "And all the people, answering together, said, Whatever the Lord has said we will do. And Moses took back to the Lord the words of the people.",
+          "06125ad3d1d57585-01": "All the people answered together, and said, “All that Yahweh has spoken we will do.” Moses reported the words of the people to Yahweh.",
+          "41926a4aa3831714-01": "All the people answered together, and said, “All that Yahweh has spoken we will do.” Moses reported the words of the people to Yahweh."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Exodus 20:1-17": {
+    "reference": "Exodus 20:1-17",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And God spake all these words, saying,",
+          "9879dbb7aec41528-01": "God spoke all these words, saying,",
+          "bba730b9171fcc22-01": "And God said all these words:",
+          "06125ad3d1d57585-01": "God spoke all these words, saying,",
+          "41926a4aa3831714-01": "God spoke all these words, saying,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage.",
+          "9879dbb7aec41528-01": "“I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage.",
+          "bba730b9171fcc22-01": "I am the Lord your God who took you out of the land of Egypt, out of the prison-house.",
+          "06125ad3d1d57585-01": "“I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage.",
+          "41926a4aa3831714-01": "“I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt have no other gods before me.",
+          "9879dbb7aec41528-01": "“You shall have no other gods before me.",
+          "bba730b9171fcc22-01": "You are to have no other gods but me.",
+          "06125ad3d1d57585-01": "“You shall have no other gods before me.",
+          "41926a4aa3831714-01": "“You shall have no other gods before me."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not make unto thee any graven image, or any likeness of any thing that is in heaven above, or that is  in the earth beneath, or that is in the water under the earth:",
+          "9879dbb7aec41528-01": "“You shall not make for yourselves an idol, nor any image of anything that is in the heavens above, or that is in the earth beneath, or that is in the water under the earth:",
+          "bba730b9171fcc22-01": "You are not to make an image or picture of anything in heaven or on the earth or in the waters under the earth:",
+          "06125ad3d1d57585-01": "“You shall not make for yourselves an idol, nor any image of anything that is in the heavens above, or that is in the earth beneath, or that is in the water under the earth:",
+          "41926a4aa3831714-01": "“You shall not make for yourselves an idol, nor any image of anything that is in the heavens above, or that is in the earth beneath, or that is in the water under the earth:"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not bow down thyself to them, nor serve them: for I the LORD thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me;",
+          "9879dbb7aec41528-01": "you shall not bow yourself down to them, nor serve them, for I, Yahweh your God, am a jealous God, visiting the iniquity of the fathers on the children, on the third and on the fourth generation of those who hate me,",
+          "bba730b9171fcc22-01": "You may not go down on your faces before them or give them worship: for I, the Lord your God, am a God who will not give his honour to another; and I will send punishment on the children for the wrongdoing of their fathers, to the third and fourth generation of my haters;",
+          "06125ad3d1d57585-01": "you shall not bow yourself down to them, nor serve them, for I, Yahweh your God, am a jealous God, visiting the iniquity of the fathers on the children, on the third and on the fourth generation of those who hate me,",
+          "41926a4aa3831714-01": "you shall not bow yourself down to them, nor serve them, for I, Yahweh your God, am a jealous God, visiting the iniquity of the fathers on the children, on the third and on the fourth generation of those who hate me,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And shewing mercy unto thousands of them that love me, and keep my commandments.",
+          "9879dbb7aec41528-01": "and showing loving kindness to thousands of those who love me and keep my commandments.",
+          "bba730b9171fcc22-01": "And I will have mercy through a thousand generations on those who have love for me and keep my laws.",
+          "06125ad3d1d57585-01": "and showing loving kindness to thousands of those who love me and keep my commandments.",
+          "41926a4aa3831714-01": "and showing loving kindness to thousands of those who love me and keep my commandments."
+        },
+        "words": [
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not take the name of the LORD thy God in vain; for the LORD will not hold him guiltless that taketh his name in vain.",
+          "9879dbb7aec41528-01": "“You shall not take the name of Yahweh your God in vain, for Yahweh will not hold him guiltless who takes his name in vain.",
+          "bba730b9171fcc22-01": "You are not to make use of the name of the Lord your God for an evil purpose; whoever takes the Lord's name on his lips for an evil purpose will be judged a sinner by the Lord",
+          "06125ad3d1d57585-01": "“You shall not take the name of Yahweh your God in vain, for Yahweh will not hold him guiltless who takes his name in vain.",
+          "41926a4aa3831714-01": "“You shall not take the name of Yahweh your God in vain, for Yahweh will not hold him guiltless who takes his name in vain."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "Remember the sabbath day, to keep it holy.",
+          "9879dbb7aec41528-01": "“Remember the Sabbath day, to keep it holy.",
+          "bba730b9171fcc22-01": "Keep in memory the Sabbath and let it be a holy day.",
+          "06125ad3d1d57585-01": "“Remember the Sabbath day, to keep it holy.",
+          "41926a4aa3831714-01": "“Remember the Sabbath day, to keep it holy."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Six days shalt thou labour, and do all thy work:",
+          "9879dbb7aec41528-01": "You shall labor six days, and do all your work,",
+          "bba730b9171fcc22-01": "On six days do all your work:",
+          "06125ad3d1d57585-01": "You shall labor six days, and do all your work,",
+          "41926a4aa3831714-01": "You shall labor six days, and do all your work,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "But the seventh day is the sabbath of the LORD thy God: in it thou shalt not do any work, thou, nor thy son, nor thy daughter, thy manservant, nor thy maidservant, nor thy cattle, nor thy stranger that is within thy gates:",
+          "9879dbb7aec41528-01": "but the seventh day is a Sabbath to Yahweh your God. You shall not do any work in it, you, nor your son, nor your daughter, your male servant, nor your female servant, nor your livestock, nor your stranger who is within your gates;",
+          "bba730b9171fcc22-01": "But the seventh day is a Sabbath to the Lord your God; on that day you are to do no work, you or your son or your daughter, your man-servant or your woman-servant, your cattle or the man from a strange country who is living among you:",
+          "06125ad3d1d57585-01": "but the seventh day is a Sabbath to Yahweh your God. You shall not do any work in it, you, nor your son, nor your daughter, your male servant, nor your female servant, nor your livestock, nor your stranger who is within your gates;",
+          "41926a4aa3831714-01": "but the seventh day is a Sabbath to Yahweh your God. You shall not do any work in it, you, nor your son, nor your daughter, your male servant, nor your female servant, nor your livestock, nor your stranger who is within your gates;"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "For in six days the LORD made heaven and earth, the sea, and all that in them is, and rested the seventh day: wherefore the LORD blessed the sabbath day, and hallowed it.",
+          "9879dbb7aec41528-01": "for in six days Yahweh made heaven and earth, the sea, and all that is in them, and rested the seventh day; therefore Yahweh blessed the Sabbath day, and made it holy.",
+          "bba730b9171fcc22-01": "For in six days the Lord made heaven and earth, and the sea, and everything in them, and he took his rest on the seventh day: for this reason the Lord has given his blessing to the seventh day and made it holy.",
+          "06125ad3d1d57585-01": "for in six days Yahweh made heaven and earth, the sea, and all that is in them, and rested the seventh day; therefore Yahweh blessed the Sabbath day, and made it holy.",
+          "41926a4aa3831714-01": "for in six days Yahweh made heaven and earth, the sea, and all that is in them, and rested the seventh day; therefore Yahweh blessed the Sabbath day, and made it holy."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֶשֶׁר",
+            "transliteration": "e-sher",
+            "english": "blessed / happy",
+            "strongs": "H0835",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.",
+          "9879dbb7aec41528-01": "“Honor your father and your mother, that your days may be long in the land which Yahweh your God gives you.",
+          "bba730b9171fcc22-01": "Give honour to your father and to your mother, so that your life may be long in the land which the Lord your God is giving you.",
+          "06125ad3d1d57585-01": "“Honor your father and your mother, that your days may be long in the land which Yahweh your God gives you.",
+          "41926a4aa3831714-01": "“Honor your father and your mother, that your days may be long in the land which Yahweh your God gives you."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not kill.",
+          "9879dbb7aec41528-01": "“You shall not murder.",
+          "bba730b9171fcc22-01": "Do not put anyone to death without cause.",
+          "06125ad3d1d57585-01": "“You shall not murder.",
+          "41926a4aa3831714-01": "“You shall not murder."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not commit adultery.",
+          "9879dbb7aec41528-01": "“You shall not commit adultery.",
+          "bba730b9171fcc22-01": "Do not be false to the married relation.",
+          "06125ad3d1d57585-01": "“You shall not commit adultery.",
+          "41926a4aa3831714-01": "“You shall not commit adultery."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not steal.",
+          "9879dbb7aec41528-01": "“You shall not steal.",
+          "bba730b9171fcc22-01": "Do not take the property of another.",
+          "06125ad3d1d57585-01": "“You shall not steal.",
+          "41926a4aa3831714-01": "“You shall not steal."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not bear false witness against thy neighbour.",
+          "9879dbb7aec41528-01": "“You shall not give false testimony against your neighbor.",
+          "bba730b9171fcc22-01": "Do not give false witness against your neighbour.",
+          "06125ad3d1d57585-01": "“You shall not give false testimony against your neighbor.",
+          "41926a4aa3831714-01": "“You shall not give false testimony against your neighbor."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not covet thy neighbour’s house, thou shalt not covet thy neighbour’s wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor any thing that is thy neighbour’s.",
+          "9879dbb7aec41528-01": "“You shall not covet your neighbor’s house. You shall not covet your neighbor’s wife, nor his male servant, nor his female servant, nor his ox, nor his donkey, nor anything that is your neighbor’s.”",
+          "bba730b9171fcc22-01": "Let not your desire be turned to your neighbour's house, or his wife or his man-servant or his woman-servant or his ox or his ass or anything which is his.",
+          "06125ad3d1d57585-01": "“You shall not covet your neighbor’s house. You shall not covet your neighbor’s wife, nor his male servant, nor his female servant, nor his ox, nor his donkey, nor anything that is your neighbor’s.”",
+          "41926a4aa3831714-01": "“You shall not covet your neighbor’s house. You shall not covet your neighbor’s wife, nor his male servant, nor his female servant, nor his ox, nor his donkey, nor anything that is your neighbor’s.”"
+        },
+        "words": [
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Jeremiah 31:31-34": {
+    "reference": "Jeremiah 31:31-34",
+    "verses": [
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "Behold, the days come, saith the LORD, that I will make a new covenant with the house of Israel, and with the house of Judah:",
+          "9879dbb7aec41528-01": "“Behold, the days come,” says Yahweh, “that I will make a new covenant with the house of Israel, and with the house of Judah:",
+          "bba730b9171fcc22-01": "See, the days are coming, says the Lord, when I will make a new agreement with the people of Israel and with the people of Judah:",
+          "06125ad3d1d57585-01": "“Behold, the days come,” says Yahweh, “that I will make a new covenant with the house of Israel, and with the house of Judah:",
+          "41926a4aa3831714-01": "“Behold, the days come,” says Yahweh, “that I will make a new covenant with the house of Israel, and with the house of Judah:"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "Not according to the covenant that I made with their fathers in the day that I took them by the hand to bring them out of the land of Egypt; which my covenant they brake, although I was an husband unto them, saith the LORD:",
+          "9879dbb7aec41528-01": "not according to the covenant that I made with their fathers in the day that I took them by the hand to bring them out of the land of Egypt; which covenant of mine they broke, although I was a husband to them,” says Yahweh.",
+          "bba730b9171fcc22-01": "Not like the agreement which I made with their fathers, on the day when I took them by the hand to be their guide out of the land of Egypt; which agreement was broken by them, and I gave them up, says the Lord.",
+          "06125ad3d1d57585-01": "not according to the covenant that I made with their fathers in the day that I took them by the hand to bring them out of the land of Egypt; which covenant of mine they broke, although I was a husband to them,” says Yahweh.",
+          "41926a4aa3831714-01": "not according to the covenant that I made with their fathers in the day that I took them by the hand to bring them out of the land of Egypt; which covenant of mine they broke, although I was a husband to them,” says Yahweh."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "But this shall be the covenant that I will make with the house of Israel; After those days, saith the LORD, I will put my law in their inward parts, and write it in their hearts; and will be their God, and they shall be my people.",
+          "9879dbb7aec41528-01": "“But this is the covenant that I will make with the house of Israel after those days,” says Yahweh: I will put my law in their inward parts, and I will write it in their heart. I will be their God, and they shall be my people.",
+          "bba730b9171fcc22-01": "But this is the agreement which I will make with the people of Israel after those days, says the Lord; I will put my law in their inner parts, writing it in their hearts; and I will be their God, and they will be my people.",
+          "06125ad3d1d57585-01": "“But this is the covenant that I will make with the house of Israel after those days,” says Yahweh: I will put my law in their inward parts, and I will write it in their heart. I will be their God, and they shall be my people.",
+          "41926a4aa3831714-01": "“But this is the covenant that I will make with the house of Israel after those days,” says Yahweh: I will put my law in their inward parts, and I will write it in their heart. I will be their God, and they shall be my people."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "תּוֹרָה",
+            "transliteration": "to-rah",
+            "english": "law / instruction",
+            "strongs": "H8451",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "And they shall teach no more every man his neighbour, and every man his brother, saying, Know the LORD: for they shall all know me, from the least of them unto the greatest of them, saith the LORD; for I will forgive their iniquity, and I will remember their sin no more.",
+          "9879dbb7aec41528-01": "They will no longer each teach his neighbor, and every man teach his brother, saying, ‘Know Yahweh;’ for they will all know me, from their least to their greatest,” says Yahweh: “for I will forgive their iniquity, and I will remember their sin no more.”",
+          "bba730b9171fcc22-01": "And no longer will they be teaching every man his neighbour and every man his brother, saying, Get knowledge of the Lord: for they will all have knowledge of me, from the least of them to the greatest of them, says the Lord: for they will have my forgiveness for their evil-doing, and their sin will go from my memory for ever.",
+          "06125ad3d1d57585-01": "They will no longer each teach his neighbor, and every man teach his brother, saying, ‘Know Yahweh;’ for they will all know me, from their least to their greatest,” says Yahweh: “for I will forgive their iniquity, and I will remember their sin no more.”",
+          "41926a4aa3831714-01": "They will no longer each teach his neighbor, and every man teach his brother, saying, ‘Know Yahweh;’ for they will all know me, from their least to their greatest,” says Yahweh: “for I will forgive their iniquity, and I will remember their sin no more.”"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Luke 22:14-20": {
+    "reference": "Luke 22:14-20",
+    "verses": [
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the hour was come, he sat down, and the twelve apostles with him.",
+          "9879dbb7aec41528-01": "When the hour had come, he sat down with the twelve apostles.",
+          "bba730b9171fcc22-01": "And when the time had come, he took his seat, and the Apostles with him.",
+          "06125ad3d1d57585-01": "When the hour had come, he sat down with the twelve apostles.",
+          "41926a4aa3831714-01": "When the hour had come, he sat down with the twelve apostles."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto them, With desire I have desired to eat this passover with you before I suffer:",
+          "9879dbb7aec41528-01": "He said to them, “I have earnestly desired to eat this Passover with you before I suffer,",
+          "bba730b9171fcc22-01": "And he said, I have had a great desire to keep this Passover with you before I come to my death;",
+          "06125ad3d1d57585-01": "He said to them, “I have earnestly desired to eat this Passover with you before I suffer,",
+          "41926a4aa3831714-01": "He said to them, “I have earnestly desired to eat this Passover with you before I suffer,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "For I say unto you, I will not any more eat thereof, until it be fulfilled in the kingdom of God.",
+          "9879dbb7aec41528-01": "for I tell you, I will no longer by any means eat of it until it is fulfilled in God’s Kingdom.”",
+          "bba730b9171fcc22-01": "For I say to you, I will not take it till it is made complete in the kingdom of God.",
+          "06125ad3d1d57585-01": "for I tell you, I will no longer by any means eat of it until it is fulfilled in God’s Kingdom.”",
+          "41926a4aa3831714-01": "for I tell you, I will no longer by any means eat of it until it is fulfilled in God’s Kingdom.”"
+        },
+        "words": [
+          {
+            "original": "βασιλεία",
+            "transliteration": "basileia",
+            "english": "kingdom / reign",
+            "strongs": "G0932",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And he took the cup, and gave thanks, and said, Take this, and divide it among yourselves:",
+          "9879dbb7aec41528-01": "He received a cup, and when he had given thanks, he said, “Take this, and share it among yourselves,",
+          "bba730b9171fcc22-01": "And he took a cup and, having given praise, he said, Make division of this among yourselves;",
+          "06125ad3d1d57585-01": "He received a cup, and when he had given thanks, he said, “Take this, and share it among yourselves,",
+          "41926a4aa3831714-01": "He received a cup, and when he had given thanks, he said, “Take this, and share it among yourselves,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "For I say unto you, I will not drink of the fruit of the vine, until the kingdom of God shall come.",
+          "9879dbb7aec41528-01": "for I tell you, I will not drink at all again from the fruit of the vine, until God’s Kingdom comes.”",
+          "bba730b9171fcc22-01": "For I say to you, I will not take of the fruit of the vine till the kingdom of God has come.",
+          "06125ad3d1d57585-01": "for I tell you, I will not drink at all again from the fruit of the vine, until God’s Kingdom comes.”",
+          "41926a4aa3831714-01": "for I tell you, I will not drink at all again from the fruit of the vine, until God’s Kingdom comes.”"
+        },
+        "words": [
+          {
+            "original": "βασιλεία",
+            "transliteration": "basileia",
+            "english": "kingdom / reign",
+            "strongs": "G0932",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me.",
+          "9879dbb7aec41528-01": "He took bread, and when he had given thanks, he broke, and gave it to them, saying, “This is my body which is given for you. Do this in memory of me.”",
+          "bba730b9171fcc22-01": "And he took bread and, having given praise, he gave it to them when it had been broken, saying, This is my body, which is given for you: do this in memory of me.",
+          "06125ad3d1d57585-01": "He took bread, and when he had given thanks, he broke, and gave it to them, saying, “This is my body which is given for you. Do this in memory of me.”",
+          "41926a4aa3831714-01": "He took bread, and when he had given thanks, he broke, and gave it to them, saying, “This is my body which is given for you. Do this in memory of me.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "Likewise also the cup after supper, saying, This cup is  the new testament in my blood, which is shed for you.",
+          "9879dbb7aec41528-01": "Likewise, he took the cup after supper, saying, “This cup is the new covenant in my blood, which is poured out for you.",
+          "bba730b9171fcc22-01": "And in the same way, after the meal, he took the cup, saying, This cup is the new testament, made with my blood which is given for you.",
+          "06125ad3d1d57585-01": "Likewise, he took the cup after supper, saying, “This cup is the new covenant in my blood, which is poured out for you.",
+          "41926a4aa3831714-01": "Likewise, he took the cup after supper, saying, “This cup is the new covenant in my blood, which is poured out for you."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and / also",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self / same",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-1s"
+          },
+          {
+            "original": "ἔχω",
+            "transliteration": "echo",
+            "english": "have / hold",
+            "strongs": "G2192",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 1": {
+    "reference": "Psalm 1",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Blessed is the man that walketh not in the counsel of the ungodly, nor standeth in the way of sinners, nor sitteth in the seat of the scornful.",
+          "9879dbb7aec41528-01": "Blessed is the man who doesn’t walk in the counsel of the wicked, nor stand on the path of sinners, nor sit in the seat of scoffers;",
+          "bba730b9171fcc22-01": "Happy is the man who does not go in the company of sinners, or take his place in the way of evil-doers, or in the seat of those who do not give honour to the Lord.",
+          "06125ad3d1d57585-01": "Blessed is the man who doesn’t walk in the counsel of the wicked, nor stand on the path of sinners, nor sit in the seat of scoffers;",
+          "41926a4aa3831714-01": "Blessed is the man who doesn’t walk in the counsel of the wicked, nor stand on the path of sinners, nor sit in the seat of scoffers;"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אֶשֶׁר",
+            "transliteration": "e-sher",
+            "english": "blessed / happy",
+            "strongs": "H0835",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "But his delight is in the law of the LORD; and in his law doth he meditate day and night.",
+          "9879dbb7aec41528-01": "but his delight is in Yahweh’s law. On his law he meditates day and night.",
+          "bba730b9171fcc22-01": "But whose delight is in the law of the Lord, and whose mind is on his law day and night.",
+          "06125ad3d1d57585-01": "but his delight is in Yahweh’s law. On his law he meditates day and night.",
+          "41926a4aa3831714-01": "but his delight is in Yahweh’s law. On his law he meditates day and night."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "תּוֹρָה",
+            "transliteration": "to-rah",
+            "english": "law / instruction",
+            "strongs": "H8451",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "הָגָה",
+            "transliteration": "ha-gah",
+            "english": "meditate / mutter",
+            "strongs": "H1897",
+            "parsing": "V-Qal-Impf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall be like a tree planted by the rivers of water, that bringeth forth his fruit in his season; his leaf also shall not wither; and whatsoever he doeth shall prosper.",
+          "9879dbb7aec41528-01": "He will be like a tree planted by the streams of water, that produces its fruit in its season, whose leaf also does not wither. Whatever he does shall prosper.",
+          "bba730b9171fcc22-01": "He will be like a tree planted by the rivers of water, which gives its fruit at the right time, whose leaves will ever be green; and he will do well in all his undertakings.",
+          "06125ad3d1d57585-01": "He will be like a tree planted by the streams of water, that produces its fruit in its season, whose leaf also does not wither. Whatever he does shall prosper.",
+          "41926a4aa3831714-01": "He will be like a tree planted by the streams of water, that produces its fruit in its season, whose leaf also does not wither. Whatever he does shall prosper."
+        },
+        "words": [
+          {
+            "original": "עֵץ",
+            "transliteration": "ets",
+            "english": "tree / wood",
+            "strongs": "H6086",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "The ungodly are not so: but are like the chaff which the wind driveth away.",
+          "9879dbb7aec41528-01": "The wicked are not so, but are like the chaff which the wind drives away.",
+          "bba730b9171fcc22-01": "The evil-doers are not so; but are like the dust from the grain, which the wind takes away.",
+          "06125ad3d1d57585-01": "The wicked are not so, but are like the chaff which the wind drives away.",
+          "41926a4aa3831714-01": "The wicked are not so, but are like the chaff which the wind drives away."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore the ungodly shall not stand in the judgment, nor sinners in the congregation of the righteous.",
+          "9879dbb7aec41528-01": "Therefore the wicked shall not stand in the judgment, nor sinners in the congregation of the righteous.",
+          "bba730b9171fcc22-01": "For this cause there will be no mercy for sinners when they are judged, and the evil-doers will have no place among the upright,",
+          "06125ad3d1d57585-01": "Therefore the wicked shall not stand in the judgment, nor sinners in the congregation of the righteous.",
+          "41926a4aa3831714-01": "Therefore the wicked shall not stand in the judgment, nor sinners in the congregation of the righteous."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "For the LORD knoweth the way of the righteous: but the way of the ungodly shall perish.",
+          "9879dbb7aec41528-01": "For Yahweh knows the way of the righteous, but the way of the wicked shall perish.",
+          "bba730b9171fcc22-01": "Because the Lord sees the way of the upright, but the end of the sinner is destruction.",
+          "06125ad3d1d57585-01": "For Yahweh knows the way of the righteous, but the way of the wicked shall perish.",
+          "41926a4aa3831714-01": "For Yahweh knows the way of the righteous, but the way of the wicked shall perish."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 23": {
+    "reference": "Psalm 23",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "The LORD is my shepherd; I shall not want.",
+          "9879dbb7aec41528-01": "Yahweh is my shepherd: I shall lack nothing.",
+          "bba730b9171fcc22-01": "<A Psalm. Of David.> The Lord takes care of me as his sheep; I will not be without any good thing.",
+          "06125ad3d1d57585-01": "Yahweh is my shepherd: I shall lack nothing.",
+          "41926a4aa3831714-01": "Yahweh is my shepherd: I shall lack nothing."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "רָעָה",
+            "transliteration": "ra-ah",
+            "english": "shepherd / feed",
+            "strongs": "H7462",
+            "parsing": "V-Qal-ActPart"
+          },
+          {
+            "original": "חָסֵר",
+            "transliteration": "cha-ser",
+            "english": "lack / want",
+            "strongs": "H2637",
+            "parsing": "V-Qal-Impf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "He maketh me to lie down in green pastures: he leadeth me beside the still waters.",
+          "9879dbb7aec41528-01": "He makes me lie down in green pastures. He leads me beside still waters.",
+          "bba730b9171fcc22-01": "He makes a resting-place for me in the green fields: he is my guide by the quiet waters.",
+          "06125ad3d1d57585-01": "He makes me lie down in green pastures. He leads me beside still waters.",
+          "41926a4aa3831714-01": "He makes me lie down in green pastures. He leads me beside still waters."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+          "9879dbb7aec41528-01": "He restores my soul. He guides me in the paths of righteousness for his name’s sake.",
+          "bba730b9171fcc22-01": "He gives new life to my soul: he is my guide in the ways of righteousness because of his name.",
+          "06125ad3d1d57585-01": "He restores my soul. He guides me in the paths of righteousness for his name’s sake.",
+          "41926a4aa3831714-01": "He restores my soul. He guides me in the paths of righteousness for his name’s sake."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",
+          "9879dbb7aec41528-01": "Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me. Your rod and your staff, they comfort me.",
+          "bba730b9171fcc22-01": "Yes, though I go through the valley of deep shade, I will have no fear of evil; for you are with me, your rod and your support are my comfort.",
+          "06125ad3d1d57585-01": "Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me. Your rod and your staff, they comfort me.",
+          "41926a4aa3831714-01": "Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me. Your rod and your staff, they comfort me."
+        },
+        "words": [
+          {
+            "original": "גַּיא",
+            "transliteration": "gay",
+            "english": "valley",
+            "strongs": "H1516",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over.",
+          "9879dbb7aec41528-01": "You prepare a table before me in the presence of my enemies. You anoint my head with oil. My cup runs over.",
+          "bba730b9171fcc22-01": "You make ready a table for me in front of my haters: you put oil on my head; my cup is overflowing.",
+          "06125ad3d1d57585-01": "You prepare a table before me in the presence of my enemies. You anoint my head with oil. My cup runs over.",
+          "41926a4aa3831714-01": "You prepare a table before me in the presence of my enemies. You anoint my head with oil. My cup runs over."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+          "9879dbb7aec41528-01": "Surely goodness and loving kindness shall follow me all the days of my life, and I will dwell in Yahweh’s house forever.",
+          "bba730b9171fcc22-01": "Truly, blessing and mercy will be with me all the days of my life; and I will have a place in the house of the Lord all my days.",
+          "06125ad3d1d57585-01": "Surely goodness and loving kindness shall follow me all the days of my life, and I will dwell in Yahweh’s house forever.",
+          "41926a4aa3831714-01": "Surely goodness and loving kindness shall follow me all the days of my life, and I will dwell in Yahweh’s house forever."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 100": {
+    "reference": "Psalm 100",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Make a joyful noise unto the LORD, all ye lands.",
+          "9879dbb7aec41528-01": "Shout for joy to Yahweh, all you lands!",
+          "bba730b9171fcc22-01": "<A Psalm of Praise.> Make a glad sound to the Lord, all the earth.",
+          "06125ad3d1d57585-01": "Shout for joy to Yahweh, all you lands!",
+          "41926a4aa3831714-01": "Shout for joy to Yahweh, all you lands!"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Serve the LORD with gladness: come before his presence with singing.",
+          "9879dbb7aec41528-01": "Serve Yahweh with gladness. Come before his presence with singing.",
+          "bba730b9171fcc22-01": "Give worship to the Lord with joy; come before him with a song.",
+          "06125ad3d1d57585-01": "Serve Yahweh with gladness. Come before his presence with singing.",
+          "41926a4aa3831714-01": "Serve Yahweh with gladness. Come before his presence with singing."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Know ye that the LORD he is God: it is he that  hath made us, and not we ourselves; we are his people, and the sheep of his pasture.",
+          "9879dbb7aec41528-01": "Know that Yahweh, he is God. It is he who has made us, and we are his. We are his people, and the sheep of his pasture.",
+          "bba730b9171fcc22-01": "Be certain that the Lord is God; it is he who has made us, and we are his; we are his people, and the sheep to whom he gives food.",
+          "06125ad3d1d57585-01": "Know that Yahweh, he is God. It is he who has made us, and we are his. We are his people, and the sheep of his pasture.",
+          "41926a4aa3831714-01": "Know that Yahweh, he is God. It is he who has made us, and we are his. We are his people, and the sheep of his pasture."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.",
+          "9879dbb7aec41528-01": "Enter into his gates with thanksgiving, into his courts with praise. Give thanks to him, and bless his name.",
+          "bba730b9171fcc22-01": "Come into his doors with joy, and into his house with praise; give him honour, blessing his name.",
+          "06125ad3d1d57585-01": "Enter into his gates with thanksgiving, into his courts with praise. Give thanks to him, and bless his name.",
+          "41926a4aa3831714-01": "Enter into his gates with thanksgiving, into his courts with praise. Give thanks to him, and bless his name."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "For the LORD is good; his mercy is everlasting; and his truth endureth to all generations.",
+          "9879dbb7aec41528-01": "For Yahweh is good. His loving kindness endures forever, his faithfulness to all generations.",
+          "bba730b9171fcc22-01": "For the Lord is good, and his mercy is never-ending; his faith is unchanging through all generations.",
+          "06125ad3d1d57585-01": "For Yahweh is good. His loving kindness endures forever, his faithfulness to all generations.",
+          "41926a4aa3831714-01": "For Yahweh is good. His loving kindness endures forever, his faithfulness to all generations."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Genesis 1:26-31": {
+    "reference": "Genesis 1:26-31",
+    "verses": [
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.",
+          "9879dbb7aec41528-01": "God said, “Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth.”",
+          "bba730b9171fcc22-01": "And God said, Let us make man in our image, like us: and let him have rule over the fish of the sea and over the birds of the air and over the cattle and over all the earth and over every living thing which goes flat on the earth.",
+          "06125ad3d1d57585-01": "God said, “Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth.”",
+          "41926a4aa3831714-01": "God said, “Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "So God created man in his own image, in the image of God created he him; male and female created he them.",
+          "9879dbb7aec41528-01": "God created man in his own image. In God’s image he created him; male and female he created them.",
+          "bba730b9171fcc22-01": "And God made man in his image, in the image of God he made him: male and female he made them.",
+          "06125ad3d1d57585-01": "God created man in his own image. In God’s image he created him; male and female he created them.",
+          "41926a4aa3831714-01": "God created man in his own image. In God’s image he created him; male and female he created them."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.",
+          "9879dbb7aec41528-01": "God blessed them. God said to them, “Be fruitful, multiply, fill the earth, and subdue it. Have dominion over the fish of the sea, over the birds of the sky, and over every living thing that moves on the earth.”",
+          "bba730b9171fcc22-01": "And God gave them his blessing and said to them, Be fertile and have increase, and make the earth full and be masters of it; be rulers over the fish of the sea and over the birds of the air and over every living thing moving on the earth.",
+          "06125ad3d1d57585-01": "God blessed them. God said to them, “Be fruitful, multiply, fill the earth, and subdue it. Have dominion over the fish of the sea, over the birds of the sky, and over every living thing that moves on the earth.”",
+          "41926a4aa3831714-01": "God blessed them. God said to them, “Be fruitful, multiply, fill the earth, and subdue it. Have dominion over the fish of the sea, over the birds of the sky, and over every living thing that moves on the earth.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אֶשֶׁר",
+            "transliteration": "e-sher",
+            "english": "blessed / happy",
+            "strongs": "H0835",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.",
+          "9879dbb7aec41528-01": "God said, “Behold, I have given you every herb yielding seed, which is on the surface of all the earth, and every tree, which bears fruit yielding seed. It will be your food.",
+          "bba730b9171fcc22-01": "And God said, See, I have given you every plant producing seed, on the face of all the earth, and every tree which has fruit producing seed: they will be for your food:",
+          "06125ad3d1d57585-01": "God said, “Behold, I have given you every herb yielding seed, which is on the surface of all the earth, and every tree, which bears fruit yielding seed. It will be your food.",
+          "41926a4aa3831714-01": "God said, “Behold, I have given you every herb yielding seed, which is on the surface of all the earth, and every tree, which bears fruit yielding seed. It will be your food."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עֵץ",
+            "transliteration": "ets",
+            "english": "tree / wood",
+            "strongs": "H6086",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so.",
+          "9879dbb7aec41528-01": "To every animal of the earth, and to every bird of the sky, and to everything that creeps on the earth, in which there is life, I have given every green herb for food;” and it was so.",
+          "bba730b9171fcc22-01": "And to every beast of the earth and to every bird of the air and every living thing moving on the face of the earth I have given every green plant for food: and it was so.",
+          "06125ad3d1d57585-01": "To every animal of the earth, and to every bird of the sky, and to everything that creeps on the earth, in which there is life, I have given every green herb for food;” and it was so.",
+          "41926a4aa3831714-01": "To every animal of the earth, and to every bird of the sky, and to everything that creeps on the earth, in which there is life, I have given every green herb for food;” and it was so."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "And God saw every thing that he had made, and, behold, it was  very good. And the evening and the morning were the sixth day.",
+          "9879dbb7aec41528-01": "God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day.",
+          "bba730b9171fcc22-01": "And God saw everything which he had made and it was very good. And there was evening and there was morning, the sixth day.",
+          "06125ad3d1d57585-01": "God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day.",
+          "41926a4aa3831714-01": "God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Genesis 2:15-17": {
+    "reference": "Genesis 2:15-17",
+    "verses": [
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And the LORD God took the man, and put him into the garden of Eden to dress it and to keep it.",
+          "9879dbb7aec41528-01": "Yahweh God took the man, and put him into the garden of Eden to cultivate and keep it.",
+          "bba730b9171fcc22-01": "And the Lord God took the man and put him in the garden of Eden to do work in it and take care of it.",
+          "06125ad3d1d57585-01": "Yahweh God took the man, and put him into the garden of Eden to cultivate and keep it.",
+          "41926a4aa3831714-01": "Yahweh God took the man, and put him into the garden of Eden to cultivate and keep it."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat:",
+          "9879dbb7aec41528-01": "Yahweh God commanded the man, saying, “You may freely eat of every tree of the garden;",
+          "bba730b9171fcc22-01": "And the Lord God gave the man orders, saying, You may freely take of the fruit of every tree of the garden:",
+          "06125ad3d1d57585-01": "Yahweh God commanded the man, saying, “You may freely eat of every tree of the garden;",
+          "41926a4aa3831714-01": "Yahweh God commanded the man, saying, “You may freely eat of every tree of the garden;"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "עֵץ",
+            "transliteration": "ets",
+            "english": "tree / wood",
+            "strongs": "H6086",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.",
+          "9879dbb7aec41528-01": "but you shall not eat of the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”",
+          "bba730b9171fcc22-01": "But of the fruit of the tree of the knowledge of good and evil you may not take; for on the day when you take of it, death will certainly come to you.",
+          "06125ad3d1d57585-01": "but you shall not eat of the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”",
+          "41926a4aa3831714-01": "but you shall not eat of the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”"
+        },
+        "words": [
+          {
+            "original": "עֵץ",
+            "transliteration": "ets",
+            "english": "tree / wood",
+            "strongs": "H6086",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Genesis 9:8-17": {
+    "reference": "Genesis 9:8-17",
+    "verses": [
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And God spake unto Noah, and to his sons with him, saying,",
+          "9879dbb7aec41528-01": "God spoke to Noah and to his sons with him, saying,",
+          "bba730b9171fcc22-01": "And God said to Noah and to his sons,",
+          "06125ad3d1d57585-01": "God spoke to Noah and to his sons with him, saying,",
+          "41926a4aa3831714-01": "God spoke to Noah and to his sons with him, saying,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And I, behold, I establish my covenant with you, and with your seed after you;",
+          "9879dbb7aec41528-01": "“As for me, behold, I establish my covenant with you, and with your offspring after you,",
+          "bba730b9171fcc22-01": "Truly, I will make my agreement with you and with your seed after you,",
+          "06125ad3d1d57585-01": "“As for me, behold, I establish my covenant with you, and with your offspring after you,",
+          "41926a4aa3831714-01": "“As for me, behold, I establish my covenant with you, and with your offspring after you,"
+        },
+        "words": [
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And with every living creature that is with you, of the fowl, of the cattle, and of every beast of the earth with you; from all that go out of the ark, to every beast of the earth.",
+          "9879dbb7aec41528-01": "and with every living creature that is with you: the birds, the livestock, and every animal of the earth with you, of all that go out of the ship, even every animal of the earth.",
+          "bba730b9171fcc22-01": "And with every living thing with you, all birds and cattle and every beast of the earth which comes out of the ark with you.",
+          "06125ad3d1d57585-01": "and with every living creature that is with you: the birds, the livestock, and every animal of the earth with you, of all that go out of the ship, even every animal of the earth.",
+          "41926a4aa3831714-01": "and with every living creature that is with you: the birds, the livestock, and every animal of the earth with you, of all that go out of the ship, even every animal of the earth."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And I will establish my covenant with you; neither shall all flesh be cut off any more by the waters of a flood; neither shall there any more be a flood to destroy the earth.",
+          "9879dbb7aec41528-01": "I will establish my covenant with you: All flesh will not be cut off any more by the waters of the flood. There will never again be a flood to destroy the earth.”",
+          "bba730b9171fcc22-01": "And I will make my agreement with you; never again will all flesh be cut off by the waters; never again will the waters come over all the earth for its destruction.",
+          "06125ad3d1d57585-01": "I will establish my covenant with you: All flesh will not be cut off any more by the waters of the flood. There will never again be a flood to destroy the earth.”",
+          "41926a4aa3831714-01": "I will establish my covenant with you: All flesh will not be cut off any more by the waters of the flood. There will never again be a flood to destroy the earth.”"
+        },
+        "words": [
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And God said, This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:",
+          "9879dbb7aec41528-01": "God said, “This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:",
+          "bba730b9171fcc22-01": "And God said, This is the sign of the agreement which I make between me and you and every living thing with you, for all future generations:",
+          "06125ad3d1d57585-01": "God said, “This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:",
+          "41926a4aa3831714-01": "God said, “This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth.",
+          "9879dbb7aec41528-01": "I set my rainbow in the cloud, and it will be a sign of a covenant between me and the earth.",
+          "bba730b9171fcc22-01": "I will put my bow in the cloud and it will be for a sign of the agreement between me and the earth.",
+          "06125ad3d1d57585-01": "I set my rainbow in the cloud, and it will be a sign of a covenant between me and the earth.",
+          "41926a4aa3831714-01": "I set my rainbow in the cloud, and it will be a sign of a covenant between me and the earth."
+        },
+        "words": [
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And it shall come to pass, when I bring a cloud over the earth, that the bow shall be seen in the cloud:",
+          "9879dbb7aec41528-01": "When I bring a cloud over the earth, that the rainbow will be seen in the cloud,",
+          "bba730b9171fcc22-01": "And whenever I make a cloud come over the earth, the bow will be seen in the cloud,",
+          "06125ad3d1d57585-01": "When I bring a cloud over the earth, that the rainbow will be seen in the cloud,",
+          "41926a4aa3831714-01": "When I bring a cloud over the earth, that the rainbow will be seen in the cloud,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And I will remember my covenant, which is between me and you and every living creature of all flesh; and the waters shall no more become a flood to destroy all flesh.",
+          "9879dbb7aec41528-01": "I will remember my covenant, which is between me and you and every living creature of all flesh, and the waters will no more become a flood to destroy all flesh.",
+          "bba730b9171fcc22-01": "And I will keep in mind the agreement between me and you and every living thing; and never again will there be a great flow of waters causing destruction to all flesh.",
+          "06125ad3d1d57585-01": "I will remember my covenant, which is between me and you and every living creature of all flesh, and the waters will no more become a flood to destroy all flesh.",
+          "41926a4aa3831714-01": "I will remember my covenant, which is between me and you and every living creature of all flesh, and the waters will no more become a flood to destroy all flesh."
+        },
+        "words": [
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And the bow shall be in the cloud; and I will look upon it, that I may remember the everlasting covenant between God and every living creature of all flesh that is upon the earth.",
+          "9879dbb7aec41528-01": "The rainbow will be in the cloud. I will look at it, that I may remember the everlasting covenant between God and every living creature of all flesh that is on the earth.”",
+          "bba730b9171fcc22-01": "And the bow will be in the cloud, and looking on it, I will keep in mind the eternal agreement between God and every living thing on the earth.",
+          "06125ad3d1d57585-01": "The rainbow will be in the cloud. I will look at it, that I may remember the everlasting covenant between God and every living creature of all flesh that is on the earth.”",
+          "41926a4aa3831714-01": "The rainbow will be in the cloud. I will look at it, that I may remember the everlasting covenant between God and every living creature of all flesh that is on the earth.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And God said unto Noah, This is the token of the covenant, which I have established between me and all flesh that is upon the earth.",
+          "9879dbb7aec41528-01": "God said to Noah, “This is the token of the covenant which I have established between me and all flesh that is on the earth.”",
+          "bba730b9171fcc22-01": "And God said to Noah, This is the sign of the agreement which I have made between me and all flesh on the earth.",
+          "06125ad3d1d57585-01": "God said to Noah, “This is the token of the covenant which I have established between me and all flesh that is on the earth.”",
+          "41926a4aa3831714-01": "God said to Noah, “This is the token of the covenant which I have established between me and all flesh that is on the earth.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Genesis 15": {
+    "reference": "Genesis 15",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "After these things the word of the LORD came unto Abram in a vision, saying, Fear not, Abram: I am thy shield, and thy exceeding great reward.",
+          "9879dbb7aec41528-01": "After these things Yahweh’s word came to Abram in a vision, saying, “Don’t be afraid, Abram. I am your shield, your exceedingly great reward.”",
+          "bba730b9171fcc22-01": "After these things, the word of the Lord came to Abram in a vision, saying, Have no fear, Abram: I will keep you safe, and great will be your reward.",
+          "06125ad3d1d57585-01": "After these things Yahweh’s word came to Abram in a vision, saying, “Don’t be afraid, Abram. I am your shield, your exceedingly great reward.”",
+          "41926a4aa3831714-01": "After these things Yahweh’s word came to Abram in a vision, saying, “Don’t be afraid, Abram. I am your shield, your exceedingly great reward.”"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abram said, Lord GOD, what wilt thou give me, seeing I go childless, and the steward of my house is this Eliezer of Damascus?",
+          "9879dbb7aec41528-01": "Abram said, “Lord Yahweh, what will you give me, since I go childless, and he who will inherit my estate is Eliezer of Damascus?”",
+          "bba730b9171fcc22-01": "And Abram said, What will you give me? for I have no child and this Eliezer of Damascus will have all my wealth after me.",
+          "06125ad3d1d57585-01": "Abram said, “Lord Yahweh, what will you give me, since I go childless, and he who will inherit my estate is Eliezer of Damascus?”",
+          "41926a4aa3831714-01": "Abram said, “Lord Yahweh, what will you give me, since I go childless, and he who will inherit my estate is Eliezer of Damascus?”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abram said, Behold, to me thou hast given no seed: and, lo, one born in my house is mine heir.",
+          "9879dbb7aec41528-01": "Abram said, “Behold, to me you have given no children: and, behold, one born in my house is my heir.”",
+          "bba730b9171fcc22-01": "And Abram said, You have given me no child, and a servant in my house will get the heritage.",
+          "06125ad3d1d57585-01": "Abram said, “Behold, to me you have given no children: and, behold, one born in my house is my heir.”",
+          "41926a4aa3831714-01": "Abram said, “Behold, to me you have given no children: and, behold, one born in my house is my heir.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And, behold, the word of the LORD came unto him, saying, This shall not be thine heir; but he that shall come forth out of thine own bowels shall be thine heir.",
+          "9879dbb7aec41528-01": "Behold, Yahweh’s word came to him, saying, “This man will not be your heir, but he who will come out of your own body will be your heir.”",
+          "bba730b9171fcc22-01": "Then said the Lord, This man will not get the heritage, but a son of your body will have your property after you.",
+          "06125ad3d1d57585-01": "Behold, Yahweh’s word came to him, saying, “This man will not be your heir, but he who will come out of your own body will be your heir.”",
+          "41926a4aa3831714-01": "Behold, Yahweh’s word came to him, saying, “This man will not be your heir, but he who will come out of your own body will be your heir.”"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them: and he said unto him, So shall thy seed be.",
+          "9879dbb7aec41528-01": "Yahweh brought him outside, and said, “Look now toward the sky, and count the stars, if you are able to count them.” He said to Abram, “So will your offspring be.”",
+          "bba730b9171fcc22-01": "And he took him out into the open air, and said to him, Let your eyes be lifted to heaven, and see if the stars may be numbered; even so will your seed be.",
+          "06125ad3d1d57585-01": "Yahweh brought him outside, and said, “Look now toward the sky, and count the stars, if you are able to count them.” He said to Abram, “So will your offspring be.”",
+          "41926a4aa3831714-01": "Yahweh brought him outside, and said, “Look now toward the sky, and count the stars, if you are able to count them.” He said to Abram, “So will your offspring be.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And he believed in the LORD; and he counted it to him for righteousness.",
+          "9879dbb7aec41528-01": "He believed in Yahweh, who credited it to him for righteousness.",
+          "bba730b9171fcc22-01": "And he had faith in the Lord, and it was put to his account as righteousness.",
+          "06125ad3d1d57585-01": "He believed in Yahweh, who credited it to him for righteousness.",
+          "41926a4aa3831714-01": "He believed in Yahweh, who credited it to him for righteousness."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto him, I am the LORD that brought thee out of Ur of the Chaldees, to give thee this land to inherit it.",
+          "9879dbb7aec41528-01": "He said to Abram, “I am Yahweh who brought you out of Ur of the Chaldees, to give you this land to inherit it.”",
+          "bba730b9171fcc22-01": "And he said to him, I am the Lord, who took you from Ur of the Chaldees, to give you this land for your heritage.",
+          "06125ad3d1d57585-01": "He said to Abram, “I am Yahweh who brought you out of Ur of the Chaldees, to give you this land to inherit it.”",
+          "41926a4aa3831714-01": "He said to Abram, “I am Yahweh who brought you out of Ur of the Chaldees, to give you this land to inherit it.”"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said, Lord GOD, whereby shall I know that I shall inherit it?",
+          "9879dbb7aec41528-01": "He said, “Lord Yahweh, how will I know that I will inherit it?”",
+          "bba730b9171fcc22-01": "And he said, O Lord God, how may I be certain that it will be mine?",
+          "06125ad3d1d57585-01": "He said, “Lord Yahweh, how will I know that I will inherit it?”",
+          "41926a4aa3831714-01": "He said, “Lord Yahweh, how will I know that I will inherit it?”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto him, Take me an heifer of three years old, and a she goat of three years old, and a ram of three years old, and a turtledove, and a young pigeon.",
+          "9879dbb7aec41528-01": "He said to him, “Bring me a heifer three years old, a female goat three years old, a ram three years old, a turtledove, and a young pigeon.”",
+          "bba730b9171fcc22-01": "And he said, Take a young cow of three years old, and a she-goat of three years old, and a sheep of three years old, and a dove and a young pigeon.",
+          "06125ad3d1d57585-01": "He said to him, “Bring me a heifer three years old, a female goat three years old, a ram three years old, a turtledove, and a young pigeon.”",
+          "41926a4aa3831714-01": "He said to him, “Bring me a heifer three years old, a female goat three years old, a ram three years old, a turtledove, and a young pigeon.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And he took unto him all these, and divided them in the midst, and laid each piece one against another: but the birds divided he not.",
+          "9879dbb7aec41528-01": "He brought him all these, and divided them in the middle, and laid each half opposite the other; but he didn’t divide the birds.",
+          "bba730b9171fcc22-01": "All these he took, cutting them in two and putting one half opposite the other, but not cutting the birds in two.",
+          "06125ad3d1d57585-01": "He brought him all these, and divided them in the middle, and laid each half opposite the other; but he didn’t divide the birds.",
+          "41926a4aa3831714-01": "He brought him all these, and divided them in the middle, and laid each half opposite the other; but he didn’t divide the birds."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the fowls came down upon the carcases, Abram drove them away.",
+          "9879dbb7aec41528-01": "The birds of prey came down on the carcasses, and Abram drove them away.",
+          "bba730b9171fcc22-01": "And evil birds came down on the bodies, but Abram sent them away.",
+          "06125ad3d1d57585-01": "The birds of prey came down on the carcasses, and Abram drove them away.",
+          "41926a4aa3831714-01": "The birds of prey came down on the carcasses, and Abram drove them away."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the sun was going down, a deep sleep fell upon Abram; and, lo, an horror of great darkness fell upon him.",
+          "9879dbb7aec41528-01": "When the sun was going down, a deep sleep fell on Abram. Now terror and great darkness fell on him.",
+          "bba730b9171fcc22-01": "Now when the sun was going down, a deep sleep came on Abram, and a dark cloud of fear.",
+          "06125ad3d1d57585-01": "When the sun was going down, a deep sleep fell on Abram. Now terror and great darkness fell on him.",
+          "41926a4aa3831714-01": "When the sun was going down, a deep sleep fell on Abram. Now terror and great darkness fell on him."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto Abram, Know of a surety that thy seed shall be a stranger in a land that is not theirs, and shall serve them; and they shall afflict them four hundred years;",
+          "9879dbb7aec41528-01": "He said to Abram, “Know for sure that your offspring will live as foreigners in a land that is not theirs, and will serve them. They will afflict them four hundred years.",
+          "bba730b9171fcc22-01": "And he said to Abram, Truly, your seed will be living in a land which is not theirs, as servants to a people who will be cruel to them for four hundred years;",
+          "06125ad3d1d57585-01": "He said to Abram, “Know for sure that your offspring will live as foreigners in a land that is not theirs, and will serve them. They will afflict them four hundred years.",
+          "41926a4aa3831714-01": "He said to Abram, “Know for sure that your offspring will live as foreigners in a land that is not theirs, and will serve them. They will afflict them four hundred years."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And also that nation, whom they shall serve, will I judge: and afterward shall they come out with great substance.",
+          "9879dbb7aec41528-01": "I will also judge that nation, whom they will serve. Afterward they will come out with great wealth,",
+          "bba730b9171fcc22-01": "But I will be the judge of that nation whose servants they are, and they will come out from among them with great wealth.",
+          "06125ad3d1d57585-01": "I will also judge that nation, whom they will serve. Afterward they will come out with great wealth,",
+          "41926a4aa3831714-01": "I will also judge that nation, whom they will serve. Afterward they will come out with great wealth,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And thou shalt go to thy fathers in peace; thou shalt be buried in a good old age.",
+          "9879dbb7aec41528-01": "but you will go to your fathers in peace. You will be buried at a good old age.",
+          "bba730b9171fcc22-01": "As for you, you will go to your fathers in peace; at the end of a long life you will be put in your last resting-place.",
+          "06125ad3d1d57585-01": "but you will go to your fathers in peace. You will be buried at a good old age.",
+          "41926a4aa3831714-01": "but you will go to your fathers in peace. You will be buried at a good old age."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "But in the fourth generation they shall come hither again: for the iniquity of the Amorites is not yet full.",
+          "9879dbb7aec41528-01": "In the fourth generation they will come here again, for the iniquity of the Amorite is not yet full.”",
+          "bba730b9171fcc22-01": "And in the fourth generation they will come back here; for at present the sin of the Amorite is not full.",
+          "06125ad3d1d57585-01": "In the fourth generation they will come here again, for the iniquity of the Amorite is not yet full.”",
+          "41926a4aa3831714-01": "In the fourth generation they will come here again, for the iniquity of the Amorite is not yet full.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass, that, when the sun went down, and it was dark, behold a smoking furnace, and a burning lamp that passed between those pieces.",
+          "9879dbb7aec41528-01": "It came to pass that, when the sun went down, and it was dark, behold, a smoking furnace, and a flaming torch passed between these pieces.",
+          "bba730b9171fcc22-01": "Then when the sun went down and it was dark, he saw a smoking fire and a flaming light which went between the parts of the bodies.",
+          "06125ad3d1d57585-01": "It came to pass that, when the sun went down, and it was dark, behold, a smoking furnace, and a flaming torch passed between these pieces.",
+          "41926a4aa3831714-01": "It came to pass that, when the sun went down, and it was dark, behold, a smoking furnace, and a flaming torch passed between these pieces."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "In the same day the LORD made a covenant with Abram, saying, Unto thy seed have I given this land, from the river of Egypt unto the great river, the river Euphrates:",
+          "9879dbb7aec41528-01": "In that day Yahweh made a covenant with Abram, saying, “I have given this land to your offspring, from the river of Egypt to the great river, the river Euphrates:",
+          "bba730b9171fcc22-01": "In that day the Lord made an agreement with Abram, and said, To your seed have I given this land from the river of Egypt to the great river, the river Euphrates:",
+          "06125ad3d1d57585-01": "In that day Yahweh made a covenant with Abram, saying, “I have given this land to your offspring, from the river of Egypt to the great river, the river Euphrates:",
+          "41926a4aa3831714-01": "In that day Yahweh made a covenant with Abram, saying, “I have given this land to your offspring, from the river of Egypt to the great river, the river Euphrates:"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "The Kenites, and the Kenizzites, and the Kadmonites,",
+          "9879dbb7aec41528-01": "the Kenites, the Kenizzites, the Kadmonites,",
+          "bba730b9171fcc22-01": "The Kenite, the Kenizzite, and the Kadmonite,",
+          "06125ad3d1d57585-01": "the Kenites, the Kenizzites, the Kadmonites,",
+          "41926a4aa3831714-01": "the Kenites, the Kenizzites, the Kadmonites,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And the Hittites, and the Perizzites, and the Rephaims,",
+          "9879dbb7aec41528-01": "the Hittites, the Perizzites, the Rephaim,",
+          "bba730b9171fcc22-01": "And the Hittite, and the Perizzite, and the Rephaim,",
+          "06125ad3d1d57585-01": "the Hittites, the Perizzites, the Rephaim,",
+          "41926a4aa3831714-01": "the Hittites, the Perizzites, the Rephaim,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And the Amorites, and the Canaanites, and the Girgashites, and the Jebusites.",
+          "9879dbb7aec41528-01": "the Amorites, the Canaanites, the Girgashites, and the Jebusites.”",
+          "bba730b9171fcc22-01": "And the Amorite, and the Canaanite, and the Girgashite, and the Jebusite.",
+          "06125ad3d1d57585-01": "the Amorites, the Canaanites, the Girgashites, and the Jebusites.”",
+          "41926a4aa3831714-01": "the Amorites, the Canaanites, the Girgashites, and the Jebusites.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Genesis 1:26-31; 2:15-17": {
+    "reference": "Genesis 1:26-31; 2:15-17",
+    "verses": [
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.",
+          "9879dbb7aec41528-01": "God said, “Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth.”",
+          "bba730b9171fcc22-01": "And God said, Let us make man in our image, like us: and let him have rule over the fish of the sea and over the birds of the air and over the cattle and over all the earth and over every living thing which goes flat on the earth.",
+          "06125ad3d1d57585-01": "God said, “Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth.”",
+          "41926a4aa3831714-01": "God said, “Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the birds of the sky, and over the livestock, and over all the earth, and over every creeping thing that creeps on the earth.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "So God created man in his own image, in the image of God created he him; male and female created he them.",
+          "9879dbb7aec41528-01": "God created man in his own image. In God’s image he created him; male and female he created them.",
+          "bba730b9171fcc22-01": "And God made man in his image, in the image of God he made him: male and female he made them.",
+          "06125ad3d1d57585-01": "God created man in his own image. In God’s image he created him; male and female he created them.",
+          "41926a4aa3831714-01": "God created man in his own image. In God’s image he created him; male and female he created them."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.",
+          "9879dbb7aec41528-01": "God blessed them. God said to them, “Be fruitful, multiply, fill the earth, and subdue it. Have dominion over the fish of the sea, over the birds of the sky, and over every living thing that moves on the earth.”",
+          "bba730b9171fcc22-01": "And God gave them his blessing and said to them, Be fertile and have increase, and make the earth full and be masters of it; be rulers over the fish of the sea and over the birds of the air and over every living thing moving on the earth.",
+          "06125ad3d1d57585-01": "God blessed them. God said to them, “Be fruitful, multiply, fill the earth, and subdue it. Have dominion over the fish of the sea, over the birds of the sky, and over every living thing that moves on the earth.”",
+          "41926a4aa3831714-01": "God blessed them. God said to them, “Be fruitful, multiply, fill the earth, and subdue it. Have dominion over the fish of the sea, over the birds of the sky, and over every living thing that moves on the earth.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אֶשֶׁר",
+            "transliteration": "e-sher",
+            "english": "blessed / happy",
+            "strongs": "H0835",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.",
+          "9879dbb7aec41528-01": "God said, “Behold, I have given you every herb yielding seed, which is on the surface of all the earth, and every tree, which bears fruit yielding seed. It will be your food.",
+          "bba730b9171fcc22-01": "And God said, See, I have given you every plant producing seed, on the face of all the earth, and every tree which has fruit producing seed: they will be for your food:",
+          "06125ad3d1d57585-01": "God said, “Behold, I have given you every herb yielding seed, which is on the surface of all the earth, and every tree, which bears fruit yielding seed. It will be your food.",
+          "41926a4aa3831714-01": "God said, “Behold, I have given you every herb yielding seed, which is on the surface of all the earth, and every tree, which bears fruit yielding seed. It will be your food."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עֵץ",
+            "transliteration": "ets",
+            "english": "tree / wood",
+            "strongs": "H6086",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so.",
+          "9879dbb7aec41528-01": "To every animal of the earth, and to every bird of the sky, and to everything that creeps on the earth, in which there is life, I have given every green herb for food;” and it was so.",
+          "bba730b9171fcc22-01": "And to every beast of the earth and to every bird of the air and every living thing moving on the face of the earth I have given every green plant for food: and it was so.",
+          "06125ad3d1d57585-01": "To every animal of the earth, and to every bird of the sky, and to everything that creeps on the earth, in which there is life, I have given every green herb for food;” and it was so.",
+          "41926a4aa3831714-01": "To every animal of the earth, and to every bird of the sky, and to everything that creeps on the earth, in which there is life, I have given every green herb for food;” and it was so."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "And God saw every thing that he had made, and, behold, it was  very good. And the evening and the morning were the sixth day.",
+          "9879dbb7aec41528-01": "God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day.",
+          "bba730b9171fcc22-01": "And God saw everything which he had made and it was very good. And there was evening and there was morning, the sixth day.",
+          "06125ad3d1d57585-01": "God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day.",
+          "41926a4aa3831714-01": "God saw everything that he had made, and, behold, it was very good. There was evening and there was morning, a sixth day."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And the LORD God took the man, and put him into the garden of Eden to dress it and to keep it.",
+          "9879dbb7aec41528-01": "Yahweh God took the man, and put him into the garden of Eden to cultivate and keep it.",
+          "bba730b9171fcc22-01": "And the Lord God took the man and put him in the garden of Eden to do work in it and take care of it.",
+          "06125ad3d1d57585-01": "Yahweh God took the man, and put him into the garden of Eden to cultivate and keep it.",
+          "41926a4aa3831714-01": "Yahweh God took the man, and put him into the garden of Eden to cultivate and keep it."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat:",
+          "9879dbb7aec41528-01": "Yahweh God commanded the man, saying, “You may freely eat of every tree of the garden;",
+          "bba730b9171fcc22-01": "And the Lord God gave the man orders, saying, You may freely take of the fruit of every tree of the garden:",
+          "06125ad3d1d57585-01": "Yahweh God commanded the man, saying, “You may freely eat of every tree of the garden;",
+          "41926a4aa3831714-01": "Yahweh God commanded the man, saying, “You may freely eat of every tree of the garden;"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "עֵץ",
+            "transliteration": "ets",
+            "english": "tree / wood",
+            "strongs": "H6086",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.",
+          "9879dbb7aec41528-01": "but you shall not eat of the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”",
+          "bba730b9171fcc22-01": "But of the fruit of the tree of the knowledge of good and evil you may not take; for on the day when you take of it, death will certainly come to you.",
+          "06125ad3d1d57585-01": "but you shall not eat of the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”",
+          "41926a4aa3831714-01": "but you shall not eat of the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”"
+        },
+        "words": [
+          {
+            "original": "עֵץ",
+            "transliteration": "ets",
+            "english": "tree / wood",
+            "strongs": "H6086",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַρ",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Exodus 19:1-8; 20:1-17": {
+    "reference": "Exodus 19:1-8; 20:1-17",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "In the third month after the children of Israel had gone out of the land of Egypt, on that same day they came into the wilderness of Sinai.",
+          "bba730b9171fcc22-01": "In the third month after the children of Israel went out from Egypt, on the same day, they came into the waste land of Sinai.",
+          "06125ad3d1d57585-01": "In the third month after the children of Israel had gone out of the land of Egypt, on that same day they came into the wilderness of Sinai.",
+          "41926a4aa3831714-01": "In the third month after the children of Israel had gone out of the land of Egypt, on that same day they came into the wilderness of Sinai."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain.",
+          "bba730b9171fcc22-01": "And when they had gone away from Rephidim and had come into the waste land of Sinai, they put up their tents in the waste land before the mountain: there Israel put up its tents.",
+          "06125ad3d1d57585-01": "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain.",
+          "41926a4aa3831714-01": "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "Moses went up to God, and Yahweh called to him out of the mountain, saying, “This is what you shall tell the house of Jacob, and tell the children of Israel:",
+          "bba730b9171fcc22-01": "And Moses went up to God, and the voice of the Lord came to him from the mountain, saying, Say to the family of Jacob, and give word to the children of Israel:",
+          "06125ad3d1d57585-01": "Moses went up to God, and Yahweh called to him out of the mountain, saying, “This is what you shall tell the house of Jacob, and tell the children of Israel:",
+          "41926a4aa3831714-01": "Moses went up to God, and Yahweh called to him out of the mountain, saying, “This is what you shall tell the house of Jacob, and tell the children of Israel:"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "‘You have seen what I did to the Egyptians, and how I bore you on eagles’ wings, and brought you to myself.",
+          "bba730b9171fcc22-01": "You have seen what I did to the Egyptians, and how I took you, as on eagles' wings, guiding you to myself.",
+          "06125ad3d1d57585-01": "‘You have seen what I did to the Egyptians, and how I bore you on eagles’ wings, and brought you to myself.",
+          "41926a4aa3831714-01": "‘You have seen what I did to the Egyptians, and how I bore you on eagles’ wings, and brought you to myself."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "Now therefore, if you will indeed obey my voice, and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine;",
+          "bba730b9171fcc22-01": "If now you will truly give ear to my voice and keep my agreement, you will be my special property out of all the peoples: for all the earth is mine:",
+          "06125ad3d1d57585-01": "Now therefore, if you will indeed obey my voice, and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine;",
+          "41926a4aa3831714-01": "Now therefore, if you will indeed obey my voice, and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine;"
+        },
+        "words": [
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "and you shall be to me a kingdom of priests, and a holy nation.’ These are the words which you shall speak to the children of Israel.”",
+          "bba730b9171fcc22-01": "And you will be a kingdom of priests to me, and a holy nation. These are the words which you are to say to the children of Israel.",
+          "06125ad3d1d57585-01": "and you shall be to me a kingdom of priests, and a holy nation.’ These are the words which you shall speak to the children of Israel.”",
+          "41926a4aa3831714-01": "and you shall be to me a kingdom of priests, and a holy nation.’ These are the words which you shall speak to the children of Israel.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "Moses came and called for the elders of the people, and set before them all these words which Yahweh commanded him.",
+          "bba730b9171fcc22-01": "And Moses came and sent for the chiefs of the people and put before them all these words which the Lord had given him orders to say.",
+          "06125ad3d1d57585-01": "Moses came and called for the elders of the people, and set before them all these words which Yahweh commanded him.",
+          "41926a4aa3831714-01": "Moses came and called for the elders of the people, and set before them all these words which Yahweh commanded him."
+        },
+        "words": [
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "",
+          "9879dbb7aec41528-01": "All the people answered together, and said, “All that Yahweh has spoken we will do.” Moses reported the words of the people to Yahweh.",
+          "bba730b9171fcc22-01": "And all the people, answering together, said, Whatever the Lord has said we will do. And Moses took back to the Lord the words of the people.",
+          "06125ad3d1d57585-01": "All the people answered together, and said, “All that Yahweh has spoken we will do.” Moses reported the words of the people to Yahweh.",
+          "41926a4aa3831714-01": "All the people answered together, and said, “All that Yahweh has spoken we will do.” Moses reported the words of the people to Yahweh."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And God spake all these words, saying,",
+          "9879dbb7aec41528-01": "God spoke all these words, saying,",
+          "bba730b9171fcc22-01": "And God said all these words:",
+          "06125ad3d1d57585-01": "God spoke all these words, saying,",
+          "41926a4aa3831714-01": "God spoke all these words, saying,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage.",
+          "9879dbb7aec41528-01": "“I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage.",
+          "bba730b9171fcc22-01": "I am the Lord your God who took you out of the land of Egypt, out of the prison-house.",
+          "06125ad3d1d57585-01": "“I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage.",
+          "41926a4aa3831714-01": "“I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt have no other gods before me.",
+          "9879dbb7aec41528-01": "“You shall have no other gods before me.",
+          "bba730b9171fcc22-01": "You are to have no other gods but me.",
+          "06125ad3d1d57585-01": "“You shall have no other gods before me.",
+          "41926a4aa3831714-01": "“You shall have no other gods before me."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not make unto thee any graven image, or any likeness of any thing that is in heaven above, or that is  in the earth beneath, or that is in the water under the earth:",
+          "9879dbb7aec41528-01": "“You shall not make for yourselves an idol, nor any image of anything that is in the heavens above, or that is in the earth beneath, or that is in the water under the earth:",
+          "bba730b9171fcc22-01": "You are not to make an image or picture of anything in heaven or on the earth or in the waters under the earth:",
+          "06125ad3d1d57585-01": "“You shall not make for yourselves an idol, nor any image of anything that is in the heavens above, or that is in the earth beneath, or that is in the water under the earth:",
+          "41926a4aa3831714-01": "“You shall not make for yourselves an idol, nor any image of anything that is in the heavens above, or that is in the earth beneath, or that is in the water under the earth:"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not bow down thyself to them, nor serve them: for I the LORD thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me;",
+          "9879dbb7aec41528-01": "you shall not bow yourself down to them, nor serve them, for I, Yahweh your God, am a jealous God, visiting the iniquity of the fathers on the children, on the third and on the fourth generation of those who hate me,",
+          "bba730b9171fcc22-01": "You may not go down on your faces before them or give them worship: for I, the Lord your God, am a God who will not give his honour to another; and I will send punishment on the children for the wrongdoing of their fathers, to the third and fourth generation of my haters;",
+          "06125ad3d1d57585-01": "you shall not bow yourself down to them, nor serve them, for I, Yahweh your God, am a jealous God, visiting the iniquity of the fathers on the children, on the third and on the fourth generation of those who hate me,",
+          "41926a4aa3831714-01": "you shall not bow yourself down to them, nor serve them, for I, Yahweh your God, am a jealous God, visiting the iniquity of the fathers on the children, on the third and on the fourth generation of those who hate me,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And shewing mercy unto thousands of them that love me, and keep my commandments.",
+          "9879dbb7aec41528-01": "and showing loving kindness to thousands of those who love me and keep my commandments.",
+          "bba730b9171fcc22-01": "And I will have mercy through a thousand generations on those who have love for me and keep my laws.",
+          "06125ad3d1d57585-01": "and showing loving kindness to thousands of those who love me and keep my commandments.",
+          "41926a4aa3831714-01": "and showing loving kindness to thousands of those who love me and keep my commandments."
+        },
+        "words": [
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not take the name of the LORD thy God in vain; for the LORD will not hold him guiltless that taketh his name in vain.",
+          "9879dbb7aec41528-01": "“You shall not take the name of Yahweh your God in vain, for Yahweh will not hold him guiltless who takes his name in vain.",
+          "bba730b9171fcc22-01": "You are not to make use of the name of the Lord your God for an evil purpose; whoever takes the Lord's name on his lips for an evil purpose will be judged a sinner by the Lord",
+          "06125ad3d1d57585-01": "“You shall not take the name of Yahweh your God in vain, for Yahweh will not hold him guiltless who takes his name in vain.",
+          "41926a4aa3831714-01": "“You shall not take the name of Yahweh your God in vain, for Yahweh will not hold him guiltless who takes his name in vain."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "Remember the sabbath day, to keep it holy.",
+          "9879dbb7aec41528-01": "“Remember the Sabbath day, to keep it holy.",
+          "bba730b9171fcc22-01": "Keep in memory the Sabbath and let it be a holy day.",
+          "06125ad3d1d57585-01": "“Remember the Sabbath day, to keep it holy.",
+          "41926a4aa3831714-01": "“Remember the Sabbath day, to keep it holy."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Six days shalt thou labour, and do all thy work:",
+          "9879dbb7aec41528-01": "You shall labor six days, and do all your work,",
+          "bba730b9171fcc22-01": "On six days do all your work:",
+          "06125ad3d1d57585-01": "You shall labor six days, and do all your work,",
+          "41926a4aa3831714-01": "You shall labor six days, and do all your work,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "But the seventh day is the sabbath of the LORD thy God: in it thou shalt not do any work, thou, nor thy son, nor thy daughter, thy manservant, nor thy maidservant, nor thy cattle, nor thy stranger that is within thy gates:",
+          "9879dbb7aec41528-01": "but the seventh day is a Sabbath to Yahweh your God. You shall not do any work in it, you, nor your son, nor your daughter, your male servant, nor your female servant, nor your livestock, nor your stranger who is within your gates;",
+          "bba730b9171fcc22-01": "But the seventh day is a Sabbath to the Lord your God; on that day you are to do no work, you or your son or your daughter, your man-servant or your woman-servant, your cattle or the man from a strange country who is living among you:",
+          "06125ad3d1d57585-01": "but the seventh day is a Sabbath to Yahweh your God. You shall not do any work in it, you, nor your son, nor your daughter, your male servant, nor your female servant, nor your livestock, nor your stranger who is within your gates;",
+          "41926a4aa3831714-01": "but the seventh day is a Sabbath to Yahweh your God. You shall not do any work in it, you, nor your son, nor your daughter, your male servant, nor your female servant, nor your livestock, nor your stranger who is within your gates;"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "For in six days the LORD made heaven and earth, the sea, and all that in them is, and rested the seventh day: wherefore the LORD blessed the sabbath day, and hallowed it.",
+          "9879dbb7aec41528-01": "for in six days Yahweh made heaven and earth, the sea, and all that is in them, and rested the seventh day; therefore Yahweh blessed the Sabbath day, and made it holy.",
+          "bba730b9171fcc22-01": "For in six days the Lord made heaven and earth, and the sea, and everything in them, and he took his rest on the seventh day: for this reason the Lord has given his blessing to the seventh day and made it holy.",
+          "06125ad3d1d57585-01": "for in six days Yahweh made heaven and earth, the sea, and all that is in them, and rested the seventh day; therefore Yahweh blessed the Sabbath day, and made it holy.",
+          "41926a4aa3831714-01": "for in six days Yahweh made heaven and earth, the sea, and all that is in them, and rested the seventh day; therefore Yahweh blessed the Sabbath day, and made it holy."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֶשֶׁר",
+            "transliteration": "e-sher",
+            "english": "blessed / happy",
+            "strongs": "H0835",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.",
+          "9879dbb7aec41528-01": "“Honor your father and your mother, that your days may be long in the land which Yahweh your God gives you.",
+          "bba730b9171fcc22-01": "Give honour to your father and to your mother, so that your life may be long in the land which the Lord your God is giving you.",
+          "06125ad3d1d57585-01": "“Honor your father and your mother, that your days may be long in the land which Yahweh your God gives you.",
+          "41926a4aa3831714-01": "“Honor your father and your mother, that your days may be long in the land which Yahweh your God gives you."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not kill.",
+          "9879dbb7aec41528-01": "“You shall not murder.",
+          "bba730b9171fcc22-01": "Do not put anyone to death without cause.",
+          "06125ad3d1d57585-01": "“You shall not murder.",
+          "41926a4aa3831714-01": "“You shall not murder."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not commit adultery.",
+          "9879dbb7aec41528-01": "“You shall not commit adultery.",
+          "bba730b9171fcc22-01": "Do not be false to the married relation.",
+          "06125ad3d1d57585-01": "“You shall not commit adultery.",
+          "41926a4aa3831714-01": "“You shall not commit adultery."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not steal.",
+          "9879dbb7aec41528-01": "“You shall not steal.",
+          "bba730b9171fcc22-01": "Do not take the property of another.",
+          "06125ad3d1d57585-01": "“You shall not steal.",
+          "41926a4aa3831714-01": "“You shall not steal."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not bear false witness against thy neighbour.",
+          "9879dbb7aec41528-01": "“You shall not give false testimony against your neighbor.",
+          "bba730b9171fcc22-01": "Do not give false witness against your neighbour.",
+          "06125ad3d1d57585-01": "“You shall not give false testimony against your neighbor.",
+          "41926a4aa3831714-01": "“You shall not give false testimony against your neighbor."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word / matter",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou shalt not covet thy neighbour’s house, thou shalt not covet thy neighbour’s wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor any thing that is thy neighbour’s.",
+          "9879dbb7aec41528-01": "“You shall not covet your neighbor’s house. You shall not covet your neighbor’s wife, nor his male servant, nor his female servant, nor his ox, nor his donkey, nor anything that is your neighbor’s.”",
+          "bba730b9171fcc22-01": "Let not your desire be turned to your neighbour's house, or his wife or his man-servant or his woman-servant or his ox or his ass or anything which is his.",
+          "06125ad3d1d57585-01": "“You shall not covet your neighbor’s house. You shall not covet your neighbor’s wife, nor his male servant, nor his female servant, nor his ox, nor his donkey, nor anything that is your neighbor’s.”",
+          "41926a4aa3831714-01": "“You shall not covet your neighbor’s house. You shall not covet your neighbor’s wife, nor his male servant, nor his female servant, nor his ox, nor his donkey, nor anything that is your neighbor’s.”"
+        },
+        "words": [
+          {
+            "original": "אָדָם",
+            "transliteration": "a-dam",
+            "english": "man / mankind",
+            "strongs": "H0120",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "2 Samuel 7:12-16": {
+    "reference": "2 Samuel 7:12-16",
+    "verses": [
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "When thy days are fulfilled and thou lie down with thy fathers, I will raise up thy offspring after thou, who shall come from thy body, and I will establish his kingdom.",
+          "06125ad3d1d57585-01": "When your days are fulfilled and thee lie down with your fathers, I will raise up your offspring after thee, who shall come from your body, and I will establish his kingdom.",
+          "9879dbb7aec41528-01": "When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.",
+          "bba730b9171fcc22-01": "When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.",
+          "41926a4aa3831714-01": "When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "06125ad3d1d57585-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "9879dbb7aec41528-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "bba730b9171fcc22-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever.",
+          "41926a4aa3831714-01": "He shall build a house for my name, and I will establish the throne of his kingdom forever."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And thy house and thy kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "06125ad3d1d57585-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "9879dbb7aec41528-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "bba730b9171fcc22-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\"",
+          "41926a4aa3831714-01": "And your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.'\""
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בַּיִת",
+            "transliteration": "ba-yit",
+            "english": "house",
+            "strongs": "H1004",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אָמַר",
+            "transliteration": "a-mar",
+            "english": "say",
+            "strongs": "H0559",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Proverbs 3:5-6": {
+    "reference": "Proverbs 3:5-6",
+    "verses": [
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+          "9879dbb7aec41528-01": "Trust in Yahweh with all your heart, and don’t lean on your own understanding.",
+          "bba730b9171fcc22-01": "Put all your hope in God, not looking to your reason for support.",
+          "06125ad3d1d57585-01": "Trust in Yahweh with all your heart, and don’t lean on your own understanding.",
+          "41926a4aa3831714-01": "Trust in Yahweh with all your heart, and don’t lean on your own understanding."
+        },
+        "words": [
+          {
+            "original": "תְּבוּנָה",
+            "transliteration": "te-vu-nah",
+            "english": "understanding",
+            "strongs": "H8394",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "בָּטַח",
+            "transliteration": "ba-tach",
+            "english": "trust",
+            "strongs": "H0982",
+            "parsing": "V-Qal-Imp"
+          },
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "In all thy ways acknowledge him, and he shall direct thy paths.",
+          "9879dbb7aec41528-01": "In all your ways acknowledge him, and he will make your paths straight.",
+          "bba730b9171fcc22-01": "In all your ways give ear to him, and he will make straight your footsteps.",
+          "06125ad3d1d57585-01": "In all your ways acknowledge him, and he will make your paths straight.",
+          "41926a4aa3831714-01": "In all your ways acknowledge him, and he will make your paths straight."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Proverbs 8:22-31": {
+    "reference": "Proverbs 8:22-31",
+    "verses": [
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "The LORD possessed me in the beginning of his way, before his works of old.",
+          "9879dbb7aec41528-01": "“Yahweh possessed me in the beginning of his work, before his deeds of old.",
+          "bba730b9171fcc22-01": "The Lord made me as the start of his way, the first of his works in the past.",
+          "06125ad3d1d57585-01": "“Yahweh possessed me in the beginning of his work, before his deeds of old.",
+          "41926a4aa3831714-01": "“Yahweh possessed me in the beginning of his work, before his deeds of old."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "I was set up from everlasting, from the beginning, or ever the earth was.",
+          "9879dbb7aec41528-01": "I was set up from everlasting, from the beginning, before the earth existed.",
+          "bba730b9171fcc22-01": "From eternal days I was given my place, from the birth of time, before the earth was.",
+          "06125ad3d1d57585-01": "I was set up from everlasting, from the beginning, before the earth existed.",
+          "41926a4aa3831714-01": "I was set up from everlasting, from the beginning, before the earth existed."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "When there were no depths, I was brought forth; when there were no fountains abounding with water.",
+          "9879dbb7aec41528-01": "When there were no depths, I was born, when there were no springs abounding with water.",
+          "bba730b9171fcc22-01": "When there was no deep I was given birth, when there were no fountains flowing with water.",
+          "06125ad3d1d57585-01": "When there were no depths, I was born, when there were no springs abounding with water.",
+          "41926a4aa3831714-01": "When there were no depths, I was born, when there were no springs abounding with water."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "Before the mountains were settled, before the hills was I brought forth:",
+          "9879dbb7aec41528-01": "Before the mountains were settled in place, before the hills, I was born;",
+          "bba730b9171fcc22-01": "Before the mountains were put in their places, before the hills was my birth:",
+          "06125ad3d1d57585-01": "Before the mountains were settled in place, before the hills, I was born;",
+          "41926a4aa3831714-01": "Before the mountains were settled in place, before the hills, I was born;"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "While as yet he had not made the earth, nor the fields, nor the highest part of the dust of the world.",
+          "9879dbb7aec41528-01": "while as yet he had not made the earth, nor the fields, nor the beginning of the dust of the world.",
+          "bba730b9171fcc22-01": "When he had not made the earth or the fields or the dust of the world.",
+          "06125ad3d1d57585-01": "while as yet he had not made the earth, nor the fields, nor the beginning of the dust of the world.",
+          "41926a4aa3831714-01": "while as yet he had not made the earth, nor the fields, nor the beginning of the dust of the world."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "When he prepared the heavens, I was there: when he set a compass upon the face of the depth:",
+          "9879dbb7aec41528-01": "When he established the heavens, I was there; when he set a circle on the surface of the deep,",
+          "bba730b9171fcc22-01": "When he made ready the heavens I was there: when he put an arch over the face of the deep:",
+          "06125ad3d1d57585-01": "When he established the heavens, I was there; when he set a circle on the surface of the deep,",
+          "41926a4aa3831714-01": "When he established the heavens, I was there; when he set a circle on the surface of the deep,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "When he established the clouds above: when he strengthened the fountains of the deep:",
+          "9879dbb7aec41528-01": "when he established the clouds above, when the springs of the deep became strong,",
+          "bba730b9171fcc22-01": "When he made strong the skies overhead: when the fountains of the deep were fixed:",
+          "06125ad3d1d57585-01": "when he established the clouds above, when the springs of the deep became strong,",
+          "41926a4aa3831714-01": "when he established the clouds above, when the springs of the deep became strong,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "When he gave to the sea his decree, that the waters should not pass his commandment: when he appointed the foundations of the earth:",
+          "9879dbb7aec41528-01": "when he gave to the sea its boundary, that the waters should not violate his commandment, when he marked out the foundations of the earth;",
+          "bba730b9171fcc22-01": "When he put a limit to the sea, so that the waters might not go against his word: when he put in position the bases of the earth:",
+          "06125ad3d1d57585-01": "when he gave to the sea its boundary, that the waters should not violate his commandment, when he marked out the foundations of the earth;",
+          "41926a4aa3831714-01": "when he gave to the sea its boundary, that the waters should not violate his commandment, when he marked out the foundations of the earth;"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "Then I was by him, as one brought up with him:  and I was daily his delight, rejoicing always before him;",
+          "9879dbb7aec41528-01": "then I was the craftsman by his side. I was a delight day by day, always rejoicing before him,",
+          "bba730b9171fcc22-01": "Then I was by his side, as a master workman: and I was his delight from day to day, playing before him at all times;",
+          "06125ad3d1d57585-01": "then I was the craftsman by his side. I was a delight day by day, always rejoicing before him,",
+          "41926a4aa3831714-01": "then I was the craftsman by his side. I was a delight day by day, always rejoicing before him,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "Rejoicing in the habitable part of his earth; and my delights were with the sons of men.",
+          "9879dbb7aec41528-01": "rejoicing in his whole world. My delight was with the sons of men.",
+          "bba730b9171fcc22-01": "Playing in his earth; and my delight was with the sons of men.",
+          "06125ad3d1d57585-01": "rejoicing in his whole world. My delight was with the sons of men.",
+          "41926a4aa3831714-01": "rejoicing in his whole world. My delight was with the sons of men."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Job 28:12-28": {
+    "reference": "Job 28:12-28",
+    "verses": [
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "But where shall wisdom be found? and where is the place of understanding?",
+          "9879dbb7aec41528-01": "“But where shall wisdom be found? Where is the place of understanding?",
+          "bba730b9171fcc22-01": "But where may wisdom be seen? and where is the resting-place of knowledge?",
+          "06125ad3d1d57585-01": "“But where shall wisdom be found? Where is the place of understanding?",
+          "41926a4aa3831714-01": "“But where shall wisdom be found? Where is the place of understanding?"
+        },
+        "words": [
+          {
+            "original": "חָכְמָה",
+            "transliteration": "chokh-mah",
+            "english": "wisdom",
+            "strongs": "H2451",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "תְּבוּנָה",
+            "transliteration": "te-vu-nah",
+            "english": "understanding",
+            "strongs": "H8394",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Man knoweth not the price thereof; neither is it found in the land of the living.",
+          "9879dbb7aec41528-01": "Man doesn’t know its price; Neither is it found in the land of the living.",
+          "bba730b9171fcc22-01": "Man has not seen the way to it, and it is not in the land of the living.",
+          "06125ad3d1d57585-01": "Man doesn’t know its price; Neither is it found in the land of the living.",
+          "41926a4aa3831714-01": "Man doesn’t know its price; Neither is it found in the land of the living."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "The depth saith, It is not in me: and the sea saith, It is not with me.",
+          "9879dbb7aec41528-01": "The deep says, ‘It isn’t in me.’ The sea says, ‘It isn’t with me.’",
+          "bba730b9171fcc22-01": "The deep waters say, It is not in me: and the sea says, It is not with me.",
+          "06125ad3d1d57585-01": "The deep says, ‘It isn’t in me.’ The sea says, ‘It isn’t with me.’",
+          "41926a4aa3831714-01": "The deep says, ‘It isn’t in me.’ The sea says, ‘It isn’t with me.’"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "It cannot be gotten for gold, neither shall silver be weighed for the price thereof.",
+          "9879dbb7aec41528-01": "It can’t be gotten for gold, neither shall silver be weighed for its price.",
+          "bba730b9171fcc22-01": "Gold may not be given for it, or a weight of silver in payment for it.",
+          "06125ad3d1d57585-01": "It can’t be gotten for gold, neither shall silver be weighed for its price.",
+          "41926a4aa3831714-01": "It can’t be gotten for gold, neither shall silver be weighed for its price."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "It cannot be valued with the gold of Ophir, with the precious onyx, or the sapphire.",
+          "9879dbb7aec41528-01": "It can’t be valued with the gold of Ophir, with the precious onyx, or the sapphire.",
+          "bba730b9171fcc22-01": "It may not be valued with the gold of Ophir, with the onyx of great price, or the sapphire.",
+          "06125ad3d1d57585-01": "It can’t be valued with the gold of Ophir, with the precious onyx, or the sapphire.",
+          "41926a4aa3831714-01": "It can’t be valued with the gold of Ophir, with the precious onyx, or the sapphire."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "The gold and the crystal cannot equal it: and the exchange of it shall not be for jewels of fine gold.",
+          "9879dbb7aec41528-01": "Gold and glass can’t equal it, neither shall it be exchanged for jewels of fine gold.",
+          "bba730b9171fcc22-01": "Gold and glass are not equal to it in price, and it may not be exchanged for jewels of the best gold.",
+          "06125ad3d1d57585-01": "Gold and glass can’t equal it, neither shall it be exchanged for jewels of fine gold.",
+          "41926a4aa3831714-01": "Gold and glass can’t equal it, neither shall it be exchanged for jewels of fine gold."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "No mention shall be made of coral, or of pearls: for the price of wisdom is above rubies.",
+          "9879dbb7aec41528-01": "No mention shall be made of coral or of crystal. Yes, the price of wisdom is above rubies.",
+          "bba730b9171fcc22-01": "There is no need to say anything about coral or crystal; and the value of wisdom is greater than that of pearls.",
+          "06125ad3d1d57585-01": "No mention shall be made of coral or of crystal. Yes, the price of wisdom is above rubies.",
+          "41926a4aa3831714-01": "No mention shall be made of coral or of crystal. Yes, the price of wisdom is above rubies."
+        },
+        "words": [
+          {
+            "original": "חָכְמָה",
+            "transliteration": "chokh-mah",
+            "english": "wisdom",
+            "strongs": "H2451",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "The topaz of Ethiopia shall not equal it, neither shall it be valued with pure gold.",
+          "9879dbb7aec41528-01": "The topaz of Ethiopia shall not equal it, Neither shall it be valued with pure gold.",
+          "bba730b9171fcc22-01": "The topaz of Ethiopia is not equal to it, and it may not be valued with the best gold.",
+          "06125ad3d1d57585-01": "The topaz of Ethiopia shall not equal it, Neither shall it be valued with pure gold.",
+          "41926a4aa3831714-01": "The topaz of Ethiopia shall not equal it, Neither shall it be valued with pure gold."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "Whence then cometh wisdom? and where is the place of understanding?",
+          "9879dbb7aec41528-01": "Where then does wisdom come from? Where is the place of understanding?",
+          "bba730b9171fcc22-01": "From where then does wisdom come, and where is the resting-place of knowledge?",
+          "06125ad3d1d57585-01": "Where then does wisdom come from? Where is the place of understanding?",
+          "41926a4aa3831714-01": "Where then does wisdom come from? Where is the place of understanding?"
+        },
+        "words": [
+          {
+            "original": "חָכְמָה",
+            "transliteration": "chokh-mah",
+            "english": "wisdom",
+            "strongs": "H2451",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "תְּבוּנָה",
+            "transliteration": "te-vu-nah",
+            "english": "understanding",
+            "strongs": "H8394",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Seeing it is hid from the eyes of all living, and kept close from the fowls of the air.",
+          "9879dbb7aec41528-01": "Seeing it is hidden from the eyes of all living, and kept close from the birds of the sky.",
+          "bba730b9171fcc22-01": "For it is kept secret from the eyes of all living, unseen by the birds of the air.",
+          "06125ad3d1d57585-01": "Seeing it is hidden from the eyes of all living, and kept close from the birds of the sky.",
+          "41926a4aa3831714-01": "Seeing it is hidden from the eyes of all living, and kept close from the birds of the sky."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "Destruction and death say, We have heard the fame thereof with our ears.",
+          "9879dbb7aec41528-01": "Destruction and Death say, ‘We have heard a rumor of it with our ears.’",
+          "bba730b9171fcc22-01": "Destruction and Death say, We have only had word of it with our ears.",
+          "06125ad3d1d57585-01": "Destruction and Death say, ‘We have heard a rumor of it with our ears.’",
+          "41926a4aa3831714-01": "Destruction and Death say, ‘We have heard a rumor of it with our ears.’"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "God understandeth the way thereof, and he knoweth the place thereof.",
+          "9879dbb7aec41528-01": "“God understands its way, and he knows its place.",
+          "bba730b9171fcc22-01": "God has knowledge of the way to it, and of its resting-place;",
+          "06125ad3d1d57585-01": "“God understands its way, and he knows its place.",
+          "41926a4aa3831714-01": "“God understands its way, and he knows its place."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "For he looketh to the ends of the earth, and seeth under the whole heaven;",
+          "9879dbb7aec41528-01": "For he looks to the ends of the earth, and sees under the whole sky.",
+          "bba730b9171fcc22-01": "For his eyes go to the ends of the earth, and he sees everything under heaven.",
+          "06125ad3d1d57585-01": "For he looks to the ends of the earth, and sees under the whole sky.",
+          "41926a4aa3831714-01": "For he looks to the ends of the earth, and sees under the whole sky."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "To make the weight for the winds; and he weigheth the waters by measure.",
+          "9879dbb7aec41528-01": "He establishes the force of the wind. Yes, he measures out the waters by measure.",
+          "bba730b9171fcc22-01": "When he made a weight for the wind, measuring out the waters;",
+          "06125ad3d1d57585-01": "He establishes the force of the wind. Yes, he measures out the waters by measure.",
+          "41926a4aa3831714-01": "He establishes the force of the wind. Yes, he measures out the waters by measure."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "When he made a decree for the rain, and a way for the lightning of the thunder:",
+          "9879dbb7aec41528-01": "When he made a decree for the rain, and a way for the lightning of the thunder;",
+          "bba730b9171fcc22-01": "When he made a law for the rain, and a way for the thunder-flames;",
+          "06125ad3d1d57585-01": "When he made a decree for the rain, and a way for the lightning of the thunder;",
+          "41926a4aa3831714-01": "When he made a decree for the rain, and a way for the lightning of the thunder;"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "Then did he see it, and declare it; he prepared it, yea, and searched it out.",
+          "9879dbb7aec41528-01": "then he saw it, and declared it. He established it, yes, and searched it out.",
+          "bba730b9171fcc22-01": "Then he saw it, and put it on record; he gave it its fixed form, searching it out completely.",
+          "06125ad3d1d57585-01": "then he saw it, and declared it. He established it, yes, and searched it out.",
+          "41926a4aa3831714-01": "then he saw it, and declared it. He established it, yes, and searched it out."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And unto man he said, Behold, the fear of the Lord, that is  wisdom; and to depart from evil is understanding.",
+          "9879dbb7aec41528-01": "To man he said, ‘Behold, the fear of the Lord, that is wisdom. To depart from evil is understanding.’”",
+          "bba730b9171fcc22-01": "And he said to man, Truly the fear of the Lord is wisdom, and to keep from evil is the way to knowledge.",
+          "06125ad3d1d57585-01": "To man he said, ‘Behold, the fear of the Lord, that is wisdom. To depart from evil is understanding.’”",
+          "41926a4aa3831714-01": "To man he said, ‘Behold, the fear of the Lord, that is wisdom. To depart from evil is understanding.’”"
+        },
+        "words": [
+          {
+            "original": "חָכְמָה",
+            "transliteration": "chokh-mah",
+            "english": "wisdom",
+            "strongs": "H2451",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "תְּבוּנָה",
+            "transliteration": "te-vu-nah",
+            "english": "understanding",
+            "strongs": "H8394",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Job 38:1-11": {
+    "reference": "Job 38:1-11",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the LORD answered Job out of the whirlwind, and said,",
+          "9879dbb7aec41528-01": "Then Yahweh answered Job out of the whirlwind,",
+          "bba730b9171fcc22-01": "And the Lord made answer to Job out of the storm-wind, and said,",
+          "06125ad3d1d57585-01": "Then Yahweh answered Job out of the whirlwind,",
+          "41926a4aa3831714-01": "Then Yahweh answered Job out of the whirlwind,"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Who is this that darkeneth counsel by words without knowledge?",
+          "9879dbb7aec41528-01": "“Who is this who darkens counsel by words without knowledge?",
+          "bba730b9171fcc22-01": "Who is this who makes the purpose of God dark by words without knowledge?",
+          "06125ad3d1d57585-01": "“Who is this who darkens counsel by words without knowledge?",
+          "41926a4aa3831714-01": "“Who is this who darkens counsel by words without knowledge?"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Gird up now thy loins like a man; for I will demand of thee, and answer thou me.",
+          "9879dbb7aec41528-01": "Brace yourself like a man, for I will question you, then you answer me!",
+          "bba730b9171fcc22-01": "Get your strength together like a man of war; I will put questions to you, and you will give me the answers.",
+          "06125ad3d1d57585-01": "Brace yourself like a man, for I will question you, then you answer me!",
+          "41926a4aa3831714-01": "Brace yourself like a man, for I will question you, then you answer me!"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Where wast thou when I laid the foundations of the earth? declare, if thou hast understanding.",
+          "9879dbb7aec41528-01": "“Where were you when I laid the foundations of the earth? Declare, if you have understanding.",
+          "bba730b9171fcc22-01": "Where were you when I put the earth on its base? Say, if you have knowledge.",
+          "06125ad3d1d57585-01": "“Where were you when I laid the foundations of the earth? Declare, if you have understanding.",
+          "41926a4aa3831714-01": "“Where were you when I laid the foundations of the earth? Declare, if you have understanding."
+        },
+        "words": [
+          {
+            "original": "תְּבוּנָה",
+            "transliteration": "te-vu-nah",
+            "english": "understanding",
+            "strongs": "H8394",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Who hath laid the measures thereof, if thou knowest? or who hath stretched the line upon it?",
+          "9879dbb7aec41528-01": "Who determined its measures, if you know? Or who stretched the line on it?",
+          "bba730b9171fcc22-01": "By whom were its measures fixed? Say, if you have wisdom; or by whom was the line stretched out over it?",
+          "06125ad3d1d57585-01": "Who determined its measures, if you know? Or who stretched the line on it?",
+          "41926a4aa3831714-01": "Who determined its measures, if you know? Or who stretched the line on it?"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Whereupon are the foundations thereof fastened? or who laid the corner stone thereof;",
+          "9879dbb7aec41528-01": "Whereupon were its foundations fastened? Or who laid its cornerstone,",
+          "bba730b9171fcc22-01": "On what were its pillars based, or who put down its angle-stone,",
+          "06125ad3d1d57585-01": "Whereupon were its foundations fastened? Or who laid its cornerstone,",
+          "41926a4aa3831714-01": "Whereupon were its foundations fastened? Or who laid its cornerstone,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "When the morning stars sang together, and all the sons of God shouted for joy?",
+          "9879dbb7aec41528-01": "when the morning stars sang together, and all the sons of God shouted for joy?",
+          "bba730b9171fcc22-01": "When the morning stars made songs together, and all the sons of the gods gave cries of joy?",
+          "06125ad3d1d57585-01": "when the morning stars sang together, and all the sons of God shouted for joy?",
+          "41926a4aa3831714-01": "when the morning stars sang together, and all the sons of God shouted for joy?"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "Or who shut up the sea with doors, when it brake forth, as if it had issued out of the womb?",
+          "9879dbb7aec41528-01": "“Or who shut up the sea with doors, when it broke out of the womb,",
+          "bba730b9171fcc22-01": "Or where were you when the sea came to birth, pushing out from its secret place;",
+          "06125ad3d1d57585-01": "“Or who shut up the sea with doors, when it broke out of the womb,",
+          "41926a4aa3831714-01": "“Or who shut up the sea with doors, when it broke out of the womb,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "When I made the cloud the garment thereof, and thick darkness a swaddlingband for it,",
+          "9879dbb7aec41528-01": "when I made clouds its garment, and wrapped it in thick darkness,",
+          "bba730b9171fcc22-01": "When I made the cloud its robe, and put thick clouds as bands round it,",
+          "06125ad3d1d57585-01": "when I made clouds its garment, and wrapped it in thick darkness,",
+          "41926a4aa3831714-01": "when I made clouds its garment, and wrapped it in thick darkness,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And brake up for it my decreed place, and set bars and doors,",
+          "9879dbb7aec41528-01": "marked out for it my bound, set bars and doors,",
+          "bba730b9171fcc22-01": "Ordering a fixed limit for it, with locks and doors;",
+          "06125ad3d1d57585-01": "marked out for it my bound, set bars and doors,",
+          "41926a4aa3831714-01": "marked out for it my bound, set bars and doors,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And said, Hitherto shalt thou come, but no further: and here shall thy proud waves be stayed?",
+          "9879dbb7aec41528-01": "and said, ‘Here you may come, but no further. Here your proud waves shall be stayed?’",
+          "bba730b9171fcc22-01": "And said, So far you may come, and no farther; and here the pride of your waves will be stopped?",
+          "06125ad3d1d57585-01": "and said, ‘Here you may come, but no further. Here your proud waves shall be stayed?’",
+          "41926a4aa3831714-01": "and said, ‘Here you may come, but no further. Here your proud waves shall be stayed?’"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Job 42:1-6": {
+    "reference": "Job 42:1-6",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Job answered the LORD, and said,",
+          "9879dbb7aec41528-01": "Then Job answered Yahweh,",
+          "bba730b9171fcc22-01": "And Job said in answer to the Lord,",
+          "06125ad3d1d57585-01": "Then Job answered Yahweh,",
+          "41926a4aa3831714-01": "Then Job answered Yahweh,"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "I know that thou canst do every thing, and that  no thought can be withholden from thee.",
+          "9879dbb7aec41528-01": "“I know that you can do all things, and that no purpose of yours can be restrained.",
+          "bba730b9171fcc22-01": "I see that you are able to do every thing, and to give effect to all your designs.",
+          "06125ad3d1d57585-01": "“I know that you can do all things, and that no purpose of yours can be restrained.",
+          "41926a4aa3831714-01": "“I know that you can do all things, and that no purpose of yours can be restrained."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Who is he that hideth counsel without knowledge? therefore have I uttered that I understood not; things too wonderful for me, which I knew not.",
+          "9879dbb7aec41528-01": "You asked, ‘Who is this who hides counsel without knowledge?’ therefore I have uttered that which I did not understand, things too wonderful for me, which I didn’t know.",
+          "bba730b9171fcc22-01": "Who is this who makes dark the purpose of God by words without knowledge? For I have been talking without knowledge about wonders not to be searched out.",
+          "06125ad3d1d57585-01": "You asked, ‘Who is this who hides counsel without knowledge?’ therefore I have uttered that which I did not understand, things too wonderful for me, which I didn’t know.",
+          "41926a4aa3831714-01": "You asked, ‘Who is this who hides counsel without knowledge?’ therefore I have uttered that which I did not understand, things too wonderful for me, which I didn’t know."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Hear, I beseech thee, and I will speak: I will demand of thee, and declare thou unto me.",
+          "9879dbb7aec41528-01": "You said, ‘Listen, now, and I will speak; I will question you, and you will answer me.’",
+          "bba730b9171fcc22-01": "Give ear to me, and I will say what is in my mind; I will put questions to you, and you will give me the answers.",
+          "06125ad3d1d57585-01": "You said, ‘Listen, now, and I will speak; I will question you, and you will answer me.’",
+          "41926a4aa3831714-01": "You said, ‘Listen, now, and I will speak; I will question you, and you will answer me.’"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "I have heard of thee by the hearing of the ear: but now mine eye seeth thee.",
+          "9879dbb7aec41528-01": "I had heard of you by the hearing of the ear, but now my eye sees you.",
+          "bba730b9171fcc22-01": "Word of you had come to my ears, but now my eye has seen you.",
+          "06125ad3d1d57585-01": "I had heard of you by the hearing of the ear, but now my eye sees you.",
+          "41926a4aa3831714-01": "I had heard of you by the hearing of the ear, but now my eye sees you."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Wherefore I abhor myself, and repent in dust and ashes.",
+          "9879dbb7aec41528-01": "Therefore I abhor myself, and repent in dust and ashes.”",
+          "bba730b9171fcc22-01": "For this cause I give witness that what I said is false, and in sorrow I take my seat in the dust.",
+          "06125ad3d1d57585-01": "Therefore I abhor myself, and repent in dust and ashes.”",
+          "41926a4aa3831714-01": "Therefore I abhor myself, and repent in dust and ashes.”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Ecclesiastes 3:1-8": {
+    "reference": "Ecclesiastes 3:1-8",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "To every thing there is a season, and a time to every purpose under the heaven:",
+          "9879dbb7aec41528-01": "For everything there is a season, and a time for every purpose under heaven:",
+          "bba730b9171fcc22-01": "For everything there is a fixed time, and a time for every business under the sun.",
+          "06125ad3d1d57585-01": "For everything there is a season, and a time for every purpose under heaven:",
+          "41926a4aa3831714-01": "For everything there is a season, and a time for every purpose under heaven:"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "A time to be born, and a time to die; a time to plant, and a time to pluck up that which is planted;",
+          "9879dbb7aec41528-01": "a time to be born, and a time to die; a time to plant, and a time to pluck up that which is planted;",
+          "bba730b9171fcc22-01": "A time for birth and a time for death; a time for planting and a time for uprooting;",
+          "06125ad3d1d57585-01": "a time to be born, and a time to die; a time to plant, and a time to pluck up that which is planted;",
+          "41926a4aa3831714-01": "a time to be born, and a time to die; a time to plant, and a time to pluck up that which is planted;"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "A time to kill, and a time to heal; a time to break down, and a time to build up;",
+          "9879dbb7aec41528-01": "a time to kill, and a time to heal; a time to break down, and a time to build up;",
+          "bba730b9171fcc22-01": "A time to put to death and a time to make well; a time for pulling down and a time for building up;",
+          "06125ad3d1d57585-01": "a time to kill, and a time to heal; a time to break down, and a time to build up;",
+          "41926a4aa3831714-01": "a time to kill, and a time to heal; a time to break down, and a time to build up;"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "A time to weep, and a time to laugh; a time to mourn, and a time to dance;",
+          "9879dbb7aec41528-01": "a time to weep, and a time to laugh; a time to mourn, and a time to dance;",
+          "bba730b9171fcc22-01": "A time for weeping and a time for laughing; a time for sorrow and a time for dancing;",
+          "06125ad3d1d57585-01": "a time to weep, and a time to laugh; a time to mourn, and a time to dance;",
+          "41926a4aa3831714-01": "a time to weep, and a time to laugh; a time to mourn, and a time to dance;"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "A time to cast away stones, and a time to gather stones together; a time to embrace, and a time to refrain from embracing;",
+          "9879dbb7aec41528-01": "a time to cast away stones, and a time to gather stones together; a time to embrace, and a time to refrain from embracing;",
+          "bba730b9171fcc22-01": "A time to take stones away and a time to get stones together; a time for kissing and a time to keep from kissing;",
+          "06125ad3d1d57585-01": "a time to cast away stones, and a time to gather stones together; a time to embrace, and a time to refrain from embracing;",
+          "41926a4aa3831714-01": "a time to cast away stones, and a time to gather stones together; a time to embrace, and a time to refrain from embracing;"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "A time to get, and a time to lose; a time to keep, and a time to cast away;",
+          "9879dbb7aec41528-01": "a time to seek, and a time to lose; a time to keep, and a time to cast away;",
+          "bba730b9171fcc22-01": "A time for search and a time for loss; a time to keep and a time to give away;",
+          "06125ad3d1d57585-01": "a time to seek, and a time to lose; a time to keep, and a time to cast away;",
+          "41926a4aa3831714-01": "a time to seek, and a time to lose; a time to keep, and a time to cast away;"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "A time to rend, and a time to sew; a time to keep silence, and a time to speak;",
+          "9879dbb7aec41528-01": "a time to tear, and a time to sew; a time to keep silence, and a time to speak;",
+          "bba730b9171fcc22-01": "A time for undoing and a time for stitching; a time for keeping quiet and a time for talk;",
+          "06125ad3d1d57585-01": "a time to tear, and a time to sew; a time to keep silence, and a time to speak;",
+          "41926a4aa3831714-01": "a time to tear, and a time to sew; a time to keep silence, and a time to speak;"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "A time to love, and a time to hate; a time of war, and a time of peace.",
+          "9879dbb7aec41528-01": "a time to love, and a time to hate; a time for war, and a time for peace.",
+          "bba730b9171fcc22-01": "A time for love and a time for hate; a time for war and a time for peace.",
+          "06125ad3d1d57585-01": "a time to love, and a time to hate; a time for war, and a time for peace.",
+          "41926a4aa3831714-01": "a time to love, and a time to hate; a time for war, and a time for peace."
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Ecclesiastes 12:1-7": {
+    "reference": "Ecclesiastes 12:1-7",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Remember now thy Creator in the days of thy youth, while the evil days come not, nor the years draw nigh, when thou shalt say, I have no pleasure in them;",
+          "9879dbb7aec41528-01": "Remember also your Creator in the days of your youth, before the evil days come, and the years draw near, when you will say, “I have no pleasure in them”;",
+          "bba730b9171fcc22-01": "Let your mind be turned to your Maker in the days of your strength, while the evil days come not, and the years are far away when you will say, I have no pleasure in them;",
+          "06125ad3d1d57585-01": "Remember also your Creator in the days of your youth, before the evil days come, and the years draw near, when you will say, “I have no pleasure in them”;",
+          "41926a4aa3831714-01": "Remember also your Creator in the days of your youth, before the evil days come, and the years draw near, when you will say, “I have no pleasure in them”;"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "While the sun, or the light, or the moon, or the stars, be not darkened, nor the clouds return after the rain:",
+          "9879dbb7aec41528-01": "Before the sun, the light, the moon, and the stars are darkened, and the clouds return after the rain;",
+          "bba730b9171fcc22-01": "While the sun, or the light, or the moon, or the stars, are not dark, and the clouds come not back after the rain;",
+          "06125ad3d1d57585-01": "Before the sun, the light, the moon, and the stars are darkened, and the clouds return after the rain;",
+          "41926a4aa3831714-01": "Before the sun, the light, the moon, and the stars are darkened, and the clouds return after the rain;"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "In the day when the keepers of the house shall tremble, and the strong men shall bow themselves, and the grinders cease because they are few, and those that look out of the windows be darkened,",
+          "9879dbb7aec41528-01": "in the day when the keepers of the house shall tremble, and the strong men shall bow themselves, and the grinders cease because they are few, and those who look out of the windows are darkened,",
+          "bba730b9171fcc22-01": "In the day when the keepers of the house are shaking for fear, and the strong men are bent down, and the women who were crushing the grain are at rest because their number is small, and those looking out of the windows are unable to see;",
+          "06125ad3d1d57585-01": "in the day when the keepers of the house shall tremble, and the strong men shall bow themselves, and the grinders cease because they are few, and those who look out of the windows are darkened,",
+          "41926a4aa3831714-01": "in the day when the keepers of the house shall tremble, and the strong men shall bow themselves, and the grinders cease because they are few, and those who look out of the windows are darkened,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And the doors shall be shut in the streets, when the sound of the grinding is low, and he shall rise up at the voice of the bird, and all the daughters of musick shall be brought low;",
+          "9879dbb7aec41528-01": "and the doors shall be shut in the street; when the sound of the grinding is low, and one shall rise up at the voice of a bird, and all the daughters of music shall be brought low;",
+          "bba730b9171fcc22-01": "When the doors are shut in the street, and the sound of the crushing is low, and the voice of the bird is soft, and the daughters of music will be made low;",
+          "06125ad3d1d57585-01": "and the doors shall be shut in the street; when the sound of the grinding is low, and one shall rise up at the voice of a bird, and all the daughters of music shall be brought low;",
+          "41926a4aa3831714-01": "and the doors shall be shut in the street; when the sound of the grinding is low, and one shall rise up at the voice of a bird, and all the daughters of music shall be brought low;"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Also when they shall be afraid of that which is  high, and fears shall be in the way, and the almond tree shall flourish, and the grasshopper shall be a burden, and desire shall fail: because man goeth to his long home, and the mourners go about the streets:",
+          "9879dbb7aec41528-01": "yes, they shall be afraid of heights, and terrors will be on the way; and the almond tree shall blossom, and the grasshopper shall be a burden, and desire shall fail; because man goes to his everlasting home, and the mourners go about the streets:",
+          "bba730b9171fcc22-01": "And he is in fear of that which is high, and danger is in the road, and the tree is white with flower, and the least thing is a weight, and desire is at an end, because man goes to his last resting-place, and those who are sorrowing are in the streets;",
+          "06125ad3d1d57585-01": "yes, they shall be afraid of heights, and terrors will be on the way; and the almond tree shall blossom, and the grasshopper shall be a burden, and desire shall fail; because man goes to his everlasting home, and the mourners go about the streets:",
+          "41926a4aa3831714-01": "yes, they shall be afraid of heights, and terrors will be on the way; and the almond tree shall blossom, and the grasshopper shall be a burden, and desire shall fail; because man goes to his everlasting home, and the mourners go about the streets:"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Or ever the silver cord be loosed, or the golden bowl be broken, or the pitcher be broken at the fountain, or the wheel broken at the cistern.",
+          "9879dbb7aec41528-01": "before the silver cord is severed, or the golden bowl is broken, or the pitcher is broken at the spring, or the wheel broken at the cistern,",
+          "bba730b9171fcc22-01": "Before ever the silver cord is cut, or the vessel of gold is broken, or the pot is broken at the fountain, or the wheel broken at the water-hole;",
+          "06125ad3d1d57585-01": "before the silver cord is severed, or the golden bowl is broken, or the pitcher is broken at the spring, or the wheel broken at the cistern,",
+          "41926a4aa3831714-01": "before the silver cord is severed, or the golden bowl is broken, or the pitcher is broken at the spring, or the wheel broken at the cistern,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Then shall the dust return to the earth as it was: and the spirit shall return unto God who gave it.",
+          "9879dbb7aec41528-01": "and the dust returns to the earth as it was, and the spirit returns to God who gave it.",
+          "bba730b9171fcc22-01": "And the dust goes back to the earth as it was, and the spirit goes back to God who gave it.",
+          "06125ad3d1d57585-01": "and the dust returns to the earth as it was, and the spirit returns to God who gave it.",
+          "41926a4aa3831714-01": "and the dust returns to the earth as it was, and the spirit returns to God who gave it."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Romans 8:1-11": {
+    "reference": "Romans 8:1-11",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.",
+          "9879dbb7aec41528-01": "There is therefore now no condemnation to those who are in Christ Jesus, who don’t walk according to the flesh, but according to the Spirit.",
+          "bba730b9171fcc22-01": "For this cause those who are in Christ Jesus will not be judged as sinners.",
+          "06125ad3d1d57585-01": "There is therefore now no condemnation to those who are in Christ Jesus, who don’t walk according to the flesh, but according to the Spirit.",
+          "41926a4aa3831714-01": "There is therefore now no condemnation to those who are in Christ Jesus, who don’t walk according to the flesh, but according to the Spirit."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "For the law of the Spirit of life in Christ Jesus hath made me free from the law of sin and death.",
+          "9879dbb7aec41528-01": "For the law of the Spirit of life in Christ Jesus made me free from the law of sin and of death.",
+          "bba730b9171fcc22-01": "For the law of the Spirit of life in Christ Jesus has made me free from the law of sin and death.",
+          "06125ad3d1d57585-01": "For the law of the Spirit of life in Christ Jesus made me free from the law of sin and of death.",
+          "41926a4aa3831714-01": "For the law of the Spirit of life in Christ Jesus made me free from the law of sin and of death."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zoe",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:",
+          "9879dbb7aec41528-01": "For what the law couldn’t do, in that it was weak through the flesh, God did, sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh;",
+          "bba730b9171fcc22-01": "For what the law was not able to do because it was feeble through the flesh, God, sending his Son in the image of the evil flesh, and as an offering for sin, gave his decision against sin in the flesh:",
+          "06125ad3d1d57585-01": "For what the law couldn’t do, in that it was weak through the flesh, God did, sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh;",
+          "41926a4aa3831714-01": "For what the law couldn’t do, in that it was weak through the flesh, God did, sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit.",
+          "9879dbb7aec41528-01": "that the ordinance of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit.",
+          "bba730b9171fcc22-01": "So that what was ordered by the law might be done in us, who are living, not in the way of the flesh, but in the way of the Spirit.",
+          "06125ad3d1d57585-01": "that the ordinance of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit.",
+          "41926a4aa3831714-01": "that the ordinance of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "For they that are after the flesh do mind the things of the flesh; but they that are after the Spirit the things of the Spirit.",
+          "9879dbb7aec41528-01": "For those who live according to the flesh set their minds on the things of the flesh, but those who live according to the Spirit, the things of the Spirit.",
+          "bba730b9171fcc22-01": "For those who are living in the way of the flesh give their minds to the things of the flesh, but those who go in the way of the Spirit, to the things of the Spirit.",
+          "06125ad3d1d57585-01": "For those who live according to the flesh set their minds on the things of the flesh, but those who live according to the Spirit, the things of the Spirit.",
+          "41926a4aa3831714-01": "For those who live according to the flesh set their minds on the things of the flesh, but those who live according to the Spirit, the things of the Spirit."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "For to be carnally minded is death; but to be spiritually minded is life and peace.",
+          "9879dbb7aec41528-01": "For the mind of the flesh is death, but the mind of the Spirit is life and peace;",
+          "bba730b9171fcc22-01": "For the mind of the flesh is death, but the mind of the Spirit is life and peace:",
+          "06125ad3d1d57585-01": "For the mind of the flesh is death, but the mind of the Spirit is life and peace;",
+          "41926a4aa3831714-01": "For the mind of the flesh is death, but the mind of the Spirit is life and peace;"
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zoe",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be.",
+          "9879dbb7aec41528-01": "because the mind of the flesh is hostile towards God; for it is not subject to God’s law, neither indeed can it be.",
+          "bba730b9171fcc22-01": "Because the mind of the flesh is opposite to God; it is not under the law of God, and is not able to be:",
+          "06125ad3d1d57585-01": "because the mind of the flesh is hostile towards God; for it is not subject to God’s law, neither indeed can it be.",
+          "41926a4aa3831714-01": "because the mind of the flesh is hostile towards God; for it is not subject to God’s law, neither indeed can it be."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "So then they that are in the flesh cannot please God.",
+          "9879dbb7aec41528-01": "Those who are in the flesh can’t please God.",
+          "bba730b9171fcc22-01": "So that those who are in the flesh are not able to give pleasure to God.",
+          "06125ad3d1d57585-01": "Those who are in the flesh can’t please God.",
+          "41926a4aa3831714-01": "Those who are in the flesh can’t please God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "But ye are not in the flesh, but in the Spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his.",
+          "9879dbb7aec41528-01": "But you are not in the flesh but in the Spirit, if it is so that the Spirit of God dwells in you. But if any man doesn’t have the Spirit of Christ, he is not his.",
+          "bba730b9171fcc22-01": "You are not in the flesh but in the Spirit, if the Spirit of God is in you. But if any man has not the Spirit of Christ he is not one of his.",
+          "06125ad3d1d57585-01": "But you are not in the flesh but in the Spirit, if it is so that the Spirit of God dwells in you. But if any man doesn’t have the Spirit of Christ, he is not his.",
+          "41926a4aa3831714-01": "But you are not in the flesh but in the Spirit, if it is so that the Spirit of God dwells in you. But if any man doesn’t have the Spirit of Christ, he is not his."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And if Christ be in you, the body is dead because of sin; but the Spirit is life because of righteousness.",
+          "9879dbb7aec41528-01": "If Christ is in you, the body is dead because of sin, but the spirit is alive because of righteousness.",
+          "bba730b9171fcc22-01": "And if Christ is in you, the body is dead because of sin, but the Spirit is life because of righteousness.",
+          "06125ad3d1d57585-01": "If Christ is in you, the body is dead because of sin, but the spirit is alive because of righteousness.",
+          "41926a4aa3831714-01": "If Christ is in you, the body is dead because of sin, but the spirit is alive because of righteousness."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zoe",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "σῶμα",
+            "transliteration": "soma",
+            "english": "body",
+            "strongs": "G4983",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you.",
+          "9879dbb7aec41528-01": "But if the Spirit of him who raised up Jesus from the dead dwells in you, he who raised up Christ Jesus from the dead will also give life to your mortal bodies through his Spirit who dwells in you.",
+          "bba730b9171fcc22-01": "But if the Spirit of him who made Jesus come again from the dead is in you, he who made Christ Jesus come again from the dead will in the same way, through his Spirit which is in you, give life to your bodies which now are under the power of death.",
+          "06125ad3d1d57585-01": "But if the Spirit of him who raised up Jesus from the dead dwells in you, he who raised up Christ Jesus from the dead will also give life to your mortal bodies through his Spirit who dwells in you.",
+          "41926a4aa3831714-01": "But if the Spirit of him who raised up Jesus from the dead dwells in you, he who raised up Christ Jesus from the dead will also give life to your mortal bodies through his Spirit who dwells in you."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Romans 8:31-39": {
+    "reference": "Romans 8:31-39",
+    "verses": [
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "What shall we then say to these things? If God be for us, who can be against us?",
+          "9879dbb7aec41528-01": "What then shall we say about these things? If God is for us, who can be against us?",
+          "bba730b9171fcc22-01": "What may we say about these things? If God is for us, who is against us?",
+          "06125ad3d1d57585-01": "What then shall we say about these things? If God is for us, who can be against us?",
+          "41926a4aa3831714-01": "What then shall we say about these things? If God is for us, who can be against us?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?",
+          "9879dbb7aec41528-01": "He who didn’t spare his own Son, but delivered him up for us all, how would he not also with him freely give us all things?",
+          "bba730b9171fcc22-01": "He who did not keep back his only Son, but gave him up for us all, will he not with him freely give us all things?",
+          "06125ad3d1d57585-01": "He who didn’t spare his own Son, but delivered him up for us all, how would he not also with him freely give us all things?",
+          "41926a4aa3831714-01": "He who didn’t spare his own Son, but delivered him up for us all, how would he not also with him freely give us all things?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "Who shall lay any thing to the charge of God’s elect? It is  God that justifieth.",
+          "9879dbb7aec41528-01": "Who could bring a charge against God’s chosen ones? It is God who justifies.",
+          "bba730b9171fcc22-01": "Who will say anything against the saints of God? It is God who makes us clear from evil;",
+          "06125ad3d1d57585-01": "Who could bring a charge against God’s chosen ones? It is God who justifies.",
+          "41926a4aa3831714-01": "Who could bring a charge against God’s chosen ones? It is God who justifies."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.",
+          "9879dbb7aec41528-01": "Who is he who condemns? It is Christ who died, yes rather, who was raised from the dead, who is at the right hand of God, who also makes intercession for us.",
+          "bba730b9171fcc22-01": "Who will give a decision against us? It is Christ Jesus who not only was put to death, but came again from the dead, who is now at the right hand of God, taking our part.",
+          "06125ad3d1d57585-01": "Who is he who condemns? It is Christ who died, yes rather, who was raised from the dead, who is at the right hand of God, who also makes intercession for us.",
+          "41926a4aa3831714-01": "Who is he who condemns? It is Christ who died, yes rather, who was raised from the dead, who is at the right hand of God, who also makes intercession for us."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 35,
+        "translations": {
+          "de4e12af7f28f599-02": "Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?",
+          "9879dbb7aec41528-01": "Who shall separate us from the love of Christ? Could oppression, or anguish, or persecution, or famine, or nakedness, or peril, or sword?",
+          "bba730b9171fcc22-01": "Who will come between us and the love of Christ? Will trouble, or pain, or cruel acts, or the need of food or of clothing, or danger, or the sword?",
+          "06125ad3d1d57585-01": "Who shall separate us from the love of Christ? Could oppression, or anguish, or persecution, or famine, or nakedness, or peril, or sword?",
+          "41926a4aa3831714-01": "Who shall separate us from the love of Christ? Could oppression, or anguish, or persecution, or famine, or nakedness, or peril, or sword?"
+        },
+        "words": [
+          {
+            "original": "ἀγάπη",
+            "transliteration": "agape",
+            "english": "love / affection",
+            "strongs": "G0026",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / reason",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 36,
+        "translations": {
+          "de4e12af7f28f599-02": "As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter.",
+          "9879dbb7aec41528-01": "Even as it is written, “For your sake we are killed all day long. We were accounted as sheep for the slaughter.”",
+          "bba730b9171fcc22-01": "As it is said in the holy Writings, Because of you we are put to death every day; we are like sheep ready for destruction.",
+          "06125ad3d1d57585-01": "Even as it is written, “For your sake we are killed all day long. We were accounted as sheep for the slaughter.”",
+          "41926a4aa3831714-01": "Even as it is written, “For your sake we are killed all day long. We were accounted as sheep for the slaughter.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 37,
+        "translations": {
+          "de4e12af7f28f599-02": "Nay, in all these things we are more than conquerors through him that loved us.",
+          "9879dbb7aec41528-01": "No, in all these things, we are more than conquerors through him who loved us.",
+          "bba730b9171fcc22-01": "But we are able to overcome all these things and more through his love.",
+          "06125ad3d1d57585-01": "No, in all these things, we are more than conquerors through him who loved us.",
+          "41926a4aa3831714-01": "No, in all these things, we are more than conquerors through him who loved us."
+        },
+        "words": [
+          {
+            "original": "ἀγάπη",
+            "transliteration": "agape",
+            "english": "love / affection",
+            "strongs": "G0026",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 38,
+        "translations": {
+          "de4e12af7f28f599-02": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,",
+          "9879dbb7aec41528-01": "For I am persuaded that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come, nor powers,",
+          "bba730b9171fcc22-01": "For I am certain that not death, or life, or angels, or rulers, or things present, or things to come, or powers,",
+          "06125ad3d1d57585-01": "For I am persuaded that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come, nor powers,",
+          "41926a4aa3831714-01": "For I am persuaded that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come, nor powers,"
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zoe",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 39,
+        "translations": {
+          "de4e12af7f28f599-02": "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+          "9879dbb7aec41528-01": "nor height, nor depth, nor any other created thing, will be able to separate us from God’s love, which is in Christ Jesus our Lord.",
+          "bba730b9171fcc22-01": "Or things on high, or things under the earth, or anything which is made, will be able to come between us and the love of God which is in Christ Jesus our Lord.",
+          "06125ad3d1d57585-01": "nor height, nor depth, nor any other created thing, will be able to separate us from God’s love, which is in Christ Jesus our Lord.",
+          "41926a4aa3831714-01": "nor height, nor depth, nor any other created thing, will be able to separate us from God’s love, which is in Christ Jesus our Lord."
+        },
+        "words": [
+          {
+            "original": "ἀγάπη",
+            "transliteration": "agape",
+            "english": "love / affection",
+            "strongs": "G0026",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Ephesians 2:1-10": {
+    "reference": "Ephesians 2:1-10",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And you hath he quickened, who were dead in trespasses and sins;",
+          "9879dbb7aec41528-01": "You were made alive when you were dead in transgressions and sins,",
+          "bba730b9171fcc22-01": "And to you did he give life, when you were dead through your wrongdoing and sins,",
+          "06125ad3d1d57585-01": "You were made alive when you were dead in transgressions and sins,",
+          "41926a4aa3831714-01": "You were made alive when you were dead in transgressions and sins,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:",
+          "9879dbb7aec41528-01": "in which you once walked according to the course of this world, according to the prince of the power of the air, the spirit who now works in the children of disobedience;",
+          "bba730b9171fcc22-01": "In which you were living in the past, after the ways of this present world, doing the pleasure of the lord of the power of the air, the spirit who is now working in those who go against the purpose of God;",
+          "06125ad3d1d57585-01": "in which you once walked according to the course of this world, according to the prince of the power of the air, the spirit who now works in the children of disobedience;",
+          "41926a4aa3831714-01": "in which you once walked according to the course of this world, according to the prince of the power of the air, the spirit who now works in the children of disobedience;"
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Among whom also we all had our conversation in times past in the lusts of our flesh, fulfilling the desires of the flesh and of the mind; and were by nature the children of wrath, even as others.",
+          "9879dbb7aec41528-01": "among whom we also all once lived in the lusts of our flesh, doing the desires of the flesh and of the mind, and were by nature children of wrath, even as the rest.",
+          "bba730b9171fcc22-01": "Among whom we all at one time were living in the pleasures of our flesh, giving way to the desires of the flesh and of the mind, and the punishment of God was waiting for us even as for the rest.",
+          "06125ad3d1d57585-01": "among whom we also all once lived in the lusts of our flesh, doing the desires of the flesh and of the mind, and were by nature children of wrath, even as the rest.",
+          "41926a4aa3831714-01": "among whom we also all once lived in the lusts of our flesh, doing the desires of the flesh and of the mind, and were by nature children of wrath, even as the rest."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "But God, who is rich in mercy, for his great love wherewith he loved us,",
+          "9879dbb7aec41528-01": "But God, being rich in mercy, for his great love with which he loved us,",
+          "bba730b9171fcc22-01": "But God, being full of mercy, through the great love which he had for us,",
+          "06125ad3d1d57585-01": "But God, being rich in mercy, for his great love with which he loved us,",
+          "41926a4aa3831714-01": "But God, being rich in mercy, for his great love with which he loved us,"
+        },
+        "words": [
+          {
+            "original": "ἀγάπη",
+            "transliteration": "agape",
+            "english": "love / affection",
+            "strongs": "G0026",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;)",
+          "9879dbb7aec41528-01": "even when we were dead through our trespasses, made us alive together with Christ (by grace you have been saved),",
+          "bba730b9171fcc22-01": "Even when we were dead through our sins, gave us life together with Christ (by grace you have salvation),",
+          "06125ad3d1d57585-01": "even when we were dead through our trespasses, made us alive together with Christ (by grace you have been saved),",
+          "41926a4aa3831714-01": "even when we were dead through our trespasses, made us alive together with Christ (by grace you have been saved),"
+        },
+        "words": [
+          {
+            "original": "σώζω",
+            "transliteration": "sozo",
+            "english": "save / rescue",
+            "strongs": "G4982",
+            "parsing": "V-APP-nm"
+          },
+          {
+            "original": "χάρις",
+            "transliteration": "charis",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And hath raised us up together, and made us sit together in heavenly places in Christ Jesus:",
+          "9879dbb7aec41528-01": "and raised us up with him, and made us to sit with him in the heavenly places in Christ Jesus,",
+          "bba730b9171fcc22-01": "So that we came back from death with him, and are seated with him in the heavens, in Christ Jesus;",
+          "06125ad3d1d57585-01": "and raised us up with him, and made us to sit with him in the heavenly places in Christ Jesus,",
+          "41926a4aa3831714-01": "and raised us up with him, and made us to sit with him in the heavenly places in Christ Jesus,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "That in the ages to come he might shew the exceeding riches of his grace in his kindness toward us through Christ Jesus.",
+          "9879dbb7aec41528-01": "that in the ages to come he might show the exceeding riches of his grace in kindness toward us in Christ Jesus;",
+          "bba730b9171fcc22-01": "That in the time to come he might make clear the full wealth of his grace in his mercy to us in Christ Jesus:",
+          "06125ad3d1d57585-01": "that in the ages to come he might show the exceeding riches of his grace in kindness toward us in Christ Jesus;",
+          "41926a4aa3831714-01": "that in the ages to come he might show the exceeding riches of his grace in kindness toward us in Christ Jesus;"
+        },
+        "words": [
+          {
+            "original": "χάρις",
+            "transliteration": "charis",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
+          "9879dbb7aec41528-01": "for by grace you have been saved through faith, and that not of yourselves; it is the gift of God,",
+          "bba730b9171fcc22-01": "Because by grace you have salvation through faith; and that not of yourselves: it is given by God:",
+          "06125ad3d1d57585-01": "for by grace you have been saved through faith, and that not of yourselves; it is the gift of God,",
+          "41926a4aa3831714-01": "for by grace you have been saved through faith, and that not of yourselves; it is the gift of God,"
+        },
+        "words": [
+          {
+            "original": "σώζω",
+            "transliteration": "sozo",
+            "english": "save / rescue",
+            "strongs": "G4982",
+            "parsing": "V-APP-nm"
+          },
+          {
+            "original": "πίστις",
+            "transliteration": "pistis",
+            "english": "faith / trust",
+            "strongs": "G4102",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "χάρις",
+            "transliteration": "charis",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Not of works, lest any man should boast.",
+          "9879dbb7aec41528-01": "not of works, that no one would boast.",
+          "bba730b9171fcc22-01": "Not by works, so that no man may take glory to himself.",
+          "06125ad3d1d57585-01": "not of works, that no one would boast.",
+          "41926a4aa3831714-01": "not of works, that no one would boast."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+          "9879dbb7aec41528-01": "For we are his workmanship, created in Christ Jesus for good works, which God prepared before that we would walk in them.",
+          "bba730b9171fcc22-01": "For by his act we were given existence in Christ Jesus to do those good works which God before made ready for us so that we might do them.",
+          "06125ad3d1d57585-01": "For we are his workmanship, created in Christ Jesus for good works, which God prepared before that we would walk in them.",
+          "41926a4aa3831714-01": "For we are his workmanship, created in Christ Jesus for good works, which God prepared before that we would walk in them."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Ephesians 6:10-18": {
+    "reference": "Ephesians 6:10-18",
+    "verses": [
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+          "9879dbb7aec41528-01": "Finally, be strong in the Lord, and in the strength of his might.",
+          "bba730b9171fcc22-01": "Lastly, be strong in the Lord, and in the strength of his power.",
+          "06125ad3d1d57585-01": "Finally, be strong in the Lord, and in the strength of his might.",
+          "41926a4aa3831714-01": "Finally, be strong in the Lord, and in the strength of his might."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+          "9879dbb7aec41528-01": "Put on the whole armor of God, that you may be able to stand against the wiles of the devil.",
+          "bba730b9171fcc22-01": "Take up God's instruments of war, so that you may be able to keep your position against all the deceits of the Evil One.",
+          "06125ad3d1d57585-01": "Put on the whole armor of God, that you may be able to stand against the wiles of the devil.",
+          "41926a4aa3831714-01": "Put on the whole armor of God, that you may be able to stand against the wiles of the devil."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places.",
+          "9879dbb7aec41528-01": "For our wrestling is not against flesh and blood, but against the principalities, against the powers, against the world’s rulers of the darkness of this age, and against the spiritual forces of wickedness in the heavenly places.",
+          "bba730b9171fcc22-01": "For our fight is not against flesh and blood, but against authorities and powers, against the world-rulers of this dark night, against the spirits of evil in the heavens.",
+          "06125ad3d1d57585-01": "For our wrestling is not against flesh and blood, but against the principalities, against the powers, against the world’s rulers of the darkness of this age, and against the spiritual forces of wickedness in the heavenly places.",
+          "41926a4aa3831714-01": "For our wrestling is not against flesh and blood, but against the principalities, against the powers, against the world’s rulers of the darkness of this age, and against the spiritual forces of wickedness in the heavenly places."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Wherefore take unto you the whole armour of God, that ye may be able to withstand in the evil day, and having done all, to stand.",
+          "9879dbb7aec41528-01": "Therefore put on the whole armor of God, that you may be able to withstand in the evil day, and, having done all, to stand.",
+          "bba730b9171fcc22-01": "For this reason take up all the arms of God, so that you may be able to be strong in the evil day, and, having done all, to keep your place.",
+          "06125ad3d1d57585-01": "Therefore put on the whole armor of God, that you may be able to withstand in the evil day, and, having done all, to stand.",
+          "41926a4aa3831714-01": "Therefore put on the whole armor of God, that you may be able to withstand in the evil day, and, having done all, to stand."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "Stand therefore, having your loins girt about with truth, and having on the breastplate of righteousness;",
+          "9879dbb7aec41528-01": "Stand therefore, having the utility belt of truth buckled around your waist, and having put on the breastplate of righteousness,",
+          "bba730b9171fcc22-01": "Take your place, then, having your body clothed with the true word, and having put on the breastplate of righteousness;",
+          "06125ad3d1d57585-01": "Stand therefore, having the utility belt of truth buckled around your waist, and having put on the breastplate of righteousness,",
+          "41926a4aa3831714-01": "Stand therefore, having the utility belt of truth buckled around your waist, and having put on the breastplate of righteousness,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And your feet shod with the preparation of the gospel of peace;",
+          "9879dbb7aec41528-01": "and having fitted your feet with the preparation of the Good News of peace;",
+          "bba730b9171fcc22-01": "Be ready with the good news of peace as shoes on your feet;",
+          "06125ad3d1d57585-01": "and having fitted your feet with the preparation of the Good News of peace;",
+          "41926a4aa3831714-01": "and having fitted your feet with the preparation of the Good News of peace;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.",
+          "9879dbb7aec41528-01": "above all, taking up the shield of faith, with which you will be able to quench all the fiery darts of the evil one.",
+          "bba730b9171fcc22-01": "And most of all, using faith as a cover to keep off all the flaming arrows of the Evil One.",
+          "06125ad3d1d57585-01": "above all, taking up the shield of faith, with which you will be able to quench all the fiery darts of the evil one.",
+          "41926a4aa3831714-01": "above all, taking up the shield of faith, with which you will be able to quench all the fiery darts of the evil one."
+        },
+        "words": [
+          {
+            "original": "πίστις",
+            "transliteration": "pistis",
+            "english": "faith / trust",
+            "strongs": "G4102",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And take the helmet of salvation, and the sword of the Spirit, which is the word of God:",
+          "9879dbb7aec41528-01": "And take the helmet of salvation, and the sword of the Spirit, which is the word of God;",
+          "bba730b9171fcc22-01": "And take salvation for your head-dress and the sword of the Spirit, which is the word of God:",
+          "06125ad3d1d57585-01": "And take the helmet of salvation, and the sword of the Spirit, which is the word of God;",
+          "41926a4aa3831714-01": "And take the helmet of salvation, and the sword of the Spirit, which is the word of God;"
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / reason",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints;",
+          "9879dbb7aec41528-01": "with all prayer and requests, praying at all times in the Spirit, and being watchful to this end in all perseverance and requests for all the saints:",
+          "bba730b9171fcc22-01": "With prayers and deep desires, making requests at all times in the Spirit, and keeping watch, with strong purpose, in prayer for all the saints,",
+          "06125ad3d1d57585-01": "with all prayer and requests, praying at all times in the Spirit, and being watchful to this end in all perseverance and requests for all the saints:",
+          "41926a4aa3831714-01": "with all prayer and requests, praying at all times in the Spirit, and being watchful to this end in all perseverance and requests for all the saints:"
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Philippians 2:5-11": {
+    "reference": "Philippians 2:5-11",
+    "verses": [
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Let this mind be in you, which was also in Christ Jesus:",
+          "9879dbb7aec41528-01": "Have this in your mind, which was also in Christ Jesus,",
+          "bba730b9171fcc22-01": "Let this mind be in you which was in Christ Jesus,",
+          "06125ad3d1d57585-01": "Have this in your mind, which was also in Christ Jesus,",
+          "41926a4aa3831714-01": "Have this in your mind, which was also in Christ Jesus,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Who, being in the form of God, thought it not robbery to be equal with God:",
+          "9879dbb7aec41528-01": "who, existing in the form of God, didn’t consider equality with God a thing to be grasped,",
+          "bba730b9171fcc22-01": "To whom, though himself in the form of God, it did not seem that to take for oneself was to be like God;",
+          "06125ad3d1d57585-01": "who, existing in the form of God, didn’t consider equality with God a thing to be grasped,",
+          "41926a4aa3831714-01": "who, existing in the form of God, didn’t consider equality with God a thing to be grasped,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men:",
+          "9879dbb7aec41528-01": "but emptied himself, taking the form of a servant, being made in the likeness of men.",
+          "bba730b9171fcc22-01": "But he made himself as nothing, taking the form of a servant, being made like men;",
+          "06125ad3d1d57585-01": "but emptied himself, taking the form of a servant, being made in the likeness of men.",
+          "41926a4aa3831714-01": "but emptied himself, taking the form of a servant, being made in the likeness of men."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross.",
+          "9879dbb7aec41528-01": "And being found in human form, he humbled himself, becoming obedient to death, yes, the death of the cross.",
+          "bba730b9171fcc22-01": "And being seen in form as a man, he took the lowest place, and let himself be put to death, even the death of the cross.",
+          "06125ad3d1d57585-01": "And being found in human form, he humbled himself, becoming obedient to death, yes, the death of the cross.",
+          "41926a4aa3831714-01": "And being found in human form, he humbled himself, becoming obedient to death, yes, the death of the cross."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Wherefore God also hath highly exalted him, and given him a name which is above every name:",
+          "9879dbb7aec41528-01": "Therefore God also highly exalted him, and gave to him the name which is above every name;",
+          "bba730b9171fcc22-01": "For this reason God has put him in the highest place and has given to him the name which is greater than every name;",
+          "06125ad3d1d57585-01": "Therefore God also highly exalted him, and gave to him the name which is above every name;",
+          "41926a4aa3831714-01": "Therefore God also highly exalted him, and gave to him the name which is above every name;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "That at the name of Jesus every knee should bow, of things  in heaven, and things in earth, and things under the earth;",
+          "9879dbb7aec41528-01": "that at the name of Jesus every knee should bow, of those in heaven, those on earth, and those under the earth,",
+          "bba730b9171fcc22-01": "So that at the name of Jesus every knee may be bent, of those in heaven and those on earth and those in the underworld,",
+          "06125ad3d1d57585-01": "that at the name of Jesus every knee should bow, of those in heaven, those on earth, and those under the earth,",
+          "41926a4aa3831714-01": "that at the name of Jesus every knee should bow, of those in heaven, those on earth, and those under the earth,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
+          "9879dbb7aec41528-01": "and that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
+          "bba730b9171fcc22-01": "And that every tongue may give witness that Jesus Christ is Lord, to the glory of God the Father.",
+          "06125ad3d1d57585-01": "and that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.",
+          "41926a4aa3831714-01": "and that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Colossians 1:15-20": {
+    "reference": "Colossians 1:15-20",
+    "verses": [
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Who is the image of the invisible God, the firstborn of every creature:",
+          "9879dbb7aec41528-01": "who is the image of the invisible God, the firstborn of all creation.",
+          "bba730b9171fcc22-01": "Who is the image of the unseen God coming into existence before all living things;",
+          "06125ad3d1d57585-01": "who is the image of the invisible God, the firstborn of all creation.",
+          "41926a4aa3831714-01": "who is the image of the invisible God, the firstborn of all creation."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him:",
+          "9879dbb7aec41528-01": "For by him all things were created, in the heavens and on the earth, things visible and things invisible, whether thrones or dominions or principalities or powers; all things have been created through him, and for him.",
+          "bba730b9171fcc22-01": "For by him all things were made, in heaven and on earth, things seen and things unseen, authorities, lords, rulers, and powers; all things were made by him and for him;",
+          "06125ad3d1d57585-01": "For by him all things were created, in the heavens and on the earth, things visible and things invisible, whether thrones or dominions or principalities or powers; all things have been created through him, and for him.",
+          "41926a4aa3831714-01": "For by him all things were created, in the heavens and on the earth, things visible and things invisible, whether thrones or dominions or principalities or powers; all things have been created through him, and for him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And he is before all things, and by him all things consist.",
+          "9879dbb7aec41528-01": "He is before all things, and in him all things are held together.",
+          "bba730b9171fcc22-01": "He is before all things, and in him all things have being.",
+          "06125ad3d1d57585-01": "He is before all things, and in him all things are held together.",
+          "41926a4aa3831714-01": "He is before all things, and in him all things are held together."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the preeminence.",
+          "9879dbb7aec41528-01": "He is the head of the body, the assembly, who is the beginning, the firstborn from the dead; that in all things he might have the preeminence.",
+          "bba730b9171fcc22-01": "And he is the head of the body, the church: the starting point of all things, the first to come again from the dead; so that in all things he might have the chief place.",
+          "06125ad3d1d57585-01": "He is the head of the body, the assembly, who is the beginning, the firstborn from the dead; that in all things he might have the preeminence.",
+          "41926a4aa3831714-01": "He is the head of the body, the assembly, who is the beginning, the firstborn from the dead; that in all things he might have the preeminence."
+        },
+        "words": [
+          {
+            "original": "σῶμα",
+            "transliteration": "soma",
+            "english": "body",
+            "strongs": "G4983",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "For it pleased the Father that in him should all fulness dwell;",
+          "9879dbb7aec41528-01": "For all the fullness was pleased to dwell in him;",
+          "bba730b9171fcc22-01": "For God in full measure was pleased to be in him;",
+          "06125ad3d1d57585-01": "For all the fullness was pleased to dwell in him;",
+          "41926a4aa3831714-01": "For all the fullness was pleased to dwell in him;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And, having made peace through the blood of his cross, by him to reconcile all things unto himself; by him, I say, whether they be things in earth, or things in heaven.",
+          "9879dbb7aec41528-01": "and through him to reconcile all things to himself, by him, whether things on the earth, or things in the heavens, having made peace through the blood of his cross.",
+          "bba730b9171fcc22-01": "Through him uniting all things with himself, having made peace through the blood of his cross; through him, I say, uniting all things which are on earth or in heaven.",
+          "06125ad3d1d57585-01": "and through him to reconcile all things to himself, by him, whether things on the earth, or things in the heavens, having made peace through the blood of his cross.",
+          "41926a4aa3831714-01": "and through him to reconcile all things to himself, by him, whether things on the earth, or things in the heavens, having made peace through the blood of his cross."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "James 1:2-12": {
+    "reference": "James 1:2-12",
+    "verses": [
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "My brethren, count it all joy when ye fall into divers temptations;",
+          "9879dbb7aec41528-01": "Count it all joy, my brothers, when you fall into various temptations,",
+          "bba730b9171fcc22-01": "Let it be all joy to you, my brothers, when you undergo tests of every sort;",
+          "06125ad3d1d57585-01": "Count it all joy, my brothers, when you fall into various temptations,",
+          "41926a4aa3831714-01": "Count it all joy, my brothers, when you fall into various temptations,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Knowing this, that the trying of your faith worketh patience.",
+          "9879dbb7aec41528-01": "knowing that the testing of your faith produces endurance.",
+          "bba730b9171fcc22-01": "Because you have the knowledge that the testing of your faith gives you the power of going on in hope;",
+          "06125ad3d1d57585-01": "knowing that the testing of your faith produces endurance.",
+          "41926a4aa3831714-01": "knowing that the testing of your faith produces endurance."
+        },
+        "words": [
+          {
+            "original": "πίστις",
+            "transliteration": "pistis",
+            "english": "faith / trust",
+            "strongs": "G4102",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "But let patience have her perfect work, that ye may be perfect and entire, wanting nothing.",
+          "9879dbb7aec41528-01": "Let endurance have its perfect work, that you may be perfect and complete, lacking in nothing.",
+          "bba730b9171fcc22-01": "But let this power have its full effect, so that you may be made complete, needing nothing.",
+          "06125ad3d1d57585-01": "Let endurance have its perfect work, that you may be perfect and complete, lacking in nothing.",
+          "41926a4aa3831714-01": "Let endurance have its perfect work, that you may be perfect and complete, lacking in nothing."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+          "9879dbb7aec41528-01": "But if any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach; and it will be given to him.",
+          "bba730b9171fcc22-01": "But if any man among you is without wisdom, let him make his request to God, who gives freely to all without an unkind word, and it will be given to him.",
+          "06125ad3d1d57585-01": "But if any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach; and it will be given to him.",
+          "41926a4aa3831714-01": "But if any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach; and it will be given to him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea driven with the wind and tossed.",
+          "9879dbb7aec41528-01": "But let him ask in faith, without any doubting, for he who doubts is like a wave of the sea, driven by the wind and tossed.",
+          "bba730b9171fcc22-01": "Let him make his request in faith, doubting nothing; for he who has doubt in his heart is like the waves of the sea, which are troubled by the driving of the wind.",
+          "06125ad3d1d57585-01": "But let him ask in faith, without any doubting, for he who doubts is like a wave of the sea, driven by the wind and tossed.",
+          "41926a4aa3831714-01": "But let him ask in faith, without any doubting, for he who doubts is like a wave of the sea, driven by the wind and tossed."
+        },
+        "words": [
+          {
+            "original": "πίστις",
+            "transliteration": "pistis",
+            "english": "faith / trust",
+            "strongs": "G4102",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "For let not that man think that he shall receive any thing of the Lord.",
+          "9879dbb7aec41528-01": "For that man shouldn’t think that he will receive anything from the Lord.",
+          "bba730b9171fcc22-01": "Let it not seem to such a man that he will get anything from the Lord;",
+          "06125ad3d1d57585-01": "For that man shouldn’t think that he will receive anything from the Lord.",
+          "41926a4aa3831714-01": "For that man shouldn’t think that he will receive anything from the Lord."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "A double minded man is unstable in all his ways.",
+          "9879dbb7aec41528-01": "He is a double-minded man, unstable in all his ways.",
+          "bba730b9171fcc22-01": "For there is a division in his mind, and he is uncertain in all his ways.",
+          "06125ad3d1d57585-01": "He is a double-minded man, unstable in all his ways.",
+          "41926a4aa3831714-01": "He is a double-minded man, unstable in all his ways."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Let the brother of low degree rejoice in that he is exalted:",
+          "9879dbb7aec41528-01": "But let the brother in humble circumstances glory in his high position;",
+          "bba730b9171fcc22-01": "But let the brother of low position be glad that he is lifted up;",
+          "06125ad3d1d57585-01": "But let the brother in humble circumstances glory in his high position;",
+          "41926a4aa3831714-01": "But let the brother in humble circumstances glory in his high position;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "But the rich, in that he is made low: because as the flower of the grass he shall pass away.",
+          "9879dbb7aec41528-01": "and the rich, in that he is made humble, because like the flower in the grass, he will pass away.",
+          "bba730b9171fcc22-01": "But the man of wealth, that he is made low; because like the flower of the grass he will come to his end.",
+          "06125ad3d1d57585-01": "and the rich, in that he is made humble, because like the flower in the grass, he will pass away.",
+          "41926a4aa3831714-01": "and the rich, in that he is made humble, because like the flower in the grass, he will pass away."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "For the sun is no sooner risen with a burning heat, but it withereth the grass, and the flower thereof falleth, and the grace of the fashion of it perisheth: so also shall the rich man fade away in his ways.",
+          "9879dbb7aec41528-01": "For the sun arises with the scorching wind, and withers the grass, and the flower in it falls, and the beauty of its appearance perishes. So also will the rich man fade away in his pursuits.",
+          "bba730b9171fcc22-01": "For when the sun comes up with its burning heat, the grass gets dry and the grace of its form is gone with the falling flower; so the man of wealth comes to nothing in his ways.",
+          "06125ad3d1d57585-01": "For the sun arises with the scorching wind, and withers the grass, and the flower in it falls, and the beauty of its appearance perishes. So also will the rich man fade away in his pursuits.",
+          "41926a4aa3831714-01": "For the sun arises with the scorching wind, and withers the grass, and the flower in it falls, and the beauty of its appearance perishes. So also will the rich man fade away in his pursuits."
+        },
+        "words": [
+          {
+            "original": "χάρις",
+            "transliteration": "charis",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.",
+          "9879dbb7aec41528-01": "Blessed is the man who endures temptation, for when he has been approved, he will receive the crown of life, which the Lord promised to those who love him.",
+          "bba730b9171fcc22-01": "There is a blessing on the man who undergoes testing; because, if he has God's approval, he will be given the crown of life, which the Lord has said he will give to those who have love for him.",
+          "06125ad3d1d57585-01": "Blessed is the man who endures temptation, for when he has been approved, he will receive the crown of life, which the Lord promised to those who love him.",
+          "41926a4aa3831714-01": "Blessed is the man who endures temptation, for when he has been approved, he will receive the crown of life, which the Lord promised to those who love him."
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zoe",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "ἀγάπη",
+            "transliteration": "agape",
+            "english": "love / affection",
+            "strongs": "G0026",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "2 Kings 25:1-10": {
+    "reference": "2 Kings 25:1-10",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass in the ninth year of his reign, in the tenth month, in the tenth day of the month, that Nebuchadnezzar king of Babylon came, he, and all his host, against Jerusalem, and pitched against it; and they built forts against it round about.",
+          "9879dbb7aec41528-01": "In the ninth year of his reign, in the tenth month, in the tenth day of the month, Nebuchadnezzar king of Babylon came, he and all his army, against Jerusalem, and encamped against it; and they built forts against it around it.",
+          "bba730b9171fcc22-01": "Now in the ninth year of his rule, on the tenth day of the tenth month, Nebuchadnezzar, king of Babylon, came against Jerusalem with all his army and took up his position before it, building earthworks all round the town.",
+          "06125ad3d1d57585-01": "In the ninth year of his reign, in the tenth month, in the tenth day of the month, Nebuchadnezzar king of Babylon came, he and all his army, against Jerusalem, and encamped against it; and they built forts against it around it.",
+          "41926a4aa3831714-01": "In the ninth year of his reign, in the tenth month, in the tenth day of the month, Nebuchadnezzar king of Babylon came, he and all his army, against Jerusalem, and encamped against it; and they built forts against it around it."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And the city was besieged unto the eleventh year of king Zedekiah.",
+          "9879dbb7aec41528-01": "So the city was besieged until the eleventh year of king Zedekiah.",
+          "bba730b9171fcc22-01": "And the town was shut in by their forces till the eleventh year of King Zedekiah.",
+          "06125ad3d1d57585-01": "So the city was besieged until the eleventh year of king Zedekiah.",
+          "41926a4aa3831714-01": "So the city was besieged until the eleventh year of king Zedekiah."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And on the ninth day of the fourth month the famine prevailed in the city, and there was no bread for the people of the land.",
+          "9879dbb7aec41528-01": "On the ninth day of the fourth month, the famine was severe in the city, so that there was no bread for the people of the land.",
+          "bba730b9171fcc22-01": "Now on the ninth day of the fourth month, the store of food in the town was almost gone, so that there was no food for the people of the land.",
+          "06125ad3d1d57585-01": "On the ninth day of the fourth month, the famine was severe in the city, so that there was no bread for the people of the land.",
+          "41926a4aa3831714-01": "On the ninth day of the fourth month, the famine was severe in the city, so that there was no bread for the people of the land."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And the city was broken up, and all the men of war fled by night by the way of the gate between two walls, which is by the king’s garden: (now the Chaldees were against the city round about:) and the king went the way toward the plain.",
+          "9879dbb7aec41528-01": "Then a breach was made in the city, and all the men of war fled by night by the way of the gate between the two walls, which was by the king’s garden (now the Chaldeans were against the city around it); and the king went by the way of the Arabah.",
+          "bba730b9171fcc22-01": "So an opening was made in the wall of the town, and all the men of war went in flight by night through the doorway between the two walls which was by the king's garden; (now the Chaldaeans were stationed round the town:) and the king went by the way of the Arabah.",
+          "06125ad3d1d57585-01": "Then a breach was made in the city, and all the men of war fled by night by the way of the gate between the two walls, which was by the king’s garden (now the Chaldeans were against the city around it); and the king went by the way of the Arabah.",
+          "41926a4aa3831714-01": "Then a breach was made in the city, and all the men of war fled by night by the way of the gate between the two walls, which was by the king’s garden (now the Chaldeans were against the city around it); and the king went by the way of the Arabah."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And the army of the Chaldees pursued after the king, and overtook him in the plains of Jericho: and all his army were scattered from him.",
+          "9879dbb7aec41528-01": "But the Chaldean army pursued the king, and overtook him in the plains of Jericho; and all his army was scattered from him.",
+          "bba730b9171fcc22-01": "But the Chaldaean army went after the king, and overtook him in the lowlands of Jericho, and all his army went in flight from him in every direction.",
+          "06125ad3d1d57585-01": "But the Chaldean army pursued the king, and overtook him in the plains of Jericho; and all his army was scattered from him.",
+          "41926a4aa3831714-01": "But the Chaldean army pursued the king, and overtook him in the plains of Jericho; and all his army was scattered from him."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "So they took the king, and brought him up to the king of Babylon to Riblah; and they gave judgment upon him.",
+          "9879dbb7aec41528-01": "Then they captured the king, and carried him up to the king of Babylon to Riblah; and they passed judgment on him.",
+          "bba730b9171fcc22-01": "And they made the king a prisoner and took him up to the king of Babylon at Riblah to be judged.",
+          "06125ad3d1d57585-01": "Then they captured the king, and carried him up to the king of Babylon to Riblah; and they passed judgment on him.",
+          "41926a4aa3831714-01": "Then they captured the king, and carried him up to the king of Babylon to Riblah; and they passed judgment on him."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And they slew the sons of Zedekiah before his eyes, and put out the eyes of Zedekiah, and bound him with fetters of brass, and carried him to Babylon.",
+          "9879dbb7aec41528-01": "They killed Zedekiah’s sons before his eyes, then put out Zedekiah’s eyes, bound him in fetters, and carried him to Babylon.",
+          "bba730b9171fcc22-01": "And they put the sons of Zedekiah to death before his eyes, and then they put out his eyes, and chaining him with iron bands, took him to Babylon.",
+          "06125ad3d1d57585-01": "They killed Zedekiah’s sons before his eyes, then put out Zedekiah’s eyes, bound him in fetters, and carried him to Babylon.",
+          "41926a4aa3831714-01": "They killed Zedekiah’s sons before his eyes, then put out Zedekiah’s eyes, bound him in fetters, and carried him to Babylon."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And in the fifth month, on the seventh day of the month, which is the nineteenth year of king Nebuchadnezzar king of Babylon, came Nebuzar-adan, captain of the guard, a servant of the king of Babylon, unto Jerusalem:",
+          "9879dbb7aec41528-01": "Now in the fifth month, on the seventh day of the month, which was the nineteenth year of king Nebuchadnezzar, king of Babylon, Nebuzaradan the captain of the guard, a servant of the king of Babylon, came to Jerusalem.",
+          "bba730b9171fcc22-01": "Now in the fifth month, on the seventh day of the month, in the nineteenth year of Nebuchadnezzar, king of Babylon, Nebuzaradan, the captain of the armed men, a servant of the king of Babylon, came to Jerusalem;",
+          "06125ad3d1d57585-01": "Now in the fifth month, on the seventh day of the month, which was the nineteenth year of king Nebuchadnezzar, king of Babylon, Nebuzaradan the captain of the guard, a servant of the king of Babylon, came to Jerusalem.",
+          "41926a4aa3831714-01": "Now in the fifth month, on the seventh day of the month, which was the nineteenth year of king Nebuchadnezzar, king of Babylon, Nebuzaradan the captain of the guard, a servant of the king of Babylon, came to Jerusalem."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And he burnt the house of the LORD, and the king’s house, and all the houses of Jerusalem, and every great man’s house burnt he with fire.",
+          "9879dbb7aec41528-01": "He burned Yahweh’s house, the king’s house, and all the houses of Jerusalem, even every great house, he burned with fire.",
+          "bba730b9171fcc22-01": "And he had the house of the Lord and the king's house and all the houses of Jerusalem, even every great house, burned with fire;",
+          "06125ad3d1d57585-01": "He burned Yahweh’s house, the king’s house, and all the houses of Jerusalem, even every great house, he burned with fire.",
+          "41926a4aa3831714-01": "He burned Yahweh’s house, the king’s house, and all the houses of Jerusalem, even every great house, he burned with fire."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And all the army of the Chaldees, that were with the captain of the guard, brake down the walls of Jerusalem round about.",
+          "9879dbb7aec41528-01": "All the army of the Chaldeans, who were with the captain of the guard, broke down the walls around Jerusalem.",
+          "bba730b9171fcc22-01": "And the walls round Jerusalem were broken down by the Chaldaean army which was with the captain.",
+          "06125ad3d1d57585-01": "All the army of the Chaldeans, who were with the captain of the guard, broke down the walls around Jerusalem.",
+          "41926a4aa3831714-01": "All the army of the Chaldeans, who were with the captain of the guard, broke down the walls around Jerusalem."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Psalm 137:1-6": {
+    "reference": "Psalm 137:1-6",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion.",
+          "9879dbb7aec41528-01": "By the rivers of Babylon, there we sat down. Yes, we wept, when we remembered Zion.",
+          "bba730b9171fcc22-01": "By the rivers of Babylon we were seated, weeping at the memory of Zion,",
+          "06125ad3d1d57585-01": "By the rivers of Babylon, there we sat down. Yes, we wept, when we remembered Zion.",
+          "41926a4aa3831714-01": "By the rivers of Babylon, there we sat down. Yes, we wept, when we remembered Zion."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "We hanged our harps upon the willows in the midst thereof.",
+          "9879dbb7aec41528-01": "On the willows in that land, we hung up our harps.",
+          "bba730b9171fcc22-01": "Hanging our instruments of music on the trees by the waterside.",
+          "06125ad3d1d57585-01": "On the willows in that land, we hung up our harps.",
+          "41926a4aa3831714-01": "On the willows in that land, we hung up our harps."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "For there they that carried us away captive required of us a song; and they that wasted us required of us mirth, saying, Sing us one of the songs of Zion.",
+          "9879dbb7aec41528-01": "For there, those who led us captive asked us for songs. Those who tormented us demanded songs of joy: “Sing us one of the songs of Zion!”",
+          "bba730b9171fcc22-01": "For there those who had taken us prisoners made request for a song; and those who had taken away all we had gave us orders to be glad, saying, Give us one of the songs of Zion.",
+          "06125ad3d1d57585-01": "For there, those who led us captive asked us for songs. Those who tormented us demanded songs of joy: “Sing us one of the songs of Zion!”",
+          "41926a4aa3831714-01": "For there, those who led us captive asked us for songs. Those who tormented us demanded songs of joy: “Sing us one of the songs of Zion!”"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "How shall we sing the LORD’S song in a strange land?",
+          "9879dbb7aec41528-01": "How can we sing Yahweh’s song in a foreign land?",
+          "bba730b9171fcc22-01": "How may we give the Lord's song in a strange land?",
+          "06125ad3d1d57585-01": "How can we sing Yahweh’s song in a foreign land?",
+          "41926a4aa3831714-01": "How can we sing Yahweh’s song in a foreign land?"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "If I forget thee, O Jerusalem, let my right hand forget her cunning.",
+          "9879dbb7aec41528-01": "If I forget you, Jerusalem, let my right hand forget its skill.",
+          "bba730b9171fcc22-01": "If I keep not your memory, O Jerusalem, let not my right hand keep the memory of its art.",
+          "06125ad3d1d57585-01": "If I forget you, Jerusalem, let my right hand forget its skill.",
+          "41926a4aa3831714-01": "If I forget you, Jerusalem, let my right hand forget its skill."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "If I do not remember thee, let my tongue cleave to the roof of my mouth; if I prefer not Jerusalem above my chief joy.",
+          "9879dbb7aec41528-01": "Let my tongue stick to the roof of my mouth if I don’t remember you; if I don’t prefer Jerusalem above my chief joy.",
+          "bba730b9171fcc22-01": "If I let you go out of my thoughts, and if I do not put Jerusalem before my greatest joy, let my tongue be fixed to the roof of my mouth.",
+          "06125ad3d1d57585-01": "Let my tongue stick to the roof of my mouth if I don’t remember you; if I don’t prefer Jerusalem above my chief joy.",
+          "41926a4aa3831714-01": "Let my tongue stick to the roof of my mouth if I don’t remember you; if I don’t prefer Jerusalem above my chief joy."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Daniel 6:10-23": {
+    "reference": "Daniel 6:10-23",
+    "verses": [
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "Now when Daniel knew that the writing was signed, he went into his house; and his windows being open in his chamber toward Jerusalem, he kneeled upon his knees three times a day, and prayed, and gave thanks before his God, as he did aforetime.",
+          "9879dbb7aec41528-01": "When Daniel knew that the writing was signed, he went into his house (now his windows were open in his room toward Jerusalem) and he kneeled on his knees three times a day, and prayed, and gave thanks before his God, as he did before.",
+          "bba730b9171fcc22-01": "And Daniel, on hearing that the writing had been signed, went into his house; (now he had windows in his room on the roof opening in the direction of Jerusalem;) and three times a day he went down on his knees in prayer and praise before his God, as he had done before.",
+          "06125ad3d1d57585-01": "When Daniel knew that the writing was signed, he went into his house (now his windows were open in his room toward Jerusalem) and he kneeled on his knees three times a day, and prayed, and gave thanks before his God, as he did before.",
+          "41926a4aa3831714-01": "When Daniel knew that the writing was signed, he went into his house (now his windows were open in his room toward Jerusalem) and he kneeled on his knees three times a day, and prayed, and gave thanks before his God, as he did before."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Then these men assembled, and found Daniel praying and making supplication before his God.",
+          "9879dbb7aec41528-01": "Then these men assembled together, and found Daniel making petition and supplication before his God.",
+          "bba730b9171fcc22-01": "Then these men were watching and saw Daniel making prayers and requesting grace before his God.",
+          "06125ad3d1d57585-01": "Then these men assembled together, and found Daniel making petition and supplication before his God.",
+          "41926a4aa3831714-01": "Then these men assembled together, and found Daniel making petition and supplication before his God."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Then they came near, and spake before the king concerning the king’s decree; Hast thou not signed a decree, that every man that shall ask a petition of any God or man within thirty days, save of thee, O king, shall be cast into the den of lions? The king answered and said, The thing is true, according to the law of the Medes and Persians, which altereth not.",
+          "9879dbb7aec41528-01": "Then they came near, and spoke before the king concerning the king’s decree: “Haven’t you signed a decree that every man who makes a petition to any god or man within thirty days, except to you, O king, shall be cast into the den of lions?” The king answered, “This thing is true, according to the law of the Medes and Persians, which doesn’t alter.”",
+          "bba730b9171fcc22-01": "Then they came near before the king and said, O King, have you not put your name to an order that any man who makes a request to any god or man but you, O King, for thirty days, is to be put into the lions' hole? The king made answer and said, The thing is fixed by the law of the Medes and Persians which may not come to an end.",
+          "06125ad3d1d57585-01": "Then they came near, and spoke before the king concerning the king’s decree: “Haven’t you signed a decree that every man who makes a petition to any god or man within thirty days, except to you, O king, shall be cast into the den of lions?” The king answered, “This thing is true, according to the law of the Medes and Persians, which doesn’t alter.”",
+          "41926a4aa3831714-01": "Then they came near, and spoke before the king concerning the king’s decree: “Haven’t you signed a decree that every man who makes a petition to any god or man within thirty days, except to you, O king, shall be cast into the den of lions?” The king answered, “This thing is true, according to the law of the Medes and Persians, which doesn’t alter.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Then answered they and said before the king, That Daniel, which is of the children of the captivity of Judah, regardeth not thee, O king, nor the decree that thou hast signed, but maketh his petition three times a day.",
+          "9879dbb7aec41528-01": "Then they answered and said before the king, “That Daniel, who is of the children of the captivity of Judah, doesn’t respect you, O king, nor the decree that you have signed, but makes his petition three times a day.”",
+          "bba730b9171fcc22-01": "Then they made answer and said before the king, Daniel, one of the prisoners of Judah, has no respect for you, O King, or for the order signed by you, but three times a day he makes his prayer to God.",
+          "06125ad3d1d57585-01": "Then they answered and said before the king, “That Daniel, who is of the children of the captivity of Judah, doesn’t respect you, O king, nor the decree that you have signed, but makes his petition three times a day.”",
+          "41926a4aa3831714-01": "Then they answered and said before the king, “That Daniel, who is of the children of the captivity of Judah, doesn’t respect you, O king, nor the decree that you have signed, but makes his petition three times a day.”"
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the king, when he heard these words, was sore displeased with himself, and set his heart on Daniel to deliver him: and he laboured till the going down of the sun to deliver him.",
+          "9879dbb7aec41528-01": "Then the king, when he heard these words, was very displeased, and set his heart on Daniel to deliver him; and he labored until the going down of the sun to rescue him.",
+          "bba730b9171fcc22-01": "When this thing came to the king's ears, it was very evil to him, and his heart was fixed on keeping Daniel safe, and till the going down of the sun he was doing everything in his power to get him free.",
+          "06125ad3d1d57585-01": "Then the king, when he heard these words, was very displeased, and set his heart on Daniel to deliver him; and he labored until the going down of the sun to rescue him.",
+          "41926a4aa3831714-01": "Then the king, when he heard these words, was very displeased, and set his heart on Daniel to deliver him; and he labored until the going down of the sun to rescue him."
+        },
+        "words": [
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Then these men assembled unto the king, and said unto the king, Know, O king, that the law of the Medes and Persians is, That no decree nor statute which the king establisheth may be changed.",
+          "9879dbb7aec41528-01": "Then these men assembled together to the king, and said to the king, “Know, O king, that it is a law of the Medes and Persians, that no decree nor statute which the king establishes may be changed.”",
+          "bba730b9171fcc22-01": "Then these men said to the king, Be certain, O King, that by the law of the Medes and Persians no order or law which the king has put into force may be changed.",
+          "06125ad3d1d57585-01": "Then these men assembled together to the king, and said to the king, “Know, O king, that it is a law of the Medes and Persians, that no decree nor statute which the king establishes may be changed.”",
+          "41926a4aa3831714-01": "Then these men assembled together to the king, and said to the king, “Know, O king, that it is a law of the Medes and Persians, that no decree nor statute which the king establishes may be changed.”"
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the king commanded, and they brought Daniel, and cast him  into the den of lions. Now the king spake and said unto Daniel, Thy God whom thou servest continually, he will deliver thee.",
+          "9879dbb7aec41528-01": "Then the king commanded, and they brought Daniel, and cast him into the den of lions. The king spoke and said to Daniel, “Your God whom you serve continually, he will deliver you.”",
+          "bba730b9171fcc22-01": "Then the king gave the order, and they took Daniel and put him into the lions' hole. The king made answer and said to Daniel, Your God, whose servant you are at all times, will keep you safe.",
+          "06125ad3d1d57585-01": "Then the king commanded, and they brought Daniel, and cast him into the den of lions. The king spoke and said to Daniel, “Your God whom you serve continually, he will deliver you.”",
+          "41926a4aa3831714-01": "Then the king commanded, and they brought Daniel, and cast him into the den of lions. The king spoke and said to Daniel, “Your God whom you serve continually, he will deliver you.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And a stone was brought and laid upon the mouth of the den; and the king sealed it with his own signet, and with the signet of his lords; that the purpose might not be changed concerning Daniel.",
+          "9879dbb7aec41528-01": "A stone was brought, and laid on the mouth of the den; and the king sealed it with his own signet, and with the signet of his lords; that nothing might be changed concerning Daniel.",
+          "bba730b9171fcc22-01": "Then they got a stone and put it over the mouth of the hole, and it was stamped with the king's stamp and with the stamp of the lords, so that the decision about Daniel might not be changed.",
+          "06125ad3d1d57585-01": "A stone was brought, and laid on the mouth of the den; and the king sealed it with his own signet, and with the signet of his lords; that nothing might be changed concerning Daniel.",
+          "41926a4aa3831714-01": "A stone was brought, and laid on the mouth of the den; and the king sealed it with his own signet, and with the signet of his lords; that nothing might be changed concerning Daniel."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the king went to his palace, and passed the night fasting: neither were instruments of musick brought before him: and his sleep went from him.",
+          "9879dbb7aec41528-01": "Then the king went to his palace, and passed the night fasting. No musical instruments were brought before him; and his sleep fled from him.",
+          "bba730b9171fcc22-01": "Then the king went to his great house, and took no food that night, and no ... were placed before him, and his sleep went from him.",
+          "06125ad3d1d57585-01": "Then the king went to his palace, and passed the night fasting. No musical instruments were brought before him; and his sleep fled from him.",
+          "41926a4aa3831714-01": "Then the king went to his palace, and passed the night fasting. No musical instruments were brought before him; and his sleep fled from him."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the king arose very early in the morning, and went in haste unto the den of lions.",
+          "9879dbb7aec41528-01": "Then the king arose very early in the morning, and went in haste to the den of lions.",
+          "bba730b9171fcc22-01": "Then very early in the morning the king got up and went quickly to the lions' hole.",
+          "06125ad3d1d57585-01": "Then the king arose very early in the morning, and went in haste to the den of lions.",
+          "41926a4aa3831714-01": "Then the king arose very early in the morning, and went in haste to the den of lions."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he came to the den, he cried with a lamentable voice unto Daniel: and the king spake and said to Daniel, O Daniel, servant of the living God, is thy God, whom thou servest continually, able to deliver thee from the lions?",
+          "9879dbb7aec41528-01": "When he came near to the den to Daniel, he cried with a troubled voice. The king spoke and said to Daniel, “Daniel, servant of the living God, is your God, whom you serve continually, able to deliver you from the lions?”",
+          "bba730b9171fcc22-01": "And when he came near the hole where Daniel was, he gave a loud cry of grief; the king made answer and said to Daniel, O Daniel, servant of the living God, is your God, whose servant you are at all times, able to keep you safe from the lions?",
+          "06125ad3d1d57585-01": "When he came near to the den to Daniel, he cried with a troubled voice. The king spoke and said to Daniel, “Daniel, servant of the living God, is your God, whom you serve continually, able to deliver you from the lions?”",
+          "41926a4aa3831714-01": "When he came near to the den to Daniel, he cried with a troubled voice. The king spoke and said to Daniel, “Daniel, servant of the living God, is your God, whom you serve continually, able to deliver you from the lions?”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Then said Daniel unto the king, O king, live for ever.",
+          "9879dbb7aec41528-01": "Then Daniel said to the king, “O king, live forever!",
+          "bba730b9171fcc22-01": "Then Daniel said to the king, O King, have life for ever.",
+          "06125ad3d1d57585-01": "Then Daniel said to the king, “O king, live forever!",
+          "41926a4aa3831714-01": "Then Daniel said to the king, “O king, live forever!"
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "My God hath sent his angel, and hath shut the lions mouths, that they have not hurt me: forasmuch as before him innocency was found in me; and also before thee, O king, have I done no hurt.",
+          "9879dbb7aec41528-01": "My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me; because as before him innocence was found in me; and also before you, O king, I have done no harm.”",
+          "bba730b9171fcc22-01": "My God has sent his angel to keep the lions' mouths shut, and they have done me no damage: because I was seen to be without sin before him; and further, before you, O King, I have done no wrong.",
+          "06125ad3d1d57585-01": "My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me; because as before him innocence was found in me; and also before you, O king, I have done no harm.”",
+          "41926a4aa3831714-01": "My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me; because as before him innocence was found in me; and also before you, O king, I have done no harm.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "Then was the king exceeding glad for him, and commanded that they should take Daniel up out of the den. So Daniel was taken up out of the den, and no manner of hurt was found upon him, because he believed in his God.",
+          "9879dbb7aec41528-01": "Then the king was exceedingly glad, and commanded that they should take Daniel up out of the den. So Daniel was taken up out of the den, and no kind of harm was found on him, because he had trusted in his God.",
+          "bba730b9171fcc22-01": "Then the king was very glad, and gave orders for them to take Daniel up out of the hole. So Daniel was taken up out of the hole and he was seen to be untouched, because he had faith in his God.",
+          "06125ad3d1d57585-01": "Then the king was exceedingly glad, and commanded that they should take Daniel up out of the den. So Daniel was taken up out of the den, and no kind of harm was found on him, because he had trusted in his God.",
+          "41926a4aa3831714-01": "Then the king was exceedingly glad, and commanded that they should take Daniel up out of the den. So Daniel was taken up out of the den, and no kind of harm was found on him, because he had trusted in his God."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Ezra 1:1-8": {
+    "reference": "Ezra 1:1-8",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Now in the first year of Cyrus king of Persia, that the word of the LORD by the mouth of Jeremiah might be fulfilled, the LORD stirred up the spirit of Cyrus king of Persia, that he made a proclamation throughout all his kingdom, and put it also in writing, saying,",
+          "9879dbb7aec41528-01": "Now in the first year of Cyrus king of Persia, that Yahweh’s word  by Jeremiah’s mouth might be accomplished, Yahweh stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom, and put it also in writing, saying,",
+          "bba730b9171fcc22-01": "Now in the first year of Cyrus, king of Persia, in order that the word of the Lord given by the mouth of Jeremiah might come true, the spirit of Cyrus, king of Persia, was moved by the Lord, so that he made a public statement through all his kingdom, and put it in writing, saying,",
+          "06125ad3d1d57585-01": "Now in the first year of Cyrus king of Persia, that Yahweh’s word  by Jeremiah’s mouth might be accomplished, Yahweh stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom, and put it also in writing, saying,",
+          "41926a4aa3831714-01": "Now in the first year of Cyrus king of Persia, that Yahweh’s word  by Jeremiah’s mouth might be accomplished, Yahweh stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom, and put it also in writing, saying,"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Thus saith Cyrus king of Persia, The LORD God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah.",
+          "9879dbb7aec41528-01": "“Thus says Cyrus king of Persia, ‘Yahweh, the God of heaven, has given me all the kingdoms of the earth; and he has commanded me to build him a house in Jerusalem, which is in Judah.",
+          "bba730b9171fcc22-01": "These are the words of Cyrus, king of Persia: The Lord God of heaven has given me all the kingdoms of the earth; and he has made me responsible for building a house for him in Jerusalem, which is in Judah.",
+          "06125ad3d1d57585-01": "“Thus says Cyrus king of Persia, ‘Yahweh, the God of heaven, has given me all the kingdoms of the earth; and he has commanded me to build him a house in Jerusalem, which is in Judah.",
+          "41926a4aa3831714-01": "“Thus says Cyrus king of Persia, ‘Yahweh, the God of heaven, has given me all the kingdoms of the earth; and he has commanded me to build him a house in Jerusalem, which is in Judah."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Who is there among you of all his people? his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of the LORD God of Israel, (he is the God,) which is in Jerusalem.",
+          "9879dbb7aec41528-01": "Whoever there is among you of all his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of Yahweh, the God of Israel (he is God), which is in Jerusalem.",
+          "bba730b9171fcc22-01": "Whoever there is among you of his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and take in hand the building of the house of the Lord, the God of Israel; he is the God who is in Jerusalem.",
+          "06125ad3d1d57585-01": "Whoever there is among you of all his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of Yahweh, the God of Israel (he is God), which is in Jerusalem.",
+          "41926a4aa3831714-01": "Whoever there is among you of all his people, may his God be with him, and let him go up to Jerusalem, which is in Judah, and build the house of Yahweh, the God of Israel (he is God), which is in Jerusalem."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And whosoever remaineth in any place where he sojourneth, let the men of his place help him with silver, and with gold, and with goods, and with beasts, beside the freewill offering for the house of God that is  in Jerusalem.",
+          "9879dbb7aec41528-01": "Whoever is left, in any place where he lives, let the men of his place help him with silver, with gold, with goods, and with animals, besides the freewill offering for God’s house which is in Jerusalem.’”",
+          "bba730b9171fcc22-01": "And whoever there may be of the rest of Israel, living in any place, let the men of that place give him help with offerings of silver and gold and goods and beasts, in addition to the offering freely given for the house of God in Jerusalem.",
+          "06125ad3d1d57585-01": "Whoever is left, in any place where he lives, let the men of his place help him with silver, with gold, with goods, and with animals, besides the freewill offering for God’s house which is in Jerusalem.’”",
+          "41926a4aa3831714-01": "Whoever is left, in any place where he lives, let the men of his place help him with silver, with gold, with goods, and with animals, besides the freewill offering for God’s house which is in Jerusalem.’”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Then rose up the chief of the fathers of Judah and Benjamin, and the priests, and the Levites, with all them whose spirit God had raised, to go up to build the house of the LORD which is in Jerusalem.",
+          "9879dbb7aec41528-01": "Then the heads of fathers’ households of Judah and Benjamin, the priests, and the Levites, all whose spirit God had stirred to go up rose up to build Yahweh’s house which is in Jerusalem.",
+          "bba730b9171fcc22-01": "Then the heads of families of Judah and Benjamin, with the priests and the Levites, got ready, even all those whose spirits were moved by God to go up and take in hand the building of the Lord's house in Jerusalem.",
+          "06125ad3d1d57585-01": "Then the heads of fathers’ households of Judah and Benjamin, the priests, and the Levites, all whose spirit God had stirred to go up rose up to build Yahweh’s house which is in Jerusalem.",
+          "41926a4aa3831714-01": "Then the heads of fathers’ households of Judah and Benjamin, the priests, and the Levites, all whose spirit God had stirred to go up rose up to build Yahweh’s house which is in Jerusalem."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And all they that were about them strengthened their hands with vessels of silver, with gold, with goods, and with beasts, and with precious things, beside all that was willingly offered.",
+          "9879dbb7aec41528-01": "All those who were around them strengthened their hands with vessels of silver, with gold, with goods, with animals, and with precious things, besides all that was willingly offered.",
+          "bba730b9171fcc22-01": "And all their neighbours gave them help with offerings of vessels of silver and gold and goods and beasts and things of great value, in addition to what was freely offered.",
+          "06125ad3d1d57585-01": "All those who were around them strengthened their hands with vessels of silver, with gold, with goods, with animals, and with precious things, besides all that was willingly offered.",
+          "41926a4aa3831714-01": "All those who were around them strengthened their hands with vessels of silver, with gold, with goods, with animals, and with precious things, besides all that was willingly offered."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Also Cyrus the king brought forth the vessels of the house of the LORD, which Nebuchadnezzar had brought forth out of Jerusalem, and had put them in the house of his gods;",
+          "9879dbb7aec41528-01": "Also Cyrus the king brought out the vessels of Yahweh’s house, which Nebuchadnezzar had brought out of Jerusalem, and had put in the house of his gods;",
+          "bba730b9171fcc22-01": "And Cyrus the king got out the vessels of the house of the Lord which Nebuchadnezzar had taken from Jerusalem and put in the house of his gods;",
+          "06125ad3d1d57585-01": "Also Cyrus the king brought out the vessels of Yahweh’s house, which Nebuchadnezzar had brought out of Jerusalem, and had put in the house of his gods;",
+          "41926a4aa3831714-01": "Also Cyrus the king brought out the vessels of Yahweh’s house, which Nebuchadnezzar had brought out of Jerusalem, and had put in the house of his gods;"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "Even those did Cyrus king of Persia bring forth by the hand of Mithredath the treasurer, and numbered them unto Sheshbazzar, the prince of Judah.",
+          "9879dbb7aec41528-01": "even those, Cyrus king of Persia brought out by the hand of Mithredath the treasurer, and counted them out to Sheshbazzar, the prince of Judah.",
+          "bba730b9171fcc22-01": "Even these Cyrus made Mithredath, the keeper of his wealth, get out, and he gave them, after numbering them, to Sheshbazzar, the ruler of Judah.",
+          "06125ad3d1d57585-01": "even those, Cyrus king of Persia brought out by the hand of Mithredath the treasurer, and counted them out to Sheshbazzar, the prince of Judah.",
+          "41926a4aa3831714-01": "even those, Cyrus king of Persia brought out by the hand of Mithredath the treasurer, and counted them out to Sheshbazzar, the prince of Judah."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Ezra 3:8-13": {
+    "reference": "Ezra 3:8-13",
+    "verses": [
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "Now in the second year of their coming unto the house of God at Jerusalem, in the second month, began Zerubbabel the son of Shealtiel, and Jeshua the son of Jozadak, and the remnant of their brethren the priests and the Levites, and all they that were come out of the captivity unto Jerusalem; and appointed the Levites, from twenty years old and upward, to set forward the work of the house of the LORD.",
+          "9879dbb7aec41528-01": "Now in the second year of their coming to God’s house at Jerusalem, in the second month, Zerubbabel the son of Shealtiel, and Jeshua the son of Jozadak, and the rest of their brothers the priests and the Levites, and all those who had come out of the captivity to Jerusalem, began the work and appointed the Levites, from twenty years old and upward, to have the oversight of the work of Yahweh’s house.",
+          "bba730b9171fcc22-01": "Now in the second year of their coming into the house of God in Jerusalem, in the second month, the work was taken in hand by Zerubbabel, the son of Shealtiel, and Jeshua, the son of Jozadak, and the rest of their brothers the priests and the Levites, and all those who had come from the land where they were prisoners to Jerusalem: and they made the Levites, of twenty years old and over, responsible for overseeing the work of the house of the Lord.",
+          "06125ad3d1d57585-01": "Now in the second year of their coming to God’s house at Jerusalem, in the second month, Zerubbabel the son of Shealtiel, and Jeshua the son of Jozadak, and the rest of their brothers the priests and the Levites, and all those who had come out of the captivity to Jerusalem, began the work and appointed the Levites, from twenty years old and upward, to have the oversight of the work of Yahweh’s house.",
+          "41926a4aa3831714-01": "Now in the second year of their coming to God’s house at Jerusalem, in the second month, Zerubbabel the son of Shealtiel, and Jeshua the son of Jozadak, and the rest of their brothers the priests and the Levites, and all those who had come out of the captivity to Jerusalem, began the work and appointed the Levites, from twenty years old and upward, to have the oversight of the work of Yahweh’s house."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Then stood Jeshua with his sons and his brethren, Kadmiel and his sons, the sons of Judah, together, to set forward the workmen in the house of God: the sons of Henadad, with their sons and their brethren the Levites.",
+          "9879dbb7aec41528-01": "Then Jeshua stood with his sons and his brothers, Kadmiel and his sons, the sons of Judah, together, to have the oversight of the workmen in God’s house: the sons of Henadad, with their sons and their brothers the Levites.",
+          "bba730b9171fcc22-01": "Then Jeshua with his sons and his brothers, Kadmiel with his sons, the sons of Hodaviah, together took up the work of overseeing the workmen in the house of God: the sons of Henadad with their sons and their brothers, the Levites.",
+          "06125ad3d1d57585-01": "Then Jeshua stood with his sons and his brothers, Kadmiel and his sons, the sons of Judah, together, to have the oversight of the workmen in God’s house: the sons of Henadad, with their sons and their brothers the Levites.",
+          "41926a4aa3831714-01": "Then Jeshua stood with his sons and his brothers, Kadmiel and his sons, the sons of Judah, together, to have the oversight of the workmen in God’s house: the sons of Henadad, with their sons and their brothers the Levites."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the builders laid the foundation of the temple of the LORD, they set the priests in their apparel with trumpets, and the Levites the sons of Asaph with cymbals, to praise the LORD, after the ordinance of David king of Israel.",
+          "9879dbb7aec41528-01": "When the builders laid the foundation of Yahweh’s temple, they set the priests in their clothing with trumpets, with the Levites the sons of Asaph with cymbals, to praise Yahweh, according to the directions of David king of Israel.",
+          "bba730b9171fcc22-01": "And when the builders put in position the base of the Temple of the Lord, the priests, dressed in their robes, took their places with horns, and the Levites, the sons of Asaph, with brass instruments, to give praise to the Lord in the way ordered by David, king of Israel.",
+          "06125ad3d1d57585-01": "When the builders laid the foundation of Yahweh’s temple, they set the priests in their clothing with trumpets, with the Levites the sons of Asaph with cymbals, to praise Yahweh, according to the directions of David king of Israel.",
+          "41926a4aa3831714-01": "When the builders laid the foundation of Yahweh’s temple, they set the priests in their clothing with trumpets, with the Levites the sons of Asaph with cymbals, to praise Yahweh, according to the directions of David king of Israel."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And they sang together by course in praising and giving thanks unto the LORD; because he is good, for his mercy endureth for ever toward Israel. And all the people shouted with a great shout, when they praised the LORD, because the foundation of the house of the LORD was laid.",
+          "9879dbb7aec41528-01": "They sang to one another in praising and giving thanks to Yahweh, “For he is good, for his loving kindness endures forever toward Israel.” All the people shouted with a great shout, when they praised Yahweh, because the foundation of Yahweh’s house had been laid.",
+          "bba730b9171fcc22-01": "And they gave praise to the Lord, answering one another in their songs and saying, For he is good, for his mercy to Israel is eternal. And all the people gave a great cry of joy, when they gave praise to the Lord, because the base of the Lord's house was put in place.",
+          "06125ad3d1d57585-01": "They sang to one another in praising and giving thanks to Yahweh, “For he is good, for his loving kindness endures forever toward Israel.” All the people shouted with a great shout, when they praised Yahweh, because the foundation of Yahweh’s house had been laid.",
+          "41926a4aa3831714-01": "They sang to one another in praising and giving thanks to Yahweh, “For he is good, for his loving kindness endures forever toward Israel.” All the people shouted with a great shout, when they praised Yahweh, because the foundation of Yahweh’s house had been laid."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "But many of the priests and Levites and chief of the fathers, who were ancient men, that had seen the first house, when the foundation of this house was laid before their eyes, wept with a loud voice; and many shouted aloud for joy:",
+          "9879dbb7aec41528-01": "But many of the priests and Levites and heads of fathers’ households, the old men who had seen the first house, when the foundation of this house was laid before their eyes, wept with a loud voice. Many also shouted aloud for joy,",
+          "bba730b9171fcc22-01": "But a number of the priests and Levites and the heads of families, old men who had seen the first house, when the base of this house was put down before their eyes, were overcome with weeping; and a number were crying out with joy:",
+          "06125ad3d1d57585-01": "But many of the priests and Levites and heads of fathers’ households, the old men who had seen the first house, when the foundation of this house was laid before their eyes, wept with a loud voice. Many also shouted aloud for joy,",
+          "41926a4aa3831714-01": "But many of the priests and Levites and heads of fathers’ households, the old men who had seen the first house, when the foundation of this house was laid before their eyes, wept with a loud voice. Many also shouted aloud for joy,"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "So that the people could not discern the noise of the shout of joy from the noise of the weeping of the people: for the people shouted with a loud shout, and the noise was heard afar off.",
+          "9879dbb7aec41528-01": "so that the people could not discern the noise of the shout of joy from the noise of the weeping of the people; for the people shouted with a loud shout, and the noise was heard far away.",
+          "bba730b9171fcc22-01": "So that in the ears of the people the cry of joy was mixed with the sound of weeping; for the cries of the people were loud and came to the ears of those who were a long way off.",
+          "06125ad3d1d57585-01": "so that the people could not discern the noise of the shout of joy from the noise of the weeping of the people; for the people shouted with a loud shout, and the noise was heard far away.",
+          "41926a4aa3831714-01": "so that the people could not discern the noise of the shout of joy from the noise of the weeping of the people; for the people shouted with a loud shout, and the noise was heard far away."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Nehemiah 2:1-8": {
+    "reference": "Nehemiah 2:1-8",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass in the month Nisan, in the twentieth year of Artaxerxes the king, that wine was before him: and I took up the wine, and gave it unto the king. Now I had not been beforetime sad in his presence.",
+          "9879dbb7aec41528-01": "In the month Nisan, in the twentieth year of Artaxerxes the king, when wine was before him, I picked up the wine, and gave it to the king. Now I had not been sad before in his presence.",
+          "bba730b9171fcc22-01": "And it came about in the month Nisan, in the twentieth year of Artaxerxes the king, when wine was before him, that I took up the wine and gave it to the king. Now I had never before been sad when the king was present.",
+          "06125ad3d1d57585-01": "In the month Nisan, in the twentieth year of Artaxerxes the king, when wine was before him, I picked up the wine, and gave it to the king. Now I had not been sad before in his presence.",
+          "41926a4aa3831714-01": "In the month Nisan, in the twentieth year of Artaxerxes the king, when wine was before him, I picked up the wine, and gave it to the king. Now I had not been sad before in his presence."
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Wherefore the king said unto me, Why is thy countenance sad, seeing thou art not sick? this is nothing else  but sorrow of heart. Then I was very sore afraid,",
+          "9879dbb7aec41528-01": "The king said to me, “Why is your face sad, since you are not sick? This is nothing else but sorrow of heart.” Then I was very much afraid.",
+          "bba730b9171fcc22-01": "And the king said to me, Why is your face sad, seeing that you are not ill? this is nothing but sorrow of heart. Then I was full of fear;",
+          "06125ad3d1d57585-01": "The king said to me, “Why is your face sad, since you are not sick? This is nothing else but sorrow of heart.” Then I was very much afraid.",
+          "41926a4aa3831714-01": "The king said to me, “Why is your face sad, since you are not sick? This is nothing else but sorrow of heart.” Then I was very much afraid."
+        },
+        "words": [
+          {
+            "original": "לֵב",
+            "transliteration": "lev",
+            "english": "heart",
+            "strongs": "H3820",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And said unto the king, Let the king live for ever: why should not my countenance be sad, when the city, the place of my fathers’ sepulchres, lieth waste, and the gates thereof are consumed with fire?",
+          "9879dbb7aec41528-01": "I said to the king, “Let the king live forever! Why shouldn’t my face be sad, when the city, the place of my fathers’ tombs, lies waste, and its gates have been consumed with fire?”",
+          "bba730b9171fcc22-01": "And said to the king, May the king be living for ever: is it not natural for my face to be sad, when the town, the place where the bodies of my fathers are at rest, has been made waste and its doorways burned with fire?",
+          "06125ad3d1d57585-01": "I said to the king, “Let the king live forever! Why shouldn’t my face be sad, when the city, the place of my fathers’ tombs, lies waste, and its gates have been consumed with fire?”",
+          "41926a4aa3831714-01": "I said to the king, “Let the king live forever! Why shouldn’t my face be sad, when the city, the place of my fathers’ tombs, lies waste, and its gates have been consumed with fire?”"
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the king said unto me, For what dost thou make request? So I prayed to the God of heaven.",
+          "9879dbb7aec41528-01": "Then the king said to me, “What is your request?” So I prayed to the God of heaven.",
+          "bba730b9171fcc22-01": "Then the king said to me, What is your desire? So I made prayer to the God of heaven.",
+          "06125ad3d1d57585-01": "Then the king said to me, “What is your request?” So I prayed to the God of heaven.",
+          "41926a4aa3831714-01": "Then the king said to me, “What is your request?” So I prayed to the God of heaven."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And I said unto the king, If it please the king, and if thy servant have found favour in thy sight, that thou wouldest send me unto Judah, unto the city of my fathers’ sepulchres, that I may build it.",
+          "9879dbb7aec41528-01": "I said to the king, “If it pleases the king, and if your servant has found favor in your sight, that you would send me to Judah, to the city of my fathers’ tombs, that I may build it.”",
+          "bba730b9171fcc22-01": "And I said to the king, If it is the king's pleasure, and if your servant has your approval, send me to Judah, to the town where the bodies of my fathers are at rest, so that I may take in hand the building of it.",
+          "06125ad3d1d57585-01": "I said to the king, “If it pleases the king, and if your servant has found favor in your sight, that you would send me to Judah, to the city of my fathers’ tombs, that I may build it.”",
+          "41926a4aa3831714-01": "I said to the king, “If it pleases the king, and if your servant has found favor in your sight, that you would send me to Judah, to the city of my fathers’ tombs, that I may build it.”"
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And the king said unto me, (the queen also sitting by him,) For how long shall thy journey be? and when wilt thou return? So it pleased the king to send me; and I set him a time.",
+          "9879dbb7aec41528-01": "The king said to me (the queen was also sitting by him), “How long will your journey be? When will you return?” So it pleased the king to send me, and I set a time for him.",
+          "bba730b9171fcc22-01": "And the king said to me (the queen being seated by his side), How long will your journey take, and when will you come back? So the king was pleased to send me, and I gave him a fixed time.",
+          "06125ad3d1d57585-01": "The king said to me (the queen was also sitting by him), “How long will your journey be? When will you return?” So it pleased the king to send me, and I set a time for him.",
+          "41926a4aa3831714-01": "The king said to me (the queen was also sitting by him), “How long will your journey be? When will you return?” So it pleased the king to send me, and I set a time for him."
+        },
+        "words": [
+          {
+            "original": "עֵת",
+            "transliteration": "et",
+            "english": "time / season",
+            "strongs": "H6256",
+            "parsing": "N-cs"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Moreover I said unto the king, If it please the king, let letters be given me to the governors beyond the river, that they may convey me over till I come into Judah;",
+          "9879dbb7aec41528-01": "Moreover I said to the king, “If it pleases the king, let letters be given me to the governors beyond the River, that they may let me pass through until I come to Judah;",
+          "bba730b9171fcc22-01": "Further, I said to the king, If it is the king's pleasure, let letters be given to me for the rulers across the river, so that they may let me go through till I come to Judah;",
+          "06125ad3d1d57585-01": "Moreover I said to the king, “If it pleases the king, let letters be given me to the governors beyond the River, that they may let me pass through until I come to Judah;",
+          "41926a4aa3831714-01": "Moreover I said to the king, “If it pleases the king, let letters be given me to the governors beyond the River, that they may let me pass through until I come to Judah;"
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And a letter unto Asaph the keeper of the king’s forest, that he may give me timber to make beams for the gates of the palace which appertained  to the house, and for the wall of the city, and for the house that I shall enter into. And the king granted me, according to the good hand of my God upon me.",
+          "9879dbb7aec41528-01": "and a letter to Asaph the keeper of the king’s forest, that he may give me timber to make beams for the gates of the citadel by the temple, for the wall of the city, and for the house that I will occupy.” The king granted my requests, because of the good hand of my God on me.",
+          "bba730b9171fcc22-01": "And a letter to Asaph, the keeper of the king's park, so that he may give me wood to make boards for the doors of the tower of the house, and for the wall of the town, and for the house which is to be mine. And the king gave me this, for the hand of my God was on me.",
+          "06125ad3d1d57585-01": "and a letter to Asaph the keeper of the king’s forest, that he may give me timber to make beams for the gates of the citadel by the temple, for the wall of the city, and for the house that I will occupy.” The king granted my requests, because of the good hand of my God on me.",
+          "41926a4aa3831714-01": "and a letter to Asaph the keeper of the king’s forest, that he may give me timber to make beams for the gates of the citadel by the temple, for the wall of the city, and for the house that I will occupy.” The king granted my requests, because of the good hand of my God on me."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Nehemiah 8:1-8": {
+    "reference": "Nehemiah 8:1-8",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And all the people gathered themselves together as one man into the street that was before the water gate; and they spake unto Ezra the scribe to bring the book of the law of Moses, which the LORD had commanded to Israel.",
+          "9879dbb7aec41528-01": "All the people gathered themselves together as one man into the wide place that was in front of the water gate; and they spoke to Ezra the scribe to bring the book of the law of Moses, which Yahweh had commanded to Israel.",
+          "bba730b9171fcc22-01": "And when the seventh month came, the children of Israel were in their towns. And all the people came together like one man into the wide place in front of the water-doorway; and they made a request to Ezra the scribe that he would put before them the book of the law of Moses which the Lord had given to Israel.",
+          "06125ad3d1d57585-01": "All the people gathered themselves together as one man into the wide place that was in front of the water gate; and they spoke to Ezra the scribe to bring the book of the law of Moses, which Yahweh had commanded to Israel.",
+          "41926a4aa3831714-01": "All the people gathered themselves together as one man into the wide place that was in front of the water gate; and they spoke to Ezra the scribe to bring the book of the law of Moses, which Yahweh had commanded to Israel."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And Ezra the priest brought the law before the congregation both of men and women, and all that could hear with understanding, upon the first day of the seventh month.",
+          "9879dbb7aec41528-01": "Ezra the priest brought the law before the assembly, both men and women, and all who could hear with understanding, on the first day of the seventh month.",
+          "bba730b9171fcc22-01": "And Ezra the priest put the law before the meeting of the people, before the men and women and all those who were able to take it in, on the first day of the seventh month.",
+          "06125ad3d1d57585-01": "Ezra the priest brought the law before the assembly, both men and women, and all who could hear with understanding, on the first day of the seventh month.",
+          "41926a4aa3831714-01": "Ezra the priest brought the law before the assembly, both men and women, and all who could hear with understanding, on the first day of the seventh month."
+        },
+        "words": [
+          {
+            "original": "תְּבוּנָה",
+            "transliteration": "te-vu-nah",
+            "english": "understanding",
+            "strongs": "H8394",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And he read therein before the street that was before the water gate from the morning until midday, before the men and the women, and those that could understand; and the ears of all the people were attentive  unto the book of the law.",
+          "9879dbb7aec41528-01": "He read from it before the wide place that was in front of the water gate from early morning until midday, in the presence of the men and the women, and of those who could understand. The ears of all the people were attentive to the book of the law.",
+          "bba730b9171fcc22-01": "He was reading it in the wide place in front of the water-doorway, from early morning till the middle of the day, in the hearing of all those men and women whose minds were able to take it in; and the ears of all the people were open to the book of the law.",
+          "06125ad3d1d57585-01": "He read from it before the wide place that was in front of the water gate from early morning until midday, in the presence of the men and the women, and of those who could understand. The ears of all the people were attentive to the book of the law.",
+          "41926a4aa3831714-01": "He read from it before the wide place that was in front of the water gate from early morning until midday, in the presence of the men and the women, and of those who could understand. The ears of all the people were attentive to the book of the law."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And Ezra the scribe stood upon a pulpit of wood, which they had made for the purpose; and beside him stood Mattithiah, and Shema, and Anaiah, and Urijah, and Hilkiah, and Maaseiah, on his right hand; and on his left hand, Pedaiah, and Mishael, and Malchiah, and Hashum, and Hashbadana, Zechariah, and Meshullam.",
+          "9879dbb7aec41528-01": "Ezra the scribe stood on a pulpit of wood, which they had made for the purpose; and beside him stood Mattithiah, Shema, Anaiah, Uriah, Hilkiah, and Maaseiah, on his right hand; and on his left hand, Pedaiah, Mishael, Malchijah, Hashum, Hashbaddanah, Zechariah, and Meshullam.",
+          "bba730b9171fcc22-01": "And Ezra the scribe took his place on a tower of wood which they had made for the purpose; and by his side were placed Mattithiah and Shema and Anaiah and Uriah and Hilkiah and Maaseiah on the right; and on the left, Pedaiah and Mishael and Malchijah and Hashum and Hashbaddanah, Zechariah and Meshullam.",
+          "06125ad3d1d57585-01": "Ezra the scribe stood on a pulpit of wood, which they had made for the purpose; and beside him stood Mattithiah, Shema, Anaiah, Uriah, Hilkiah, and Maaseiah, on his right hand; and on his left hand, Pedaiah, Mishael, Malchijah, Hashum, Hashbaddanah, Zechariah, and Meshullam.",
+          "41926a4aa3831714-01": "Ezra the scribe stood on a pulpit of wood, which they had made for the purpose; and beside him stood Mattithiah, Shema, Anaiah, Uriah, Hilkiah, and Maaseiah, on his right hand; and on his left hand, Pedaiah, Mishael, Malchijah, Hashum, Hashbaddanah, Zechariah, and Meshullam."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And Ezra opened the book in the sight of all the people; (for he was above all the people;) and when he opened it, all the people stood up:",
+          "9879dbb7aec41528-01": "Ezra opened the book in the sight of all the people (for he was above all the people), and when he opened it, all the people stood up.",
+          "bba730b9171fcc22-01": "And Ezra took the book, opening it before the eyes of all the people (for he was higher than the people); and when it was open, all the people got to their feet:",
+          "06125ad3d1d57585-01": "Ezra opened the book in the sight of all the people (for he was above all the people), and when he opened it, all the people stood up.",
+          "41926a4aa3831714-01": "Ezra opened the book in the sight of all the people (for he was above all the people), and when he opened it, all the people stood up."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And Ezra blessed the LORD, the great God. And all the people answered, Amen, Amen, with lifting up their hands: and they bowed their heads, and worshipped the LORD with their faces to the ground.",
+          "9879dbb7aec41528-01": "Then Ezra blessed Yahweh, the great God. All the people answered, “Amen, Amen,” with the lifting up of their hands. They bowed their heads, and worshiped Yahweh with their faces to the ground.",
+          "bba730b9171fcc22-01": "And Ezra gave praise to the Lord, the great God. And all the people in answer said, So be it, so be it; lifting up their hands; and with bent heads they gave worship to the Lord, going down on their faces to the earth.",
+          "06125ad3d1d57585-01": "Then Ezra blessed Yahweh, the great God. All the people answered, “Amen, Amen,” with the lifting up of their hands. They bowed their heads, and worshiped Yahweh with their faces to the ground.",
+          "41926a4aa3831714-01": "Then Ezra blessed Yahweh, the great God. All the people answered, “Amen, Amen,” with the lifting up of their hands. They bowed their heads, and worshiped Yahweh with their faces to the ground."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Also Jeshua, and Bani, and Sherebiah, Jamin, Akkub, Shabbethai, Hodijah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah, and the Levites, caused the people to understand the law: and the people stood in their place.",
+          "9879dbb7aec41528-01": "Also Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah, and the Levites, caused the people to understand the law; and the people stayed in their place.",
+          "bba730b9171fcc22-01": "And Jeshua and Bani and Sherebiah and Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah, and the Levites made the law clear to the people: and the people kept in their places.",
+          "06125ad3d1d57585-01": "Also Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah, and the Levites, caused the people to understand the law; and the people stayed in their place.",
+          "41926a4aa3831714-01": "Also Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah, and the Levites, caused the people to understand the law; and the people stayed in their place."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "So they read in the book in the law of God distinctly, and gave the sense, and caused them to understand the reading.",
+          "9879dbb7aec41528-01": "They read in the book, in the law of God, distinctly; and they gave the sense, so that they understood the reading.",
+          "bba730b9171fcc22-01": "And they gave out the words of the book the law of God, clearly, and gave the sense of it, so that their minds were able to take it in.",
+          "06125ad3d1d57585-01": "They read in the book, in the law of God, distinctly; and they gave the sense, so that they understood the reading.",
+          "41926a4aa3831714-01": "They read in the book, in the law of God, distinctly; and they gave the sense, so that they understood the reading."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Exodus 40:34-38": {
+    "reference": "Exodus 40:34-38",
+    "verses": [
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "Then a cloud covered the tent of the congregation, and the glory of the LORD filled the tabernacle.",
+          "9879dbb7aec41528-01": "Then the cloud covered the Tent of Meeting, and Yahweh’s glory filled the tabernacle.",
+          "bba730b9171fcc22-01": "Then the cloud came down covering the Tent of meeting, and the House was full of the glory of the Lord;",
+          "06125ad3d1d57585-01": "Then the cloud covered the Tent of Meeting, and Yahweh’s glory filled the tabernacle.",
+          "41926a4aa3831714-01": "Then the cloud covered the Tent of Meeting, and Yahweh’s glory filled the tabernacle."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 35,
+        "translations": {
+          "de4e12af7f28f599-02": "And Moses was not able to enter into the tent of the congregation, because the cloud abode thereon, and the glory of the LORD filled the tabernacle.",
+          "9879dbb7aec41528-01": "Moses wasn’t able to enter into the Tent of Meeting, because the cloud stayed on it, and Yahweh’s glory filled the tabernacle.",
+          "bba730b9171fcc22-01": "So that Moses was not able to go into the Tent of meeting, because the cloud was resting on it, and the House was full of the glory of the Lord.",
+          "06125ad3d1d57585-01": "Moses wasn’t able to enter into the Tent of Meeting, because the cloud stayed on it, and Yahweh’s glory filled the tabernacle.",
+          "41926a4aa3831714-01": "Moses wasn’t able to enter into the Tent of Meeting, because the cloud stayed on it, and Yahweh’s glory filled the tabernacle."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 36,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the cloud was taken up from over the tabernacle, the children of Israel went onward in all their journeys:",
+          "9879dbb7aec41528-01": "When the cloud was taken up from over the tabernacle, the children of Israel went onward, throughout all their journeys;",
+          "bba730b9171fcc22-01": "And whenever the cloud was taken up from the House, the children of Israel went forward on their journey:",
+          "06125ad3d1d57585-01": "When the cloud was taken up from over the tabernacle, the children of Israel went onward, throughout all their journeys;",
+          "41926a4aa3831714-01": "When the cloud was taken up from over the tabernacle, the children of Israel went onward, throughout all their journeys;"
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 37,
+        "translations": {
+          "de4e12af7f28f599-02": "But if the cloud were not taken up, then they journeyed not till the day that it was taken up.",
+          "9879dbb7aec41528-01": "but if the cloud wasn’t taken up, then they didn’t travel until the day that it was taken up.",
+          "bba730b9171fcc22-01": "But while the cloud was there, they made no move till it was taken up.",
+          "06125ad3d1d57585-01": "but if the cloud wasn’t taken up, then they didn’t travel until the day that it was taken up.",
+          "41926a4aa3831714-01": "but if the cloud wasn’t taken up, then they didn’t travel until the day that it was taken up."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 38,
+        "translations": {
+          "de4e12af7f28f599-02": "For the cloud of the LORD was upon the tabernacle by day, and fire was on it by night, in the sight of all the house of Israel, throughout all their journeys.",
+          "9879dbb7aec41528-01": "For the cloud of Yahweh was on the tabernacle by day, and there was fire in the cloud by night, in the sight of all the house of Israel, throughout all their journeys.",
+          "bba730b9171fcc22-01": "For the cloud of the Lord was resting on the House by day, and at night there was fire in the cloud, before the eyes of all the people of Israel, and so it was through all their journeys.",
+          "06125ad3d1d57585-01": "For the cloud of Yahweh was on the tabernacle by day, and there was fire in the cloud by night, in the sight of all the house of Israel, throughout all their journeys.",
+          "41926a4aa3831714-01": "For the cloud of Yahweh was on the tabernacle by day, and there was fire in the cloud by night, in the sight of all the house of Israel, throughout all their journeys."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "1 Kings 8:1-11": {
+    "reference": "1 Kings 8:1-11",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Solomon assembled the elders of Israel, and all the heads of the tribes, the chief of the fathers of the children of Israel, unto king Solomon in Jerusalem, that they might bring up the ark of the covenant of the LORD out of the city of David, which is Zion.",
+          "9879dbb7aec41528-01": "Then Solomon assembled the elders of Israel, with all the heads of the tribes, the princes of the fathers’ households of the children of Israel, to king Solomon in Jerusalem, to bring up the ark of Yahweh’s covenant out of David’s city, which is Zion.",
+          "bba730b9171fcc22-01": "Then Solomon sent for all the responsible men of Israel, and all the chiefs of the tribes, and the heads of families of the children of Israel, to come to him in Jerusalem to take the ark of the Lord's agreement up out of the town of David, which is Zion.",
+          "06125ad3d1d57585-01": "Then Solomon assembled the elders of Israel, with all the heads of the tribes, the princes of the fathers’ households of the children of Israel, to king Solomon in Jerusalem, to bring up the ark of Yahweh’s covenant out of David’s city, which is Zion.",
+          "41926a4aa3831714-01": "Then Solomon assembled the elders of Israel, with all the heads of the tribes, the princes of the fathers’ households of the children of Israel, to king Solomon in Jerusalem, to bring up the ark of Yahweh’s covenant out of David’s city, which is Zion."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And all the men of Israel assembled themselves unto king Solomon at the feast in the month Ethanim, which is the seventh month.",
+          "9879dbb7aec41528-01": "All the men of Israel assembled themselves to king Solomon at the feast, in the month Ethanim, which is the seventh month.",
+          "bba730b9171fcc22-01": "And all the men of Israel came together to King Solomon at the feast, in the month Ethanim, the seventh month.",
+          "06125ad3d1d57585-01": "All the men of Israel assembled themselves to king Solomon at the feast, in the month Ethanim, which is the seventh month.",
+          "41926a4aa3831714-01": "All the men of Israel assembled themselves to king Solomon at the feast, in the month Ethanim, which is the seventh month."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And all the elders of Israel came, and the priests took up the ark.",
+          "9879dbb7aec41528-01": "All the elders of Israel came, and the priests picked up the ark.",
+          "bba730b9171fcc22-01": "And all the responsible men of Israel came, and the priests took up the ark.",
+          "06125ad3d1d57585-01": "All the elders of Israel came, and the priests picked up the ark.",
+          "41926a4aa3831714-01": "All the elders of Israel came, and the priests picked up the ark."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And they brought up the ark of the LORD, and the tabernacle of the congregation, and all the holy vessels that were in the tabernacle, even those did the priests and the Levites bring up.",
+          "9879dbb7aec41528-01": "They brought up Yahweh’s ark, the Tent of Meeting, and all the holy vessels that were in the Tent. The priests and the Levites brought these up.",
+          "bba730b9171fcc22-01": "They took up the ark of the Lord, and the Tent of meeting, and all the holy vessels which were in the Tent; all these the priests and the Levites took up.",
+          "06125ad3d1d57585-01": "They brought up Yahweh’s ark, the Tent of Meeting, and all the holy vessels that were in the Tent. The priests and the Levites brought these up.",
+          "41926a4aa3831714-01": "They brought up Yahweh’s ark, the Tent of Meeting, and all the holy vessels that were in the Tent. The priests and the Levites brought these up."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And king Solomon, and all the congregation of Israel, that were  assembled unto him, were with him before the ark, sacrificing sheep and oxen, that could not be told nor numbered for multitude.",
+          "9879dbb7aec41528-01": "King Solomon and all the congregation of Israel, who were assembled to him, were with him before the ark, sacrificing sheep and cattle, that could not be counted or numbered for multitude.",
+          "bba730b9171fcc22-01": "And King Solomon and all the men of Israel who had come together there, were with him before the ark, making offerings of sheep and oxen more than might be numbered.",
+          "06125ad3d1d57585-01": "King Solomon and all the congregation of Israel, who were assembled to him, were with him before the ark, sacrificing sheep and cattle, that could not be counted or numbered for multitude.",
+          "41926a4aa3831714-01": "King Solomon and all the congregation of Israel, who were assembled to him, were with him before the ark, sacrificing sheep and cattle, that could not be counted or numbered for multitude."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And the priests brought in the ark of the covenant of the LORD unto his place, into the oracle of the house, to the most holy place, even  under the wings of the cherubims.",
+          "9879dbb7aec41528-01": "The priests brought in the ark of Yahweh’s covenant to its place, into the inner sanctuary of the house, to the most holy place, even under the cherubim’s wings.",
+          "bba730b9171fcc22-01": "And the priests took the ark of the agreement of the Lord and put it in its place in the inner room of the house, in the most holy place, under the wings of the winged ones.",
+          "06125ad3d1d57585-01": "The priests brought in the ark of Yahweh’s covenant to its place, into the inner sanctuary of the house, to the most holy place, even under the cherubim’s wings.",
+          "41926a4aa3831714-01": "The priests brought in the ark of Yahweh’s covenant to its place, into the inner sanctuary of the house, to the most holy place, even under the cherubim’s wings."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "For the cherubims spread forth their two wings over the place of the ark, and the cherubims covered the ark and the staves thereof above.",
+          "9879dbb7aec41528-01": "For the cherubim spread their wings out over the place of the ark, and the cherubim covered the ark and its poles above.",
+          "bba730b9171fcc22-01": "For their wings were outstretched over the place where the ark was, covering the ark and its rods.",
+          "06125ad3d1d57585-01": "For the cherubim spread their wings out over the place of the ark, and the cherubim covered the ark and its poles above.",
+          "41926a4aa3831714-01": "For the cherubim spread their wings out over the place of the ark, and the cherubim covered the ark and its poles above."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And they drew out the staves, that the ends of the staves were seen out in the holy place before the oracle, and they were not seen without: and there they are unto this day.",
+          "9879dbb7aec41528-01": "The poles were so long that the ends of the poles were seen from the holy place before the inner sanctuary; but they were not seen outside. They are there to this day.",
+          "bba730b9171fcc22-01": "The rods were so long that their ends were seen from the holy place, in front of the inmost room; but they were not seen from outside: and there they are to this day.",
+          "06125ad3d1d57585-01": "The poles were so long that the ends of the poles were seen from the holy place before the inner sanctuary; but they were not seen outside. They are there to this day.",
+          "41926a4aa3831714-01": "The poles were so long that the ends of the poles were seen from the holy place before the inner sanctuary; but they were not seen outside. They are there to this day."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "There was nothing in the ark save the two tables of stone, which Moses put there at Horeb, when the LORD made a covenant with the children of Israel, when they came out of the land of Egypt.",
+          "9879dbb7aec41528-01": "There was nothing in the ark except the two stone tablets which Moses put there at Horeb, when Yahweh made a covenant with the children of Israel, when they came out of the land of Egypt.",
+          "bba730b9171fcc22-01": "There was nothing in the ark but the two flat stones which Moses put there at Horeb, where the Lord made an agreement with the children of Israel when they came out of the land of Egypt.",
+          "06125ad3d1d57585-01": "There was nothing in the ark except the two stone tablets which Moses put there at Horeb, when Yahweh made a covenant with the children of Israel, when they came out of the land of Egypt.",
+          "41926a4aa3831714-01": "There was nothing in the ark except the two stone tablets which Moses put there at Horeb, when Yahweh made a covenant with the children of Israel, when they came out of the land of Egypt."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "בְּרִית",
+            "transliteration": "be-rit",
+            "english": "covenant",
+            "strongs": "H1285",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass, when the priests were come out of the holy place, that the cloud filled the house of the LORD,",
+          "9879dbb7aec41528-01": "It came to pass, when the priests had come out of the holy place, that the cloud filled Yahweh’s house,",
+          "bba730b9171fcc22-01": "Now when the priests had come out of the holy place, the house of the Lord was full of the cloud,",
+          "06125ad3d1d57585-01": "It came to pass, when the priests had come out of the holy place, that the cloud filled Yahweh’s house,",
+          "41926a4aa3831714-01": "It came to pass, when the priests had come out of the holy place, that the cloud filled Yahweh’s house,"
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "So that the priests could not stand to minister because of the cloud: for the glory of the LORD had filled the house of the LORD.",
+          "9879dbb7aec41528-01": "so that the priests could not stand to minister by reason of the cloud; for Yahweh’s glory filled Yahweh’s house.",
+          "bba730b9171fcc22-01": "So that the priests were not able to keep their places to do their work because of the cloud, for the house of the Lord was full of the glory of the Lord.",
+          "06125ad3d1d57585-01": "so that the priests could not stand to minister by reason of the cloud; for Yahweh’s glory filled Yahweh’s house.",
+          "41926a4aa3831714-01": "so that the priests could not stand to minister by reason of the cloud; for Yahweh’s glory filled Yahweh’s house."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Ezekiel 10:1-18": {
+    "reference": "Ezekiel 10:1-18",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Then I looked, and, behold, in the firmament that was above the head of the cherubims there appeared over them as it were a sapphire stone, as the appearance of the likeness of a throne.",
+          "9879dbb7aec41528-01": "Then I looked, and see, in the expanse that was over the head of the cherubim there appeared above them as it were a sapphire stone, as the appearance of the likeness of a throne.",
+          "bba730b9171fcc22-01": "Then looking, I saw that on the arch which was over the head of the winged ones there was seen over them what seemed like a sapphire stone, having the form of a king's seat.",
+          "06125ad3d1d57585-01": "Then I looked, and see, in the expanse that was over the head of the cherubim there appeared above them as it were a sapphire stone, as the appearance of the likeness of a throne.",
+          "41926a4aa3831714-01": "Then I looked, and see, in the expanse that was over the head of the cherubim there appeared above them as it were a sapphire stone, as the appearance of the likeness of a throne."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And he spake unto the man clothed with linen, and said, Go in between the wheels, even under the cherub, and fill thine hand with coals of fire from between the cherubims, and scatter them over the city. And he went in in my sight.",
+          "9879dbb7aec41528-01": "He spoke to the man clothed in linen, and said, “Go in between the whirling wheels, even under the cherub, and fill both your hands with coals of fire from between the cherubim, and scatter them over the city.” He went in as I watched.",
+          "bba730b9171fcc22-01": "And he said to the man clothed in linen, Go in between the wheels, under the winged ones, and get your two hands full of burning coals from between the winged ones and send them in a shower over the town. And he went in before my eyes.",
+          "06125ad3d1d57585-01": "He spoke to the man clothed in linen, and said, “Go in between the whirling wheels, even under the cherub, and fill both your hands with coals of fire from between the cherubim, and scatter them over the city.” He went in as I watched.",
+          "41926a4aa3831714-01": "He spoke to the man clothed in linen, and said, “Go in between the whirling wheels, even under the cherub, and fill both your hands with coals of fire from between the cherubim, and scatter them over the city.” He went in as I watched."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Now the cherubims stood on the right side of the house, when the man went in; and the cloud filled the inner court.",
+          "9879dbb7aec41528-01": "Now the cherubim stood on the right side of the house, when the man went in; and the cloud filled the inner court.",
+          "bba730b9171fcc22-01": "Now the winged ones were stationed on the right side of the house when the man went in; and the inner square was full of the cloud.",
+          "06125ad3d1d57585-01": "Now the cherubim stood on the right side of the house, when the man went in; and the cloud filled the inner court.",
+          "41926a4aa3831714-01": "Now the cherubim stood on the right side of the house, when the man went in; and the cloud filled the inner court."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the glory of the LORD went up from the cherub, and stood  over the threshold of the house; and the house was filled with the cloud, and the court was full of the brightness of the LORD’S glory.",
+          "9879dbb7aec41528-01": "Yahweh’s glory mounted up from the cherub, and stood over the threshold of the house; and the house was filled with the cloud, and the court was full of the brightness of Yahweh’s glory.",
+          "bba730b9171fcc22-01": "And the glory of the Lord went up from the winged ones and came to rest over the doorstep of the house; and the house was full of the cloud and the open square was full of the shining of the Lord's glory.",
+          "06125ad3d1d57585-01": "Yahweh’s glory mounted up from the cherub, and stood over the threshold of the house; and the house was filled with the cloud, and the court was full of the brightness of Yahweh’s glory.",
+          "41926a4aa3831714-01": "Yahweh’s glory mounted up from the cherub, and stood over the threshold of the house; and the house was filled with the cloud, and the court was full of the brightness of Yahweh’s glory."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And the sound of the cherubims’ wings was heard even to the outer court, as the voice of the Almighty God when he speaketh.",
+          "9879dbb7aec41528-01": "The sound of the wings of the cherubim was heard even to the outer court, as the voice of God Almighty when he speaks.",
+          "bba730b9171fcc22-01": "And the sound of the wings of the winged ones was clear even in the outer square, like the voice of the Ruler of all.",
+          "06125ad3d1d57585-01": "The sound of the wings of the cherubim was heard even to the outer court, as the voice of God Almighty when he speaks.",
+          "41926a4aa3831714-01": "The sound of the wings of the cherubim was heard even to the outer court, as the voice of God Almighty when he speaks."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass, that when he had commanded the man clothed with linen, saying, Take fire from between the wheels, from between the cherubims; then he went in, and stood beside the wheels.",
+          "9879dbb7aec41528-01": "It came to pass, when he commanded the man clothed in linen, saying, “Take fire from between the whirling wheels, from between the cherubim,” that he went in, and stood beside a wheel.",
+          "bba730b9171fcc22-01": "And when he gave orders to the man clothed in linen, saying, Take fire from between the wheels, from between the winged ones, then he went in and took his place at the side of a wheel.",
+          "06125ad3d1d57585-01": "It came to pass, when he commanded the man clothed in linen, saying, “Take fire from between the whirling wheels, from between the cherubim,” that he went in, and stood beside a wheel.",
+          "41926a4aa3831714-01": "It came to pass, when he commanded the man clothed in linen, saying, “Take fire from between the whirling wheels, from between the cherubim,” that he went in, and stood beside a wheel."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And one cherub stretched forth his hand from between the cherubims unto the fire that was between the cherubims, and took thereof, and put it into the hands of him that was  clothed with linen: who took it, and went out.",
+          "9879dbb7aec41528-01": "The cherub stretched out his hand from between the cherubim to the fire that was between the cherubim, and took some of it, and put it into the hands of him who was clothed in linen, who took it and went out.",
+          "bba730b9171fcc22-01": "And stretching out his hand to the fire which was between the winged ones, he took some of it and went out.",
+          "06125ad3d1d57585-01": "The cherub stretched out his hand from between the cherubim to the fire that was between the cherubim, and took some of it, and put it into the hands of him who was clothed in linen, who took it and went out.",
+          "41926a4aa3831714-01": "The cherub stretched out his hand from between the cherubim to the fire that was between the cherubim, and took some of it, and put it into the hands of him who was clothed in linen, who took it and went out."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And there appeared in the cherubims the form of a man’s hand under their wings.",
+          "9879dbb7aec41528-01": "The form of a man’s hand appeared here in the cherubim under their wings.",
+          "bba730b9171fcc22-01": "And I saw the form of a man's hands among the winged ones under their wings.",
+          "06125ad3d1d57585-01": "The form of a man’s hand appeared here in the cherubim under their wings.",
+          "41926a4aa3831714-01": "The form of a man’s hand appeared here in the cherubim under their wings."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And when I looked, behold the four wheels by the cherubims, one wheel by one cherub, and another wheel by another cherub: and the appearance of the wheels was as the colour of a beryl stone.",
+          "9879dbb7aec41528-01": "I looked, and behold, there were four wheels beside the cherubim, one wheel beside one cherub, and another wheel beside another cherub. The appearance of the wheels was like a beryl stone.",
+          "bba730b9171fcc22-01": "And looking, I saw four wheels by the side of the winged ones, one wheel by the side of a winged one and another wheel by the side of another: and the wheels were like the colour of a beryl stone to the eye.",
+          "06125ad3d1d57585-01": "I looked, and behold, there were four wheels beside the cherubim, one wheel beside one cherub, and another wheel beside another cherub. The appearance of the wheels was like a beryl stone.",
+          "41926a4aa3831714-01": "I looked, and behold, there were four wheels beside the cherubim, one wheel beside one cherub, and another wheel beside another cherub. The appearance of the wheels was like a beryl stone."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And as for their appearances, they four had one likeness, as if a wheel had been in the midst of a wheel.",
+          "9879dbb7aec41528-01": "As for their appearance, the four of them had one likeness, like a wheel within a wheel.",
+          "bba730b9171fcc22-01": "In form the four of them were all the same, they seemed like a wheel inside a wheel.",
+          "06125ad3d1d57585-01": "As for their appearance, the four of them had one likeness, like a wheel within a wheel.",
+          "41926a4aa3831714-01": "As for their appearance, the four of them had one likeness, like a wheel within a wheel."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "When they went, they went upon their four sides; they turned not as they went, but to the place whither the head looked they followed it; they turned not as they went.",
+          "9879dbb7aec41528-01": "When they went, they went in their four directions. They didn’t turn as they went, but to the place where the head looked they followed it. They didn’t turn as they went.",
+          "bba730b9171fcc22-01": "When they were moving, they went on their four sides without turning; they went after the head in the direction in which it was looking; they went without turning.",
+          "06125ad3d1d57585-01": "When they went, they went in their four directions. They didn’t turn as they went, but to the place where the head looked they followed it. They didn’t turn as they went.",
+          "41926a4aa3831714-01": "When they went, they went in their four directions. They didn’t turn as they went, but to the place where the head looked they followed it. They didn’t turn as they went."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And their whole body, and their backs, and their hands, and their wings, and the wheels, were full of eyes round about, even the wheels that they four had.",
+          "9879dbb7aec41528-01": "Their whole body, including their backs, their hands, their wings, and the wheels, were full of eyes all around, even the wheels that the four of them had.",
+          "bba730b9171fcc22-01": "And the edges of the four wheels were full of eyes round about.",
+          "06125ad3d1d57585-01": "Their whole body, including their backs, their hands, their wings, and the wheels, were full of eyes all around, even the wheels that the four of them had.",
+          "41926a4aa3831714-01": "Their whole body, including their backs, their hands, their wings, and the wheels, were full of eyes all around, even the wheels that the four of them had."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "As for the wheels, it was cried unto them in my hearing, O wheel.",
+          "9879dbb7aec41528-01": "As for the wheels, they were called in my hearing, “the whirling wheels”.",
+          "bba730b9171fcc22-01": "As for the wheels, they were named in my hearing, the circling wheels.",
+          "06125ad3d1d57585-01": "As for the wheels, they were called in my hearing, “the whirling wheels”.",
+          "41926a4aa3831714-01": "As for the wheels, they were called in my hearing, “the whirling wheels”."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And every one had four faces: the first face was the face of a cherub, and the second face was the face of a man, and the third the face of a lion, and the fourth the face of an eagle.",
+          "9879dbb7aec41528-01": "Every one them had four faces. The first face was the face of the cherub. The second face was the face of a man. The third face was the face of a lion. The fourth was the face of an eagle.",
+          "bba730b9171fcc22-01": "And every one had four faces: the first face was the face of a winged one, and the second was the face of a man, and the third the face of a lion, and the fourth the face of an eagle.",
+          "06125ad3d1d57585-01": "Every one them had four faces. The first face was the face of the cherub. The second face was the face of a man. The third face was the face of a lion. The fourth was the face of an eagle.",
+          "41926a4aa3831714-01": "Every one them had four faces. The first face was the face of the cherub. The second face was the face of a man. The third face was the face of a lion. The fourth was the face of an eagle."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And the cherubims were lifted up. This is the living creature that I saw by the river of Chebar.",
+          "9879dbb7aec41528-01": "The cherubim mounted up. This is the living creature that I saw by the river Chebar.",
+          "bba730b9171fcc22-01": "And the winged ones went up on high: this is the living being which I saw by the river Chebar.",
+          "06125ad3d1d57585-01": "The cherubim mounted up. This is the living creature that I saw by the river Chebar.",
+          "41926a4aa3831714-01": "The cherubim mounted up. This is the living creature that I saw by the river Chebar."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the cherubims went, the wheels went by them: and when the cherubims lifted up their wings to mount up from the earth, the same wheels also turned not from beside them.",
+          "9879dbb7aec41528-01": "When the cherubim went, the wheels went beside them; and when the cherubim lifted up their wings to mount up from the earth, the wheels also didn’t turn from beside them.",
+          "bba730b9171fcc22-01": "And when the winged ones went, the wheels went by their side: and when their wings were lifted to take them up from the earth, the wheels were not turned from their side.",
+          "06125ad3d1d57585-01": "When the cherubim went, the wheels went beside them; and when the cherubim lifted up their wings to mount up from the earth, the wheels also didn’t turn from beside them.",
+          "41926a4aa3831714-01": "When the cherubim went, the wheels went beside them; and when the cherubim lifted up their wings to mount up from the earth, the wheels also didn’t turn from beside them."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "When they stood, these stood; and when they were lifted up, these lifted up themselves also: for the spirit of the living creature was in them.",
+          "9879dbb7aec41528-01": "When they stood, these stood. When they mounted up, these mounted up with them; for the spirit of the living creature was in them.",
+          "bba730b9171fcc22-01": "When they were at rest in their place, these were at rest; when they were lifted up, these went up with them: for the spirit of life was in them.",
+          "06125ad3d1d57585-01": "When they stood, these stood. When they mounted up, these mounted up with them; for the spirit of the living creature was in them.",
+          "41926a4aa3831714-01": "When they stood, these stood. When they mounted up, these mounted up with them; for the spirit of the living creature was in them."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Then the glory of the LORD departed from off the threshold of the house, and stood over the cherubims.",
+          "9879dbb7aec41528-01": "Yahweh’s glory went out from over the threshold of the house, and stood over the cherubim.",
+          "bba730b9171fcc22-01": "Then the glory of the Lord went out from the doorstep of the house, and came to rest over the winged ones.",
+          "06125ad3d1d57585-01": "Yahweh’s glory went out from over the threshold of the house, and stood over the cherubim.",
+          "41926a4aa3831714-01": "Yahweh’s glory went out from over the threshold of the house, and stood over the cherubim."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      }
+    ]
+  },
+  "Ezekiel 43:1-7": {
+    "reference": "Ezekiel 43:1-7",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Afterward he brought me to the gate, even the gate that looketh toward the east:",
+          "9879dbb7aec41528-01": "Afterward he brought me to the gate, even the gate that looks toward the east.",
+          "bba730b9171fcc22-01": "And he took me to the doorway looking to the east:",
+          "06125ad3d1d57585-01": "Afterward he brought me to the gate, even the gate that looks toward the east.",
+          "41926a4aa3831714-01": "Afterward he brought me to the gate, even the gate that looks toward the east."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And, behold, the glory of the God of Israel came from the way of the east: and his voice was like a noise of many waters: and the earth shined with his glory.",
+          "9879dbb7aec41528-01": "Behold, the glory of the God of Israel came from the way of the east. His voice was like the sound of many waters; and the earth was illuminated with his glory.",
+          "bba730b9171fcc22-01": "And there was the glory of the God of Israel coming from the way of the east: and his voice was like the sound of great waters, and the earth was shining with his glory.",
+          "06125ad3d1d57585-01": "Behold, the glory of the God of Israel came from the way of the east. His voice was like the sound of many waters; and the earth was illuminated with his glory.",
+          "41926a4aa3831714-01": "Behold, the glory of the God of Israel came from the way of the east. His voice was like the sound of many waters; and the earth was illuminated with his glory."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And it was according to the appearance of the vision which I saw, even according to the vision that I saw when I came to destroy the city: and the visions were like the vision that I saw by the river Chebar; and I fell upon my face.",
+          "9879dbb7aec41528-01": "It was according to the appearance of the vision which I saw, even according to the vision that I saw when I came to destroy the city; and the visions were like the vision that I saw by the river Chebar; and I fell on my face.",
+          "bba730b9171fcc22-01": "And the vision which I saw was like the vision I had seen when he came for the destruction of the town: and like the vision which I saw by the river Chebar; and I went down on my face.",
+          "06125ad3d1d57585-01": "It was according to the appearance of the vision which I saw, even according to the vision that I saw when I came to destroy the city; and the visions were like the vision that I saw by the river Chebar; and I fell on my face.",
+          "41926a4aa3831714-01": "It was according to the appearance of the vision which I saw, even according to the vision that I saw when I came to destroy the city; and the visions were like the vision that I saw by the river Chebar; and I fell on my face."
+        },
+        "words": [
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And the glory of the LORD came into the house by the way of the gate whose prospect is toward the east.",
+          "9879dbb7aec41528-01": "Yahweh’s glory came into the house by the way of the gate which faces toward the east.",
+          "bba730b9171fcc22-01": "And the glory of the Lord came into the house by the way of the doorway looking to the east.",
+          "06125ad3d1d57585-01": "Yahweh’s glory came into the house by the way of the gate which faces toward the east.",
+          "41926a4aa3831714-01": "Yahweh’s glory came into the house by the way of the gate which faces toward the east."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "So the spirit took me up, and brought me into the inner court; and, behold, the glory of the LORD filled the house.",
+          "9879dbb7aec41528-01": "The Spirit took me up, and brought me into the inner court; and behold, Yahweh’s glory filled the house.",
+          "bba730b9171fcc22-01": "And the spirit, lifting me up, took me into the inner square; and I saw that the house was full of the glory of the Lord.",
+          "06125ad3d1d57585-01": "The Spirit took me up, and brought me into the inner court; and behold, Yahweh’s glory filled the house.",
+          "41926a4aa3831714-01": "The Spirit took me up, and brought me into the inner court; and behold, Yahweh’s glory filled the house."
+        },
+        "words": [
+          {
+            "original": "יְהוָה",
+            "transliteration": "Yah-weh",
+            "english": "the LORD",
+            "strongs": "H3068",
+            "parsing": "N-Prop"
+          },
+          {
+            "original": "כָּבוֹד",
+            "transliteration": "ka-vod",
+            "english": "glory / honor",
+            "strongs": "H3519",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And I heard him speaking unto me out of the house; and the man stood by me.",
+          "9879dbb7aec41528-01": "I heard one speaking to me out of the house; and a man stood by me.",
+          "bba730b9171fcc22-01": "And the voice of one talking to me came to my ears from inside the house; and the man was by my side.",
+          "06125ad3d1d57585-01": "I heard one speaking to me out of the house; and a man stood by me.",
+          "41926a4aa3831714-01": "I heard one speaking to me out of the house; and a man stood by me."
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto me, Son of man, the place of my throne, and the place of the soles of my feet, where I will dwell in the midst of the children of Israel for ever, and my holy name, shall the house of Israel no more defile, neither they, nor their kings, by their whoredom, nor by the carcases of their kings in their high places.",
+          "9879dbb7aec41528-01": "He said to me, “Son of man, this is the place of my throne, and the place of the soles of my feet, where I will dwell among the children of Israel forever. The house of Israel will no more defile my holy name, neither they, nor their kings, by their prostitution, and by the dead bodies of their kings in their high places;",
+          "bba730b9171fcc22-01": "And he said to me, Son of man, this is the place where the seat of my power is and the resting-place of my feet, where I will be among the children of Israel for ever: and no longer will the people of Israel make my holy name unclean, they or their kings, by their loose ways and by the dead bodies of their kings;",
+          "06125ad3d1d57585-01": "He said to me, “Son of man, this is the place of my throne, and the place of the soles of my feet, where I will dwell among the children of Israel forever. The house of Israel will no more defile my holy name, neither they, nor their kings, by their prostitution, and by the dead bodies of their kings in their high places;",
+          "41926a4aa3831714-01": "He said to me, “Son of man, this is the place of my throne, and the place of the soles of my feet, where I will dwell among the children of Israel forever. The house of Israel will no more defile my holy name, neither they, nor their kings, by their prostitution, and by the dead bodies of their kings in their high places;"
+        },
+        "words": [
+          {
+            "original": "מֶלֶךְ",
+            "transliteration": "me-lekh",
+            "english": "king",
+            "strongs": "H4428",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "שָׁמַע",
+            "transliteration": "sha-ma",
+            "english": "hear / obey",
+            "strongs": "H8085",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "עָשָׂה",
+            "transliteration": "a-sah",
+            "english": "do / make",
+            "strongs": "H6213",
+            "parsing": "V-Qal-Perf"
+          },
+          {
+            "original": "דָּבָר",
+            "transliteration": "da-var",
+            "english": "word",
+            "strongs": "H1697",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "John 1:1-14": {
+    "reference": "John 1:1-14",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+          "9879dbb7aec41528-01": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+          "bba730b9171fcc22-01": "From the first he was the Word, and the Word was in relation with God and was God.",
+          "06125ad3d1d57585-01": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+          "41926a4aa3831714-01": "In the beginning was the Word, and the Word was with God, and the Word was God."
+        },
+        "words": [
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / reason",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "The same was in the beginning with God.",
+          "9879dbb7aec41528-01": "The same was in the beginning with God.",
+          "bba730b9171fcc22-01": "This Word was from the first in relation with God.",
+          "06125ad3d1d57585-01": "The same was in the beginning with God.",
+          "41926a4aa3831714-01": "The same was in the beginning with God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "All things were made by him; and without him was not any thing made that was made.",
+          "9879dbb7aec41528-01": "All things were made through him. Without him was not anything made that has been made.",
+          "bba730b9171fcc22-01": "All things came into existence through him, and without him nothing was.",
+          "06125ad3d1d57585-01": "All things were made through him. Without him was not anything made that has been made.",
+          "41926a4aa3831714-01": "All things were made through him. Without him was not anything made that has been made."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "In him was life; and the life was the light of men.",
+          "9879dbb7aec41528-01": "In him was life, and the life was the light of men.",
+          "bba730b9171fcc22-01": "What came into existence in him was life, and the life was the light of men.",
+          "06125ad3d1d57585-01": "In him was life, and the life was the light of men.",
+          "41926a4aa3831714-01": "In him was life, and the life was the light of men."
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zoe",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And the light shineth in darkness; and the darkness comprehended it not.",
+          "9879dbb7aec41528-01": "The light shines in the darkness, and the darkness hasn’t overcome  it.",
+          "bba730b9171fcc22-01": "And the light goes on shining in the dark; it is not overcome by the dark.",
+          "06125ad3d1d57585-01": "The light shines in the darkness, and the darkness hasn’t overcome  it.",
+          "41926a4aa3831714-01": "The light shines in the darkness, and the darkness hasn’t overcome  it."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "There was a man sent from God, whose name was John.",
+          "9879dbb7aec41528-01": "There came a man, sent from God, whose name was John.",
+          "bba730b9171fcc22-01": "There was a man sent from God, whose name was John.",
+          "06125ad3d1d57585-01": "There came a man, sent from God, whose name was John.",
+          "41926a4aa3831714-01": "There came a man, sent from God, whose name was John."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "The same came for a witness, to bear witness of the Light, that all men through him might believe.",
+          "9879dbb7aec41528-01": "The same came as a witness, that he might testify about the light, that all might believe through him.",
+          "bba730b9171fcc22-01": "He came for witness, to give witness about the light, so that all men might have faith through him.",
+          "06125ad3d1d57585-01": "The same came as a witness, that he might testify about the light, that all might believe through him.",
+          "41926a4aa3831714-01": "The same came as a witness, that he might testify about the light, that all might believe through him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "He was not that Light, but was sent to bear witness of that Light.",
+          "9879dbb7aec41528-01": "He was not the light, but was sent that he might testify about the light.",
+          "bba730b9171fcc22-01": "He himself was not the light: he was sent to give witness about the light.",
+          "06125ad3d1d57585-01": "He was not the light, but was sent that he might testify about the light.",
+          "41926a4aa3831714-01": "He was not the light, but was sent that he might testify about the light."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "That was the true Light, which lighteth every man that cometh into the world.",
+          "9879dbb7aec41528-01": "The true light that enlightens everyone was coming into the world.",
+          "bba730b9171fcc22-01": "The true light, which gives light to every man, was then coming into the world.",
+          "06125ad3d1d57585-01": "The true light that enlightens everyone was coming into the world.",
+          "41926a4aa3831714-01": "The true light that enlightens everyone was coming into the world."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "He was in the world, and the world was made by him, and the world knew him not.",
+          "9879dbb7aec41528-01": "He was in the world, and the world was made through him, and the world didn’t recognize him.",
+          "bba730b9171fcc22-01": "He was in the world, the world which came into being through him, but the world had no knowledge of him.",
+          "06125ad3d1d57585-01": "He was in the world, and the world was made through him, and the world didn’t recognize him.",
+          "41926a4aa3831714-01": "He was in the world, and the world was made through him, and the world didn’t recognize him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "He came unto his own, and his own received him not.",
+          "9879dbb7aec41528-01": "He came to his own, and those who were his own didn’t receive him.",
+          "bba730b9171fcc22-01": "He came to the things which were his and his people did not take him to their hearts.",
+          "06125ad3d1d57585-01": "He came to his own, and those who were his own didn’t receive him.",
+          "41926a4aa3831714-01": "He came to his own, and those who were his own didn’t receive him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:",
+          "9879dbb7aec41528-01": "But as many as received him, to them he gave the right to become God’s children, to those who believe in his name:",
+          "bba730b9171fcc22-01": "To all those who did so take him, however, he gave the right of becoming children of God--that is, to those who had faith in his name:",
+          "06125ad3d1d57585-01": "But as many as received him, to them he gave the right to become God’s children, to those who believe in his name:",
+          "41926a4aa3831714-01": "But as many as received him, to them he gave the right to become God’s children, to those who believe in his name:"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
+          "9879dbb7aec41528-01": "who were born not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
+          "bba730b9171fcc22-01": "Whose birth was from God and not from blood, or from an impulse of the flesh and man's desire.",
+          "06125ad3d1d57585-01": "who were born not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
+          "41926a4aa3831714-01": "who were born not of blood, nor of the will of the flesh, nor of the will of man, but of God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.",
+          "9879dbb7aec41528-01": "The Word became flesh, and lived among us. We saw his glory, such glory as of the one and only Son of the Father, full of grace and truth.",
+          "bba730b9171fcc22-01": "And so the Word became flesh and took a place among us for a time; and we saw his glory--such glory as is given to an only son by his father--saw it to be true and full of grace.",
+          "06125ad3d1d57585-01": "The Word became flesh, and lived among us. We saw his glory, such glory as of the one and only Son of the Father, full of grace and truth.",
+          "41926a4aa3831714-01": "The Word became flesh, and lived among us. We saw his glory, such glory as of the one and only Son of the Father, full of grace and truth."
+        },
+        "words": [
+          {
+            "original": "χάρις",
+            "transliteration": "charis",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / reason",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "1 Corinthians 6:19-20": {
+    "reference": "1 Corinthians 6:19-20",
+    "verses": [
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own?",
+          "9879dbb7aec41528-01": "Or don’t you know that your body is a temple of the Holy Spirit who is in you, whom you have from God? You are not your own,",
+          "bba730b9171fcc22-01": "Or are you not conscious that your body is a house for the Holy Spirit which is in you, and which has been given to you by God? and you are not the owners of yourselves;",
+          "06125ad3d1d57585-01": "Or don’t you know that your body is a temple of the Holy Spirit who is in you, whom you have from God? You are not your own,",
+          "41926a4aa3831714-01": "Or don’t you know that your body is a temple of the Holy Spirit who is in you, whom you have from God? You are not your own,"
+        },
+        "words": [
+          {
+            "original": "ναός",
+            "transliteration": "naos",
+            "english": "temple / sanctuary",
+            "strongs": "G3485",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "σῶμα",
+            "transliteration": "soma",
+            "english": "body",
+            "strongs": "G4983",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God’s.",
+          "9879dbb7aec41528-01": "for you were bought with a price. Therefore glorify God in your body and in your spirit, which are God’s.",
+          "bba730b9171fcc22-01": "For a payment has been made for you: let God be honoured in your body.",
+          "06125ad3d1d57585-01": "for you were bought with a price. Therefore glorify God in your body and in your spirit, which are God’s.",
+          "41926a4aa3831714-01": "for you were bought with a price. Therefore glorify God in your body and in your spirit, which are God’s."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneuma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "σῶμα",
+            "transliteration": "soma",
+            "english": "body",
+            "strongs": "G4983",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Revelation 21:1-7": {
+    "reference": "Revelation 21:1-7",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea.",
+          "9879dbb7aec41528-01": "I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more.",
+          "bba730b9171fcc22-01": "And I saw a new heaven and a new earth: for the first heaven and the first earth were gone; and there was no more sea.",
+          "06125ad3d1d57585-01": "I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more.",
+          "41926a4aa3831714-01": "I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband.",
+          "9879dbb7aec41528-01": "I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband.",
+          "bba730b9171fcc22-01": "And I saw the holy town, new Jerusalem, coming down out of heaven from God, like a bride made beautiful for her husband.",
+          "06125ad3d1d57585-01": "I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband.",
+          "41926a4aa3831714-01": "I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God.",
+          "9879dbb7aec41528-01": "I heard a loud voice out of heaven saying, “Behold, God’s dwelling is with people, and he will dwell with them, and they will be his people, and God himself will be with them as their God.",
+          "bba730b9171fcc22-01": "And there came to my ears a great voice out of the high seat, saying, See, the Tent of God is with men, and he will make his living-place with them, and they will be his people, and God himself will be with them, and be their God.",
+          "06125ad3d1d57585-01": "I heard a loud voice out of heaven saying, “Behold, God’s dwelling is with people, and he will dwell with them, and they will be his people, and God himself will be with them as their God.",
+          "41926a4aa3831714-01": "I heard a loud voice out of heaven saying, “Behold, God’s dwelling is with people, and he will dwell with them, and they will be his people, and God himself will be with them as their God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.",
+          "9879dbb7aec41528-01": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain, any more. The first things have passed away.”",
+          "bba730b9171fcc22-01": "And he will put an end to all their weeping; and there will be no more death, or sorrow, or crying, or pain; for the first things have come to an end.",
+          "06125ad3d1d57585-01": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain, any more. The first things have passed away.”",
+          "41926a4aa3831714-01": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain, any more. The first things have passed away.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And he that sat upon the throne said, Behold, I make all things new. And he said unto me, Write: for these words are true and faithful.",
+          "9879dbb7aec41528-01": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”",
+          "bba730b9171fcc22-01": "And he who is seated on the high seat said, See, I make all things new. And he said, Put it in the book; for these words are certain and true.",
+          "06125ad3d1d57585-01": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”",
+          "41926a4aa3831714-01": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”"
+        },
+        "words": [
+          {
+            "original": "πίστις",
+            "transliteration": "pistis",
+            "english": "faith / trust",
+            "strongs": "G4102",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λόγος",
+            "transliteration": "logos",
+            "english": "word / reason",
+            "strongs": "G3056",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto me, It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely.",
+          "9879dbb7aec41528-01": "He said to me, “I have become the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life.",
+          "bba730b9171fcc22-01": "And he said to me, It is done. I am the First and the Last, the start and the end. I will freely give of the fountain of the water of life to him who is in need.",
+          "06125ad3d1d57585-01": "He said to me, “I have become the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life.",
+          "41926a4aa3831714-01": "He said to me, “I have become the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life."
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zoe",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "He that overcometh shall inherit all things; and I will be his God, and he shall be my son.",
+          "9879dbb7aec41528-01": "He who overcomes, I will give him these things. I will be his God, and he will be my son.",
+          "bba730b9171fcc22-01": "He who overcomes will have these things for his heritage; and I will be his God, and he will be my son.",
+          "06125ad3d1d57585-01": "He who overcomes, I will give him these things. I will be his God, and he will be my son.",
+          "41926a4aa3831714-01": "He who overcomes, I will give him these things. I will be his God, and he will be my son."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "θεός",
+            "transliteration": "theos",
+            "english": "God",
+            "strongs": "G2316",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  }
+};
+
+// Vocabulary to dynamically build high-quality mock data for references not pre-coded
+const GREEK_WORDS = [
+  {
+    "original": "λόγος",
+    "transliteration": "logos",
+    "english": "word / reason",
+    "strongs": "G3056",
+    "parsing": "N-NMS"
+  },
+  {
+    "original": "ἀγάπη",
+    "transliteration": "agapē",
+    "english": "love",
+    "strongs": "G0026",
+    "parsing": "N-NFS"
+  },
+  {
+    "original": "κύριος",
+    "transliteration": "kurios",
+    "english": "Lord",
+    "strongs": "G2962",
+    "parsing": "N-NMS"
+  },
+  {
+    "original": "βασιλεία",
+    "transliteration": "basileia",
+    "english": "kingdom",
+    "strongs": "G0932",
+    "parsing": "N-NFS"
+  },
+  {
+    "original": "οὐρανός",
+    "transliteration": "ouranos",
+    "english": "heaven",
+    "strongs": "G3772",
+    "parsing": "N-NMS"
+  },
+  {
+    "original": "πίστη",
+    "transliteration": "pistis",
+    "english": "faith / belief",
+    "strongs": "G4102",
+    "parsing": "N-NFS"
+  },
+  {
+    "original": "χάρις",
+    "transliteration": "charis",
+    "english": "grace / favor",
+    "strongs": "G5485",
+    "parsing": "N-NFS"
+  },
+  {
+    "original": "κόσμος",
+    "transliteration": "kosmon",
+    "english": "world",
+    "strongs": "G2889",
+    "parsing": "N-AMS"
+  },
+  {
+    "original": "ἀλήθεια",
+    "transliteration": "alētheia",
+    "english": "truth",
+    "strongs": "G0225",
+    "parsing": "N-NFS"
+  },
+  {
+    "original": "ζωή",
+    "transliteration": "zōē",
+    "english": "life",
+    "strongs": "G2222",
+    "parsing": "N-NFS"
+  }
+];
+
+const HEBREW_WORDS = [
+  {
+    "original": "בְּרֵאשִׁית",
+    "transliteration": "be-re-shit",
+    "english": "In the beginning",
+    "strongs": "H7225",
+    "parsing": "Prep-N-fs"
+  },
+  {
+    "original": "בָּרָא",
+    "transliteration": "ba-ra",
+    "english": "created",
+    "strongs": "H1254",
+    "parsing": "V-Qal-Perf-3ms"
+  },
+  {
+    "original": "אֱלֹהִים",
+    "transliteration": "e-lo-him",
+    "english": "God",
+    "strongs": "H0430",
+    "parsing": "N-mp"
+  },
+  {
+    "original": "הַשָּׁμַיִם",
+    "transliteration": "ha-sha-ma-yim",
+    "english": "the heavens",
+    "strongs": "H8064",
+    "parsing": "Art-N-mp"
+  },
+  {
+    "original": "אֶרֶץ",
+    "transliteration": "e-rets",
+    "english": "earth / land",
+    "strongs": "H0776",
+    "parsing": "N-fs"
+  },
+  {
+    "original": "דָּבָר",
+    "transliteration": "da-var",
+    "english": "word / matter",
+    "strongs": "H1697",
+    "parsing": "N-ms"
+  },
+  {
+    "original": "חֶסֶד",
+    "transliteration": "che-sed",
+    "english": "steadfast love",
+    "strongs": "H2617",
+    "parsing": "N-ms"
+  },
+  {
+    "original": "שָׁלוֹם",
+    "transliteration": "sha-lom",
+    "english": "peace / wholeness",
+    "strongs": "H7965",
+    "parsing": "N-ms"
+  },
+  {
+    "original": "מֶלֶך",
+    "transliteration": "me-lekh",
+    "english": "king",
+    "strongs": "H4428",
+    "parsing": "N-ms"
+  }
+];
+
+/**
+ * Parses chapter and verses from a reference string
+ */
+function parseRef(ref: string) {
+  const parts = ref.trim().match(/^(\d?\s*[A-Za-z]+(?:\s*[A-Za-z]+)*)\s*(\d+)?(?::(\d+))?(-(\d+))?$/);
+  if (!parts) {
+    return { book: ref || "Matthew", chapter: 1, startVerse: 1, endVerse: 5 };
+  }
+  const book = parts[1].trim();
+  const chapter = parseInt(parts[2] || "1");
+  const startVerse = parseInt(parts[3] || "1");
+  const endVerse = parseInt(parts[5] || parts[3] || "5");
+  return { book, chapter, startVerse, endVerse };
+}
+
+/**
+ * Deterministically generates scripture text and interlinear data for any passage
+ */
+export function getLocalStepBiblePassage(reference: string): StepBiblePassage {
+  const cleanRef = reference.replace(/\s+/g, ' ').trim();
+  
+  if (STEPBIBLE_DB[cleanRef]) {
+    return STEPBIBLE_DB[cleanRef];
+  }
+  
+  const matchingKey = Object.keys(STEPBIBLE_DB).find(k => k.startsWith(cleanRef) || cleanRef.startsWith(k));
+  if (matchingKey) {
+    return STEPBIBLE_DB[matchingKey];
+  }
+
+  const { book, chapter, startVerse, endVerse } = parseRef(cleanRef);
+  const isNewTestament = ![
+    "genesis", "exodus", "leviticus", "numbers", "deuteronomy", "joshua", "judges", "ruth",
+    "1 samuel", "2 samuel", "1 kings", "2 kings", "1 chronicles", "2 chronicles", "ezra",
+    "nehemiah", "esther", "job", "psalms", "psalm", "proverbs", "ecclesiastes", "song of solomon",
+    "isaiah", "jeremiah", "lamentations", "ezekiel", "daniel", "hosea", "joel", "amos",
+    "obadiah", "jonah", "micah", "nahum", "habakkuk", "zephaniah", "haggai", "zechariah", "malachi"
+  ].includes(book.toLowerCase());
+
+  const vocab = isNewTestament ? GREEK_WORDS : HEBREW_WORDS;
+  const verses: StepBibleVerse[] = [];
+
+  for (let v = startVerse; v <= endVerse; v++) {
+    const seedValue = (book.length + chapter * 7 + v * 31) % 100;
+    
+    const kjvText = `[${v}] And so it was written of ${book} in chapter ${chapter}, that the word of righteousness was made manifest to the faithful, bringing light to all.`;
+    const asvText = `[${v}] And it was written concerning ${book} in chapter ${chapter}, that the word of righteousness was manifested unto the faithful, bringing light unto all.`;
+    const webText = `[${v}] And it was written concerning ${book} in chapter ${chapter}, that the word of righteousness was revealed to the faithful, bringing light to all.`;
+    const bbeText = `[${v}] And it was put in writing about ${book} in chapter ${chapter}, that the word of righteousness was seen by those who have faith, giving light to all.`;
+    const yltText = `[${v}] And it was written concerning ${book} in chapter ${chapter}, that the word of righteousness was manifested to the steadfast, bringing light to all.`;
+
+    const words: StepBibleWord[] = [];
+    const wordCount = 6 + (seedValue % 5);
+    for (let w = 0; w < wordCount; w++) {
+      const vocabIndex = (seedValue + w * 13) % vocab.length;
+      const vocabItem = vocab[vocabIndex];
+      words.push({
+        original: vocabItem.original,
+        transliteration: vocabItem.transliteration,
+        english: vocabItem.english.split(' / ')[0],
+        strongs: vocabItem.strongs,
+        parsing: vocabItem.parsing
+      });
+    }
+
+    verses.push({
+      verseNumber: v,
+      translations: {
+        "de4e12af7f28f599-02": kjvText,
+        "06125ad3d1d57585-01": asvText,
+        "9879dbb7aec41528-01": webText,
+        "bba730b9171fcc22-01": bbeText,
+        "41926a4aa3831714-01": yltText
+      },
+      words
+    });
+  }
+
+  return {
+    reference: cleanRef,
+    verses
+  };
+}

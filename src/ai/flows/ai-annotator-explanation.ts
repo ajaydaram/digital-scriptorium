@@ -18,12 +18,13 @@ export type AIAnnotatorExplanationInput = z.infer<typeof AIAnnotatorExplanationI
 const AIAnnotatorExplanationOutputSchema = z.object({
   explanation: z
     .string()
-    .describe('An AI-generated explanation or contextual insight for the provided scripture passage.'),
+    .describe('An AI-generated explanation or contextual insight for the provided scripture passage, grounded in historical commentaries (e.g. Early Church Fathers, Reformers, Lexicons).'),
   theologicalContext: z.string().describe('Explanation of how this fits into the Grand Historical Narrative.'),
   suggestedReferences: z.array(z.object({
     ref: z.string(),
     reason: z.string().describe('Why this reference is relevant to the Grand Historical Narrative.')
-  })).describe('Curated cross-references with pedagogical relevance.')
+  })).describe('Curated cross-references with pedagogical relevance.'),
+  keyWords: z.array(z.string()).describe('3-5 key words from the passage suitable for original language study.')
 });
 export type AIAnnotatorExplanationOutput = z.infer<typeof AIAnnotatorExplanationOutputSchema>;
 
@@ -37,10 +38,13 @@ const aiAnnotatorExplanationPrompt = ai.definePrompt({
   output: {schema: AIAnnotatorExplanationOutputSchema},
   prompt: `You are a Pedagogical Guide for serious biblical study. Your goal is to help the user move from casual reading to deep, scholarly understanding.
 
+Ground your analysis using historical commentaries (e.g., Early Church Fathers, Medieval Scholastics, Reformation Commentators) and original lexicons (e.g. Strong's, BDAG). Explain the passage through this scholarly, peer-reviewed lens.
+
 When explaining a passage:
-1. Provide a concise, clear explanation of the text's immediate meaning.
+1. Provide a concise, clear explanation of the text's immediate meaning grounded in historical and scholarly commentaries. Include quotes or viewpoints from church history if relevant.
 2. Specifically address how this passage fits into the "Grand Historical Narrative" of scripture (Creation, Fall, Redemption, Restoration).
 3. Provide 2-3 highly relevant cross-references. For each, explain *why* it is pedagogically significant to understanding the broader narrative context.
+4. Select 3-5 key words from the passage that are central or interesting for original language (Greek or Hebrew) study.
 
 Scripture Passage: {{{scripturePassage}}}`,
 });

@@ -28,7 +28,16 @@
         "passageRef": { "type": "string" },
         "highlightedText": { "type": "string" },
         "comment": { "type": "string" },
-        "createdAt": { "type": "string", "format": "date-time" }
+        "createdAt": { "type": "string", "format": "date-time" },
+        "circleId": { "type": "string" },
+        "parentId": { "type": "string" },
+        "reactions": {
+          "type": "object",
+          "properties": {
+            "insightful": { "type": "array", "items": { "type": "string" } },
+            "needsContext": { "type": "array", "items": { "type": "string" } }
+          }
+        }
       },
       "required": ["userId", "passageRef", "comment", "createdAt"]
     },
@@ -44,7 +53,23 @@
         "currentDay": { "type": "number" },
         "currentStage": { "type": "string", "enum": ["read", "understand", "master"] },
         "lastAccessedAt": { "type": "string", "format": "date-time" }
-      }
+    },
+    "StudyCircle": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "StudyCircle",
+      "type": "object",
+      "description": "Represents a private study group or room.",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "memberIds": { "type": "array", "items": { "type": "string" } },
+        "readingPath": { "type": "string" },
+        "currentDay": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "ownerId", "memberIds", "createdAt"]
     }
   },
   "auth": {
@@ -66,6 +91,14 @@
     "/annotations/{annotationId}": {
       "schema": "Annotation",
       "description": "Public community insights on scripture, readable by all, writable by owners."
+    },
+    "/circles/{circleId}": {
+      "schema": "StudyCircle",
+      "description": "Private study circles/rooms."
+    },
+    "/circles/{circleId}/annotations/{annotationId}": {
+      "schema": "Annotation",
+      "description": "Annotations shared privately within a study circle."
     }
   }
 }

@@ -263,8 +263,7 @@ export default function SimpleReaderPage() {
           </div>
         </Card>
       </main>
-
-      <style jsx global>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .bible-text-display {
           font-family: 'Inter', sans-serif;
           font-size: 1.5rem;
@@ -280,7 +279,7 @@ export default function SimpleReaderPage() {
         .bible-text-display p {
           margin-bottom: 2.5rem;
         }
-      `}</style>
+      `}} />
     </div>
   );
 }

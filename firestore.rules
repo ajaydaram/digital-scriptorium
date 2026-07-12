@@ -33,16 +33,33 @@ service cloud.firestore {
       }
     }
 
+    // --- Study Circles (Private Rooms) ---
+    match /circles/{circleId} {
+      allow read: if isSignedIn() && request.auth.uid in resource.data.memberIds;
+      allow create: if isSignedIn() && 
+                    request.auth.uid == request.resource.data.ownerId && 
+                    request.auth.uid in request.resource.data.memberIds;
+      allow update: if isSignedIn() && request.auth.uid in resource.data.memberIds;
+      allow delete: if isSignedIn() && resource.data.ownerId == request.auth.uid;
+    }
+
     // --- Global Social Annotations (The Living Commentary) ---
     match /annotations/{annotationId} {
-      // PUBLIC READ: Allow anyone (even guests) to read the community feed
-      allow read: if true; 
+      // READ: Allow anyone if it is public, otherwise require membership in the circle
+      allow read: if resource.data.circleId == null || 
+                     (isSignedIn() && request.auth.uid in get(/databases/$(database)/documents/circles/$(resource.data.circleId)).data.memberIds);
       
-      // AUTHENTICATED WRITE: Only logged-in users can create insights
-      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      // CREATE: Allow logged-in users to create if it is public, otherwise require membership in the circle
+      allow create: if isSignedIn() && 
+                    request.resource.data.userId == request.auth.uid && 
+                    (request.resource.data.circleId == null || 
+                     request.auth.uid in get(/databases/$(database)/documents/circles/$(request.resource.data.circleId)).data.memberIds);
       
-      // OWNER ONLY: Only the original scholar can update or delete their insight
-      allow update, delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+      // UPDATE/DELETE: Only the original scholar can update or delete their insight
+      allow update, delete: if isSignedIn() && 
+                            resource.data.userId == request.auth.uid && 
+                            (resource.data.circleId == null || 
+                             request.auth.uid in get(/databases/$(database)/documents/circles/$(resource.data.circleId)).data.memberIds);
     }
   }
 }

@@ -23,7 +23,7 @@ export default function LandingPage() {
       
       <main className="flex-grow">
         {/* Hero Section: The Scriptorium Entrance */}
-        <section className="relative pt-32 pb-40 md:pt-48 md:pb-64 overflow-hidden">
+        <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 overflow-hidden">
           {/* Subtle background flourishes */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full opacity-30 pointer-events-none">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 blur-[120px] rounded-full" />
@@ -31,7 +31,7 @@ export default function LandingPage() {
           </div>
 
           <div className="container relative z-10 mx-auto px-6">
-            <div className="flex flex-col items-center text-center space-y-12 max-w-5xl mx-auto">
+            <div className="flex flex-col items-center text-center space-y-8 max-w-5xl mx-auto">
               <Badge variant="outline" className="px-6 py-2 text-xs font-bold uppercase tracking-[0.3em] text-blue-600 border-blue-200 bg-blue-50/50">
                 Academic Bible Engagement
               </Badge>
@@ -74,7 +74,7 @@ export default function LandingPage() {
         </section>
 
         {/* Visual Anchor: The Reader Interface Mock */}
-        <section className="pb-40">
+        <section className="pb-20">
            <div className="container mx-auto px-6">
               <div className="relative group max-w-6xl mx-auto">
                 <div className="absolute -inset-10 bg-brand-gradient/5 blur-[100px] rounded-full opacity-50" />
@@ -86,9 +86,9 @@ export default function LandingPage() {
         </section>
 
         {/* The Scholar's Journey Section */}
-        <section className="py-40 border-t border-slate-100 bg-slate-50/50">
+        <section className="py-20 border-t border-slate-100 bg-slate-50/50">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-24 space-y-6">
+            <div className="text-center mb-12 space-y-4">
               <Badge variant="outline" className="px-5 py-1.5 text-primary font-bold uppercase tracking-widest border-slate-200">THE METHODOLOGY</Badge>
               <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-slate-900">The Scholar's Journey</h2>
               <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -100,9 +100,9 @@ export default function LandingPage() {
         </section>
 
         {/* The Three Paths Framework */}
-        <section className="py-40 border-t border-slate-100 bg-white">
+        <section className="py-20 border-t border-slate-100 bg-white">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-24 space-y-6">
+            <div className="text-center mb-12 space-y-4">
               <Badge variant="outline" className="px-5 py-1.5 text-primary font-bold uppercase tracking-widest border-slate-200">PEDAGOGICAL FRAMEWORK</Badge>
               <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-slate-900">Three Structured Paths</h2>
               <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -114,9 +114,9 @@ export default function LandingPage() {
         </section>
 
         {/* Final CTA: High Impact Conversion */}
-        <section className="py-48 bg-slate-900 text-white relative overflow-hidden">
+        <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-brand-gradient opacity-10 blur-[150px] -translate-y-1/2" />
-          <div className="container relative z-10 mx-auto px-6 text-center space-y-12">
+          <div className="container relative z-10 mx-auto px-6 text-center space-y-8">
              <h2 className="text-6xl md:text-8xl font-headline font-bold tracking-tighter leading-[1]">
                Ready to Deepen <br /> Your Study?
              </h2>
@@ -134,7 +134,7 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="bg-white py-24 border-t border-slate-100">
+      <footer className="bg-white py-12 border-t border-slate-100">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-12">
             <div className="flex items-center gap-4">

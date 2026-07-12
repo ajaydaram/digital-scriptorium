@@ -262,6 +262,223 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       ] 
     },
     reflectionQuestion: "What is my 'joyful shout' to God today as I enter His presence?"
+  },
+  // --- Week 5: Wisdom Literature ---
+  29: {
+    day: 29,
+    reference: "Proverbs 3:5-6",
+    title: "Trust in the Lord",
+    mainTruth: "True direction in life comes from complete reliance on God rather than human understanding.",
+    culturalInsights: [
+      { title: "Direct Paths", note: "The Hebrew word for 'direct' or 'straight' (yashar) refers to clearing obstacles from a highway so travel is unhindered." }
+    ],
+    scribalStrategy: {
+      title: "Wisdom Banner",
+      instructions: [
+        "Write TRUST in large gold lettering.",
+        "Transcribe v. 5-6 inside a double-bordered rectangle.",
+        "Add a decorative compass in the right margin."
+      ]
+    },
+    reflectionQuestion: "In what area am I currently leaning on my own understanding instead of trusting Him?"
+  },
+  30: {
+    day: 30,
+    reference: "Proverbs 8:22-31",
+    title: "Wisdom at Creation",
+    mainTruth: "Wisdom is woven into the very fabric of the created order, existing before the earth began.",
+    scribalStrategy: {
+      title: "Creation Flow",
+      instructions: [
+        "Transcribe v. 22-31 using a flowing, wave-like line layout.",
+        "Write 'BEFORE' and 'BEGINNING' in bold blue ink."
+      ]
+    },
+    reflectionQuestion: "If God created the world with wisdom, how does that help me trust His design for my daily life?"
+  },
+  31: {
+    day: 31,
+    reference: "Job 28:12-28",
+    title: "The Search for Wisdom",
+    mainTruth: "The fear of the Lord is the beginning of wisdom, which cannot be bought with earthly treasures.",
+    culturalInsights: [
+      { title: "Ancient Mining", note: "Job 28 describes the deep shafts and dark tunnels of ancient miners, showing the extreme effort humans make for gold, while ignoring wisdom." }
+    ],
+    scribalStrategy: {
+      title: "The Hidden Treasure",
+      instructions: [
+        "Draw a mine shaft layout in the margins.",
+        "Highlight the phrase: 'Behold, the fear of the Lord, that is wisdom' (v. 28) in red ink."
+      ]
+    },
+    reflectionQuestion: "Am I searching for wisdom with the same intensity that people search for wealth?"
+  },
+  32: {
+    day: 32,
+    reference: "Job 38:1-11",
+    title: "The Lord Answers Job",
+    mainTruth: "Human limitation must submit to the vast sovereignty of the Creator of the universe.",
+    scribalStrategy: {
+      title: "The Whirlwind",
+      instructions: [
+        "Draw a circular wind-like frame around the text.",
+        "Use stark, heavy capital letters for God's questions to Job."
+      ]
+    },
+    reflectionQuestion: "Does God's sovereignty comfort me, or do I feel the need to argue with His plans?"
+  },
+  33: {
+    day: 33,
+    reference: "Job 42:1-6",
+    title: "Job's Confession",
+    mainTruth: "Beholding God's greatness leads to profound humility and repentance.",
+    scribalStrategy: {
+      title: "Humility Scroll",
+      instructions: [
+        "Transcribe Job's repentance (v. 1-6) in small, delicate script.",
+        "Leave a large margin of white space to represent silence before God."
+      ]
+    },
+    reflectionQuestion: "What happens in my heart when I stop defending myself and simply behold God?"
+  },
+  34: {
+    day: 34,
+    reference: "Ecclesiastes 3:1-8",
+    title: "A Time for Everything",
+    mainTruth: "Every season of human life is appointed and overseen by God's sovereign hand.",
+    culturalInsights: [
+      { title: "Hevehl", note: "The core word 'vanity' (hevel) means breath or vapor—temporary, elusive, and impossible to grasp." }
+    ],
+    scribalStrategy: {
+      title: "The Alternating Ledger",
+      instructions: [
+        "Split the page into two columns.",
+        "Left Column: Positives (Born, Plant, Heal, Laugh, Dance).",
+        "Right Column: Negatives (Die, Pluck up, Slay, Weep, Mourn).",
+        "Center: Transcribe v. 1 in bold."
+      ]
+    },
+    reflectionQuestion: "What season of life am I currently in, and how can I honor God in it?"
+  },
+  35: {
+    day: 35,
+    reference: "Ecclesiastes 12:1-7",
+    title: "Remember Your Creator",
+    mainTruth: "Dedicating our lives to God in youth prepares us for the reality of aging and mortality.",
+    scribalStrategy: {
+      title: "The Silver Cord",
+      instructions: [
+        "Draw a breaking silver cord and a shattered golden bowl in the margin.",
+        "Write 'Remember your Creator' in large, ornate letters at the top."
+      ]
+    },
+    reflectionQuestion: "How does the reality of aging and death clarify my priorities today?"
+  },
+
+  // --- Week 6: New Testament Epistles ---
+  36: {
+    day: 36,
+    reference: "Romans 8:1-11",
+    title: "Life in the Spirit",
+    mainTruth: "There is no condemnation for those in Christ Jesus who walk according to the Spirit.",
+    scribalStrategy: {
+      title: "Condemnation Rest",
+      instructions: [
+        "Write NO CONDEMNATION in all caps at the top.",
+        "Underline references to 'Spirit' (pneuma) in green ink."
+      ]
+    },
+    reflectionQuestion: "Do I still live under the weight of condemnation, or do I enjoy the freedom of the Spirit?"
+  },
+  37: {
+    day: 37,
+    reference: "Romans 8:31-39",
+    title: "More Than Conquerors",
+    mainTruth: "Nothing in all creation can separate the believer from the love of God in Christ Jesus.",
+    scribalStrategy: {
+      title: "The Victory Ledger",
+      instructions: [
+        "List all the potential separators in v. 35 (tribulation, distress, persecution, famine, nakedness, danger, sword) on the left.",
+        "Draw a large red line cutting through the list, ending on the right: 'More than conquerors' (v. 37)."
+      ]
+    },
+    reflectionQuestion: "What fear is currently testing my assurance of God's love?"
+  },
+  38: {
+    day: 38,
+    reference: "Ephesians 2:1-10",
+    title: "By Grace Through Faith",
+    mainTruth: "Salvation is a gift of God, received through faith alone, for good works prepared beforehand.",
+    scribalStrategy: {
+      title: "The Gift Box",
+      instructions: [
+        "Box in v. 8-9: 'For by grace you have been saved through faith...'",
+        "Write 'THE GIFT OF GOD' in bold, centered letters."
+      ]
+    },
+    reflectionQuestion: "Am I trying to earn my standing with God, or am I resting in His gift?"
+  },
+  39: {
+    day: 39,
+    reference: "Ephesians 6:10-18",
+    title: "The Armor of God",
+    mainTruth: "Our struggle is spiritual, requiring the full armor of God to stand firm against evil.",
+    culturalInsights: [
+      { title: "Roman Armor", note: "Paul was likely chained to a Roman soldier while writing this. Each piece of armor matches the soldier's equipment." }
+    ],
+    scribalStrategy: {
+      title: "The Soldier's Sketch",
+      instructions: [
+        "Sketch the elements of armor (Belt, Breastplate, Shoes, Shield, Helmet, Sword) in the margin.",
+        "Label each piece with its spiritual reality."
+      ]
+    },
+    reflectionQuestion: "Which piece of armor do I need to consciously put on today?"
+  },
+  40: {
+    day: 40,
+    reference: "Philippians 2:5-11",
+    title: "The Mind of Christ",
+    mainTruth: "The path of exaltation in the Kingdom is humility and self-giving obedience.",
+    culturalInsights: [
+      { title: "Carmen Christi", note: "This passage is widely believed to be an early Christian hymn sung by the church, celebrating Christ's self-emptying (kenosis)." }
+    ],
+    scribalStrategy: {
+      title: "The Descent and Ascent",
+      instructions: [
+        "Use a step-down layout for v. 6-8 (Christ emptying Himself).",
+        "Use a step-up, bold layout for v. 9-11 (Christ exalted)."
+      ]
+    },
+    reflectionQuestion: "Where is God calling me to humble myself in service to others?"
+  },
+  41: {
+    day: 41,
+    reference: "Colossians 1:15-20",
+    title: "The Preeminence of Christ",
+    mainTruth: "Christ is the image of the invisible God, the firstborn over all creation, in whom all things hold together.",
+    scribalStrategy: {
+      title: "The Preeminent Crown",
+      instructions: [
+        "Draw a Crown and a Globe overlapping.",
+        "Transcribe v. 15-18 in a central, dominant box."
+      ]
+    },
+    reflectionQuestion: "What does it mean for Christ to be the 'head' and center of my life?"
+  },
+  42: {
+    day: 42,
+    reference: "James 1:2-12",
+    title: "Testing of Faith",
+    mainTruth: "Trials produce steadfastness, leading to maturity and the crown of life.",
+    scribalStrategy: {
+      title: "The Trial Crown",
+      instructions: [
+        "Underline 'Joy' (chara) and 'Trials' (peirasmos) in contrasting colors.",
+        "Draw a Crown of Life in the bottom margin."
+      ]
+    },
+    reflectionQuestion: "How can I find joy in the trials I am currently facing?"
   }
 };
 
@@ -390,6 +607,129 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
       ]
     },
     reflectionQuestion: "Where is God using a 'mirror' to show me a truth I've been hiding from?"
+  },
+  // --- Week 7: The Exile & Return ---
+  43: {
+    day: 43,
+    reference: "2 Kings 25:1-10",
+    title: "The Fall of Jerusalem",
+    historicalSnapshot: {
+      ref: "2 Kings 25:9",
+      text: "And he burnt the house of the Lord..."
+    },
+    scribalStrategy: {
+      title: "The Ruined Temple",
+      instructions: [
+        "Transcribe v. 8-10 in charcoal or grey ink.",
+        "Draw smoke rising from the top of the text pane.",
+        "Write 'EXILE' in heavy block letters in the margin."
+      ]
+    },
+    reflectionQuestion: "How do I respond when God allows things I relied on to fall apart for my growth?"
+  },
+  44: {
+    day: 44,
+    reference: "Psalm 137:1-6",
+    title: "By the Rivers of Babylon",
+    historicalSnapshot: {
+      ref: "Psalm 137:1",
+      text: "By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion."
+    },
+    scribalStrategy: {
+      title: "The Silent Harps",
+      instructions: [
+        "Draw a weeping willow tree with a harp hanging on it.",
+        "Transcribe v. 1-4 using a soft, slanting script.",
+        "Write ZION in gold lettering."
+      ]
+    },
+    reflectionQuestion: "How do I maintain my devotion and worship when living in a culture that doesn't share my faith?"
+  },
+  45: {
+    day: 45,
+    reference: "Daniel 6:10-23",
+    title: "Daniel in the Lions' Den",
+    historicalSnapshot: {
+      ref: "Daniel 6:10",
+      text: "He went into his house; and his windows being open in his chamber toward Jerusalem..."
+    },
+    scribalStrategy: {
+      title: "The Open Window",
+      instructions: [
+        "Draw an arched window showing the direction of Jerusalem.",
+        "Write Daniel's prayer times (Three Times a Day) in the margin.",
+        "Highlight v. 22 'My God hath sent his angel...' in green ink."
+      ]
+    },
+    reflectionQuestion: "Is my prayer life consistent enough that others would know it is my non-negotiable priority?"
+  },
+  46: {
+    day: 46,
+    reference: "Ezra 1:1-8",
+    title: "The Decree of Cyrus",
+    historicalSnapshot: {
+      ref: "Ezra 1:1",
+      text: "The Lord stirred up the spirit of Cyrus king of Persia..."
+    },
+    scribalStrategy: {
+      title: "The Persian Proclamation",
+      instructions: [
+        "Create a scroll banner design at the top of the page.",
+        "Transcribe Cyrus's decree in an official, calligraphic hand."
+      ]
+    },
+    reflectionQuestion: "How does it build my faith to see God move the heart of a pagan emperor to fulfill His promise?"
+  },
+  47: {
+    day: 47,
+    reference: "Ezra 3:8-13",
+    title: "Rebuilding the Temple Foundation",
+    historicalSnapshot: {
+      ref: "Ezra 3:11",
+      text: "And they sang together by course in praising and giving thanks unto the Lord..."
+    },
+    scribalStrategy: {
+      title: "The Shout and the Weep",
+      instructions: [
+        "Underline references to joy and weeping in contrasting colors.",
+        "Draw a foundation stone at the base of the page."
+      ]
+    },
+    reflectionQuestion: "How can joy and grief coexist in my spiritual journey during times of rebuilding?"
+  },
+  48: {
+    day: 48,
+    reference: "Nehemiah 2:1-8",
+    title: "Nehemiah Sent to Jerusalem",
+    historicalSnapshot: {
+      ref: "Nehemiah 2:4",
+      text: "Then the king said unto me, For what dost thou make request? So I prayed to the God of heaven."
+    },
+    scribalStrategy: {
+      title: "The Instant Prayer",
+      instructions: [
+        "Highlight Nehemiah's quick prayer (v. 4) inside a speech bubble.",
+        "Draw a cupbearer's goblet in the bottom corner."
+      ]
+    },
+    reflectionQuestion: "Do I practice 'arrow prayers'—turning to God instantly in moments of pressure?"
+  },
+  49: {
+    day: 49,
+    reference: "Nehemiah 8:1-8",
+    title: "Ezra Reads the Law",
+    historicalSnapshot: {
+      ref: "Nehemiah 8:3",
+      text: "And the ears of all the people were attentive unto the book of the law."
+    },
+    scribalStrategy: {
+      title: "The Pulpit of Wood",
+      instructions: [
+        "Draw a wooden platform/pulpit frame.",
+        "Write AMEN, AMEN in large capital letters in the margin."
+      ]
+    },
+    reflectionQuestion: "When was the last time the reading of scripture brought me to a place of deep response?"
   }
 };
 
@@ -552,10 +892,261 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
       { label: "Covenant", value: "JESUS: FULFILLMENT" }
     ],
     reflectionQuestion: "How does seeing the whole plan from Genesis to the Gospels build your assurance?"
+  },
+  // --- Week 8: The Temple & Presence of God ---
+  50: {
+    day: 50,
+    reference: "Exodus 40:34-38",
+    title: "The Tabernacle Filled",
+    mainTruth: "God's glory dwells among His people, guiding their journey through the wilderness.",
+    scribalStrategy: {
+      title: "The Pillar of Cloud",
+      instructions: [
+        "Draw a pillar of cloud rising on the left and a pillar of fire on the right.",
+        "Transcribe v. 34-38 in a central column."
+      ]
+    },
+    thematicLedger: [
+      { label: "Presence", value: "Eden: Lost" },
+      { label: "Presence", value: "Tabernacle: Dwells" }
+    ],
+    reflectionQuestion: "How does knowing God's presence guides my steps change my outlook for today?"
+  },
+  51: {
+    day: 51,
+    reference: "1 Kings 8:1-11",
+    title: "Solomon's Temple Dedicated",
+    mainTruth: "The Temple serves as the earthly dwelling place of God's covenant presence.",
+    scribalStrategy: {
+      title: "The Ark Enters",
+      instructions: [
+        "Draw the staves of the Ark extending from the holy place.",
+        "Highlight 'the glory of the Lord had filled the house' (v. 11) in gold ink."
+      ]
+    },
+    thematicLedger: [
+      { label: "Presence", value: "Eden: Lost" },
+      { label: "Presence", value: "Tabernacle: Dwells" },
+      { label: "Presence", value: "Solomon's Temple: Filled" }
+    ],
+    reflectionQuestion: "What places or moments do I dedicate entirely to welcoming God's presence?"
+  },
+  52: {
+    day: 52,
+    reference: "Ezekiel 10:1-18",
+    title: "The Glory Departs",
+    mainTruth: "Idolatry forces the departure of God's holy presence from His temple.",
+    scribalStrategy: {
+      title: "The Departing Wheels",
+      instructions: [
+        "Draw overlapping wheels of fire in the margins.",
+        "Transcribe the departure of the glory (v. 18) in pale, fading ink."
+      ]
+    },
+    thematicLedger: [
+      { label: "Presence", value: "Eden: Lost" },
+      { label: "Presence", value: "Tabernacle: Dwells" },
+      { label: "Presence", value: "Solomon's Temple: Filled" },
+      { label: "Presence", value: "Ezekiel: Departed" }
+    ],
+    reflectionQuestion: "Are there areas of compromise in my life that grieves the Holy Spirit?"
+  },
+  53: {
+    day: 53,
+    reference: "Ezekiel 43:1-7",
+    title: "The Glory Returns",
+    mainTruth: "God promises to dwell in the midst of a cleansed and restored temple forever.",
+    scribalStrategy: {
+      title: "The Eastern Gate",
+      instructions: [
+        "Draw double gates looking towards the rising sun.",
+        "Write 'HIS VOICE WAS LIKE THE NOISE OF MANY WATERS' in bold letters."
+      ]
+    },
+    thematicLedger: [
+      { label: "Presence", value: "Eden: Lost" },
+      { label: "Presence", value: "Tabernacle: Dwells" },
+      { label: "Presence", value: "Solomon's Temple: Filled" },
+      { label: "Presence", value: "Ezekiel: Departed" },
+      { label: "Presence", value: "Ezekiel: Promised Return" }
+    ],
+    reflectionQuestion: "How does the promise of God's permanent return give me hope during seasons of dryness?"
+  },
+  54: {
+    day: 54,
+    reference: "John 1:1-14",
+    title: "The Word Became Flesh",
+    mainTruth: "Jesus is the ultimate temple, God tabernacling among humanity in flesh.",
+    culturalInsights: [
+      { title: "Tabernacled", note: "The Greek word for 'dwelt' (eskenosen) in John 1:14 literally means 'to pitch a tent' or 'tabernacle' among us." }
+    ],
+    scribalStrategy: {
+      title: "The Living Temple",
+      instructions: [
+        "Box in John 1:14 'And the Word became flesh...'",
+        "Underline 'GLORY' in radiant yellow ink."
+      ]
+    },
+    thematicLedger: [
+      { label: "Presence", value: "Eden: Lost" },
+      { label: "Presence", value: "Tabernacle: Dwells" },
+      { label: "Presence", value: "Solomon's Temple: Filled" },
+      { label: "Presence", value: "Ezekiel: Departed" },
+      { label: "Presence", value: "Ezekiel: Promised Return" },
+      { label: "Presence", value: "JESUS: INCARNATION" }
+    ],
+    reflectionQuestion: "How does Christ taking on flesh bridge the gap between God's holiness and my humanity?"
+  },
+  55: {
+    day: 55,
+    reference: "1 Corinthians 6:19-20",
+    title: "The Temple of the Holy Spirit",
+    mainTruth: "Believers are the dwelling place of God's Spirit, bought with a price to glorify God.",
+    scribalStrategy: {
+      title: "The Price Tag",
+      instructions: [
+        "Write 'BOUGHT WITH A PRICE' in all-caps across the center.",
+        "Underline 'Glorify God in your body' in red."
+      ]
+    },
+    thematicLedger: [
+      { label: "Presence", value: "Eden: Lost" },
+      { label: "Presence", value: "Tabernacle: Dwells" },
+      { label: "Presence", value: "Solomon's Temple: Filled" },
+      { label: "Presence", value: "Ezekiel: Departed" },
+      { label: "Presence", value: "Ezekiel: Promised Return" },
+      { label: "Presence", value: "JESUS: INCARNATION" },
+      { label: "Presence", value: "CHURCH: DWELLING" }
+    ],
+    reflectionQuestion: "If my body is God's temple, how does that affect my daily habits and choices?"
+  },
+  56: {
+    day: 56,
+    reference: "Revelation 21:1-7",
+    title: "The New Jerusalem",
+    mainTruth: "The final climax is the unhindered dwelling of God with humanity in a new creation.",
+    scribalStrategy: {
+      title: "The Tabernacle of God",
+      instructions: [
+        "Draw a brilliant city skyline descending from heaven.",
+        "Write 'GOD HIMSELF SHALL BE WITH THEM' in large celebratory letters."
+      ]
+    },
+    thematicLedger: [
+      { label: "Presence", value: "Eden: Lost" },
+      { label: "Presence", value: "Tabernacle: Dwells" },
+      { label: "Presence", value: "Solomon's Temple: Filled" },
+      { label: "Presence", value: "Ezekiel: Departed" },
+      { label: "Presence", value: "Ezekiel: Promised Return" },
+      { label: "Presence", value: "JESUS: INCARNATION" },
+      { label: "Presence", value: "CHURCH: DWELLING" },
+      { label: "Presence", value: "NEW JERUSALEM: ETERNAL" }
+    ],
+    reflectionQuestion: "How does the guarantee of this final home motivate my endurance today?"
   }
 };
 
-export type PathId = 'chronological' | 'thematic' | 'genre';
+export const BIBLE_BOOKS = [
+  { name: "Genesis", chapters: 50 },
+  { name: "Exodus", chapters: 40 },
+  { name: "Leviticus", chapters: 27 },
+  { name: "Numbers", chapters: 36 },
+  { name: "Deuteronomy", chapters: 34 },
+  { name: "Joshua", chapters: 24 },
+  { name: "Judges", chapters: 21 },
+  { name: "Ruth", chapters: 4 },
+  { name: "1 Samuel", chapters: 31 },
+  { name: "2 Samuel", chapters: 24 },
+  { name: "1 Kings", chapters: 22 },
+  { name: "2 Kings", chapters: 25 },
+  { name: "1 Chronicles", chapters: 29 },
+  { name: "2 Chronicles", chapters: 36 },
+  { name: "Ezra", chapters: 10 },
+  { name: "Nehemiah", chapters: 13 },
+  { name: "Esther", chapters: 10 },
+  { name: "Job", chapters: 42 },
+  { name: "Psalms", chapters: 150 },
+  { name: "Proverbs", chapters: 31 },
+  { name: "Ecclesiastes", chapters: 12 },
+  { name: "Song of Solomon", chapters: 8 },
+  { name: "Isaiah", chapters: 66 },
+  { name: "Jeremiah", chapters: 52 },
+  { name: "Lamentations", chapters: 5 },
+  { name: "Ezekiel", chapters: 48 },
+  { name: "Daniel", chapters: 12 },
+  { name: "Hosea", chapters: 14 },
+  { name: "Joel", chapters: 3 },
+  { name: "Amos", chapters: 9 },
+  { name: "Obadiah", chapters: 1 },
+  { name: "Jonah", chapters: 4 },
+  { name: "Micah", chapters: 7 },
+  { name: "Nahum", chapters: 3 },
+  { name: "Habakkuk", chapters: 3 },
+  { name: "Zephaniah", chapters: 3 },
+  { name: "Haggai", chapters: 2 },
+  { name: "Zechariah", chapters: 14 },
+  { name: "Malachi", chapters: 4 },
+  { name: "Matthew", chapters: 28 },
+  { name: "Mark", chapters: 16 },
+  { name: "Luke", chapters: 24 },
+  { name: "John", chapters: 21 },
+  { name: "Acts", chapters: 28 },
+  { name: "Romans", chapters: 16 },
+  { name: "1 Corinthians", chapters: 16 },
+  { name: "2 Corinthians", chapters: 13 },
+  { name: "Galatians", chapters: 6 },
+  { name: "Ephesians", chapters: 6 },
+  { name: "Philippians", chapters: 4 },
+  { name: "Colossians", chapters: 4 },
+  { name: "1 Thessalonians", chapters: 5 },
+  { name: "2 Thessalonians", chapters: 3 },
+  { name: "1 Timothy", chapters: 6 },
+  { name: "2 Timothy", chapters: 4 },
+  { name: "Titus", chapters: 3 },
+  { name: "Philemon", chapters: 1 },
+  { name: "Hebrews", chapters: 13 },
+  { name: "James", chapters: 5 },
+  { name: "1 Peter", chapters: 5 },
+  { name: "2 Peter", chapters: 3 },
+  { name: "1 John", chapters: 5 },
+  { name: "2 John", chapters: 1 },
+  { name: "3 John", chapters: 1 },
+  { name: "Jude", chapters: 1 },
+  { name: "Revelation", chapters: 22 }
+];
+
+export function getBookAndChapterForDay(day: number): { book: string; chapter: number } | null {
+  if (day < 1 || day > 1189) return null;
+  let currentSum = 0;
+  for (const b of BIBLE_BOOKS) {
+    if (day <= currentSum + b.chapters) {
+      return {
+        book: b.name,
+        chapter: day - currentSum
+      };
+    }
+    currentSum += b.chapters;
+  }
+  return null;
+}
+
+export type PathId = 'chronological' | 'thematic' | 'genre' | 'entire';
+
+export function getPlanDays(path: PathId): number[] {
+  if (path === 'genre') {
+    return Object.keys(GENRE_PLAN).map(Number).sort((a, b) => a - b);
+  }
+  if (path === 'chronological') {
+    return Object.keys(CHRONOLOGICAL_PLAN).map(Number).sort((a, b) => a - b);
+  }
+  if (path === 'thematic') {
+    return Object.keys(THEMATIC_PLAN).map(Number).sort((a, b) => a - b);
+  }
+  if (path === 'entire') {
+    return Array.from({ length: 1189 }, (_, i) => i + 1);
+  }
+  return [];
+}
 
 export function getPlanDay(path: PathId, day: number): ReadingPlanDay | null {
   if (path === 'chronological') {
@@ -567,5 +1158,27 @@ export function getPlanDay(path: PathId, day: number): ReadingPlanDay | null {
   if (path === 'thematic') {
     return THEMATIC_PLAN[day] || null;
   }
+  if (path === 'entire') {
+    const mapping = getBookAndChapterForDay(day);
+    if (!mapping) return null;
+    const { book, chapter } = mapping;
+    
+    return {
+      day,
+      reference: `${book} ${chapter}`,
+      title: `${book} Chapter ${chapter}`,
+      mainTruth: `Trace the progression of divine revelation through the text of ${book} chapter ${chapter}.`,
+      scribalStrategy: {
+        title: "Canonical Scribing",
+        instructions: [
+          `Transcribe the primary verses of ${book} ${chapter} in an elegant bookhand.`,
+          `Highlight terms representing key theological or historical actions.`,
+          `Reflect on how this chapter fits into the grand narrative of Scripture.`
+        ]
+      },
+      reflectionQuestion: `What key truths in ${book} ${chapter} deepen your understanding of God's sovereign covenant?`
+    };
+  }
   return null;
 }
+
