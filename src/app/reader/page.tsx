@@ -209,6 +209,7 @@ function ReaderContent() {
   const [newComment, setNewComment] = useState("");
 
   const planDay = pathParam && dayParam > 0 ? getPlanDay(pathParam, dayParam) : null;
+  const thematicLedger = planDay?.thematicLedger;
 
   useEffect(() => {
     if (pathParam && dayParam > 0) {
@@ -760,29 +761,88 @@ function ReaderContent() {
                 </CardContent>
               </Card>
             )}
-
             {planDay?.thematicLedger && (
-              <Card className={cn(
-                "border-none shadow-md rounded-2xl overflow-hidden border",
-                getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
-              )}>
-                <CardHeader className="p-5 pb-3">
-                  <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-primary">
-                    <ListChecks className="h-5 w-5" /> Covenant Tracker
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-5 pt-0 space-y-3">
-                  {planDay.thematicLedger.map((item, i) => (
-                    <div key={i} className={cn(
-                      "flex items-center justify-between p-4 rounded-xl border",
-                      getThemeClass("bg-slate-50 border-slate-100", "bg-[#F4ECD8] border-[#E6D7B8] text-[#433422]", "bg-slate-900 border-slate-800 text-slate-200")
+              <div className="relative w-full my-4">
+                {/* Wooden top roller rod */}
+                <div className="relative h-4 w-full flex items-center justify-between px-2">
+                  <div className="h-5 w-3 rounded-l-md bg-amber-900 border border-amber-950 shadow-inner" />
+                  <div className="h-2 w-full bg-amber-800 border-y border-amber-900 shadow-md" />
+                  <div className="h-5 w-3 rounded-r-md bg-amber-900 border border-amber-950 shadow-inner" />
+                </div>
+                
+                {/* Parchment scroll body */}
+                <div className={cn(
+                  "mx-3 px-6 py-6 border-x relative shadow-xl overflow-hidden",
+                  getThemeClass(
+                    "bg-[#FAF6EE] border-[#E2D2B2] shadow-[inset_0_0_20px_rgba(139,92,26,0.05)]",
+                    "bg-[#F4ECD8] border-[#D9C4A2] shadow-[inset_0_0_20px_rgba(139,92,26,0.08)]",
+                    "bg-slate-900 border-slate-800 shadow-[inset_0_0_20px_rgba(0,0,0,0.4)]"
+                  )
+                )}>
+                  {/* Decorative faint grid lines or watermarks on the parchment */}
+                  <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.01] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
+                  
+                  <div className="relative flex items-center gap-2 mb-5">
+                    <ListChecks className={cn("h-4 w-4 shrink-0", getThemeClass("text-amber-700", "text-amber-800", "text-amber-500"))} />
+                    <span className={cn(
+                      "text-[10px] font-bold uppercase tracking-widest font-headline",
+                      getThemeClass("text-amber-800", "text-amber-900", "text-amber-400")
                     )}>
-                      <span className={cn("text-xs font-bold uppercase tracking-wider", getThemeClass("text-slate-500", "text-[#8C6D58]", "text-slate-400"))}>{item.label}</span>
-                      <span className="text-sm font-bold text-primary">{item.value}</span>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
+                      Golden Thread Ledger
+                    </span>
+                  </div>
+                  <div className="relative space-y-6">
+                    {thematicLedger && thematicLedger.map((item, idx) => {
+                      const isLast = idx === thematicLedger.length - 1;
+                      return (
+                        <div key={idx} className="relative flex items-center gap-4 pl-6">
+                          {/* Vertical connecting thread */}
+                          {!isLast && (
+                            <div className={cn(
+                              "absolute left-3.5 top-4 bottom-[-34px] w-0.5",
+                              getThemeClass("bg-amber-200", "bg-[#D9C4A2]", "bg-slate-700")
+                            )} />
+                          )}
+
+                          <div className={cn(
+                            "absolute left-2 top-1 h-3 w-3 rounded-full border flex items-center justify-center transition-all duration-300",
+                            isLast 
+                              ? "bg-red-600 border-red-700 scale-125 shadow-[0_0_8px_rgba(220,38,38,0.4)] animate-pulse" 
+                              : getThemeClass("bg-amber-100 border-amber-300", "bg-[#FAF6EE] border-[#D9C4A2]", "bg-slate-800 border-slate-750")
+                          )}>
+                            {isLast && <div className="h-1 w-1 rounded-full bg-white" />}
+                          </div>
+
+                          <span className={cn(
+                            "text-[9px] font-bold uppercase tracking-wider",
+                            isLast 
+                              ? "text-red-650 dark:text-red-400 font-extrabold" 
+                              : getThemeClass("text-slate-400", "text-amber-700/60", "text-slate-500")
+                          )}>
+                            {item.label}
+                          </span>
+                          
+                          <span className={cn(
+                            "text-xs font-bold font-serif italic transition-all duration-300",
+                            isLast 
+                              ? "text-amber-900 dark:text-amber-100 text-sm drop-shadow-sm font-extrabold" 
+                              : getThemeClass("text-slate-700", "text-slate-850", "text-slate-400")
+                          )}>
+                            {item.value}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Wooden bottom roller rod */}
+                <div className="relative h-4 w-full flex items-center justify-between px-2 -mt-0.5">
+                  <div className="h-5 w-3 rounded-l-md bg-amber-900 border border-amber-950 shadow-inner" />
+                  <div className="h-2 w-full bg-amber-800 border-y border-amber-900 shadow-md" />
+                  <div className="h-5 w-3 rounded-r-md bg-amber-900 border border-amber-950 shadow-inner" />
+                </div>
+              </div>
             )}
 
             {planDay?.culturalInsights && (
