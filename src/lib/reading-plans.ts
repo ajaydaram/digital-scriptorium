@@ -969,10 +969,131 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
       title: "Unhindered Rome",
       instructions: [
         "Scribe 'UNHINDERED' (Greek: Akolytos) in huge gold letters at the foot of the page.",
-        "Draw a chain link that transitions into a banner of victory."
+        "Draw an open door in the margin to signify the mission continuing."
       ]
     },
-    reflectionQuestion: "Is my witness for the kingdom of God active and 'unhindered' by my current circumstances?"
+    reflectionQuestion: "In what ways does my life testify that the kingdom of God is advancing, even in chains?"
+  },
+  // --- Week 11: The Monarchy and Prophets ---
+  71: {
+    day: 71,
+    reference: "1 Kings 8:22-61",
+    title: "Solomon Dedicates the Temple",
+    historicalSnapshot: {
+      ref: "1 Kings 8:27",
+      text: "But will God indeed dwell on the earth? behold, the heaven and heaven of heavens cannot contain thee..."
+    },
+    scribalStrategy: {
+      title: "Temple Blueprint",
+      instructions: [
+        "Scribe 'BUT WILL GOD DWELL ON THE EARTH?' in a grand, wide Bookhand style.",
+        "Draw three interlocking gold rectangles at the top representing the outer courts."
+      ]
+    },
+    reflectionQuestion: "Do I live with the conscious awareness that the Creator of the universe dwells inside me through His Spirit?"
+  },
+  72: {
+    day: 72,
+    reference: "1 Kings 12:1-24",
+    title: "The Division of the Kingdom",
+    historicalSnapshot: {
+      ref: "1 Kings 12:16",
+      text: "...What portion have we in David? neither have we inheritance in the son of Jesse: to your tents, O Israel..."
+    },
+    scribalStrategy: {
+      title: "The Torn Robe",
+      instructions: [
+        "Scribe 'TO YOUR TENTS, O ISRAEL' in a jagged, distressed red script.",
+        "Draw a torn border dividing the page's top and bottom margins."
+      ]
+    },
+    reflectionQuestion: "Am I seeking wise, godly counsel in my life decisions, or listening to voices of pride and division?"
+  },
+  73: {
+    day: 73,
+    reference: "1 Kings 18:17-40",
+    title: "Elijah on Mount Carmel",
+    historicalSnapshot: {
+      ref: "1 Kings 18:38",
+      text: "Then the fire of the LORD fell, and consumed the burnt sacrifice, and the wood, and the stones..."
+    },
+    scribalStrategy: {
+      title: "The Fire from Heaven",
+      instructions: [
+        "Draw a pillar of flame descending from the top margin onto an altar of twelve stones.",
+        "Write 'THE LORD, HE IS THE GOD' in large, bold letters across the right margin."
+      ]
+    },
+    reflectionQuestion: "Am I limping between two opinions, or is my heart fully surrendered to the one true God?"
+  },
+  74: {
+    day: 74,
+    reference: "2 Kings 17:1-23",
+    title: "The Fall of Samaria",
+    historicalSnapshot: {
+      ref: "2 Kings 17:18",
+      text: "Therefore the LORD was very angry with Israel, and removed them out of his sight..."
+    },
+    scribalStrategy: {
+      title: "The Broken Pillars",
+      instructions: [
+        "Draw a broken pillar icon next to the passage.",
+        "Leave the borders of this page completely blank and grey."
+      ]
+    },
+    reflectionQuestion: "Do I recognize the subtle idols in my life that tempt me away from absolute loyalty to God?"
+  },
+  75: {
+    day: 75,
+    reference: "2 Kings 19:14-37",
+    title: "Hezekiah's Prayer and Deliverance",
+    historicalSnapshot: {
+      ref: "2 Kings 19:15",
+      text: "And Hezekiah prayed before the LORD... Thou art the God, even thou alone, of all the kingdoms of the earth..."
+    },
+    scribalStrategy: {
+      title: "Spread Before the Lord",
+      instructions: [
+        "Draw an open scroll/letter layout containing v. 15-19 in an elegant cursive hand.",
+        "Highlight 'SAVIOR OF THE NATIONS' in gold lettering."
+      ]
+    },
+    reflectionQuestion: "When faced with overwhelming crises, do I run to make human alliances first, or do I lay my burdens before the Lord?"
+  },
+  76: {
+    day: 76,
+    reference: "Isaiah 6:1-13",
+    title: "Isaiah's Temple Vision",
+    historicalSnapshot: {
+      ref: "Isaiah 6:3",
+      text: "And one cried unto another, and said, Holy, holy, holy, is the LORD of hosts: the whole earth is full of his glory."
+    },
+    scribalStrategy: {
+      title: "Here Am I, Send Me",
+      instructions: [
+        "Scribe 'HOLY, HOLY, HOLY' in huge, illuminated blackletter style.",
+        "Write Isaiah's answer (v. 8) in gold leaf ink in the bottom margin."
+      ]
+    },
+    reflectionQuestion: "Am I willing to say, 'Here am I, send me,' even when the assignment is difficult and the results are unseen?"
+  },
+  77: {
+    day: 77,
+    reference: "2 Kings 25:1-21",
+    title: "The Fall of Jerusalem",
+    historicalSnapshot: {
+      ref: "2 Kings 25:9",
+      text: "And he burnt the house of the LORD, and the king's house, and all the houses of Jerusalem..."
+    },
+    scribalStrategy: {
+      title: "The Ashes of Zion",
+      instructions: [
+        "Draw a burning wall silhouette in the right margin.",
+        "Transcribe v. 9 using a heavy, weeping uncial hand.",
+        "Add char/smoke flourishes around the edges of the page."
+      ]
+    },
+    reflectionQuestion: "When earthly foundations crumble, do I remember that God's covenant promises remain unshaken?"
   }
 };
 

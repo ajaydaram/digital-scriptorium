@@ -454,6 +454,7 @@ export default function ChronologicalDesk({ day, theme, version, getThemeClass }
 
   const eras = [
     { id: "david", label: "Age of David", date: "1000 BC", range: [15, 21] as [number, number], startDay: 15 },
+    { id: "kings", label: "Age of the Kings", date: "960 BC", range: [71, 77] as [number, number], startDay: 71 },
     { id: "exile", label: "Age of Exile/Return", date: "500 BC", range: [43, 49] as [number, number], startDay: 43 },
     { id: "incarnation", label: "Age of Incarnation", date: "30 AD", range: [57, 63] as [number, number], startDay: 57 },
     { id: "apostles", label: "Age of the Apostles", date: "60 AD", range: [64, 70] as [number, number], startDay: 64 }
@@ -487,7 +488,7 @@ export default function ChronologicalDesk({ day, theme, version, getThemeClass }
                   key={era.id}
                   onClick={() => router.push(`/reader?path=chronological&day=${era.startDay}`)}
                   className={cn(
-                    "relative z-10 flex flex-row md:flex-col items-center gap-4 md:gap-2 px-4 py-3 md:py-2 rounded-xl border text-left md:text-center transition-all duration-300 hover:scale-[1.02] md:w-[22%]",
+                    "relative z-10 flex flex-row md:flex-col items-center gap-4 md:gap-2 px-4 py-3 md:py-2 rounded-xl border text-left md:text-center transition-all duration-300 hover:scale-[1.02] md:w-[18%]",
                     isActive 
                       ? "bg-amber-600 border-amber-600 text-white shadow-[0_0_15px_rgba(217,119,6,0.3)]"
                       : getThemeClass(
