@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { CHRONOLOGICAL_DAYS_DATA, Linkage } from "@/lib/chronological-linkages";
 import { getLocalStepBiblePassage } from "@/lib/stepbible-database";
@@ -28,6 +29,7 @@ interface PlacedStamp {
 }
 
 export default function ChronologicalDesk({ day, theme, version, getThemeClass }: ChronologicalDeskProps) {
+  const router = useRouter();
   const [hoveredLinkId, setHoveredLinkId] = useState<string | null>(null);
   const [lineCoords, setLineCoords] = useState<{ x1: number; y1: number; x2: number; y2: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -450,6 +452,14 @@ export default function ChronologicalDesk({ day, theme, version, getThemeClass }
     };
   };
 
+  const eras = [
+    { id: "david", label: "Age of David", date: "1000 BC", range: [15, 21] as [number, number], startDay: 15 },
+    { id: "exile", label: "Age of Exile/Return", date: "500 BC", range: [43, 49] as [number, number], startDay: 43 },
+    { id: "incarnation", label: "Age of Incarnation", date: "30 AD", range: [57, 63] as [number, number], startDay: 57 },
+    { id: "apostles", label: "Age of the Apostles", date: "60 AD", range: [64, 70] as [number, number], startDay: 64 }
+  ];
+
+  const activeEra = eras.find(e => day >= e.range[0] && day <= e.range[1]);
   const containerStyle = getContainerStyle();
 
   return (
@@ -459,7 +469,57 @@ export default function ChronologicalDesk({ day, theme, version, getThemeClass }
       className={containerStyle.className}
       style={containerStyle.style}
     >
-      {/* 1. Scribal Illumination Config Control Panel */}
+      {/* Redemptive History Chronological Timeline */}
+      <div className="w-full mb-8 p-6 rounded-2xl bg-amber-500/[0.02] border border-amber-500/10 shadow-inner">
+        <div className="flex flex-col gap-2">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+            Chronological Timeline of Scripture
+          </span>
+          <div className="relative flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 md:gap-4 mt-2">
+            {/* The connector line track (hidden on mobile, shown on md screens) */}
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-amber-500/10 hidden md:block" />
+            
+            {eras.map((era) => {
+              const isActive = activeEra?.id === era.id;
+              
+              return (
+                <button
+                  key={era.id}
+                  onClick={() => router.push(`/reader?path=chronological&day=${era.startDay}`)}
+                  className={cn(
+                    "relative z-10 flex flex-row md:flex-col items-center gap-4 md:gap-2 px-4 py-3 md:py-2 rounded-xl border text-left md:text-center transition-all duration-300 hover:scale-[1.02] md:w-[22%]",
+                    isActive 
+                      ? "bg-amber-600 border-amber-600 text-white shadow-[0_0_15px_rgba(217,119,6,0.3)]"
+                      : getThemeClass(
+                          "bg-white border-slate-200 hover:bg-slate-50 text-slate-700",
+                          "bg-[#FAF6EE] border-[#E6D7B8] hover:bg-[#FAF6EE]/70 text-[#433422]",
+                          "bg-slate-950/40 border-slate-800 hover:bg-slate-900/40 text-slate-300"
+                        )
+                  )}
+                >
+                  {/* Indicator bullet */}
+                  <div className={cn(
+                    "h-4 w-4 rounded-full border-2 flex items-center justify-center shrink-0",
+                    isActive 
+                      ? "bg-white border-white animate-pulse" 
+                      : "bg-transparent border-amber-500/30"
+                  )}>
+                    {isActive && <div className="h-1.5 w-1.5 rounded-full bg-amber-600" />}
+                  </div>
+
+                  <div className="flex flex-col leading-tight">
+                    <span className="text-xs font-bold font-headline">{era.label}</span>
+                    <span className={cn("text-[10px] font-bold opacity-80 mt-0.5", isActive ? "text-amber-100" : "text-amber-600/80")}>
+                      {era.date} • Days {era.range[0]}–{era.range[1]}
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
       <div className="desk-controls w-full flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-6 p-4 rounded-2xl bg-amber-500/5 dark:bg-slate-950/30 border border-amber-500/10 dark:border-slate-800">
         
         {/* Left: Tactile Font Selection */}
