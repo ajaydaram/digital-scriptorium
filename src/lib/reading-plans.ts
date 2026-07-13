@@ -202,10 +202,47 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
         "Draw a Tree in the center; write 'Meditation' on the roots.",
         "Use a bolder, stronger script for the righteous and a 'wispy' script for chaff."
       ]
-    },
-    reflectionQuestion: "In what area of my life am I currently 'walking, standing, or sitting' with the wrong influence?"
+    }
   },
-  11: {
+  9: {
+    day: 9,
+    reference: "Psalm 19",
+    title: "The Heavens Declare",
+    audience: "A psalm of David contemplating the cosmos and the law",
+    mainTruth: "God reveals Himself in two distinct ways: silently through the heavens (general revelation) and perfectly through the Torah (special revelation).",
+    culturalInsights: [
+      { title: "The Sun's Canopy", note: "The metaphor of the sun as a bridegroom or strong man running a course reflects the ancient view of the sun traversing the sky dome." },
+      { title: "Torah's Perfection", note: "Torah means 'instruction' or 'direction', not just legalistic rules. It is described with six titles here, each highlighting a different facet of its impact on the soul." }
+    ],
+    scribalStrategy: {
+      title: "Dual Revelation Layout",
+      instructions: [
+        "Divide the page vertically: transcribe v. 1-6 (Cosmos) on the left, and v. 7-14 (Torah) on the right.",
+        "Underline 'THE LAW OF THE LORD IS PERFECT' in bold gold script."
+      ]
+    },
+    reflectionQuestion: "Does my heart respond more to God's silent voice in creation or His written voice in scripture?"
+  },
+  10: {
+    day: 10,
+    reference: "Psalm 42",
+    title: "Thirsting for God",
+    audience: "A maskil of the sons of Korah in exile",
+    mainTruth: "When spiritual dry seasons and depression strike, we must preach truth to our own souls, remembering past worship.",
+    culturalInsights: [
+      { title: "The Deer's Thirst", note: "In a land with few perennial streams, a deer fleeing predators through dry ravines is completely desperate for water." },
+      { title: "The Land of Jordan & Hermon", note: "The northernmost part of Israel, far from the temple in Jerusalem. The exile feels physically and spiritually cut off from the presence of God." }
+    ],
+    scribalStrategy: {
+      title: "The Watercourse Border",
+      instructions: [
+        "Draw a winding water brook border in light blue surrounding the text.",
+        "Scribe 'WHY ART THOU CAST DOWN, O MY SOUL?' in heavy, dark blackletter."
+      ]
+    },
+    reflectionQuestion: "What do I say to my soul when I feel distant from God's presence?"
+  },
+  11: { 
     day: 11,
     reference: "Psalm 23",
     title: "The Shepherd's Provision",
@@ -224,6 +261,25 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       ]
     },
     reflectionQuestion: "How does the 'physical reality' of the Judean wilderness change my understanding of the Shepherd's protection?"
+  },
+  12: {
+    day: 12,
+    reference: "Psalm 139",
+    title: "Search Me, O God",
+    audience: "A psalm of David on the omnipresence of God",
+    mainTruth: "God knows us intimately, surrounds us constantly, and created us deliberately; there is nowhere we can escape His spirit.",
+    culturalInsights: [
+      { title: "Womb as Earth's Depths", note: "The phrase 'woven together in the depths of the earth' (v. 15) is an artistic Hebrew parallelism comparing the mystery of embryonic growth in the womb to hidden creation underground." },
+      { title: "The Wings of the Dawn", note: "Poetic imagery referring to the speed of sunrise flashing across the eastern horizon to the western Mediterranean sea." }
+    ],
+    scribalStrategy: {
+      title: "Omnipresence Medallion",
+      instructions: [
+        "Scribe 'SEARCH ME, O GOD, AND KNOW MY HEART' in a circular motif.",
+        "Use faint red/gold accents around the creation verses (v. 13-16) to symbolize hand-weaving."
+      ]
+    },
+    reflectionQuestion: "Does the absolute knowledge of God bring me comfort or cause me to hide?"
   },
   13: { 
     day: 13, 
@@ -479,6 +535,266 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       ]
     },
     reflectionQuestion: "How can I find joy in the trials I am currently facing?"
+  },
+  // --- Week 15: OT Prophetic Oracles ---
+  99: {
+    day: 99,
+    reference: "Isaiah 40:1-31",
+    title: "Comfort My People",
+    audience: "Isaiah announcing comfort to Jerusalem after exile",
+    mainTruth: "God's word stands forever, and those who wait upon the Lord will renew their strength like eagles.",
+    culturalInsights: [
+      { title: "The Highway in the Desert", note: "Refers to the ancient practice of leveling roads and removing rocks before the arrival of a visiting monarch." },
+      { title: "Grass & Flowers", note: "A metaphor drawing from the brief spring bloom in Judea, followed by dry desert winds (Sirocco) that immediately wither all green growth." }
+    ],
+    scribalStrategy: {
+      title: "Eagle's Wings uncials",
+      instructions: [
+        "Scribe v. 31 ('They that wait upon the LORD...') in large, wing-shaped layouts.",
+        "Use a gold ink wash to highlight 'Comfort ye, comfort ye my people'."
+      ]
+    },
+    reflectionQuestion: "Am I relying on my own fleeting human strength, or am I waiting on the Lord to renew me?"
+  },
+  100: {
+    day: 100,
+    reference: "Jeremiah 31:31-40",
+    title: "The New Covenant",
+    audience: "Jeremiah predicting a new covenant to house of Israel and Judah",
+    mainTruth: "God will make a new covenant, writing His laws directly on the hearts of His people, granting complete forgiveness.",
+    culturalInsights: [
+      { title: "Covenants on Stone vs Heart", note: "Ancient covenants were inscribed on clay/stone tablets, kept in temples. The New Covenant is internal, written on human fleshly hearts." }
+    ],
+    scribalStrategy: {
+      title: "Covenant Tablet Contrast",
+      instructions: [
+        "Draw two stone tablet silhouettes in light gray ink.",
+        "Write the text of the New Covenant (v. 31-34) floating inside and around them in rich black ink."
+      ]
+    },
+    reflectionQuestion: "Does God's law feel like a set of external rules to me, or an internal desire of my heart?"
+  },
+  101: {
+    day: 101,
+    reference: "Ezekiel 37:1-14",
+    title: "Valley of Dry Bones",
+    audience: "Ezekiel in exile receiving a vision of national resurrection",
+    mainTruth: "No situation is too dead for the breath (Ruach) of God to resurrect and restore.",
+    culturalInsights: [
+      { title: "Ruach", note: "The Hebrew word for wind, breath, and Spirit. Ezekiel uses it wordplayfully to show God's dynamic breathing life into dust." }
+    ],
+    scribalStrategy: {
+      title: "Resurrection Breath",
+      instructions: [
+        "Leave a border showing dry bones scattered, slowly assembling into bodies at the bottom.",
+        "Scribe 'O YE DRY BONES, HEAR THE WORD OF THE LORD' in stark, bold uncials."
+      ]
+    },
+    reflectionQuestion: "What area of my life or community looks like 'dry bones' today, needing the breath of God?"
+  },
+  102: {
+    day: 102,
+    reference: "Amos 5:18-27",
+    title: "Let Justice Roll Down",
+    audience: "Amos warning the wealthy, corrupt elite of Northern Israel",
+    mainTruth: "God rejects outward religious rituals and assemblies when they are decoupled from justice and righteousness.",
+    culturalInsights: [
+      { title: "The Day of the Lord", note: "Popularly expected to be a day of light/victory over enemies; Amos shocks them by declaring it a day of darkness/judgment on Israel itself." },
+      { title: "Ever-flowing Stream (Nahal Ethan)", note: "Most streams in Israel are seasonal (wadis) drying up in summer. A perennial, ever-flowing stream is a symbol of constant, reliable, refreshing justice." }
+    ],
+    scribalStrategy: {
+      title: "Justice Stream",
+      instructions: [
+        "Write 'LET JUDGMENT RUN DOWN AS WATERS' in flowing, waving cursive letters.",
+        "Highlight 'JUSTICE' and 'RIGHTEOUSNESS' in deep water-blue ink."
+      ]
+    },
+    reflectionQuestion: "Am I using religious observance to mask or excuse a lack of active justice in my daily life?"
+  },
+  103: {
+    day: 103,
+    reference: "Micah 6:1-8",
+    title: "What the Lord Requires",
+    audience: "Micah presenting God's covenant lawsuit (Rib) to Israel",
+    mainTruth: "God does not want thousands of animal sacrifices; He requires us to do justice, love mercy, and walk humbly.",
+    culturalInsights: [
+      { title: "The Covenant Lawsuit (Rib)", note: "A formal legal dispute where God calls the mountains and hills as eternal witnesses to testify against Israel's breach of the covenant contract." }
+    ],
+    scribalStrategy: {
+      title: "The Scholar's Scroll",
+      instructions: [
+        "Format the text like a formal court transcript, with margins indented.",
+        "Write v. 8 ('He hath shewed thee, O man...') in large, central display lettering."
+      ]
+    },
+    reflectionQuestion: "What does it look like for me to 'walk humbly' with God in my current circumstances?"
+  },
+  104: {
+    day: 104,
+    reference: "Habakkuk 3:1-19",
+    title: "Yet Will I Rejoice",
+    audience: "Habakkuk's liturgical prayer of faith in the face of Babylonian invasion",
+    mainTruth: "Even when all physical crops, livestock, and security fail, the believer can rejoice in the God of salvation.",
+    culturalInsights: [
+      { title: "Selah", note: "A liturgical pause or musical interlude. Indicates a moment of silent reflection during prayer." },
+      { title: "Deer's Feet (Hind's Feet)", note: "Female deer have high-traction hooves, enabling them to leap securely on vertical mountain cliffs without falling." }
+    ],
+    scribalStrategy: {
+      title: "High Places Song",
+      instructions: [
+        "Scribe the final song of faith (v. 17-19) in an elegant, flowing script.",
+        "Underline 'THE LORD GOD IS MY STRENGTH' in bright crimson."
+      ]
+    },
+    reflectionQuestion: "If all my resources were stripped away today, could I still say 'Yet will I rejoice in the Lord'?"
+  },
+  105: {
+    day: 105,
+    reference: "Malachi 3:1-12",
+    title: "The Refiner's Fire",
+    audience: "Malachi warning the post-exilic community in Jerusalem",
+    mainTruth: "God is a refiner who purifies His people; testing their trust through their tithes and offerings.",
+    culturalInsights: [
+      { title: "The Refiner's Fire & Fuller's Soap", note: "Refiners melt metals to scoop out dross. Fullers use strong alkaline soap to bleach wool. Both represent intense, painful, but purifying processes." }
+    ],
+    scribalStrategy: {
+      title: "Purified Silver",
+      instructions: [
+        "Draw a burning furnace or flame motif surrounding the refiner verses (v. 2-3).",
+        "Highlight 'REFINER' and 'PURIFIER' in metallic silver ink."
+      ]
+    },
+    reflectionQuestion: "How can I view my current difficulties as a refining fire rather than a consuming judgment?"
+  },
+  // --- Week 16: Apocalyptic Literature ---
+  106: {
+    day: 106,
+    reference: "Daniel 7:1-28",
+    title: "The Ancient of Days",
+    audience: "Daniel's dream of cosmic empires and the Son of Man",
+    mainTruth: "Cosmic empires rise and fall like beastly monsters, but the Ancient of Days establishes an eternal kingdom given to the Son of Man.",
+    culturalInsights: [
+      { title: "The Great Sea & Beasts", note: "In ancient Near Eastern mythology, the sea represents chaos. Beasts rising from the sea represent chaotic, anti-God human empires." },
+      { title: "Son of Man (Bar Enash)", note: "A human figure riding on clouds—a role reserved exclusively for divinity in ancient Near Eastern culture. Represents the ultimate ruler of God's kingdom." }
+    ],
+    scribalStrategy: {
+      title: "Throne of Fire",
+      instructions: [
+        "Scribe the description of the Ancient of Days (v. 9-10) in dense blackletter with red flaming borders.",
+        "Write 'HIS KINGDOM IS AN EVERLASTING KINGDOM' in large gold letters."
+      ]
+    },
+    reflectionQuestion: "Does seeing human political powers as 'beasts' help me keep my ultimate allegiance in perspective?"
+  },
+  107: {
+    day: 107,
+    reference: "Zechariah 4:1-14",
+    title: "Not by Might, Nor by Power",
+    audience: "Zechariah comforting Zerubbabel rebuilding the temple",
+    mainTruth: "God's work is accomplished not by human military force or political strength, but by His Spirit.",
+    culturalInsights: [
+      { title: "The Olive Trees", note: "Represent the two anointed leaders (Joshua the High Priest and Zerubbabel the Governor) supplying oil to the lampstand. Fuel flows constantly from God." }
+    ],
+    scribalStrategy: {
+      title: "The Seven Lamps",
+      instructions: [
+        "Draw a golden seven-branched lampstand in the margin, fed by two olive trees.",
+        "Scribe 'NOT BY MIGHT, NOR BY POWER, BUT BY MY SPIRIT' in bold display uncials."
+      ]
+    },
+    reflectionQuestion: "Am I trying to achieve God's goals in my life using 'might and power', or by relying on His Spirit?"
+  },
+  108: {
+    day: 108,
+    reference: "Matthew 24:1-31",
+    title: "The Olivet Discourse",
+    audience: "Jesus speaking privately to His disciples on the Mount of Olives",
+    mainTruth: "Jesus warns of trials, false Christs, and cosmic signs preceding the gathering of the elect by the Son of Man.",
+    culturalInsights: [
+      { title: "Abomination of Desolation", note: "A historical allusion to Antiochus Epiphanes desecrating the temple in 167 BC, here reused as a prophetic symbol of the temple's destruction in 70 AD." }
+    ],
+    scribalStrategy: {
+      title: "The Cosmic Darkening",
+      instructions: [
+        "Transcribe v. 29-30 in white ink on a dark shaded background panel.",
+        "Draw a stylized sun and moon darkened with a shining cross/sign of the Son of Man in the sky."
+      ]
+    },
+    reflectionQuestion: "How do I maintain vigilance and hope in a world filled with wars, rumors of wars, and trials?"
+  },
+  109: {
+    day: 109,
+    reference: "Revelation 1:1-20",
+    title: "The Son of Man",
+    audience: "John writing to the seven churches of Asia Minor in exile",
+    mainTruth: "The glorified Christ stands in the midst of His suffering churches, holding the keys of death and Hades.",
+    culturalInsights: [
+      { title: "Patmos", note: "A Roman penal colony island in the Aegean Sea. John is suffering banishment for his testimony." },
+      { title: "Seven Lampstands", note: "In the Old Testament, the lampstand was in the temple. In Revelation, the lampstands represent the local churches, which are the new dwelling places of God." }
+    ],
+    scribalStrategy: {
+      title: "The Glorified Christ",
+      instructions: [
+        "Draw a brilliant sword extending from the right margin towards the text.",
+        "Write 'I AM THE FIRST AND THE LAST' in large gold uncial script."
+      ]
+    },
+    reflectionQuestion: "Does the image of the glorified Christ holding the keys of death comfort me in my fears?"
+  },
+  110: {
+    day: 110,
+    reference: "Revelation 12:1-17",
+    title: "The Dragon and the Woman",
+    audience: "John describing the cosmic warfare behind earthly persecution",
+    mainTruth: "Earthly trials and persecution of God's people are expressions of a defeated cosmic dragon warring against the Messiah.",
+    culturalInsights: [
+      { title: "The Woman clothed with the Sun", note: "Symbolizes Israel/the covenant people giving birth to the Messiah, drawing from Joseph's dream symbols (sun, moon, twelve stars)." },
+      { title: "The War in Heaven", note: "The dragon is cast down, meaning his power to accuse believers before God has been completely shattered." }
+    ],
+    scribalStrategy: {
+      title: "Cosmic War Mapping",
+      instructions: [
+        "Draw a dragon silhouette in dark red next to the text.",
+        "Scribe 'THEY OVERCAME HIM BY THE BLOOD OF THE LAMB' in large crimson lettering."
+      ]
+    },
+    reflectionQuestion: "How does knowing the dragon is already cast down change how I respond to spiritual warfare or trial?"
+  },
+  111: {
+    day: 111,
+    reference: "Revelation 21:1-27",
+    title: "The New Jerusalem",
+    audience: "John describing the ultimate dwelling place of God with man",
+    mainTruth: "God makes all things new, establishing His city where there is no temple, sun, or death, for His presence is all.",
+    culturalInsights: [
+      { title: "No More Sea", note: "In apocalyptic imagery, the sea represents chaos and division. The absence of sea means the total eradication of chaos and separation from God." }
+    ],
+    scribalStrategy: {
+      title: "The Pearl Gates",
+      instructions: [
+        "Scribe the dimensions and stone descriptions of the city in a clean, perfect grid layout.",
+        "Write 'BEHOLD, THE TABERNACLE OF GOD IS WITH MEN' in beautiful gold lettering."
+      ]
+    },
+    reflectionQuestion: "How does the promise of a world with no more sorrow or pain shape my perspective on today's struggles?"
+  },
+  112: {
+    day: 112,
+    reference: "Revelation 22:1-21",
+    title: "The River of Life",
+    audience: "John concluding the apocalyptic revelation of Jesus Christ",
+    mainTruth: "The river and tree of life flow from the throne, healing the nations; the story ends with an invitation to come and drink.",
+    culturalInsights: [
+      { title: "The Tree of Life", note: "Re-entry into the garden from Genesis 3. The story of Scripture is a circle, ending not in a wild forest but a cultivated garden-city." }
+    ],
+    scribalStrategy: {
+      title: "The River of Life",
+      instructions: [
+        "Draw a flowing crystal stream from the top of the page down between two columns of text.",
+        "Write 'EVEN SO, COME, LORD JESUS' in bold display uncials at the bottom."
+      ]
+    },
+    reflectionQuestion: "Am I actively responding to the invitation to drink from the water of life, and sharing that invitation with others?"
   }
 };
 
