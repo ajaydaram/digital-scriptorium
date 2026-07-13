@@ -43471,6 +43471,4129 @@ export const STEPBIBLE_DB: Record<string, StepBiblePassage> = {
         ]
       }
     ]
+  },
+  "Genesis 22:1-19": {
+    "reference": "Genesis 22:1-19",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass after these things, that God did tempt Abraham, and said unto him, Abraham: and he said, Behold, here I am.",
+          "9879dbb7aec41528-01": "After these things, God tested Abraham, and said to him, “Abraham!” He said, “Here I am.”",
+          "bba730b9171fcc22-01": "Now after these things, God put Abraham to the test, and said to him, Abraham; and he said, Here am I.",
+          "06125ad3d1d57585-01": "After these things, God tested Abraham, and said to him, “Abraham!” He said, “Here I am.”",
+          "41926a4aa3831714-01": "After these things, God tested Abraham, and said to him, “Abraham!” He said, “Here I am.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.",
+          "9879dbb7aec41528-01": "He said, “Now take your son, your only son, whom you love, even Isaac, and go into the land of Moriah. Offer him there as a burnt offering on one of the mountains which I will tell you of.”",
+          "bba730b9171fcc22-01": "And he said to him, Take your son, your dearly loved only son Isaac, and go to the land of Moriah and give him as a burned offering on one of the mountains of which I will give you knowledge.",
+          "06125ad3d1d57585-01": "He said, “Now take your son, your only son, whom you love, even Isaac, and go into the land of Moriah. Offer him there as a burnt offering on one of the mountains which I will tell you of.”",
+          "41926a4aa3831714-01": "He said, “Now take your son, your only son, whom you love, even Isaac, and go into the land of Moriah. Offer him there as a burnt offering on one of the mountains which I will tell you of.”"
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son, and clave the wood for the burnt offering, and rose up, and went unto the place of which God had told him.",
+          "9879dbb7aec41528-01": "Abraham rose early in the morning, and saddled his donkey, and took two of his young men with him, and Isaac his son. He split the wood for the burnt offering, and rose up, and went to the place of which God had told him.",
+          "bba730b9171fcc22-01": "And Abraham got up early in the morning, and made ready his ass, and took with him two of his young men and Isaac, his son, and after the wood for the burned offering had been cut, he went on his way to the place of which God had given him word.",
+          "06125ad3d1d57585-01": "Abraham rose early in the morning, and saddled his donkey, and took two of his young men with him, and Isaac his son. He split the wood for the burnt offering, and rose up, and went to the place of which God had told him.",
+          "41926a4aa3831714-01": "Abraham rose early in the morning, and saddled his donkey, and took two of his young men with him, and Isaac his son. He split the wood for the burnt offering, and rose up, and went to the place of which God had told him."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Then on the third day Abraham lifted up his eyes, and saw the place afar off.",
+          "9879dbb7aec41528-01": "On the third day Abraham lifted up his eyes, and saw the place far off.",
+          "bba730b9171fcc22-01": "And on the third day, Abraham, lifting up his eyes, saw the place a long way off.",
+          "06125ad3d1d57585-01": "On the third day Abraham lifted up his eyes, and saw the place far off.",
+          "41926a4aa3831714-01": "On the third day Abraham lifted up his eyes, and saw the place far off."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abraham said unto his young men, Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you,",
+          "9879dbb7aec41528-01": "Abraham said to his young men, “Stay here with the donkey. The boy and I will go yonder. We will worship, and come back to you.”",
+          "bba730b9171fcc22-01": "Then he said to his young men, Keep here with the ass; and I and the boy will go on and give worship and come back again to you.",
+          "06125ad3d1d57585-01": "Abraham said to his young men, “Stay here with the donkey. The boy and I will go yonder. We will worship, and come back to you.”",
+          "41926a4aa3831714-01": "Abraham said to his young men, “Stay here with the donkey. The boy and I will go yonder. We will worship, and come back to you.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abraham took the wood of the burnt offering, and laid it  upon Isaac his son; and he took the fire in his hand, and a knife; and they went both of them together.",
+          "9879dbb7aec41528-01": "Abraham took the wood of the burnt offering and laid it on Isaac his son. He took in his hand the fire and the knife. They both went together.",
+          "bba730b9171fcc22-01": "And Abraham put the wood for the burned offering on his son's back, and he himself took the fire and the knife in his hand, and the two of them went on together.",
+          "06125ad3d1d57585-01": "Abraham took the wood of the burnt offering and laid it on Isaac his son. He took in his hand the fire and the knife. They both went together.",
+          "41926a4aa3831714-01": "Abraham took the wood of the burnt offering and laid it on Isaac his son. He took in his hand the fire and the knife. They both went together."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And Isaac spake unto Abraham his father, and said, My father: and he said, Here am I, my son. And he said, Behold the fire and the wood: but where is the lamb for a burnt offering?",
+          "9879dbb7aec41528-01": "Isaac spoke to Abraham his father, and said, “My father?” He said, “Here I am, my son.” He said, “Here is the fire and the wood, but where is the lamb for a burnt offering?”",
+          "bba730b9171fcc22-01": "Then Isaac said to Abraham, My father; and he said, Here am I, my son. And he said, We have wood and fire here, but where is the lamb for the burned offering?",
+          "06125ad3d1d57585-01": "Isaac spoke to Abraham his father, and said, “My father?” He said, “Here I am, my son.” He said, “Here is the fire and the wood, but where is the lamb for a burnt offering?”",
+          "41926a4aa3831714-01": "Isaac spoke to Abraham his father, and said, “My father?” He said, “Here I am, my son.” He said, “Here is the fire and the wood, but where is the lamb for a burnt offering?”"
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שֶׂה",
+            "transliteration": "seh",
+            "english": "lamb / sheep",
+            "strongs": "H7716",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abraham said, My son, God will provide himself a lamb for a burnt offering: so they went both of them together.",
+          "9879dbb7aec41528-01": "Abraham said, “God will provide himself the lamb for a burnt offering, my son.” So they both went together.",
+          "bba730b9171fcc22-01": "And Abraham said, God himself will give the lamb for the burned offering: so they went on together.",
+          "06125ad3d1d57585-01": "Abraham said, “God will provide himself the lamb for a burnt offering, my son.” So they both went together.",
+          "41926a4aa3831714-01": "Abraham said, “God will provide himself the lamb for a burnt offering, my son.” So they both went together."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "שֶׂה",
+            "transliteration": "seh",
+            "english": "lamb / sheep",
+            "strongs": "H7716",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar upon the wood.",
+          "9879dbb7aec41528-01": "They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood.",
+          "bba730b9171fcc22-01": "And they came to the place of which God had given him knowledge; and there Abraham made the altar and put the wood in place on it, and having made tight the bands round Isaac his son, he put him on the wood on the altar.",
+          "06125ad3d1d57585-01": "They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood.",
+          "41926a4aa3831714-01": "They came to the place which God had told him of. Abraham built the altar there, and laid the wood in order, bound Isaac his son, and laid him on the altar, on the wood."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abraham stretched forth his hand, and took the knife to slay his son.",
+          "9879dbb7aec41528-01": "Abraham stretched out his hand, and took the knife to kill his son.",
+          "bba730b9171fcc22-01": "And stretching out his hand, Abraham took the knife to put his son to death.",
+          "06125ad3d1d57585-01": "Abraham stretched out his hand, and took the knife to kill his son.",
+          "41926a4aa3831714-01": "Abraham stretched out his hand, and took the knife to kill his son."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And the angel of the LORD called unto him out of heaven, and said, Abraham, Abraham: and he said, Here am I.",
+          "9879dbb7aec41528-01": "Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.”",
+          "bba730b9171fcc22-01": "But the voice of the angel of the Lord came from heaven, saying, Abraham, Abraham: and he said, Here am I.",
+          "06125ad3d1d57585-01": "Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.”",
+          "41926a4aa3831714-01": "Yahweh’s angel called to him out of the sky, and said, “Abraham, Abraham!” He said, “Here I am.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me.",
+          "9879dbb7aec41528-01": "He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.”",
+          "bba730b9171fcc22-01": "And he said, Let not your hand be stretched out against the boy to do anything to him; for now I am certain that the fear of God is in your heart, because you have not kept back your son, your only son, from me.",
+          "06125ad3d1d57585-01": "He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.”",
+          "41926a4aa3831714-01": "He said, “Don’t lay your hand on the boy or do anything to him. For now I know that you fear God, since you have not withheld your son, your only son, from me.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns: and Abraham went and took the ram, and offered him up for a burnt offering in the stead of his son.",
+          "9879dbb7aec41528-01": "Abraham lifted up his eyes, and looked, and saw that behind him was a ram caught in the thicket by his horns. Abraham went and took the ram, and offered him up for a burnt offering instead of his son.",
+          "bba730b9171fcc22-01": "And lifting up his eyes, Abraham saw a sheep fixed by its horns in the brushwood: and Abraham took the sheep and made a burned offering of it in place of his son.",
+          "06125ad3d1d57585-01": "Abraham lifted up his eyes, and looked, and saw that behind him was a ram caught in the thicket by his horns. Abraham went and took the ram, and offered him up for a burnt offering instead of his son.",
+          "41926a4aa3831714-01": "Abraham lifted up his eyes, and looked, and saw that behind him was a ram caught in the thicket by his horns. Abraham went and took the ram, and offered him up for a burnt offering instead of his son."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And Abraham called the name of that place Jehovah-jireh: as it is said to this day, In the mount of the LORD it shall be seen.",
+          "9879dbb7aec41528-01": "Abraham called the name of that place Yahweh Will Provide. As it is said to this day, “On Yahweh’s mountain, it will be provided.”",
+          "bba730b9171fcc22-01": "And Abraham gave that place the name Yahweh-yireh: as it is said to this day, In the mountain the Lord is seen.",
+          "06125ad3d1d57585-01": "Abraham called the name of that place Yahweh Will Provide. As it is said to this day, “On Yahweh’s mountain, it will be provided.”",
+          "41926a4aa3831714-01": "Abraham called the name of that place Yahweh Will Provide. As it is said to this day, “On Yahweh’s mountain, it will be provided.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And the angel of the LORD called unto Abraham out of heaven the second time,",
+          "9879dbb7aec41528-01": "Yahweh’s angel called to Abraham a second time out of the sky,",
+          "bba730b9171fcc22-01": "And the voice of the angel of the Lord came to Abraham a second time from heaven,",
+          "06125ad3d1d57585-01": "Yahweh’s angel called to Abraham a second time out of the sky,",
+          "41926a4aa3831714-01": "Yahweh’s angel called to Abraham a second time out of the sky,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And said, By myself have I sworn, saith the LORD, for because thou hast done this thing, and hast not withheld thy son, thine only son:",
+          "9879dbb7aec41528-01": "and said, “I have sworn by myself, says Yahweh, because you have done this thing, and have not withheld your son, your only son,",
+          "bba730b9171fcc22-01": "Saying, I have taken an oath by my name, says the Lord, because you have done this and have not kept back from me your dearly loved only son,",
+          "06125ad3d1d57585-01": "and said, “I have sworn by myself, says Yahweh, because you have done this thing, and have not withheld your son, your only son,",
+          "41926a4aa3831714-01": "and said, “I have sworn by myself, says Yahweh, because you have done this thing, and have not withheld your son, your only son,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "That in blessing I will bless thee, and in multiplying I will multiply thy seed as the stars of the heaven, and as the sand which is upon the sea shore; and thy seed shall possess the gate of his enemies;",
+          "9879dbb7aec41528-01": "that I will bless you greatly, and I will multiply your offspring greatly like the stars of the heavens, and like the sand which is on the seashore. Your offspring will possess the gate of his enemies.",
+          "bba730b9171fcc22-01": "That I will certainly give you my blessing, and your seed will be increased like the stars of heaven and the sand by the seaside; your seed will take the land of those who are against them;",
+          "06125ad3d1d57585-01": "that I will bless you greatly, and I will multiply your offspring greatly like the stars of the heavens, and like the sand which is on the seashore. Your offspring will possess the gate of his enemies.",
+          "41926a4aa3831714-01": "that I will bless you greatly, and I will multiply your offspring greatly like the stars of the heavens, and like the sand which is on the seashore. Your offspring will possess the gate of his enemies."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice.",
+          "9879dbb7aec41528-01": "All the nations of the earth will be blessed by your offspring, because you have obeyed my voice.”",
+          "bba730b9171fcc22-01": "And your seed will be a blessing to all the nations of the earth, because you have done what I gave you orders to do.",
+          "06125ad3d1d57585-01": "All the nations of the earth will be blessed by your offspring, because you have obeyed my voice.”",
+          "41926a4aa3831714-01": "All the nations of the earth will be blessed by your offspring, because you have obeyed my voice.”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "So Abraham returned unto his young men, and they rose up and went together to Beer-sheba; and Abraham dwelt at Beer-sheba.",
+          "9879dbb7aec41528-01": "So Abraham returned to his young men, and they rose up and went together to Beersheba. Abraham lived at Beersheba.",
+          "bba730b9171fcc22-01": "Then Abraham went back to his young men and they went together to Beer-sheba, the place where Abraham was living.",
+          "06125ad3d1d57585-01": "So Abraham returned to his young men, and they rose up and went together to Beersheba. Abraham lived at Beersheba.",
+          "41926a4aa3831714-01": "So Abraham returned to his young men, and they rose up and went together to Beersheba. Abraham lived at Beersheba."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Exodus 12:1-28": {
+    "reference": "Exodus 12:1-28",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And the LORD spake unto Moses and Aaron in the land of Egypt, saying,",
+          "9879dbb7aec41528-01": "Yahweh spoke to Moses and Aaron in the land of Egypt, saying,",
+          "bba730b9171fcc22-01": "And the Lord said to Moses and Aaron in the land of Egypt,",
+          "06125ad3d1d57585-01": "Yahweh spoke to Moses and Aaron in the land of Egypt, saying,",
+          "41926a4aa3831714-01": "Yahweh spoke to Moses and Aaron in the land of Egypt, saying,"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "This month shall be unto you the beginning of months: it shall be the first month of the year to you.",
+          "9879dbb7aec41528-01": "“This month shall be to you the beginning of months. It shall be the first month of the year to you.",
+          "bba730b9171fcc22-01": "Let this month be to you the first of months, the first month of the year.",
+          "06125ad3d1d57585-01": "“This month shall be to you the beginning of months. It shall be the first month of the year to you.",
+          "41926a4aa3831714-01": "“This month shall be to you the beginning of months. It shall be the first month of the year to you."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Speak ye unto all the congregation of Israel, saying, In the tenth day of this month they shall take to them every man a lamb, according to the house of their fathers, a lamb for an house:",
+          "9879dbb7aec41528-01": "Speak to all the congregation of Israel, saying, ‘On the tenth day of this month, they shall take to them every man a lamb, according to their fathers’ houses, a lamb for a household;",
+          "bba730b9171fcc22-01": "Say to all the children of Israel when they are come together, In the tenth day of this month every man is to take a lamb, by the number of their fathers' families, a lamb for every family:",
+          "06125ad3d1d57585-01": "Speak to all the congregation of Israel, saying, ‘On the tenth day of this month, they shall take to them every man a lamb, according to their fathers’ houses, a lamb for a household;",
+          "41926a4aa3831714-01": "Speak to all the congregation of Israel, saying, ‘On the tenth day of this month, they shall take to them every man a lamb, according to their fathers’ houses, a lamb for a household;"
+        },
+        "words": [
+          {
+            "original": "שֶׂה",
+            "transliteration": "seh",
+            "english": "lamb / sheep",
+            "strongs": "H7716",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And if the household be too little for the lamb, let him and his neighbour next unto his house take it according to the number of the souls; every man according to his eating shall make your count for the lamb.",
+          "9879dbb7aec41528-01": "and if the household is too little for a lamb, then he and his neighbor next to his house shall take one according to the number of the souls; according to what everyone can eat you shall make your count for the lamb.",
+          "bba730b9171fcc22-01": "And if the lamb is more than enough for the family, let that family and its nearest neighbour have a lamb between them, taking into account the number of persons and how much food is needed for every man.",
+          "06125ad3d1d57585-01": "and if the household is too little for a lamb, then he and his neighbor next to his house shall take one according to the number of the souls; according to what everyone can eat you shall make your count for the lamb.",
+          "41926a4aa3831714-01": "and if the household is too little for a lamb, then he and his neighbor next to his house shall take one according to the number of the souls; according to what everyone can eat you shall make your count for the lamb."
+        },
+        "words": [
+          {
+            "original": "שֶׂה",
+            "transliteration": "seh",
+            "english": "lamb / sheep",
+            "strongs": "H7716",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Your lamb shall be without blemish, a male of the first year: ye shall take it out from the sheep, or from the goats:",
+          "9879dbb7aec41528-01": "Your lamb shall be without defect, a male a year old. You shall take it from the sheep, or from the goats:",
+          "bba730b9171fcc22-01": "Let your lamb be without a mark, a male in its first year: you may take it from among the sheep or the goats:",
+          "06125ad3d1d57585-01": "Your lamb shall be without defect, a male a year old. You shall take it from the sheep, or from the goats:",
+          "41926a4aa3831714-01": "Your lamb shall be without defect, a male a year old. You shall take it from the sheep, or from the goats:"
+        },
+        "words": [
+          {
+            "original": "שֶׂה",
+            "transliteration": "seh",
+            "english": "lamb / sheep",
+            "strongs": "H7716",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And ye shall keep it up until the fourteenth day of the same month: and the whole assembly of the congregation of Israel shall kill it in the evening.",
+          "9879dbb7aec41528-01": "and you shall keep it until the fourteenth day of the same month; and the whole assembly of the congregation of Israel shall kill it at evening.",
+          "bba730b9171fcc22-01": "Keep it till the fourteenth day of the same month, when everyone who is of the children of Israel is to put it to death between sundown and dark.",
+          "06125ad3d1d57585-01": "and you shall keep it until the fourteenth day of the same month; and the whole assembly of the congregation of Israel shall kill it at evening.",
+          "41926a4aa3831714-01": "and you shall keep it until the fourteenth day of the same month; and the whole assembly of the congregation of Israel shall kill it at evening."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And they shall take of the blood, and strike it on the two side posts and on the upper door post of the houses, wherein they shall eat it.",
+          "9879dbb7aec41528-01": "They shall take some of the blood, and put it on the two door posts and on the lintel, on the houses in which they shall eat it.",
+          "bba730b9171fcc22-01": "Then take some of the blood and put it on the two sides of the door and over the door of the house where the meal is to be taken.",
+          "06125ad3d1d57585-01": "They shall take some of the blood, and put it on the two door posts and on the lintel, on the houses in which they shall eat it.",
+          "41926a4aa3831714-01": "They shall take some of the blood, and put it on the two door posts and on the lintel, on the houses in which they shall eat it."
+        },
+        "words": [
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And they shall eat the flesh in that night, roast with fire, and unleavened bread; and with bitter herbs they shall eat it.",
+          "9879dbb7aec41528-01": "They shall eat the meat in that night, roasted with fire, and unleavened bread. They shall eat it with bitter herbs.",
+          "bba730b9171fcc22-01": "And let your food that night be the flesh of the lamb, cooked with fire in the oven, together with unleavened bread and bitter-tasting plants.",
+          "06125ad3d1d57585-01": "They shall eat the meat in that night, roasted with fire, and unleavened bread. They shall eat it with bitter herbs.",
+          "41926a4aa3831714-01": "They shall eat the meat in that night, roasted with fire, and unleavened bread. They shall eat it with bitter herbs."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Eat not of it raw, nor sodden at all with water, but roast with  fire; his head with his legs, and with the purtenance thereof.",
+          "9879dbb7aec41528-01": "Don’t eat it raw, nor boiled at all with water, but roasted with fire; with its head, its legs and its inner parts.",
+          "bba730b9171fcc22-01": "Do not take it uncooked or cooked with boiling water, but let it be cooked in the oven; its head with its legs and its inside parts.",
+          "06125ad3d1d57585-01": "Don’t eat it raw, nor boiled at all with water, but roasted with fire; with its head, its legs and its inner parts.",
+          "41926a4aa3831714-01": "Don’t eat it raw, nor boiled at all with water, but roasted with fire; with its head, its legs and its inner parts."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And ye shall let nothing of it remain until the morning; and that which remaineth of it until the morning ye shall burn with fire.",
+          "9879dbb7aec41528-01": "You shall let nothing of it remain until the morning; but that which remains of it until the morning you shall burn with fire.",
+          "bba730b9171fcc22-01": "Do not keep any of it till the morning; anything which is not used is to be burned with fire.",
+          "06125ad3d1d57585-01": "You shall let nothing of it remain until the morning; but that which remains of it until the morning you shall burn with fire.",
+          "41926a4aa3831714-01": "You shall let nothing of it remain until the morning; but that which remains of it until the morning you shall burn with fire."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And thus shall ye eat it; with your loins girded, your shoes on your feet, and your staff in your hand; and ye shall eat it in haste: it is the LORD’S passover.",
+          "9879dbb7aec41528-01": "This is how you shall eat it: with your belt on your waist, your shoes on your feet, and your staff in your hand; and you shall eat it in haste: it is Yahweh’s Passover.",
+          "bba730b9171fcc22-01": "And take your meal dressed as if for a journey, with your shoes on your feet and your sticks in your hands: take it quickly: it is the Lord's Passover.",
+          "06125ad3d1d57585-01": "This is how you shall eat it: with your belt on your waist, your shoes on your feet, and your staff in your hand; and you shall eat it in haste: it is Yahweh’s Passover.",
+          "41926a4aa3831714-01": "This is how you shall eat it: with your belt on your waist, your shoes on your feet, and your staff in your hand; and you shall eat it in haste: it is Yahweh’s Passover."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "For I will pass through the land of Egypt this night, and will smite all the firstborn in the land of Egypt, both man and beast; and against all the gods of Egypt I will execute judgment: I am the LORD.",
+          "9879dbb7aec41528-01": "For I will go through the land of Egypt in that night, and will strike all the firstborn in the land of Egypt, both man and animal. Against all the gods of Egypt I will execute judgments: I am Yahweh.",
+          "bba730b9171fcc22-01": "For on that night I will go through the land of Egypt, sending death on every first male child, of man and of beast, and judging all the gods of Egypt: I am the Lord.",
+          "06125ad3d1d57585-01": "For I will go through the land of Egypt in that night, and will strike all the firstborn in the land of Egypt, both man and animal. Against all the gods of Egypt I will execute judgments: I am Yahweh.",
+          "41926a4aa3831714-01": "For I will go through the land of Egypt in that night, and will strike all the firstborn in the land of Egypt, both man and animal. Against all the gods of Egypt I will execute judgments: I am Yahweh."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And the blood shall be to you for a token upon the houses where ye are: and when I see the blood, I will pass over you, and the plague shall not be upon you to destroy you, when I smite the land of Egypt.",
+          "9879dbb7aec41528-01": "The blood shall be to you for a token on the houses where you are: and when I see the blood, I will pass over you, and there shall no plague be on you to destroy you, when I strike the land of Egypt.",
+          "bba730b9171fcc22-01": "And the blood will be a sign on the houses where you are: when I see the blood I will go over you, and no evil will come on you for your destruction, when my hand is on the land of Egypt.",
+          "06125ad3d1d57585-01": "The blood shall be to you for a token on the houses where you are: and when I see the blood, I will pass over you, and there shall no plague be on you to destroy you, when I strike the land of Egypt.",
+          "41926a4aa3831714-01": "The blood shall be to you for a token on the houses where you are: and when I see the blood, I will pass over you, and there shall no plague be on you to destroy you, when I strike the land of Egypt."
+        },
+        "words": [
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And this day shall be unto you for a memorial; and ye shall keep it a feast to the LORD throughout your generations; ye shall keep it a feast by an ordinance for ever.",
+          "9879dbb7aec41528-01": "This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever.",
+          "bba730b9171fcc22-01": "And this day is to be kept in your memories: you are to keep it as a feast to the Lord through all your generations, as an order for ever.",
+          "06125ad3d1d57585-01": "This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever.",
+          "41926a4aa3831714-01": "This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Seven days shall ye eat unleavened bread; even the first day ye shall put away leaven out of your houses: for whosoever eateth leavened bread from the first day until the seventh day, that soul shall be cut off from Israel.",
+          "9879dbb7aec41528-01": "“‘Seven days you shall eat unleavened bread; even the first day you shall put away yeast out of your houses, for whoever eats leavened bread from the first day until the seventh day, that soul shall be cut off from Israel.",
+          "bba730b9171fcc22-01": "For seven days let your food be unleavened bread; from the first day no leaven is to be seen in your houses: whoever takes bread with leaven in it, from the first till the seventh day, will be cut off from Israel.",
+          "06125ad3d1d57585-01": "“‘Seven days you shall eat unleavened bread; even the first day you shall put away yeast out of your houses, for whoever eats leavened bread from the first day until the seventh day, that soul shall be cut off from Israel.",
+          "41926a4aa3831714-01": "“‘Seven days you shall eat unleavened bread; even the first day you shall put away yeast out of your houses, for whoever eats leavened bread from the first day until the seventh day, that soul shall be cut off from Israel."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And in the first day there shall be an holy convocation, and in the seventh day there shall be an holy convocation to you; no manner of work shall be done in them, save that which every man must eat, that only may be done of you.",
+          "9879dbb7aec41528-01": "In the first day there shall be to you a holy convocation, and in the seventh day a holy convocation; no kind of work shall be done in them, except that which every man must eat, that only may be done by you.",
+          "bba730b9171fcc22-01": "And on the first day there is to be a holy meeting and on the seventh day a holy meeting; no sort of work may be done on those days but only to make ready what is necessary for everyone's food.",
+          "06125ad3d1d57585-01": "In the first day there shall be to you a holy convocation, and in the seventh day a holy convocation; no kind of work shall be done in them, except that which every man must eat, that only may be done by you.",
+          "41926a4aa3831714-01": "In the first day there shall be to you a holy convocation, and in the seventh day a holy convocation; no kind of work shall be done in them, except that which every man must eat, that only may be done by you."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And ye shall observe the feast of unleavened bread; for in this selfsame day have I brought your armies out of the land of Egypt: therefore shall ye observe this day in your generations by an ordinance for ever.",
+          "9879dbb7aec41528-01": "You shall observe the feast of unleavened bread; for in this same day I have brought your armies out of the land of Egypt: therefore you shall observe this day throughout your generations by an ordinance forever.",
+          "bba730b9171fcc22-01": "So keep the feast of unleavened bread; for on this very day I have taken your armies out of the land of Egypt: this day, then, is to be kept through all your generations by an order for ever.",
+          "06125ad3d1d57585-01": "You shall observe the feast of unleavened bread; for in this same day I have brought your armies out of the land of Egypt: therefore you shall observe this day throughout your generations by an ordinance forever.",
+          "41926a4aa3831714-01": "You shall observe the feast of unleavened bread; for in this same day I have brought your armies out of the land of Egypt: therefore you shall observe this day throughout your generations by an ordinance forever."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "In the first month, on the fourteenth day of the month at even, ye shall eat unleavened bread, until the one and twentieth day of the month at even.",
+          "9879dbb7aec41528-01": "In the first month, on the fourteenth day of the month at evening, you shall eat unleavened bread, until the twenty first day of the month at evening.",
+          "bba730b9171fcc22-01": "In the first month, from the evening of the fourteenth day, let your food be unleavened bread till the evening of the twenty-first day of the month.",
+          "06125ad3d1d57585-01": "In the first month, on the fourteenth day of the month at evening, you shall eat unleavened bread, until the twenty first day of the month at evening.",
+          "41926a4aa3831714-01": "In the first month, on the fourteenth day of the month at evening, you shall eat unleavened bread, until the twenty first day of the month at evening."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "Seven days shall there be no leaven found in your houses: for whosoever eateth that which is leavened, even that soul shall be cut off from the congregation of Israel, whether he be a stranger, or born in the land.",
+          "9879dbb7aec41528-01": "There shall be no yeast found in your houses for seven days, for whoever eats that which is leavened, that soul shall be cut off from the congregation of Israel, whether he is a foreigner, or one who is born in the land.",
+          "bba730b9171fcc22-01": "For seven days no leaven is to be seen in your houses: for whoever takes bread which is leavened will be cut off from the people of Israel, if he is from another country or if he is an Israelite by birth.",
+          "06125ad3d1d57585-01": "There shall be no yeast found in your houses for seven days, for whoever eats that which is leavened, that soul shall be cut off from the congregation of Israel, whether he is a foreigner, or one who is born in the land.",
+          "41926a4aa3831714-01": "There shall be no yeast found in your houses for seven days, for whoever eats that which is leavened, that soul shall be cut off from the congregation of Israel, whether he is a foreigner, or one who is born in the land."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "Ye shall eat nothing leavened; in all your habitations shall ye eat unleavened bread.",
+          "9879dbb7aec41528-01": "You shall eat nothing leavened. In all your habitations you shall eat unleavened bread.’”",
+          "bba730b9171fcc22-01": "Take nothing which has leaven in it; wherever you are living let your food be unleavened cakes.",
+          "06125ad3d1d57585-01": "You shall eat nothing leavened. In all your habitations you shall eat unleavened bread.’”",
+          "41926a4aa3831714-01": "You shall eat nothing leavened. In all your habitations you shall eat unleavened bread.’”"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Moses called for all the elders of Israel, and said unto them, Draw out and take you a lamb according to your families, and kill the passover.",
+          "9879dbb7aec41528-01": "Then Moses called for all the elders of Israel, and said to them, “Draw out, and take lambs according to your families, and kill the Passover.",
+          "bba730b9171fcc22-01": "Then Moses sent for the chiefs of Israel, and said to them, See that lambs are marked out for yourselves and your families, and let the Passover lamb be put to death.",
+          "06125ad3d1d57585-01": "Then Moses called for all the elders of Israel, and said to them, “Draw out, and take lambs according to your families, and kill the Passover.",
+          "41926a4aa3831714-01": "Then Moses called for all the elders of Israel, and said to them, “Draw out, and take lambs according to your families, and kill the Passover."
+        },
+        "words": [
+          {
+            "original": "שֶׂה",
+            "transliteration": "seh",
+            "english": "lamb / sheep",
+            "strongs": "H7716",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "And ye shall take a bunch of hyssop, and dip it in the blood that is in the bason, and strike the lintel and the two side posts with the blood that is in the bason; and none of you shall go out at the door of his house until the morning.",
+          "9879dbb7aec41528-01": "You shall take a bunch of hyssop, and dip it in the blood that is in the basin, and strike the lintel and the two door posts with the blood that is in the basin; and none of you shall go out of the door of his house until the morning.",
+          "bba730b9171fcc22-01": "And take some hyssop and put it in the blood in the basin, touching the two sides and the top of the doorway with the blood from the basin; and let not one of you go out of his house till the morning.",
+          "06125ad3d1d57585-01": "You shall take a bunch of hyssop, and dip it in the blood that is in the basin, and strike the lintel and the two door posts with the blood that is in the basin; and none of you shall go out of the door of his house until the morning.",
+          "41926a4aa3831714-01": "You shall take a bunch of hyssop, and dip it in the blood that is in the basin, and strike the lintel and the two door posts with the blood that is in the basin; and none of you shall go out of the door of his house until the morning."
+        },
+        "words": [
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "For the LORD will pass through to smite the Egyptians; and when he seeth the blood upon the lintel, and on the two side posts, the LORD will pass over the door, and will not suffer the destroyer to come in unto your houses to smite you.",
+          "9879dbb7aec41528-01": "For Yahweh will pass through to strike the Egyptians; and when he sees the blood on the lintel, and on the two door posts, Yahweh will pass over the door, and will not allow the destroyer to come in to your houses to strike you.",
+          "bba730b9171fcc22-01": "For the Lord will go through the land, sending death on the Egyptians; and when he sees the blood on the two sides and the top of the door, the Lord will go over your door and will not let death come in for your destruction.",
+          "06125ad3d1d57585-01": "For Yahweh will pass through to strike the Egyptians; and when he sees the blood on the lintel, and on the two door posts, Yahweh will pass over the door, and will not allow the destroyer to come in to your houses to strike you.",
+          "41926a4aa3831714-01": "For Yahweh will pass through to strike the Egyptians; and when he sees the blood on the lintel, and on the two door posts, Yahweh will pass over the door, and will not allow the destroyer to come in to your houses to strike you."
+        },
+        "words": [
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "And ye shall observe this thing for an ordinance to thee and to thy sons for ever.",
+          "9879dbb7aec41528-01": "You shall observe this thing for an ordinance to you and to your sons forever.",
+          "bba730b9171fcc22-01": "And you are to keep this as an order to you and to your sons for ever.",
+          "06125ad3d1d57585-01": "You shall observe this thing for an ordinance to you and to your sons forever.",
+          "41926a4aa3831714-01": "You shall observe this thing for an ordinance to you and to your sons forever."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "And it shall come to pass, when ye be come to the land which the LORD will give you, according as he hath promised, that ye shall keep this service.",
+          "9879dbb7aec41528-01": "It shall happen when you have come to the land which Yahweh will give you, according as he has promised, that you shall keep this service.",
+          "bba730b9171fcc22-01": "And when you come into the land which the Lord will make yours, as he gave his word, you are to keep this act of worship.",
+          "06125ad3d1d57585-01": "It shall happen when you have come to the land which Yahweh will give you, according as he has promised, that you shall keep this service.",
+          "41926a4aa3831714-01": "It shall happen when you have come to the land which Yahweh will give you, according as he has promised, that you shall keep this service."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And it shall come to pass, when your children shall say unto you, What mean ye by this service?",
+          "9879dbb7aec41528-01": "It will happen, when your children ask you, ‘What do you mean by this service?’",
+          "bba730b9171fcc22-01": "And when your children say to you, What is the reason of this act of worship?",
+          "06125ad3d1d57585-01": "It will happen, when your children ask you, ‘What do you mean by this service?’",
+          "41926a4aa3831714-01": "It will happen, when your children ask you, ‘What do you mean by this service?’"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "That ye shall say, It is the sacrifice of the LORD’S passover, who passed over the houses of the children of Israel in Egypt, when he smote the Egyptians, and delivered our houses. And the people bowed the head and worshipped.",
+          "9879dbb7aec41528-01": "that you shall say, ‘It is the sacrifice of Yahweh’s Passover, who passed over the houses of the children of Israel in Egypt, when he struck the Egyptians, and spared our houses.’” The people bowed their heads and worshiped.",
+          "bba730b9171fcc22-01": "Then you will say, This is the offering of the Lord's Passover; for he went over the houses of the children of Israel in Egypt, when he sent death on the Egyptians, and kept our families safe. And the people gave worship with bent heads.",
+          "06125ad3d1d57585-01": "that you shall say, ‘It is the sacrifice of Yahweh’s Passover, who passed over the houses of the children of Israel in Egypt, when he struck the Egyptians, and spared our houses.’” The people bowed their heads and worshiped.",
+          "41926a4aa3831714-01": "that you shall say, ‘It is the sacrifice of Yahweh’s Passover, who passed over the houses of the children of Israel in Egypt, when he struck the Egyptians, and spared our houses.’” The people bowed their heads and worshiped."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And the children of Israel went away, and did as the LORD had commanded Moses and Aaron, so did they.",
+          "9879dbb7aec41528-01": "The children of Israel went and did so; as Yahweh had commanded Moses and Aaron, so they did.",
+          "bba730b9171fcc22-01": "And the children of Israel went and did so; as the Lord had given orders to Moses and Aaron, so they did.",
+          "06125ad3d1d57585-01": "The children of Israel went and did so; as Yahweh had commanded Moses and Aaron, so they did.",
+          "41926a4aa3831714-01": "The children of Israel went and did so; as Yahweh had commanded Moses and Aaron, so they did."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Leviticus 16:1-34": {
+    "reference": "Leviticus 16:1-34",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And the LORD spake unto Moses after the death of the two sons of Aaron, when they offered before the LORD, and died;",
+          "9879dbb7aec41528-01": "Yahweh spoke to Moses, after the death of the two sons of Aaron, when they came near before Yahweh, and died;",
+          "bba730b9171fcc22-01": "And the Lord said to Moses, after the death of the two sons of Aaron when they took in strange fire before the Lord and death overtook them;",
+          "06125ad3d1d57585-01": "Yahweh spoke to Moses, after the death of the two sons of Aaron, when they came near before Yahweh, and died;",
+          "41926a4aa3831714-01": "Yahweh spoke to Moses, after the death of the two sons of Aaron, when they came near before Yahweh, and died;"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And the LORD said unto Moses, Speak unto Aaron thy brother, that he come not at all times into the holy place within the vail before the mercy seat, which is upon the ark; that he die not: for I will appear in the cloud upon the mercy seat.",
+          "9879dbb7aec41528-01": "and Yahweh said to Moses, “Tell Aaron your brother, not to come at all times into the Most Holy Place within the veil, before the mercy seat which is on the ark; lest he die: for I will appear in the cloud on the mercy seat.",
+          "bba730b9171fcc22-01": "The Lord said to Moses, Say to Aaron, your brother, that he may not come at all times into the holy place inside the veil, before the cover which is on the ark, for fear that death may overtake him; for I will be seen in the cloud on the cover of the ark.",
+          "06125ad3d1d57585-01": "and Yahweh said to Moses, “Tell Aaron your brother, not to come at all times into the Most Holy Place within the veil, before the mercy seat which is on the ark; lest he die: for I will appear in the cloud on the mercy seat.",
+          "41926a4aa3831714-01": "and Yahweh said to Moses, “Tell Aaron your brother, not to come at all times into the Most Holy Place within the veil, before the mercy seat which is on the ark; lest he die: for I will appear in the cloud on the mercy seat."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Thus shall Aaron come into the holy place: with a young bullock for a sin offering, and a ram for a burnt offering.",
+          "9879dbb7aec41528-01": "“Aaron shall come into the sanctuary with a young bull for a sin offering, and a ram for a burnt offering.",
+          "bba730b9171fcc22-01": "Let Aaron come into the holy place in this way: with an ox for a sin-offering and a male sheep for a burned offering.",
+          "06125ad3d1d57585-01": "“Aaron shall come into the sanctuary with a young bull for a sin offering, and a ram for a burnt offering.",
+          "41926a4aa3831714-01": "“Aaron shall come into the sanctuary with a young bull for a sin offering, and a ram for a burnt offering."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "He shall put on the holy linen coat, and he shall have the linen breeches upon his flesh, and shall be girded with a linen girdle, and with the linen mitre shall he be attired: these are holy garments; therefore shall he wash his flesh in water, and so put them on.",
+          "9879dbb7aec41528-01": "He shall put on the holy linen coat. He shall have the linen breeches on his body, and shall put on the linen sash, and he shall be clothed with the linen turban. They are the holy garments. He shall bathe his body in water, and put them on.",
+          "bba730b9171fcc22-01": "Let him put on the holy linen coat, and the linen trousers on his body, and the linen band round him, and the linen head-dress on his head; for this is holy clothing, and before he puts them on his body is to be washed with water.",
+          "06125ad3d1d57585-01": "He shall put on the holy linen coat. He shall have the linen breeches on his body, and shall put on the linen sash, and he shall be clothed with the linen turban. They are the holy garments. He shall bathe his body in water, and put them on.",
+          "41926a4aa3831714-01": "He shall put on the holy linen coat. He shall have the linen breeches on his body, and shall put on the linen sash, and he shall be clothed with the linen turban. They are the holy garments. He shall bathe his body in water, and put them on."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall take of the congregation of the children of Israel two kids of the goats for a sin offering, and one ram for a burnt offering.",
+          "9879dbb7aec41528-01": "He shall take from the congregation of the children of Israel two male goats for a sin offering, and one ram for a burnt offering.",
+          "bba730b9171fcc22-01": "And let him take from the children of Israel two he-goats for a sin-offering and one male sheep for a burned offering.",
+          "06125ad3d1d57585-01": "He shall take from the congregation of the children of Israel two male goats for a sin offering, and one ram for a burnt offering.",
+          "41926a4aa3831714-01": "He shall take from the congregation of the children of Israel two male goats for a sin offering, and one ram for a burnt offering."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And Aaron shall offer his bullock of the sin offering, which is  for himself, and make an atonement for himself, and for his house.",
+          "9879dbb7aec41528-01": "“Aaron shall offer the bull of the sin offering, which is for himself, and make atonement for himself and for his house.",
+          "bba730b9171fcc22-01": "And Aaron is to give the ox of the sin-offering for himself, to make himself and his house free from sin.",
+          "06125ad3d1d57585-01": "“Aaron shall offer the bull of the sin offering, which is for himself, and make atonement for himself and for his house.",
+          "41926a4aa3831714-01": "“Aaron shall offer the bull of the sin offering, which is for himself, and make atonement for himself and for his house."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall take the two goats, and present them before the LORD at the door of the tabernacle of the congregation.",
+          "9879dbb7aec41528-01": "He shall take the two goats, and set them before Yahweh at the door of the Tent of Meeting.",
+          "bba730b9171fcc22-01": "And he is to take the two goats and put them before the Lord at the door of the Tent of meeting.",
+          "06125ad3d1d57585-01": "He shall take the two goats, and set them before Yahweh at the door of the Tent of Meeting.",
+          "41926a4aa3831714-01": "He shall take the two goats, and set them before Yahweh at the door of the Tent of Meeting."
+        },
+        "words": [
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And Aaron shall cast lots upon the two goats; one lot for the LORD, and the other lot for the scapegoat.",
+          "9879dbb7aec41528-01": "Aaron shall cast lots for the two goats; one lot for Yahweh, and the other lot for the scapegoat.",
+          "bba730b9171fcc22-01": "And Aaron will make selection from the two goats by the decision of the Lord, one goat for the Lord and one for Azazel.",
+          "06125ad3d1d57585-01": "Aaron shall cast lots for the two goats; one lot for Yahweh, and the other lot for the scapegoat.",
+          "41926a4aa3831714-01": "Aaron shall cast lots for the two goats; one lot for Yahweh, and the other lot for the scapegoat."
+        },
+        "words": [
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And Aaron shall bring the goat upon which the LORD’S lot fell, and offer him for a sin offering.",
+          "9879dbb7aec41528-01": "Aaron shall present the goat on which the lot fell for Yahweh, and offer him for a sin offering.",
+          "bba730b9171fcc22-01": "And the goat which is marked out for the Lord, let Aaron give for a sin-offering.",
+          "06125ad3d1d57585-01": "Aaron shall present the goat on which the lot fell for Yahweh, and offer him for a sin offering.",
+          "41926a4aa3831714-01": "Aaron shall present the goat on which the lot fell for Yahweh, and offer him for a sin offering."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "But the goat, on which the lot fell to be the scapegoat, shall be presented alive before the LORD, to make an atonement with him, and  to let him go for a scapegoat into the wilderness.",
+          "9879dbb7aec41528-01": "But the goat on which the lot fell for the scapegoat shall be presented alive before Yahweh, to make atonement for him, to send him away as the scapegoat into the wilderness.",
+          "bba730b9171fcc22-01": "But the goat for Azazel is to be placed living before the Lord, for the taking away of sin, that it may be sent away for Azazel into the waste land.",
+          "06125ad3d1d57585-01": "But the goat on which the lot fell for the scapegoat shall be presented alive before Yahweh, to make atonement for him, to send him away as the scapegoat into the wilderness.",
+          "41926a4aa3831714-01": "But the goat on which the lot fell for the scapegoat shall be presented alive before Yahweh, to make atonement for him, to send him away as the scapegoat into the wilderness."
+        },
+        "words": [
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And Aaron shall bring the bullock of the sin offering, which is  for himself, and shall make an atonement for himself, and for his house, and shall kill the bullock of the sin offering which is for himself:",
+          "9879dbb7aec41528-01": "“Aaron shall present the bull of the sin offering, which is for himself, and shall make atonement for himself and for his house, and shall kill the bull of the sin offering which is for himself.",
+          "bba730b9171fcc22-01": "And Aaron is to give the ox of the sin-offering for himself and take away sin from himself and his house, and put to death the ox of the sin-offering which is for himself.",
+          "06125ad3d1d57585-01": "“Aaron shall present the bull of the sin offering, which is for himself, and shall make atonement for himself and for his house, and shall kill the bull of the sin offering which is for himself.",
+          "41926a4aa3831714-01": "“Aaron shall present the bull of the sin offering, which is for himself, and shall make atonement for himself and for his house, and shall kill the bull of the sin offering which is for himself."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall take a censer full of burning coals of fire from off the altar before the LORD, and his hands full of sweet incense beaten small, and bring it within the vail:",
+          "9879dbb7aec41528-01": "He shall take a censer full of coals of fire from off the altar before Yahweh, and two handfuls of sweet incense beaten small, and bring it within the veil:",
+          "bba730b9171fcc22-01": "And he is to take a vessel full of burning coal from the altar before the Lord and in his hand some sweet perfume crushed small, and take it inside the veil;",
+          "06125ad3d1d57585-01": "He shall take a censer full of coals of fire from off the altar before Yahweh, and two handfuls of sweet incense beaten small, and bring it within the veil:",
+          "41926a4aa3831714-01": "He shall take a censer full of coals of fire from off the altar before Yahweh, and two handfuls of sweet incense beaten small, and bring it within the veil:"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall put the incense upon the fire before the LORD, that the cloud of the incense may cover the mercy seat that is upon the testimony, that he die not:",
+          "9879dbb7aec41528-01": "and he shall put the incense on the fire before Yahweh, that the cloud of the incense may cover the mercy seat that is on the testimony, so that he will not die.",
+          "bba730b9171fcc22-01": "And let him put the perfume on the fire before the Lord so that the ark may be covered with a cloud of the smoke of the perfume, in order that death may not overtake him.",
+          "06125ad3d1d57585-01": "and he shall put the incense on the fire before Yahweh, that the cloud of the incense may cover the mercy seat that is on the testimony, so that he will not die.",
+          "41926a4aa3831714-01": "and he shall put the incense on the fire before Yahweh, that the cloud of the incense may cover the mercy seat that is on the testimony, so that he will not die."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall take of the blood of the bullock, and sprinkle it  with his finger upon the mercy seat eastward; and before the mercy seat shall he sprinkle of the blood with his finger seven times.",
+          "9879dbb7aec41528-01": "He shall take some of the blood of the bull, and sprinkle it with his finger on the mercy seat on the east; and before the mercy seat he shall sprinkle some of the blood with his finger seven times.",
+          "bba730b9171fcc22-01": "And let him take some of the blood of the ox, shaking drops of it from his finger on the cover of the ark on the east side, and before it, seven times.",
+          "06125ad3d1d57585-01": "He shall take some of the blood of the bull, and sprinkle it with his finger on the mercy seat on the east; and before the mercy seat he shall sprinkle some of the blood with his finger seven times.",
+          "41926a4aa3831714-01": "He shall take some of the blood of the bull, and sprinkle it with his finger on the mercy seat on the east; and before the mercy seat he shall sprinkle some of the blood with his finger seven times."
+        },
+        "words": [
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "Then shall he kill the goat of the sin offering, that is  for the people, and bring his blood within the vail, and do with that blood as he did with the blood of the bullock, and sprinkle it upon the mercy seat, and before the mercy seat:",
+          "9879dbb7aec41528-01": "“Then he shall kill the goat of the sin offering, that is for the people, and bring his blood within the veil, and do with his blood as he did with the blood of the bull, and sprinkle it on the mercy seat, and before the mercy seat.",
+          "bba730b9171fcc22-01": "Then let him put to death the goat of the sin-offering for the people, and take its blood inside the veil and do with it as he did with the blood of the ox, shaking drops of it on and before the cover of the ark.",
+          "06125ad3d1d57585-01": "“Then he shall kill the goat of the sin offering, that is for the people, and bring his blood within the veil, and do with his blood as he did with the blood of the bull, and sprinkle it on the mercy seat, and before the mercy seat.",
+          "41926a4aa3831714-01": "“Then he shall kill the goat of the sin offering, that is for the people, and bring his blood within the veil, and do with his blood as he did with the blood of the bull, and sprinkle it on the mercy seat, and before the mercy seat."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall make an atonement for the holy place, because of the uncleanness of the children of Israel, and because of their transgressions in all their sins: and so shall he do for the tabernacle of the congregation, that remaineth among them in the midst of their uncleanness.",
+          "9879dbb7aec41528-01": "He shall make atonement for the Holy Place, because of the uncleanness of the children of Israel, and because of their transgressions, even all their sins; and so he shall do for the Tent of Meeting, that dwells with them in the middle of their uncleanness.",
+          "bba730b9171fcc22-01": "And let him make the holy place free from whatever is unclean among the children of Israel and from their wrongdoing in all their sins; and let him do the same for the Tent of meeting, which has its place among an unclean people.",
+          "06125ad3d1d57585-01": "He shall make atonement for the Holy Place, because of the uncleanness of the children of Israel, and because of their transgressions, even all their sins; and so he shall do for the Tent of Meeting, that dwells with them in the middle of their uncleanness.",
+          "41926a4aa3831714-01": "He shall make atonement for the Holy Place, because of the uncleanness of the children of Israel, and because of their transgressions, even all their sins; and so he shall do for the Tent of Meeting, that dwells with them in the middle of their uncleanness."
+        },
+        "words": [
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And there shall be no man in the tabernacle of the congregation when he goeth in to make an atonement in the holy place, until he come out, and have made an atonement for himself, and for his household, and for all the congregation of Israel.",
+          "9879dbb7aec41528-01": "No one shall be in the Tent of Meeting when he enters to make atonement in the Holy Place, until he comes out, and has made atonement for himself and for his household, and for all the assembly of Israel.",
+          "bba730b9171fcc22-01": "And no man may be in the Tent of meeting from the time when Aaron goes in to take away sin in the holy place till he comes out, having made himself and his house and all the people of Israel free from sin.",
+          "06125ad3d1d57585-01": "No one shall be in the Tent of Meeting when he enters to make atonement in the Holy Place, until he comes out, and has made atonement for himself and for his household, and for all the assembly of Israel.",
+          "41926a4aa3831714-01": "No one shall be in the Tent of Meeting when he enters to make atonement in the Holy Place, until he comes out, and has made atonement for himself and for his household, and for all the assembly of Israel."
+        },
+        "words": [
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall go out unto the altar that is before the LORD, and make an atonement for it; and shall take of the blood of the bullock, and of the blood of the goat, and put it upon the horns of the altar round about.",
+          "9879dbb7aec41528-01": "“He shall go out to the altar that is before Yahweh and make atonement for it, and shall take some of the bull’s blood, and some of the goat’s blood, and put it around on the horns of the altar.",
+          "bba730b9171fcc22-01": "And he is to go out to the altar which is before the Lord and make it free from sin; and he is to take some of the blood of the ox and the blood of the goat and put it on the horns of the altar and round it;",
+          "06125ad3d1d57585-01": "“He shall go out to the altar that is before Yahweh and make atonement for it, and shall take some of the bull’s blood, and some of the goat’s blood, and put it around on the horns of the altar.",
+          "41926a4aa3831714-01": "“He shall go out to the altar that is before Yahweh and make atonement for it, and shall take some of the bull’s blood, and some of the goat’s blood, and put it around on the horns of the altar."
+        },
+        "words": [
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall sprinkle of the blood upon it with his finger seven times, and cleanse it, and hallow it from the uncleanness of the children of Israel.",
+          "9879dbb7aec41528-01": "He shall sprinkle some of the blood on it with his finger seven times, and cleanse it, and make it holy from the uncleanness of the children of Israel.",
+          "bba730b9171fcc22-01": "Shaking drops of the blood from his finger on it seven times to make it holy and clean from whatever is unclean among the children of Israel.",
+          "06125ad3d1d57585-01": "He shall sprinkle some of the blood on it with his finger seven times, and cleanse it, and make it holy from the uncleanness of the children of Israel.",
+          "41926a4aa3831714-01": "He shall sprinkle some of the blood on it with his finger seven times, and cleanse it, and make it holy from the uncleanness of the children of Israel."
+        },
+        "words": [
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he hath made an end of reconciling the holy place,  and the tabernacle of the congregation, and the altar, he shall bring the live goat:",
+          "9879dbb7aec41528-01": "“When he has finished atoning for the Holy Place, the Tent of Meeting, and the altar, he shall present the live goat.",
+          "bba730b9171fcc22-01": "And when he has done whatever is necessary to make the holy place and the Tent of meeting and the altar free from sin, let him put the living goat before the Lord;",
+          "06125ad3d1d57585-01": "“When he has finished atoning for the Holy Place, the Tent of Meeting, and the altar, he shall present the live goat.",
+          "41926a4aa3831714-01": "“When he has finished atoning for the Holy Place, the Tent of Meeting, and the altar, he shall present the live goat."
+        },
+        "words": [
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness:",
+          "9879dbb7aec41528-01": "Aaron shall lay both his hands on the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions, even all their sins; and he shall put them on the head of the goat, and shall send him away into the wilderness by the hand of a man who is in readiness.",
+          "bba730b9171fcc22-01": "And Aaron, placing his two hands on the head of the living goat, will make a public statement over him of all the evil doings of the children of Israel and all their wrongdoing, in all their sins; and he will put them on the head of the goat and send him away, in the care of a man who will be waiting there, into the waste land.",
+          "06125ad3d1d57585-01": "Aaron shall lay both his hands on the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions, even all their sins; and he shall put them on the head of the goat, and shall send him away into the wilderness by the hand of a man who is in readiness.",
+          "41926a4aa3831714-01": "Aaron shall lay both his hands on the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions, even all their sins; and he shall put them on the head of the goat, and shall send him away into the wilderness by the hand of a man who is in readiness."
+        },
+        "words": [
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "And the goat shall bear upon him all their iniquities unto a land not inhabited: and he shall let go the goat in the wilderness.",
+          "9879dbb7aec41528-01": "The goat shall carry all their iniquities on himself to a solitary land, and he shall release the goat in the wilderness.",
+          "bba730b9171fcc22-01": "And the goat will take all their sins into a land cut off from men, and he will send the goat away into the waste land.",
+          "06125ad3d1d57585-01": "The goat shall carry all their iniquities on himself to a solitary land, and he shall release the goat in the wilderness.",
+          "41926a4aa3831714-01": "The goat shall carry all their iniquities on himself to a solitary land, and he shall release the goat in the wilderness."
+        },
+        "words": [
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "And Aaron shall come into the tabernacle of the congregation, and shall put off the linen garments, which he put on when he went into the holy place, and shall leave them there:",
+          "9879dbb7aec41528-01": "“Aaron shall come into the Tent of Meeting, and shall take off the linen garments, which he put on when he went into the Holy Place, and shall leave them there.",
+          "bba730b9171fcc22-01": "Then let Aaron come into the Tent of meeting and take off the linen clothing which he put on when he went into the holy place, and put them down there;",
+          "06125ad3d1d57585-01": "“Aaron shall come into the Tent of Meeting, and shall take off the linen garments, which he put on when he went into the Holy Place, and shall leave them there.",
+          "41926a4aa3831714-01": "“Aaron shall come into the Tent of Meeting, and shall take off the linen garments, which he put on when he went into the Holy Place, and shall leave them there."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall wash his flesh with water in the holy place, and put on his garments, and come forth, and offer his burnt offering, and the burnt offering of the people, and make an atonement for himself, and for the people.",
+          "9879dbb7aec41528-01": "Then he shall bathe himself in water in a holy place, and put on his garments, and come out and offer his burnt offering and the burnt offering of the people, and make atonement for himself and for the people.",
+          "bba730b9171fcc22-01": "And after bathing his body in water in a holy place, he is to put on his clothing and come out and give his burned offering and the burned offering of the people, to take away his sin and the sin of the people.",
+          "06125ad3d1d57585-01": "Then he shall bathe himself in water in a holy place, and put on his garments, and come out and offer his burnt offering and the burnt offering of the people, and make atonement for himself and for the people.",
+          "41926a4aa3831714-01": "Then he shall bathe himself in water in a holy place, and put on his garments, and come out and offer his burnt offering and the burnt offering of the people, and make atonement for himself and for the people."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "And the fat of the sin offering shall he burn upon the altar.",
+          "9879dbb7aec41528-01": "The fat of the sin offering he shall burn on the altar.",
+          "bba730b9171fcc22-01": "And the fat of the sin-offering is to be burned by him on the altar.",
+          "06125ad3d1d57585-01": "The fat of the sin offering he shall burn on the altar.",
+          "41926a4aa3831714-01": "The fat of the sin offering he shall burn on the altar."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And he that let go the goat for the scapegoat shall wash his clothes, and bathe his flesh in water, and afterward come into the camp.",
+          "9879dbb7aec41528-01": "“He who lets the goat go as the scapegoat shall wash his clothes, and bathe his flesh in water, and afterward he shall come into the camp.",
+          "bba730b9171fcc22-01": "And the man who takes away the goat for Azazel is to have his clothing washed and his body bathed in water and then he may come back to the tent-circle.",
+          "06125ad3d1d57585-01": "“He who lets the goat go as the scapegoat shall wash his clothes, and bathe his flesh in water, and afterward he shall come into the camp.",
+          "41926a4aa3831714-01": "“He who lets the goat go as the scapegoat shall wash his clothes, and bathe his flesh in water, and afterward he shall come into the camp."
+        },
+        "words": [
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "And the bullock for the sin offering, and the goat for  the sin offering, whose blood was brought in to make atonement in the holy place, shall one carry forth without the camp; and they shall burn in the fire their skins, and their flesh, and their dung.",
+          "9879dbb7aec41528-01": "The bull for the sin offering, and the goat for the sin offering, whose blood was brought in to make atonement in the Holy Place, shall be carried outside the camp; and they shall burn their skins, their flesh, and their dung with fire.",
+          "bba730b9171fcc22-01": "And the ox of the sin-offering and the goat of the sin-offering, whose blood was taken in to make the holy place free from sin, are to be taken away outside the tent-circle and their skins and their flesh and their waste are to be burned with fire.",
+          "06125ad3d1d57585-01": "The bull for the sin offering, and the goat for the sin offering, whose blood was brought in to make atonement in the Holy Place, shall be carried outside the camp; and they shall burn their skins, their flesh, and their dung with fire.",
+          "41926a4aa3831714-01": "The bull for the sin offering, and the goat for the sin offering, whose blood was brought in to make atonement in the Holy Place, shall be carried outside the camp; and they shall burn their skins, their flesh, and their dung with fire."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "דָּם",
+            "transliteration": "dam",
+            "english": "blood",
+            "strongs": "H1818",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "עֵז",
+            "transliteration": "ez",
+            "english": "goat",
+            "strongs": "H5795",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And he that burneth them shall wash his clothes, and bathe his flesh in water, and afterward he shall come into the camp.",
+          "9879dbb7aec41528-01": "He who burns them shall wash his clothes, and bathe his flesh in water, and afterward he shall come into the camp.",
+          "bba730b9171fcc22-01": "And the man by whom they are burned is to have his clothing washed and his body bathed in water, and then he may come back to the tent-circle.",
+          "06125ad3d1d57585-01": "He who burns them shall wash his clothes, and bathe his flesh in water, and afterward he shall come into the camp.",
+          "41926a4aa3831714-01": "He who burns them shall wash his clothes, and bathe his flesh in water, and afterward he shall come into the camp."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "And this shall be a statute for ever unto you: that  in the seventh month, on the tenth day of the month, ye shall afflict your souls, and do no work at all, whether it be one of your own country, or a stranger that sojourneth among you:",
+          "9879dbb7aec41528-01": "“It shall be a statute to you forever: in the seventh month, on the tenth day of the month, you shall afflict your souls, and shall do no kind of work, the native-born, or the stranger who lives as a foreigner among you:",
+          "bba730b9171fcc22-01": "And let this be an order to you for ever: in the seventh month, on the tenth day, you are to keep yourselves from pleasure and do no sort of work, those who are Israelites by birth and those from other lands who are living among you:",
+          "06125ad3d1d57585-01": "“It shall be a statute to you forever: in the seventh month, on the tenth day of the month, you shall afflict your souls, and shall do no kind of work, the native-born, or the stranger who lives as a foreigner among you:",
+          "41926a4aa3831714-01": "“It shall be a statute to you forever: in the seventh month, on the tenth day of the month, you shall afflict your souls, and shall do no kind of work, the native-born, or the stranger who lives as a foreigner among you:"
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "For on that day shall the priest make an atonement for you, to cleanse you, that ye may be clean from all your sins before the LORD.",
+          "9879dbb7aec41528-01": "for on this day shall atonement be made for you, to cleanse you; from all your sins you shall be clean before Yahweh.",
+          "bba730b9171fcc22-01": "For on this day your sin will be taken away and you will be clean: you will be made free from all your sins before the Lord.",
+          "06125ad3d1d57585-01": "for on this day shall atonement be made for you, to cleanse you; from all your sins you shall be clean before Yahweh.",
+          "41926a4aa3831714-01": "for on this day shall atonement be made for you, to cleanse you; from all your sins you shall be clean before Yahweh."
+        },
+        "words": [
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "It shall be a sabbath of rest unto you, and ye shall afflict your souls, by a statute for ever.",
+          "9879dbb7aec41528-01": "It is a Sabbath of solemn rest to you, and you shall afflict your souls. It is a statute forever.",
+          "bba730b9171fcc22-01": "It is a special Sabbath for you, and you are to keep yourselves from pleasure; it is an order for ever.",
+          "06125ad3d1d57585-01": "It is a Sabbath of solemn rest to you, and you shall afflict your souls. It is a statute forever.",
+          "41926a4aa3831714-01": "It is a Sabbath of solemn rest to you, and you shall afflict your souls. It is a statute forever."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "And the priest, whom he shall anoint, and whom he shall consecrate to minister in the priest’s office in his father’s stead, shall make the atonement, and shall put on the linen clothes, even the holy garments:",
+          "9879dbb7aec41528-01": "The priest, who is anointed and who is consecrated to be priest in his father’s place, shall make the atonement, and shall put on the linen garments, even the holy garments.",
+          "bba730b9171fcc22-01": "And the man on whose head the holy oil has been put, and who has been marked out to be a priest in his father's place, will do what is necessary to take away sin, and will put on the linen clothing, even the holy robes:",
+          "06125ad3d1d57585-01": "The priest, who is anointed and who is consecrated to be priest in his father’s place, shall make the atonement, and shall put on the linen garments, even the holy garments.",
+          "41926a4aa3831714-01": "The priest, who is anointed and who is consecrated to be priest in his father’s place, shall make the atonement, and shall put on the linen garments, even the holy garments."
+        },
+        "words": [
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shall make an atonement for the holy sanctuary, and he shall make an atonement for the tabernacle of the congregation, and for the altar, and he shall make an atonement for the priests, and for all the people of the congregation.",
+          "9879dbb7aec41528-01": "Then he shall make atonement for the Holy Sanctuary; and he shall make atonement for the Tent of Meeting and for the altar; and he shall make atonement for the priests and for all the people of the assembly.",
+          "bba730b9171fcc22-01": "And he will make the holy place and the Tent of meeting and the altar free from sin; he will take away sin from the priests and from all the people.",
+          "06125ad3d1d57585-01": "Then he shall make atonement for the Holy Sanctuary; and he shall make atonement for the Tent of Meeting and for the altar; and he shall make atonement for the priests and for all the people of the assembly.",
+          "41926a4aa3831714-01": "Then he shall make atonement for the Holy Sanctuary; and he shall make atonement for the Tent of Meeting and for the altar; and he shall make atonement for the priests and for all the people of the assembly."
+        },
+        "words": [
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "And this shall be an everlasting statute unto you, to make an atonement for the children of Israel for all their sins once a year. And he did as the LORD commanded Moses.",
+          "9879dbb7aec41528-01": "“This shall be an everlasting statute for you, to make atonement for the children of Israel once in the year because of all their sins.” It was done as Yahweh commanded Moses.",
+          "bba730b9171fcc22-01": "And let this be an order for ever for you, so that the sin of the children of Israel may be taken away once every year. And he did as the Lord gave orders to Moses.",
+          "06125ad3d1d57585-01": "“This shall be an everlasting statute for you, to make atonement for the children of Israel once in the year because of all their sins.” It was done as Yahweh commanded Moses.",
+          "41926a4aa3831714-01": "“This shall be an everlasting statute for you, to make atonement for the children of Israel once in the year because of all their sins.” It was done as Yahweh commanded Moses."
+        },
+        "words": [
+          {
+            "original": "כִּפֻּרִים",
+            "transliteration": "kip-pu-rim",
+            "english": "atonement",
+            "strongs": "H3725",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      }
+    ]
+  },
+  "Isaiah 53:1-12": {
+    "reference": "Isaiah 53:1-12",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Who hath believed our report? and to whom is the arm of the LORD revealed?",
+          "9879dbb7aec41528-01": "Who has believed our message? To whom has the arm of Yahweh been revealed?",
+          "bba730b9171fcc22-01": "Who would have had faith in the word which has come to our ears, and to whom had the arm of the Lord been unveiled?",
+          "06125ad3d1d57585-01": "Who has believed our message? To whom has the arm of Yahweh been revealed?",
+          "41926a4aa3831714-01": "Who has believed our message? To whom has the arm of Yahweh been revealed?"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "For he shall grow up before him as a tender plant, and as a root out of a dry ground: he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him.",
+          "9879dbb7aec41528-01": "For he grew up before him as a tender plant, and as a root out of dry ground. He has no good looks or majesty. When we see him, there is no beauty that we should desire him.",
+          "bba730b9171fcc22-01": "For his growth was like that of a delicate plant before him, and like a root out of a dry place: he had no grace of form, to give us pleasure;",
+          "06125ad3d1d57585-01": "For he grew up before him as a tender plant, and as a root out of dry ground. He has no good looks or majesty. When we see him, there is no beauty that we should desire him.",
+          "41926a4aa3831714-01": "For he grew up before him as a tender plant, and as a root out of dry ground. He has no good looks or majesty. When we see him, there is no beauty that we should desire him."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "He is despised and rejected of men; a man of sorrows, and acquainted with grief: and we hid as it were our faces from him; he was despised, and we esteemed him not.",
+          "9879dbb7aec41528-01": "He was despised, and rejected by men; a man of suffering, and acquainted with disease. He was despised as one from whom men hide their face; and we didn’t respect him.",
+          "bba730b9171fcc22-01": "Men made sport of him, turning away from him; he was a man of sorrows, marked by disease; and like one from whom men's faces are turned away, he was looked down on, and we put no value on him.",
+          "06125ad3d1d57585-01": "He was despised, and rejected by men; a man of suffering, and acquainted with disease. He was despised as one from whom men hide their face; and we didn’t respect him.",
+          "41926a4aa3831714-01": "He was despised, and rejected by men; a man of suffering, and acquainted with disease. He was despised as one from whom men hide their face; and we didn’t respect him."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted.",
+          "9879dbb7aec41528-01": "Surely he has borne our sickness, and carried our suffering; yet we considered him plagued, struck by God, and afflicted.",
+          "bba730b9171fcc22-01": "But it was our pain he took, and our diseases were put on him: while to us he seemed as one diseased, on whom God's punishment had come.",
+          "06125ad3d1d57585-01": "Surely he has borne our sickness, and carried our suffering; yet we considered him plagued, struck by God, and afflicted.",
+          "41926a4aa3831714-01": "Surely he has borne our sickness, and carried our suffering; yet we considered him plagued, struck by God, and afflicted."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "But he was wounded for our transgressions, he was  bruised for our iniquities: the chastisement of our peace was  upon him; and with his stripes we are healed.",
+          "9879dbb7aec41528-01": "But he was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him; and by his wounds we are healed.",
+          "bba730b9171fcc22-01": "But it was for our sins he was wounded, and for our evil doings he was crushed: he took the punishment by which we have peace, and by his wounds we are made well.",
+          "06125ad3d1d57585-01": "But he was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him; and by his wounds we are healed.",
+          "41926a4aa3831714-01": "But he was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him; and by his wounds we are healed."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "All we like sheep have gone astray; we have turned every one to his own way; and the LORD hath laid on him the iniquity of us all.",
+          "9879dbb7aec41528-01": "All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.",
+          "bba730b9171fcc22-01": "We all went wandering like sheep; going every one of us after his desire; and the Lord put on him the punishment of us all.",
+          "06125ad3d1d57585-01": "All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.",
+          "41926a4aa3831714-01": "All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "He was oppressed, and he was afflicted, yet he opened not his mouth: he is brought as a lamb to the slaughter, and as a sheep before her shearers is dumb, so he openeth not his mouth.",
+          "9879dbb7aec41528-01": "He was oppressed, yet when he was afflicted he didn’t open his mouth. As a lamb that is led to the slaughter, and as a sheep that before its shearers is silent, so he didn’t open his mouth.",
+          "bba730b9171fcc22-01": "Men were cruel to him, but he was gentle and quiet; as a lamb taken to its death, and as a sheep before those who take her wool makes no sound, so he said not a word.",
+          "06125ad3d1d57585-01": "He was oppressed, yet when he was afflicted he didn’t open his mouth. As a lamb that is led to the slaughter, and as a sheep that before its shearers is silent, so he didn’t open his mouth.",
+          "41926a4aa3831714-01": "He was oppressed, yet when he was afflicted he didn’t open his mouth. As a lamb that is led to the slaughter, and as a sheep that before its shearers is silent, so he didn’t open his mouth."
+        },
+        "words": [
+          {
+            "original": "שֶׂה",
+            "transliteration": "seh",
+            "english": "lamb / sheep",
+            "strongs": "H7716",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "He was taken from prison and from judgment: and who shall declare his generation? for he was cut off out of the land of the living: for the transgression of my people was he stricken.",
+          "9879dbb7aec41528-01": "He was taken away by oppression and judgment; and as for his generation, who considered that he was cut off out of the land of the living and stricken for the disobedience of my people?",
+          "bba730b9171fcc22-01": "They took away from him help and right, and who gave a thought to his fate? for he was cut off from the land of the living: he came to his death for the sin of my people.",
+          "06125ad3d1d57585-01": "He was taken away by oppression and judgment; and as for his generation, who considered that he was cut off out of the land of the living and stricken for the disobedience of my people?",
+          "41926a4aa3831714-01": "He was taken away by oppression and judgment; and as for his generation, who considered that he was cut off out of the land of the living and stricken for the disobedience of my people?"
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth.",
+          "9879dbb7aec41528-01": "They made his grave with the wicked, and with a rich man in his death; although he had done no violence, nor was any deceit in his mouth.",
+          "bba730b9171fcc22-01": "And they put his body into the earth with sinners, and his last resting-place was with the evil-doers, though he had done no wrong, and no deceit was in his mouth.",
+          "06125ad3d1d57585-01": "They made his grave with the wicked, and with a rich man in his death; although he had done no violence, nor was any deceit in his mouth.",
+          "41926a4aa3831714-01": "They made his grave with the wicked, and with a rich man in his death; although he had done no violence, nor was any deceit in his mouth."
+        },
+        "words": [
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "Yet it pleased the LORD to bruise him; he hath put him to grief: when thou shalt make his soul an offering for sin, he shall see his seed, he shall prolong his days, and the pleasure of the LORD shall prosper in his hand.",
+          "9879dbb7aec41528-01": "Yet it pleased Yahweh to bruise him. He has caused him to suffer. When you make his soul an offering for sin, he will see his offspring. He will prolong his days, and Yahweh’s pleasure will prosper in his hand.",
+          "bba730b9171fcc22-01": "And the Lord was pleased ... see a seed, long life, ... will do well in his hand. ...",
+          "06125ad3d1d57585-01": "Yet it pleased Yahweh to bruise him. He has caused him to suffer. When you make his soul an offering for sin, he will see his offspring. He will prolong his days, and Yahweh’s pleasure will prosper in his hand.",
+          "41926a4aa3831714-01": "Yet it pleased Yahweh to bruise him. He has caused him to suffer. When you make his soul an offering for sin, he will see his offspring. He will prolong his days, and Yahweh’s pleasure will prosper in his hand."
+        },
+        "words": [
+          {
+            "original": "עֹלָה",
+            "transliteration": "o-lah",
+            "english": "burnt offering",
+            "strongs": "H5930",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities.",
+          "9879dbb7aec41528-01": "After the suffering of his soul, he will see the light and be satisfied. My righteous servant will justify many by the knowledge of himself; and he will bear their iniquities.",
+          "bba730b9171fcc22-01": "... made clear his righteousness before men ... had taken their sins on himself.",
+          "06125ad3d1d57585-01": "After the suffering of his soul, he will see the light and be satisfied. My righteous servant will justify many by the knowledge of himself; and he will bear their iniquities.",
+          "41926a4aa3831714-01": "After the suffering of his soul, he will see the light and be satisfied. My righteous servant will justify many by the knowledge of himself; and he will bear their iniquities."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore will I divide him a portion with the great, and he shall divide the spoil with the strong; because he hath poured out his soul unto death: and he was numbered with the transgressors; and he bare the sin of many, and made intercession for the transgressors.",
+          "9879dbb7aec41528-01": "Therefore will I give him a portion with the great, and he will divide the plunder with the strong; because he poured out his soul to death, and was counted with the transgressors; yet he bore the sin of many, and made intercession for the transgressors.",
+          "bba730b9171fcc22-01": "For this cause he will have a heritage with the great, and he will have a part in the goods of war with the strong, because he gave up his life, and was numbered with the evil-doers; taking on himself the sins of the people, and making prayer for the wrongdoers.",
+          "06125ad3d1d57585-01": "Therefore will I give him a portion with the great, and he will divide the plunder with the strong; because he poured out his soul to death, and was counted with the transgressors; yet he bore the sin of many, and made intercession for the transgressors.",
+          "41926a4aa3831714-01": "Therefore will I give him a portion with the great, and he will divide the plunder with the strong; because he poured out his soul to death, and was counted with the transgressors; yet he bore the sin of many, and made intercession for the transgressors."
+        },
+        "words": [
+          {
+            "original": "נֶפֶשׁ",
+            "transliteration": "ne-phesh",
+            "english": "soul / life",
+            "strongs": "H5315",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "יהוה",
+            "transliteration": "Yah-weh",
+            "english": "LORD",
+            "strongs": "H3068",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "אֱלֹהִים",
+            "transliteration": "e-lo-him",
+            "english": "God",
+            "strongs": "H0430",
+            "parsing": "N-mp"
+          }
+        ]
+      }
+    ]
+  },
+  "John 1:29-36": {
+    "reference": "John 1:29-36",
+    "verses": [
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world.",
+          "9879dbb7aec41528-01": "The next day, he saw Jesus coming to him, and said, “Behold, the Lamb of God, who takes away the sin of the world!",
+          "bba730b9171fcc22-01": "The day after, John sees Jesus coming to him and says, See, here is the Lamb of God who takes away the sin of the world!",
+          "06125ad3d1d57585-01": "The next day, he saw Jesus coming to him, and said, “Behold, the Lamb of God, who takes away the sin of the world!",
+          "41926a4aa3831714-01": "The next day, he saw Jesus coming to him, and said, “Behold, the Lamb of God, who takes away the sin of the world!"
+        },
+        "words": [
+          {
+            "original": "ἀμνός",
+            "transliteration": "am-nos",
+            "english": "lamb",
+            "strongs": "G0286",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "ἁμαρτία",
+            "transliteration": "ha-mar-ti-a",
+            "english": "sin / error",
+            "strongs": "G0266",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "This is he of whom I said, After me cometh a man which is preferred before me: for he was before me.",
+          "9879dbb7aec41528-01": "This is he of whom I said, ‘After me comes a man who is preferred before me, for he was before me.’",
+          "bba730b9171fcc22-01": "This is he of whom I said, One is coming after me who is put over me because he was in existence before me.",
+          "06125ad3d1d57585-01": "This is he of whom I said, ‘After me comes a man who is preferred before me, for he was before me.’",
+          "41926a4aa3831714-01": "This is he of whom I said, ‘After me comes a man who is preferred before me, for he was before me.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "And I knew him not: but that he should be made manifest to Israel, therefore am I come baptizing with water.",
+          "9879dbb7aec41528-01": "I didn’t know him, but for this reason I came baptizing in water: that he would be revealed to Israel.”",
+          "bba730b9171fcc22-01": "I myself had no knowledge of him, but I came giving baptism with water so that he might be seen openly by Israel.",
+          "06125ad3d1d57585-01": "I didn’t know him, but for this reason I came baptizing in water: that he would be revealed to Israel.”",
+          "41926a4aa3831714-01": "I didn’t know him, but for this reason I came baptizing in water: that he would be revealed to Israel.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "And John bare record, saying, I saw the Spirit descending from heaven like a dove, and it abode upon him.",
+          "9879dbb7aec41528-01": "John testified, saying, “I have seen the Spirit descending like a dove out of heaven, and it remained on him.",
+          "bba730b9171fcc22-01": "And John gave this witness, saying, I saw the Spirit coming down from heaven like a dove and resting on him.",
+          "06125ad3d1d57585-01": "John testified, saying, “I have seen the Spirit descending like a dove out of heaven, and it remained on him.",
+          "41926a4aa3831714-01": "John testified, saying, “I have seen the Spirit descending like a dove out of heaven, and it remained on him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "And I knew him not: but he that sent me to baptize with water, the same said unto me, Upon whom thou shalt see the Spirit descending, and remaining on him, the same is he which baptizeth with the Holy Ghost.",
+          "9879dbb7aec41528-01": "I didn’t recognize him, but he who sent me to baptize in water, he said to me, ‘On whomever you will see the Spirit descending, and remaining on him, the same is he who baptizes in the Holy Spirit.’",
+          "bba730b9171fcc22-01": "I had no knowledge who he was, but he who sent me to give baptism with water said to me, The one on whom you see the Spirit coming down and resting, it is he who gives baptism with the Holy Spirit.",
+          "06125ad3d1d57585-01": "I didn’t recognize him, but he who sent me to baptize in water, he said to me, ‘On whomever you will see the Spirit descending, and remaining on him, the same is he who baptizes in the Holy Spirit.’",
+          "41926a4aa3831714-01": "I didn’t recognize him, but he who sent me to baptize in water, he said to me, ‘On whomever you will see the Spirit descending, and remaining on him, the same is he who baptizes in the Holy Spirit.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw, and bare record that this is the Son of God.",
+          "9879dbb7aec41528-01": "I have seen, and have testified that this is the Son of God.”",
+          "bba730b9171fcc22-01": "This I saw myself and my witness is that he is the Son of God.",
+          "06125ad3d1d57585-01": "I have seen, and have testified that this is the Son of God.”",
+          "41926a4aa3831714-01": "I have seen, and have testified that this is the Son of God.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 35,
+        "translations": {
+          "de4e12af7f28f599-02": "Again the next day after John stood, and two of his disciples;",
+          "9879dbb7aec41528-01": "Again, the next day, John was standing with two of his disciples,",
+          "bba730b9171fcc22-01": "The day after, John was there again with two of his disciples;",
+          "06125ad3d1d57585-01": "Again, the next day, John was standing with two of his disciples,",
+          "41926a4aa3831714-01": "Again, the next day, John was standing with two of his disciples,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 36,
+        "translations": {
+          "de4e12af7f28f599-02": "And looking upon Jesus as he walked, he saith, Behold the Lamb of God!",
+          "9879dbb7aec41528-01": "and he looked at Jesus as he walked, and said, “Behold, the Lamb of God!”",
+          "bba730b9171fcc22-01": "And looking at Jesus while he was walking he said, See, there is the Lamb of God!",
+          "06125ad3d1d57585-01": "and he looked at Jesus as he walked, and said, “Behold, the Lamb of God!”",
+          "41926a4aa3831714-01": "and he looked at Jesus as he walked, and said, “Behold, the Lamb of God!”"
+        },
+        "words": [
+          {
+            "original": "ἀμνός",
+            "transliteration": "am-nos",
+            "english": "lamb",
+            "strongs": "G0286",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Hebrews 9:11-28": {
+    "reference": "Hebrews 9:11-28",
+    "verses": [
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "But Christ being come an high priest of good things to come, by a greater and more perfect tabernacle, not made with hands, that is to say, not of this building;",
+          "9879dbb7aec41528-01": "But Christ having come as a high priest of the coming good things, through the greater and more perfect tabernacle, not made with hands, that is to say, not of this creation,",
+          "bba730b9171fcc22-01": "But now Christ has come as the high priest of the good things of the future, through this greater and better Tent, not made with hands, that is to say, not of this world,",
+          "06125ad3d1d57585-01": "But Christ having come as a high priest of the coming good things, through the greater and more perfect tabernacle, not made with hands, that is to say, not of this creation,",
+          "41926a4aa3831714-01": "But Christ having come as a high priest of the coming good things, through the greater and more perfect tabernacle, not made with hands, that is to say, not of this creation,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us.",
+          "9879dbb7aec41528-01": "nor yet through the blood of goats and calves, but through his own blood, entered in once for all into the Holy Place, having obtained eternal redemption.",
+          "bba730b9171fcc22-01": "And has gone once and for ever into the holy place, having got eternal salvation, not through the blood of goats and young oxen, but through his blood.",
+          "06125ad3d1d57585-01": "nor yet through the blood of goats and calves, but through his own blood, entered in once for all into the Holy Place, having obtained eternal redemption.",
+          "41926a4aa3831714-01": "nor yet through the blood of goats and calves, but through his own blood, entered in once for all into the Holy Place, having obtained eternal redemption."
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ἀπολύτρωσις",
+            "transliteration": "a-po-lu-tro-sis",
+            "english": "redemption / release",
+            "strongs": "G0629",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "For if the blood of bulls and of goats, and the ashes of an heifer sprinkling the unclean, sanctifieth to the purifying of the flesh:",
+          "9879dbb7aec41528-01": "For if the blood of goats and bulls, and the ashes of a heifer sprinkling those who have been defiled, sanctify to the cleanness of the flesh:",
+          "bba730b9171fcc22-01": "For if the blood of goats and oxen, and the dust from the burning of a young cow, being put on the unclean, make the flesh clean:",
+          "06125ad3d1d57585-01": "For if the blood of goats and bulls, and the ashes of a heifer sprinkling those who have been defiled, sanctify to the cleanness of the flesh:",
+          "41926a4aa3831714-01": "For if the blood of goats and bulls, and the ashes of a heifer sprinkling those who have been defiled, sanctify to the cleanness of the flesh:"
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "How much more shall the blood of Christ, who through the eternal Spirit offered himself without spot to God, purge your conscience from dead works to serve the living God?",
+          "9879dbb7aec41528-01": "how much more will the blood of Christ, who through the eternal Spirit offered himself without defect to God, cleanse your conscience from dead works to serve the living God?",
+          "bba730b9171fcc22-01": "How much more will the blood of Christ, who, being without sin, made an offering of himself to God through the Holy Spirit, make your hearts clean from dead works to be servants of the living God?",
+          "06125ad3d1d57585-01": "how much more will the blood of Christ, who through the eternal Spirit offered himself without defect to God, cleanse your conscience from dead works to serve the living God?",
+          "41926a4aa3831714-01": "how much more will the blood of Christ, who through the eternal Spirit offered himself without defect to God, cleanse your conscience from dead works to serve the living God?"
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And for this cause he is the mediator of the new testament, that by means of death, for the redemption of the transgressions that were  under the first testament, they which are called might receive the promise of eternal inheritance.",
+          "9879dbb7aec41528-01": "For this reason he is the mediator of a new covenant, since a death has occurred for the redemption of the transgressions that were under the first covenant, that those who have been called may receive the promise of the eternal inheritance.",
+          "bba730b9171fcc22-01": "And for this cause it is through him that a new agreement has come into being, so that after the errors under the first agreement had been taken away by his death, the word of God might have effect for those who were marked out for an eternal heritage.",
+          "06125ad3d1d57585-01": "For this reason he is the mediator of a new covenant, since a death has occurred for the redemption of the transgressions that were under the first covenant, that those who have been called may receive the promise of the eternal inheritance.",
+          "41926a4aa3831714-01": "For this reason he is the mediator of a new covenant, since a death has occurred for the redemption of the transgressions that were under the first covenant, that those who have been called may receive the promise of the eternal inheritance."
+        },
+        "words": [
+          {
+            "original": "ἀπολύτρωσις",
+            "transliteration": "a-po-lu-tro-sis",
+            "english": "redemption / release",
+            "strongs": "G0629",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "For where a testament is, there must also of necessity be the death of the testator.",
+          "9879dbb7aec41528-01": "For where a last will and testament is, there must of necessity be the death of him who made it.",
+          "bba730b9171fcc22-01": "Because where there is a testament, there has to be the death of the man who made it.",
+          "06125ad3d1d57585-01": "For where a last will and testament is, there must of necessity be the death of him who made it.",
+          "41926a4aa3831714-01": "For where a last will and testament is, there must of necessity be the death of him who made it."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "For a testament is of force after men are dead: otherwise it is of no strength at all while the testator liveth.",
+          "9879dbb7aec41528-01": "For a will is in force where there has been death, for it is never in force while he who made it lives.",
+          "bba730b9171fcc22-01": "For a testament has effect after death; for what power has it while the man who made it is living?",
+          "06125ad3d1d57585-01": "For a will is in force where there has been death, for it is never in force while he who made it lives.",
+          "41926a4aa3831714-01": "For a will is in force where there has been death, for it is never in force while he who made it lives."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Whereupon neither the first testament was dedicated without blood.",
+          "9879dbb7aec41528-01": "Therefore even the first covenant has not been dedicated without blood.",
+          "bba730b9171fcc22-01": "So that even the first agreement was not made without blood.",
+          "06125ad3d1d57585-01": "Therefore even the first covenant has not been dedicated without blood.",
+          "41926a4aa3831714-01": "Therefore even the first covenant has not been dedicated without blood."
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "For when Moses had spoken every precept to all the people according to the law, he took the blood of calves and of goats, with water, and scarlet wool, and hyssop, and sprinkled both the book, and all the people,",
+          "9879dbb7aec41528-01": "For when every commandment had been spoken by Moses to all the people according to the law, he took the blood of the calves and the goats, with water and scarlet wool and hyssop, and sprinkled both the book itself and all the people,",
+          "bba730b9171fcc22-01": "For when Moses had given all the rules of the law to the people, he took the blood of goats and young oxen, with water and red wool and hyssop, and put it on the book itself and on all the people,",
+          "06125ad3d1d57585-01": "For when every commandment had been spoken by Moses to all the people according to the law, he took the blood of the calves and the goats, with water and scarlet wool and hyssop, and sprinkled both the book itself and all the people,",
+          "41926a4aa3831714-01": "For when every commandment had been spoken by Moses to all the people according to the law, he took the blood of the calves and the goats, with water and scarlet wool and hyssop, and sprinkled both the book itself and all the people,"
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "Saying, This is the blood of the testament which God hath enjoined unto you.",
+          "9879dbb7aec41528-01": "saying, “This is the blood of the covenant which God has commanded you.”",
+          "bba730b9171fcc22-01": "Saying, This blood is the sign of the agreement which God has made with you.",
+          "06125ad3d1d57585-01": "saying, “This is the blood of the covenant which God has commanded you.”",
+          "41926a4aa3831714-01": "saying, “This is the blood of the covenant which God has commanded you.”"
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Moreover he sprinkled with blood both the tabernacle, and all the vessels of the ministry.",
+          "9879dbb7aec41528-01": "Moreover he sprinkled the tabernacle and all the vessels of the ministry in the same way with the blood.",
+          "bba730b9171fcc22-01": "And the blood was put on the Tent and all the holy vessels in the same way.",
+          "06125ad3d1d57585-01": "Moreover he sprinkled the tabernacle and all the vessels of the ministry in the same way with the blood.",
+          "41926a4aa3831714-01": "Moreover he sprinkled the tabernacle and all the vessels of the ministry in the same way with the blood."
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "And almost all things are by the law purged with blood; and without shedding of blood is no remission.",
+          "9879dbb7aec41528-01": "According to the law, nearly everything is cleansed with blood, and apart from shedding of blood there is no remission.",
+          "bba730b9171fcc22-01": "And by the law almost all things are made clean with blood, and without blood there is no forgiveness.",
+          "06125ad3d1d57585-01": "According to the law, nearly everything is cleansed with blood, and apart from shedding of blood there is no remission.",
+          "41926a4aa3831714-01": "According to the law, nearly everything is cleansed with blood, and apart from shedding of blood there is no remission."
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "It was therefore necessary that the patterns of things in the heavens should be purified with these; but the heavenly things themselves with better sacrifices than these.",
+          "9879dbb7aec41528-01": "It was necessary therefore that the copies of the things in the heavens should be cleansed with these; but the heavenly things themselves with better sacrifices than these.",
+          "bba730b9171fcc22-01": "For this cause it was necessary to make the copies of the things in heaven clean with these offerings; but the things themselves are made clean with better offerings than these.",
+          "06125ad3d1d57585-01": "It was necessary therefore that the copies of the things in the heavens should be cleansed with these; but the heavenly things themselves with better sacrifices than these.",
+          "41926a4aa3831714-01": "It was necessary therefore that the copies of the things in the heavens should be cleansed with these; but the heavenly things themselves with better sacrifices than these."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "For Christ is not entered into the holy places made with hands, which are the figures of the true; but into heaven itself, now to appear in the presence of God for us:",
+          "9879dbb7aec41528-01": "For Christ hasn’t entered into holy places made with hands, which are representations of the true, but into heaven itself, now to appear in the presence of God for us;",
+          "bba730b9171fcc22-01": "For Christ did not go into a holy place which had been made by men's hands as the copy of the true one; but he went into heaven itself, and now takes his place before the face of God for us.",
+          "06125ad3d1d57585-01": "For Christ hasn’t entered into holy places made with hands, which are representations of the true, but into heaven itself, now to appear in the presence of God for us;",
+          "41926a4aa3831714-01": "For Christ hasn’t entered into holy places made with hands, which are representations of the true, but into heaven itself, now to appear in the presence of God for us;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "Nor yet that he should offer himself often, as the high priest entereth into the holy place every year with blood of others;",
+          "9879dbb7aec41528-01": "nor yet that he should offer himself often, as the high priest enters into the holy place year by year with blood not his own,",
+          "bba730b9171fcc22-01": "And he did not have to make an offering of himself again and again, as the high priest goes into the holy place every year with blood which is not his;",
+          "06125ad3d1d57585-01": "nor yet that he should offer himself often, as the high priest enters into the holy place year by year with blood not his own,",
+          "41926a4aa3831714-01": "nor yet that he should offer himself often, as the high priest enters into the holy place year by year with blood not his own,"
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "For then must he often have suffered since the foundation of the world: but now once in the end of the world hath he appeared to put away sin by the sacrifice of himself.",
+          "9879dbb7aec41528-01": "or else he must have suffered often since the foundation of the world. But now once at the end of the ages, he has been revealed to put away sin by the sacrifice of himself.",
+          "bba730b9171fcc22-01": "For then he would have undergone a number of deaths from the time of the making of the world: but now he has come to us at the end of the old order, to put away sin by the offering of himself.",
+          "06125ad3d1d57585-01": "or else he must have suffered often since the foundation of the world. But now once at the end of the ages, he has been revealed to put away sin by the sacrifice of himself.",
+          "41926a4aa3831714-01": "or else he must have suffered often since the foundation of the world. But now once at the end of the ages, he has been revealed to put away sin by the sacrifice of himself."
+        },
+        "words": [
+          {
+            "original": "ἁμαρτία",
+            "transliteration": "ha-mar-ti-a",
+            "english": "sin / error",
+            "strongs": "G0266",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "And as it is appointed unto men once to die, but after this the judgment:",
+          "9879dbb7aec41528-01": "Inasmuch as it is appointed for men to die once, and after this, judgment,",
+          "bba730b9171fcc22-01": "And because by God's law death comes to men once, and after that they are judged;",
+          "06125ad3d1d57585-01": "Inasmuch as it is appointed for men to die once, and after this, judgment,",
+          "41926a4aa3831714-01": "Inasmuch as it is appointed for men to die once, and after this, judgment,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "So Christ was once offered to bear the sins of many; and unto them that look for him shall he appear the second time without sin unto salvation.",
+          "9879dbb7aec41528-01": "so Christ also, having been offered once to bear the sins of many, will appear a second time, without sin, to those who are eagerly waiting for him for salvation.",
+          "bba730b9171fcc22-01": "So Christ, having at his first coming taken on himself the sins of men, will be seen a second time, without sin, by those who are waiting for him, for their salvation.",
+          "06125ad3d1d57585-01": "so Christ also, having been offered once to bear the sins of many, will appear a second time, without sin, to those who are eagerly waiting for him for salvation.",
+          "41926a4aa3831714-01": "so Christ also, having been offered once to bear the sins of many, will appear a second time, without sin, to those who are eagerly waiting for him for salvation."
+        },
+        "words": [
+          {
+            "original": "ἁμαρτία",
+            "transliteration": "ha-mar-ti-a",
+            "english": "sin / error",
+            "strongs": "G0266",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Revelation 5:1-14": {
+    "reference": "Revelation 5:1-14",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw in the right hand of him that sat on the throne a book written within and on the backside, sealed with seven seals.",
+          "9879dbb7aec41528-01": "I saw, in the right hand of him who sat on the throne, a book written inside and outside, sealed shut with seven seals.",
+          "bba730b9171fcc22-01": "And I saw in the right hand of him who was seated on the high seat, a book with writing inside it and on the back, shut with seven stamps of wax.",
+          "06125ad3d1d57585-01": "I saw, in the right hand of him who sat on the throne, a book written inside and outside, sealed shut with seven seals.",
+          "41926a4aa3831714-01": "I saw, in the right hand of him who sat on the throne, a book written inside and outside, sealed shut with seven seals."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw a strong angel proclaiming with a loud voice, Who is worthy to open the book, and to loose the seals thereof?",
+          "9879dbb7aec41528-01": "I saw a mighty angel proclaiming with a loud voice, “Who is worthy to open the book, and to break its seals?”",
+          "bba730b9171fcc22-01": "And I saw a strong angel saying in a loud voice, Who is able to make the book open, and to undo its stamps?",
+          "06125ad3d1d57585-01": "I saw a mighty angel proclaiming with a loud voice, “Who is worthy to open the book, and to break its seals?”",
+          "41926a4aa3831714-01": "I saw a mighty angel proclaiming with a loud voice, “Who is worthy to open the book, and to break its seals?”"
+        },
+        "words": [
+          {
+            "original": "ἄξιος",
+            "transliteration": "ax-i-os",
+            "english": "worthy / deserving",
+            "strongs": "G0514",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And no man in heaven, nor in earth, neither under the earth, was able to open the book, neither to look thereon.",
+          "9879dbb7aec41528-01": "No one in heaven above, or on the earth, or under the earth, was able to open the book, or to look in it.",
+          "bba730b9171fcc22-01": "And no one in heaven, or on the earth, or under the earth, was able to get the book open, or to see what was in it.",
+          "06125ad3d1d57585-01": "No one in heaven above, or on the earth, or under the earth, was able to open the book, or to look in it.",
+          "41926a4aa3831714-01": "No one in heaven above, or on the earth, or under the earth, was able to open the book, or to look in it."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And I wept much, because no man was found worthy to open and to read the book, neither to look thereon.",
+          "9879dbb7aec41528-01": "And I wept much, because no one was found worthy to open the book, or to look in it.",
+          "bba730b9171fcc22-01": "And I was very sad, because there was no one able to get the book open or to see what was in it.",
+          "06125ad3d1d57585-01": "And I wept much, because no one was found worthy to open the book, or to look in it.",
+          "41926a4aa3831714-01": "And I wept much, because no one was found worthy to open the book, or to look in it."
+        },
+        "words": [
+          {
+            "original": "ἄξιος",
+            "transliteration": "ax-i-os",
+            "english": "worthy / deserving",
+            "strongs": "G0514",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And one of the elders saith unto me, Weep not: behold, the Lion of the tribe of Juda, the Root of David, hath prevailed to open the book, and to loose the seven seals thereof.",
+          "9879dbb7aec41528-01": "One of the elders said to me, “Don’t weep. Behold, the Lion who is of the tribe of Judah, the Root of David, has overcome; he who opens the book and its seven seals.”",
+          "bba730b9171fcc22-01": "And one of the rulers said to me, Do not be sad: see, the Lion of the tribe of Judah, the Root of David, has overcome, and has power to undo the book and its seven stamps.",
+          "06125ad3d1d57585-01": "One of the elders said to me, “Don’t weep. Behold, the Lion who is of the tribe of Judah, the Root of David, has overcome; he who opens the book and its seven seals.”",
+          "41926a4aa3831714-01": "One of the elders said to me, “Don’t weep. Behold, the Lion who is of the tribe of Judah, the Root of David, has overcome; he who opens the book and its seven seals.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And I beheld, and, lo, in the midst of the throne and of the four beasts, and in the midst of the elders, stood a Lamb as it had been slain, having seven horns and seven eyes, which are the seven Spirits of God sent forth into all the earth.",
+          "9879dbb7aec41528-01": "I saw in the middle of the throne and of the four living creatures, and in the middle of the elders, a Lamb standing, as though it had been slain, having seven horns, and seven eyes, which are the seven Spirits of God, sent out into all the earth.",
+          "bba730b9171fcc22-01": "And I saw in the middle of the high seat and of the four beasts, and in the middle of the rulers, a Lamb in his place, which seemed as if it had been put to death, having seven horns and seven eyes, which are the seven Spirits of God, sent out into all the earth.",
+          "06125ad3d1d57585-01": "I saw in the middle of the throne and of the four living creatures, and in the middle of the elders, a Lamb standing, as though it had been slain, having seven horns, and seven eyes, which are the seven Spirits of God, sent out into all the earth.",
+          "41926a4aa3831714-01": "I saw in the middle of the throne and of the four living creatures, and in the middle of the elders, a Lamb standing, as though it had been slain, having seven horns, and seven eyes, which are the seven Spirits of God, sent out into all the earth."
+        },
+        "words": [
+          {
+            "original": "ἀμνός",
+            "transliteration": "am-nos",
+            "english": "lamb",
+            "strongs": "G0286",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "σφάζω",
+            "transliteration": "sphat-zo",
+            "english": "slay / slaughter",
+            "strongs": "G4969",
+            "parsing": "V-RPE-ns"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And he came and took the book out of the right hand of him that sat upon the throne.",
+          "9879dbb7aec41528-01": "Then he came, and he took it out of the right hand of him who sat on the throne.",
+          "bba730b9171fcc22-01": "And he came and took it out of the right hand of him who was seated on the high seat.",
+          "06125ad3d1d57585-01": "Then he came, and he took it out of the right hand of him who sat on the throne.",
+          "41926a4aa3831714-01": "Then he came, and he took it out of the right hand of him who sat on the throne."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he had taken the book, the four beasts and four and  twenty elders fell down before the Lamb, having every one of them harps, and golden vials full of odours, which are the prayers of saints.",
+          "9879dbb7aec41528-01": "Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints.",
+          "bba730b9171fcc22-01": "And when he had taken the book, the four beasts and the four and twenty rulers went down on their faces before the Lamb, having every one an instrument of music, and gold vessels full of perfumes, which are the prayers of the saints.",
+          "06125ad3d1d57585-01": "Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints.",
+          "41926a4aa3831714-01": "Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints."
+        },
+        "words": [
+          {
+            "original": "ἀμνός",
+            "transliteration": "am-nos",
+            "english": "lamb",
+            "strongs": "G0286",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And they sung a new song, saying, Thou art worthy to take the book, and to open the seals thereof: for thou wast slain, and hast redeemed us to God by thy blood out of every kindred, and tongue, and people, and nation;",
+          "9879dbb7aec41528-01": "They sang a new song, saying, “You are worthy to take the book, and to open its seals: for you were killed, and bought us for God with your blood, out of every tribe, language, people, and nation,",
+          "bba730b9171fcc22-01": "And their voices are sounding in a new song, saying, It is right for you to take the book and to make it open: for you were put to death and have made an offering to God of your blood for men of every tribe, and language, and people, and nation,",
+          "06125ad3d1d57585-01": "They sang a new song, saying, “You are worthy to take the book, and to open its seals: for you were killed, and bought us for God with your blood, out of every tribe, language, people, and nation,",
+          "41926a4aa3831714-01": "They sang a new song, saying, “You are worthy to take the book, and to open its seals: for you were killed, and bought us for God with your blood, out of every tribe, language, people, and nation,"
+        },
+        "words": [
+          {
+            "original": "αἷμα",
+            "transliteration": "hai-ma",
+            "english": "blood",
+            "strongs": "G0129",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "σφάζω",
+            "transliteration": "sphat-zo",
+            "english": "slay / slaughter",
+            "strongs": "G4969",
+            "parsing": "V-RPE-ns"
+          },
+          {
+            "original": "ἄξιος",
+            "transliteration": "ax-i-os",
+            "english": "worthy / deserving",
+            "strongs": "G0514",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And hast made us unto our God kings and priests: and we shall reign on the earth.",
+          "9879dbb7aec41528-01": "and made us kings and priests to our God, and we will reign on the earth.”",
+          "bba730b9171fcc22-01": "And have made them a kingdom and priests to our God, and they are ruling on the earth.",
+          "06125ad3d1d57585-01": "and made us kings and priests to our God, and we will reign on the earth.”",
+          "41926a4aa3831714-01": "and made us kings and priests to our God, and we will reign on the earth.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And I beheld, and I heard the voice of many angels round about the throne and the beasts and the elders: and the number of them was ten thousand times ten thousand, and thousands of thousands;",
+          "9879dbb7aec41528-01": "I saw, and I heard something like a voice of many angels around the throne, the living creatures, and the elders; and the number of them was ten thousands of ten thousands, and thousands of thousands;",
+          "bba730b9171fcc22-01": "And I saw, and there came to my ears the sound of a great number of angels round about the high seat and the beasts and the rulers; and the number of them was ten thousand times ten thousand, and thousands of thousands;",
+          "06125ad3d1d57585-01": "I saw, and I heard something like a voice of many angels around the throne, the living creatures, and the elders; and the number of them was ten thousands of ten thousands, and thousands of thousands;",
+          "41926a4aa3831714-01": "I saw, and I heard something like a voice of many angels around the throne, the living creatures, and the elders; and the number of them was ten thousands of ten thousands, and thousands of thousands;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Saying with a loud voice, Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing.",
+          "9879dbb7aec41528-01": "saying with a loud voice, “Worthy is the Lamb who has been killed to receive the power, wealth, wisdom, strength, honor, glory, and blessing!”",
+          "bba730b9171fcc22-01": "Saying with a great voice, It is right to give to the Lamb who was put to death, power and wealth and wisdom and strength and honour and glory and blessing.",
+          "06125ad3d1d57585-01": "saying with a loud voice, “Worthy is the Lamb who has been killed to receive the power, wealth, wisdom, strength, honor, glory, and blessing!”",
+          "41926a4aa3831714-01": "saying with a loud voice, “Worthy is the Lamb who has been killed to receive the power, wealth, wisdom, strength, honor, glory, and blessing!”"
+        },
+        "words": [
+          {
+            "original": "ἀμνός",
+            "transliteration": "am-nos",
+            "english": "lamb",
+            "strongs": "G0286",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "ἁμαρτία",
+            "transliteration": "ha-mar-ti-a",
+            "english": "sin / error",
+            "strongs": "G0266",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "σφάζω",
+            "transliteration": "sphat-zo",
+            "english": "slay / slaughter",
+            "strongs": "G4969",
+            "parsing": "V-RPE-ns"
+          },
+          {
+            "original": "ἄξιος",
+            "transliteration": "ax-i-os",
+            "english": "worthy / deserving",
+            "strongs": "G0514",
+            "parsing": "Adj-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And every creature which is in heaven, and on the earth, and under the earth, and such as are in the sea, and all that are in them, heard I saying, Blessing, and honour, and glory, and power, be unto him that sitteth upon the throne, and unto the Lamb for ever and ever.",
+          "9879dbb7aec41528-01": "I heard every created thing which is in heaven, on the earth, under the earth, on the sea, and everything in them, saying, “To him who sits on the throne, and to the Lamb be the blessing, the honor, the glory, and the dominion, forever and ever! Amen!”",
+          "bba730b9171fcc22-01": "And to my ears came the voice of everything in heaven and on earth and under the earth and in the sea, and of all things which are in them, saying, To him who is seated on the high seat, and to the Lamb, may blessing and honour and glory and power be given for ever and ever.",
+          "06125ad3d1d57585-01": "I heard every created thing which is in heaven, on the earth, under the earth, on the sea, and everything in them, saying, “To him who sits on the throne, and to the Lamb be the blessing, the honor, the glory, and the dominion, forever and ever! Amen!”",
+          "41926a4aa3831714-01": "I heard every created thing which is in heaven, on the earth, under the earth, on the sea, and everything in them, saying, “To him who sits on the throne, and to the Lamb be the blessing, the honor, the glory, and the dominion, forever and ever! Amen!”"
+        },
+        "words": [
+          {
+            "original": "ἀμνός",
+            "transliteration": "am-nos",
+            "english": "lamb",
+            "strongs": "G0286",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "ἁμαρτία",
+            "transliteration": "ha-mar-ti-a",
+            "english": "sin / error",
+            "strongs": "G0266",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And the four beasts said, Amen. And the four and twenty elders fell down and worshipped him that liveth for ever and ever.",
+          "9879dbb7aec41528-01": "The four living creatures said, “Amen!” Then the elders fell down and worshiped.",
+          "bba730b9171fcc22-01": "And the four beasts said, So be it. And the rulers went down on their faces and gave worship.",
+          "06125ad3d1d57585-01": "The four living creatures said, “Amen!” Then the elders fell down and worshiped.",
+          "41926a4aa3831714-01": "The four living creatures said, “Amen!” Then the elders fell down and worshiped."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      }
+    ]
   }
 };
 

@@ -1524,9 +1524,150 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
       { label: "Presence", value: "Ezekiel: Promised Return" },
       { label: "Presence", value: "JESUS: INCARNATION" },
       { label: "Presence", value: "CHURCH: DWELLING" },
-      { label: "Presence", value: "NEW JERUSALEM: ETERNAL" }
+      { label: "Presence", value: "NEW CREATION: FULLY DWELLING" }
     ],
-    reflectionQuestion: "How does the guarantee of this final home motivate my endurance today?"
+    reflectionQuestion: "How does the promise of God's permanent return give me hope during seasons of dryness?"
+  },
+  // --- Week 13: The Sacrificial & Substitution Thread ---
+  85: {
+    day: 85,
+    reference: "Genesis 22:1-19",
+    title: "The Binding of Isaac",
+    mainTruth: "God provides a substitute in place of the beloved son, foreshadowing the ultimate sacrifice.",
+    scribalStrategy: {
+      title: "The Provided Ram",
+      instructions: [
+        "Write 'YAHWEH-JIREH' (God Will Provide) in large, bold script.",
+        "Draw a ram silhouette caught in thickets in the right margin."
+      ]
+    },
+    thematicLedger: [
+      { label: "Substitution", value: "Isaac: Provided Ram" }
+    ],
+    reflectionQuestion: "Do I trust God with the things and people that are dearest to me?"
+  },
+  86: {
+    day: 86,
+    reference: "Exodus 12:1-28",
+    title: "The Passover Lamb",
+    mainTruth: "The blood of a spotless lamb saves the household from judgment, initiating the exodus.",
+    scribalStrategy: {
+      title: "Blood on the Doorposts",
+      instructions: [
+        "Trace three lines in red ink representing doorposts and lintel around the text.",
+        "Underline 'WHEN I SEE THE BLOOD, I WILL PASS OVER YOU' in bold red."
+      ]
+    },
+    thematicLedger: [
+      { label: "Substitution", value: "Isaac: Provided Ram" },
+      { label: "Substitution", value: "Passover: Blood Atonement" }
+    ],
+    reflectionQuestion: "How does the reality of judgment and deliverance shape my daily gratitude?"
+  },
+  87: {
+    day: 87,
+    reference: "Leviticus 16:1-34",
+    title: "The Day of Atonement",
+    mainTruth: "Blood cleanses the sanctuary, and the scapegoat carries the sins of the community into the wilderness.",
+    scribalStrategy: {
+      title: "The Scapegoat",
+      instructions: [
+        "Scribe 'SCAPEGOAT' in a stark, isolated uncial hand.",
+        "Draw a path leading out of the border representing the wilderness."
+      ]
+    },
+    thematicLedger: [
+      { label: "Substitution", value: "Isaac: Provided Ram" },
+      { label: "Substitution", value: "Passover: Blood Atonement" },
+      { label: "Substitution", value: "Yom Kippur: Scapegoat" }
+    ],
+    reflectionQuestion: "What burdens of guilt do I need to realize have been carried far away by my Substitute?"
+  },
+  88: {
+    day: 88,
+    reference: "Isaiah 53:1-12",
+    title: "The Suffering Servant",
+    mainTruth: "A prophetic portrait of a Servant who would bear our griefs and be pierced for our transgressions.",
+    scribalStrategy: {
+      title: "Pierced for Us",
+      instructions: [
+        "Scribe 'PIERCED FOR OUR TRANSGRESSIONS' in large, weeping blackletter.",
+        "Use crimson ink drops around the margins next to v. 5."
+      ]
+    },
+    thematicLedger: [
+      { label: "Substitution", value: "Isaac: Provided Ram" },
+      { label: "Substitution", value: "Passover: Blood Atonement" },
+      { label: "Substitution", value: "Yom Kippur: Scapegoat" },
+      { label: "Substitution", value: "Prophetic Servant: Bearing Sins" }
+    ],
+    reflectionQuestion: "How does Isaiah 53's detailed fulfillment in Jesus build my faith in scripture's inspiration?"
+  },
+  89: {
+    day: 89,
+    reference: "John 1:29-36",
+    title: "Behold the Lamb of God",
+    mainTruth: "John the Baptist declares Jesus as the ultimate lamb who takes away the sin of the world.",
+    scribalStrategy: {
+      title: "The Lamb of God",
+      instructions: [
+        "Box in John 1:29 'Behold the Lamb of God...'",
+        "Underline 'TAKES AWAY THE SIN OF THE WORLD' in gold."
+      ]
+    },
+    thematicLedger: [
+      { label: "Substitution", value: "Isaac: Provided Ram" },
+      { label: "Substitution", value: "Passover: Blood Atonement" },
+      { label: "Substitution", value: "Yom Kippur: Scapegoat" },
+      { label: "Substitution", value: "Prophetic Servant: Bearing Sins" },
+      { label: "Substitution", value: "Jesus: Lamb of God" }
+    ],
+    reflectionQuestion: "In what areas of my life am I still trying to carry the weight of my own sins?"
+  },
+  90: {
+    day: 90,
+    reference: "Hebrews 9:11-28",
+    title: "Eternal Redemption Secured",
+    mainTruth: "Christ enters the heavenly holy place with His own blood, securing eternal redemption once for all.",
+    scribalStrategy: {
+      title: "Once for All",
+      instructions: [
+        "Scribe 'ONCE FOR ALL' in large, definitive Roman capitals.",
+        "Underline v. 14 ('cleanse your conscience') in blue ink."
+      ]
+    },
+    thematicLedger: [
+      { label: "Substitution", value: "Isaac: Provided Ram" },
+      { label: "Substitution", value: "Passover: Blood Atonement" },
+      { label: "Substitution", value: "Yom Kippur: Scapegoat" },
+      { label: "Substitution", value: "Prophetic Servant: Bearing Sins" },
+      { label: "Substitution", value: "Jesus: Lamb of God" },
+      { label: "Substitution", value: "Hebrews: Eternal Cleansing" }
+    ],
+    reflectionQuestion: "Does my conscience feel fully cleansed by Christ's blood, or am I still haunted by past mistakes?"
+  },
+  91: {
+    day: 91,
+    reference: "Revelation 5:1-14",
+    title: "The Worthy Lamb",
+    mainTruth: "The Lamb slain in sacrifice is declared worthy of all worship, dominion, and glory in heaven.",
+    scribalStrategy: {
+      title: "The Worthy Lamb",
+      instructions: [
+        "Draw a brilliant scroll with seven seals next to the text.",
+        "Write 'WORTHY IS THE LAMB THAT WAS SLAIN' in huge gold lettering."
+      ]
+    },
+    thematicLedger: [
+      { label: "Substitution", value: "Isaac: Provided Ram" },
+      { label: "Substitution", value: "Passover: Blood Atonement" },
+      { label: "Substitution", value: "Yom Kippur: Scapegoat" },
+      { label: "Substitution", value: "Prophetic Servant: Bearing Sins" },
+      { label: "Substitution", value: "Jesus: Lamb of God" },
+      { label: "Substitution", value: "Hebrews: Eternal Cleansing" },
+      { label: "Substitution", value: "Lamb on the Throne: Glory" }
+    ],
+    reflectionQuestion: "Does my life reflect the worship due to the Lamb, or are other things sitting on my heart's throne?"
   }
 };
 
