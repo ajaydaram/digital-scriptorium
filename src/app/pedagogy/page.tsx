@@ -75,23 +75,106 @@ const PEDAGOGICAL_PATHS = [
     color: "text-purple-500",
     bg: "bg-purple-50/50",
     badge: "bg-purple-100/50 text-purple-700 border-purple-200/50"
+  },
+  {
+    title: "The Great Codex",
+    subtitle: "Focus: Canonical Completeness",
+    learn: "Read through the entire Bible chapter-by-chapter sequentially.",
+    duration: "1,189 days",
+    strategy: "Canonical Completeness",
+    discoveries: [
+      "Sequential reading from Gen 1 to Rev 22",
+      "Dynamic daily scribal prompts",
+      "Comprehensive structural mapping",
+      "Lifetime mastery curriculum"
+    ],
+    example: "Scribe Genesis 1 on Day 1, following standard scribal hand models.",
+    icon: BookOpen,
+    color: "text-amber-500",
+    bg: "bg-amber-50/50",
+    badge: "bg-amber-100/50 text-amber-700 border-amber-200/50"
   }
 ];
 
 const EDUCATIONAL_PRINCIPLES = [
-  { title: "Scaffolded Learning", description: "Progressive complexity building from reading to mastery.", icon: Brain },
-  { title: "Multiple Intelligences", description: "Accommodating various learning styles through visual and textual engagement.", icon: Zap },
-  { title: "Spaced Repetition", description: "Long-term retention optimized through systematic review.", icon: History },
-  { title: "Social Learning", description: "Community-based knowledge construction through shared annotations.", icon: Users },
-  { title: "Metacognitive Development", description: "Teaching scholars how to learn and reflect on their progress.", icon: GraduationCap }
+  { 
+    title: "Scaffolded Learning", 
+    description: "Progressive complexity building from reading to mastery.", 
+    icon: Brain,
+    color: "text-indigo-400",
+    iconBg: "bg-indigo-500/20",
+    cardBg: "bg-indigo-500/5 border-indigo-500/10 hover:bg-indigo-500/10 hover:border-indigo-500/20"
+  },
+  { 
+    title: "Multiple Intelligences", 
+    description: "Accommodating various learning styles through visual and textual engagement.", 
+    icon: Zap,
+    color: "text-amber-400",
+    iconBg: "bg-amber-500/20",
+    cardBg: "bg-amber-500/5 border-amber-500/10 hover:bg-amber-500/10 hover:border-amber-500/20"
+  },
+  { 
+    title: "Spaced Repetition", 
+    description: "Long-term retention optimized through systematic review.", 
+    icon: History,
+    color: "text-sky-400",
+    iconBg: "bg-sky-500/20",
+    cardBg: "bg-sky-500/5 border-sky-500/10 hover:bg-sky-500/10 hover:border-sky-500/20"
+  },
+  { 
+    title: "Social Learning", 
+    description: "Community-based knowledge construction through shared annotations.", 
+    icon: Users,
+    color: "text-violet-400",
+    iconBg: "bg-violet-500/20",
+    cardBg: "bg-violet-500/5 border-violet-500/10 hover:bg-violet-500/10 hover:border-violet-500/20"
+  },
+  { 
+    title: "Metacognitive Development", 
+    description: "Teaching scholars how to learn and reflect on their progress.", 
+    icon: GraduationCap,
+    color: "text-teal-400",
+    iconBg: "bg-teal-500/20",
+    cardBg: "bg-teal-500/5 border-teal-500/10 hover:bg-teal-500/10 hover:border-teal-500/20"
+  }
 ];
 
 const RESEARCH_FOUNDATIONS = [
-  { title: "Genre Awareness", detail: "Critical for accurate interpretation of diverse biblical literature.", icon: Library },
-  { title: "Historical Context", detail: "Essential for understanding the author's original meaning.", icon: History },
-  { title: "Canonical Reading", detail: "The principle of Scripture interpreting Scripture.", icon: BookOpen },
-  { title: "Community Hermeneutics", detail: "Collective interpretive wisdom across the global Scriptorium.", icon: Users },
-  { title: "Formative Reading", detail: "Scripture shaping life and character, not just transferring information.", icon: ScrollText }
+  { 
+    title: "Genre Awareness", 
+    detail: "Critical for accurate interpretation of diverse biblical literature.", 
+    icon: Library,
+    color: "text-purple-600",
+    bg: "bg-purple-50/50 hover:bg-purple-100/30 border-purple-100/80 shadow-purple-500/5"
+  },
+  { 
+    title: "Historical Context", 
+    detail: "Essential for understanding the author's original meaning.", 
+    icon: History,
+    color: "text-blue-600",
+    bg: "bg-blue-50/50 hover:bg-blue-100/30 border-blue-100/80 shadow-blue-500/5"
+  },
+  { 
+    title: "Canonical Reading", 
+    detail: "The principle of Scripture interpreting Scripture.", 
+    icon: BookOpen,
+    color: "text-emerald-600",
+    bg: "bg-emerald-50/50 hover:bg-emerald-100/30 border-emerald-100/80 shadow-emerald-500/5"
+  },
+  { 
+    title: "Community Hermeneutics", 
+    detail: "Collective interpretive wisdom across the global Scriptorium.", 
+    icon: Users,
+    color: "text-cyan-600",
+    bg: "bg-cyan-50/50 hover:bg-cyan-100/30 border-cyan-100/80 shadow-cyan-500/5"
+  },
+  { 
+    title: "Formative Reading", 
+    detail: "Scripture shaping life and character, not just transferring information.", 
+    icon: ScrollText,
+    color: "text-rose-600",
+    bg: "bg-rose-50/50 hover:bg-rose-100/30 border-rose-100/80 shadow-rose-500/5"
+  }
 ];
 
 export default function PedagogyPage() {
@@ -134,13 +217,13 @@ export default function PedagogyPage() {
               
               <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
                 {RESEARCH_FOUNDATIONS.map((item) => (
-                  <div key={item.title} className="flex gap-5 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-lg transition-all">
-                    <div className="p-3 bg-white rounded-xl shadow-sm h-fit">
-                      <item.icon className="h-6 w-6 text-primary" />
+                  <div key={item.title} className={cn("flex gap-5 p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-md", item.bg)}>
+                    <div className="p-3 bg-white rounded-xl shadow-sm h-fit shrink-0">
+                      <item.icon className={cn("h-6 w-6", item.color)} />
                     </div>
                     <div>
                       <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
-                      <p className="text-sm md:text-base text-slate-500 leading-relaxed">{item.detail}</p>
+                      <p className="text-sm md:text-base text-slate-600 leading-relaxed font-medium">{item.detail}</p>
                     </div>
                   </div>
                 ))}
@@ -162,12 +245,12 @@ export default function PedagogyPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {EDUCATIONAL_PRINCIPLES.map((principle) => (
-                <div key={principle.title} className="flex flex-col items-center text-center p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="p-4 bg-primary/20 rounded-2xl mb-6">
-                    <principle.icon className="h-8 w-8 text-primary" />
+                <div key={principle.title} className={cn("flex flex-col items-center text-center p-8 rounded-3xl border transition-all duration-300 hover:scale-[1.03]", principle.cardBg)}>
+                  <div className={cn("p-4 rounded-2xl mb-6", principle.iconBg)}>
+                    <principle.icon className={cn("h-8 w-8", principle.color)} />
                   </div>
                   <h4 className="text-lg font-bold mb-3">{principle.title}</h4>
-                  <p className="text-sm text-slate-400 leading-relaxed">{principle.description}</p>
+                  <p className="text-sm text-slate-300 leading-relaxed">{principle.description}</p>
                 </div>
               ))}
             </div>
@@ -181,13 +264,13 @@ export default function PedagogyPage() {
               <Badge variant="outline" className="mb-4 px-4 py-1.5 border-primary/20 text-primary font-bold uppercase tracking-widest text-xs">
                 SYSTEMATIC APPROACH
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-slate-900 mb-4">The Three Scriptorium Paths</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-slate-900 mb-4">The Four Scriptorium Paths</h2>
               <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-body">
                 Each path builds specialized interpretive skills, aligning your study logic with the Bible's inherent architecture.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {PEDAGOGICAL_PATHS.map((path) => (
                 <Card key={path.title} className={cn("border-slate-100 flex flex-col hover:shadow-2xl transition-all duration-500 rounded-[2.5rem]", path.bg)}>
                   <CardHeader className="p-10">
@@ -202,7 +285,7 @@ export default function PedagogyPage() {
                     <CardTitle className="text-2xl font-headline font-bold text-slate-900">{path.title}</CardTitle>
                     <p className="text-sm font-bold text-slate-600 uppercase tracking-widest pt-2">{path.subtitle}</p>
                   </CardHeader>
-                  <CardContent className="flex-1 px-10 pb-10 space-y-8">
+                  <CardContent className="flex-1 px-10 pb-10 space-y-8 flex flex-col">
                     <div className="space-y-3">
                       <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Scribe's Strategy</p>
                       <p className="text-base md:text-lg text-slate-700 font-bold leading-tight">{path.strategy}</p>

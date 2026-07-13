@@ -730,6 +730,129 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
       ]
     },
     reflectionQuestion: "When was the last time the reading of scripture brought me to a place of deep response?"
+  },
+  // --- Week 9: The Life and Ministry of Jesus ---
+  57: {
+    day: 57,
+    reference: "Luke 2:1-20",
+    title: "The Birth of the King",
+    historicalSnapshot: {
+      ref: "Luke 2:11",
+      text: "For unto you is born this day in the city of David a Saviour, which is Christ the Lord."
+    },
+    scribalStrategy: {
+      title: "The Manger Sketch",
+      instructions: [
+        "Draw a simple manger in the bottom margin.",
+        "Highlight 'GLORY TO GOD' in gold ink.",
+        "Transcribe v. 10-14 using a grand Gothic script."
+      ]
+    },
+    reflectionQuestion: "Does the good news of Jesus' birth still bring 'great joy' to my daily routine?"
+  },
+  58: {
+    day: 58,
+    reference: "Matthew 3:13-17",
+    title: "The Baptism of Jesus",
+    historicalSnapshot: {
+      ref: "Matthew 3:17",
+      text: "And lo a voice from heaven, saying, This is my beloved Son, in whom I am well pleased."
+    },
+    scribalStrategy: {
+      title: "The Descending Dove",
+      instructions: [
+        "Draw a descending dove icon next to v. 16.",
+        "Write the Father's voice (v. 17) in bold, heavy capital letters."
+      ]
+    },
+    reflectionQuestion: "How does knowing God's pleasure in Christ extend to me through my union with Him?"
+  },
+  59: {
+    day: 59,
+    reference: "Matthew 4:1-11",
+    title: "The Temptation in the Wilderness",
+    historicalSnapshot: {
+      ref: "Matthew 4:4",
+      text: "But he answered and said, It is written, Man shall not live by bread alone..."
+    },
+    scribalStrategy: {
+      title: "It Is Written",
+      instructions: [
+        "Write 'IT IS WRITTEN' three times in the left margin in red ink.",
+        "Box in Jesus' scriptural defenses (v. 4, 7, 10)."
+      ]
+    },
+    reflectionQuestion: "Am I storing up Scripture in my heart as my primary weapon against temptation?"
+  },
+  60: {
+    day: 60,
+    reference: "John 2:1-11",
+    title: "The Wedding at Cana",
+    historicalSnapshot: {
+      ref: "John 2:11",
+      text: "This beginning of miracles did Jesus in Cana of Galilee, and manifested forth his glory..."
+    },
+    scribalStrategy: {
+      title: "Water to Wine",
+      instructions: [
+        "Draw six stone water jars in the margins.",
+        "Write 'GLORY MANIFESTED' in vibrant purple script."
+      ]
+    },
+    reflectionQuestion: "Where do I need to trust Jesus to turn my 'empty jars' into overflowing abundance?"
+  },
+  61: {
+    day: 61,
+    reference: "Mark 4:35-41",
+    title: "Calming the Storm",
+    historicalSnapshot: {
+      ref: "Mark 4:39",
+      text: "And he arose, and rebuked the wind, and said unto the sea, Peace, be still."
+    },
+    scribalStrategy: {
+      title: "Peace Be Still",
+      instructions: [
+        "Write PEACE, BE STILL in large, calming blue letters across the page.",
+        "Draw wave-like flourishes that flatten out at the base of the text."
+      ]
+    },
+    reflectionQuestion: "What 'storm' in my life is currently tempting me to ask, 'Teacher, do you not care that we are perishing?'"
+  },
+  62: {
+    day: 62,
+    reference: "Matthew 27:32-54",
+    title: "The Crucifixion of Christ",
+    historicalSnapshot: {
+      ref: "Matthew 27:46",
+      text: "Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me?"
+    },
+    scribalStrategy: {
+      title: "The Cross and the Veil",
+      instructions: [
+        "Draw a torn veil down the center-right of the margin.",
+        "Write Jesus' cry (v. 46) in a jagged, distressed hand.",
+        "Leave the borders stark black."
+      ]
+    },
+    reflectionQuestion: "What does the tearing of the veil tell me about my direct access to God today?"
+  },
+  63: {
+    day: 63,
+    reference: "Luke 24:1-12",
+    title: "The Resurrection of Christ",
+    historicalSnapshot: {
+      ref: "Luke 24:6",
+      text: "He is not here, but is risen: remember how he spake unto you..."
+    },
+    scribalStrategy: {
+      title: "The Empty Tomb",
+      instructions: [
+        "Write HE IS NOT HERE, BUT IS RISEN in gold leaf lettering.",
+        "Draw an open circular tomb in the margin.",
+        "Add a banner of victory at the top."
+      ]
+    },
+    reflectionQuestion: "How does the reality of the resurrection change the way I look at my fears, trials, and death?"
   }
 };
 
