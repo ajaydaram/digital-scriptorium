@@ -1664,10 +1664,150 @@ export const THEMATIC_PLAN: Record<number, ReadingPlanDay> = {
       { label: "Substitution", value: "Yom Kippur: Scapegoat" },
       { label: "Substitution", value: "Prophetic Servant: Bearing Sins" },
       { label: "Substitution", value: "Jesus: Lamb of God" },
-      { label: "Substitution", value: "Hebrews: Eternal Cleansing" },
-      { label: "Substitution", value: "Lamb on the Throne: Glory" }
+      { label: "Substitution", value: "Hebrews: Eternal Cleansing" }
     ],
-    reflectionQuestion: "Does my life reflect the worship due to the Lamb, or are other things sitting on my heart's throne?"
+    reflectionQuestion: "How does the Lamb's worthiness in heaven comfort me in my current suffering?"
+  },
+  // --- Week 14: The Exodus & Deliverance Thread ---
+  92: {
+    day: 92,
+    reference: "Exodus 14:1-31",
+    title: "Crossing the Red Sea",
+    mainTruth: "God opens a path through judgment waters, delivering His people and destroying their oppressors.",
+    scribalStrategy: {
+      title: "The Parted Waters",
+      instructions: [
+        "Draw two high walls of water on the left and right margins.",
+        "Underline 'STAND STILL, AND SEE THE SALVATION OF THE LORD' in gold."
+      ]
+    },
+    thematicLedger: [
+      { label: "Deliverance", value: "Red Sea: Path Opened" }
+    ],
+    reflectionQuestion: "Am I trying to fight in my own strength, or can I stand still and trust God to deliver me?"
+  },
+  93: {
+    day: 93,
+    reference: "Psalm 136:1-26",
+    title: "The Great Hallel",
+    mainTruth: "Recounting Israel's deliverance step-by-step, celebrating that His mercy endures forever.",
+    scribalStrategy: {
+      title: "His Mercy Endures",
+      instructions: [
+        "Write 'FOR HIS MERCY ENDURETH FOREVER' in alternating red and blue lines.",
+        "Highlight the Red Sea deliverance verses (v. 13-15) with an elegant golden border."
+      ]
+    },
+    thematicLedger: [
+      { label: "Deliverance", value: "Red Sea: Path Opened" },
+      { label: "Deliverance", value: "Great Hallel: Recounted Mercy" }
+    ],
+    reflectionQuestion: "What specific milestones of deliverance in my own past should I thank God for today?"
+  },
+  94: {
+    day: 94,
+    reference: "Isaiah 43:1-21",
+    title: "A New Exodus",
+    mainTruth: "God promises a new, greater exodus, making a way in the wilderness and rivers in the desert.",
+    scribalStrategy: {
+      title: "Desert Rivers",
+      instructions: [
+        "Draw a dry desert sand background in pale ink, with a flowing blue stream cutting through it.",
+        "Scribe 'BEHOLD, I WILL DO A NEW THING' in bold blackletter."
+      ]
+    },
+    thematicLedger: [
+      { label: "Deliverance", value: "Red Sea: Path Opened" },
+      { label: "Deliverance", value: "Great Hallel: Recounted Mercy" },
+      { label: "Deliverance", value: "Isaiah: Promised New Exodus" }
+    ],
+    reflectionQuestion: "Am I dwelling on the 'former things', or am I looking for the new work God is doing in my life?"
+  },
+  95: {
+    day: 95,
+    reference: "Luke 9:28-36",
+    title: "The Transfiguration",
+    mainTruth: "On the mount, Moses and Elijah discuss Jesus' upcoming 'departure' (exodos) in Jerusalem.",
+    scribalStrategy: {
+      title: "The Mount of Transfiguration",
+      instructions: [
+        "Underline 'HIS DEPARTURE' (Greek: Exodos) in bright purple.",
+        "Draw a white halo/light burst effect behind the central text block."
+      ]
+    },
+    thematicLedger: [
+      { label: "Deliverance", value: "Red Sea: Path Opened" },
+      { label: "Deliverance", value: "Great Hallel: Recounted Mercy" },
+      { label: "Deliverance", value: "Isaiah: Promised New Exodus" },
+      { label: "Deliverance", value: "Jesus: Planned Exodos" }
+    ],
+    reflectionQuestion: "How does seeing Jesus' death as a planned, triumphant 'exodus' change how I view the cross?"
+  },
+  96: {
+    day: 96,
+    reference: "Romans 6:1-14",
+    title: "Dead to Sin, Alive to God",
+    mainTruth: "Baptism is our personal Red Sea, where we are buried with Christ and raised to walk in newness of life.",
+    scribalStrategy: {
+      title: "Spiritual Red Sea",
+      instructions: [
+        "Scribe 'ALIVE UNTO GOD' in large, triumphant Roman script.",
+        "Use a blue ink wash to symbolize immersion and cleansing next to v. 4."
+      ]
+    },
+    thematicLedger: [
+      { label: "Deliverance", value: "Red Sea: Path Opened" },
+      { label: "Deliverance", value: "Great Hallel: Recounted Mercy" },
+      { label: "Deliverance", value: "Isaiah: Promised New Exodus" },
+      { label: "Deliverance", value: "Jesus: Planned Exodos" },
+      { label: "Deliverance", value: "Romans: Spiritual Baptism" }
+    ],
+    reflectionQuestion: "Am I living as someone who has crossed the sea and is dead to sin, or am I tempted to return to Egypt?"
+  },
+  97: {
+    day: 97,
+    reference: "Revelation 15:1-8",
+    title: "The Song of Moses and the Lamb",
+    mainTruth: "Victorious believers stand on the sea of glass and sing the song of deliverance.",
+    scribalStrategy: {
+      title: "The Sea of Glass",
+      instructions: [
+        "Draw a glassy blue and gold background representing the crystal sea.",
+        "Write 'GREAT AND MARVELOUS ARE THY WORKS' in large celebratory letters."
+      ]
+    },
+    thematicLedger: [
+      { label: "Deliverance", value: "Red Sea: Path Opened" },
+      { label: "Deliverance", value: "Great Hallel: Recounted Mercy" },
+      { label: "Deliverance", value: "Isaiah: Promised New Exodus" },
+      { label: "Deliverance", value: "Jesus: Planned Exodos" },
+      { label: "Deliverance", value: "Romans: Spiritual Baptism" },
+      { label: "Deliverance", value: "Revelation: Heavenly Song" }
+    ],
+    reflectionQuestion: "Does my heart sing the song of deliverance now, anticipating the final victory?"
+  },
+  98: {
+    day: 98,
+    reference: "Joshua 3:1-17",
+    title: "Crossing the Jordan",
+    mainTruth: "The waters of the Jordan part as the Ark of the Covenant enters, leading Israel into the Promised Land.",
+    scribalStrategy: {
+      title: "Jordan Crossed",
+      instructions: [
+        "Draw twelve stones stacked in the center margin.",
+        "Write 'THE ARK OF THE COVENANT PASSED OVER' in bold script."
+      ]
+    },
+    thematicLedger: [
+      { label: "Deliverance", value: "Red Sea: Path Opened" },
+      { label: "Deliverance", value: "Great Hallel: Recounted Mercy" },
+      { label: "Deliverance", value: "Isaiah: Promised New Exodus" },
+      { label: "Deliverance", value: "Jesus: Planned Exodos" },
+      { label: "Deliverance", value: "Romans: Spiritual Baptism" },
+      { label: "Deliverance", value: "Revelation: Heavenly Song" },
+      { label: "Deliverance", value: "Joshua: Jordan Crossed (Inheritance)" }
+    ],
+    reflectionQuestion: "Am I stepping out in faith when God calls me to cross into new seasons or assignments?"
   }
 };
 
