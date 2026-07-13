@@ -853,6 +853,126 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
       ]
     },
     reflectionQuestion: "How does the reality of the resurrection change the way I look at my fears, trials, and death?"
+  },
+  // --- Week 10: The Early Church and Paul's Journeys ---
+  64: {
+    day: 64,
+    reference: "Acts 2:1-41",
+    title: "Pentecost and the Spirit's Fire",
+    historicalSnapshot: {
+      ref: "Acts 2:4",
+      text: "And they were all filled with the Holy Ghost, and began to speak with other tongues..."
+    },
+    scribalStrategy: {
+      title: "The Tongues of Fire",
+      instructions: [
+        "Sketch small flame outlines over the primary paragraph headers.",
+        "Highlight 'REPENT AND BE BAPTIZED' in deep orange ink."
+      ]
+    },
+    reflectionQuestion: "Am I actively relying on the empowerment of the Holy Spirit to witness to those around me?"
+  },
+  65: {
+    day: 65,
+    reference: "Acts 9:1-22",
+    title: "The Road to Damascus",
+    historicalSnapshot: {
+      ref: "Acts 9:3",
+      text: "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven..."
+    },
+    scribalStrategy: {
+      title: "The Heavenly Light",
+      instructions: [
+        "Draw a golden burst of light in the top-left margin.",
+        "Transcribe Saul's response (v. 6) using an architectural blockhand."
+      ]
+    },
+    reflectionQuestion: "How does the radical transformation of Saul encourage me to pray for 'impossible' people?"
+  },
+  66: {
+    day: 66,
+    reference: "Acts 10:1-48",
+    title: "The Sheet from Heaven",
+    historicalSnapshot: {
+      ref: "Acts 10:34",
+      text: "Then Peter opened his mouth, and said, Of a truth I perceive that God is no respecter of persons..."
+    },
+    scribalStrategy: {
+      title: "The Descending Sheet",
+      instructions: [
+        "Draw a descending sheet/cloth outline in the margin.",
+        "Underline key declarations of inclusion or equality in red ink."
+      ]
+    },
+    reflectionQuestion: "Are there boundaries or biases in my heart that restrict the reach of God's grace?"
+  },
+  67: {
+    day: 67,
+    reference: "Acts 16:6-40",
+    title: "Songs in the Prison",
+    historicalSnapshot: {
+      ref: "Acts 16:25",
+      text: "And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them."
+    },
+    scribalStrategy: {
+      title: "Songs in the Dark",
+      instructions: [
+        "Draw music notes overlapping broken chain links next to v. 25.",
+        "Use a dark, heavy border that breaks open at the bottom of the page."
+      ]
+    },
+    reflectionQuestion: "Can I sing praises to God in my 'midnight' moments of trial or imprisonment?"
+  },
+  68: {
+    day: 68,
+    reference: "Galatians 1:1-24",
+    title: "No Other Gospel",
+    historicalSnapshot: {
+      ref: "Galatians 1:8",
+      text: "But though we, or an angel from heaven, preach any other gospel unto you... let him be accursed."
+    },
+    scribalStrategy: {
+      title: "The Accursed Warning",
+      instructions: [
+        "Scribe 'NO OTHER GOSPEL' in large, stark blackletter script.",
+        "Underline v. 10 ('Am I now seeking the approval of man, or of God?') in bold blue."
+      ]
+    },
+    reflectionQuestion: "Do I seek human approval or the approval of God when sharing the truth of the Gospel?"
+  },
+  69: {
+    day: 69,
+    reference: "Acts 17:16-34",
+    title: "The Unknown God",
+    historicalSnapshot: {
+      ref: "Acts 17:23",
+      text: "For as I passed by... I found an altar with this inscription, TO THE UNKNOWN GOD."
+    },
+    scribalStrategy: {
+      title: "The Altar of Athens",
+      instructions: [
+        "Draw a stone altar outline with the inscription 'TO THE UNKNOWN GOD' in Greek.",
+        "Transcribe v. 28 ('For in him we live, and move, and have our being') in a refined cursive script."
+      ]
+    },
+    reflectionQuestion: "How can I build bridges from my culture's 'altars' to the truth of the Creator God?"
+  },
+  70: {
+    day: 70,
+    reference: "Acts 28:16-31",
+    title: "Unhindered Witness in Rome",
+    historicalSnapshot: {
+      ref: "Acts 28:31",
+      text: "Preaching the kingdom of God... with all confidence, no man forbidding him."
+    },
+    scribalStrategy: {
+      title: "Unhindered Rome",
+      instructions: [
+        "Scribe 'UNHINDERED' (Greek: Akolytos) in huge gold letters at the foot of the page.",
+        "Draw a chain link that transitions into a banner of victory."
+      ]
+    },
+    reflectionQuestion: "Is my witness for the kingdom of God active and 'unhindered' by my current circumstances?"
   }
 };
 

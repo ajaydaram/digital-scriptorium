@@ -25599,6 +25599,7289 @@ export const STEPBIBLE_DB: Record<string, StepBiblePassage> = {
         ]
       }
     ]
+  },
+  "Acts 2:1-41": {
+    "reference": "Acts 2:1-41",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the day of Pentecost was fully come, they were all with one accord in one place.",
+          "9879dbb7aec41528-01": "Now when the day of Pentecost had come, they were all with one accord in one place.",
+          "bba730b9171fcc22-01": "And when the day of Pentecost was come, they were all together in one place.",
+          "06125ad3d1d57585-01": "Now when the day of Pentecost had come, they were all with one accord in one place.",
+          "41926a4aa3831714-01": "Now when the day of Pentecost had come, they were all with one accord in one place."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And suddenly there came a sound from heaven as of a rushing mighty wind, and it filled all the house where they were sitting.",
+          "9879dbb7aec41528-01": "Suddenly there came from the sky a sound like the rushing of a mighty wind, and it filled all the house where they were sitting.",
+          "bba730b9171fcc22-01": "And suddenly there came from heaven a sound like the rushing of a violent wind, and all the house where they were was full of it.",
+          "06125ad3d1d57585-01": "Suddenly there came from the sky a sound like the rushing of a mighty wind, and it filled all the house where they were sitting.",
+          "41926a4aa3831714-01": "Suddenly there came from the sky a sound like the rushing of a mighty wind, and it filled all the house where they were sitting."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And there appeared unto them cloven tongues like as of fire, and it sat upon each of them.",
+          "9879dbb7aec41528-01": "Tongues like fire appeared and were distributed to them, and one sat on each of them.",
+          "bba730b9171fcc22-01": "And they saw tongues, like flames of fire, coming to rest on every one of them.",
+          "06125ad3d1d57585-01": "Tongues like fire appeared and were distributed to them, and one sat on each of them.",
+          "41926a4aa3831714-01": "Tongues like fire appeared and were distributed to them, and one sat on each of them."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And they were all filled with the Holy Ghost, and began to speak with other tongues, as the Spirit gave them utterance.",
+          "9879dbb7aec41528-01": "They were all filled with the Holy Spirit, and began to speak with other languages, as the Spirit gave them the ability to speak.",
+          "bba730b9171fcc22-01": "And they were all full of the Holy Spirit, and were talking in different languages, as the Spirit gave them power.",
+          "06125ad3d1d57585-01": "They were all filled with the Holy Spirit, and began to speak with other languages, as the Spirit gave them the ability to speak.",
+          "41926a4aa3831714-01": "They were all filled with the Holy Spirit, and began to speak with other languages, as the Spirit gave them the ability to speak."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And there were dwelling at Jerusalem Jews, devout men, out of every nation under heaven.",
+          "9879dbb7aec41528-01": "Now there were dwelling in Jerusalem Jews, devout men, from every nation under the sky.",
+          "bba730b9171fcc22-01": "Now there were living at Jerusalem, Jews, God-fearing men, from every nation under heaven.",
+          "06125ad3d1d57585-01": "Now there were dwelling in Jerusalem Jews, devout men, from every nation under the sky.",
+          "41926a4aa3831714-01": "Now there were dwelling in Jerusalem Jews, devout men, from every nation under the sky."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Now when this was noised abroad, the multitude came together, and were confounded, because that every man heard them speak in his own language.",
+          "9879dbb7aec41528-01": "When this sound was heard, the multitude came together, and were bewildered, because everyone heard them speaking in his own language.",
+          "bba730b9171fcc22-01": "And when this sound came to their ears, they all came together, and were greatly surprised because every man was hearing the words of the disciples in his special language.",
+          "06125ad3d1d57585-01": "When this sound was heard, the multitude came together, and were bewildered, because everyone heard them speaking in his own language.",
+          "41926a4aa3831714-01": "When this sound was heard, the multitude came together, and were bewildered, because everyone heard them speaking in his own language."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And they were all amazed and marvelled, saying one to another, Behold, are not all these which speak Galilaeans?",
+          "9879dbb7aec41528-01": "They were all amazed and marveled, saying to one another, “Behold, aren’t all these who speak Galileans?",
+          "bba730b9171fcc22-01": "And they were full of wonder and said, Are not all these men Galilaeans?",
+          "06125ad3d1d57585-01": "They were all amazed and marveled, saying to one another, “Behold, aren’t all these who speak Galileans?",
+          "41926a4aa3831714-01": "They were all amazed and marveled, saying to one another, “Behold, aren’t all these who speak Galileans?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And how hear we every man in our own tongue, wherein we were born?",
+          "9879dbb7aec41528-01": "How do we hear, everyone in our own native language?",
+          "bba730b9171fcc22-01": "And how is it that every one of us is hearing their words in the language which was ours from our birth?",
+          "06125ad3d1d57585-01": "How do we hear, everyone in our own native language?",
+          "41926a4aa3831714-01": "How do we hear, everyone in our own native language?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Parthians, and Medes, and Elamites, and the dwellers in Mesopotamia, and in Judaea, and Cappadocia, in Pontus, and Asia,",
+          "9879dbb7aec41528-01": "Parthians, Medes, Elamites, and people from Mesopotamia, Judea, Cappadocia, Pontus, Asia,",
+          "bba730b9171fcc22-01": "Men of Parthia, Media, and Elam, and those living in Mesopotamia, in Judaea and Cappadocia, in Pontus and Asia,",
+          "06125ad3d1d57585-01": "Parthians, Medes, Elamites, and people from Mesopotamia, Judea, Cappadocia, Pontus, Asia,",
+          "41926a4aa3831714-01": "Parthians, Medes, Elamites, and people from Mesopotamia, Judea, Cappadocia, Pontus, Asia,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "Phrygia, and Pamphylia, in Egypt, and in the parts of Libya about Cyrene, and strangers of Rome, Jews and proselytes,",
+          "9879dbb7aec41528-01": "Phrygia, Pamphylia, Egypt, the parts of Libya around Cyrene, visitors from Rome, both Jews and proselytes,",
+          "bba730b9171fcc22-01": "In Phrygia and Pamphylia, in Egypt and the parts of Libya about Cyrene, and those who have come from Rome, Jews by birth and others who have become Jews,",
+          "06125ad3d1d57585-01": "Phrygia, Pamphylia, Egypt, the parts of Libya around Cyrene, visitors from Rome, both Jews and proselytes,",
+          "41926a4aa3831714-01": "Phrygia, Pamphylia, Egypt, the parts of Libya around Cyrene, visitors from Rome, both Jews and proselytes,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Cretes and Arabians, we do hear them speak in our tongues the wonderful works of God.",
+          "9879dbb7aec41528-01": "Cretans and Arabians: we hear them speaking in our languages the mighty works of God!”",
+          "bba730b9171fcc22-01": "Men of Crete and Arabia, to all of us they are talking in our different languages, of the great works of God.",
+          "06125ad3d1d57585-01": "Cretans and Arabians: we hear them speaking in our languages the mighty works of God!”",
+          "41926a4aa3831714-01": "Cretans and Arabians: we hear them speaking in our languages the mighty works of God!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And they were all amazed, and were in doubt, saying one to another, What meaneth this?",
+          "9879dbb7aec41528-01": "They were all amazed, and were perplexed, saying to one another, “What does this mean?”",
+          "bba730b9171fcc22-01": "And they were all surprised and in doubt saying to one another, What is the reason of this?",
+          "06125ad3d1d57585-01": "They were all amazed, and were perplexed, saying to one another, “What does this mean?”",
+          "41926a4aa3831714-01": "They were all amazed, and were perplexed, saying to one another, “What does this mean?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Others mocking said, These men are full of new wine.",
+          "9879dbb7aec41528-01": "Others, mocking, said, “They are filled with new wine.”",
+          "bba730b9171fcc22-01": "But others, making sport of them, said, They are full of new wine.",
+          "06125ad3d1d57585-01": "Others, mocking, said, “They are filled with new wine.”",
+          "41926a4aa3831714-01": "Others, mocking, said, “They are filled with new wine.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "But Peter, standing up with the eleven, lifted up his voice, and said unto them, Ye men of Judaea, and all ye that dwell at Jerusalem, be this known unto you, and hearken to my words:",
+          "9879dbb7aec41528-01": "But Peter, standing up with the eleven, lifted up his voice, and spoke out to them, “You men of Judea, and all you who dwell at Jerusalem, let this be known to you, and listen to my words.",
+          "bba730b9171fcc22-01": "But Peter, getting up, with the eleven, said in a loud voice, O men of Judaea, and all you who are living in Jerusalem, take note of this and give ear to my words.",
+          "06125ad3d1d57585-01": "But Peter, standing up with the eleven, lifted up his voice, and spoke out to them, “You men of Judea, and all you who dwell at Jerusalem, let this be known to you, and listen to my words.",
+          "41926a4aa3831714-01": "But Peter, standing up with the eleven, lifted up his voice, and spoke out to them, “You men of Judea, and all you who dwell at Jerusalem, let this be known to you, and listen to my words."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "For these are not drunken, as ye suppose, seeing it is but  the third hour of the day.",
+          "9879dbb7aec41528-01": "For these aren’t drunken, as you suppose, seeing it is only the third hour of the day.",
+          "bba730b9171fcc22-01": "For these men are not overcome with wine, as it seems to you, for it is only the third hour of the day;",
+          "06125ad3d1d57585-01": "For these aren’t drunken, as you suppose, seeing it is only the third hour of the day.",
+          "41926a4aa3831714-01": "For these aren’t drunken, as you suppose, seeing it is only the third hour of the day."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "But this is that which was spoken by the prophet Joel;",
+          "9879dbb7aec41528-01": "But this is what has been spoken through the prophet Joel:",
+          "bba730b9171fcc22-01": "But this is the thing which was said by the prophet Joel;",
+          "06125ad3d1d57585-01": "But this is what has been spoken through the prophet Joel:",
+          "41926a4aa3831714-01": "But this is what has been spoken through the prophet Joel:"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And it shall come to pass in the last days, saith God, I will pour out of my Spirit upon all flesh: and your sons and your daughters shall prophesy, and your young men shall see visions, and your old men shall dream dreams:",
+          "9879dbb7aec41528-01": "‘It will be in the last days, says God, that I will pour out my Spirit on all flesh. Your sons and your daughters will prophesy. Your young men will see visions. Your old men will dream dreams.",
+          "bba730b9171fcc22-01": "And it will come about, in the last days, says God, that I will send out my Spirit on all flesh; and your sons and your daughters will be prophets, and your young men will see visions, and your old men will have dreams:",
+          "06125ad3d1d57585-01": "‘It will be in the last days, says God, that I will pour out my Spirit on all flesh. Your sons and your daughters will prophesy. Your young men will see visions. Your old men will dream dreams.",
+          "41926a4aa3831714-01": "‘It will be in the last days, says God, that I will pour out my Spirit on all flesh. Your sons and your daughters will prophesy. Your young men will see visions. Your old men will dream dreams."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And on my servants and on my handmaidens I will pour out in those days of my Spirit; and they shall prophesy:",
+          "9879dbb7aec41528-01": "Yes, and on my servants and on my handmaidens in those days, I will pour out my Spirit, and they will prophesy.",
+          "bba730b9171fcc22-01": "And on my men-servants and my women-servants I will send my Spirit, and they will be prophets.",
+          "06125ad3d1d57585-01": "Yes, and on my servants and on my handmaidens in those days, I will pour out my Spirit, and they will prophesy.",
+          "41926a4aa3831714-01": "Yes, and on my servants and on my handmaidens in those days, I will pour out my Spirit, and they will prophesy."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And I will shew wonders in heaven above, and signs in the earth beneath; blood, and fire, and vapour of smoke:",
+          "9879dbb7aec41528-01": "I will show wonders in the sky above, and signs on the earth beneath; blood, and fire, and billows of smoke.",
+          "bba730b9171fcc22-01": "And wonders will be seen in heaven, and signs on the earth, blood and fire and smoke:",
+          "06125ad3d1d57585-01": "I will show wonders in the sky above, and signs on the earth beneath; blood, and fire, and billows of smoke.",
+          "41926a4aa3831714-01": "I will show wonders in the sky above, and signs on the earth beneath; blood, and fire, and billows of smoke."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "The sun shall be turned into darkness, and the moon into blood, before that great and notable day of the Lord come:",
+          "9879dbb7aec41528-01": "The sun will be turned into darkness, and the moon into blood, before the great and glorious day of the Lord comes.",
+          "bba730b9171fcc22-01": "The sun will become dark and the moon will be turned to blood, before that great day of the Lord comes in glory:",
+          "06125ad3d1d57585-01": "The sun will be turned into darkness, and the moon into blood, before the great and glorious day of the Lord comes.",
+          "41926a4aa3831714-01": "The sun will be turned into darkness, and the moon into blood, before the great and glorious day of the Lord comes."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And it shall come to pass, that whosoever shall call on the name of the Lord shall be saved.",
+          "9879dbb7aec41528-01": "It will be that whoever will call on the name of the Lord will be saved.’",
+          "bba730b9171fcc22-01": "And whoever makes his prayer to the Lord will have salvation.",
+          "06125ad3d1d57585-01": "It will be that whoever will call on the name of the Lord will be saved.’",
+          "41926a4aa3831714-01": "It will be that whoever will call on the name of the Lord will be saved.’"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "Ye men of Israel, hear these words; Jesus of Nazareth, a man approved of God among you by miracles and wonders and signs, which God did by him in the midst of you, as ye yourselves also know:",
+          "9879dbb7aec41528-01": "“Men of Israel, hear these words! Jesus of Nazareth, a man approved by God to you by mighty works and wonders and signs which God did by him among you, even as you yourselves know,",
+          "bba730b9171fcc22-01": "Men of Israel, give ear to these words: Jesus of Nazareth, a man who had the approval of God, as was made clear to you by the great works and signs and wonders which God did by him among you, as you yourselves have knowledge,",
+          "06125ad3d1d57585-01": "“Men of Israel, hear these words! Jesus of Nazareth, a man approved by God to you by mighty works and wonders and signs which God did by him among you, even as you yourselves know,",
+          "41926a4aa3831714-01": "“Men of Israel, hear these words! Jesus of Nazareth, a man approved by God to you by mighty works and wonders and signs which God did by him among you, even as you yourselves know,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "Him, being delivered by the determinate counsel and foreknowledge of God, ye have taken, and by wicked hands have crucified and slain:",
+          "9879dbb7aec41528-01": "him, being delivered up by the determined counsel and foreknowledge of God, you have taken by the hand of lawless men, crucified and killed;",
+          "bba730b9171fcc22-01": "Him, when he was given up, by the decision and knowledge of God, you put to death on the cross, by the hands of evil men:",
+          "06125ad3d1d57585-01": "him, being delivered up by the determined counsel and foreknowledge of God, you have taken by the hand of lawless men, crucified and killed;",
+          "41926a4aa3831714-01": "him, being delivered up by the determined counsel and foreknowledge of God, you have taken by the hand of lawless men, crucified and killed;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "Whom God hath raised up, having loosed the pains of death: because it was not possible that he should be holden of it.",
+          "9879dbb7aec41528-01": "whom God raised up, having freed him from the agony of death, because it was not possible that he should be held by it.",
+          "bba730b9171fcc22-01": "But God gave him back to life, having made him free from the pains of death because it was not possible for him to be overcome by it.",
+          "06125ad3d1d57585-01": "whom God raised up, having freed him from the agony of death, because it was not possible that he should be held by it.",
+          "41926a4aa3831714-01": "whom God raised up, having freed him from the agony of death, because it was not possible that he should be held by it."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "For David speaketh concerning him, I foresaw the Lord always before my face, for he is on my right hand, that I should not be moved:",
+          "9879dbb7aec41528-01": "For David says concerning him, ‘I saw the Lord always before my face, For he is on my right hand, that I should not be moved.",
+          "bba730b9171fcc22-01": "For David said of him, I saw the Lord before my face at all times, for he is at my right hand, so that I may not be moved:",
+          "06125ad3d1d57585-01": "For David says concerning him, ‘I saw the Lord always before my face, For he is on my right hand, that I should not be moved.",
+          "41926a4aa3831714-01": "For David says concerning him, ‘I saw the Lord always before my face, For he is on my right hand, that I should not be moved."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore did my heart rejoice, and my tongue was glad; moreover also my flesh shall rest in hope:",
+          "9879dbb7aec41528-01": "Therefore my heart was glad, and my tongue rejoiced. Moreover my flesh also will dwell in hope;",
+          "bba730b9171fcc22-01": "And for this cause my heart was glad and my tongue full of joy, and my flesh will be resting in hope:",
+          "06125ad3d1d57585-01": "Therefore my heart was glad, and my tongue rejoiced. Moreover my flesh also will dwell in hope;",
+          "41926a4aa3831714-01": "Therefore my heart was glad, and my tongue rejoiced. Moreover my flesh also will dwell in hope;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "Because thou wilt not leave my soul in hell, neither wilt thou suffer thine Holy One to see corruption.",
+          "9879dbb7aec41528-01": "because you will not leave my soul in Hades, neither will you allow your Holy One to see decay.",
+          "bba730b9171fcc22-01": "For you will not let my soul be in hell and you will not give up your Holy One to destruction.",
+          "06125ad3d1d57585-01": "because you will not leave my soul in Hades, neither will you allow your Holy One to see decay.",
+          "41926a4aa3831714-01": "because you will not leave my soul in Hades, neither will you allow your Holy One to see decay."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "Thou hast made known to me the ways of life; thou shalt make me full of joy with thy countenance.",
+          "9879dbb7aec41528-01": "You made known to me the ways of life. You will make me full of gladness with your presence.’",
+          "bba730b9171fcc22-01": "You have made me see the ways of life; I will be full of joy when I see your face.",
+          "06125ad3d1d57585-01": "You made known to me the ways of life. You will make me full of gladness with your presence.’",
+          "41926a4aa3831714-01": "You made known to me the ways of life. You will make me full of gladness with your presence.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "Men and brethren, let me freely speak unto you of the patriarch David, that he is both dead and buried, and his sepulchre is with us unto this day.",
+          "9879dbb7aec41528-01": "“Brothers, I may tell you freely of the patriarch David, that he both died and was buried, and his tomb is with us to this day.",
+          "bba730b9171fcc22-01": "My brothers, I may say to you openly that David came to his death, and was put in the earth, and his resting-place is with us today.",
+          "06125ad3d1d57585-01": "“Brothers, I may tell you freely of the patriarch David, that he both died and was buried, and his tomb is with us to this day.",
+          "41926a4aa3831714-01": "“Brothers, I may tell you freely of the patriarch David, that he both died and was buried, and his tomb is with us to this day."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore being a prophet, and knowing that God had sworn with an oath to him, that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne;",
+          "9879dbb7aec41528-01": "Therefore, being a prophet, and knowing that God had sworn with an oath to him that of the fruit of his body, according to the flesh, he would raise up the Christ to sit on his throne,",
+          "bba730b9171fcc22-01": "But being a prophet, and having in mind the oath which God had given to him, that of the fruit of his body one would take his place as a king,",
+          "06125ad3d1d57585-01": "Therefore, being a prophet, and knowing that God had sworn with an oath to him that of the fruit of his body, according to the flesh, he would raise up the Christ to sit on his throne,",
+          "41926a4aa3831714-01": "Therefore, being a prophet, and knowing that God had sworn with an oath to him that of the fruit of his body, according to the flesh, he would raise up the Christ to sit on his throne,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "He seeing this before spake of the resurrection of Christ, that his soul was not left in hell, neither his flesh did see corruption.",
+          "9879dbb7aec41528-01": "he foreseeing this spoke about the resurrection of the Christ, that his soul wasn’t left in Hades, and his flesh didn’t see decay.",
+          "bba730b9171fcc22-01": "He, having knowledge of the future, was talking of the coming again of Christ from the dead, that he was not kept in hell and his body did not see destruction.",
+          "06125ad3d1d57585-01": "he foreseeing this spoke about the resurrection of the Christ, that his soul wasn’t left in Hades, and his flesh didn’t see decay.",
+          "41926a4aa3831714-01": "he foreseeing this spoke about the resurrection of the Christ, that his soul wasn’t left in Hades, and his flesh didn’t see decay."
+        },
+        "words": [
+          {
+            "original": "ἀνάστασις",
+            "transliteration": "a-nas-ta-sis",
+            "english": "resurrection",
+            "strongs": "G0386",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "This Jesus hath God raised up, whereof we all are witnesses.",
+          "9879dbb7aec41528-01": "This Jesus God raised up, to which we all are witnesses.",
+          "bba730b9171fcc22-01": "This Jesus God has given back to life, of which we all are witnesses.",
+          "06125ad3d1d57585-01": "This Jesus God raised up, to which we all are witnesses.",
+          "41926a4aa3831714-01": "This Jesus God raised up, to which we all are witnesses."
+        },
+        "words": [
+          {
+            "original": "μάρτυς",
+            "transliteration": "mar-tus",
+            "english": "witness / martyr",
+            "strongs": "G3144",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore being by the right hand of God exalted, and having received of the Father the promise of the Holy Ghost, he hath shed forth this, which ye now see and hear.",
+          "9879dbb7aec41528-01": "Being therefore exalted by the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this, which you now see and hear.",
+          "bba730b9171fcc22-01": "And so, being lifted up to the right hand of God, and having the Father's word that the Holy Spirit would come, he has sent this thing, which now you see and have knowledge of.",
+          "06125ad3d1d57585-01": "Being therefore exalted by the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this, which you now see and hear.",
+          "41926a4aa3831714-01": "Being therefore exalted by the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this, which you now see and hear."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "For David is not ascended into the heavens: but he saith himself, The LORD said unto my Lord, Sit thou on my right hand,",
+          "9879dbb7aec41528-01": "For David didn’t ascend into the heavens, but he says himself, ‘The Lord said to my Lord, “Sit by my right hand,",
+          "bba730b9171fcc22-01": "For David has not gone up into heaven, but says, himself, The Lord said to my Lord, Be seated at my right hand,",
+          "06125ad3d1d57585-01": "For David didn’t ascend into the heavens, but he says himself, ‘The Lord said to my Lord, “Sit by my right hand,",
+          "41926a4aa3831714-01": "For David didn’t ascend into the heavens, but he says himself, ‘The Lord said to my Lord, “Sit by my right hand,"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 35,
+        "translations": {
+          "de4e12af7f28f599-02": "Until I make thy foes thy footstool.",
+          "9879dbb7aec41528-01": "until I make your enemies a footstool for your feet.”’",
+          "bba730b9171fcc22-01": "Till I put all those who are against you under your feet.",
+          "06125ad3d1d57585-01": "until I make your enemies a footstool for your feet.”’",
+          "41926a4aa3831714-01": "until I make your enemies a footstool for your feet.”’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 36,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore let all the house of Israel know assuredly, that God hath made that same Jesus, whom ye have crucified, both Lord and Christ.",
+          "9879dbb7aec41528-01": "“Let all the house of Israel therefore know certainly that God has made him both Lord and Christ, this Jesus whom you crucified.”",
+          "bba730b9171fcc22-01": "For this reason, let all Israel be certain that this Jesus, whom you put to death on the cross, God has made Lord and Christ.",
+          "06125ad3d1d57585-01": "“Let all the house of Israel therefore know certainly that God has made him both Lord and Christ, this Jesus whom you crucified.”",
+          "41926a4aa3831714-01": "“Let all the house of Israel therefore know certainly that God has made him both Lord and Christ, this Jesus whom you crucified.”"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 37,
+        "translations": {
+          "de4e12af7f28f599-02": "Now when they heard this, they were pricked in their heart, and said unto Peter and to the rest of the apostles, Men and brethren, what shall we do?",
+          "9879dbb7aec41528-01": "Now when they heard this, they were cut to the heart, and said to Peter and the rest of the apostles, “Brothers, what shall we do?”",
+          "bba730b9171fcc22-01": "Now when these words came to their ears their hearts were troubled, and they said to Peter and the other Apostles, Brothers, what are we to do?",
+          "06125ad3d1d57585-01": "Now when they heard this, they were cut to the heart, and said to Peter and the rest of the apostles, “Brothers, what shall we do?”",
+          "41926a4aa3831714-01": "Now when they heard this, they were cut to the heart, and said to Peter and the rest of the apostles, “Brothers, what shall we do?”"
+        },
+        "words": [
+          {
+            "original": "ἀπόστολος",
+            "transliteration": "a-pos-to-los",
+            "english": "apostle / messenger",
+            "strongs": "G0652",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 38,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost.",
+          "9879dbb7aec41528-01": "Peter said to them, “Repent, and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of sins, and you will receive the gift of the Holy Spirit.",
+          "bba730b9171fcc22-01": "And Peter said, Let your hearts be changed, every one of you, and have baptism in the name of Jesus Christ, for the forgiveness of your sins; and you will have the Holy Spirit given to you.",
+          "06125ad3d1d57585-01": "Peter said to them, “Repent, and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of sins, and you will receive the gift of the Holy Spirit.",
+          "41926a4aa3831714-01": "Peter said to them, “Repent, and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of sins, and you will receive the gift of the Holy Spirit."
+        },
+        "words": [
+          {
+            "original": "βαπτίζω",
+            "transliteration": "bap-ti-zo",
+            "english": "baptize / wash",
+            "strongs": "G0907",
+            "parsing": "V-APP-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 39,
+        "translations": {
+          "de4e12af7f28f599-02": "For the promise is unto you, and to your children, and to all that are afar off, even as many as the Lord our God shall call.",
+          "9879dbb7aec41528-01": "For the promise is to you, and to your children, and to all who are far off, even as many as the Lord our God will call to himself.”",
+          "bba730b9171fcc22-01": "For the word of God is for you and for your children and for all those who are far off, even all those who may be marked out by the Lord our God.",
+          "06125ad3d1d57585-01": "For the promise is to you, and to your children, and to all who are far off, even as many as the Lord our God will call to himself.”",
+          "41926a4aa3831714-01": "For the promise is to you, and to your children, and to all who are far off, even as many as the Lord our God will call to himself.”"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 40,
+        "translations": {
+          "de4e12af7f28f599-02": "And with many other words did he testify and exhort, saying, Save yourselves from this untoward generation.",
+          "9879dbb7aec41528-01": "With many other words he testified, and exhorted them, saying, “Save yourselves from this crooked generation!”",
+          "bba730b9171fcc22-01": "And with more such words he gave his witness, offering them salvation and saying, Come out from this evil generation.",
+          "06125ad3d1d57585-01": "With many other words he testified, and exhorted them, saying, “Save yourselves from this crooked generation!”",
+          "41926a4aa3831714-01": "With many other words he testified, and exhorted them, saying, “Save yourselves from this crooked generation!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 41,
+        "translations": {
+          "de4e12af7f28f599-02": "Then they that gladly received his word were baptized: and the same day there were added unto them about three thousand souls.",
+          "9879dbb7aec41528-01": "Then those who gladly received his word were baptized. There were added that day about three thousand souls.",
+          "bba730b9171fcc22-01": "Then those who gave hearing to his words had baptism: and about three thousand souls were joined to them that day.",
+          "06125ad3d1d57585-01": "Then those who gladly received his word were baptized. There were added that day about three thousand souls.",
+          "41926a4aa3831714-01": "Then those who gladly received his word were baptized. There were added that day about three thousand souls."
+        },
+        "words": [
+          {
+            "original": "βαπτίζω",
+            "transliteration": "bap-ti-zo",
+            "english": "baptize / wash",
+            "strongs": "G0907",
+            "parsing": "V-APP-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
+  },
+  "Acts 9:1-22": {
+    "reference": "Acts 9:1-22",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest,",
+          "9879dbb7aec41528-01": "But Saul, still breathing threats and slaughter against the disciples of the Lord, went to the high priest,",
+          "bba730b9171fcc22-01": "But Saul, still burning with desire to put to death the disciples of the Lord, went to the high priest,",
+          "06125ad3d1d57585-01": "But Saul, still breathing threats and slaughter against the disciples of the Lord, went to the high priest,",
+          "41926a4aa3831714-01": "But Saul, still breathing threats and slaughter against the disciples of the Lord, went to the high priest,"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And desired of him letters to Damascus to the synagogues, that if he found any of this way, whether they were men or women, he might bring them bound unto Jerusalem.",
+          "9879dbb7aec41528-01": "and asked for letters from him to the synagogues of Damascus, that if he found any who were of the Way, whether men or women, he might bring them bound to Jerusalem.",
+          "bba730b9171fcc22-01": "And made a request for letters from him to the Synagogues of Damascus, so that if there were any of the Way there, men or women, he might take them as prisoners to Jerusalem.",
+          "06125ad3d1d57585-01": "and asked for letters from him to the synagogues of Damascus, that if he found any who were of the Way, whether men or women, he might bring them bound to Jerusalem.",
+          "41926a4aa3831714-01": "and asked for letters from him to the synagogues of Damascus, that if he found any who were of the Way, whether men or women, he might bring them bound to Jerusalem."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven:",
+          "9879dbb7aec41528-01": "As he traveled, he got close to Damascus, and suddenly a light from the sky shone around him.",
+          "bba730b9171fcc22-01": "And while he was journeying, he came near Damascus; and suddenly he saw a light from heaven shining round him;",
+          "06125ad3d1d57585-01": "As he traveled, he got close to Damascus, and suddenly a light from the sky shone around him.",
+          "41926a4aa3831714-01": "As he traveled, he got close to Damascus, and suddenly a light from the sky shone around him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And he fell to the earth, and heard a voice saying unto him, Saul, Saul, why persecutest thou me?",
+          "9879dbb7aec41528-01": "He fell on the earth, and heard a voice saying to him, “Saul, Saul, why do you persecute me?”",
+          "bba730b9171fcc22-01": "And he went down on the earth, and a voice said to him, Saul, Saul, why are you attacking me so cruelly?",
+          "06125ad3d1d57585-01": "He fell on the earth, and heard a voice saying to him, “Saul, Saul, why do you persecute me?”",
+          "41926a4aa3831714-01": "He fell on the earth, and heard a voice saying to him, “Saul, Saul, why do you persecute me?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said, Who art thou, Lord? And the Lord said, I am Jesus whom thou persecutest: it is hard for thee to kick against the pricks.",
+          "9879dbb7aec41528-01": "He said, “Who are you, Lord?” The Lord said, “I am Jesus, whom you are persecuting.",
+          "bba730b9171fcc22-01": "And he said, Who are you, Lord? And he said, I am Jesus, whom you are attacking:",
+          "06125ad3d1d57585-01": "He said, “Who are you, Lord?” The Lord said, “I am Jesus, whom you are persecuting.",
+          "41926a4aa3831714-01": "He said, “Who are you, Lord?” The Lord said, “I am Jesus, whom you are persecuting."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And he trembling and astonished said, Lord, what wilt thou have me to do? And the Lord said unto him, Arise, and go into the city, and it shall be told thee what thou must do.",
+          "9879dbb7aec41528-01": "But rise up, and enter into the city, and you will be told what you must do.”",
+          "bba730b9171fcc22-01": "But get up, and go into the town, and it will be made clear to you what you have to do.",
+          "06125ad3d1d57585-01": "But rise up, and enter into the city, and you will be told what you must do.”",
+          "41926a4aa3831714-01": "But rise up, and enter into the city, and you will be told what you must do.”"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And the men which journeyed with him stood speechless, hearing a voice, but seeing no man.",
+          "9879dbb7aec41528-01": "The men who traveled with him stood speechless, hearing the sound, but seeing no one.",
+          "bba730b9171fcc22-01": "And the men who were with him were not able to say anything; hearing the voice, but seeing no one.",
+          "06125ad3d1d57585-01": "The men who traveled with him stood speechless, hearing the sound, but seeing no one.",
+          "41926a4aa3831714-01": "The men who traveled with him stood speechless, hearing the sound, but seeing no one."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And Saul arose from the earth; and when his eyes were opened, he saw no man: but they led him by the hand, and brought him into Damascus.",
+          "9879dbb7aec41528-01": "Saul arose from the ground, and when his eyes were opened, he saw no one. They led him by the hand, and brought him into Damascus.",
+          "bba730b9171fcc22-01": "And Saul got up from the earth, and when his eyes were open, he saw nothing; and he was guided by the hand into Damascus.",
+          "06125ad3d1d57585-01": "Saul arose from the ground, and when his eyes were opened, he saw no one. They led him by the hand, and brought him into Damascus.",
+          "41926a4aa3831714-01": "Saul arose from the ground, and when his eyes were opened, he saw no one. They led him by the hand, and brought him into Damascus."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And he was three days without sight, and neither did eat nor drink.",
+          "9879dbb7aec41528-01": "He was without sight for three days, and neither ate nor drank.",
+          "bba730b9171fcc22-01": "And for three days he was not able to see, and he took no food or drink.",
+          "06125ad3d1d57585-01": "He was without sight for three days, and neither ate nor drank.",
+          "41926a4aa3831714-01": "He was without sight for three days, and neither ate nor drank."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And there was a certain disciple at Damascus, named Ananias; and to him said the Lord in a vision, Ananias. And he said, Behold, I am here, Lord.",
+          "9879dbb7aec41528-01": "Now there was a certain disciple at Damascus named Ananias. The Lord said to him in a vision, “Ananias!” He said, “Behold, it’s me, Lord.”",
+          "bba730b9171fcc22-01": "Now there was a certain disciple at Damascus, named Ananias; and the Lord said to him in a vision, Ananias! and he said, Here I am, Lord.",
+          "06125ad3d1d57585-01": "Now there was a certain disciple at Damascus named Ananias. The Lord said to him in a vision, “Ananias!” He said, “Behold, it’s me, Lord.”",
+          "41926a4aa3831714-01": "Now there was a certain disciple at Damascus named Ananias. The Lord said to him in a vision, “Ananias!” He said, “Behold, it’s me, Lord.”"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And the Lord said unto him, Arise, and go into the street which is called Straight, and enquire in the house of Judas for one  called Saul, of Tarsus: for, behold, he prayeth,",
+          "9879dbb7aec41528-01": "The Lord said to him, “Arise, and go to the street which is called Straight, and inquire in the house of Judah for one named Saul, a man of Tarsus. For behold, he is praying,",
+          "bba730b9171fcc22-01": "And the Lord said to him, Get up, and go to the street which is named Straight, and make search at the house of Judas for one named Saul of Tarsus: for he is at prayer;",
+          "06125ad3d1d57585-01": "The Lord said to him, “Arise, and go to the street which is called Straight, and inquire in the house of Judah for one named Saul, a man of Tarsus. For behold, he is praying,",
+          "41926a4aa3831714-01": "The Lord said to him, “Arise, and go to the street which is called Straight, and inquire in the house of Judah for one named Saul, a man of Tarsus. For behold, he is praying,"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And hath seen in a vision a man named Ananias coming in, and putting his hand on him, that he might receive his sight.",
+          "9879dbb7aec41528-01": "and in a vision he has seen a man named Ananias coming in, and laying his hands on him, that he might receive his sight.”",
+          "bba730b9171fcc22-01": "And he has seen a man named Ananias coming in and putting his hands on him, so that he may be able to see.",
+          "06125ad3d1d57585-01": "and in a vision he has seen a man named Ananias coming in, and laying his hands on him, that he might receive his sight.”",
+          "41926a4aa3831714-01": "and in a vision he has seen a man named Ananias coming in, and laying his hands on him, that he might receive his sight.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Ananias answered, Lord, I have heard by many of this man, how much evil he hath done to thy saints at Jerusalem:",
+          "9879dbb7aec41528-01": "But Ananias answered, “Lord, I have heard from many about this man, how much evil he did to your saints at Jerusalem.",
+          "bba730b9171fcc22-01": "But Ananias said, Lord, I have had accounts of this man from a number of people, how much evil he has done to your saints at Jerusalem:",
+          "06125ad3d1d57585-01": "But Ananias answered, “Lord, I have heard from many about this man, how much evil he did to your saints at Jerusalem.",
+          "41926a4aa3831714-01": "But Ananias answered, “Lord, I have heard from many about this man, how much evil he did to your saints at Jerusalem."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And here he hath authority from the chief priests to bind all that call on thy name.",
+          "9879dbb7aec41528-01": "Here he has authority from the chief priests to bind all who call on your name.”",
+          "bba730b9171fcc22-01": "And here he has authority from the chief priests to make prisoners all who give worship to your name.",
+          "06125ad3d1d57585-01": "Here he has authority from the chief priests to bind all who call on your name.”",
+          "41926a4aa3831714-01": "Here he has authority from the chief priests to bind all who call on your name.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "But the Lord said unto him, Go thy way: for he is a chosen vessel unto me, to bear my name before the Gentiles, and kings, and the children of Israel:",
+          "9879dbb7aec41528-01": "But the Lord said to him, “Go your way, for he is my chosen vessel to bear my name before the nations and kings, and the children of Israel.",
+          "bba730b9171fcc22-01": "But the Lord said, Go without fear: for he is a special vessel for me, to give to the Gentiles and kings and to the children of Israel the knowledge of my name:",
+          "06125ad3d1d57585-01": "But the Lord said to him, “Go your way, for he is my chosen vessel to bear my name before the nations and kings, and the children of Israel.",
+          "41926a4aa3831714-01": "But the Lord said to him, “Go your way, for he is my chosen vessel to bear my name before the nations and kings, and the children of Israel."
+        },
+        "words": [
+          {
+            "original": "ἔθνος",
+            "transliteration": "eth-nos",
+            "english": "nations / gentiles",
+            "strongs": "G1484",
+            "parsing": "N-np"
+          },
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "For I will shew him how great things he must suffer for my name’s sake.",
+          "9879dbb7aec41528-01": "For I will show him how many things he must suffer for my name’s sake.”",
+          "bba730b9171fcc22-01": "For I will make clear to him what troubles he will have to undergo for me.",
+          "06125ad3d1d57585-01": "For I will show him how many things he must suffer for my name’s sake.”",
+          "41926a4aa3831714-01": "For I will show him how many things he must suffer for my name’s sake.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul, the Lord, even Jesus, that appeared unto thee in the way as thou camest, hath sent me, that thou mightest receive thy sight, and be filled with the Holy Ghost.",
+          "9879dbb7aec41528-01": "Ananias departed, and entered into the house. Laying his hands on him, he said, “Brother Saul, the Lord, who appeared to you on the road by which you came, has sent me, that you may receive your sight, and be filled with the Holy Spirit.”",
+          "bba730b9171fcc22-01": "And Ananias went out and came to the house, and putting his hands on him, said, Brother Saul, the Lord Jesus, whom you saw when you were on your journey, has sent me, so that you may be able to see, and be full of the Holy Spirit.",
+          "06125ad3d1d57585-01": "Ananias departed, and entered into the house. Laying his hands on him, he said, “Brother Saul, the Lord, who appeared to you on the road by which you came, has sent me, that you may receive your sight, and be filled with the Holy Spirit.”",
+          "41926a4aa3831714-01": "Ananias departed, and entered into the house. Laying his hands on him, he said, “Brother Saul, the Lord, who appeared to you on the road by which you came, has sent me, that you may receive your sight, and be filled with the Holy Spirit.”"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And immediately there fell from his eyes as it had been scales: and he received sight forthwith, and arose, and was baptized.",
+          "9879dbb7aec41528-01": "Immediately something like scales fell from his eyes, and he received his sight. He arose and was baptized.",
+          "bba730b9171fcc22-01": "And straight away it seemed as if a veil was taken from his eyes, and he was able to see; and he got up, and had baptism;",
+          "06125ad3d1d57585-01": "Immediately something like scales fell from his eyes, and he received his sight. He arose and was baptized.",
+          "41926a4aa3831714-01": "Immediately something like scales fell from his eyes, and he received his sight. He arose and was baptized."
+        },
+        "words": [
+          {
+            "original": "βαπτίζω",
+            "transliteration": "bap-ti-zo",
+            "english": "baptize / wash",
+            "strongs": "G0907",
+            "parsing": "V-APP-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he had received meat, he was strengthened. Then was Saul certain days with the disciples which were at Damascus.",
+          "9879dbb7aec41528-01": "He took food and was strengthened. Saul stayed several days with the disciples who were at Damascus.",
+          "bba730b9171fcc22-01": "And when he had taken food his strength came back. And for some days he kept with the disciples who were in Damascus.",
+          "06125ad3d1d57585-01": "He took food and was strengthened. Saul stayed several days with the disciples who were at Damascus.",
+          "41926a4aa3831714-01": "He took food and was strengthened. Saul stayed several days with the disciples who were at Damascus."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And straightway he preached Christ in the synagogues, that he is the Son of God.",
+          "9879dbb7aec41528-01": "Immediately in the synagogues he proclaimed the Christ, that he is the Son of God.",
+          "bba730b9171fcc22-01": "And straight away, in the Synagogues, he was preaching Jesus as the Son of God.",
+          "06125ad3d1d57585-01": "Immediately in the synagogues he proclaimed the Christ, that he is the Son of God.",
+          "41926a4aa3831714-01": "Immediately in the synagogues he proclaimed the Christ, that he is the Son of God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "But all that heard him were amazed, and said; Is not this he that destroyed them which called on this name in Jerusalem, and came hither for that intent, that he might bring them bound unto the chief priests?",
+          "9879dbb7aec41528-01": "All who heard him were amazed, and said, “Isn’t this he who in Jerusalem made havoc of those who called on this name? And he had come here intending to bring them bound before the chief priests!”",
+          "bba730b9171fcc22-01": "And all those hearing him were full of wonder and said, Is not this the man who in Jerusalem was attacking all the worshippers of this name? and he had come here so that he might take them as prisoners before the chief priests.",
+          "06125ad3d1d57585-01": "All who heard him were amazed, and said, “Isn’t this he who in Jerusalem made havoc of those who called on this name? And he had come here intending to bring them bound before the chief priests!”",
+          "41926a4aa3831714-01": "All who heard him were amazed, and said, “Isn’t this he who in Jerusalem made havoc of those who called on this name? And he had come here intending to bring them bound before the chief priests!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "But Saul increased the more in strength, and confounded the Jews which dwelt at Damascus, proving that this is very Christ.",
+          "9879dbb7aec41528-01": "But Saul increased more in strength, and confounded the Jews who lived at Damascus, proving that this is the Christ.",
+          "bba730b9171fcc22-01": "But Saul went on increasing in power, and the Jews in Damascus were not able to give answers to the arguments by which he made it clear that Jesus was the Christ.",
+          "06125ad3d1d57585-01": "But Saul increased more in strength, and confounded the Jews who lived at Damascus, proving that this is the Christ.",
+          "41926a4aa3831714-01": "But Saul increased more in strength, and confounded the Jews who lived at Damascus, proving that this is the Christ."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Acts 10:1-48": {
+    "reference": "Acts 10:1-48",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "There was a certain man in Caesarea called Cornelius, a centurion of the band called the Italian band,",
+          "9879dbb7aec41528-01": "Now there was a certain man in Caesarea, Cornelius by name, a centurion of what was called the Italian Regiment,",
+          "bba730b9171fcc22-01": "Now there was a certain man in Caesarea, named Cornelius, the captain of the Italian band of the army;",
+          "06125ad3d1d57585-01": "Now there was a certain man in Caesarea, Cornelius by name, a centurion of what was called the Italian Regiment,",
+          "41926a4aa3831714-01": "Now there was a certain man in Caesarea, Cornelius by name, a centurion of what was called the Italian Regiment,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "A devout man, and one that feared God with all his house, which gave much alms to the people, and prayed to God alway.",
+          "9879dbb7aec41528-01": "a devout man, and one who feared God with all his house, who gave gifts for the needy generously to the people, and always prayed to God.",
+          "bba730b9171fcc22-01": "A serious-minded man, fearing God with all his family; he gave much money to the poor, and made prayer to God at all times.",
+          "06125ad3d1d57585-01": "a devout man, and one who feared God with all his house, who gave gifts for the needy generously to the people, and always prayed to God.",
+          "41926a4aa3831714-01": "a devout man, and one who feared God with all his house, who gave gifts for the needy generously to the people, and always prayed to God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "He saw in a vision evidently about the ninth hour of the day an angel of God coming in to him, and saying unto him, Cornelius.",
+          "9879dbb7aec41528-01": "At about the ninth hour of the day, he clearly saw in a vision an angel of God coming to him, and saying to him, “Cornelius!”",
+          "bba730b9171fcc22-01": "He saw in a vision, clearly, at about the ninth hour of the day, an angel of the Lord coming to him and saying to him, Cornelius!",
+          "06125ad3d1d57585-01": "At about the ninth hour of the day, he clearly saw in a vision an angel of God coming to him, and saying to him, “Cornelius!”",
+          "41926a4aa3831714-01": "At about the ninth hour of the day, he clearly saw in a vision an angel of God coming to him, and saying to him, “Cornelius!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he looked on him, he was afraid, and said, What is it, Lord? And he said unto him, Thy prayers and thine alms are come up for a memorial before God.",
+          "9879dbb7aec41528-01": "He, fastening his eyes on him, and being frightened, said, “What is it, Lord?” He said to him, “Your prayers and your gifts to the needy have gone up for a memorial before God.",
+          "bba730b9171fcc22-01": "And he, looking on him in fear, said, What is it, Lord? And he said to him, Your prayers and your offerings have come up to God, and he has kept them in mind.",
+          "06125ad3d1d57585-01": "He, fastening his eyes on him, and being frightened, said, “What is it, Lord?” He said to him, “Your prayers and your gifts to the needy have gone up for a memorial before God.",
+          "41926a4aa3831714-01": "He, fastening his eyes on him, and being frightened, said, “What is it, Lord?” He said to him, “Your prayers and your gifts to the needy have gone up for a memorial before God."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And now send men to Joppa, and call for one Simon, whose surname is Peter:",
+          "9879dbb7aec41528-01": "Now send men to Joppa, and get Simon, who is also called Peter.",
+          "bba730b9171fcc22-01": "Now send men to Joppa, and get one Simon, named Peter,",
+          "06125ad3d1d57585-01": "Now send men to Joppa, and get Simon, who is also called Peter.",
+          "41926a4aa3831714-01": "Now send men to Joppa, and get Simon, who is also called Peter."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "He lodgeth with one Simon a tanner, whose house is by the sea side: he shall tell thee what thou oughtest to do.",
+          "9879dbb7aec41528-01": "He lodges with a tanner named Simon, whose house is by the seaside.",
+          "bba730b9171fcc22-01": "Who is living with Simon, a leather-worker, whose house is by the sea.",
+          "06125ad3d1d57585-01": "He lodges with a tanner named Simon, whose house is by the seaside.",
+          "41926a4aa3831714-01": "He lodges with a tanner named Simon, whose house is by the seaside."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the angel which spake unto Cornelius was departed, he called two of his household servants, and a devout soldier of them that waited on him continually;",
+          "9879dbb7aec41528-01": "When the angel who spoke to him had departed, Cornelius called two of his household servants and a devout soldier of those who waited on him continually.",
+          "bba730b9171fcc22-01": "And when the angel who said these words to him had gone away, he sent for two of his house-servants, and a God-fearing man of the army, one of those who were waiting on him at all times;",
+          "06125ad3d1d57585-01": "When the angel who spoke to him had departed, Cornelius called two of his household servants and a devout soldier of those who waited on him continually.",
+          "41926a4aa3831714-01": "When the angel who spoke to him had departed, Cornelius called two of his household servants and a devout soldier of those who waited on him continually."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he had declared all these things unto them, he sent them to Joppa.",
+          "9879dbb7aec41528-01": "Having explained everything to them, he sent them to Joppa.",
+          "bba730b9171fcc22-01": "And having given them an account of everything, he sent them to Joppa.",
+          "06125ad3d1d57585-01": "Having explained everything to them, he sent them to Joppa.",
+          "41926a4aa3831714-01": "Having explained everything to them, he sent them to Joppa."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "On the morrow, as they went on their journey, and drew nigh unto the city, Peter went up upon the housetop to pray about the sixth hour:",
+          "9879dbb7aec41528-01": "Now on the next day as they were on their journey, and got close to the city, Peter went up on the housetop to pray at about noon.",
+          "bba730b9171fcc22-01": "Now the day after, when they were on their journey and were near the town, Peter went up to the top of the house for prayer, about the sixth hour:",
+          "06125ad3d1d57585-01": "Now on the next day as they were on their journey, and got close to the city, Peter went up on the housetop to pray at about noon.",
+          "41926a4aa3831714-01": "Now on the next day as they were on their journey, and got close to the city, Peter went up on the housetop to pray at about noon."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And he became very hungry, and would have eaten: but while they made ready, he fell into a trance,",
+          "9879dbb7aec41528-01": "He became hungry and desired to eat, but while they were preparing, he fell into a trance.",
+          "bba730b9171fcc22-01": "And he was in need of food: but while they were getting it ready, a deep sleep came on him;",
+          "06125ad3d1d57585-01": "He became hungry and desired to eat, but while they were preparing, he fell into a trance.",
+          "41926a4aa3831714-01": "He became hungry and desired to eat, but while they were preparing, he fell into a trance."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And saw heaven opened, and a certain vessel descending unto him, as it had been a great sheet knit at the four corners, and let down to the earth:",
+          "9879dbb7aec41528-01": "He saw heaven opened and a certain container descending to him, like a great sheet let down by four corners on the earth,",
+          "bba730b9171fcc22-01": "And he saw the heavens opening, and a vessel coming down, like a great cloth let down on the earth,",
+          "06125ad3d1d57585-01": "He saw heaven opened and a certain container descending to him, like a great sheet let down by four corners on the earth,",
+          "41926a4aa3831714-01": "He saw heaven opened and a certain container descending to him, like a great sheet let down by four corners on the earth,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "Wherein were all manner of fourfooted beasts of the earth, and wild beasts, and creeping things, and fowls of the air.",
+          "9879dbb7aec41528-01": "in which were all kinds of four-footed animals of the earth, wild animals, reptiles, and birds of the sky.",
+          "bba730b9171fcc22-01": "In which were all sorts of beasts and birds.",
+          "06125ad3d1d57585-01": "in which were all kinds of four-footed animals of the earth, wild animals, reptiles, and birds of the sky.",
+          "41926a4aa3831714-01": "in which were all kinds of four-footed animals of the earth, wild animals, reptiles, and birds of the sky."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And there came a voice to him, Rise, Peter; kill, and eat.",
+          "9879dbb7aec41528-01": "A voice came to him, “Rise, Peter, kill and eat!”",
+          "bba730b9171fcc22-01": "And a voice came to him, saying, Come, Peter; take them for food.",
+          "06125ad3d1d57585-01": "A voice came to him, “Rise, Peter, kill and eat!”",
+          "41926a4aa3831714-01": "A voice came to him, “Rise, Peter, kill and eat!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "But Peter said, Not so, Lord; for I have never eaten any thing that is common or unclean.",
+          "9879dbb7aec41528-01": "But Peter said, “Not so, Lord; for I have never eaten anything that is common or unclean.”",
+          "bba730b9171fcc22-01": "But Peter said, No, Lord; for I have never taken food which is common or unclean.",
+          "06125ad3d1d57585-01": "But Peter said, “Not so, Lord; for I have never eaten anything that is common or unclean.”",
+          "41926a4aa3831714-01": "But Peter said, “Not so, Lord; for I have never eaten anything that is common or unclean.”"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And the voice spake unto him again the second time, What God hath cleansed, that call not thou common.",
+          "9879dbb7aec41528-01": "A voice came to him again the second time, “What God has cleansed, you must not call unclean.”",
+          "bba730b9171fcc22-01": "And the voice came to him a second time, What God has made clean, do not you make common.",
+          "06125ad3d1d57585-01": "A voice came to him again the second time, “What God has cleansed, you must not call unclean.”",
+          "41926a4aa3831714-01": "A voice came to him again the second time, “What God has cleansed, you must not call unclean.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "This was done thrice: and the vessel was received up again into heaven.",
+          "9879dbb7aec41528-01": "This was done three times, and immediately the vessel was received up into heaven.",
+          "bba730b9171fcc22-01": "And this was done three times: and then the vessel was taken back into heaven.",
+          "06125ad3d1d57585-01": "This was done three times, and immediately the vessel was received up into heaven.",
+          "41926a4aa3831714-01": "This was done three times, and immediately the vessel was received up into heaven."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "Now while Peter doubted in himself what this vision which he had seen should mean, behold, the men which were sent from Cornelius had made enquiry for Simon’s house, and stood before the gate,",
+          "9879dbb7aec41528-01": "Now while Peter was very perplexed in himself what the vision which he had seen might mean, behold, the men who were sent by Cornelius, having made inquiry for Simon’s house, stood before the gate,",
+          "bba730b9171fcc22-01": "Now while Peter was in doubt as to the purpose of this vision, the men who were sent by Cornelius, having made search for Simon's house, came to the door,",
+          "06125ad3d1d57585-01": "Now while Peter was very perplexed in himself what the vision which he had seen might mean, behold, the men who were sent by Cornelius, having made inquiry for Simon’s house, stood before the gate,",
+          "41926a4aa3831714-01": "Now while Peter was very perplexed in himself what the vision which he had seen might mean, behold, the men who were sent by Cornelius, having made inquiry for Simon’s house, stood before the gate,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And called, and asked whether Simon, which was surnamed Peter, were lodged there.",
+          "9879dbb7aec41528-01": "and called and asked whether Simon, who was also called Peter, was lodging there.",
+          "bba730b9171fcc22-01": "To see if Simon, named Peter, was living there.",
+          "06125ad3d1d57585-01": "and called and asked whether Simon, who was also called Peter, was lodging there.",
+          "41926a4aa3831714-01": "and called and asked whether Simon, who was also called Peter, was lodging there."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "While Peter thought on the vision, the Spirit said unto him, Behold, three men seek thee.",
+          "9879dbb7aec41528-01": "While Peter was pondering the vision, the Spirit said to him, “Behold, three  men seek you.",
+          "bba730b9171fcc22-01": "And, while Peter was turning the vision over in his mind, the Spirit said to him, See, three men are looking for you.",
+          "06125ad3d1d57585-01": "While Peter was pondering the vision, the Spirit said to him, “Behold, three  men seek you.",
+          "41926a4aa3831714-01": "While Peter was pondering the vision, the Spirit said to him, “Behold, three  men seek you."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "Arise therefore, and get thee down, and go with them, doubting nothing: for I have sent them.",
+          "9879dbb7aec41528-01": "But arise, get down, and go with them, doubting nothing; for I have sent them.”",
+          "bba730b9171fcc22-01": "Go down, then, and go with them, doubting nothing, for I have sent them.",
+          "06125ad3d1d57585-01": "But arise, get down, and go with them, doubting nothing; for I have sent them.”",
+          "41926a4aa3831714-01": "But arise, get down, and go with them, doubting nothing; for I have sent them.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Peter went down to the men which were sent unto him from Cornelius; and said, Behold, I am he whom ye seek: what is the cause wherefore ye are come?",
+          "9879dbb7aec41528-01": "Peter went down to the men, and said, “Behold, I am he whom you seek. Why have you come?”",
+          "bba730b9171fcc22-01": "And Peter went down to the men, and said, I am the man you are looking for: why have you come?",
+          "06125ad3d1d57585-01": "Peter went down to the men, and said, “Behold, I am he whom you seek. Why have you come?”",
+          "41926a4aa3831714-01": "Peter went down to the men, and said, “Behold, I am he whom you seek. Why have you come?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "And they said, Cornelius the centurion, a just man, and one that feareth God, and of good report among all the nation of the Jews, was warned from God by an holy angel to send for thee into his house, and to hear words of thee.",
+          "9879dbb7aec41528-01": "They said, “Cornelius, a centurion, a righteous man and one who fears God, and well spoken of by all the nation of the Jews, was directed by a holy angel to invite you to his house, and to listen to what you say.”",
+          "bba730b9171fcc22-01": "And they said, Cornelius, a captain, an upright and God-fearing man, respected by all the nation of the Jews, had word from God by an angel to send for you to his house, and to give hearing to your words.",
+          "06125ad3d1d57585-01": "They said, “Cornelius, a centurion, a righteous man and one who fears God, and well spoken of by all the nation of the Jews, was directed by a holy angel to invite you to his house, and to listen to what you say.”",
+          "41926a4aa3831714-01": "They said, “Cornelius, a centurion, a righteous man and one who fears God, and well spoken of by all the nation of the Jews, was directed by a holy angel to invite you to his house, and to listen to what you say.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "Then called he them in, and lodged them. And on the morrow Peter went away with them, and certain brethren from Joppa accompanied him.",
+          "9879dbb7aec41528-01": "So he called them in and provided a place to stay. On the next day Peter arose and went out with them, and some of the brothers from Joppa accompanied him.",
+          "bba730b9171fcc22-01": "So he took them in for the night. And the day after, he went with them, taking some of the brothers from Joppa with him.",
+          "06125ad3d1d57585-01": "So he called them in and provided a place to stay. On the next day Peter arose and went out with them, and some of the brothers from Joppa accompanied him.",
+          "41926a4aa3831714-01": "So he called them in and provided a place to stay. On the next day Peter arose and went out with them, and some of the brothers from Joppa accompanied him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "And the morrow after they entered into Caesarea. And Cornelius waited for them, and had called together his kinsmen and near friends.",
+          "9879dbb7aec41528-01": "On the next day they entered into Caesarea. Cornelius was waiting for them, having called together his relatives and his near friends.",
+          "bba730b9171fcc22-01": "And the day after that, they came to Caesarea. And Cornelius was waiting for them, having got together his relations and his near friends.",
+          "06125ad3d1d57585-01": "On the next day they entered into Caesarea. Cornelius was waiting for them, having called together his relatives and his near friends.",
+          "41926a4aa3831714-01": "On the next day they entered into Caesarea. Cornelius was waiting for them, having called together his relatives and his near friends."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "And as Peter was coming in, Cornelius met him, and fell down at his feet, and worshipped him.",
+          "9879dbb7aec41528-01": "When Peter entered, Cornelius met him, fell down at his feet, and worshiped him.",
+          "bba730b9171fcc22-01": "And when Peter came in, Cornelius came to him and, falling down at his feet, gave him worship.",
+          "06125ad3d1d57585-01": "When Peter entered, Cornelius met him, fell down at his feet, and worshiped him.",
+          "41926a4aa3831714-01": "When Peter entered, Cornelius met him, fell down at his feet, and worshiped him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "But Peter took him up, saying, Stand up; I myself also am a man.",
+          "9879dbb7aec41528-01": "But Peter raised him up, saying, “Stand up! I myself am also a man.”",
+          "bba730b9171fcc22-01": "But Peter, lifting him up, said, Get up, for I am a man as you are.",
+          "06125ad3d1d57585-01": "But Peter raised him up, saying, “Stand up! I myself am also a man.”",
+          "41926a4aa3831714-01": "But Peter raised him up, saying, “Stand up! I myself am also a man.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "And as he talked with him, he went in, and found many that were come together.",
+          "9879dbb7aec41528-01": "As he talked with him, he went in and found many gathered together.",
+          "bba730b9171fcc22-01": "And saying these words, he went in, and saw that a great number of people had come together;",
+          "06125ad3d1d57585-01": "As he talked with him, he went in and found many gathered together.",
+          "41926a4aa3831714-01": "As he talked with him, he went in and found many gathered together."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto them, Ye know how that it is an unlawful thing for a man that is a Jew to keep company, or come unto one of another nation; but God hath shewed me that I should not call any man common or unclean.",
+          "9879dbb7aec41528-01": "He said to them, “You yourselves know how it is an unlawful thing for a man who is a Jew to join himself or come to one of another nation, but God has shown me that I shouldn’t call any man unholy or unclean.",
+          "bba730b9171fcc22-01": "And he said to them, You yourselves have knowledge that it is against the law for a man who is a Jew to be in the company of one who is of another nation; but God has made it clear to me that no man may be named common or unclean:",
+          "06125ad3d1d57585-01": "He said to them, “You yourselves know how it is an unlawful thing for a man who is a Jew to join himself or come to one of another nation, but God has shown me that I shouldn’t call any man unholy or unclean.",
+          "41926a4aa3831714-01": "He said to them, “You yourselves know how it is an unlawful thing for a man who is a Jew to join himself or come to one of another nation, but God has shown me that I shouldn’t call any man unholy or unclean."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore came I unto you without gainsaying, as soon as I was sent for: I ask therefore for what intent ye have sent for me?",
+          "9879dbb7aec41528-01": "Therefore also I came without complaint when I was sent for. I ask therefore, why did you send for me?”",
+          "bba730b9171fcc22-01": "And so I came without question, when I was sent for. What then is your purpose in sending for me?",
+          "06125ad3d1d57585-01": "Therefore also I came without complaint when I was sent for. I ask therefore, why did you send for me?”",
+          "41926a4aa3831714-01": "Therefore also I came without complaint when I was sent for. I ask therefore, why did you send for me?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "And Cornelius said, Four days ago I was fasting until this hour; and at the ninth hour I prayed in my house, and, behold, a man stood before me in bright clothing,",
+          "9879dbb7aec41528-01": "Cornelius said, “Four days ago, I was fasting until this hour, and at the ninth hour, I prayed in my house, and behold, a man stood before me in bright clothing,",
+          "bba730b9171fcc22-01": "And Cornelius said, Four days from now I was in my house in prayer at the ninth hour; and I saw before me a man in shining clothing,",
+          "06125ad3d1d57585-01": "Cornelius said, “Four days ago, I was fasting until this hour, and at the ninth hour, I prayed in my house, and behold, a man stood before me in bright clothing,",
+          "41926a4aa3831714-01": "Cornelius said, “Four days ago, I was fasting until this hour, and at the ninth hour, I prayed in my house, and behold, a man stood before me in bright clothing,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "And said, Cornelius, thy prayer is heard, and thine alms are had in remembrance in the sight of God.",
+          "9879dbb7aec41528-01": "and said, ‘Cornelius, your prayer is heard, and your gifts to the needy are remembered in the sight of God.",
+          "bba730b9171fcc22-01": "Who said, Cornelius, your prayer has come to the ears of God, and your offerings are kept in his memory.",
+          "06125ad3d1d57585-01": "and said, ‘Cornelius, your prayer is heard, and your gifts to the needy are remembered in the sight of God.",
+          "41926a4aa3831714-01": "and said, ‘Cornelius, your prayer is heard, and your gifts to the needy are remembered in the sight of God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "Send therefore to Joppa, and call hither Simon, whose surname is Peter; he is lodged in the house of one Simon a tanner by the sea side: who, when he cometh, shall speak unto thee.",
+          "9879dbb7aec41528-01": "Send therefore to Joppa, and summon Simon, who is also called Peter. He lodges in the house of a tanner named Simon, by the seaside. When he comes, he will speak to you.’",
+          "bba730b9171fcc22-01": "Send, then, to Joppa, and get Simon, named Peter, to come to you; he is living in the house of Simon, a leather-worker, by the sea.",
+          "06125ad3d1d57585-01": "Send therefore to Joppa, and summon Simon, who is also called Peter. He lodges in the house of a tanner named Simon, by the seaside. When he comes, he will speak to you.’",
+          "41926a4aa3831714-01": "Send therefore to Joppa, and summon Simon, who is also called Peter. He lodges in the house of a tanner named Simon, by the seaside. When he comes, he will speak to you.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "Immediately therefore I sent to thee; and thou hast well done that thou art come. Now therefore are we all here present before God, to hear all things that are commanded thee of God.",
+          "9879dbb7aec41528-01": "Therefore I sent to you at once, and it was good of you to come. Now therefore we are all here present in the sight of God to hear all things that have been commanded you by God.”",
+          "bba730b9171fcc22-01": "So, straight away, I sent for you; and you have done well to come. And now, we are all present before God, ready to give attention to all the things which the Lord has given you to say.",
+          "06125ad3d1d57585-01": "Therefore I sent to you at once, and it was good of you to come. Now therefore we are all here present in the sight of God to hear all things that have been commanded you by God.”",
+          "41926a4aa3831714-01": "Therefore I sent to you at once, and it was good of you to come. Now therefore we are all here present in the sight of God to hear all things that have been commanded you by God.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Peter opened his mouth, and said, Of a truth I perceive that God is no respecter of persons:",
+          "9879dbb7aec41528-01": "Peter opened his mouth and said, “Truly I perceive that God doesn’t show favoritism;",
+          "bba730b9171fcc22-01": "Then Peter said, Truly, I see clearly that God is no respecter of persons:",
+          "06125ad3d1d57585-01": "Peter opened his mouth and said, “Truly I perceive that God doesn’t show favoritism;",
+          "41926a4aa3831714-01": "Peter opened his mouth and said, “Truly I perceive that God doesn’t show favoritism;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 35,
+        "translations": {
+          "de4e12af7f28f599-02": "But in every nation he that feareth him, and worketh righteousness, is accepted with him.",
+          "9879dbb7aec41528-01": "but in every nation he who fears him and works righteousness is acceptable to him.",
+          "bba730b9171fcc22-01": "But in every nation, the man who has fear of him and does righteousness is pleasing to him.",
+          "06125ad3d1d57585-01": "but in every nation he who fears him and works righteousness is acceptable to him.",
+          "41926a4aa3831714-01": "but in every nation he who fears him and works righteousness is acceptable to him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 36,
+        "translations": {
+          "de4e12af7f28f599-02": "The word which God sent unto the children of Israel, preaching peace by Jesus Christ: (he is Lord of all:)",
+          "9879dbb7aec41528-01": "The word which he sent to the children of Israel, preaching good news of peace by Jesus Christ—he is Lord of all—",
+          "bba730b9171fcc22-01": "The word which he sent to the children of Israel, giving the good news of peace through Jesus Christ (who is Lord of all)--",
+          "06125ad3d1d57585-01": "The word which he sent to the children of Israel, preaching good news of peace by Jesus Christ—he is Lord of all—",
+          "41926a4aa3831714-01": "The word which he sent to the children of Israel, preaching good news of peace by Jesus Christ—he is Lord of all—"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 37,
+        "translations": {
+          "de4e12af7f28f599-02": "That word, I say, ye know, which was published throughout all Judaea, and began from Galilee, after the baptism which John preached;",
+          "9879dbb7aec41528-01": "you yourselves know what happened, which was proclaimed throughout all Judea, beginning from Galilee, after the baptism which John preached;",
+          "bba730b9171fcc22-01": "That word you yourselves have knowledge of, which was made public through all Judaea, starting from Galilee, after the baptism of which John was the preacher,",
+          "06125ad3d1d57585-01": "you yourselves know what happened, which was proclaimed throughout all Judea, beginning from Galilee, after the baptism which John preached;",
+          "41926a4aa3831714-01": "you yourselves know what happened, which was proclaimed throughout all Judea, beginning from Galilee, after the baptism which John preached;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 38,
+        "translations": {
+          "de4e12af7f28f599-02": "How God anointed Jesus of Nazareth with the Holy Ghost and with power: who went about doing good, and healing all that were oppressed of the devil; for God was with him.",
+          "9879dbb7aec41528-01": "even Jesus of Nazareth, how God anointed him with the Holy Spirit and with power, who went about doing good and healing all who were oppressed by the devil, for God was with him.",
+          "bba730b9171fcc22-01": "About Jesus of Nazareth, how God gave the Holy Spirit to him, with power: and how he went about doing good and making well all who were troubled by evil spirits, for God was with him.",
+          "06125ad3d1d57585-01": "even Jesus of Nazareth, how God anointed him with the Holy Spirit and with power, who went about doing good and healing all who were oppressed by the devil, for God was with him.",
+          "41926a4aa3831714-01": "even Jesus of Nazareth, how God anointed him with the Holy Spirit and with power, who went about doing good and healing all who were oppressed by the devil, for God was with him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 39,
+        "translations": {
+          "de4e12af7f28f599-02": "And we are witnesses of all things which he did both in the land of the Jews, and in Jerusalem; whom they slew and hanged on a tree:",
+          "9879dbb7aec41528-01": "We are witnesses of everything he did both in the country of the Jews, and in Jerusalem; whom they also killed, hanging him on a tree.",
+          "bba730b9171fcc22-01": "And we are witnesses of all the things which he did in the country of the Jews and in Jerusalem; whom they put to death, hanging him on a tree.",
+          "06125ad3d1d57585-01": "We are witnesses of everything he did both in the country of the Jews, and in Jerusalem; whom they also killed, hanging him on a tree.",
+          "41926a4aa3831714-01": "We are witnesses of everything he did both in the country of the Jews, and in Jerusalem; whom they also killed, hanging him on a tree."
+        },
+        "words": [
+          {
+            "original": "μάρτυς",
+            "transliteration": "mar-tus",
+            "english": "witness / martyr",
+            "strongs": "G3144",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 40,
+        "translations": {
+          "de4e12af7f28f599-02": "Him God raised up the third day, and shewed him openly;",
+          "9879dbb7aec41528-01": "God raised him up the third day, and gave him to be revealed,",
+          "bba730b9171fcc22-01": "On the third day God gave him back to life, and let him be seen,",
+          "06125ad3d1d57585-01": "God raised him up the third day, and gave him to be revealed,",
+          "41926a4aa3831714-01": "God raised him up the third day, and gave him to be revealed,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 41,
+        "translations": {
+          "de4e12af7f28f599-02": "Not to all the people, but unto witnesses chosen before of God, even to us, who did eat and drink with him after he rose from the dead.",
+          "9879dbb7aec41528-01": "not to all the people, but to witnesses who were chosen before by God, to us, who ate and drank with him after he rose from the dead.",
+          "bba730b9171fcc22-01": "Not by all the people, but by witnesses marked out before by God, even by us, who took food and drink with him after he came back from the dead.",
+          "06125ad3d1d57585-01": "not to all the people, but to witnesses who were chosen before by God, to us, who ate and drank with him after he rose from the dead.",
+          "41926a4aa3831714-01": "not to all the people, but to witnesses who were chosen before by God, to us, who ate and drank with him after he rose from the dead."
+        },
+        "words": [
+          {
+            "original": "μάρτυς",
+            "transliteration": "mar-tus",
+            "english": "witness / martyr",
+            "strongs": "G3144",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 42,
+        "translations": {
+          "de4e12af7f28f599-02": "And he commanded us to preach unto the people, and to testify that it is he which was ordained of God to be the Judge of quick and dead.",
+          "9879dbb7aec41528-01": "He commanded us to preach to the people and to testify that this is he who is appointed by God as the Judge of the living and the dead.",
+          "bba730b9171fcc22-01": "And he gave us orders to give news of this to the people, and to give public witness that this is he whom God has made judge of the living and the dead.",
+          "06125ad3d1d57585-01": "He commanded us to preach to the people and to testify that this is he who is appointed by God as the Judge of the living and the dead.",
+          "41926a4aa3831714-01": "He commanded us to preach to the people and to testify that this is he who is appointed by God as the Judge of the living and the dead."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 43,
+        "translations": {
+          "de4e12af7f28f599-02": "To him give all the prophets witness, that through his name whosoever believeth in him shall receive remission of sins.",
+          "9879dbb7aec41528-01": "All the prophets testify about him, that through his name everyone who believes in him will receive remission of sins.”",
+          "bba730b9171fcc22-01": "To him all the prophets give witness, that through his name everyone who has faith in him will have forgiveness of sins.",
+          "06125ad3d1d57585-01": "All the prophets testify about him, that through his name everyone who believes in him will receive remission of sins.”",
+          "41926a4aa3831714-01": "All the prophets testify about him, that through his name everyone who believes in him will receive remission of sins.”"
+        },
+        "words": [
+          {
+            "original": "μάρτυς",
+            "transliteration": "mar-tus",
+            "english": "witness / martyr",
+            "strongs": "G3144",
+            "parsing": "N-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 44,
+        "translations": {
+          "de4e12af7f28f599-02": "While Peter yet spake these words, the Holy Ghost fell on all them which heard the word.",
+          "9879dbb7aec41528-01": "While Peter was still speaking these words, the Holy Spirit fell on all those who heard the word.",
+          "bba730b9171fcc22-01": "While Peter was saying these words, the Holy Spirit came on all those who were hearing the word.",
+          "06125ad3d1d57585-01": "While Peter was still speaking these words, the Holy Spirit fell on all those who heard the word.",
+          "41926a4aa3831714-01": "While Peter was still speaking these words, the Holy Spirit fell on all those who heard the word."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 45,
+        "translations": {
+          "de4e12af7f28f599-02": "And they of the circumcision which believed were astonished, as many as came with Peter, because that on the Gentiles also was poured out the gift of the Holy Ghost.",
+          "9879dbb7aec41528-01": "They of the circumcision who believed were amazed, as many as came with Peter, because the gift of the Holy Spirit was also poured out on the Gentiles.",
+          "bba730b9171fcc22-01": "And the Jews of the faith, who had come with Peter, were full of wonder, because the Holy Spirit was given to the Gentiles,",
+          "06125ad3d1d57585-01": "They of the circumcision who believed were amazed, as many as came with Peter, because the gift of the Holy Spirit was also poured out on the Gentiles.",
+          "41926a4aa3831714-01": "They of the circumcision who believed were amazed, as many as came with Peter, because the gift of the Holy Spirit was also poured out on the Gentiles."
+        },
+        "words": [
+          {
+            "original": "ἔθνος",
+            "transliteration": "eth-nos",
+            "english": "nations / gentiles",
+            "strongs": "G1484",
+            "parsing": "N-np"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 46,
+        "translations": {
+          "de4e12af7f28f599-02": "For they heard them speak with tongues, and magnify God. Then answered Peter,",
+          "9879dbb7aec41528-01": "For they heard them speaking in other languages and magnifying God. Then Peter answered,",
+          "bba730b9171fcc22-01": "And they were talking in tongues, and giving glory to God. Then Peter said,",
+          "06125ad3d1d57585-01": "For they heard them speaking in other languages and magnifying God. Then Peter answered,",
+          "41926a4aa3831714-01": "For they heard them speaking in other languages and magnifying God. Then Peter answered,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 47,
+        "translations": {
+          "de4e12af7f28f599-02": "Can any man forbid water, that these should not be baptized, which have received the Holy Ghost as well as we?",
+          "9879dbb7aec41528-01": "“Can anyone forbid these people from being baptized with water? They have received the Holy Spirit just like us.”",
+          "bba730b9171fcc22-01": "Will any man say that these may not have baptism who have been given the Holy Spirit as we have?",
+          "06125ad3d1d57585-01": "“Can anyone forbid these people from being baptized with water? They have received the Holy Spirit just like us.”",
+          "41926a4aa3831714-01": "“Can anyone forbid these people from being baptized with water? They have received the Holy Spirit just like us.”"
+        },
+        "words": [
+          {
+            "original": "βαπτίζω",
+            "transliteration": "bap-ti-zo",
+            "english": "baptize / wash",
+            "strongs": "G0907",
+            "parsing": "V-APP-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 48,
+        "translations": {
+          "de4e12af7f28f599-02": "And he commanded them to be baptized in the name of the Lord. Then prayed they him to tarry certain days.",
+          "9879dbb7aec41528-01": "He commanded them to be baptized in the name of Jesus Christ. Then they asked him to stay some days.",
+          "bba730b9171fcc22-01": "And he gave orders for them to have baptism in the name of Jesus Christ. Then they kept him with them for some days.",
+          "06125ad3d1d57585-01": "He commanded them to be baptized in the name of Jesus Christ. Then they asked him to stay some days.",
+          "41926a4aa3831714-01": "He commanded them to be baptized in the name of Jesus Christ. Then they asked him to stay some days."
+        },
+        "words": [
+          {
+            "original": "βαπτίζω",
+            "transliteration": "bap-ti-zo",
+            "english": "baptize / wash",
+            "strongs": "G0907",
+            "parsing": "V-APP-mp"
+          },
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Acts 16:6-40": {
+    "reference": "Acts 16:6-40",
+    "verses": [
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Now when they had gone throughout Phrygia and the region of Galatia, and were forbidden of the Holy Ghost to preach the word in Asia,",
+          "9879dbb7aec41528-01": "When they had gone through the region of Phrygia and Galatia, they were forbidden by the Holy Spirit to speak the word in Asia.",
+          "bba730b9171fcc22-01": "And after they had gone through the land of Phrygia and Galatia, the Holy Spirit did not let them take the word into Asia;",
+          "06125ad3d1d57585-01": "When they had gone through the region of Phrygia and Galatia, they were forbidden by the Holy Spirit to speak the word in Asia.",
+          "41926a4aa3831714-01": "When they had gone through the region of Phrygia and Galatia, they were forbidden by the Holy Spirit to speak the word in Asia."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "After they were come to Mysia, they assayed to go into Bithynia: but the Spirit suffered them not.",
+          "9879dbb7aec41528-01": "When they had come opposite Mysia, they tried to go into Bithynia, but the Spirit didn’t allow them.",
+          "bba730b9171fcc22-01": "And having come to Mysia, they made an attempt to go into Bithynia, but the Spirit of Jesus did not let them;",
+          "06125ad3d1d57585-01": "When they had come opposite Mysia, they tried to go into Bithynia, but the Spirit didn’t allow them.",
+          "41926a4aa3831714-01": "When they had come opposite Mysia, they tried to go into Bithynia, but the Spirit didn’t allow them."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And they passing by Mysia came down to Troas.",
+          "9879dbb7aec41528-01": "Passing by Mysia, they came down to Troas.",
+          "bba730b9171fcc22-01": "And going past Mysia, they came down to Troas.",
+          "06125ad3d1d57585-01": "Passing by Mysia, they came down to Troas.",
+          "41926a4aa3831714-01": "Passing by Mysia, they came down to Troas."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And a vision appeared to Paul in the night; There stood a man of Macedonia, and prayed him, saying, Come over into Macedonia, and help us.",
+          "9879dbb7aec41528-01": "A vision appeared to Paul in the night. There was a man of Macedonia standing, begging him, and saying, “Come over into Macedonia and help us.”",
+          "bba730b9171fcc22-01": "And Paul had a vision in the night; a man of Macedonia came, requesting him, and saying, Come over into Macedonia and give us help.",
+          "06125ad3d1d57585-01": "A vision appeared to Paul in the night. There was a man of Macedonia standing, begging him, and saying, “Come over into Macedonia and help us.”",
+          "41926a4aa3831714-01": "A vision appeared to Paul in the night. There was a man of Macedonia standing, begging him, and saying, “Come over into Macedonia and help us.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And after he had seen the vision, immediately we endeavoured to go into Macedonia, assuredly gathering that the Lord had called us for to preach the gospel unto them.",
+          "9879dbb7aec41528-01": "When he had seen the vision, immediately we sought to go out to Macedonia, concluding that the Lord had called us to preach the Good News to them.",
+          "bba730b9171fcc22-01": "And when he had seen the vision, straight away we made the decision to go into Macedonia, for it seemed certain to us that God had sent us to give the good news to them.",
+          "06125ad3d1d57585-01": "When he had seen the vision, immediately we sought to go out to Macedonia, concluding that the Lord had called us to preach the Good News to them.",
+          "41926a4aa3831714-01": "When he had seen the vision, immediately we sought to go out to Macedonia, concluding that the Lord had called us to preach the Good News to them."
+        },
+        "words": [
+          {
+            "original": "εὐαγγέλιον",
+            "transliteration": "eu-an-ge-li-on",
+            "english": "gospel / good news",
+            "strongs": "G2098",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore loosing from Troas, we came with a straight course to Samothracia, and the next day to Neapolis;",
+          "9879dbb7aec41528-01": "Setting sail therefore from Troas, we made a straight course to Samothrace, and the day following to Neapolis;",
+          "bba730b9171fcc22-01": "So, from Troas we went straight by ship to Samothrace and the day after to Neapolis;",
+          "06125ad3d1d57585-01": "Setting sail therefore from Troas, we made a straight course to Samothrace, and the day following to Neapolis;",
+          "41926a4aa3831714-01": "Setting sail therefore from Troas, we made a straight course to Samothrace, and the day following to Neapolis;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And from thence to Philippi, which is the chief city of that part of Macedonia, and a colony: and we were in that city abiding certain days.",
+          "9879dbb7aec41528-01": "and from there to Philippi, which is a city of Macedonia, the foremost of the district, a Roman colony. We were staying some days in this city.",
+          "bba730b9171fcc22-01": "And from there to Philippi, which is the most important town of Macedonia and a Roman colony: and we were there for some days.",
+          "06125ad3d1d57585-01": "and from there to Philippi, which is a city of Macedonia, the foremost of the district, a Roman colony. We were staying some days in this city.",
+          "41926a4aa3831714-01": "and from there to Philippi, which is a city of Macedonia, the foremost of the district, a Roman colony. We were staying some days in this city."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And on the sabbath we went out of the city by a river side, where prayer was wont to be made; and we sat down, and spake unto the women which resorted thither.",
+          "9879dbb7aec41528-01": "On the Sabbath day we went outside of the city by a riverside, where we supposed there was a place of prayer, and we sat down, and spoke to the women who had come together.",
+          "bba730b9171fcc22-01": "And on the Sabbath we went outside the town, by the river, where we had an idea that there would be a place of prayer; and, being seated, we had talk with the women who had come together.",
+          "06125ad3d1d57585-01": "On the Sabbath day we went outside of the city by a riverside, where we supposed there was a place of prayer, and we sat down, and spoke to the women who had come together.",
+          "41926a4aa3831714-01": "On the Sabbath day we went outside of the city by a riverside, where we supposed there was a place of prayer, and we sat down, and spoke to the women who had come together."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us: whose heart the Lord opened, that she attended unto the things which were spoken of Paul.",
+          "9879dbb7aec41528-01": "A certain woman named Lydia, a seller of purple, of the city of Thyatira, one who worshiped God, heard us; whose heart the Lord opened to listen to the things which were spoken by Paul.",
+          "bba730b9171fcc22-01": "And a certain woman named Lydia, a trader in purple cloth of the town of Thyatira, and a God-fearing woman, gave ear to us: whose heart the Lord made open to give attention to the things which Paul was saying.",
+          "06125ad3d1d57585-01": "A certain woman named Lydia, a seller of purple, of the city of Thyatira, one who worshiped God, heard us; whose heart the Lord opened to listen to the things which were spoken by Paul.",
+          "41926a4aa3831714-01": "A certain woman named Lydia, a seller of purple, of the city of Thyatira, one who worshiped God, heard us; whose heart the Lord opened to listen to the things which were spoken by Paul."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And when she was baptized, and her household, she besought us,  saying, If ye have judged me to be faithful to the Lord, come into my house, and abide there. And she constrained us.",
+          "9879dbb7aec41528-01": "When she and her household were baptized, she begged us, saying, “If you have judged me to be faithful to the Lord, come into my house, and stay.” So she persuaded us.",
+          "bba730b9171fcc22-01": "And when she and her family had had baptism, she made a request to us, saying, If it seems to you that I am true to the Lord, come into my house and be my guests. And she made us come.",
+          "06125ad3d1d57585-01": "When she and her household were baptized, she begged us, saying, “If you have judged me to be faithful to the Lord, come into my house, and stay.” So she persuaded us.",
+          "41926a4aa3831714-01": "When she and her household were baptized, she begged us, saying, “If you have judged me to be faithful to the Lord, come into my house, and stay.” So she persuaded us."
+        },
+        "words": [
+          {
+            "original": "βαπτίζω",
+            "transliteration": "bap-ti-zo",
+            "english": "baptize / wash",
+            "strongs": "G0907",
+            "parsing": "V-APP-mp"
+          },
+          {
+            "original": "πίστις",
+            "transliteration": "pis-tis",
+            "english": "faith / belief",
+            "strongs": "G4102",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass, as we went to prayer, a certain damsel possessed with a spirit of divination met us, which brought her masters much gain by soothsaying:",
+          "9879dbb7aec41528-01": "As we were going to prayer, a certain girl having a spirit of divination met us, who brought her masters much gain by fortune telling.",
+          "bba730b9171fcc22-01": "And when we were going to the place of prayer, we came across a girl with a spirit which gave knowledge of the future, whose masters made great profit from her power.",
+          "06125ad3d1d57585-01": "As we were going to prayer, a certain girl having a spirit of divination met us, who brought her masters much gain by fortune telling.",
+          "41926a4aa3831714-01": "As we were going to prayer, a certain girl having a spirit of divination met us, who brought her masters much gain by fortune telling."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "The same followed Paul and us, and cried, saying, These men are the servants of the most high God, which shew unto us the way of salvation.",
+          "9879dbb7aec41528-01": "Following Paul and us, she cried out, “These men are servants of the Most High God, who proclaim to us a way of salvation!”",
+          "bba730b9171fcc22-01": "She came after Paul and us, crying out and saying, These men are the servants of the Most High God, who are giving you news of the way of salvation.",
+          "06125ad3d1d57585-01": "Following Paul and us, she cried out, “These men are servants of the Most High God, who proclaim to us a way of salvation!”",
+          "41926a4aa3831714-01": "Following Paul and us, she cried out, “These men are servants of the Most High God, who proclaim to us a way of salvation!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And this did she many days. But Paul, being grieved, turned and said to the spirit, I command thee in the name of Jesus Christ to come out of her. And he came out the same hour.",
+          "9879dbb7aec41528-01": "She was doing this for many days. But Paul, becoming greatly annoyed, turned and said to the spirit, “I command you in the name of Jesus Christ to come out of her!” It came out that very hour.",
+          "bba730b9171fcc22-01": "And this she did on a number of days. But Paul was greatly troubled and, turning, said to the spirit, I give you orders in the name of Jesus Christ, to come out of her. And it came out that very hour.",
+          "06125ad3d1d57585-01": "She was doing this for many days. But Paul, becoming greatly annoyed, turned and said to the spirit, “I command you in the name of Jesus Christ to come out of her!” It came out that very hour.",
+          "41926a4aa3831714-01": "She was doing this for many days. But Paul, becoming greatly annoyed, turned and said to the spirit, “I command you in the name of Jesus Christ to come out of her!” It came out that very hour."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And when her masters saw that the hope of their gains was gone, they caught Paul and Silas, and drew them into the marketplace unto the rulers,",
+          "9879dbb7aec41528-01": "But when her masters saw that the hope of their gain was gone, they seized Paul and Silas, and dragged them into the marketplace before the rulers.",
+          "bba730b9171fcc22-01": "But when her masters saw that their hope of profit was gone, they took Paul and Silas, pulling them into the market-place before the rulers;",
+          "06125ad3d1d57585-01": "But when her masters saw that the hope of their gain was gone, they seized Paul and Silas, and dragged them into the marketplace before the rulers.",
+          "41926a4aa3831714-01": "But when her masters saw that the hope of their gain was gone, they seized Paul and Silas, and dragged them into the marketplace before the rulers."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And brought them to the magistrates, saying, These men, being Jews, do exceedingly trouble our city,",
+          "9879dbb7aec41528-01": "When they had brought them to the magistrates, they said, “These men, being Jews, are agitating our city,",
+          "bba730b9171fcc22-01": "And when they had taken them before the authorities, they said, These men, who are Jews, are greatly troubling our town;",
+          "06125ad3d1d57585-01": "When they had brought them to the magistrates, they said, “These men, being Jews, are agitating our city,",
+          "41926a4aa3831714-01": "When they had brought them to the magistrates, they said, “These men, being Jews, are agitating our city,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And teach customs, which are not lawful for us to receive, neither to observe, being Romans.",
+          "9879dbb7aec41528-01": "and advocate customs which it is not lawful for us to accept or to observe, being Romans.”",
+          "bba730b9171fcc22-01": "Teaching rules of living which it is not right for us to have or to keep, being Romans.",
+          "06125ad3d1d57585-01": "and advocate customs which it is not lawful for us to accept or to observe, being Romans.”",
+          "41926a4aa3831714-01": "and advocate customs which it is not lawful for us to accept or to observe, being Romans.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "And the multitude rose up together against them: and the magistrates rent off their clothes, and commanded to beat them.",
+          "9879dbb7aec41528-01": "The multitude rose up together against them, and the magistrates tore their clothes from them, and commanded them to be beaten with rods.",
+          "bba730b9171fcc22-01": "And the people made an attack on them all together: and the authorities took their clothing off them, and gave orders for them to be whipped.",
+          "06125ad3d1d57585-01": "The multitude rose up together against them, and the magistrates tore their clothes from them, and commanded them to be beaten with rods.",
+          "41926a4aa3831714-01": "The multitude rose up together against them, and the magistrates tore their clothes from them, and commanded them to be beaten with rods."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "And when they had laid many stripes upon them, they cast them  into prison, charging the jailer to keep them safely:",
+          "9879dbb7aec41528-01": "When they had laid many stripes on them, they threw them into prison, charging the jailer to keep them safely,",
+          "bba730b9171fcc22-01": "And when they had given them a great number of blows, they put them in prison, giving orders to the keeper of the prison to keep them safely:",
+          "06125ad3d1d57585-01": "When they had laid many stripes on them, they threw them into prison, charging the jailer to keep them safely,",
+          "41926a4aa3831714-01": "When they had laid many stripes on them, they threw them into prison, charging the jailer to keep them safely,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "Who, having received such a charge, thrust them into the inner prison, and made their feet fast in the stocks.",
+          "9879dbb7aec41528-01": "who, having received such a command, threw them into the inner prison, and secured their feet in the stocks.",
+          "bba730b9171fcc22-01": "And he, having such orders, put them into the inner prison with chains on their feet.",
+          "06125ad3d1d57585-01": "who, having received such a command, threw them into the inner prison, and secured their feet in the stocks.",
+          "41926a4aa3831714-01": "who, having received such a command, threw them into the inner prison, and secured their feet in the stocks."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them.",
+          "9879dbb7aec41528-01": "But about midnight Paul and Silas were praying and singing hymns to God, and the prisoners were listening to them.",
+          "bba730b9171fcc22-01": "But about the middle of the night, Paul and Silas were making prayers and songs to God in the hearing of the prisoners;",
+          "06125ad3d1d57585-01": "But about midnight Paul and Silas were praying and singing hymns to God, and the prisoners were listening to them.",
+          "41926a4aa3831714-01": "But about midnight Paul and Silas were praying and singing hymns to God, and the prisoners were listening to them."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And suddenly there was a great earthquake, so that the foundations of the prison were shaken: and immediately all the doors were opened, and every one’s bands were loosed.",
+          "9879dbb7aec41528-01": "Suddenly there was a great earthquake, so that the foundations of the prison were shaken; and immediately all the doors were opened, and everyone’s bonds were loosened.",
+          "bba730b9171fcc22-01": "And suddenly there was an earth-shock, so that the base of the prison was moved: and all the doors came open, and everyone's chains came off.",
+          "06125ad3d1d57585-01": "Suddenly there was a great earthquake, so that the foundations of the prison were shaken; and immediately all the doors were opened, and everyone’s bonds were loosened.",
+          "41926a4aa3831714-01": "Suddenly there was a great earthquake, so that the foundations of the prison were shaken; and immediately all the doors were opened, and everyone’s bonds were loosened."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "And the keeper of the prison awaking out of his sleep, and seeing the prison doors open, he drew out his sword, and would have killed himself, supposing that the prisoners had been fled.",
+          "9879dbb7aec41528-01": "The jailer, being roused out of sleep and seeing the prison doors open, drew his sword and was about to kill himself, supposing that the prisoners had escaped.",
+          "bba730b9171fcc22-01": "And the keeper, coming out of his sleep, and seeing the prison doors open, took his sword and was about to put himself to death, fearing that the prisoners had got away.",
+          "06125ad3d1d57585-01": "The jailer, being roused out of sleep and seeing the prison doors open, drew his sword and was about to kill himself, supposing that the prisoners had escaped.",
+          "41926a4aa3831714-01": "The jailer, being roused out of sleep and seeing the prison doors open, drew his sword and was about to kill himself, supposing that the prisoners had escaped."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "But Paul cried with a loud voice, saying, Do thyself no harm: for we are all here.",
+          "9879dbb7aec41528-01": "But Paul cried with a loud voice, saying, “Don’t harm yourself, for we are all here!”",
+          "bba730b9171fcc22-01": "But Paul said in a loud voice, Do yourself no damage, for we are all here.",
+          "06125ad3d1d57585-01": "But Paul cried with a loud voice, saying, “Don’t harm yourself, for we are all here!”",
+          "41926a4aa3831714-01": "But Paul cried with a loud voice, saying, “Don’t harm yourself, for we are all here!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "Then he called for a light, and sprang in, and came trembling, and fell down before Paul and Silas,",
+          "9879dbb7aec41528-01": "He called for lights, sprang in, fell down trembling before Paul and Silas,",
+          "bba730b9171fcc22-01": "And he sent for lights and came rushing in and, shaking with fear, went down on his face before Paul and Silas,",
+          "06125ad3d1d57585-01": "He called for lights, sprang in, fell down trembling before Paul and Silas,",
+          "41926a4aa3831714-01": "He called for lights, sprang in, fell down trembling before Paul and Silas,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "And brought them out, and said, Sirs, what must I do to be saved?",
+          "9879dbb7aec41528-01": "brought them out, and said, “Sirs, what must I do to be saved?”",
+          "bba730b9171fcc22-01": "And took them out and said, Sirs, what have I to do to get salvation?",
+          "06125ad3d1d57585-01": "brought them out, and said, “Sirs, what must I do to be saved?”",
+          "41926a4aa3831714-01": "brought them out, and said, “Sirs, what must I do to be saved?”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "And they said, Believe on the Lord Jesus Christ, and thou shalt be saved, and thy house.",
+          "9879dbb7aec41528-01": "They said, “Believe in the Lord Jesus Christ, and you will be saved, you and your household.”",
+          "bba730b9171fcc22-01": "And they said, Have faith in the Lord Jesus, and you and your family will have salvation.",
+          "06125ad3d1d57585-01": "They said, “Believe in the Lord Jesus Christ, and you will be saved, you and your household.”",
+          "41926a4aa3831714-01": "They said, “Believe in the Lord Jesus Christ, and you will be saved, you and your household.”"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "And they spake unto him the word of the Lord, and to all that were in his house.",
+          "9879dbb7aec41528-01": "They spoke the word of the Lord to him, and to all who were in his house.",
+          "bba730b9171fcc22-01": "And they gave the word of the Lord to him and to all who were in his house.",
+          "06125ad3d1d57585-01": "They spoke the word of the Lord to him, and to all who were in his house.",
+          "41926a4aa3831714-01": "They spoke the word of the Lord to him, and to all who were in his house."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "And he took them the same hour of the night, and washed their  stripes; and was baptized, he and all his, straightway.",
+          "9879dbb7aec41528-01": "He took them the same hour of the night, and washed their stripes, and was immediately baptized, he and all his household.",
+          "bba730b9171fcc22-01": "And that same hour of the night, he took them, and when he had given attention to their wounds, he and all his family had baptism straight away.",
+          "06125ad3d1d57585-01": "He took them the same hour of the night, and washed their stripes, and was immediately baptized, he and all his household.",
+          "41926a4aa3831714-01": "He took them the same hour of the night, and washed their stripes, and was immediately baptized, he and all his household."
+        },
+        "words": [
+          {
+            "original": "βαπτίζω",
+            "transliteration": "bap-ti-zo",
+            "english": "baptize / wash",
+            "strongs": "G0907",
+            "parsing": "V-APP-mp"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he had brought them into his house, he set meat before them, and rejoiced, believing in God with all his house.",
+          "9879dbb7aec41528-01": "He brought them up into his house, and set food before them, and rejoiced greatly, with all his household, having believed in God.",
+          "bba730b9171fcc22-01": "And he took them into his house and gave them food, and he was full of joy, having faith in God with all his family.",
+          "06125ad3d1d57585-01": "He brought them up into his house, and set food before them, and rejoiced greatly, with all his household, having believed in God.",
+          "41926a4aa3831714-01": "He brought them up into his house, and set food before them, and rejoiced greatly, with all his household, having believed in God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 35,
+        "translations": {
+          "de4e12af7f28f599-02": "And when it was day, the magistrates sent the serjeants, saying, Let those men go.",
+          "9879dbb7aec41528-01": "But when it was day, the magistrates sent the sergeants, saying, “Let those men go.”",
+          "bba730b9171fcc22-01": "But when it was day, the authorities sent the police, saying, Let these men go.",
+          "06125ad3d1d57585-01": "But when it was day, the magistrates sent the sergeants, saying, “Let those men go.”",
+          "41926a4aa3831714-01": "But when it was day, the magistrates sent the sergeants, saying, “Let those men go.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 36,
+        "translations": {
+          "de4e12af7f28f599-02": "And the keeper of the prison told this saying to Paul, The magistrates have sent to let you go: now therefore depart, and go in peace.",
+          "9879dbb7aec41528-01": "The jailer reported these words to Paul, saying, “The magistrates have sent to let you go; now therefore come out, and go in peace.”",
+          "bba730b9171fcc22-01": "And the keeper said to Paul, The authorities have given orders to let you go: come out now, and go in peace.",
+          "06125ad3d1d57585-01": "The jailer reported these words to Paul, saying, “The magistrates have sent to let you go; now therefore come out, and go in peace.”",
+          "41926a4aa3831714-01": "The jailer reported these words to Paul, saying, “The magistrates have sent to let you go; now therefore come out, and go in peace.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 37,
+        "translations": {
+          "de4e12af7f28f599-02": "But Paul said unto them, They have beaten us openly uncondemned, being Romans, and have cast us into prison; and now do they thrust us out privily? nay verily; but let them come themselves and fetch us out.",
+          "9879dbb7aec41528-01": "But Paul said to them, “They have beaten us publicly, without a trial, men who are Romans, and have cast us into prison! Do they now release us secretly? No, most certainly, but let them come themselves and bring us out!”",
+          "bba730b9171fcc22-01": "But Paul said to them, They have given us who are Romans a public whipping without judging us, and have put us in prison. Will they now send us out secretly? no, truly, let them come themselves and take us out.",
+          "06125ad3d1d57585-01": "But Paul said to them, “They have beaten us publicly, without a trial, men who are Romans, and have cast us into prison! Do they now release us secretly? No, most certainly, but let them come themselves and bring us out!”",
+          "41926a4aa3831714-01": "But Paul said to them, “They have beaten us publicly, without a trial, men who are Romans, and have cast us into prison! Do they now release us secretly? No, most certainly, but let them come themselves and bring us out!”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 38,
+        "translations": {
+          "de4e12af7f28f599-02": "And the serjeants told these words unto the magistrates: and they feared, when they heard that they were Romans.",
+          "9879dbb7aec41528-01": "The sergeants reported these words to the magistrates, and they were afraid when they heard that they were Romans,",
+          "bba730b9171fcc22-01": "And the police gave an account of these words to the authorities, and they were full of fear on hearing that they were Romans;",
+          "06125ad3d1d57585-01": "The sergeants reported these words to the magistrates, and they were afraid when they heard that they were Romans,",
+          "41926a4aa3831714-01": "The sergeants reported these words to the magistrates, and they were afraid when they heard that they were Romans,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 39,
+        "translations": {
+          "de4e12af7f28f599-02": "And they came and besought them, and brought them out, and desired them to depart out of the city.",
+          "9879dbb7aec41528-01": "and they came and begged them. When they had brought them out, they asked them to depart from the city.",
+          "bba730b9171fcc22-01": "Then they came and made prayers to them, requesting them, when they had taken them out, to go away from the town.",
+          "06125ad3d1d57585-01": "and they came and begged them. When they had brought them out, they asked them to depart from the city.",
+          "41926a4aa3831714-01": "and they came and begged them. When they had brought them out, they asked them to depart from the city."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 40,
+        "translations": {
+          "de4e12af7f28f599-02": "And they went out of the prison, and entered into the house of  Lydia and when they had seen the brethren, they comforted them, and departed.",
+          "9879dbb7aec41528-01": "They went out of the prison, and entered into Lydia’s house. When they had seen the brothers, they encouraged them, and departed.",
+          "bba730b9171fcc22-01": "And they came out of the prison and went to the house of Lydia: and when they had seen the brothers they gave them comfort and went away.",
+          "06125ad3d1d57585-01": "They went out of the prison, and entered into Lydia’s house. When they had seen the brothers, they encouraged them, and departed.",
+          "41926a4aa3831714-01": "They went out of the prison, and entered into Lydia’s house. When they had seen the brothers, they encouraged them, and departed."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Galatians 1:1-24": {
+    "reference": "Galatians 1:1-24",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)",
+          "9879dbb7aec41528-01": "Paul, an apostle (not from men, nor through man, but through Jesus Christ, and God the Father, who raised him from the dead),",
+          "bba730b9171fcc22-01": "Paul, an Apostle (not from men, and not through man, but through Jesus Christ, and God the Father, who made him come back from the dead),",
+          "06125ad3d1d57585-01": "Paul, an apostle (not from men, nor through man, but through Jesus Christ, and God the Father, who raised him from the dead),",
+          "41926a4aa3831714-01": "Paul, an apostle (not from men, nor through man, but through Jesus Christ, and God the Father, who raised him from the dead),"
+        },
+        "words": [
+          {
+            "original": "ἀπόστολος",
+            "transliteration": "a-pos-to-los",
+            "english": "apostle / messenger",
+            "strongs": "G0652",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And all the brethren which are with me, unto the churches of Galatia:",
+          "9879dbb7aec41528-01": "and all the brothers who are with me, to the assemblies of Galatia:",
+          "bba730b9171fcc22-01": "And all the brothers who are with me, to the churches of Galatia:",
+          "06125ad3d1d57585-01": "and all the brothers who are with me, to the assemblies of Galatia:",
+          "41926a4aa3831714-01": "and all the brothers who are with me, to the assemblies of Galatia:"
+        },
+        "words": [
+          {
+            "original": "ἐκκλησία",
+            "transliteration": "ek-kle-si-a",
+            "english": "church / assembly",
+            "strongs": "G1577",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Grace be to you and peace from God the Father, and from  our Lord Jesus Christ,",
+          "9879dbb7aec41528-01": "Grace to you and peace from God the Father, and our Lord Jesus Christ,",
+          "bba730b9171fcc22-01": "Grace to you and peace from God the Father and our Lord Jesus Christ,",
+          "06125ad3d1d57585-01": "Grace to you and peace from God the Father, and our Lord Jesus Christ,",
+          "41926a4aa3831714-01": "Grace to you and peace from God the Father, and our Lord Jesus Christ,"
+        },
+        "words": [
+          {
+            "original": "χάρις",
+            "transliteration": "cha-ris",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Who gave himself for our sins, that he might deliver us from this present evil world, according to the will of God and our Father:",
+          "9879dbb7aec41528-01": "who gave himself for our sins, that he might deliver us out of this present evil age, according to the will of our God and Father—",
+          "bba730b9171fcc22-01": "Who gave himself for our sins, so that he might make us free from this present evil world, after the purpose of our God and Father:",
+          "06125ad3d1d57585-01": "who gave himself for our sins, that he might deliver us out of this present evil age, according to the will of our God and Father—",
+          "41926a4aa3831714-01": "who gave himself for our sins, that he might deliver us out of this present evil age, according to the will of our God and Father—"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "To whom be glory for ever and ever. Amen.",
+          "9879dbb7aec41528-01": "to whom be the glory forever and ever. Amen.",
+          "bba730b9171fcc22-01": "To whom be the glory for ever and ever. So be it.",
+          "06125ad3d1d57585-01": "to whom be the glory forever and ever. Amen.",
+          "41926a4aa3831714-01": "to whom be the glory forever and ever. Amen."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "I marvel that ye are so soon removed from him that called you into the grace of Christ unto another gospel:",
+          "9879dbb7aec41528-01": "I marvel that you are so quickly deserting him who called you in the grace of Christ to a different “good news”;",
+          "bba730b9171fcc22-01": "I am surprised that you are being so quickly turned away from him whose word came to you in the grace of Christ, to good news of a different sort;",
+          "06125ad3d1d57585-01": "I marvel that you are so quickly deserting him who called you in the grace of Christ to a different “good news”;",
+          "41926a4aa3831714-01": "I marvel that you are so quickly deserting him who called you in the grace of Christ to a different “good news”;"
+        },
+        "words": [
+          {
+            "original": "εὐαγγέλιον",
+            "transliteration": "eu-an-ge-li-on",
+            "english": "gospel / good news",
+            "strongs": "G2098",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "χάρις",
+            "transliteration": "cha-ris",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Which is not another; but there be some that trouble you, and would pervert the gospel of Christ.",
+          "9879dbb7aec41528-01": "and there isn’t another “good news.” Only there are some who trouble you, and want to pervert the Good News of Christ.",
+          "bba730b9171fcc22-01": "Which is not another sort: only there are some who give you trouble, desiring to make changes in the good news of Christ.",
+          "06125ad3d1d57585-01": "and there isn’t another “good news.” Only there are some who trouble you, and want to pervert the Good News of Christ.",
+          "41926a4aa3831714-01": "and there isn’t another “good news.” Only there are some who trouble you, and want to pervert the Good News of Christ."
+        },
+        "words": [
+          {
+            "original": "εὐαγγέλιον",
+            "transliteration": "eu-an-ge-li-on",
+            "english": "gospel / good news",
+            "strongs": "G2098",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed.",
+          "9879dbb7aec41528-01": "But even though we, or an angel from heaven, should preach to you any “good news” other than that which we preached to you, let him be cursed.",
+          "bba730b9171fcc22-01": "But even if we, or an angel from heaven, were to be a preacher to you of good news other than that which we have given you, let there be a curse on him.",
+          "06125ad3d1d57585-01": "But even though we, or an angel from heaven, should preach to you any “good news” other than that which we preached to you, let him be cursed.",
+          "41926a4aa3831714-01": "But even though we, or an angel from heaven, should preach to you any “good news” other than that which we preached to you, let him be cursed."
+        },
+        "words": [
+          {
+            "original": "εὐαγγέλιον",
+            "transliteration": "eu-an-ge-li-on",
+            "english": "gospel / good news",
+            "strongs": "G2098",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "As we said before, so say I now again, If any man preach any other gospel unto you than that ye have received, let him be accursed.",
+          "9879dbb7aec41528-01": "As we have said before, so I now say again: if any man preaches to you any “good news” other than that which you received, let him be cursed.",
+          "bba730b9171fcc22-01": "As we have said before, so say I now again, If any man is a preacher to you of any good news other than that which has been given to you, let there be a curse on him.",
+          "06125ad3d1d57585-01": "As we have said before, so I now say again: if any man preaches to you any “good news” other than that which you received, let him be cursed.",
+          "41926a4aa3831714-01": "As we have said before, so I now say again: if any man preaches to you any “good news” other than that which you received, let him be cursed."
+        },
+        "words": [
+          {
+            "original": "εὐαγγέλιον",
+            "transliteration": "eu-an-ge-li-on",
+            "english": "gospel / good news",
+            "strongs": "G2098",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "For do I now persuade men, or God? or do I seek to please men? for if I yet pleased men, I should not be the servant of Christ.",
+          "9879dbb7aec41528-01": "For am I now seeking the favor of men, or of God? Or am I striving to please men? For if I were still pleasing men, I wouldn’t be a servant of Christ.",
+          "bba730b9171fcc22-01": "Am I now using arguments to men, or God? or is it my desire to give men pleasure? if I was still pleasing men, I would not be a servant of Christ.",
+          "06125ad3d1d57585-01": "For am I now seeking the favor of men, or of God? Or am I striving to please men? For if I were still pleasing men, I wouldn’t be a servant of Christ.",
+          "41926a4aa3831714-01": "For am I now seeking the favor of men, or of God? Or am I striving to please men? For if I were still pleasing men, I wouldn’t be a servant of Christ."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "But I certify you, brethren, that the gospel which was preached of me is not after man.",
+          "9879dbb7aec41528-01": "But I make known to you, brothers, concerning the Good News which was preached by me, that it is not according to man.",
+          "bba730b9171fcc22-01": "Because I say to you, my brothers, that the good news of which I was the preacher is not man's.",
+          "06125ad3d1d57585-01": "But I make known to you, brothers, concerning the Good News which was preached by me, that it is not according to man.",
+          "41926a4aa3831714-01": "But I make known to you, brothers, concerning the Good News which was preached by me, that it is not according to man."
+        },
+        "words": [
+          {
+            "original": "εὐαγγέλιον",
+            "transliteration": "eu-an-ge-li-on",
+            "english": "gospel / good news",
+            "strongs": "G2098",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "For I neither received it of man, neither was I taught it,  but by the revelation of Jesus Christ.",
+          "9879dbb7aec41528-01": "For neither did I receive it from man, nor was I taught it, but it came to me through revelation of Jesus Christ.",
+          "bba730b9171fcc22-01": "For I did not get it from man, and I was not given teaching in it, but it came to me through revelation of Jesus Christ.",
+          "06125ad3d1d57585-01": "For neither did I receive it from man, nor was I taught it, but it came to me through revelation of Jesus Christ.",
+          "41926a4aa3831714-01": "For neither did I receive it from man, nor was I taught it, but it came to me through revelation of Jesus Christ."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "For ye have heard of my conversation in time past in the Jews’ religion, how that beyond measure I persecuted the church of God, and wasted it:",
+          "9879dbb7aec41528-01": "For you have heard of my way of living in time past in the Jews’ religion, how that beyond measure I persecuted the assembly of God, and ravaged it.",
+          "bba730b9171fcc22-01": "For news has come to you of my way of life in the past in the Jews' religion, how I was cruel without measure to the church of God, and did great damage to it:",
+          "06125ad3d1d57585-01": "For you have heard of my way of living in time past in the Jews’ religion, how that beyond measure I persecuted the assembly of God, and ravaged it.",
+          "41926a4aa3831714-01": "For you have heard of my way of living in time past in the Jews’ religion, how that beyond measure I persecuted the assembly of God, and ravaged it."
+        },
+        "words": [
+          {
+            "original": "ἐκκλησία",
+            "transliteration": "ek-kle-si-a",
+            "english": "church / assembly",
+            "strongs": "G1577",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And profited in the Jews’ religion above many my equals in mine own nation, being more exceedingly zealous of the traditions of my fathers.",
+          "9879dbb7aec41528-01": "I advanced in the Jews’ religion beyond many of my own age among my countrymen, being more exceedingly zealous for the traditions of my fathers.",
+          "bba730b9171fcc22-01": "And I went farther in the Jews' religion than a number of my generation among my countrymen, having a more burning interest in the beliefs handed down from my fathers.",
+          "06125ad3d1d57585-01": "I advanced in the Jews’ religion beyond many of my own age among my countrymen, being more exceedingly zealous for the traditions of my fathers.",
+          "41926a4aa3831714-01": "I advanced in the Jews’ religion beyond many of my own age among my countrymen, being more exceedingly zealous for the traditions of my fathers."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "But when it pleased God, who separated me from my mother’s womb, and called me by his grace,",
+          "9879dbb7aec41528-01": "But when it was the good pleasure of God, who separated me from my mother’s womb, and called me through his grace,",
+          "bba730b9171fcc22-01": "But when it was the good pleasure of God, by whom I was marked out even from my mother's body, through his grace,",
+          "06125ad3d1d57585-01": "But when it was the good pleasure of God, who separated me from my mother’s womb, and called me through his grace,",
+          "41926a4aa3831714-01": "But when it was the good pleasure of God, who separated me from my mother’s womb, and called me through his grace,"
+        },
+        "words": [
+          {
+            "original": "χάρις",
+            "transliteration": "cha-ris",
+            "english": "grace / favor",
+            "strongs": "G5485",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "To reveal his Son in me, that I might preach him among the heathen; immediately I conferred not with flesh and blood:",
+          "9879dbb7aec41528-01": "to reveal his Son in me, that I might preach him among the Gentiles, I didn’t immediately confer with flesh and blood,",
+          "bba730b9171fcc22-01": "To give the revelation of his Son in me, so that I might give the news of him to the Gentiles; then I did not take the opinion of flesh and blood,",
+          "06125ad3d1d57585-01": "to reveal his Son in me, that I might preach him among the Gentiles, I didn’t immediately confer with flesh and blood,",
+          "41926a4aa3831714-01": "to reveal his Son in me, that I might preach him among the Gentiles, I didn’t immediately confer with flesh and blood,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "Neither went I up to Jerusalem to them which were apostles before me; but I went into Arabia, and returned again unto Damascus.",
+          "9879dbb7aec41528-01": "nor did I go up to Jerusalem to those who were apostles before me, but I went away into Arabia. Then I returned to Damascus.",
+          "bba730b9171fcc22-01": "And I went not up to Jerusalem to those who were Apostles before me; but I went away into Arabia, and again I came back to Damascus.",
+          "06125ad3d1d57585-01": "nor did I go up to Jerusalem to those who were apostles before me, but I went away into Arabia. Then I returned to Damascus.",
+          "41926a4aa3831714-01": "nor did I go up to Jerusalem to those who were apostles before me, but I went away into Arabia. Then I returned to Damascus."
+        },
+        "words": [
+          {
+            "original": "ἀπόστολος",
+            "transliteration": "a-pos-to-los",
+            "english": "apostle / messenger",
+            "strongs": "G0652",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Then after three years I went up to Jerusalem to see Peter, and abode with him fifteen days.",
+          "9879dbb7aec41528-01": "Then after three years I went up to Jerusalem to visit Peter, and stayed with him fifteen days.",
+          "bba730b9171fcc22-01": "Then after three years I went up to Jerusalem to see Cephas, and was there with him fifteen days.",
+          "06125ad3d1d57585-01": "Then after three years I went up to Jerusalem to visit Peter, and stayed with him fifteen days.",
+          "41926a4aa3831714-01": "Then after three years I went up to Jerusalem to visit Peter, and stayed with him fifteen days."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "But other of the apostles saw I none, save James the Lord’s brother.",
+          "9879dbb7aec41528-01": "But of the other apostles I saw no one, except James, the Lord’s brother.",
+          "bba730b9171fcc22-01": "But of the other Apostles I saw only James, the Lord's brother.",
+          "06125ad3d1d57585-01": "But of the other apostles I saw no one, except James, the Lord’s brother.",
+          "41926a4aa3831714-01": "But of the other apostles I saw no one, except James, the Lord’s brother."
+        },
+        "words": [
+          {
+            "original": "ἀπόστολος",
+            "transliteration": "a-pos-to-los",
+            "english": "apostle / messenger",
+            "strongs": "G0652",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "Now the things which I write unto you, behold, before God, I lie not.",
+          "9879dbb7aec41528-01": "Now about the things which I write to you, behold, before God, I’m not lying.",
+          "bba730b9171fcc22-01": "Now God is witness that the things which I am writing to you are true.",
+          "06125ad3d1d57585-01": "Now about the things which I write to you, behold, before God, I’m not lying.",
+          "41926a4aa3831714-01": "Now about the things which I write to you, behold, before God, I’m not lying."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "Afterwards I came into the regions of Syria and Cilicia;",
+          "9879dbb7aec41528-01": "Then I came to the regions of Syria and Cilicia.",
+          "bba730b9171fcc22-01": "Then I came to the parts of Syria and Cilicia.",
+          "06125ad3d1d57585-01": "Then I came to the regions of Syria and Cilicia.",
+          "41926a4aa3831714-01": "Then I came to the regions of Syria and Cilicia."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "And was unknown by face unto the churches of Judaea which were in Christ:",
+          "9879dbb7aec41528-01": "I was still unknown by face to the assemblies of Judea which were in Christ,",
+          "bba730b9171fcc22-01": "And the churches of Judaea which were in Christ still had no knowledge of my face or person:",
+          "06125ad3d1d57585-01": "I was still unknown by face to the assemblies of Judea which were in Christ,",
+          "41926a4aa3831714-01": "I was still unknown by face to the assemblies of Judea which were in Christ,"
+        },
+        "words": [
+          {
+            "original": "ἐκκλησία",
+            "transliteration": "ek-kle-si-a",
+            "english": "church / assembly",
+            "strongs": "G1577",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "But they had heard only, That he which persecuted us in times past now preacheth the faith which once he destroyed.",
+          "9879dbb7aec41528-01": "but they only heard: “He who once persecuted us now preaches the faith that he once tried to destroy.”",
+          "bba730b9171fcc22-01": "Only it came to their ears that he who at one time was cruel to us is now preaching the faith which before had been attacked by him;",
+          "06125ad3d1d57585-01": "but they only heard: “He who once persecuted us now preaches the faith that he once tried to destroy.”",
+          "41926a4aa3831714-01": "but they only heard: “He who once persecuted us now preaches the faith that he once tried to destroy.”"
+        },
+        "words": [
+          {
+            "original": "πίστις",
+            "transliteration": "pis-tis",
+            "english": "faith / belief",
+            "strongs": "G4102",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "And they glorified God in me.",
+          "9879dbb7aec41528-01": "And they glorified God in me.",
+          "bba730b9171fcc22-01": "And they gave glory to God in me.",
+          "06125ad3d1d57585-01": "And they glorified God in me.",
+          "41926a4aa3831714-01": "And they glorified God in me."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Acts 17:16-34": {
+    "reference": "Acts 17:16-34",
+    "verses": [
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "Now while Paul waited for them at Athens, his spirit was stirred in him, when he saw the city wholly given to idolatry.",
+          "9879dbb7aec41528-01": "Now while Paul waited for them at Athens, his spirit was provoked within him as he saw the city full of idols.",
+          "bba730b9171fcc22-01": "Now while Paul was waiting for them at Athens, his spirit was troubled, for he saw all the town full of images of the gods.",
+          "06125ad3d1d57585-01": "Now while Paul waited for them at Athens, his spirit was provoked within him as he saw the city full of idols.",
+          "41926a4aa3831714-01": "Now while Paul waited for them at Athens, his spirit was provoked within him as he saw the city full of idols."
+        },
+        "words": [
+          {
+            "original": "πνεῦμα",
+            "transliteration": "pneu-ma",
+            "english": "spirit / wind",
+            "strongs": "G4151",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "Therefore disputed he in the synagogue with the Jews, and with the devout persons, and in the market daily with them that met with him.",
+          "9879dbb7aec41528-01": "So he reasoned in the synagogue with the Jews and the devout persons, and in the marketplace every day with those who met him.",
+          "bba730b9171fcc22-01": "So he had discussions in the Synagogue with the Jews and God-fearing Gentiles, and every day in the market-place with those who were there.",
+          "06125ad3d1d57585-01": "So he reasoned in the synagogue with the Jews and the devout persons, and in the marketplace every day with those who met him.",
+          "41926a4aa3831714-01": "So he reasoned in the synagogue with the Jews and the devout persons, and in the marketplace every day with those who met him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Then certain philosophers of the Epicureans, and of the Stoicks, encountered him. And some said, What will this babbler say? other some, He seemeth to be a setter forth of strange gods: because he preached unto them Jesus, and the resurrection.",
+          "9879dbb7aec41528-01": "Some of the Epicurean and Stoic philosophers also were conversing with him. Some said, “What does this babbler want to say?” Others said, “He seems to be advocating foreign deities,” because he preached Jesus and the resurrection.",
+          "bba730b9171fcc22-01": "And some of those who were supporters of the theories of the Epicureans and the Stoics, had a meeting with him. And some said, What is this talker of foolish words saying? And others, He seems to be a preacher of strange gods: because he was preaching of Jesus and his coming back from the dead.",
+          "06125ad3d1d57585-01": "Some of the Epicurean and Stoic philosophers also were conversing with him. Some said, “What does this babbler want to say?” Others said, “He seems to be advocating foreign deities,” because he preached Jesus and the resurrection.",
+          "41926a4aa3831714-01": "Some of the Epicurean and Stoic philosophers also were conversing with him. Some said, “What does this babbler want to say?” Others said, “He seems to be advocating foreign deities,” because he preached Jesus and the resurrection."
+        },
+        "words": [
+          {
+            "original": "ἀνάστασις",
+            "transliteration": "a-nas-ta-sis",
+            "english": "resurrection",
+            "strongs": "G0386",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And they took him, and brought him unto Areopagus, saying, May we know what this new doctrine, whereof thou speakest, is?",
+          "9879dbb7aec41528-01": "They took hold of him, and brought him to the Areopagus, saying, “May we know what this new teaching is, which is spoken by you?",
+          "bba730b9171fcc22-01": "And they took him to Mars' Hill, saying, Will you make clear to us what is this new teaching of yours?",
+          "06125ad3d1d57585-01": "They took hold of him, and brought him to the Areopagus, saying, “May we know what this new teaching is, which is spoken by you?",
+          "41926a4aa3831714-01": "They took hold of him, and brought him to the Areopagus, saying, “May we know what this new teaching is, which is spoken by you?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "For thou bringest certain strange things to our ears: we would know therefore what these things mean.",
+          "9879dbb7aec41528-01": "For you bring certain strange things to our ears. We want to know therefore what these things mean.”",
+          "bba730b9171fcc22-01": "For you seem to us to say strange things, and we have a desire to get the sense of them.",
+          "06125ad3d1d57585-01": "For you bring certain strange things to our ears. We want to know therefore what these things mean.”",
+          "41926a4aa3831714-01": "For you bring certain strange things to our ears. We want to know therefore what these things mean.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "(For all the Athenians and strangers which were there spent their time in nothing else, but either to tell, or to hear some new thing.)",
+          "9879dbb7aec41528-01": "Now all the Athenians and the strangers living there spent their time in nothing else, but either to tell or to hear some new thing.",
+          "bba730b9171fcc22-01": "(Now all the Athenians and the men from other lands who come there were giving all their time to talking or hearing of anything new.)",
+          "06125ad3d1d57585-01": "Now all the Athenians and the strangers living there spent their time in nothing else, but either to tell or to hear some new thing.",
+          "41926a4aa3831714-01": "Now all the Athenians and the strangers living there spent their time in nothing else, but either to tell or to hear some new thing."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "Then Paul stood in the midst of Mars’ hill, and said, Ye  men of Athens, I perceive that in all things ye are too superstitious.",
+          "9879dbb7aec41528-01": "Paul stood in the middle of the Areopagus, and said, “You men of Athens, I perceive that you are very religious in all things.",
+          "bba730b9171fcc22-01": "And Paul got to his feet on Mars' Hill and said, O men of Athens, I see that you are overmuch given to fear of the gods.",
+          "06125ad3d1d57585-01": "Paul stood in the middle of the Areopagus, and said, “You men of Athens, I perceive that you are very religious in all things.",
+          "41926a4aa3831714-01": "Paul stood in the middle of the Areopagus, and said, “You men of Athens, I perceive that you are very religious in all things."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "For as I passed by, and beheld your devotions, I found an altar with this inscription, TO THE UNKNOWN GOD. Whom therefore ye ignorantly worship, him declare I unto you.",
+          "9879dbb7aec41528-01": "For as I passed along, and observed the objects of your worship, I found also an altar with this inscription: ‘TO AN UNKNOWN GOD.’ What therefore you worship in ignorance, this I announce to you.",
+          "bba730b9171fcc22-01": "For when I came by, I was looking at the things to which you give worship, and I saw an altar with this writing on it, TO THE GOD OF WHOM THERE IS NO KNOWLEDGE. Now, what you, without knowledge, give worship to, I make clear to you.",
+          "06125ad3d1d57585-01": "For as I passed along, and observed the objects of your worship, I found also an altar with this inscription: ‘TO AN UNKNOWN GOD.’ What therefore you worship in ignorance, this I announce to you.",
+          "41926a4aa3831714-01": "For as I passed along, and observed the objects of your worship, I found also an altar with this inscription: ‘TO AN UNKNOWN GOD.’ What therefore you worship in ignorance, this I announce to you."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "God that made the world and all things therein, seeing that he is Lord of heaven and earth, dwelleth not in temples made with hands;",
+          "9879dbb7aec41528-01": "The God who made the world and all things in it, he, being Lord of heaven and earth, doesn’t dwell in temples made with hands,",
+          "bba730b9171fcc22-01": "The God who made the earth and everything in it, he, being Lord of heaven and earth, is not housed in buildings made with hands;",
+          "06125ad3d1d57585-01": "The God who made the world and all things in it, he, being Lord of heaven and earth, doesn’t dwell in temples made with hands,",
+          "41926a4aa3831714-01": "The God who made the world and all things in it, he, being Lord of heaven and earth, doesn’t dwell in temples made with hands,"
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "Neither is worshipped with men’s hands, as though he needed any thing, seeing he giveth to all life, and breath, and all things;",
+          "9879dbb7aec41528-01": "neither is he served by men’s hands, as though he needed anything, seeing he himself gives to all life and breath, and all things.",
+          "bba730b9171fcc22-01": "And he is not dependent on the work of men's hands, as if he had need of anything, for he himself gives to all life and breath and all things;",
+          "06125ad3d1d57585-01": "neither is he served by men’s hands, as though he needed anything, seeing he himself gives to all life and breath, and all things.",
+          "41926a4aa3831714-01": "neither is he served by men’s hands, as though he needed anything, seeing he himself gives to all life and breath, and all things."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And hath made of one blood all nations of men for to dwell on all the face of the earth, and hath determined the times before appointed, and the bounds of their habitation;",
+          "9879dbb7aec41528-01": "He made from one blood every nation of men to dwell on all the surface of the earth, having determined appointed seasons, and the boundaries of their dwellings,",
+          "bba730b9171fcc22-01": "And he has made of one blood all the nations of men living on all the face of the earth, ordering their times and the limits of their lands,",
+          "06125ad3d1d57585-01": "He made from one blood every nation of men to dwell on all the surface of the earth, having determined appointed seasons, and the boundaries of their dwellings,",
+          "41926a4aa3831714-01": "He made from one blood every nation of men to dwell on all the surface of the earth, having determined appointed seasons, and the boundaries of their dwellings,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "That they should seek the Lord, if haply they might feel after him, and find him, though he be not far from every one of us:",
+          "9879dbb7aec41528-01": "that they should seek the Lord, if perhaps they might reach out for him and find him, though he is not far from each one of us.",
+          "bba730b9171fcc22-01": "So that they might make search for God, in order, if possible, to get knowledge of him and make discovery of him, though he is not far from every one of us:",
+          "06125ad3d1d57585-01": "that they should seek the Lord, if perhaps they might reach out for him and find him, though he is not far from each one of us.",
+          "41926a4aa3831714-01": "that they should seek the Lord, if perhaps they might reach out for him and find him, though he is not far from each one of us."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "For in him we live, and move, and have our being; as certain also of your own poets have said, For we are also his offspring.",
+          "9879dbb7aec41528-01": "‘For in him we live, and move, and have our being.’ As some of your own poets have said, ‘For we are also his offspring.’",
+          "bba730b9171fcc22-01": "For in him we have life and motion and existence; as certain of your verse writers have said, For we are his offspring.",
+          "06125ad3d1d57585-01": "‘For in him we live, and move, and have our being.’ As some of your own poets have said, ‘For we are also his offspring.’",
+          "41926a4aa3831714-01": "‘For in him we live, and move, and have our being.’ As some of your own poets have said, ‘For we are also his offspring.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "Forasmuch then as we are the offspring of God, we ought not to think that the Godhead is like unto gold, or silver, or stone, graven by art and man’s device.",
+          "9879dbb7aec41528-01": "Being then the offspring of God, we ought not to think that the Divine Nature is like gold, or silver, or stone, engraved by art and design of man.",
+          "bba730b9171fcc22-01": "If then we are the offspring of God, it is not right for us to have the idea that God is like gold or silver or stone, formed by the art or design of man.",
+          "06125ad3d1d57585-01": "Being then the offspring of God, we ought not to think that the Divine Nature is like gold, or silver, or stone, engraved by art and design of man.",
+          "41926a4aa3831714-01": "Being then the offspring of God, we ought not to think that the Divine Nature is like gold, or silver, or stone, engraved by art and design of man."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "And the times of this ignorance God winked at; but now commandeth all men every where to repent:",
+          "9879dbb7aec41528-01": "The times of ignorance therefore God overlooked. But now he commands that all people everywhere should repent,",
+          "bba730b9171fcc22-01": "Those times when men had no knowledge were overlooked by God; but now he gives orders to all men in every place to undergo a change of heart:",
+          "06125ad3d1d57585-01": "The times of ignorance therefore God overlooked. But now he commands that all people everywhere should repent,",
+          "41926a4aa3831714-01": "The times of ignorance therefore God overlooked. But now he commands that all people everywhere should repent,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "Because he hath appointed a day, in the which he will judge the world in righteousness by that man whom he hath ordained; whereof  he hath given assurance unto all men, in that he hath raised him from the dead.",
+          "9879dbb7aec41528-01": "because he has appointed a day in which he will judge the world in righteousness by the man whom he has ordained; of which he has given assurance to all men, in that he has raised him from the dead.”",
+          "bba730b9171fcc22-01": "Because a day has been fixed in which all the world will be judged in righteousness by the man who has been marked out by him for this work; of which he has given a sign to all men by giving him back from the dead.",
+          "06125ad3d1d57585-01": "because he has appointed a day in which he will judge the world in righteousness by the man whom he has ordained; of which he has given assurance to all men, in that he has raised him from the dead.”",
+          "41926a4aa3831714-01": "because he has appointed a day in which he will judge the world in righteousness by the man whom he has ordained; of which he has given assurance to all men, in that he has raised him from the dead.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 32,
+        "translations": {
+          "de4e12af7f28f599-02": "And when they heard of the resurrection of the dead, some mocked: and others said, We will hear thee again of this matter.",
+          "9879dbb7aec41528-01": "Now when they heard of the resurrection of the dead, some mocked; but others said, “We want to hear you again concerning this.”",
+          "bba730b9171fcc22-01": "Now on hearing about the coming back from death, some of them made sport of it, but others said, Let us go more fully into this another time.",
+          "06125ad3d1d57585-01": "Now when they heard of the resurrection of the dead, some mocked; but others said, “We want to hear you again concerning this.”",
+          "41926a4aa3831714-01": "Now when they heard of the resurrection of the dead, some mocked; but others said, “We want to hear you again concerning this.”"
+        },
+        "words": [
+          {
+            "original": "ἀνάστασις",
+            "transliteration": "a-nas-ta-sis",
+            "english": "resurrection",
+            "strongs": "G0386",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 33,
+        "translations": {
+          "de4e12af7f28f599-02": "So Paul departed from among them.",
+          "9879dbb7aec41528-01": "Thus Paul went out from among them.",
+          "bba730b9171fcc22-01": "And so Paul went away from among them.",
+          "06125ad3d1d57585-01": "Thus Paul went out from among them.",
+          "41926a4aa3831714-01": "Thus Paul went out from among them."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 34,
+        "translations": {
+          "de4e12af7f28f599-02": "Howbeit certain men clave unto him, and believed: among the which was Dionysius the Areopagite, and a woman named Damaris, and others with them.",
+          "9879dbb7aec41528-01": "But certain men joined with him, and believed, among whom also was Dionysius the Areopagite, and a woman named Damaris, and others with them.",
+          "bba730b9171fcc22-01": "But some men gave him their support: among whom was Dionysius the Areopagite, and a woman named Damaris, and others with them.",
+          "06125ad3d1d57585-01": "But certain men joined with him, and believed, among whom also was Dionysius the Areopagite, and a woman named Damaris, and others with them.",
+          "41926a4aa3831714-01": "But certain men joined with him, and believed, among whom also was Dionysius the Areopagite, and a woman named Damaris, and others with them."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Acts 28:16-31": {
+    "reference": "Acts 28:16-31",
+    "verses": [
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And when we came to Rome, the centurion delivered the prisoners to the captain of the guard: but Paul was suffered to dwell by himself with a soldier that kept him.",
+          "9879dbb7aec41528-01": "When we entered into Rome, the centurion delivered the prisoners to the captain of the guard, but Paul was allowed to stay by himself with the soldier who guarded him.",
+          "bba730b9171fcc22-01": "And when we came into Rome, they let Paul have a house for himself and the armed man who kept watch over him.",
+          "06125ad3d1d57585-01": "When we entered into Rome, the centurion delivered the prisoners to the captain of the guard, but Paul was allowed to stay by himself with the soldier who guarded him.",
+          "41926a4aa3831714-01": "When we entered into Rome, the centurion delivered the prisoners to the captain of the guard, but Paul was allowed to stay by himself with the soldier who guarded him."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And it came to pass, that after three days Paul called the chief of the Jews together: and when they were come together, he said unto them, Men and brethren, though I have committed nothing against the people, or customs of our fathers, yet was I delivered prisoner from Jerusalem into the hands of the Romans.",
+          "9879dbb7aec41528-01": "After three days Paul called together those who were the leaders of the Jews. When they had come together, he said to them, “I, brothers, though I had done nothing against the people, or the customs of our fathers, still was delivered prisoner from Jerusalem into the hands of the Romans,",
+          "bba730b9171fcc22-01": "Then after three days he sent for the chief men of the Jews: and when they had come together, he said to them, My brothers, though I had done nothing against the people or the ways of our fathers, I was given, a prisoner from Jerusalem, into the hands of the Romans.",
+          "06125ad3d1d57585-01": "After three days Paul called together those who were the leaders of the Jews. When they had come together, he said to them, “I, brothers, though I had done nothing against the people, or the customs of our fathers, still was delivered prisoner from Jerusalem into the hands of the Romans,",
+          "41926a4aa3831714-01": "After three days Paul called together those who were the leaders of the Jews. When they had come together, he said to them, “I, brothers, though I had done nothing against the people, or the customs of our fathers, still was delivered prisoner from Jerusalem into the hands of the Romans,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Who, when they had examined me, would have let me go, because there was no cause of death in me.",
+          "9879dbb7aec41528-01": "who, when they had examined me, desired to set me free, because there was no cause of death in me.",
+          "bba730b9171fcc22-01": "Who, when they had put questions to me, were ready to let me go free, because there was no cause of death in me.",
+          "06125ad3d1d57585-01": "who, when they had examined me, desired to set me free, because there was no cause of death in me.",
+          "41926a4aa3831714-01": "who, when they had examined me, desired to set me free, because there was no cause of death in me."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "But when the Jews spake against it, I was constrained to appeal unto Caesar; not that I had ought to accuse my nation of.",
+          "9879dbb7aec41528-01": "But when the Jews spoke against it, I was constrained to appeal to Caesar, not that I had anything about which to accuse my nation.",
+          "bba730b9171fcc22-01": "But when the Jews made protest against it, I had to put my cause into Caesar's hands; not because I have anything to say against my nation.",
+          "06125ad3d1d57585-01": "But when the Jews spoke against it, I was constrained to appeal to Caesar, not that I had anything about which to accuse my nation.",
+          "41926a4aa3831714-01": "But when the Jews spoke against it, I was constrained to appeal to Caesar, not that I had anything about which to accuse my nation."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "For this cause therefore have I called for you, to see you,  and to speak with you: because that for the hope of Israel I am bound with this chain.",
+          "9879dbb7aec41528-01": "For this cause therefore I asked to see you and to speak with you. For because of the hope of Israel I am bound with this chain.”",
+          "bba730b9171fcc22-01": "But for this reason I sent for you, to see and have talk with you: for because of the hope of Israel I am in these chains.",
+          "06125ad3d1d57585-01": "For this cause therefore I asked to see you and to speak with you. For because of the hope of Israel I am bound with this chain.”",
+          "41926a4aa3831714-01": "For this cause therefore I asked to see you and to speak with you. For because of the hope of Israel I am bound with this chain.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And they said unto him, We neither received letters out of Judaea concerning thee, neither any of the brethren that came shewed or spake any harm of thee.",
+          "9879dbb7aec41528-01": "They said to him, “We neither received letters from Judea concerning you, nor did any of the brothers come here and report or speak any evil of you.",
+          "bba730b9171fcc22-01": "And they said to him, We have not had letters from Judaea about you, and no one of the brothers has come to us here to give an account or say any evil about you.",
+          "06125ad3d1d57585-01": "They said to him, “We neither received letters from Judea concerning you, nor did any of the brothers come here and report or speak any evil of you.",
+          "41926a4aa3831714-01": "They said to him, “We neither received letters from Judea concerning you, nor did any of the brothers come here and report or speak any evil of you."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "But we desire to hear of thee what thou thinkest: for as concerning this sect, we know that every where it is spoken against.",
+          "9879dbb7aec41528-01": "But we desire to hear from you what you think. For, as concerning this sect, it is known to us that everywhere it is spoken against.”",
+          "bba730b9171fcc22-01": "But we have a desire to give hearing to your opinion: for as to this form of religion, we have knowledge that in all places it is attacked.",
+          "06125ad3d1d57585-01": "But we desire to hear from you what you think. For, as concerning this sect, it is known to us that everywhere it is spoken against.”",
+          "41926a4aa3831714-01": "But we desire to hear from you what you think. For, as concerning this sect, it is known to us that everywhere it is spoken against.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "And when they had appointed him a day, there came many to him into his lodging; to whom he expounded and testified the kingdom of God, persuading them concerning Jesus, both out of the law of Moses, and out of the prophets, from morning till evening.",
+          "9879dbb7aec41528-01": "When they had appointed him a day, many people came to him at his lodging. He explained to them, testifying about God’s Kingdom, and persuading them concerning Jesus, both from the law of Moses and from the prophets, from morning until evening.",
+          "bba730b9171fcc22-01": "And when a day had been fixed, they came to his house in great numbers; and he gave them teaching, giving witness to the kingdom of God, and having discussions with them about Jesus, from the law of Moses and from the prophets, from morning till evening.",
+          "06125ad3d1d57585-01": "When they had appointed him a day, many people came to him at his lodging. He explained to them, testifying about God’s Kingdom, and persuading them concerning Jesus, both from the law of Moses and from the prophets, from morning until evening.",
+          "41926a4aa3831714-01": "When they had appointed him a day, many people came to him at his lodging. He explained to them, testifying about God’s Kingdom, and persuading them concerning Jesus, both from the law of Moses and from the prophets, from morning until evening."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "And some believed the things which were spoken, and some believed not.",
+          "9879dbb7aec41528-01": "Some believed the things which were spoken, and some disbelieved.",
+          "bba730b9171fcc22-01": "And some were in agreement with what he said, but some had doubts.",
+          "06125ad3d1d57585-01": "Some believed the things which were spoken, and some disbelieved.",
+          "41926a4aa3831714-01": "Some believed the things which were spoken, and some disbelieved."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "And when they agreed not among themselves, they departed, after that Paul had spoken one word, Well spake the Holy Ghost by Esaias the prophet unto our fathers,",
+          "9879dbb7aec41528-01": "When they didn’t agree among themselves, they departed after Paul had spoken one word, “The Holy Spirit spoke rightly through Isaiah, the prophet, to our fathers,",
+          "bba730b9171fcc22-01": "And they went away, for there was a division among them after Paul had said this one thing: Well did the Holy Spirit say by the prophet Isaiah to your fathers,",
+          "06125ad3d1d57585-01": "When they didn’t agree among themselves, they departed after Paul had spoken one word, “The Holy Spirit spoke rightly through Isaiah, the prophet, to our fathers,",
+          "41926a4aa3831714-01": "When they didn’t agree among themselves, they departed after Paul had spoken one word, “The Holy Spirit spoke rightly through Isaiah, the prophet, to our fathers,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "Saying, Go unto this people, and say, Hearing ye shall hear, and shall not understand; and seeing ye shall see, and not perceive:",
+          "9879dbb7aec41528-01": "saying, ‘Go to this people, and say, in hearing, you will hear, but will in no way understand. In seeing, you will see, but will in no way perceive.",
+          "bba730b9171fcc22-01": "Go to this people and say, Though you give ear, you will not get knowledge; and seeing, you will see, but the sense will not be clear to you:",
+          "06125ad3d1d57585-01": "saying, ‘Go to this people, and say, in hearing, you will hear, but will in no way understand. In seeing, you will see, but will in no way perceive.",
+          "41926a4aa3831714-01": "saying, ‘Go to this people, and say, in hearing, you will hear, but will in no way understand. In seeing, you will see, but will in no way perceive."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "For the heart of this people is waxed gross, and their ears are dull of hearing, and their eyes have they closed; lest they should see with their eyes, and hear with their ears, and understand with their heart, and should be converted, and I should heal them.",
+          "9879dbb7aec41528-01": "For this people’s heart has grown callous. Their ears are dull of hearing. Their eyes they have closed. Lest they should see with their eyes, hear with their ears, understand with their heart, and would turn again, and I would heal them.’",
+          "bba730b9171fcc22-01": "For the heart of this people has become fat and their ears are slow in hearing and their eyes are shut; for fear that they might see with their eyes and give hearing with their ears and become wise in their hearts and be turned again to me, so that I might make them well.",
+          "06125ad3d1d57585-01": "For this people’s heart has grown callous. Their ears are dull of hearing. Their eyes they have closed. Lest they should see with their eyes, hear with their ears, understand with their heart, and would turn again, and I would heal them.’",
+          "41926a4aa3831714-01": "For this people’s heart has grown callous. Their ears are dull of hearing. Their eyes they have closed. Lest they should see with their eyes, hear with their ears, understand with their heart, and would turn again, and I would heal them.’"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 28,
+        "translations": {
+          "de4e12af7f28f599-02": "Be it known therefore unto you, that the salvation of God is sent unto the Gentiles, and that they will hear it.",
+          "9879dbb7aec41528-01": "“Be it known therefore to you, that the salvation of God is sent to the nations, and they will listen.”",
+          "bba730b9171fcc22-01": "Be certain, then, that the salvation of God is sent to the Gentiles, and they will give hearing.",
+          "06125ad3d1d57585-01": "“Be it known therefore to you, that the salvation of God is sent to the nations, and they will listen.”",
+          "41926a4aa3831714-01": "“Be it known therefore to you, that the salvation of God is sent to the nations, and they will listen.”"
+        },
+        "words": [
+          {
+            "original": "ἔθνος",
+            "transliteration": "eth-nos",
+            "english": "nations / gentiles",
+            "strongs": "G1484",
+            "parsing": "N-np"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 29,
+        "translations": {
+          "de4e12af7f28f599-02": "And when he had said these words, the Jews departed, and had great reasoning among themselves.",
+          "9879dbb7aec41528-01": "When he had said these words, the Jews departed, having a great dispute among themselves.",
+          "bba730b9171fcc22-01": "[]",
+          "06125ad3d1d57585-01": "When he had said these words, the Jews departed, having a great dispute among themselves.",
+          "41926a4aa3831714-01": "When he had said these words, the Jews departed, having a great dispute among themselves."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 30,
+        "translations": {
+          "de4e12af7f28f599-02": "And Paul dwelt two whole years in his own hired house, and received all that came in unto him,",
+          "9879dbb7aec41528-01": "Paul stayed two whole years in his own rented house, and received all who were coming to him,",
+          "bba730b9171fcc22-01": "And for the space of two years, Paul was living in the house of which he had the use, and had talk with all those who went in to see him,",
+          "06125ad3d1d57585-01": "Paul stayed two whole years in his own rented house, and received all who were coming to him,",
+          "41926a4aa3831714-01": "Paul stayed two whole years in his own rented house, and received all who were coming to him,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 31,
+        "translations": {
+          "de4e12af7f28f599-02": "Preaching the kingdom of God, and teaching those things which concern the Lord Jesus Christ, with all confidence, no man forbidding him.",
+          "9879dbb7aec41528-01": "preaching God’s Kingdom, and teaching the things concerning the Lord Jesus Christ with all boldness, without hindrance.",
+          "bba730b9171fcc22-01": "Preaching the kingdom of God and teaching about the Lord Jesus Christ without fear, and no orders were given that he was not to do so.",
+          "06125ad3d1d57585-01": "preaching God’s Kingdom, and teaching the things concerning the Lord Jesus Christ with all boldness, without hindrance.",
+          "41926a4aa3831714-01": "preaching God’s Kingdom, and teaching the things concerning the Lord Jesus Christ with all boldness, without hindrance."
+        },
+        "words": [
+          {
+            "original": "κύριος",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
   }
 };
 
