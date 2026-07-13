@@ -39236,6 +39236,4241 @@ export const STEPBIBLE_DB: Record<string, StepBiblePassage> = {
         ]
       }
     ]
+  },
+  "1 Thessalonians 4:13-18": {
+    "reference": "1 Thessalonians 4:13-18",
+    "verses": [
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "But I would not have you to be ignorant, brethren, concerning them which are asleep, that ye sorrow not, even as others which have no hope.",
+          "9879dbb7aec41528-01": "But we don’t want you to be ignorant, brothers, concerning those who have fallen asleep, so that you don’t grieve like the rest, who have no hope.",
+          "bba730b9171fcc22-01": "But it is our desire, brothers, that you may be certain about those who are sleeping; so that you may have no need for sorrow, as others have who are without hope.",
+          "06125ad3d1d57585-01": "But we don’t want you to be ignorant, brothers, concerning those who have fallen asleep, so that you don’t grieve like the rest, who have no hope.",
+          "41926a4aa3831714-01": "But we don’t want you to be ignorant, brothers, concerning those who have fallen asleep, so that you don’t grieve like the rest, who have no hope."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "For if we believe that Jesus died and rose again, even so them also which sleep in Jesus will God bring with him.",
+          "9879dbb7aec41528-01": "For if we believe that Jesus died and rose again, even so God will bring with him those who have fallen asleep in Jesus.",
+          "bba730b9171fcc22-01": "For if we have faith that Jesus underwent death and came back again, even so those who are sleeping will come again with him by God's power.",
+          "06125ad3d1d57585-01": "For if we believe that Jesus died and rose again, even so God will bring with him those who have fallen asleep in Jesus.",
+          "41926a4aa3831714-01": "For if we believe that Jesus died and rose again, even so God will bring with him those who have fallen asleep in Jesus."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "For this we say unto you by the word of the Lord, that we which are alive and remain unto the coming of the Lord shall not prevent them which are asleep.",
+          "9879dbb7aec41528-01": "For this we tell you by the word of the Lord, that we who are alive, who are left until the coming of the Lord, will in no way precede those who have fallen asleep.",
+          "bba730b9171fcc22-01": "For this we say to you by the word of the Lord, that we who are still living at the coming of the Lord, will not go before those who are sleeping.",
+          "06125ad3d1d57585-01": "For this we tell you by the word of the Lord, that we who are alive, who are left until the coming of the Lord, will in no way precede those who have fallen asleep.",
+          "41926a4aa3831714-01": "For this we tell you by the word of the Lord, that we who are alive, who are left until the coming of the Lord, will in no way precede those who have fallen asleep."
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "παρουσία",
+            "transliteration": "pa-rou-si-a",
+            "english": "coming / presence",
+            "strongs": "G3952",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:",
+          "9879dbb7aec41528-01": "For the Lord himself will descend from heaven with a shout, with the voice of the archangel, and with God’s trumpet. The dead in Christ will rise first,",
+          "bba730b9171fcc22-01": "Because the Lord himself will come down from heaven with a word of authority, with the voice of the chief angel, with the sound of a horn: and the dead in Christ will come to life first;",
+          "06125ad3d1d57585-01": "For the Lord himself will descend from heaven with a shout, with the voice of the archangel, and with God’s trumpet. The dead in Christ will rise first,",
+          "41926a4aa3831714-01": "For the Lord himself will descend from heaven with a shout, with the voice of the archangel, and with God’s trumpet. The dead in Christ will rise first,"
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord.",
+          "9879dbb7aec41528-01": "then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.",
+          "bba730b9171fcc22-01": "Then we who are still living will be taken up together with them into the clouds to see the Lord in the air: and so will we be for ever with the Lord.",
+          "06125ad3d1d57585-01": "then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.",
+          "41926a4aa3831714-01": "then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever."
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "Wherefore comfort one another with these words.",
+          "9879dbb7aec41528-01": "Therefore comfort one another with these words.",
+          "bba730b9171fcc22-01": "So then, give comfort to one another with these words.",
+          "06125ad3d1d57585-01": "Therefore comfort one another with these words.",
+          "41926a4aa3831714-01": "Therefore comfort one another with these words."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "2 Thessalonians 2:1-12": {
+    "reference": "2 Thessalonians 2:1-12",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him,",
+          "9879dbb7aec41528-01": "Now, brothers, concerning the coming of our Lord Jesus Christ, and our gathering together to him, we ask you",
+          "bba730b9171fcc22-01": "Now as to the coming of the Lord Jesus Christ, and our meeting with him, it is our desire, my brothers,",
+          "06125ad3d1d57585-01": "Now, brothers, concerning the coming of our Lord Jesus Christ, and our gathering together to him, we ask you",
+          "41926a4aa3831714-01": "Now, brothers, concerning the coming of our Lord Jesus Christ, and our gathering together to him, we ask you"
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "παρουσία",
+            "transliteration": "pa-rou-si-a",
+            "english": "coming / presence",
+            "strongs": "G3952",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "That ye be not soon shaken in mind, or be troubled, neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand.",
+          "9879dbb7aec41528-01": "not to be quickly shaken in your mind, and not be troubled, either by spirit, or by word, or by letter as if from us, saying that the day of Christ has already come.",
+          "bba730b9171fcc22-01": "That you may not be moved in mind or troubled by a spirit, or by a word, or by a letter as from us, with the suggestion that the day of the Lord is even now come;",
+          "06125ad3d1d57585-01": "not to be quickly shaken in your mind, and not be troubled, either by spirit, or by word, or by letter as if from us, saying that the day of Christ has already come.",
+          "41926a4aa3831714-01": "not to be quickly shaken in your mind, and not be troubled, either by spirit, or by word, or by letter as if from us, saying that the day of Christ has already come."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Let no man deceive you by any means: for that day shall not come,  except there come a falling away first, and that man of sin be revealed, the son of perdition;",
+          "9879dbb7aec41528-01": "Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction,",
+          "bba730b9171fcc22-01": "Give no belief to false words: because there will first be a falling away from the faith, and the revelation of the man of sin, the son of destruction,",
+          "06125ad3d1d57585-01": "Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction,",
+          "41926a4aa3831714-01": "Let no one deceive you in any way. For it will not be, unless the rebellion comes first, and the man of sin is revealed, the son of destruction,"
+        },
+        "words": [
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God.",
+          "9879dbb7aec41528-01": "he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God.",
+          "bba730b9171fcc22-01": "Who puts himself against all authority, lifting himself up over all which is named God or is given worship; so that he takes his seat in the Temple of God, putting himself forward as God.",
+          "06125ad3d1d57585-01": "he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God.",
+          "41926a4aa3831714-01": "he who opposes and exalts himself against all that is called God or that is worshiped; so that he sits as God in the temple of God, setting himself up as God."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "Remember ye not, that, when I was yet with you, I told you these things?",
+          "9879dbb7aec41528-01": "Don’t you remember that, when I was still with you, I told you these things?",
+          "bba730b9171fcc22-01": "Have you no memory of what I said when I was with you, giving you word of these things?",
+          "06125ad3d1d57585-01": "Don’t you remember that, when I was still with you, I told you these things?",
+          "41926a4aa3831714-01": "Don’t you remember that, when I was still with you, I told you these things?"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And now ye know what withholdeth that he might be revealed in his time.",
+          "9879dbb7aec41528-01": "Now you know what is restraining him, to the end that he may be revealed in his own season.",
+          "bba730b9171fcc22-01": "And now it is clear to you what is keeping back his revelation till the time comes for him to be seen.",
+          "06125ad3d1d57585-01": "Now you know what is restraining him, to the end that he may be revealed in his own season.",
+          "41926a4aa3831714-01": "Now you know what is restraining him, to the end that he may be revealed in his own season."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "For the mystery of iniquity doth already work: only he who now letteth will let, until he be taken out of the way.",
+          "9879dbb7aec41528-01": "For the mystery of lawlessness already works. Only there is one who restrains now, until he is taken out of the way.",
+          "bba730b9171fcc22-01": "For the secret of evil is even now at work: but there is one who is keeping back the evil till he is taken out of the way.",
+          "06125ad3d1d57585-01": "For the mystery of lawlessness already works. Only there is one who restrains now, until he is taken out of the way.",
+          "41926a4aa3831714-01": "For the mystery of lawlessness already works. Only there is one who restrains now, until he is taken out of the way."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And then shall that Wicked be revealed, whom the Lord shall consume with the spirit of his mouth, and shall destroy with the brightness of his coming:",
+          "9879dbb7aec41528-01": "Then the lawless one will be revealed, whom the Lord will kill with the breath of his mouth, and destroy by the manifestation of his coming;",
+          "bba730b9171fcc22-01": "And then will come the revelation of that evil one, whom the Lord Jesus will put to death with the breath of his mouth, and give to destruction by the revelation of his coming;",
+          "06125ad3d1d57585-01": "Then the lawless one will be revealed, whom the Lord will kill with the breath of his mouth, and destroy by the manifestation of his coming;",
+          "41926a4aa3831714-01": "Then the lawless one will be revealed, whom the Lord will kill with the breath of his mouth, and destroy by the manifestation of his coming;"
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "παρουσία",
+            "transliteration": "pa-rou-si-a",
+            "english": "coming / presence",
+            "strongs": "G3952",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Even him, whose coming is after the working of Satan with all power and signs and lying wonders,",
+          "9879dbb7aec41528-01": "even he whose coming is according to the working of Satan with all power and signs and lying wonders,",
+          "bba730b9171fcc22-01": "Even the one whose coming is marked by the working of Satan, with all power and signs and false wonders,",
+          "06125ad3d1d57585-01": "even he whose coming is according to the working of Satan with all power and signs and lying wonders,",
+          "41926a4aa3831714-01": "even he whose coming is according to the working of Satan with all power and signs and lying wonders,"
+        },
+        "words": [
+          {
+            "original": "παρουσία",
+            "transliteration": "pa-rou-si-a",
+            "english": "coming / presence",
+            "strongs": "G3952",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved.",
+          "9879dbb7aec41528-01": "and with all deception of wickedness for those who are being lost, because they didn’t receive the love of the truth, that they might be saved.",
+          "bba730b9171fcc22-01": "And with every deceit of wrongdoing among those whose fate is destruction; because they were quite without that love of the true faith by which they might have salvation.",
+          "06125ad3d1d57585-01": "and with all deception of wickedness for those who are being lost, because they didn’t receive the love of the truth, that they might be saved.",
+          "41926a4aa3831714-01": "and with all deception of wickedness for those who are being lost, because they didn’t receive the love of the truth, that they might be saved."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And for this cause God shall send them strong delusion, that they should believe a lie:",
+          "9879dbb7aec41528-01": "Because of this, God sends them a working of error, that they should believe a lie;",
+          "bba730b9171fcc22-01": "And for this cause, God will give them up to the power of deceit and they will put their faith in what is false:",
+          "06125ad3d1d57585-01": "Because of this, God sends them a working of error, that they should believe a lie;",
+          "41926a4aa3831714-01": "Because of this, God sends them a working of error, that they should believe a lie;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "That they all might be damned who believed not the truth, but had pleasure in unrighteousness.",
+          "9879dbb7aec41528-01": "that they all might be judged who didn’t believe the truth, but had pleasure in unrighteousness.",
+          "bba730b9171fcc22-01": "So that they all may be judged, who had no faith in what is true, but took pleasure in evil.",
+          "06125ad3d1d57585-01": "that they all might be judged who didn’t believe the truth, but had pleasure in unrighteousness.",
+          "41926a4aa3831714-01": "that they all might be judged who didn’t believe the truth, but had pleasure in unrighteousness."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Revelation 1:1-20": {
+    "reference": "Revelation 1:1-20",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "The Revelation of Jesus Christ, which God gave unto him, to shew unto his servants things which must shortly come to pass; and he sent and signified it by his angel unto his servant John:",
+          "9879dbb7aec41528-01": "This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John,",
+          "bba730b9171fcc22-01": "The Revelation of Jesus Christ which God gave him so that his servants might have knowledge of the things which will quickly take place: and he sent and made it clear by his angel to his servant John;",
+          "06125ad3d1d57585-01": "This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John,",
+          "41926a4aa3831714-01": "This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John,"
+        },
+        "words": [
+          {
+            "original": "ἀποκάλυψις",
+            "transliteration": "a-po-ka-lup-sis",
+            "english": "revelation / unveiling",
+            "strongs": "G0602",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "Who bare record of the word of God, and of the testimony of Jesus Christ, and of all things that he saw.",
+          "9879dbb7aec41528-01": "who testified to God’s word, and of the testimony of Jesus Christ, about everything that he saw.",
+          "bba730b9171fcc22-01": "Who gave witness of the word of God, and of the witness of Jesus Christ, even of all the things which he saw.",
+          "06125ad3d1d57585-01": "who testified to God’s word, and of the testimony of Jesus Christ, about everything that he saw.",
+          "41926a4aa3831714-01": "who testified to God’s word, and of the testimony of Jesus Christ, about everything that he saw."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "Blessed is he that readeth, and they that hear the words of this prophecy, and keep those things which are written therein: for the time is at hand.",
+          "9879dbb7aec41528-01": "Blessed is he who reads and those who hear the words of the prophecy, and keep the things that are written in it, for the time is at hand.",
+          "bba730b9171fcc22-01": "A blessing be on the reader, and on those who give ear to the prophet's words, and keep the things which he has put in the book: for the time is near.",
+          "06125ad3d1d57585-01": "Blessed is he who reads and those who hear the words of the prophecy, and keep the things that are written in it, for the time is at hand.",
+          "41926a4aa3831714-01": "Blessed is he who reads and those who hear the words of the prophecy, and keep the things that are written in it, for the time is at hand."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "John to the seven churches which are in Asia: Grace be unto you, and peace, from him which is, and which was, and which is to come; and from the seven Spirits which are before his throne;",
+          "9879dbb7aec41528-01": "John, to the seven assemblies that are in Asia: Grace to you and peace, from God, who is and who was and who is to come; and from the seven Spirits who are before his throne;",
+          "bba730b9171fcc22-01": "John to the seven churches which are in Asia: Grace to you and peace, from him who is and was and is to come; and from the seven Spirits which are before his high seat;",
+          "06125ad3d1d57585-01": "John, to the seven assemblies that are in Asia: Grace to you and peace, from God, who is and who was and who is to come; and from the seven Spirits who are before his throne;",
+          "41926a4aa3831714-01": "John, to the seven assemblies that are in Asia: Grace to you and peace, from God, who is and who was and who is to come; and from the seven Spirits who are before his throne;"
+        },
+        "words": [
+          {
+            "original": "θρόνος",
+            "transliteration": "thro-nos",
+            "english": "throne / seat",
+            "strongs": "G2362",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And from Jesus Christ, who is the faithful witness, and  the first begotten of the dead, and the prince of the kings of the earth. Unto him that loved us, and washed us from our sins in his own blood,",
+          "9879dbb7aec41528-01": "and from Jesus Christ, the faithful witness, the firstborn of the dead, and the ruler of the kings of the earth. To him who loves us, and washed us from our sins by his blood;",
+          "bba730b9171fcc22-01": "And from Jesus Christ, the true witness, the first to come back from the dead, and the ruler of the kings of the earth. To him who had love for us and has made us clean from our sins by his blood;",
+          "06125ad3d1d57585-01": "and from Jesus Christ, the faithful witness, the firstborn of the dead, and the ruler of the kings of the earth. To him who loves us, and washed us from our sins by his blood;",
+          "41926a4aa3831714-01": "and from Jesus Christ, the faithful witness, the firstborn of the dead, and the ruler of the kings of the earth. To him who loves us, and washed us from our sins by his blood;"
+        },
+        "words": [
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And hath made us kings and priests unto God and his Father; to him be glory and dominion for ever and ever. Amen.",
+          "9879dbb7aec41528-01": "and he made us to be a Kingdom, priests to his God and Father; to him be the glory and the dominion forever and ever. Amen.",
+          "bba730b9171fcc22-01": "And has made us to be a kingdom and priests to his God and Father; to him let glory and power be given for ever and ever. So be it.",
+          "06125ad3d1d57585-01": "and he made us to be a Kingdom, priests to his God and Father; to him be the glory and the dominion forever and ever. Amen.",
+          "41926a4aa3831714-01": "and he made us to be a Kingdom, priests to his God and Father; to him be the glory and the dominion forever and ever. Amen."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Behold, he cometh with clouds; and every eye shall see him, and they also which pierced him: and all kindreds of the earth shall wail because of him. Even so, Amen.",
+          "9879dbb7aec41528-01": "Behold, he is coming with the clouds, and every eye will see him, including those who pierced him. All the tribes of the earth will mourn over him. Even so, Amen.",
+          "bba730b9171fcc22-01": "See, he comes with the clouds, and every eye will see him, and those by whom he was wounded; and all the tribes of the earth will be sorrowing because of him. Yes, so be it.",
+          "06125ad3d1d57585-01": "Behold, he is coming with the clouds, and every eye will see him, including those who pierced him. All the tribes of the earth will mourn over him. Even so, Amen.",
+          "41926a4aa3831714-01": "Behold, he is coming with the clouds, and every eye will see him, including those who pierced him. All the tribes of the earth will mourn over him. Even so, Amen."
+        },
+        "words": [
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty.",
+          "9879dbb7aec41528-01": "“I am the Alpha and the Omega,” says the Lord God, “who is and who was and who is to come, the Almighty.”",
+          "bba730b9171fcc22-01": "I am the First and the Last, says the Lord God who is and was and is to come, the Ruler of all.",
+          "06125ad3d1d57585-01": "“I am the Alpha and the Omega,” says the Lord God, “who is and who was and who is to come, the Almighty.”",
+          "41926a4aa3831714-01": "“I am the Alpha and the Omega,” says the Lord God, “who is and who was and who is to come, the Almighty.”"
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "I John, who also am your brother, and companion in tribulation, and in the kingdom and patience of Jesus Christ, was in the isle that is called Patmos, for the word of God, and for the testimony of Jesus Christ.",
+          "9879dbb7aec41528-01": "I John, your brother and partner with you in the oppression, Kingdom, and perseverance in Christ Jesus, was on the isle that is called Patmos because of God’s Word and the testimony of Jesus Christ.",
+          "bba730b9171fcc22-01": "I, John, your brother, who have a part with you in the trouble and the kingdom and the quiet strength of Jesus, was in the island which is named Patmos, for the word of God and the witness of Jesus.",
+          "06125ad3d1d57585-01": "I John, your brother and partner with you in the oppression, Kingdom, and perseverance in Christ Jesus, was on the isle that is called Patmos because of God’s Word and the testimony of Jesus Christ.",
+          "41926a4aa3831714-01": "I John, your brother and partner with you in the oppression, Kingdom, and perseverance in Christ Jesus, was on the isle that is called Patmos because of God’s Word and the testimony of Jesus Christ."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "I was in the Spirit on the Lord’s day, and heard behind me a great voice, as of a trumpet,",
+          "9879dbb7aec41528-01": "I was in the Spirit on the Lord’s day, and I heard behind me a loud voice, like a trumpet",
+          "bba730b9171fcc22-01": "I was in the Spirit on the Lord's day, and a great voice at my back, as of a horn, came to my ears,",
+          "06125ad3d1d57585-01": "I was in the Spirit on the Lord’s day, and I heard behind me a loud voice, like a trumpet",
+          "41926a4aa3831714-01": "I was in the Spirit on the Lord’s day, and I heard behind me a loud voice, like a trumpet"
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Saying, I am Alpha and Omega, the first and the last: and, What thou seest, write in a book, and send it  unto the seven churches which are in Asia; unto Ephesus, and unto Smyrna, and unto Pergamos, and unto Thyatira, and unto Sardis, and unto Philadelphia, and unto Laodicea.",
+          "9879dbb7aec41528-01": "saying, “What you see, write in a book and send to the seven assemblies:  to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, and to Laodicea.”",
+          "bba730b9171fcc22-01": "Saying, What you see, put in a book, and send it to the seven churches; to Ephesus and to Smyrna and to Pergamos and to Thyatira and to Sardis and to Philadelphia and to Laodicea.",
+          "06125ad3d1d57585-01": "saying, “What you see, write in a book and send to the seven assemblies:  to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, and to Laodicea.”",
+          "41926a4aa3831714-01": "saying, “What you see, write in a book and send to the seven assemblies:  to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, and to Laodicea.”"
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And I turned to see the voice that spake with me. And being turned, I saw seven golden candlesticks;",
+          "9879dbb7aec41528-01": "I turned to see the voice that spoke with me. Having turned, I saw seven golden lamp stands.",
+          "bba730b9171fcc22-01": "And turning to see the voice which said these words to me, I saw seven gold vessels with lights burning in them;",
+          "06125ad3d1d57585-01": "I turned to see the voice that spoke with me. Having turned, I saw seven golden lamp stands.",
+          "41926a4aa3831714-01": "I turned to see the voice that spoke with me. Having turned, I saw seven golden lamp stands."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And in the midst of the seven candlesticks one like unto the Son of man, clothed with a garment down to the foot, and girt about the paps with a golden girdle.",
+          "9879dbb7aec41528-01": "And among the lamp stands was one like a son of man, clothed with a robe reaching down to his feet, and with a golden sash around his chest.",
+          "bba730b9171fcc22-01": "And in the middle of them one like a son of man, clothed with a robe down to his feet, and with a band of gold round his breasts.",
+          "06125ad3d1d57585-01": "And among the lamp stands was one like a son of man, clothed with a robe reaching down to his feet, and with a golden sash around his chest.",
+          "41926a4aa3831714-01": "And among the lamp stands was one like a son of man, clothed with a robe reaching down to his feet, and with a golden sash around his chest."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "His head and his hairs were white like wool, as white as snow; and his eyes were as a flame of fire;",
+          "9879dbb7aec41528-01": "His head and his hair were white as white wool, like snow. His eyes were like a flame of fire.",
+          "bba730b9171fcc22-01": "And his head and his hair were white like wool, as white as snow; and his eyes were as a flame of fire;",
+          "06125ad3d1d57585-01": "His head and his hair were white as white wool, like snow. His eyes were like a flame of fire.",
+          "41926a4aa3831714-01": "His head and his hair were white as white wool, like snow. His eyes were like a flame of fire."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And his feet like unto fine brass, as if they burned in a furnace; and his voice as the sound of many waters.",
+          "9879dbb7aec41528-01": "His feet were like burnished brass, as if it had been refined in a furnace. His voice was like the voice of many waters.",
+          "bba730b9171fcc22-01": "And his feet like polished brass, as if it had been burned in a fire; and his voice was as the sound of great waters.",
+          "06125ad3d1d57585-01": "His feet were like burnished brass, as if it had been refined in a furnace. His voice was like the voice of many waters.",
+          "41926a4aa3831714-01": "His feet were like burnished brass, as if it had been refined in a furnace. His voice was like the voice of many waters."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And he had in his right hand seven stars: and out of his mouth went a sharp twoedged sword: and his countenance was as the sun shineth in his strength.",
+          "9879dbb7aec41528-01": "He had seven stars in his right hand. Out of his mouth proceeded a sharp two-edged sword. His face was like the sun shining at its brightest.",
+          "bba730b9171fcc22-01": "And he had in his right hand seven stars: and out of his mouth came a sharp two-edged sword: and his face was like the sun shining in its strength.",
+          "06125ad3d1d57585-01": "He had seven stars in his right hand. Out of his mouth proceeded a sharp two-edged sword. His face was like the sun shining at its brightest.",
+          "41926a4aa3831714-01": "He had seven stars in his right hand. Out of his mouth proceeded a sharp two-edged sword. His face was like the sun shining at its brightest."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And when I saw him, I fell at his feet as dead. And he laid his right hand upon me, saying unto me, Fear not; I am the first and the last:",
+          "9879dbb7aec41528-01": "When I saw him, I fell at his feet like a dead man. He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,",
+          "bba730b9171fcc22-01": "And when I saw him, I went down on my face at his feet as one dead. And he put his right hand on me, saying, Have no fear; I am the first and the last and the Living one;",
+          "06125ad3d1d57585-01": "When I saw him, I fell at his feet like a dead man. He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,",
+          "41926a4aa3831714-01": "When I saw him, I fell at his feet like a dead man. He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,"
+        },
+        "words": [
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "I am he that liveth, and was dead; and, behold, I am alive for evermore, Amen; and have the keys of hell and of death.",
+          "9879dbb7aec41528-01": "and the Living one. I was dead, and behold, I am alive forever and ever. Amen. I have the keys of Death and of Hades.",
+          "bba730b9171fcc22-01": "And I was dead, and see, I am living for ever, and I have the keys of death and of Hell.",
+          "06125ad3d1d57585-01": "and the Living one. I was dead, and behold, I am alive forever and ever. Amen. I have the keys of Death and of Hades.",
+          "41926a4aa3831714-01": "and the Living one. I was dead, and behold, I am alive forever and ever. Amen. I have the keys of Death and of Hades."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "Write the things which thou hast seen, and the things which are, and the things which shall be hereafter;",
+          "9879dbb7aec41528-01": "Write therefore the things which you have seen, and the things which are, and the things which will happen hereafter;",
+          "bba730b9171fcc22-01": "Put in writing, then, the things which you have seen, and the things which are, and the things which will be after these;",
+          "06125ad3d1d57585-01": "Write therefore the things which you have seen, and the things which are, and the things which will happen hereafter;",
+          "41926a4aa3831714-01": "Write therefore the things which you have seen, and the things which are, and the things which will happen hereafter;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "The mystery of the seven stars which thou sawest in my right hand, and the seven golden candlesticks. The seven stars are the angels of the seven churches: and the seven candlesticks which thou sawest are the seven churches.",
+          "9879dbb7aec41528-01": "the mystery of the seven stars which you saw in my right hand, and the seven golden lamp stands. The seven stars are the angels of the seven assemblies. The seven lamp stands are seven assemblies.",
+          "bba730b9171fcc22-01": "The secret of the seven stars which you saw in my right hand, and of the seven gold vessels with burning lights. The seven stars are the angels of the seven churches: and the seven lights are the seven churches.",
+          "06125ad3d1d57585-01": "the mystery of the seven stars which you saw in my right hand, and the seven golden lamp stands. The seven stars are the angels of the seven assemblies. The seven lamp stands are seven assemblies.",
+          "41926a4aa3831714-01": "the mystery of the seven stars which you saw in my right hand, and the seven golden lamp stands. The seven stars are the angels of the seven assemblies. The seven lamp stands are seven assemblies."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Revelation 19:11-21": {
+    "reference": "Revelation 19:11-21",
+    "verses": [
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw heaven opened, and behold a white horse; and he that sat upon him was called Faithful and True, and in righteousness he doth judge and make war.",
+          "9879dbb7aec41528-01": "I saw the heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war.",
+          "bba730b9171fcc22-01": "And the heaven was open; and I saw a white horse, and he who was seated on it was named Certain and True; and he is judging and making war in righteousness.",
+          "06125ad3d1d57585-01": "I saw the heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war.",
+          "41926a4aa3831714-01": "I saw the heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war."
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "His eyes were as a flame of fire, and on his head were  many crowns; and he had a name written, that no man knew, but he himself.",
+          "9879dbb7aec41528-01": "His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself.",
+          "bba730b9171fcc22-01": "And his eyes are a flame of fire, and crowns are on his head; and he has a name in writing, of which no man has knowledge but himself.",
+          "06125ad3d1d57585-01": "His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself.",
+          "41926a4aa3831714-01": "His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And he was clothed with a vesture dipped in blood: and his name is called The Word of God.",
+          "9879dbb7aec41528-01": "He is clothed in a garment sprinkled with blood. His name is called “The Word of God.”",
+          "bba730b9171fcc22-01": "And he is clothed in a robe washed with blood: and his name is The Word of God.",
+          "06125ad3d1d57585-01": "He is clothed in a garment sprinkled with blood. His name is called “The Word of God.”",
+          "41926a4aa3831714-01": "He is clothed in a garment sprinkled with blood. His name is called “The Word of God.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And the armies which were in heaven followed him upon white horses, clothed in fine linen, white and clean.",
+          "9879dbb7aec41528-01": "The armies which are in heaven followed him on white horses, clothed in white, pure, fine linen.",
+          "bba730b9171fcc22-01": "And the armies which are in heaven went after him on white horses, clothed in delicate linen, white and clean.",
+          "06125ad3d1d57585-01": "The armies which are in heaven followed him on white horses, clothed in white, pure, fine linen.",
+          "41926a4aa3831714-01": "The armies which are in heaven followed him on white horses, clothed in white, pure, fine linen."
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And out of his mouth goeth a sharp sword, that with it he should smite the nations: and he shall rule them with a rod of iron: and he treadeth the winepress of the fierceness and wrath of Almighty God.",
+          "9879dbb7aec41528-01": "Out of his mouth proceeds a sharp, double-edged sword, that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty.",
+          "bba730b9171fcc22-01": "And out of his mouth comes a sharp sword, with which he overcomes the nations: and he has rule over them with a rod of iron: and he is crushing with his feet the grapes of the strong wrath of God the Ruler of all.",
+          "06125ad3d1d57585-01": "Out of his mouth proceeds a sharp, double-edged sword, that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty.",
+          "41926a4aa3831714-01": "Out of his mouth proceeds a sharp, double-edged sword, that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And he hath on his vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS.",
+          "9879dbb7aec41528-01": "He has on his garment and on his thigh a name written, “KING OF KINGS, AND LORD OF LORDS.”",
+          "bba730b9171fcc22-01": "And on his robe and on his leg is a name, KING OF KINGS, AND LORD OF LORDS.",
+          "06125ad3d1d57585-01": "He has on his garment and on his thigh a name written, “KING OF KINGS, AND LORD OF LORDS.”",
+          "41926a4aa3831714-01": "He has on his garment and on his thigh a name written, “KING OF KINGS, AND LORD OF LORDS.”"
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw an angel standing in the sun; and he cried with a loud voice, saying to all the fowls that fly in the midst of heaven, Come and gather yourselves together unto the supper of the great God;",
+          "9879dbb7aec41528-01": "I saw an angel standing in the sun. He cried with a loud voice, saying to all the birds that fly in the sky, “Come! Be gathered together to the great supper of God,",
+          "bba730b9171fcc22-01": "And I saw an angel taking his place in the sun; and he was crying with a loud voice, saying to all the birds in flight in the heavens, Come together to the great feast of God;",
+          "06125ad3d1d57585-01": "I saw an angel standing in the sun. He cried with a loud voice, saying to all the birds that fly in the sky, “Come! Be gathered together to the great supper of God,",
+          "41926a4aa3831714-01": "I saw an angel standing in the sun. He cried with a loud voice, saying to all the birds that fly in the sky, “Come! Be gathered together to the great supper of God,"
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "That ye may eat the flesh of kings, and the flesh of captains, and the flesh of mighty men, and the flesh of horses, and of them that sit on them, and the flesh of all men, both free and bond, both small and great.",
+          "9879dbb7aec41528-01": "that you may eat the flesh of kings, the flesh of captains, the flesh of mighty men, and the flesh of horses and of those who sit on them, and the flesh of all men, both free and slave, small and great.”",
+          "bba730b9171fcc22-01": "So that you may take for your food the flesh of kings, and of captains, and of strong men, and of horses and of those who are seated on them, and the flesh of all men, free and unfree, small and great.",
+          "06125ad3d1d57585-01": "that you may eat the flesh of kings, the flesh of captains, the flesh of mighty men, and the flesh of horses and of those who sit on them, and the flesh of all men, both free and slave, small and great.”",
+          "41926a4aa3831714-01": "that you may eat the flesh of kings, the flesh of captains, the flesh of mighty men, and the flesh of horses and of those who sit on them, and the flesh of all men, both free and slave, small and great.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw the beast, and the kings of the earth, and their armies, gathered together to make war against him that sat on the horse, and against his army.",
+          "9879dbb7aec41528-01": "I saw the beast, and the kings of the earth, and their armies, gathered together to make war against him who sat on the horse, and against his army.",
+          "bba730b9171fcc22-01": "And I saw the beast, and the kings of the earth, and their armies, come together to make war against him who was seated on the horse and against his army.",
+          "06125ad3d1d57585-01": "I saw the beast, and the kings of the earth, and their armies, gathered together to make war against him who sat on the horse, and against his army.",
+          "41926a4aa3831714-01": "I saw the beast, and the kings of the earth, and their armies, gathered together to make war against him who sat on the horse, and against his army."
+        },
+        "words": [
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "And the beast was taken, and with him the false prophet that wrought miracles before him, with which he deceived them that had received the mark of the beast, and them that worshipped his image. These both were cast alive into a lake of fire burning with brimstone.",
+          "9879dbb7aec41528-01": "The beast was taken, and with him the false prophet who worked the signs in his sight, with which he deceived those who had received the mark of the beast and those who worshiped his image. These two were thrown alive into the lake of fire that burns with sulfur.",
+          "bba730b9171fcc22-01": "And the beast was taken, and with him the false prophet who did the signs before him, by which they were turned from the true way who had the mark of the beast, and who gave worship to his image: these two were put living into the sea of ever-burning fire.",
+          "06125ad3d1d57585-01": "The beast was taken, and with him the false prophet who worked the signs in his sight, with which he deceived those who had received the mark of the beast and those who worshiped his image. These two were thrown alive into the lake of fire that burns with sulfur.",
+          "41926a4aa3831714-01": "The beast was taken, and with him the false prophet who worked the signs in his sight, with which he deceived those who had received the mark of the beast and those who worshiped his image. These two were thrown alive into the lake of fire that burns with sulfur."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And the remnant were slain with the sword of him that sat upon the horse, which sword proceeded out of his mouth: and all the fowls were filled with their flesh.",
+          "9879dbb7aec41528-01": "The rest were killed with the sword of him who sat on the horse, the sword which came out of his mouth. All the birds were filled with their flesh.",
+          "bba730b9171fcc22-01": "And the rest were put to death with the sword of him who was on the horse, even the sword which came out of his mouth: and all the birds were made full with their flesh.",
+          "06125ad3d1d57585-01": "The rest were killed with the sword of him who sat on the horse, the sword which came out of his mouth. All the birds were filled with their flesh.",
+          "41926a4aa3831714-01": "The rest were killed with the sword of him who sat on the horse, the sword which came out of his mouth. All the birds were filled with their flesh."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      }
+    ]
+  },
+  "Revelation 20:1-15": {
+    "reference": "Revelation 20:1-15",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw an angel come down from heaven, having the key of the bottomless pit and a great chain in his hand.",
+          "9879dbb7aec41528-01": "I saw an angel coming down out of heaven, having the key of the abyss and a great chain in his hand.",
+          "bba730b9171fcc22-01": "And I saw an angel coming down out of heaven, having the key of the great deep and a great chain in his hand.",
+          "06125ad3d1d57585-01": "I saw an angel coming down out of heaven, having the key of the abyss and a great chain in his hand.",
+          "41926a4aa3831714-01": "I saw an angel coming down out of heaven, having the key of the abyss and a great chain in his hand."
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And he laid hold on the dragon, that old serpent, which is the Devil, and Satan, and bound him a thousand years,",
+          "9879dbb7aec41528-01": "He seized the dragon, the old serpent, which is the devil and Satan, who deceives the whole inhabited earth, and bound him for a thousand years,",
+          "bba730b9171fcc22-01": "And he took the dragon, the old snake, which is the Evil One and Satan, and put chains on him for a thousand years,",
+          "06125ad3d1d57585-01": "He seized the dragon, the old serpent, which is the devil and Satan, who deceives the whole inhabited earth, and bound him for a thousand years,",
+          "41926a4aa3831714-01": "He seized the dragon, the old serpent, which is the devil and Satan, who deceives the whole inhabited earth, and bound him for a thousand years,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And cast him into the bottomless pit, and shut him up, and set a seal upon him, that he should deceive the nations no more, till the thousand years should be fulfilled: and after that he must be loosed a little season.",
+          "9879dbb7aec41528-01": "and cast him into the abyss, and shut it, and sealed it over him, that he should deceive the nations no more, until the thousand years were finished. After this, he must be freed for a short time.",
+          "bba730b9171fcc22-01": "And put him into the great deep, and it was shut and locked over him, so that he might put the nations in error no longer, till the thousand years were ended: after this he will be let loose for a little time.",
+          "06125ad3d1d57585-01": "and cast him into the abyss, and shut it, and sealed it over him, that he should deceive the nations no more, until the thousand years were finished. After this, he must be freed for a short time.",
+          "41926a4aa3831714-01": "and cast him into the abyss, and shut it, and sealed it over him, that he should deceive the nations no more, until the thousand years were finished. After this, he must be freed for a short time."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw thrones, and they sat upon them, and judgment was given unto them: and I saw the souls of them that were beheaded for the witness of Jesus, and for the word of God, and which had not worshipped the beast, neither his image, neither had received his mark upon their foreheads, or in their hands; and they lived and reigned with Christ a thousand years.",
+          "9879dbb7aec41528-01": "I saw thrones, and they sat on them, and judgment was given to them. I saw the souls of those who had been beheaded for the testimony of Jesus, and for the word of God, and such as didn’t worship the beast nor his image, and didn’t receive the mark on their forehead and on their hand. They lived and reigned with Christ for a thousand years.",
+          "bba730b9171fcc22-01": "And I saw high seats, and they were seated on them, and the right of judging was given to them: and I saw the souls of those who were put to death for the witness of Jesus, and for the word of God, and those who did not give worship to the beast, or to his image, and had not his mark on their brows or on their hands; and they were living and ruling with Christ a thousand years.",
+          "06125ad3d1d57585-01": "I saw thrones, and they sat on them, and judgment was given to them. I saw the souls of those who had been beheaded for the testimony of Jesus, and for the word of God, and such as didn’t worship the beast nor his image, and didn’t receive the mark on their forehead and on their hand. They lived and reigned with Christ for a thousand years.",
+          "41926a4aa3831714-01": "I saw thrones, and they sat on them, and judgment was given to them. I saw the souls of those who had been beheaded for the testimony of Jesus, and for the word of God, and such as didn’t worship the beast nor his image, and didn’t receive the mark on their forehead and on their hand. They lived and reigned with Christ for a thousand years."
+        },
+        "words": [
+          {
+            "original": "θρόνος",
+            "transliteration": "thro-nos",
+            "english": "throne / seat",
+            "strongs": "G2362",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "κρίσις",
+            "transliteration": "kri-sis",
+            "english": "judgment",
+            "strongs": "G2920",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "But the rest of the dead lived not again until the thousand years were finished. This is the first resurrection.",
+          "9879dbb7aec41528-01": "The rest of the dead didn’t live until the thousand years were finished. This is the first resurrection.",
+          "bba730b9171fcc22-01": "The rest of the dead did not come to life again till the thousand years were ended. This is the first coming back from the dead.",
+          "06125ad3d1d57585-01": "The rest of the dead didn’t live until the thousand years were finished. This is the first resurrection.",
+          "41926a4aa3831714-01": "The rest of the dead didn’t live until the thousand years were finished. This is the first resurrection."
+        },
+        "words": [
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "Blessed and holy is he that hath part in the first resurrection: on such the second death hath no power, but they shall be priests of God and of Christ, and shall reign with him a thousand years.",
+          "9879dbb7aec41528-01": "Blessed and holy is he who has part in the first resurrection. Over these, the second death has no power, but they will be priests of God and of Christ, and will reign with him one thousand years.",
+          "bba730b9171fcc22-01": "Happy and holy is he who has a part in this first coming: over these the second death has no authority, but they will be priests of God and of Christ, and will be ruling with him a thousand years.",
+          "06125ad3d1d57585-01": "Blessed and holy is he who has part in the first resurrection. Over these, the second death has no power, but they will be priests of God and of Christ, and will reign with him one thousand years.",
+          "41926a4aa3831714-01": "Blessed and holy is he who has part in the first resurrection. Over these, the second death has no power, but they will be priests of God and of Christ, and will reign with him one thousand years."
+        },
+        "words": [
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "And when the thousand years are expired, Satan shall be loosed out of his prison,",
+          "9879dbb7aec41528-01": "And after the thousand years, Satan will be released from his prison,",
+          "bba730b9171fcc22-01": "And when the thousand years are ended, Satan will be let loose out of his prison,",
+          "06125ad3d1d57585-01": "And after the thousand years, Satan will be released from his prison,",
+          "41926a4aa3831714-01": "And after the thousand years, Satan will be released from his prison,"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And shall go out to deceive the nations which are in the four quarters of the earth, Gog and Magog, to gather them together to battle: the number of whom is as the sand of the sea.",
+          "9879dbb7aec41528-01": "and he will come out to deceive the nations which are in the four corners of the earth, Gog and Magog, to gather them together to the war; the number of whom is as the sand of the sea.",
+          "bba730b9171fcc22-01": "And will go out to put in error the nations which are in the four quarters of the earth, Gog and Magog, to get them together to the war, the number of whom is like the sands of the sea.",
+          "06125ad3d1d57585-01": "and he will come out to deceive the nations which are in the four corners of the earth, Gog and Magog, to gather them together to the war; the number of whom is as the sand of the sea.",
+          "41926a4aa3831714-01": "and he will come out to deceive the nations which are in the four corners of the earth, Gog and Magog, to gather them together to the war; the number of whom is as the sand of the sea."
+        },
+        "words": [
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And they went up on the breadth of the earth, and compassed the camp of the saints about, and the beloved city: and fire came down from God out of heaven, and devoured them.",
+          "9879dbb7aec41528-01": "They went up over the width of the earth, and surrounded the camp of the saints, and the beloved city. Fire came down out of heaven from God and devoured them.",
+          "bba730b9171fcc22-01": "And they went up over the face of the earth, and made a circle about the tents of the saints, and the well loved town: and fire came down out of heaven for their destruction.",
+          "06125ad3d1d57585-01": "They went up over the width of the earth, and surrounded the camp of the saints, and the beloved city. Fire came down out of heaven from God and devoured them.",
+          "41926a4aa3831714-01": "They went up over the width of the earth, and surrounded the camp of the saints, and the beloved city. Fire came down out of heaven from God and devoured them."
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And the devil that deceived them was cast into the lake of fire and brimstone, where the beast and the false prophet are, and shall be tormented day and night for ever and ever.",
+          "9879dbb7aec41528-01": "The devil who deceived them was thrown into the lake of fire and sulfur, where the beast and the false prophet are also. They will be tormented day and night forever and ever.",
+          "bba730b9171fcc22-01": "And the Evil One who put them in error was sent down into the sea of ever-burning fire, where the beast and the false prophet are, and their punishment will go on day and night for ever and ever.",
+          "06125ad3d1d57585-01": "The devil who deceived them was thrown into the lake of fire and sulfur, where the beast and the false prophet are also. They will be tormented day and night forever and ever.",
+          "41926a4aa3831714-01": "The devil who deceived them was thrown into the lake of fire and sulfur, where the beast and the false prophet are also. They will be tormented day and night forever and ever."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw a great white throne, and him that sat on it, from whose face the earth and the heaven fled away; and there was found no place for them.",
+          "9879dbb7aec41528-01": "I saw a great white throne, and him who sat on it, from whose face the earth and the heaven fled away. There was found no place for them.",
+          "bba730b9171fcc22-01": "And I saw a great white seat, and him who was seated on it, before whose face the earth and the heaven went in flight; and there was no place for them.",
+          "06125ad3d1d57585-01": "I saw a great white throne, and him who sat on it, from whose face the earth and the heaven fled away. There was found no place for them.",
+          "41926a4aa3831714-01": "I saw a great white throne, and him who sat on it, from whose face the earth and the heaven fled away. There was found no place for them."
+        },
+        "words": [
+          {
+            "original": "θρόνος",
+            "transliteration": "thro-nos",
+            "english": "throne / seat",
+            "strongs": "G2362",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw the dead, small and great, stand before God; and the books were opened: and another book was opened, which is the book of life: and the dead were judged out of those things which were written in the books, according to their works.",
+          "9879dbb7aec41528-01": "I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works.",
+          "bba730b9171fcc22-01": "And I saw the dead, great and small, taking their places before the high seat; and the books were open, and another book was open, which is the book of life; and the dead were judged by the things which were in the books, even by their works.",
+          "06125ad3d1d57585-01": "I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works.",
+          "41926a4aa3831714-01": "I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works."
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "And the sea gave up the dead which were in it; and death and hell delivered up the dead which were in them: and they were judged every man according to their works.",
+          "9879dbb7aec41528-01": "The sea gave up the dead who were in it. Death and Hades gave up the dead who were in them. They were judged, each one according to his works.",
+          "bba730b9171fcc22-01": "And the sea gave up the dead which were in it; and death and Hell gave up the dead which were in them; and they were judged every man by his works.",
+          "06125ad3d1d57585-01": "The sea gave up the dead who were in it. Death and Hades gave up the dead who were in them. They were judged, each one according to his works.",
+          "41926a4aa3831714-01": "The sea gave up the dead who were in it. Death and Hades gave up the dead who were in them. They were judged, each one according to his works."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And death and hell were cast into the lake of fire. This is the second death.",
+          "9879dbb7aec41528-01": "Death and Hades were thrown into the lake of fire. This is the second death, the lake of fire.",
+          "bba730b9171fcc22-01": "And death and Hell were put into the sea of fire. This is the second death, even the sea of fire.",
+          "06125ad3d1d57585-01": "Death and Hades were thrown into the lake of fire. This is the second death, the lake of fire.",
+          "41926a4aa3831714-01": "Death and Hades were thrown into the lake of fire. This is the second death, the lake of fire."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And whosoever was not found written in the book of life was cast into the lake of fire.",
+          "9879dbb7aec41528-01": "If anyone was not found written in the book of life, he was cast into the lake of fire.",
+          "bba730b9171fcc22-01": "And if anyone's name was not in the book of life, he went down into the sea of fire.",
+          "06125ad3d1d57585-01": "If anyone was not found written in the book of life, he was cast into the lake of fire.",
+          "41926a4aa3831714-01": "If anyone was not found written in the book of life, he was cast into the lake of fire."
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Revelation 21:1-27": {
+    "reference": "Revelation 21:1-27",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea.",
+          "9879dbb7aec41528-01": "I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more.",
+          "bba730b9171fcc22-01": "And I saw a new heaven and a new earth: for the first heaven and the first earth were gone; and there was no more sea.",
+          "06125ad3d1d57585-01": "I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more.",
+          "41926a4aa3831714-01": "I saw a new heaven and a new earth: for the first heaven and the first earth have passed away, and the sea is no more."
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband.",
+          "9879dbb7aec41528-01": "I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband.",
+          "bba730b9171fcc22-01": "And I saw the holy town, new Jerusalem, coming down out of heaven from God, like a bride made beautiful for her husband.",
+          "06125ad3d1d57585-01": "I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband.",
+          "41926a4aa3831714-01": "I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband."
+        },
+        "words": [
+          {
+            "original": "παρουσία",
+            "transliteration": "pa-rou-si-a",
+            "english": "coming / presence",
+            "strongs": "G3952",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God.",
+          "9879dbb7aec41528-01": "I heard a loud voice out of heaven saying, “Behold, God’s dwelling is with people, and he will dwell with them, and they will be his people, and God himself will be with them as their God.",
+          "bba730b9171fcc22-01": "And there came to my ears a great voice out of the high seat, saying, See, the Tent of God is with men, and he will make his living-place with them, and they will be his people, and God himself will be with them, and be their God.",
+          "06125ad3d1d57585-01": "I heard a loud voice out of heaven saying, “Behold, God’s dwelling is with people, and he will dwell with them, and they will be his people, and God himself will be with them as their God.",
+          "41926a4aa3831714-01": "I heard a loud voice out of heaven saying, “Behold, God’s dwelling is with people, and he will dwell with them, and they will be his people, and God himself will be with them as their God."
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.",
+          "9879dbb7aec41528-01": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain, any more. The first things have passed away.”",
+          "bba730b9171fcc22-01": "And he will put an end to all their weeping; and there will be no more death, or sorrow, or crying, or pain; for the first things have come to an end.",
+          "06125ad3d1d57585-01": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain, any more. The first things have passed away.”",
+          "41926a4aa3831714-01": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain, any more. The first things have passed away.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And he that sat upon the throne said, Behold, I make all things new. And he said unto me, Write: for these words are true and faithful.",
+          "9879dbb7aec41528-01": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”",
+          "bba730b9171fcc22-01": "And he who is seated on the high seat said, See, I make all things new. And he said, Put it in the book; for these words are certain and true.",
+          "06125ad3d1d57585-01": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”",
+          "41926a4aa3831714-01": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”"
+        },
+        "words": [
+          {
+            "original": "θρόνος",
+            "transliteration": "thro-nos",
+            "english": "throne / seat",
+            "strongs": "G2362",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto me, It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely.",
+          "9879dbb7aec41528-01": "He said to me, “I have become the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life.",
+          "bba730b9171fcc22-01": "And he said to me, It is done. I am the First and the Last, the start and the end. I will freely give of the fountain of the water of life to him who is in need.",
+          "06125ad3d1d57585-01": "He said to me, “I have become the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life.",
+          "41926a4aa3831714-01": "He said to me, “I have become the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life."
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "He that overcometh shall inherit all things; and I will be his God, and he shall be my son.",
+          "9879dbb7aec41528-01": "He who overcomes, I will give him these things. I will be his God, and he will be my son.",
+          "bba730b9171fcc22-01": "He who overcomes will have these things for his heritage; and I will be his God, and he will be my son.",
+          "06125ad3d1d57585-01": "He who overcomes, I will give him these things. I will be his God, and he will be my son.",
+          "41926a4aa3831714-01": "He who overcomes, I will give him these things. I will be his God, and he will be my son."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "But the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, and idolaters, and all liars, shall have their part in the lake which burneth with fire and brimstone: which is the second death.",
+          "9879dbb7aec41528-01": "But for the cowardly, unbelieving, sinners, abominable, murderers, sexually immoral, sorcerers, idolaters, and all liars, their part is in the lake that burns with fire and sulfur, which is the second death.”",
+          "bba730b9171fcc22-01": "But those who are full of fear and without faith, the unclean and takers of life, those who do the sins of the flesh, and those who make use of evil powers or who give worship to images, and all those who are false, will have their part in the sea of ever-burning fire which is the second death.",
+          "06125ad3d1d57585-01": "But for the cowardly, unbelieving, sinners, abominable, murderers, sexually immoral, sorcerers, idolaters, and all liars, their part is in the lake that burns with fire and sulfur, which is the second death.”",
+          "41926a4aa3831714-01": "But for the cowardly, unbelieving, sinners, abominable, murderers, sexually immoral, sorcerers, idolaters, and all liars, their part is in the lake that burns with fire and sulfur, which is the second death.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "And there came unto me one of the seven angels which had the seven vials full of the seven last plagues, and talked with me, saying, Come hither, I will shew thee the bride, the Lamb’s wife.",
+          "9879dbb7aec41528-01": "One of the seven angels who had the seven bowls, who were loaded with the seven last plagues came, and he spoke with me, saying, “Come here. I will show you the wife, the Lamb’s bride.”",
+          "bba730b9171fcc22-01": "And one of the seven angels who had the seven vessels in which were the seven last punishments, came and said to me, Come here, and see the bride, the Lamb's wife.",
+          "06125ad3d1d57585-01": "One of the seven angels who had the seven bowls, who were loaded with the seven last plagues came, and he spoke with me, saying, “Come here. I will show you the wife, the Lamb’s bride.”",
+          "41926a4aa3831714-01": "One of the seven angels who had the seven bowls, who were loaded with the seven last plagues came, and he spoke with me, saying, “Come here. I will show you the wife, the Lamb’s bride.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And he carried me away in the spirit to a great and high mountain, and shewed me that great city, the holy Jerusalem, descending out of heaven from God,",
+          "9879dbb7aec41528-01": "He carried me away in the Spirit to a great and high mountain, and showed me the holy city, Jerusalem, coming down out of heaven from God,",
+          "bba730b9171fcc22-01": "And he took me away in the Spirit to a great and high mountain, and let me see the holy town Jerusalem, coming down out of heaven from God,",
+          "06125ad3d1d57585-01": "He carried me away in the Spirit to a great and high mountain, and showed me the holy city, Jerusalem, coming down out of heaven from God,",
+          "41926a4aa3831714-01": "He carried me away in the Spirit to a great and high mountain, and showed me the holy city, Jerusalem, coming down out of heaven from God,"
+        },
+        "words": [
+          {
+            "original": "οὐρανός",
+            "transliteration": "ou-ra-nos",
+            "english": "heaven",
+            "strongs": "G3772",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "Having the glory of God: and her light was like unto a stone most precious, even like a jasper stone, clear as crystal;",
+          "9879dbb7aec41528-01": "having the glory of God. Her light was like a most precious stone, as if it were a jasper stone, clear as crystal;",
+          "bba730b9171fcc22-01": "Having the glory of God: and her light was like a stone of great price, a jasper stone, clear as glass:",
+          "06125ad3d1d57585-01": "having the glory of God. Her light was like a most precious stone, as if it were a jasper stone, clear as crystal;",
+          "41926a4aa3831714-01": "having the glory of God. Her light was like a most precious stone, as if it were a jasper stone, clear as crystal;"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And had a wall great and high, and had twelve gates, and at the gates twelve angels, and names written thereon, which are the names  of the twelve tribes of the children of Israel:",
+          "9879dbb7aec41528-01": "having a great and high wall; having twelve gates, and at the gates twelve angels; and names written on them, which are the names of the twelve tribes of the children of Israel.",
+          "bba730b9171fcc22-01": "She had a wall great and high, with twelve doors, and at the doors twelve angels; and names on them, which are the names of the twelve tribes of the children of Israel.",
+          "06125ad3d1d57585-01": "having a great and high wall; having twelve gates, and at the gates twelve angels; and names written on them, which are the names of the twelve tribes of the children of Israel.",
+          "41926a4aa3831714-01": "having a great and high wall; having twelve gates, and at the gates twelve angels; and names written on them, which are the names of the twelve tribes of the children of Israel."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "On the east three gates; on the north three gates; on the south three gates; and on the west three gates.",
+          "9879dbb7aec41528-01": "On the east were three gates; and on the north three gates; and on the south three gates; and on the west three gates.",
+          "bba730b9171fcc22-01": "And on the east were three doors; and on the north three doors; and on the south three doors; and on the west three doors.",
+          "06125ad3d1d57585-01": "On the east were three gates; and on the north three gates; and on the south three gates; and on the west three gates.",
+          "41926a4aa3831714-01": "On the east were three gates; and on the north three gates; and on the south three gates; and on the west three gates."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "And the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb.",
+          "9879dbb7aec41528-01": "The wall of the city had twelve foundations, and on them twelve names of the twelve Apostles of the Lamb.",
+          "bba730b9171fcc22-01": "And the wall of the town had twelve bases, and on them the twelve names of the twelve Apostles of the Lamb.",
+          "06125ad3d1d57585-01": "The wall of the city had twelve foundations, and on them twelve names of the twelve Apostles of the Lamb.",
+          "41926a4aa3831714-01": "The wall of the city had twelve foundations, and on them twelve names of the twelve Apostles of the Lamb."
+        },
+        "words": [
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "And he that talked with me had a golden reed to measure the city, and the gates thereof, and the wall thereof.",
+          "9879dbb7aec41528-01": "He who spoke with me had for a measure a golden reed to measure the city, its gates, and its walls.",
+          "bba730b9171fcc22-01": "And he who was talking with me had a gold measuring-rod to take the measure of the town, and of its doors, and its wall.",
+          "06125ad3d1d57585-01": "He who spoke with me had for a measure a golden reed to measure the city, its gates, and its walls.",
+          "41926a4aa3831714-01": "He who spoke with me had for a measure a golden reed to measure the city, its gates, and its walls."
+        },
+        "words": [
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "And the city lieth foursquare, and the length is as large as the breadth: and he measured the city with the reed, twelve thousand furlongs. The length and the breadth and the height of it are equal.",
+          "9879dbb7aec41528-01": "The city is square, and its length is as great as its width. He measured the city with the reed, twelve thousand twelve stadia. Its length, width, and height are equal.",
+          "bba730b9171fcc22-01": "And the town is square, as wide as it is long; and he took the measure of the town with the rod, one thousand and five hundred miles: it is equally long and wide and high.",
+          "06125ad3d1d57585-01": "The city is square, and its length is as great as its width. He measured the city with the reed, twelve thousand twelve stadia. Its length, width, and height are equal.",
+          "41926a4aa3831714-01": "The city is square, and its length is as great as its width. He measured the city with the reed, twelve thousand twelve stadia. Its length, width, and height are equal."
+        },
+        "words": [
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And he measured the wall thereof, an hundred and forty and four cubits, according to the measure of a man, that is, of the angel.",
+          "9879dbb7aec41528-01": "Its wall is one hundred forty-four cubits, by the measure of a man, that is, of an angel.",
+          "bba730b9171fcc22-01": "And he took the measure of its wall, one hundred and forty-four cubits, after the measure of a man, that is, of an angel.",
+          "06125ad3d1d57585-01": "Its wall is one hundred forty-four cubits, by the measure of a man, that is, of an angel.",
+          "41926a4aa3831714-01": "Its wall is one hundred forty-four cubits, by the measure of a man, that is, of an angel."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "And the building of the wall of it was of jasper: and the city was pure gold, like unto clear glass.",
+          "9879dbb7aec41528-01": "The construction of its wall was jasper. The city was pure gold, like pure glass.",
+          "bba730b9171fcc22-01": "And the building of its wall was of jasper, and the town was clear gold, clear as glass.",
+          "06125ad3d1d57585-01": "The construction of its wall was jasper. The city was pure gold, like pure glass.",
+          "41926a4aa3831714-01": "The construction of its wall was jasper. The city was pure gold, like pure glass."
+        },
+        "words": [
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And the foundations of the wall of the city were garnished with all manner of precious stones. The first foundation was jasper; the second, sapphire; the third, a chalcedony; the fourth, an emerald;",
+          "9879dbb7aec41528-01": "The foundations of the city’s wall were adorned with all kinds of precious stones. The first foundation was jasper; the second, sapphire; the third, chalcedony; the fourth, emerald;",
+          "bba730b9171fcc22-01": "The bases of the wall of the town had ornaments of all sorts of beautiful stones. The first base was jasper; the second, sapphire; the third, chalcedony; the fourth, emerald;",
+          "06125ad3d1d57585-01": "The foundations of the city’s wall were adorned with all kinds of precious stones. The first foundation was jasper; the second, sapphire; the third, chalcedony; the fourth, emerald;",
+          "41926a4aa3831714-01": "The foundations of the city’s wall were adorned with all kinds of precious stones. The first foundation was jasper; the second, sapphire; the third, chalcedony; the fourth, emerald;"
+        },
+        "words": [
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "The fifth, sardonyx; the sixth, sardius; the seventh, chrysolite; the eighth, beryl; the ninth, a topaz; the tenth, a chrysoprasus; the eleventh, a jacinth; the twelfth, an amethyst.",
+          "9879dbb7aec41528-01": "the fifth, sardonyx; the sixth, sardius; the seventh, chrysolite; the eighth, beryl; the ninth, topaz; the tenth, chrysoprasus; the eleventh, jacinth; and the twelfth, amethyst.",
+          "bba730b9171fcc22-01": "The fifth, sardonyx; the sixth, sardius; the seventh, chrysolite; the eighth, beryl; the ninth, topaz; the tenth, chrysoprase; the eleventh, jacinth; the twelfth, amethyst.",
+          "06125ad3d1d57585-01": "the fifth, sardonyx; the sixth, sardius; the seventh, chrysolite; the eighth, beryl; the ninth, topaz; the tenth, chrysoprasus; the eleventh, jacinth; and the twelfth, amethyst.",
+          "41926a4aa3831714-01": "the fifth, sardonyx; the sixth, sardius; the seventh, chrysolite; the eighth, beryl; the ninth, topaz; the tenth, chrysoprasus; the eleventh, jacinth; and the twelfth, amethyst."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "And the twelve gates were twelve pearls; every several gate was of one pearl: and the street of the city was pure gold, as it were transparent glass.",
+          "9879dbb7aec41528-01": "The twelve gates were twelve pearls. Each one of the gates was made of one pearl. The street of the city was pure gold, like transparent glass.",
+          "bba730b9171fcc22-01": "And the twelve doors were twelve pearls; every door was made of one pearl; and the street of the town was clear gold, as clear as glass.",
+          "06125ad3d1d57585-01": "The twelve gates were twelve pearls. Each one of the gates was made of one pearl. The street of the city was pure gold, like transparent glass.",
+          "41926a4aa3831714-01": "The twelve gates were twelve pearls. Each one of the gates was made of one pearl. The street of the city was pure gold, like transparent glass."
+        },
+        "words": [
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 22,
+        "translations": {
+          "de4e12af7f28f599-02": "And I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it.",
+          "9879dbb7aec41528-01": "I saw no temple in it, for the Lord God, the Almighty, and the Lamb, are its temple.",
+          "bba730b9171fcc22-01": "And I saw no Temple there; because the Lord God, the Ruler of all, and the Lamb are its Temple.",
+          "06125ad3d1d57585-01": "I saw no temple in it, for the Lord God, the Almighty, and the Lamb, are its temple.",
+          "41926a4aa3831714-01": "I saw no temple in it, for the Lord God, the Almighty, and the Lamb, are its temple."
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 23,
+        "translations": {
+          "de4e12af7f28f599-02": "And the city had no need of the sun, neither of the moon, to shine in it: for the glory of God did lighten it, and the Lamb is the light thereof.",
+          "9879dbb7aec41528-01": "The city has no need for the sun, neither of the moon, to shine, for the very glory of God illuminated it, and its lamp is the Lamb.",
+          "bba730b9171fcc22-01": "And the town has no need of the sun, or of the moon, to give it light: for the glory of God did make it light, and the light of it is the Lamb.",
+          "06125ad3d1d57585-01": "The city has no need for the sun, neither of the moon, to shine, for the very glory of God illuminated it, and its lamp is the Lamb.",
+          "41926a4aa3831714-01": "The city has no need for the sun, neither of the moon, to shine, for the very glory of God illuminated it, and its lamp is the Lamb."
+        },
+        "words": [
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 24,
+        "translations": {
+          "de4e12af7f28f599-02": "And the nations of them which are saved shall walk in the light of it: and the kings of the earth do bring their glory and honour into it.",
+          "9879dbb7aec41528-01": "The nations will walk in its light. The kings of the earth bring the glory and honor of the nations into it.",
+          "bba730b9171fcc22-01": "And the nations will go in its light: and the kings of the earth will take their glory into it.",
+          "06125ad3d1d57585-01": "The nations will walk in its light. The kings of the earth bring the glory and honor of the nations into it.",
+          "41926a4aa3831714-01": "The nations will walk in its light. The kings of the earth bring the glory and honor of the nations into it."
+        },
+        "words": [
+          {
+            "original": "γῆ",
+            "transliteration": "ge",
+            "english": "earth / land",
+            "strongs": "G1093",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 25,
+        "translations": {
+          "de4e12af7f28f599-02": "And the gates of it shall not be shut at all by day: for there shall be no night there.",
+          "9879dbb7aec41528-01": "Its gates will in no way be shut by day (for there will be no night there),",
+          "bba730b9171fcc22-01": "And the doors of it will never be shut by day (for there is no night there):",
+          "06125ad3d1d57585-01": "Its gates will in no way be shut by day (for there will be no night there),",
+          "41926a4aa3831714-01": "Its gates will in no way be shut by day (for there will be no night there),"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 26,
+        "translations": {
+          "de4e12af7f28f599-02": "And they shall bring the glory and honour of the nations into it.",
+          "9879dbb7aec41528-01": "and they shall bring the glory and the honor of the nations into it so that they may enter.",
+          "bba730b9171fcc22-01": "And the glory and honour of the nations will come into it:",
+          "06125ad3d1d57585-01": "and they shall bring the glory and the honor of the nations into it so that they may enter.",
+          "41926a4aa3831714-01": "and they shall bring the glory and the honor of the nations into it so that they may enter."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 27,
+        "translations": {
+          "de4e12af7f28f599-02": "And there shall in no wise enter into it any thing that defileth, neither whatsoever worketh abomination, or maketh a lie: but they which are written in the Lamb’s book of life.",
+          "9879dbb7aec41528-01": "There will in no way enter into it anything profane, or one who causes an abomination or a lie, but only those who are written in the Lamb’s book of life.",
+          "bba730b9171fcc22-01": "And nothing unclean may come into it, or anyone whose works are cursed or false; but only those whose names are in the Lamb's book of life.",
+          "06125ad3d1d57585-01": "There will in no way enter into it anything profane, or one who causes an abomination or a lie, but only those who are written in the Lamb’s book of life.",
+          "41926a4aa3831714-01": "There will in no way enter into it anything profane, or one who causes an abomination or a lie, but only those who are written in the Lamb’s book of life."
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      }
+    ]
+  },
+  "Revelation 22:1-21": {
+    "reference": "Revelation 22:1-21",
+    "verses": [
+      {
+        "verseNumber": 1,
+        "translations": {
+          "de4e12af7f28f599-02": "And he shewed me a pure river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb.",
+          "9879dbb7aec41528-01": "He showed me a river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb,",
+          "bba730b9171fcc22-01": "And I saw a river of water of life, clear as glass, coming out of the high seat of God and of the Lamb,",
+          "06125ad3d1d57585-01": "He showed me a river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb,",
+          "41926a4aa3831714-01": "He showed me a river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb,"
+        },
+        "words": [
+          {
+            "original": "θρόνος",
+            "transliteration": "thro-nos",
+            "english": "throne / seat",
+            "strongs": "G2362",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 2,
+        "translations": {
+          "de4e12af7f28f599-02": "In the midst of the street of it, and on either side of the river, was there the tree of life, which bare twelve manner  of fruits, and yielded her fruit every month: and the leaves of the tree were for the healing of the nations.",
+          "9879dbb7aec41528-01": "in the middle of its street. On this side of the river and on that was the tree of life, bearing twelve kinds of fruits, yielding its fruit every month. The leaves of the tree were for the healing of the nations.",
+          "bba730b9171fcc22-01": "In the middle of its street. And on this side of the river and on that was the tree of life, having twelve sorts of fruits, giving its fruit every month; and the leaves of the tree give life to the nations.",
+          "06125ad3d1d57585-01": "in the middle of its street. On this side of the river and on that was the tree of life, bearing twelve kinds of fruits, yielding its fruit every month. The leaves of the tree were for the healing of the nations.",
+          "41926a4aa3831714-01": "in the middle of its street. On this side of the river and on that was the tree of life, bearing twelve kinds of fruits, yielding its fruit every month. The leaves of the tree were for the healing of the nations."
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 3,
+        "translations": {
+          "de4e12af7f28f599-02": "And there shall be no more curse: but the throne of God and of the Lamb shall be in it; and his servants shall serve him:",
+          "9879dbb7aec41528-01": "There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants will serve him.",
+          "bba730b9171fcc22-01": "And there will be no more curse: and the high seat of God and of the Lamb will be there; and his servants will be worshipping him;",
+          "06125ad3d1d57585-01": "There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants will serve him.",
+          "41926a4aa3831714-01": "There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants will serve him."
+        },
+        "words": [
+          {
+            "original": "θρόνος",
+            "transliteration": "thro-nos",
+            "english": "throne / seat",
+            "strongs": "G2362",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 4,
+        "translations": {
+          "de4e12af7f28f599-02": "And they shall see his face; and his name shall be in their foreheads.",
+          "9879dbb7aec41528-01": "They will see his face, and his name will be on their foreheads.",
+          "bba730b9171fcc22-01": "And they will see his face; and his name will be on their brows.",
+          "06125ad3d1d57585-01": "They will see his face, and his name will be on their foreheads.",
+          "41926a4aa3831714-01": "They will see his face, and his name will be on their foreheads."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 5,
+        "translations": {
+          "de4e12af7f28f599-02": "And there shall be no night there; and they need no candle, neither light of the sun; for the Lord God giveth them light: and they shall reign for ever and ever.",
+          "9879dbb7aec41528-01": "There will be no night, and they need no lamp light; for the Lord God will illuminate them. They will reign forever and ever.",
+          "bba730b9171fcc22-01": "And there will be no more night; and they have no need of a light or of the shining of the sun; for the Lord God will give them light: and they will be ruling for ever and ever.",
+          "06125ad3d1d57585-01": "There will be no night, and they need no lamp light; for the Lord God will illuminate them. They will reign forever and ever.",
+          "41926a4aa3831714-01": "There will be no night, and they need no lamp light; for the Lord God will illuminate them. They will reign forever and ever."
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 6,
+        "translations": {
+          "de4e12af7f28f599-02": "And he said unto me, These sayings are faithful and true: and the Lord God of the holy prophets sent his angel to shew unto his servants the things which must shortly be done.",
+          "9879dbb7aec41528-01": "He said to me, “These words are faithful and true. The Lord God of the spirits of the prophets sent his angel to show to his bondservants the things which must happen soon.”",
+          "bba730b9171fcc22-01": "And he said to me, These words are certain and true: and the Lord, the God of the spirits of the prophets, sent his angel to make clear to his servants the things which are now to come about.",
+          "06125ad3d1d57585-01": "He said to me, “These words are faithful and true. The Lord God of the spirits of the prophets sent his angel to show to his bondservants the things which must happen soon.”",
+          "41926a4aa3831714-01": "He said to me, “These words are faithful and true. The Lord God of the spirits of the prophets sent his angel to show to his bondservants the things which must happen soon.”"
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 7,
+        "translations": {
+          "de4e12af7f28f599-02": "Behold, I come quickly: blessed is he that keepeth the sayings of the prophecy of this book.",
+          "9879dbb7aec41528-01": "“Behold, I come quickly. Blessed is he who keeps the words of the prophecy of this book.”",
+          "bba730b9171fcc22-01": "See, I come quickly. A blessing on him who keeps the words of this book of the prophet.",
+          "06125ad3d1d57585-01": "“Behold, I come quickly. Blessed is he who keeps the words of the prophecy of this book.”",
+          "41926a4aa3831714-01": "“Behold, I come quickly. Blessed is he who keeps the words of the prophecy of this book.”"
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 8,
+        "translations": {
+          "de4e12af7f28f599-02": "And I John saw these things, and heard them. And when I had heard and seen, I fell down to worship before the feet of the angel which shewed me these things.",
+          "9879dbb7aec41528-01": "Now I, John, am the one who heard and saw these things. When I heard and saw, I fell down to worship before the feet of the angel who had shown me these things.",
+          "bba730b9171fcc22-01": "And I, John, am he who saw these things and to whose ears they came. And when I had seen and given ear, I went down on my face to give worship at the feet of the angel who made these things clear to me.",
+          "06125ad3d1d57585-01": "Now I, John, am the one who heard and saw these things. When I heard and saw, I fell down to worship before the feet of the angel who had shown me these things.",
+          "41926a4aa3831714-01": "Now I, John, am the one who heard and saw these things. When I heard and saw, I fell down to worship before the feet of the angel who had shown me these things."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 9,
+        "translations": {
+          "de4e12af7f28f599-02": "Then saith he unto me, See thou do it not: for I am thy fellowservant, and of thy brethren the prophets, and of them which keep the sayings of this book: worship God.",
+          "9879dbb7aec41528-01": "He said to me, “See you don’t do it! I am a fellow bondservant with you and with your brothers, the prophets, and with those who keep the words of this book. Worship God.”",
+          "bba730b9171fcc22-01": "And he said to me, See you do it not; I am a brother-servant with you and with your brothers the prophets, and with those who keep the words of this book: give worship to God.",
+          "06125ad3d1d57585-01": "He said to me, “See you don’t do it! I am a fellow bondservant with you and with your brothers, the prophets, and with those who keep the words of this book. Worship God.”",
+          "41926a4aa3831714-01": "He said to me, “See you don’t do it! I am a fellow bondservant with you and with your brothers, the prophets, and with those who keep the words of this book. Worship God.”"
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 10,
+        "translations": {
+          "de4e12af7f28f599-02": "And he saith unto me, Seal not the sayings of the prophecy of this book: for the time is at hand.",
+          "9879dbb7aec41528-01": "He said to me, “Don’t seal up the words of the prophecy of this book, for the time is at hand.",
+          "bba730b9171fcc22-01": "And he said to me, Let not the words of this prophet's book be kept secret, because the time is near.",
+          "06125ad3d1d57585-01": "He said to me, “Don’t seal up the words of the prophecy of this book, for the time is at hand.",
+          "41926a4aa3831714-01": "He said to me, “Don’t seal up the words of the prophecy of this book, for the time is at hand."
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 11,
+        "translations": {
+          "de4e12af7f28f599-02": "He that is unjust, let him be unjust still: and he which is filthy, let him be filthy still: and he that is righteous, let him be righteous still: and he that is holy, let him be holy still.",
+          "9879dbb7aec41528-01": "He who acts unjustly, let him act unjustly still. He who is filthy, let him be filthy still. He who is righteous, let him do righteousness still. He who is holy, let him be holy still.”",
+          "bba730b9171fcc22-01": "Let the evil man go on in his evil: and let the unclean be still unclean: and let the upright go on in his righteousness: and let the holy be holy still.",
+          "06125ad3d1d57585-01": "He who acts unjustly, let him act unjustly still. He who is filthy, let him be filthy still. He who is righteous, let him do righteousness still. He who is holy, let him be holy still.”",
+          "41926a4aa3831714-01": "He who acts unjustly, let him act unjustly still. He who is filthy, let him be filthy still. He who is righteous, let him do righteousness still. He who is holy, let him be holy still.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 12,
+        "translations": {
+          "de4e12af7f28f599-02": "And, behold, I come quickly; and my reward is with me, to give every man according as his work shall be.",
+          "9879dbb7aec41528-01": "“Behold, I come quickly. My reward is with me, to repay to each man according to his work.",
+          "bba730b9171fcc22-01": "See, I come quickly; and my reward is with me, to give to every man the outcome of his works.",
+          "06125ad3d1d57585-01": "“Behold, I come quickly. My reward is with me, to repay to each man according to his work.",
+          "41926a4aa3831714-01": "“Behold, I come quickly. My reward is with me, to repay to each man according to his work."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 13,
+        "translations": {
+          "de4e12af7f28f599-02": "I am Alpha and Omega, the beginning and the end, the first and the last.",
+          "9879dbb7aec41528-01": "I am the Alpha and the Omega, the First and the Last, the Beginning and the End.",
+          "bba730b9171fcc22-01": "I am the First and the Last, the start and the end.",
+          "06125ad3d1d57585-01": "I am the Alpha and the Omega, the First and the Last, the Beginning and the End.",
+          "41926a4aa3831714-01": "I am the Alpha and the Omega, the First and the Last, the Beginning and the End."
+        },
+        "words": [
+          {
+            "original": "πρῶτος",
+            "transliteration": "pro-tos",
+            "english": "first",
+            "strongs": "G4413",
+            "parsing": "Adj-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 14,
+        "translations": {
+          "de4e12af7f28f599-02": "Blessed are they that do his commandments, that they may have right to the tree of life, and may enter in through the gates into the city.",
+          "9879dbb7aec41528-01": "Blessed are those who do his commandments, that they may have the right to the tree of life, and may enter in by the gates into the city.",
+          "bba730b9171fcc22-01": "A blessing on those whose robes are washed, so that they may have a right to the tree of life, and may go in by the doors into the town.",
+          "06125ad3d1d57585-01": "Blessed are those who do his commandments, that they may have the right to the tree of life, and may enter in by the gates into the city.",
+          "41926a4aa3831714-01": "Blessed are those who do his commandments, that they may have the right to the tree of life, and may enter in by the gates into the city."
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 15,
+        "translations": {
+          "de4e12af7f28f599-02": "For without are dogs, and sorcerers, and whoremongers, and murderers, and idolaters, and whosoever loveth and maketh a lie.",
+          "9879dbb7aec41528-01": "Outside are the dogs, the sorcerers, the sexually immoral, the murderers, the idolaters, and everyone who loves and practices falsehood.",
+          "bba730b9171fcc22-01": "Outside are the dogs, and those who make use of evil powers, those who make themselves unclean, and the takers of life, and those who give worship to images, and everyone whose delight is in what is false.",
+          "06125ad3d1d57585-01": "Outside are the dogs, the sorcerers, the sexually immoral, the murderers, the idolaters, and everyone who loves and practices falsehood.",
+          "41926a4aa3831714-01": "Outside are the dogs, the sorcerers, the sexually immoral, the murderers, the idolaters, and everyone who loves and practices falsehood."
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 16,
+        "translations": {
+          "de4e12af7f28f599-02": "I Jesus have sent mine angel to testify unto you these things in the churches. I am the root and the offspring of David, and the bright and morning star.",
+          "9879dbb7aec41528-01": "I, Jesus, have sent my angel to testify these things to you for the assemblies. I am the root and the offspring of David; the Bright and Morning Star.”",
+          "bba730b9171fcc22-01": "I, Jesus, have sent my angel to give witness to you of these things in the churches. I am the root and the offspring of David, the bright and morning star.",
+          "06125ad3d1d57585-01": "I, Jesus, have sent my angel to testify these things to you for the assemblies. I am the root and the offspring of David; the Bright and Morning Star.”",
+          "41926a4aa3831714-01": "I, Jesus, have sent my angel to testify these things to you for the assemblies. I am the root and the offspring of David; the Bright and Morning Star.”"
+        },
+        "words": [
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          }
+        ]
+      },
+      {
+        "verseNumber": 17,
+        "translations": {
+          "de4e12af7f28f599-02": "And the Spirit and the bride say, Come. And let him that heareth say, Come. And let him that is athirst come. And whosoever will, let him take the water of life freely.",
+          "9879dbb7aec41528-01": "The Spirit and the bride say, “Come!” He who hears, let him say, “Come!” He who is thirsty, let him come. He who desires, let him take the water of life freely.",
+          "bba730b9171fcc22-01": "And the Spirit and the bride say, Come. And let him who gives ear, say, Come. And let him who is in need come; and let everyone desiring it take of the water of life freely.",
+          "06125ad3d1d57585-01": "The Spirit and the bride say, “Come!” He who hears, let him say, “Come!” He who is thirsty, let him come. He who desires, let him take the water of life freely.",
+          "41926a4aa3831714-01": "The Spirit and the bride say, “Come!” He who hears, let him say, “Come!” He who is thirsty, let him come. He who desires, let him take the water of life freely."
+        },
+        "words": [
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 18,
+        "translations": {
+          "de4e12af7f28f599-02": "For I testify unto every man that heareth the words of the prophecy of this book, If any man shall add unto these things, God shall add unto him the plagues that are written in this book:",
+          "9879dbb7aec41528-01": "I testify to everyone who hears the words of the prophecy of this book, if anyone adds to them, may God add to him the plagues which are written in this book.",
+          "bba730b9171fcc22-01": "For I say to every man to whose ears have come the words of this prophet's book, If any man makes an addition to them, God will put on him the punishments which are in this book:",
+          "06125ad3d1d57585-01": "I testify to everyone who hears the words of the prophecy of this book, if anyone adds to them, may God add to him the plagues which are written in this book.",
+          "41926a4aa3831714-01": "I testify to everyone who hears the words of the prophecy of this book, if anyone adds to them, may God add to him the plagues which are written in this book."
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 19,
+        "translations": {
+          "de4e12af7f28f599-02": "And if any man shall take away from the words of the book of this prophecy, God shall take away his part out of the book of life, and out of the holy city, and from the things which are written in this book.",
+          "9879dbb7aec41528-01": "If anyone takes away from the words of the book of this prophecy, may God take away his part from the tree of life, and out of the holy city, which are written in this book.",
+          "bba730b9171fcc22-01": "And if any man takes away from the words of this book, God will take away from him his part in the tree of life and the holy town, even the things which are in this book.",
+          "06125ad3d1d57585-01": "If anyone takes away from the words of the book of this prophecy, may God take away his part from the tree of life, and out of the holy city, which are written in this book.",
+          "41926a4aa3831714-01": "If anyone takes away from the words of the book of this prophecy, may God take away his part from the tree of life, and out of the holy city, which are written in this book."
+        },
+        "words": [
+          {
+            "original": "βιβλίον",
+            "transliteration": "bi-bli-on",
+            "english": "book / scroll",
+            "strongs": "G0975",
+            "parsing": "N-ns"
+          },
+          {
+            "original": "ζωή",
+            "transliteration": "zo-e",
+            "english": "life",
+            "strongs": "G2222",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "πόλις",
+            "transliteration": "po-lis",
+            "english": "city",
+            "strongs": "G4172",
+            "parsing": "N-fs"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          }
+        ]
+      },
+      {
+        "verseNumber": 20,
+        "translations": {
+          "de4e12af7f28f599-02": "He which testifieth these things saith, Surely I come quickly.  Amen. Even so, come, Lord Jesus.",
+          "9879dbb7aec41528-01": "He who testifies these things says, “Yes, I come quickly.”  Amen! Yes, come, Lord Jesus.",
+          "bba730b9171fcc22-01": "He who gives witness to these things says, Truly, I come quickly. Even so come, Lord Jesus.",
+          "06125ad3d1d57585-01": "He who testifies these things says, “Yes, I come quickly.”  Amen! Yes, come, Lord Jesus.",
+          "41926a4aa3831714-01": "He who testifies these things says, “Yes, I come quickly.”  Amen! Yes, come, Lord Jesus."
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      },
+      {
+        "verseNumber": 21,
+        "translations": {
+          "de4e12af7f28f599-02": "The grace of our Lord Jesus Christ be with you all. Amen.",
+          "9879dbb7aec41528-01": "The grace of the Lord Jesus Christ be with all the saints. Amen.",
+          "bba730b9171fcc22-01": "The grace of the Lord Jesus be with the saints. So be it.",
+          "06125ad3d1d57585-01": "The grace of the Lord Jesus Christ be with all the saints. Amen.",
+          "41926a4aa3831714-01": "The grace of the Lord Jesus Christ be with all the saints. Amen."
+        },
+        "words": [
+          {
+            "original": "κύrios",
+            "transliteration": "ku-ri-os",
+            "english": "lord / master",
+            "strongs": "G2962",
+            "parsing": "N-ms"
+          },
+          {
+            "original": "αὐτός",
+            "transliteration": "autos",
+            "english": "he / self",
+            "strongs": "G0846",
+            "parsing": "P-ms"
+          },
+          {
+            "original": "λέγω",
+            "transliteration": "lego",
+            "english": "say / speak",
+            "strongs": "G3004",
+            "parsing": "V-PAI-3s"
+          },
+          {
+            "original": "καί",
+            "transliteration": "kai",
+            "english": "and",
+            "strongs": "G2532",
+            "parsing": "Conj"
+          }
+        ]
+      }
+    ]
   }
 };
 

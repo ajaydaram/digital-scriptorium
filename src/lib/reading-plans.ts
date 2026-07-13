@@ -1093,7 +1093,127 @@ export const CHRONOLOGICAL_PLAN: Record<number, ReadingPlanDay> = {
         "Add char/smoke flourishes around the edges of the page."
       ]
     },
-    reflectionQuestion: "When earthly foundations crumble, do I remember that God's covenant promises remain unshaken?"
+    reflectionQuestion: "When everything I build seems to fall, can I trust that God’s sovereign plan is still in motion?"
+  },
+  // --- Week 12: The Chronological Climax ---
+  78: {
+    day: 78,
+    reference: "1 Thessalonians 4:13-18",
+    title: "The Hope of the Resurrection",
+    historicalSnapshot: {
+      ref: "1 Thessalonians 4:16",
+      text: "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel..."
+    },
+    scribalStrategy: {
+      title: "The Archangel's Trumpet",
+      instructions: [
+        "Scribe 'DESCEND WITH A SHOUT' in a grand, soaring gothic script.",
+        "Draw a golden trumpet silhouette extending from the top margin down."
+      ]
+    },
+    reflectionQuestion: "Does the promise of Christ's return bring comfort and hope to my daily trials and grief?"
+  },
+  79: {
+    day: 79,
+    reference: "2 Thessalonians 2:1-12",
+    title: "The Man of Lawlessness",
+    historicalSnapshot: {
+      ref: "2 Thessalonians 2:3",
+      text: "Let no man deceive you by any means: for that day shall not come, except there come a falling away first..."
+    },
+    scribalStrategy: {
+      title: "The Falling Away",
+      instructions: [
+        "Write 'LET NO MAN DECEIVE YOU' in a stark, cautionary blockhand.",
+        "Use a thick dark grey border on the left margin, leaving the right margin open for the light of v. 8."
+      ]
+    },
+    reflectionQuestion: "Am I actively guarding my mind against deception and standing firm in the truth of God's word?"
+  },
+  80: {
+    day: 80,
+    reference: "Revelation 1:1-20",
+    title: "The Glorified Son of Man",
+    historicalSnapshot: {
+      ref: "Revelation 1:17",
+      text: "And when I saw him, I fell at his feet as dead. And he laid his right hand upon me, saying... Fear not; I am the first and the last."
+    },
+    scribalStrategy: {
+      title: "Seven Golden Candlesticks",
+      instructions: [
+        "Draw seven glowing golden candlesticks surrounding the text.",
+        "Write 'I AM THE FIRST AND THE LAST' in radiant gold lettering next to v. 17."
+      ]
+    },
+    reflectionQuestion: "Does my vision of Jesus match His majestic, glorified reality, or have I reduced Him to a comfortable size?"
+  },
+  81: {
+    day: 81,
+    reference: "Revelation 19:11-21",
+    title: "The Rider on the White Horse",
+    historicalSnapshot: {
+      ref: "Revelation 19:11",
+      text: "And I saw heaven opened, and behold a white horse; and he that sat upon him was called Faithful and True..."
+    },
+    scribalStrategy: {
+      title: "Faithful and True",
+      instructions: [
+        "Scribe 'FAITHFUL AND TRUE' in large, triumphant imperial script.",
+        "Highlight 'KING OF KINGS AND LORD OF LORDS' in deep crimson red."
+      ]
+    },
+    reflectionQuestion: "Do I actively submit to Jesus as my King of kings today, or do I only seek Him as an assistant to my plans?"
+  },
+  82: {
+    day: 82,
+    reference: "Revelation 20:1-15",
+    title: "The Great White Throne",
+    historicalSnapshot: {
+      ref: "Revelation 20:12",
+      text: "And I saw the dead, small and great, stand before God; and the books were opened..."
+    },
+    scribalStrategy: {
+      title: "The Opened Books",
+      instructions: [
+        "Draw two open scrolls next to the text representing the Books and the Book of Life.",
+        "Write 'BOOK OF LIFE' in a beautiful, luminous white font on a dark background."
+      ]
+    },
+    reflectionQuestion: "Is my name written in the Lamb's Book of Life, and does that bring ultimate security to my soul?"
+  },
+  83: {
+    day: 83,
+    reference: "Revelation 21:1-27",
+    title: "The New Jerusalem",
+    historicalSnapshot: {
+      ref: "Revelation 21:3",
+      text: "And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them..."
+    },
+    scribalStrategy: {
+      title: "The Golden City",
+      instructions: [
+        "Sketch twelve jewel-like foundations in the bottom margin using colored borders.",
+        "Scribe 'BEHOLD I MAKE ALL THINGS NEW' in gold leaf lettering at the center."
+      ]
+    },
+    reflectionQuestion: "How does the promise of a city with no tears, no death, and no pain shape my response to current suffering?"
+  },
+  84: {
+    day: 84,
+    reference: "Revelation 22:1-21",
+    title: "The River of Life",
+    historicalSnapshot: {
+      ref: "Revelation 22:20",
+      text: "He which testifieth these things saith, Surely I come quickly. Amen. Even so, come, Lord Jesus."
+    },
+    scribalStrategy: {
+      title: "Even So, Come",
+      instructions: [
+        "Draw a winding blue river flowing from the top margin down, with trees of life on either side.",
+        "Write 'EVEN SO, COME, LORD JESUS' in huge, magnificent gold lettering at the bottom of the page."
+      ]
+    },
+    reflectionQuestion: "Is my heart's deepest cry 'Even so, come, Lord Jesus!' as I look forward to the final consummation?"
   }
 };
 
