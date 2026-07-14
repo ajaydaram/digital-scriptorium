@@ -54,7 +54,8 @@ import {
   ListChecks,
   TableProperties,
   BookOpen,
-  Send
+  Send,
+  GraduationCap
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
@@ -207,6 +208,7 @@ function ReaderContent() {
 
   const [showAddForm, setShowAddForm] = useState(false);
   const [newComment, setNewComment] = useState("");
+  const [activeStage, setActiveStage] = useState<'read' | 'understand' | 'master'>("read");
 
   const planDay = pathParam && dayParam > 0 ? getPlanDay(pathParam, dayParam) : null;
   const thematicLedger = planDay?.thematicLedger;
@@ -217,11 +219,12 @@ function ReaderContent() {
       if (dayData) {
         setCurrentRef(dayData.reference);
         setSearchQuery(dayData.reference);
+        setActiveStage("read"); // Reset to read stage when transitioning days
       }
     } else if (!searchQuery) {
       setSearchQuery(initialRef);
     }
-  }, [pathParam, dayParam, initialRef]);
+  }, [pathParam, dayParam, initialRef, searchQuery]);
 
   useEffect(() => {
     if (currentRef) {
@@ -234,7 +237,13 @@ function ReaderContent() {
       if (isInterlinear) {
         loadInterlinearData(currentRef);
       }
-      setScribeReflection(""); 
+
+      if (typeof window !== "undefined") {
+        const savedReflection = localStorage.getItem(`scriptorium_reflection_${pathParam}_${dayParam}`);
+        setScribeReflection(savedReflection || "");
+      } else {
+        setScribeReflection("");
+      }
       setAiAnalysis(null); 
       setSelectedWord(null);
       setWordStudyResult(null);
@@ -553,9 +562,8 @@ function ReaderContent() {
               getThemeClass("bg-white", "bg-[#FAF6EE] border border-[#E6D7B8]", "bg-[#1E293B]")
             )}>
               <div className="bg-brand-gradient h-1.5 w-full" />
-              
               <div className="px-6 pt-8">
-                <GuidedAscentStepper />
+                <GuidedAscentStepper activeStage={activeStage} onStageChange={setActiveStage} />
               </div>
 
               <CardContent className="p-6 md:p-8 flex-1 pt-4">
@@ -587,112 +595,254 @@ function ReaderContent() {
                         {scripture.reference}
                       </h2>
                     </header>
-                    
-                    {isComparative ? (
-                      <ComparativeView
-                        scripture={scripture}
-                        version={version}
-                        secondaryScripture={secondaryScripture}
-                        secondaryVersion={secondaryVersion}
-                        isSecondaryLoading={isSecondaryLoading}
-                        secondaryError={secondaryError}
-                        getThemeClass={getThemeClass}
-                        SUPPORTED_VERSIONS={SUPPORTED_VERSIONS}
-                      />
-                    ) : isInterlinear ? (
+                                        {activeStage === "read" ? (
+                      <>
+                        {isComparative ? (
+                          <ComparativeView
+                            scripture={scripture}
+                            version={version}
+                            secondaryScripture={secondaryScripture}
+                            secondaryVersion={secondaryVersion}
+                            isSecondaryLoading={isSecondaryLoading}
+                            secondaryError={secondaryError}
+                            getThemeClass={getThemeClass}
+                            SUPPORTED_VERSIONS={SUPPORTED_VERSIONS}
+                          />
+                        ) : isInterlinear ? (
+                          <div className="space-y-8 animate-in fade-in duration-500">
+                            {isInterlinearLoading ? (
+                              <div className="flex flex-col items-center justify-center py-40 space-y-4">
+                                <Loader2 className="h-10 w-10 animate-spin text-primary" />
+                                <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Loading original language analysis...</span>
+                              </div>
+                            ) : interlinearError ? (
+                              <div className="text-center py-20 space-y-4">
+                                <AlertCircle className="h-10 w-10 text-red-500 mx-auto" />
+                                <p className="text-sm text-slate-500">{interlinearError}</p>
+                                <Button onClick={() => loadInterlinearData(currentRef)} variant="outline" size="sm" className="rounded-full">Retry Analysis</Button>
+                              </div>
+                            ) : interlinearData && interlinearData.verses ? (
+                              <TooltipProvider delayDuration={150}>
+                                <div className="space-y-8">
+                                  {interlinearData.verses.map((verse) => (
+                                    <div key={verse.verseNumber} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
+                                      <span className="text-xs font-bold font-headline text-slate-400 bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded shrink-0">
+                                        Verse {verse.verseNumber}
+                                      </span>
+                                      <div className="flex flex-wrap gap-x-6 gap-y-8 leading-loose">
+                                        {verse.words.map((wordObj, wIdx) => (
+                                          <Tooltip key={wIdx}>
+                                            <TooltipTrigger asChild>
+                                              <div className="flex flex-col items-center cursor-help border-b border-dashed border-slate-300 hover:border-primary/50 pb-1 transition-all">
+                                                <span className="text-2xl font-bold font-serif text-slate-900 dark:text-white pb-1 select-all">
+                                                  {wordObj.original}
+                                                </span>
+                                                <span className="text-xs text-slate-400 italic">
+                                                  {wordObj.transliteration}
+                                                </span>
+                                                <span className="text-xs font-bold text-primary dark:text-slate-300">
+                                                  {wordObj.english}
+                                                </span>
+                                              </div>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="p-3 max-w-[260px] space-y-2 rounded-xl">
+                                              <div className="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-1">
+                                                <span className="font-bold text-xs font-headline text-primary">Concordance</span>
+                                                <Badge variant="outline" className="text-[10px] font-bold px-1.5 py-0 border-none rounded-full bg-slate-100">
+                                                  {wordObj.strongs}
+                                                </Badge>
+                                              </div>
+                                              <div className="space-y-1 text-xs">
+                                                <p className="text-slate-400 font-bold uppercase tracking-wider text-[9px]">Grammatical Parsing</p>
+                                                <p className="font-mono text-slate-800 dark:text-slate-200">{wordObj.parsing}</p>
+                                              </div>
+                                            </TooltipContent>
+                                          </Tooltip>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </TooltipProvider>
+                            ) : null}
+                          </div>
+                        ) : pathParam === 'chronological' && (CHRONOLOGICAL_DAYS_DATA[dayParam] || dayParam === 20) ? (
+                          <ChronologicalDesk day={dayParam} theme={theme} version={version} getThemeClass={getThemeClass} />
+                        ) : (
+                          <div className={cn(
+                            "bible-reader-text leading-relaxed font-serif transition-all duration-300",
+                            getThemeClass("text-slate-800", "text-[#433422]", "text-slate-300"),
+                            pathParam === 'genre' && "poetic-lineation"
+                          )}>
+                            <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
+                          </div>
+                        )}
+
+                        {planDay?.mainTruth && (
+                          <div className="p-10 rounded-3xl bg-slate-50/50 border border-slate-100 text-center space-y-6">
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">The Core Truth</span>
+                            <p className="text-2xl font-headline font-bold text-slate-900 leading-snug italic">
+                              "{planDay.mainTruth}"
+                            </p>
+                          </div>
+                        )}
+
+                        <ScribeReflection
+                          dayParam={dayParam}
+                          planDay={planDay}
+                          scribeReflection={scribeReflection}
+                          setScribeReflection={setScribeReflection}
+                          isSealBroken={isSealBroken}
+                          setIsSealBroken={setIsSealBroken}
+                          isShaking={isShaking}
+                          setIsShaking={setIsShaking}
+                          getThemeClass={getThemeClass}
+                          toast={toast}
+                        />
+                      </>
+                    ) : activeStage === "understand" ? (
                       <div className="space-y-8 animate-in fade-in duration-500">
-                        {isInterlinearLoading ? (
-                          <div className="flex flex-col items-center justify-center py-40 space-y-4">
-                            <Loader2 className="h-10 w-10 animate-spin text-primary" />
-                            <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Loading original language analysis...</span>
-                          </div>
-                        ) : interlinearError ? (
-                          <div className="text-center py-20 space-y-4">
-                            <AlertCircle className="h-10 w-10 text-red-500 mx-auto" />
-                            <p className="text-sm text-slate-500">{interlinearError}</p>
-                            <Button onClick={() => loadInterlinearData(currentRef)} variant="outline" size="sm" className="rounded-full">Retry Analysis</Button>
-                          </div>
-                        ) : interlinearData && interlinearData.verses ? (
-                          <TooltipProvider delayDuration={150}>
-                            <div className="space-y-8">
-                              {interlinearData.verses.map((verse) => (
-                                <div key={verse.verseNumber} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
-                                  <span className="text-xs font-bold font-headline text-slate-400 bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded shrink-0">
-                                    Verse {verse.verseNumber}
-                                  </span>
-                                  <div className="flex flex-wrap gap-x-6 gap-y-8 leading-loose">
-                                    {verse.words.map((wordObj, wIdx) => (
-                                      <Tooltip key={wIdx}>
-                                        <TooltipTrigger asChild>
-                                          <div className="flex flex-col items-center cursor-help border-b border-dashed border-slate-300 hover:border-primary/50 pb-1 transition-all">
-                                            {/* Original (Hebrew/Greek) */}
-                                            <span className="text-2xl font-bold font-serif text-slate-900 dark:text-white pb-1 select-all">
-                                              {wordObj.original}
-                                            </span>
-                                            {/* Transliteration */}
-                                            <span className="text-xs text-slate-400 italic">
-                                              {wordObj.transliteration}
-                                            </span>
-                                            {/* English Equivalent */}
-                                            <span className="text-xs font-bold text-primary dark:text-slate-300">
-                                              {wordObj.english}
-                                            </span>
-                                          </div>
-                                        </TooltipTrigger>
-                                        <TooltipContent className="p-3 max-w-[260px] space-y-2 rounded-xl">
-                                          <div className="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-1">
-                                            <span className="font-bold text-xs font-headline text-primary">Concordance</span>
-                                            <Badge variant="outline" className="text-[10px] font-bold px-1.5 py-0 border-none rounded-full bg-slate-100">
-                                              {wordObj.strongs}
-                                            </Badge>
-                                          </div>
-                                          <div className="space-y-1 text-xs">
-                                            <p className="text-slate-400 font-bold uppercase tracking-wider text-[9px]">Grammatical Parsing</p>
-                                            <p className="font-mono text-slate-800 dark:text-slate-200">{wordObj.parsing}</p>
-                                          </div>
-                                        </TooltipContent>
-                                      </Tooltip>
-                                    ))}
+                        <div className="p-6 rounded-3xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-100 dark:border-slate-800 space-y-4">
+                          <h3 className="text-lg font-headline font-bold flex items-center gap-2 text-primary">
+                            <Search className="h-5 w-5" /> Contextual Clarity
+                          </h3>
+                          <p className="text-sm text-slate-500 leading-relaxed">
+                            Move beyond the surface. Explore the original language nuances and key cross-references that reveal the biblical author's broader theological intent for this passage.
+                          </p>
+                        </div>
+
+                        {planDay?.understandContext?.linguisticNuances && (
+                          <div className="space-y-4">
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline">Linguistic Nuances (Original Languages)</h4>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              {planDay.understandContext.linguisticNuances.map((nuance, i) => (
+                                <div key={i} className={cn(
+                                  "p-5 rounded-2xl border transition-all duration-300 hover:shadow-md",
+                                  getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+                                )}>
+                                  <div className="flex items-baseline justify-between mb-2">
+                                    <span className="text-sm font-bold capitalize text-primary font-headline">{nuance.word}</span>
+                                    <span className="text-xl font-serif font-bold text-amber-700 dark:text-amber-500">{nuance.original}</span>
                                   </div>
+                                  <p className="text-xs text-slate-400 italic mb-2">Literal meaning: {nuance.meaning}</p>
+                                  <p className="text-xs leading-relaxed text-slate-650 dark:text-slate-350">{nuance.significance}</p>
                                 </div>
                               ))}
                             </div>
-                          </TooltipProvider>
-                        ) : null}
-                      </div>
-                    ) : pathParam === 'chronological' && (CHRONOLOGICAL_DAYS_DATA[dayParam] || dayParam === 20) ? (
-                      <ChronologicalDesk day={dayParam} theme={theme} version={version} getThemeClass={getThemeClass} />
-                    ) : (
-                      <div className={cn(
-                        "bible-reader-text leading-relaxed font-serif transition-all duration-300",
-                        getThemeClass("text-slate-800", "text-[#433422]", "text-slate-300"),
-                        pathParam === 'genre' && "poetic-lineation"
-                      )}>
-                        <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
-                      </div>
-                    )}
+                          </div>
+                        )}
 
-                    {planDay?.mainTruth && (
-                      <div className="p-10 rounded-3xl bg-slate-50/50 border border-slate-100 text-center space-y-6">
-                        <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">The Core Truth</span>
-                        <p className="text-2xl font-headline font-bold text-slate-900 leading-snug italic">
-                          "{planDay.mainTruth}"
-                        </p>
+                        {planDay?.understandContext?.crossReferences && (
+                          <div className="space-y-4">
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline">Theological Cross-References</h4>
+                            <div className="space-y-4">
+                              {planDay.understandContext.crossReferences.map((refItem, i) => (
+                                <div key={i} className={cn(
+                                  "p-5 rounded-2xl border flex flex-col md:flex-row gap-4 items-start justify-between",
+                                  getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+                                )}>
+                                  <div className="space-y-2 flex-1">
+                                    <div className="flex items-center gap-2 font-headline">
+                                      <span className="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-500">Cross-Ref</span>
+                                      <h5 className="font-bold text-sm text-slate-900 dark:text-white">{refItem.title}</h5>
+                                    </div>
+                                    <p className="text-xs leading-relaxed text-slate-650 dark:text-slate-350">{refItem.explanation}</p>
+                                  </div>
+                                  <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="rounded-full shrink-0 font-bold text-xs"
+                                    onClick={() => {
+                                      setSecondaryVersion("9879dbb7aec41528-01"); // Default to WEB
+                                      setIsComparative(true);
+                                      loadSecondaryScripture(refItem.reference, "9879dbb7aec41528-01");
+                                      setActiveStage("read"); // Switch back to Read to view comparison!
+                                      toast({ title: "Cross-Reference Loaded", description: `Loaded ${refItem.reference} in Comparative View!` });
+                                    }}
+                                  >
+                                    Compare {refItem.reference}
+                                  </Button>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="space-y-8 animate-in fade-in duration-500">
+                        <div className="p-6 rounded-3xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-100 dark:border-slate-800 space-y-4">
+                          <h3 className="text-lg font-headline font-bold flex items-center gap-2 text-amber-700 dark:text-amber-500">
+                            <GraduationCap className="h-5 w-5" /> Hermeneutical Mastery
+                          </h3>
+                          <p className="text-sm text-slate-500 leading-relaxed">
+                            Achieve mastery through synthesis. Complete the scribal reflection to document your insights and solidify your understanding of this passage.
+                          </p>
+                        </div>
+
+                        {planDay?.scribalStrategy && (
+                          <div className={cn(
+                            "p-6 rounded-2xl border space-y-3",
+                            getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+                          )}>
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline font-bold">Scribal Calligraphy Instructions</h4>
+                            <p className="text-sm font-bold font-serif text-slate-950 dark:text-white">{planDay.scribalStrategy.title}</p>
+                            <ul className="list-disc pl-5 text-xs text-slate-650 dark:text-slate-350 space-y-1">
+                              {planDay.scribalStrategy.instructions.map((inst, idx) => (
+                                <li key={idx}>{inst}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {planDay?.reflectionQuestion && (
+                          <div className="space-y-4">
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline font-bold">Scribe's Journal Reflection</h4>
+                            <Card className={cn(
+                              "border-none shadow-md rounded-2xl overflow-hidden border",
+                              getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+                            )}>
+                              <CardHeader className="p-5 pb-3">
+                                <CardTitle className="text-sm font-bold italic font-serif text-primary">
+                                  "{planDay.reflectionQuestion}"
+                                </CardTitle>
+                              </CardHeader>
+                              <CardContent className="p-5 pt-0 space-y-4">
+                                <textarea
+                                  className={cn(
+                                    "w-full h-32 p-4 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-primary font-serif italic",
+                                    getThemeClass("bg-slate-50 border-slate-100 text-slate-850", "bg-[#F4ECD8] border-[#E6D7B8] text-[#433422]", "bg-slate-900 border-slate-800 text-slate-200")
+                                  )}
+                                  placeholder="Write down your hermeneutical synthesis or reflection here..."
+                                  value={scribeReflection}
+                                  onChange={(e) => setScribeReflection(e.target.value)}
+                                />
+                                <div className="flex items-center justify-between">
+                                  <span className="text-[10px] text-slate-400 uppercase tracking-wider">
+                                    Progress: {scribeReflection.trim().length > 0 ? "Drafting..." : "Awaiting input"}
+                                  </span>
+                                  <Button
+                                    variant="default"
+                                    size="sm"
+                                    className="rounded-full font-bold px-6 bg-brand-gradient hover:opacity-90 border-none text-white shadow-lg"
+                                    onClick={() => {
+                                      if (scribeReflection.trim().length === 0) {
+                                        toast({ title: "Error", description: "Please enter your reflection notes before sealing the scroll.", variant: "destructive" });
+                                        return;
+                                      }
+                                      setIsSealBroken(false); // Seal the scroll!
+                                      localStorage.setItem(`scriptorium_reflection_${pathParam}_${dayParam}`, scribeReflection);
+                                      toast({ title: "Scroll Sealed", description: "Your reflection has been inscribed and preserved." });
+                                    }}
+                                  >
+                                    Seal the Scroll
+                                  </Button>
+                                </div>
+                              </CardContent>
+                            </Card>
+                          </div>
+                        )}
                       </div>
                     )}
-                    
-                    <ScribeReflection
-                      dayParam={dayParam}
-                      planDay={planDay}
-                      scribeReflection={scribeReflection}
-                      setScribeReflection={setScribeReflection}
-                      isSealBroken={isSealBroken}
-                      setIsSealBroken={setIsSealBroken}
-                      isShaking={isShaking}
-                      setIsShaking={setIsShaking}
-                      getThemeClass={getThemeClass}
-                      toast={toast}
-                    />
 
                     {pathParam && (
                       <div className="flex items-center justify-between border-t border-slate-100 pt-6">

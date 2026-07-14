@@ -2,6 +2,10 @@
  * @fileOverview Defines the structured reading plans for The Scriptorium.
  * Implements Genre (Days 1-14), Chronological (Days 15-21), and Thematic (Days 22-28) paths.
  */
+export interface UnderstandContext {
+  linguisticNuances: { word: string; original: string; meaning: string; significance: string }[];
+  crossReferences: { reference: string; title: string; explanation: string }[];
+}
 
 export interface ReadingPlanDay {
   day: number;
@@ -15,6 +19,7 @@ export interface ReadingPlanDay {
   reflectionQuestion?: string;
   historicalSnapshot?: { ref: string; text: string };
   thematicLedger?: { label: string; value: string }[];
+  understandContext?: UnderstandContext;
 }
 
 export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
@@ -2229,9 +2234,129 @@ export function getPlanDays(path: PathId): number[] {
   return [];
 }
 
+function getChronologicalUnderstandContext(day: number, ref: string): UnderstandContext {
+  const customData: Record<number, UnderstandContext> = {
+    15: {
+      linguisticNuances: [
+        { word: "trust", original: "בָּטַח (batach)", meaning: "to lean on, cling to, feel secure", significance: "Used in Psalm 56:3 to express active faith in the face of paralyzing fear." },
+        { word: "tear bottle", original: "נֹאד (nod)", meaning: "leather wineskin, bottle", significance: "Psalm 56:8 paints the tender image of God collecting the psalmist's tears in a bottle, showing intimate divine care." }
+      ],
+      crossReferences: [
+        { reference: "1 Samuel 21:10-15", title: "David's Flight to Gath", explanation: "Provides the historical setting for Psalm 56, when David pretended to be insane to escape King Achish." },
+        { reference: "Hebrews 13:6", title: "Fearless Confidence", explanation: "Echoes Psalm 56's core declaration: 'What can man do to me?' in a New Testament covenant framework." }
+      ]
+    },
+    21: {
+      linguisticNuances: [
+        { word: "covenant", original: "בְּרִית (berit)", meaning: "treaty, alliance, binding agreement", significance: "Used in 2 Samuel 7 to establish the Davidic Covenant, promising an eternal throne." },
+        { word: "house", original: "בַּיִת (bayit)", meaning: "palace, temple, or royal lineage", significance: "Nathan uses a double entendre: David wants to build God a temple ('house'), but God will build David a dynasty ('house')." }
+      ],
+      crossReferences: [
+        { reference: "Psalm 89:3-4", title: "The Sealed Oath", explanation: "Reflects on the Davidic Covenant established in 2 Samuel 7 as an unshakeable oath." },
+        { reference: "Luke 1:32-33", title: "The Ultimate Davidic King", explanation: "Gabriel announces to Mary that Jesus will inherit the throne of His father David, fulfilling 2 Samuel 7." }
+      ]
+    },
+    43: {
+      linguisticNuances: [
+        { word: "remnant", original: "שְׁאָר (shear)", meaning: "surviving remainder", significance: "Used by Isaiah and Ezra to describe the tiny, preserved group returning to rebuild Jerusalem." },
+        { word: "stirred up", original: "עוּר (ur)", meaning: "to awaken, arouse, incite", significance: "Ezra 1:1 describes God awakening Cyrus's heart, proving God's sovereignty over pagan rulers." }
+      ],
+      crossReferences: [
+        { reference: "Isaiah 44:28", title: "Cyrus Foretold", explanation: "Written centuries before, naming Cyrus as the shepherd who would decree the rebuilding of the temple." },
+        { reference: "Jeremiah 29:10", title: "Seventy Years of Exile", explanation: "The prophetic timeframe detailing when the return and rebuilding would commence." }
+      ]
+    },
+    57: {
+      linguisticNuances: [
+        { word: "word", original: "λόγος (logos)", meaning: "spoken word, divine reason, creative principle", significance: "John 1:1 uses Logos to identify Jesus as the eternal Creator, echoing Genesis 1:1." },
+        { word: "tabernacled", original: "σκηνόω (skenoo)", meaning: "to pitch a tent, dwell in a tabernacle", significance: "John 1:14 says the Word became flesh and 'dwelt' (tabernacled) among us, fulfilling the OT tabernacle shadow." }
+      ],
+      crossReferences: [
+        { reference: "Genesis 1:1", title: "The First Beginning", explanation: "John 1:1 intentionally mirrors Genesis 1:1 to establish Christ's pre-existence before creation." },
+        { reference: "Exodus 40:34-35", title: "The Glory Fills the Tent", explanation: "John 1:14's 'we beheld his glory' mirrors the glory filling the Tabernacle." }
+      ]
+    },
+    64: {
+      linguisticNuances: [
+        { word: "witnesses", original: "μάρτυς (martus)", meaning: "spectator, legal witness, martyr", significance: "Acts 1:8 uses this term to define the apostles' main task under the Holy Spirit's power." },
+        { word: "restoring", original: "ἀποκαθιστάνω (apokathistano)", meaning: "to re-establish, return to initial state", significance: "The disciples ask about restoring the political kingdom; Jesus redirects them to spiritual expansion." }
+      ],
+      crossReferences: [
+        { reference: "Luke 24:49", title: "The Promised Power", explanation: "Jesus instructs the disciples to wait in Jerusalem until clothed with power from on high." },
+        { reference: "Joel 2:28-29", title: "Outpouring of the Spirit", explanation: "The prophetic promise of the Spirit's arrival, which empowers the disciples' witness." }
+      ]
+    },
+    71: {
+      linguisticNuances: [
+        { word: "dedicate", original: "חָנַךְ (chanak)", meaning: "to initiate, train, dedicate", significance: "Used in 1 Kings 8 to describe Solomon dedicating the temple to God's presence." },
+        { word: "glory", original: "כָּבוֹד (kabod)", meaning: "weight, honor, heavy presence", significance: "The glory of Yahweh fills the house so densely that priests cannot minister." }
+      ],
+      crossReferences: [
+        { reference: "Exodus 40:34", title: "Tabernacle Model", explanation: "Solomon's temple dedication mirrors Moses' tabernacle completion, showing continuity." },
+        { reference: "2 Chronicles 7:1-3", title: "Fire from Heaven", explanation: "Provides the parallel chronicle account of the fire consuming the sacrifices during dedication." }
+      ]
+    },
+    78: {
+      linguisticNuances: [
+        { word: "falling away", original: "ἀποστασία (apostasia)", meaning: "defection, rebellion, apostasy", significance: "Used in 2 Thessalonians 2 to describe the end-times rebellion preceding the Lawless One." },
+        { word: "restraining", original: "κατέχω (katecho)", meaning: "to hold back, suppress, detain", significance: "The mysterious power holding back the full revelation of lawlessness." }
+      ],
+      crossReferences: [
+        { reference: "Daniel 11:36", title: "The Self-Exalting King", explanation: "Daniel's prophecy of a king who exalts himself above every god, matching the Man of Lawlessness." },
+        { reference: "Matthew 24:15", title: "Abomination Setup", explanation: "Jesus' warning of the holy place being desecrated, matching Paul's description." }
+      ]
+    }
+  };
+
+  if (customData[day]) {
+    return customData[day];
+  }
+
+  const book = ref.split(' ')[0];
+  const isOT = ![
+    "matthew", "mark", "luke", "john", "acts", "romans", "1 corinthians", "2 corinthians",
+    "galatians", "ephesians", "philippians", "colossians", "1 thessalonians", "2 thessalonians",
+    "1 timothy", "2 timothy", "titus", "philemon", "hebrews", "james", "1 peter", "2 peter",
+    "1 john", "2 john", "3 john", "jude", "revelation"
+  ].includes(book.toLowerCase());
+
+  const otNuances = [
+    { word: "righteousness", original: "צֶדֶק (tsedeq)", meaning: "justice, moral rightness, covenant fidelity", significance: "Refers to living in accordance with the standards of God's covenant." },
+    { word: "salvation", original: "יְשׁוּעָה (yeshuah)", meaning: "deliverance, rescue, victory", significance: "Highlights God's active, historical saving acts on behalf of His covenant partners." },
+    { word: "fear of the Lord", original: "יִרְאָה (yirah)", meaning: "reverence, awe, worshipful fear", significance: "The biblical starting point of true wisdom and relationship with Yahweh." }
+  ];
+
+  const ntNuances = [
+    { word: "grace", original: "χάρις (charis)", meaning: "unmerited favor, gift, divine influence on the heart", significance: "Underlies the new covenant paradigm of salvation through faith." },
+    { word: "faith", original: "πίστις (pistis)", meaning: "trust, belief, absolute reliance", significance: "The instrument by which believers receive and walk in new life." },
+    { word: "kingdom", original: "βασιλεία (basileia)", meaning: "sovereign rule, royal dominion", significance: "The central message of Jesus, announcing God's reign breaking into history." }
+  ];
+
+  const nuances = isOT ? otNuances : ntNuances;
+  const seed = day * 13 + ref.length;
+
+  return {
+    linguisticNuances: [
+      nuances[seed % nuances.length],
+      isOT 
+        ? { word: "faithfulness", original: "אֱמוּנָה (emunah)", meaning: "steadfastness, firmness, fidelity", significance: "Underlines God's unchanging devotion to His covenant promises." }
+        : { word: "truth", original: "ἀλήθεια (aletheia)", meaning: "reality, truth, sincerity", significance: "Used in NT to denote the absolute reality of God revealed in Christ." }
+    ],
+    crossReferences: [
+      { reference: "Hebrews 1:1-2", title: "Final Revelation", explanation: "Shows how Old Testament patterns culminate in the final speech of God through the Son." },
+      { reference: "Revelation 19:16", title: "King of Kings", explanation: "Highlights the ultimate destiny of all redemptive history under the Lamb's authority." }
+    ]
+  };
+}
+
 export function getPlanDay(path: PathId, day: number): ReadingPlanDay | null {
   if (path === 'chronological') {
-    return CHRONOLOGICAL_PLAN[day] || null;
+    const raw = CHRONOLOGICAL_PLAN[day];
+    if (!raw) return null;
+    return {
+      ...raw,
+      understandContext: getChronologicalUnderstandContext(day, raw.reference)
+    };
   }
   if (path === 'genre') {
     return GENRE_PLAN[day] || null;

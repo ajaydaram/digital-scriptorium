@@ -55,12 +55,16 @@ const STAGES: Stage[] = [
   }
 ];
 
-export function GuidedAscentStepper() {
-  const [activeStage, setActiveStage] = React.useState<StageId>("read");
+interface GuidedAscentStepperProps {
+  activeStage: StageId;
+  onStageChange: (stage: StageId) => void;
+}
+
+export function GuidedAscentStepper({ activeStage, onStageChange }: GuidedAscentStepperProps) {
   const activeIndex = STAGES.findIndex((s) => s.id === activeStage);
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-10">
+    <div className="w-full max-w-4xl mx-auto py-4">
       <div className="relative mb-16">
         {/* Track */}
         <div className="absolute top-1/2 left-0 w-full h-1.5 bg-slate-100 -translate-y-1/2 rounded-full" />
@@ -83,7 +87,7 @@ export function GuidedAscentStepper() {
             return (
               <div key={stage.id} className="flex flex-col items-center">
                 <button
-                  onClick={() => setActiveStage(stage.id)}
+                  onClick={() => onStageChange(stage.id)}
                   className={cn(
                     "relative z-10 w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-primary/20 bg-white shadow-sm",
                     isCompleted ? "border-primary text-primary" : 
@@ -110,38 +114,6 @@ export function GuidedAscentStepper() {
           })}
         </div>
       </div>
-
-      {/* Details Section */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeStage}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-          className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm"
-        >
-          <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="flex-1 space-y-4">
-              <div className="flex items-center gap-4">
-                <h3 className="text-xl font-headline font-bold text-slate-900">
-                  {STAGES[activeIndex].details.title}
-                </h3>
-                <Badge className="bg-primary/10 text-primary border-none font-bold uppercase tracking-widest text-[11px] px-3 py-1">
-                  {STAGES[activeIndex].label}
-                </Badge>
-              </div>
-              <p className="text-base text-slate-600 leading-relaxed font-body">
-                {STAGES[activeIndex].details.content}
-              </p>
-              <button className="flex items-center gap-2 text-primary font-bold text-sm group hover:underline decoration-2 underline-offset-4">
-                {STAGES[activeIndex].details.action}
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </AnimatePresence>
     </div>
   );
 }
