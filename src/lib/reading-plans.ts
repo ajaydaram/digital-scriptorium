@@ -2234,8 +2234,48 @@ export function getPlanDays(path: PathId): number[] {
   return [];
 }
 
-function getChronologicalUnderstandContext(day: number, ref: string): UnderstandContext {
+function getUnderstandContextForDay(path: PathId, day: number, ref: string): UnderstandContext {
   const customData: Record<number, UnderstandContext> = {
+    1: {
+      linguisticNuances: [
+        { word: "parables", original: "παραβολή (parabole)", meaning: "comparison, analogy, symbolic saying", significance: "Jesus uses concrete physical analogies of daily life to describe spiritual truths of the Kingdom." },
+        { word: "sow", original: "σπείρω (speiro)", meaning: "to scatter seed, broadcast", significance: "Points to the lavish, unmeasured preaching of the gospel to all types of soil." }
+      ],
+      crossReferences: [
+        { reference: "Isaiah 6:9-10", title: "Hearts Hardened", explanation: "Explains why Jesus speaks in parables: to reveal truth to the responsive and hide it from the resistant." },
+        { reference: "Mark 4:14", title: "Word as Seed", explanation: "Parallels Matthew's account, explicitly defining the seed as the Word of God." }
+      ]
+    },
+    8: {
+      linguisticNuances: [
+        { word: "meditate", original: "הָגָה (hagah)", meaning: "to mutter, murmur, hum, growl", significance: "Used in Psalm 1:2. Suggests speaking the text aloud softly, absorbing it through constant vocal repetition." },
+        { word: "blessed", original: "אֶשֶׁר (esher)", meaning: "happy, fortunate, well-guided", significance: "Describes the state of alignment with the divine ordering of life." }
+      ],
+      crossReferences: [
+        { reference: "Joshua 1:8", title: "Joshua's Commandment", explanation: "The foundational mandate to meditate on the Law day and night, mirroring Psalm 1." },
+        { reference: "Jeremiah 17:7-8", title: "Tree by the Waters", explanation: "Jeremiah uses the exact same imagery of a deep-rooted tree by water to describe the trusting soul." }
+      ]
+    },
+    9: {
+      linguisticNuances: [
+        { word: "glory", original: "כָּבוֹד (kabod)", meaning: "weight, honor, heavy splendor", significance: "Used in Psalm 19:1 to describe the visible weight of God's presence in the cosmos." },
+        { word: "law", original: "תּוֹרָה (torah)", meaning: "instruction, teaching, covenant law", significance: "Psalm 19:7 portrays the Torah as perfect, restoring the soul." }
+      ],
+      crossReferences: [
+        { reference: "Romans 1:19-20", title: "General Revelation", explanation: "Paul uses the cosmos' testimony (mirroring Psalm 19) to argue that God's power is clearly perceived by all." },
+        { reference: "Psalm 119:105", title: "Light on the Path", explanation: "Complements Psalm 19's depiction of the guiding, illuminating nature of God's word." }
+      ]
+    },
+    12: {
+      linguisticNuances: [
+        { word: "searched", original: "חָקַר (chaqar)", meaning: "to dig deep, examine minutely, explore", significance: "In Psalm 139:1, David recognizes that God knows him through deep, intentional searching." },
+        { word: "knit me", original: "סָכַךְ (sakak)", meaning: "to weave together, cover, shield", significance: "Psalm 139:13 depicts the intricate design of life in the womb, like weaving tapestry." }
+      ],
+      crossReferences: [
+        { reference: "Job 31:4", title: "Steps Observed", explanation: "Job acknowledges that God counts all his steps, mirroring Psalm 139's omnipresence." },
+        { reference: "Acts 17:27-28", title: "In Him We Live", explanation: "Paul tells the Athenians that God is near to each of us, echoing David's description of inescapable presence." }
+      ]
+    },
     15: {
       linguisticNuances: [
         { word: "trust", original: "בָּטַח (batach)", meaning: "to lean on, cling to, feel secure", significance: "Used in Psalm 56:3 to express active faith in the face of paralyzing fear." },
@@ -2305,6 +2345,116 @@ function getChronologicalUnderstandContext(day: number, ref: string): Understand
         { reference: "Daniel 11:36", title: "The Self-Exalting King", explanation: "Daniel's prophecy of a king who exalts himself above every god, matching the Man of Lawlessness." },
         { reference: "Matthew 24:15", title: "Abomination Setup", explanation: "Jesus' warning of the holy place being desecrated, matching Paul's description." }
       ]
+    },
+    85: {
+      linguisticNuances: [
+        { word: "provide", original: "רָאָה (ra'ah)", meaning: "to see, look out for, foresee", significance: "Used in Genesis 22:8 ('God will provide'). Abraham names the mountain Yahweh-Yireh ('The Lord will see/provide'), trusting God will provide the sacrifice." },
+        { word: "only son", original: "יָחִיד (yachid)", meaning: "unique, beloved, only one", significance: "Genesis 22:2 stresses Isaac's preciousness to Abraham, foreshadowing the Father's offering of Jesus." }
+      ],
+      crossReferences: [
+        { reference: "John 8:56", title: "Abraham Saw Christ's Day", explanation: "Jesus declares that Abraham foresaw His sacrifice and rejoiced, linked to the substitute ram on Moriah." },
+        { reference: "Hebrews 11:17-19", title: "Resurrection of Isaac", explanation: "The New Testament commentary on Abraham's faith that God could raise Isaac from the dead." }
+      ]
+    },
+    86: {
+      linguisticNuances: [
+        { word: "Passover", original: "פֶּסַח (pesach)", meaning: "to pass over, skip, spare", significance: "Exodus 12:13 defines the blood on the doorposts as a sign of safety; the destroyer passes over them." },
+        { word: "unleavened", original: "מַצָּה (matzah)", meaning: "sweet, unfermented bread", significance: "Represents pure, quick preparation, later used in scripture as a symbol of sincerity and truth." }
+      ],
+      crossReferences: [
+        { reference: "1 Corinthians 5:7", title: "Christ our Passover", explanation: "Paul explicitly applies the Passover lamb typology to Jesus, calling believers to live free of spiritual leaven." },
+        { reference: "John 19:36", title: "Not a Bone Broken", explanation: "Jesus' bones were kept intact on the cross, fulfilling Exodus 12:46's command regarding the lamb." }
+      ]
+    },
+    87: {
+      linguisticNuances: [
+        { word: "atonement", original: "כָּפַר (kaphar)", meaning: "to cover, wipe clean, placate", significance: "Used in Leviticus 16 to explain the goal of the Day of Atonement (Yom Kippur): covering Israel's sins." },
+        { word: "scapegoat", original: "עֲזָαζέλ (azazel)", meaning: "complete removal, goat of departure", significance: "The scapegoat bearing Israel's sins into the wilderness represents complete removal of guilt." }
+      ],
+      crossReferences: [
+        { reference: "Hebrews 9:7-12", title: "Entering the Holy Place", explanation: "Contrasts the High Priest's yearly entry into the Holy of Holies with Christ's once-for-all entry into heaven." },
+        { reference: "Psalm 103:12", title: "Sins Removed", explanation: "Echoes the scapegoat concept: removing sins as far as the east is from the west." }
+      ]
+    },
+    88: {
+      linguisticNuances: [
+        { word: "griefs / sorrows", original: "חֳלִי (choli) / מַכְאוֹב (mak'ob)", meaning: "sickness, physical pain, agony", significance: "Isaiah 53:4 shows the Suffering Servant bearing our physical and spiritual ailments." },
+        { word: "wounded", original: "חָלַל (chalal)", meaning: "pierced through, defiled", significance: "Stresses the physical trauma and piercing of the substitute Savior." }
+      ],
+      crossReferences: [
+        { reference: "1 Peter 2:24-25", title: "By His Wounds", explanation: "Peter quotes Isaiah 53 directly to explain how Christ bore our sins in His body on the tree." },
+        { reference: "Matthew 8:17", title: "Healer of Sickness", explanation: "Applies Isaiah 53's bearing of sicknesses to Jesus' physical healing ministry." }
+      ]
+    },
+    89: {
+      linguisticNuances: [
+        { word: "lamb of God", original: "ἀμνὸς τοῦ θεοῦ (amnos tou theou)", meaning: "the sacrificial lamb provided by God", significance: "John 1:29 identifies Jesus as the cosmic substitute who takes away the sin of the world." },
+        { word: "takes away", original: "αἴρω (airo)", meaning: "to lift up, carry away, remove", significance: "Conveys the literal lifting and bearing away of the burden of sin." }
+      ],
+      crossReferences: [
+        { reference: "Isaiah 53:7", title: "Led Like a Lamb", explanation: "John the Baptist's statement directly echoes Isaiah's prophecy of the silent, submissive lamb." },
+        { reference: "Revelation 5:6", title: "The Lamb Slain", explanation: "Connects John's gospel lamb to the enthroned, victorious Lamb of Revelation." }
+      ]
+    },
+    92: {
+      linguisticNuances: [
+        { word: "salvation", original: "יְשׁוּעָה (yeshuah)", meaning: "deliverance, rescue, victory", significance: "In Exodus 14:13, Moses tells Israel to stand still and see the active saving rescue of Yahweh." },
+        { word: "east wind", original: "קָדִים (qadim)", meaning: "scorching wind, desert blast", significance: "God uses natural forces (Exodus 14:21) to execute supernatural judgment and salvation." }
+      ],
+      crossReferences: [
+        { reference: "1 Corinthians 10:1-2", title: "Baptized into Moses", explanation: "Paul calls the Red Sea crossing a type of baptism, identifying it as a boundary crossing into a new life." },
+        { reference: "Joshua 3:17", title: "Jordan Parallel", explanation: "The Jordan River parting for Joshua mirrors the Red Sea parting for Moses, repeating the exodus pattern." }
+      ]
+    },
+    95: {
+      linguisticNuances: [
+        { word: "departure / decease", original: "ἔξοδος (exodos)", meaning: "exit, departure, migration", significance: "In Luke 9:31, Moses and Elijah discuss Jesus' upcoming 'Exodus' in Jerusalem, framing His death/resurrection as the ultimate deliverance." },
+        { word: "chosen", original: "ἐκλέγομαι (eklegomai)", meaning: "selected, chosen out", significance: "The voice from the cloud declares Jesus as the Chosen Son, echoing royal and servant prophecies." }
+      ],
+      crossReferences: [
+        { reference: "Exodus 14:21", title: "The First Exodus", explanation: "Jesus' death and resurrection represents the ultimate Exodus, rescuing humanity from slavery to sin." },
+        { reference: "Deuteronomy 18:15", title: "Prophet Like Moses", explanation: "God's command to 'Hear Him!' at the Transfiguration confirms Jesus is the promised Prophet like Moses." }
+      ]
+    },
+    99: {
+      linguisticNuances: [
+        { word: "comfort", original: "נָחַם (nacham)", meaning: "to console, breathe strongly, comfort", significance: "Isaiah 40:1 opens with a double command to comfort the exiles, announcing the end of warfare." },
+        { word: "highway", original: "מְסִלָּה (mesillah)", meaning: "raised road, public causeway", significance: "Isaiah 40:3 describes raising a highway in the desert for the Lord's return, representing spiritual preparation." }
+      ],
+      crossReferences: [
+        { reference: "Matthew 3:3", title: "Voice in Wilderness", explanation: "Matthew applies Isaiah 40:3 directly to John the Baptist preparing the way for Jesus." },
+        { reference: "1 Peter 1:24-25", title: "Word Stands Forever", explanation: "Quotes Isaiah 40:6-8 to contrast fleeting human life with the enduring nature of the gospel." }
+      ]
+    },
+    109: {
+      linguisticNuances: [
+        { word: "revelation", original: "ἀποκάλυψις (apokalypsis)", meaning: "unveiling, disclosure, drawing back the veil", significance: "Revelation 1:1 sets the genre: disclosing hidden cosmic realities from heaven's perspective." },
+        { word: "firstborn", original: "πρωτότοκος (prototokos)", meaning: "firstborn in rank, preeminent heir", significance: "Revelation 1:5 designates Jesus as the preeminent sovereign over all earthly rulers." }
+      ],
+      crossReferences: [
+        { reference: "Daniel 7:13", title: "Son of Man", explanation: "John's description of Jesus walking among lampstands mirrors Daniel's vision of the Son of Man." },
+        { reference: "Zechariah 12:10", title: "Pierced One", explanation: "Revelation 1:7's 'every eye will see Him... whom they pierced' quotes Zechariah directly." }
+      ]
+    },
+    111: {
+      linguisticNuances: [
+        { word: "new", original: "καινός (kainos)", meaning: "new in quality, fresh, restored", significance: "In Revelation 21:1, God does not make a different set of things (neos), but restores and renews the quality of the current cosmos (kainos)." },
+        { word: "tabernacle", original: "σκηνή (skene)", meaning: "tent, dwelling space", significance: "Revelation 21:3 marks the return of God's direct dwelling among His people, completing the Edenic model." }
+      ],
+      crossReferences: [
+        { reference: "Genesis 2:1-3", title: "Creation Completed", explanation: "Revelation 21's new creation represents the ultimate fulfillment and repair of Genesis 1-2's corrupted project." },
+        { reference: "Isaiah 65:17", title: "New Heavens Promised", explanation: "The Old Testament prophetic foundation for the final renewal of heaven and earth." }
+      ]
+    },
+    112: {
+      linguisticNuances: [
+        { word: "tree of life", original: "ξύλον ζωῆς (xylon zoes)", meaning: "wood or tree of life", significance: "Revelation 22:2 shows the tree of life returning in the middle of the city, healing the nations." },
+        { word: "curse", original: "κατάθεμα (katathema)", meaning: "accursed thing, ban", significance: "Revelation 22:3 declares the complete cancellation of the Edenic curse." }
+      ],
+      crossReferences: [
+        { reference: "Genesis 3:22-24", title: "Exile from Tree", explanation: "Humanity was exiled from the tree of life in Eden; in Revelation 22, the way is permanently opened." },
+        { reference: "Ezekiel 47:1-12", title: "River from Temple", explanation: "Ezekiel's vision of life-giving water flowing from the temple is fully fulfilled in the River of Life." }
+      ]
     }
   };
 
@@ -2312,79 +2462,163 @@ function getChronologicalUnderstandContext(day: number, ref: string): Understand
     return customData[day];
   }
 
-  const book = ref.split(' ')[0];
+  const bookNameClean = ref.split(' ')[0].replace(/[^a-zA-Z]/g, '');
   const isOT = ![
-    "matthew", "mark", "luke", "john", "acts", "romans", "1 corinthians", "2 corinthians",
-    "galatians", "ephesians", "philippians", "colossians", "1 thessalonians", "2 thessalonians",
-    "1 timothy", "2 timothy", "titus", "philemon", "hebrews", "james", "1 peter", "2 peter",
-    "1 john", "2 john", "3 john", "jude", "revelation"
-  ].includes(book.toLowerCase());
+    "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "Corinthians",
+    "Galatians", "Ephesians", "Philippians", "Colossians", "Thessalonians",
+    "Timothy", "Titus", "Philemon", "Hebrews", "James", "Peter",
+    "John", "Jude", "Revelation"
+  ].some(bName => ref.includes(bName));
 
-  const otNuances = [
-    { word: "righteousness", original: "צֶדֶק (tsedeq)", meaning: "justice, moral rightness, covenant fidelity", significance: "Refers to living in accordance with the standards of God's covenant." },
-    { word: "salvation", original: "יְשׁוּעָה (yeshuah)", meaning: "deliverance, rescue, victory", significance: "Highlights God's active, historical saving acts on behalf of His covenant partners." },
-    { word: "fear of the Lord", original: "יִרְאָה (yirah)", meaning: "reverence, awe, worshipful fear", significance: "The biblical starting point of true wisdom and relationship with Yahweh." }
-  ];
+  const bookThemes: Record<string, { nuance: { word: string; original: string; meaning: string; significance: string }; crossRef: { reference: string; title: string; explanation: string } }> = {
+    Genesis: {
+      nuance: { word: "beginning", original: "רֵאשִׁית (reshit)", meaning: "first in place or time, starting point", significance: "Signifies that God is the primary source of all history, creation, and covenants." },
+      crossRef: { reference: "John 1:1-3", title: "Pre-existent Word", explanation: "John mirrors Genesis's creation account to show that the Creator is the incarnate Son." }
+    },
+    Exodus: {
+      nuance: { word: "redeem", original: "גָּאַל (gaal)", meaning: "to act as a kinsman redeemer, rescue", significance: "Represents God's active, legal rescue of Israel from slavery as His special possession." },
+      crossRef: { reference: "Romans 6:17-18", title: "Free from Slavery", explanation: "Applies the Exodus theme of physical liberation to spiritual rescue from sin's domain." }
+    },
+    Leviticus: {
+      nuance: { word: "holy", original: "קָדוֹשׁ (qadosh)", meaning: "set apart, sacred, distinct", significance: "Expresses God's absolute moral and ritual purity, which demands a matching set-apart life from His people." },
+      crossRef: { reference: "1 Peter 1:15-16", title: "Called to Holiness", explanation: "Quotes Leviticus directly to command New Testament believers to walk in set-apart obedience." }
+    },
+    Numbers: {
+      nuance: { word: "wilderness", original: "מִדְבָּר (midbar)", meaning: "arid tract, place of testing", significance: "Depicts the dry training ground where Israel learns to trust God's provision or dies in rebellion." },
+      crossRef: { reference: "1 Corinthians 10:5-6", title: "Examples for Us", explanation: "Paul points to Israel's wilderness wanderings as warnings against rebellion and grumbling." }
+    },
+    Deuteronomy: {
+      nuance: { word: "hear", original: "שָׁמַע (shama)", meaning: "to listen attentively with the intent to obey", significance: "The Shema (Deut 6:4) combines listening with complete covenant devotion and action." },
+      crossRef: { reference: "Mark 12:29-30", title: "The Greatest Commandment", explanation: "Jesus quotes Deuteronomy 6:4-5 as the core foundation of all biblical ethics and law." }
+    },
+    Joshua: {
+      nuance: { word: "inheritance", original: "נַחֲלָה (nachalah)", meaning: "allotted portion, heritage", significance: "Refers to the promised land secured by covenant oath, distributed to the tribes." },
+      crossRef: { reference: "Ephesians 1:11-14", title: "Spiritual Inheritance", explanation: "Translates the physical inheritance of Israel to the believer's secure spiritual inheritance in Christ." }
+    },
+    Judges: {
+      nuance: { word: "right", original: "יָשָׁר (yashar)", meaning: "straight, pleasing, fitting", significance: "In Judges, doing 'what is right in one's own eyes' contrasts sharply with God's straight standard." },
+      crossRef: { reference: "Hebrews 11:32-34", title: "Flawed Heroes", explanation: "Mentions Gideon, Barak, Samson, and Jephthah as examples of faith despite their deep personal failures." }
+    },
+    Ruth: {
+      nuance: { word: "kindness", original: "חֶסֶד (chesed)", meaning: "covenant loyalty, lovingkindness", significance: "The focal term in Ruth, showing self-giving loyalty that mirrors God's devotion to His covenant." },
+      crossRef: { reference: "Matthew 1:5", title: "Ruth in the Lineage", explanation: "Ruth the Moabite is included in the genealogy of Jesus, showing redemption extending to the nations." }
+    },
+    Psalms: {
+      nuance: { word: "refuge", original: "חָסָה (chasah)", meaning: "to flee for protection, trust in", significance: "Depicts God as a rock, shield, and high tower where the righteous find safety." },
+      crossRef: { reference: "Hebrews 6:18", title: "Fleeing for Refuge", explanation: "Uses Psalm-like imagery to describe believers taking hold of the hope set before them." }
+    },
+    Isaiah: {
+      nuance: { word: "comfort", original: "נָחַם (nacham)", meaning: "to console, comfort, relieve", significance: "Marks the turning point in Isaiah 40, promising the end of exile and arrival of God's glory." },
+      crossRef: { reference: "Luke 2:25", title: "Consolation of Israel", explanation: "Simeon waits for the Consolation of Israel, which refers to the prophetic comfort promised in Isaiah." }
+    },
+    Jeremiah: {
+      nuance: { word: "covenant", original: "בְּרִית (berit)", meaning: "binding treaty, alliance", significance: "Jeremiah foretells a new covenant written on hearts rather than stone tablets." },
+      crossRef: { reference: "Hebrews 8:8-12", title: "New Covenant Established", explanation: "Quotes Jeremiah 31 in full to prove that the old Mosaic covenant has been superseded by Christ." }
+    },
+    Ezekiel: {
+      nuance: { word: "spirit", original: "רוּחַ (ruach)", meaning: "wind, breath, spirit", significance: "Ezekiel utilizes Ruach to represent the life-giving, transforming power of God that resurrects dead bones." },
+      crossRef: { reference: "John 3:5-8", title: "Born of the Spirit", explanation: "Jesus explains spiritual birth using wind/spirit imagery, mirroring Ezekiel's dry bones renewal." }
+    },
+    Daniel: {
+      nuance: { word: "kingdom", original: "מַלְכוּת (malkut)", meaning: "reign, royal power, empire", significance: "Daniel emphasizes that earthly empires rise and fall, but God's kingdom will crush them and stand forever." },
+      crossRef: { reference: "Revelation 11:15", title: "Kingdom of the World", explanation: "Announces the ultimate realization of Daniel's vision of the everlasting kingdom of God." }
+    },
+    Matthew: {
+      nuance: { word: "fulfilled", original: "πληρόω (pleroo)", meaning: "to fill up, complete, satisfy", significance: "Matthew continually shows how Jesus' life directly completes the prophetic patterns of Israel." },
+      crossRef: { reference: "Isaiah 7:14", title: "Immanuel Prophecy", explanation: "The primary prophecy cited by Matthew to declare Jesus as God dwelling among us." }
+    },
+    Mark: {
+      nuance: { word: "immediately", original: "εὐθύς (euthys)", meaning: "straightway, at once", significance: "Mark's favorite word, conveying the urgency, swift action, and active service of the Servant of God." },
+      crossRef: { reference: "Isaiah 40:3", title: "Prepare the Way", explanation: "The citation Mark opens with, highlighting the direct and swift preparation for the Messiah." }
+    },
+    Luke: {
+      nuance: { word: "salvation", original: "σωτηρία (soteria)", meaning: "deliverance, preservation, rescue", significance: "Luke stresses that Jesus has come to seek and save the lost, expanding salvation to marginalized groups." },
+      crossRef: { reference: "Isaiah 61:1-2", title: "Good News to the Poor", explanation: "Jesus quotes this in Luke 4:18 to declare the start of His saving mission." }
+    },
+    John: {
+      nuance: { word: "believe", original: "πιστεύω (pisteuo)", meaning: "to trust, place faith in, rely on", significance: "John uses this verb over 90 times to stress active, relational trust as the key to eternal life." },
+      crossRef: { reference: "Numbers 21:9", title: "The Bronze Serpent", explanation: "John 3:14-15 uses the bronze serpent lifted up in the wilderness to explain saving belief in Christ." }
+    },
+    Acts: {
+      nuance: { word: "witnesses", original: "μάρτυς (martus)", meaning: "legal testifier, martyr", significance: "The calling of the early church to bear legal and historical testimony to Christ's resurrection." },
+      crossRef: { reference: "Luke 24:48", title: "Witness Mandate", explanation: "The final commission in Luke's gospel that establishes the acts of the apostles in Jerusalem." }
+    },
+    Romans: {
+      nuance: { word: "righteousness", original: "δικαιοσύνη (dikaiosyne)", meaning: "justification, right standing, covenant loyalty", significance: "The core theme of Romans: how God's right standing is given to faith apart from law works." },
+      crossRef: { reference: "Habakkuk 2:4", title: "The Just Shall Live by Faith", explanation: "The Old Testament text Paul uses in Romans 1:17 to build his entire system of justification." }
+    },
+    Revelation: {
+      nuance: { word: "unveiling", original: "ἀποκάλυψις (apokalypsis)", meaning: "disclosure, revealing of secrets", significance: "Reveals the true state of spiritual war and Christ's ultimate victory behind history's scenes." },
+      crossRef: { reference: "Daniel 7:13-14", title: "Messianic Vision", explanation: "The apocalyptic matrix John draws from to display the reigning Lamb in heaven." }
+    }
+  };
 
-  const ntNuances = [
-    { word: "grace", original: "χάρις (charis)", meaning: "unmerited favor, gift, divine influence on the heart", significance: "Underlies the new covenant paradigm of salvation through faith." },
-    { word: "faith", original: "πίστις (pistis)", meaning: "trust, belief, absolute reliance", significance: "The instrument by which believers receive and walk in new life." },
-    { word: "kingdom", original: "βασιλεία (basileia)", meaning: "sovereign rule, royal dominion", significance: "The central message of Jesus, announcing God's reign breaking into history." }
-  ];
-
-  const nuances = isOT ? otNuances : ntNuances;
-  const seed = day * 13 + ref.length;
+  const theme = bookThemes[bookNameClean] || {
+    nuance: {
+      word: isOT ? "covenant" : "grace",
+      original: isOT ? "בְּרִית (berit)" : "χάρις (charis)",
+      meaning: isOT ? "solemn treaty, alliance" : "unmerited favor, divine gift",
+      significance: isOT ? "Refers to God's binding, faithful commitment to His people." : "Points to God's self-giving salvation active in Jesus Christ."
+    },
+    crossRef: {
+      reference: isOT ? "Psalm 105:8" : "Ephesians 2:8",
+      title: isOT ? "Covenant Remembered" : "Saved by Grace",
+      explanation: isOT ? "Reflects on God's everlasting faithfulness to His covenant." : "Asserts that salvation is a gift received through faith, not works."
+    }
+  };
 
   return {
     linguisticNuances: [
-      nuances[seed % nuances.length],
+      theme.nuance,
       isOT 
-        ? { word: "faithfulness", original: "אֱמוּנָה (emunah)", meaning: "steadfastness, firmness, fidelity", significance: "Underlines God's unchanging devotion to His covenant promises." }
-        : { word: "truth", original: "ἀλήθεια (aletheia)", meaning: "reality, truth, sincerity", significance: "Used in NT to denote the absolute reality of God revealed in Christ." }
+        ? { word: "faithfulness", original: "אֱמוּנָה (emunah)", meaning: "steadfastness, firmness, fidelity", significance: "Highlights God's absolute commitment to His spoken words." }
+        : { word: "truth", original: "ἀλήθεια (aletheia)", meaning: "absolute reality, truth", significance: "Stresses the absolute reality of God's character revealed in Christ." }
     ],
     crossReferences: [
-      { reference: "Hebrews 1:1-2", title: "Final Revelation", explanation: "Shows how Old Testament patterns culminate in the final speech of God through the Son." },
-      { reference: "Revelation 19:16", title: "King of Kings", explanation: "Highlights the ultimate destiny of all redemptive history under the Lamb's authority." }
+      theme.crossRef,
+      { reference: "Hebrews 1:1-2", title: "The Culmination of Revelation", explanation: "Shows how all ancient prophetic speech culminates in the final speech through the Son." }
     ]
   };
 }
 
 export function getPlanDay(path: PathId, day: number): ReadingPlanDay | null {
+  let dayData: ReadingPlanDay | null = null;
+  
   if (path === 'chronological') {
-    const raw = CHRONOLOGICAL_PLAN[day];
-    if (!raw) return null;
-    return {
-      ...raw,
-      understandContext: getChronologicalUnderstandContext(day, raw.reference)
-    };
-  }
-  if (path === 'genre') {
-    return GENRE_PLAN[day] || null;
-  }
-  if (path === 'thematic') {
-    return THEMATIC_PLAN[day] || null;
-  }
-  if (path === 'entire') {
+    dayData = CHRONOLOGICAL_PLAN[day] || null;
+  } else if (path === 'genre') {
+    dayData = GENRE_PLAN[day] || null;
+  } else if (path === 'thematic') {
+    dayData = THEMATIC_PLAN[day] || null;
+  } else if (path === 'entire') {
     const mapping = getBookAndChapterForDay(day);
-    if (!mapping) return null;
-    const { book, chapter } = mapping;
-    
-    return {
-      day,
-      reference: `${book} ${chapter}`,
-      title: `${book} Chapter ${chapter}`,
-      mainTruth: `Trace the progression of divine revelation through the text of ${book} chapter ${chapter}.`,
-      scribalStrategy: {
-        title: "Canonical Scribing",
-        instructions: [
-          `Transcribe the primary verses of ${book} ${chapter} in an elegant bookhand.`,
-          `Highlight terms representing key theological or historical actions.`,
-          `Reflect on how this chapter fits into the grand narrative of Scripture.`
-        ]
-      },
-      reflectionQuestion: `What key truths in ${book} ${chapter} deepen your understanding of God's sovereign covenant?`
-    };
+    if (mapping) {
+      const { book, chapter } = mapping;
+      dayData = {
+        day,
+        reference: `${book} ${chapter}`,
+        title: `${book} Chapter ${chapter}`,
+        mainTruth: `Trace the progression of divine revelation through the text of ${book} chapter ${chapter}.`,
+        scribalStrategy: {
+          title: "Canonical Scribing",
+          instructions: [
+            `Transcribe the primary verses of ${book} ${chapter} in an elegant bookhand.`,
+            `Highlight terms representing key theological or historical actions.`,
+            `Reflect on how this chapter fits into the grand narrative of Scripture.`
+          ]
+        },
+        reflectionQuestion: `What key truths in ${book} ${chapter} deepen your understanding of God's sovereign covenant?`
+      };
+    }
   }
-  return null;
+  
+  if (!dayData) return null;
+  
+  return {
+    ...dayData,
+    understandContext: getUnderstandContextForDay(path, day, dayData.reference)
+  };
 }
+
+
 
