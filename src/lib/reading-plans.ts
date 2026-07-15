@@ -8,6 +8,7 @@ export interface UnderstandContext {
 }
 
 
+
 export interface ReadingPlanDay {
   day: number;
   reference: string;
@@ -24,7 +25,6 @@ export interface ReadingPlanDay {
   poetryCouplets?: { line1: string; line2: string; type: "synonymous" | "antithetic" | "synthetic"; explanation: string }[];
   propheticOracles?: { text: string; type: "judgment" | "salvation"; explanation: string }[];
 }
-
 export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
   // --- Week 1: The Parables of Jesus ---
   1: { 
@@ -34,10 +34,11 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "Jesus speaking to a large crowd by the sea",
     mainTruth: "The receptivity of the heart determines the fruitfulness of the Word.",
     culturalInsights: [
-      { title: "The Sower’s Method", note: "Ancient farmers threw seeds in a wide arc (broadcast). The sower is extravagantly generous with the seed, not careless." },
-      { title: "The 'Path'", note: "Communal footpaths became as hard as concrete. Represents a heart hardened by the world until nothing can penetrate." },
-      { title: "The 'Rocky Ground'", note: "Thin topsoil over solid limestone shelves. The plant looks healthy initially but has no depth." },
-      { title: "The 'Thorns'", note: "Bell-Thorns grow faster than wheat. The problem is competition for the plant’s attention." }
+      { title: "[Historical-Cultural]: The Sower's Method", note: "Ancient farmers threw seeds in a wide arc (broadcast). The sower is extravagantly generous with the seed, not careless." },
+      { title: "[Historical-Cultural]: The 'Path'", note: "Communal footpaths became as hard as concrete. Represents a heart hardened by the world until nothing can penetrate." },
+      { title: "[Geographical/Lexical]: The 'Rocky Ground'", note: "Judean topography frequently features hidden limestone shelves right beneath a thin layer of topsoil, causing rapid germination but zero root depth." },
+      { title: "[Historical-Cultural]: The 'Thorns'", note: "Bell-Thorns grow faster than wheat. The problem is competition for the plant’s attention." },
+      { title: "[Literary/Genre]: The Parable", note: "Parables are not generic allegories; they are subversive crisis-narratives designed to demand a verdict from the listener." }
     ],
     scribalStrategy: {
       title: "Agency & Resistance Map",
@@ -54,6 +55,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     title: "The Sower (Explanation)", 
     audience: "Jesus speaking privately to His disciples",
     mainTruth: "True understanding leads to a life that produces a hundredfold return.",
+    culturalInsights: [
+      { title: "[Geographical/Lexical]: Depth of Root", note: "The Greek term 'riza' implies a structural anchor capable of moisture extraction during summer drought. Lack of root ensures death when external pressures arise." },
+      { title: "[Literary/Genre]: Subversive Explanation", note: "Jesus explains parables to the disciples to initiate them into the secrets of the kingdom, drawing a sharp boundary between hearing and active understanding." }
+    ],
     symbolicMapping: [
       { symbol: "The Birds", reality: "The Evil One (Satan)", insight: "What is heard but not understood is easily stolen." },
       { symbol: "The Scorching Sun", reality: "Tribulation / Persecution", insight: "Pressure reveals the root's depth, it doesn't create the problem." },
@@ -75,9 +80,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "Tax collectors, sinners, and grumbling Pharisees (v. 1-2)",
     mainTruth: "God proactively and exhaustively searches for the lost, and all of heaven rejoices when one is found.",
     culturalInsights: [
-      { title: "The Shepherd’s Risk", note: "A mature sheep weighs 50-100 lbs. The shepherd doesn't lead it; he carries it. Grace has a physical cost." },
-      { title: "The Woman’s Dowry", note: "Coins were often woven into hair as a safety net. Losing one was a catastrophe of stewardship and future security." },
-      { title: "The Dark House", note: "Basalt floors and few windows made finding a small coin nearly impossible without a lamp and a broom." }
+      { title: "[Historical-Cultural]: The Shepherd’s Risk", note: "A mature sheep weighs 50-100 lbs. The shepherd doesn't lead it; he carries it. Grace has a physical cost." },
+      { title: "[Historical-Cultural]: The Woman’s Dowry", note: "Coins were often woven into hair as a safety net. Losing one was a catastrophe of stewardship and future security." },
+      { title: "[Geographical/Lexical]: The Dark House", note: "Basalt floors and lack of window openings in rural Judean domestic architecture made finding a small drachma nearly impossible without a oil lamp and broom." },
+      { title: "[Literary/Genre]: Subversive Reversal", note: "Jesus uses unclean occupations (shepherds) and women to illustrate God's character, subverting Pharisees' expectations of ritual protocol." }
     ],
     scribalStrategy: {
       title: "The Joy Journal",
@@ -90,6 +96,11 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     },
     reflectionQuestion: "How does the 'physical cost' of the shepherd carrying the sheep change my view of God's search for me?"
   },
+
+
+
+
+
   4: { 
     day: 4, 
     reference: "Luke 15:11-24", 
@@ -97,9 +108,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "Tax collectors, sinners, and the grumbling religious elite",
     mainTruth: "God's grace welcomes the repentant home with open arms, taking the shame of the journey upon Himself.",
     culturalInsights: [
-      { title: "The Inheritance Request", note: "Asking for inheritance early was a public 'death wish' toward the father. It required liquidating family assets, causing public shame for the household." },
-      { title: "Distant Country & Pigs", note: "Feeding pigs (unclean) represented a total loss of Jewish identity and dignity. Carob pods were animal fodder, indigestible for humans." },
-      { title: "The Running Father", note: "A patriarch *never* ran. He ran to shield his son from the 'Qetsatsah' ceremony—a community banishment where a pot was broken to signify eternal exile." }
+      { title: "[Historical-Cultural]: The Inheritance Request", note: "Asking for inheritance early was a public 'death wish' toward the father. It required liquidating family assets, causing public shame for the household." },
+      { title: "[Geographical/Lexical]: Distant Country & Pigs", note: "Feeding pigs (unclean) represented a total loss of Jewish identity and dignity. Carob pods were animal fodder, indigestible for humans." },
+      { title: "[Historical-Cultural]: The Running Father", note: "A patriarch *never* ran. He ran to shield his son from the 'Qetsatsah' ceremony—a community banishment where a pot was broken to signify eternal exile." },
+      { title: "[Literary/Genre]: Subversive Audience Portrait", note: "Jesus leaves the parable open-ended at the father's embrace to let the listeners decide whether they will join the party." }
     ],
     scribalStrategy: {
       title: "The Journey Home Timeline",
@@ -120,10 +132,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "The Pharisees (The 'Older Brothers' grumbling about Jesus)",
     mainTruth: "Religious legalism and self-righteousness can be just as lost as outward rebellion.",
     culturalInsights: [
-      { title: "Lost in the Backyard", note: "The older brother was 'serving as a slave' (douleuō), working for the 'pay' of the inheritance rather than out of love for his father." },
-      { title: "The Refusal", note: "By refusing to enter the feast, he publicly insulted his father, forcing the father to 'go out' a second time to entreat him." },
-      { title: "The 'Kid' (Goat)", note: "He complained about a young goat while ignoring that 'all the father has' was already his. He saw a boss, not a father." },
-      { title: "The Unfinished Ending", note: "We never find out if the older brother went inside. Jesus leaves the choice to the Pharisees (the audience)." }
+      { title: "[Historical-Cultural]: Lost in the Backyard", note: "The older brother was 'serving as a slave' (douleuō), working for the 'pay' of the inheritance rather than out of love for his father." },
+      { title: "[Historical-Cultural]: The Refusal", note: "By refusing to enter the feast, he publicly insulted his father, forcing the father to 'go out' a second time to entreat him." },
+      { title: "[Historical-Cultural]: The 'Kid' (Goat)", note: "He complained about a young goat while ignoring that 'all the father has' was already his. He saw a boss, not a father." },
+      { title: "[Literary/Genre]: The Unfinished Ending", note: "We never find out if the older brother went inside. Jesus leaves the choice to the Pharisees (the audience)." }
     ],
     scribalStrategy: {
       title: "The Contrast Page",
@@ -143,9 +155,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "Disciples, following Peter's question about rewards",
     mainTruth: "The kingdom operates on grace, not human concepts of fairness.",
     culturalInsights: [
-      { title: "The 11th Hour", note: "5:00 PM, one hour before sunset. If you weren't hired by now, your family would likely go hungry that night." },
-      { title: "The Denarius", note: "A standard daily wage—just enough to provide food for a family for one day." },
-      { title: "The Payroll Twist", note: "The Master insists on paying the last workers first, intentionally letting the early workers see the grace given to others." }
+      { title: "[Historical-Cultural]: The 11th Hour", note: "5:00 PM, one hour before sunset. If you weren't hired by now, your family would likely go hungry that night." },
+      { title: "[Geographical/Lexical]: The Denarius", note: "A standard Roman denarius was a daily wage—the bare minimum required to feed a rural family for one single day." },
+      { title: "[Historical-Cultural]: The Payroll Twist", note: "The Master insists on paying the last workers first, intentionally letting the early workers see the grace given to others." },
+      { title: "[Literary/Genre]: Subversive Economics", note: "Jesus's parables of labor disrupt human meritocracies, showing that kingdom status is governed by sovereign benevolence rather than accrued hours." }
     ],
     symbolicMapping: [
       { symbol: "Marketplace", reality: "The World", insight: "Where we wait for purpose and provision." },
@@ -168,9 +181,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
     audience: "An expert in the law seeking to justify himself",
     mainTruth: "Our 'neighbor' is anyone in need, regardless of boundaries.",
     culturalInsights: [
-      { title: "The Road to Jericho", note: "The 'Way of Blood' drops 3,000 ft in 17 miles. Treacherous cliffs notorious for highwaymen." },
-      { title: "Priest & Levite", note: "Chose ritual purity over mercy. Touching a dead body would have made them 'ceremonially unclean' for temple duties." },
-      { title: "The Samaritan", note: "A scandal. Jews and Samaritans had a centuries-old blood feud. Oil acted as balm, wine as antiseptic." }
+      { title: "[Geographical/Lexical]: The Road to Jericho", note: "The 'Way of Blood' drops 3,000 ft in 17 miles. Treacherous cliffs notorious for highwaymen." },
+      { title: "[Historical-Cultural]: Priest & Levite", note: "Chose ritual purity over mercy. Touching a dead body would have made them 'ceremonially unclean' for temple duties." },
+      { title: "[Historical-Cultural]: The Samaritan", note: "A scandal. Jews and Samaritans had a centuries-old blood feud. Oil acted as balm, wine as antiseptic." },
+      { title: "[Literary/Genre]: Subversive Exemplar", note: "Parables are not generic allegories; they are subversive crisis-narratives designed to demand a verdict. Making a hated Samaritan the moral exemplar demands a verdict from the lawyer." }
     ],
     scribalStrategy: {
       title: "Proximity and Boundary Ledger",
