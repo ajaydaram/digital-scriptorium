@@ -27,6 +27,8 @@ import { getInterlinearAnalysis, type InterlinearOutput } from "@/ai/flows/inter
 import { Switch } from "@/components/ui/switch";
 import ChronologicalDesk from "@/components/chronological-desk";
 import JudeanMap from "@/components/judean-map";
+import GenreWorkbench from "@/components/genre-workbench";
+
 import AnnotationFeed from "@/components/reader/annotation-feed";
 import ScribeReflection from "@/components/reader/scribe-reflection";
 import AIAssistantPanel from "@/components/reader/ai-assistant-panel";
@@ -729,18 +731,27 @@ function ReaderContent() {
                           </div>
                         ) : pathParam === 'chronological' && (CHRONOLOGICAL_DAYS_DATA[dayParam] || dayParam === 20) ? (
                           <ChronologicalDesk day={dayParam} theme={theme} version={version} getThemeClass={getThemeClass} />
+                        ) : pathParam === 'genre' ? (
+                          <GenreWorkbench
+                            day={dayParam}
+                            scripture={scripture}
+                            planDay={planDay}
+                            theme={theme}
+                            getThemeClass={getThemeClass}
+                            onMouseUp={handleTextSelection}
+                          />
                         ) : (
                           <div 
                             onMouseUp={handleTextSelection}
                             className={cn(
                               "bible-reader-text leading-relaxed font-serif transition-all duration-300",
-                              getThemeClass("text-slate-800", "text-[#433422]", "text-slate-300"),
-                              pathParam === 'genre' && "poetic-lineation"
+                              getThemeClass("text-slate-800", "text-[#433422]", "text-slate-350")
                             )}
                           >
                             <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
                           </div>
                         )}
+
                         {planDay?.mainTruth && (
                           <div className="p-10 rounded-3xl bg-slate-50/50 border border-slate-100 text-center space-y-6">
                             <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">The Core Truth</span>

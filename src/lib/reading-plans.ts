@@ -7,6 +7,7 @@ export interface UnderstandContext {
   crossReferences: { reference: string; title: string; explanation: string }[];
 }
 
+
 export interface ReadingPlanDay {
   day: number;
   reference: string;
@@ -20,6 +21,8 @@ export interface ReadingPlanDay {
   historicalSnapshot?: { ref: string; text: string };
   thematicLedger?: { label: string; value: string }[];
   understandContext?: UnderstandContext;
+  poetryCouplets?: { line1: string; line2: string; type: "synonymous" | "antithetic" | "synthetic"; explanation: string }[];
+  propheticOracles?: { text: string; type: "judgment" | "salvation"; explanation: string }[];
 }
 
 export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
