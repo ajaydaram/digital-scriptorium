@@ -40,11 +40,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { title: "The 'Thorns'", note: "Bell-Thorns grow faster than wheat. The problem is competition for the plant’s attention." }
     ],
     scribalStrategy: {
-      title: "Parable Mapping",
+      title: "Agency & Resistance Map",
       instructions: [
-        "Leave a wide margin to sketch the four soil types.",
-        "Use block text for the narrative description.",
-        "Indent dialogue to distinguish characters."
+        "Highlight active verbs for the Sower in one color (e.g. went out, sowed), and passive verbs describing the seeds' fates (e.g. fell, devoured, scorched, choked) in another. Notice who holds the agency in each scene.",
+        "Indent every instance of opposition or failure (birds, sun, thorns) by two tabs to visually isolate the obstacles from the progression of the narrative."
       ]
     },
     reflectionQuestion: "Which soil is my heart today?"
@@ -62,15 +61,12 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { symbol: "The Harvest", reality: "Spiritual Fruitfulness", insight: "Growth is the natural result of hearing AND understanding." }
     ],
     scribalStrategy: {
-      title: "The Parallel Ledger",
+      title: "Linguistic Fruitfulness Ledger",
       instructions: [
-        "Use a split-column layout.",
-        "Re-list the four ground types on the left.",
-        "Transcribe Jesus's explanation on the right.",
-        "Draw connecting lines between image and meaning."
+        "Write the image term in the left column and its theological interpretation on the right. Highlight active verbs of understanding and hearing to observe the mechanism of true fruitfulness.",
+        "Lineate the verse structure: set the word 'hears' at the margins, but indent the consequence lines ('understands it,' 'bears fruit,' 'yields') to highlight that understanding is the catalyst for fruit."
       ]
     },
-    reflectionQuestion: "What 'distraction' is currently competing for the nutrients in my heart's soil?"
   },
   3: { 
     day: 3, 
@@ -157,11 +153,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { symbol: "The Denarius", reality: "The gift of Grace", insight: "Salvation is an equal gift to all who enter the Kingdom, regardless of time served." }
     ],
     scribalStrategy: {
-      title: "The Grace Ledger",
+      title: "The Grace Dialogue Syntax",
       instructions: [
-        "Header: Write 'The First shall be Last' in bold script.",
-        "Body: Transcribe the Master's dialogue in v. 13-15.",
-        "The Tipped Scale: Sketch a balance tipped heavily toward 'The Master's Character' over 'Effort'."
+        "Underline pronouns of entitlement ('we,' 'our') in one color, and nouns of grace and generosity ('good,' 'friend,' 'choose') in another to track the emotional movement from contract to gift.",
+        "Use stepped lineation: indent the pay scale calculations (late-comers vs. early-comers) by four spaces to visually emphasize the scandalous disruption of standard labor dynamics."
       ]
     },
     reflectionQuestion: "Is my security based on my performance or the Master's promise?"
@@ -178,14 +173,12 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { title: "The Samaritan", note: "A scandal. Jews and Samaritans had a centuries-old blood feud. Oil acted as balm, wine as antiseptic." }
     ],
     scribalStrategy: {
-      title: "The Heart Exam",
+      title: "Proximity and Boundary Ledger",
       instructions: [
-        "Header: Write the lawyer's original question: 'And who is my neighbor?' (v. 29).",
-        "Body: Transcribe the Samaritan's actions (v. 33-35) in a list format.",
-        "Footer: Transcribe Jesus's final command: 'Go, and do likewise' (v. 37)."
+        "Color-code the active verbs of the priest and Levite ('saw him,' 'passed by on the other side') vs. the active verbs of the Samaritan ('saw him,' 'had compassion,' 'went to him,' 'bound up his wounds').",
+        "Lineate by distance: write the Priest and Levite's actions on the outer margins, but indent the Samaritan's steps progressively closer toward the center to visually manifest neighborly proximity."
       ]
     },
-    reflectionQuestion: "Being a neighbor isn't about 'who' deserves my help, but about 'what' kind of person I am becoming."
   },
 
   // --- Week 2: Hebrew Poetry ---
@@ -204,11 +197,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { symbol: "The Chaff", reality: "The Wicked Life", insight: "Useless, weightless, and ultimately forgotten by the wind." }
     ],
     scribalStrategy: {
-      title: "Parallel Lines & Contrast",
+      title: "Couplet Path Tracking",
       instructions: [
-        "Indent the second line of every verse to show Parallelism.",
-        "Draw a Tree in the center; write 'Meditation' on the roots.",
-        "Use a bolder, stronger script for the righteous and a 'wispy' script for chaff."
+        "Indent the second line of every synonymous couplet to show the Hebrew poetic parallelism. Note how the verbs degrade in posture: walking, standing, sitting.",
+        "Draw a vertical divider line down your page: write the righteous path actions on the left side, and the wicked path actions on the right, lining up the contrasts in direct horizontal couplets."
       ]
     }
   },
@@ -223,10 +215,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { title: "Torah's Perfection", note: "Torah means 'instruction' or 'direction', not just legalistic rules. It is described with six titles here, each highlighting a different facet of its impact on the soul." }
     ],
     scribalStrategy: {
-      title: "Dual Revelation Layout",
+      title: "Silent Speech Lineation",
       instructions: [
-        "Divide the page vertically: transcribe v. 1-6 (Cosmos) on the left, and v. 7-14 (Torah) on the right.",
-        "Underline 'THE LAW OF THE LORD IS PERFECT' in bold gold script."
+        "In the first section (v. 1-6), indent lines representing silent, cosmological testimony ('no speech,' 'voice not heard') to highlight the paradox of silent declaration.",
+        "In the second section (v. 7-11), group the couplets by their grammatical pattern: noun of law + attribute + effect (e.g. 'The law of the Lord is perfect, restoring the soul')."
       ]
     },
     reflectionQuestion: "Does my heart respond more to God's silent voice in creation or His written voice in scripture?"
@@ -242,10 +234,10 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { title: "The Land of Jordan & Hermon", note: "The northernmost part of Israel, far from the temple in Jerusalem. The exile feels physically and spiritually cut off from the presence of God." }
     ],
     scribalStrategy: {
-      title: "The Watercourse Border",
+      title: "Lamentation Echo Chamber",
       instructions: [
-        "Draw a winding water brook border in light blue surrounding the text.",
-        "Scribe 'WHY ART THOU CAST DOWN, O MY SOUL?' in heavy, dark blackletter."
+        "Highlight the dialogue between the psalmist's soul and God: color-code the soul's questions ('Why are you cast down?') vs. the commands of hope ('Hope in God').",
+        "Indent the verses describing chaotic water movements ('deep calls to deep,' 'waves and billows') by two tabs to visually represent the overwhelming weight of depression pressing in on the margins of the text."
       ]
     },
     reflectionQuestion: "What do I say to my soul when I feel distant from God's presence?"
@@ -261,14 +253,12 @@ export const GENRE_PLAN: Record<number, ReadingPlanDay> = {
       { title: "The Table in the Desert", note: "The leather mat (shulchan) in a host's tent. Desert hospitality was absolute." }
     ],
     scribalStrategy: {
-      title: "Comfort Script & Shadowing",
+      title: "Pronoun and Valley Syntax",
       instructions: [
-        "Use a fluid, cursive-style 'Comfort Script' with no sharp angles.",
-        "For v. 4, use a slightly darker ink or heavier touch to represent the valley's shadows.",
-        "Draw a Shepherd’s Crook next to v. 4 and an Oil Jar next to v. 5."
+        "Contrast the pronouns: highlight 'He' / 'His' in the third-person verses (v. 1-3) showing general guidance, and 'You' / 'Your' in the second-person valley verses (v. 4-5) showing close-up presence.",
+        "Lineate with depth: indent the valley verse (v. 4, 'Even though I walk...') to physically depress the line structure, highlighting the emotional depth of the shadow valley."
       ]
     },
-    reflectionQuestion: "How does the 'physical reality' of the Judean wilderness change my understanding of the Shepherd's protection?"
   },
   12: {
     day: 12,
