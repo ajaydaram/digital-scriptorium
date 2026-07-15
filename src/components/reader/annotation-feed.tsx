@@ -28,6 +28,8 @@ interface AnnotationFeedProps {
   onSaveAnnotation: (text: string, parentId?: string | null) => Promise<void>;
   onToggleReaction: (annId: string, reactionType: "insightful" | "needsContext") => Promise<void>;
   getThemeClass: (light: string, sepia: string, dark: string) => string;
+  activeHighlight?: string;
+  onClearHighlight?: () => void;
 }
 
 export default function AnnotationFeed({
@@ -47,7 +49,9 @@ export default function AnnotationFeed({
   setShowAddForm,
   onSaveAnnotation,
   onToggleReaction,
-  getThemeClass
+  getThemeClass,
+  activeHighlight = "",
+  onClearHighlight
 }: AnnotationFeedProps) {
 
   const handleAddComment = async () => {
@@ -115,9 +119,21 @@ export default function AnnotationFeed({
       </CardHeader>
 
       <CardContent className="p-5 pt-0">
-        {/* New Main Comment Form */}
         {showAddForm && (
           <div className="mb-4 p-4 rounded-xl border border-slate-100 dark:border-slate-800 space-y-3 bg-slate-50/50 dark:bg-slate-950/20 animate-in slide-in-from-top-2 duration-300">
+            {activeHighlight && (
+              <div className="flex items-start justify-between gap-3 p-3 rounded-lg border border-amber-500/20 bg-amber-500/5 dark:bg-amber-500/10 text-xs font-serif text-slate-500 relative">
+                <span className="italic flex-1">"{activeHighlight}"</span>
+                {onClearHighlight && (
+                  <button 
+                    onClick={onClearHighlight}
+                    className="text-slate-400 hover:text-red-500 text-xs font-sans font-bold"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
+            )}
             <Textarea
               placeholder="Record a theological insight or query..."
               value={newComment}
@@ -151,8 +167,7 @@ export default function AnnotationFeed({
               {annotationThreads.map((thread) => {
                 const renderThread = (ann: any, depth = 0) => {
                   const isReplyFormActive = replyingToId === ann.id;
-                  return (
-                    <div 
+                  return (                    <div 
                       key={ann.id} 
                       className={cn(
                         "p-4 rounded-xl space-y-3 border-l-2",
@@ -164,7 +179,7 @@ export default function AnnotationFeed({
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex items-center gap-2">
                           <Avatar className="h-6 w-6">
-                            <AvatarImage src={ann.userPhotoURL} alt={ann.userDisplayName} />
+                            <AvatarImage src={ann.userAvatarUrl || ann.userPhotoURL} alt={ann.userDisplayName} />
                             <AvatarFallback className="bg-primary/5 text-primary text-[10px] font-bold">
                               {ann.userDisplayName?.charAt(0) || "S"}
                             </AvatarFallback>
@@ -180,10 +195,15 @@ export default function AnnotationFeed({
                         </div>
                       </div>
                       
-                      <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+                      {ann.highlightedText && (
+                        <blockquote className="text-[11px] border-l-2 border-amber-500 bg-amber-500/5 dark:bg-amber-500/10 px-3 py-1.5 rounded-r-lg italic text-slate-500 dark:text-slate-355 select-all mb-2 font-serif">
+                          "{ann.highlightedText}"
+                        </blockquote>
+                      )}
+                      
+                      <p className="text-xs text-slate-650 dark:text-slate-300 leading-relaxed font-body">
                         {ann.comment}
                       </p>
-
                       {/* Reactions & Reply Action Bar */}
                       <div className="flex items-center justify-between pt-1">
                         <div className="flex gap-2">

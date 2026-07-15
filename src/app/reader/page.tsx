@@ -18,6 +18,8 @@ import { getPlanDay, getPlanDays, type PathId } from "@/lib/reading-plans";
 import { useUser, useFirestore, useCollection, useMemoFirebase, useAuth } from "@/firebase";
 import { saveAnnotation, getAnnotationsQuery, toggleAnnotationReaction } from "@/services/annotationService";
 import { getUserCirclesQuery } from "@/services/circleService";
+import { useUserProgress } from "@/hooks/use-user-progress";
+
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { explainScripture, type AIAnnotatorExplanationOutput } from "@/ai/flows/ai-annotator-explanation";
 import { studyWord, type WordStudyOutput } from "@/ai/flows/word-study";
@@ -69,6 +71,7 @@ function ReaderContent() {
   const dayParam = parseInt(searchParams.get('day') || "0");
   
   const getInitialRef = () => {
+
     if (pathParam && dayParam > 0) {
       const dayData = getPlanDay(pathParam, dayParam);
       if (dayData) return dayData.reference;
@@ -209,9 +212,69 @@ function ReaderContent() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [newComment, setNewComment] = useState("");
   const [activeStage, setActiveStage] = useState<'read' | 'understand' | 'master'>("read");
+  const [activeHighlight, setActiveHighlight] = useState("");
+  const [selectionCoords, setSelectionCoords] = useState<{ x: number, y: number } | null>(null);
 
   const planDay = pathParam && dayParam > 0 ? getPlanDay(pathParam, dayParam) : null;
   const thematicLedger = planDay?.thematicLedger;
+
+  const readingUnitId = planDay ? `${pathParam}-${dayParam}` : 'custom-reading';
+  const { progress, updateProgress, updatePath } = useUserProgress(readingUnitId);
+
+  const mapToStepId = (stage: 'read' | 'understand' | 'master'): 'Read' | 'Understand' | 'Master' => {
+    if (stage === 'read') return 'Read';
+    if (stage === 'understand') return 'Understand';
+    return 'Master';
+  };
+
+  const mapFromStepId = (step: 'Read' | 'Understand' | 'Master'): 'read' | 'understand' | 'master' => {
+    if (step === 'Read') return 'read';
+    if (step === 'Understand') return 'understand';
+    return 'master';
+  };
+
+  // Sync Firestore stage to activeStage when loaded
+  useEffect(() => {
+    if (progress?.currentStage) {
+      const stepStage = mapFromStepId(progress.currentStage as any);
+      if (stepStage !== activeStage) {
+        setActiveStage(stepStage);
+      }
+    }
+  }, [progress?.currentStage]);
+
+  // Sync active path to Firestore
+  useEffect(() => {
+    if (pathParam) {
+      updatePath(pathParam);
+    }
+  }, [pathParam]);
+
+  const handleStageChange = (newStage: 'read' | 'understand' | 'master') => {
+    setActiveStage(newStage);
+    updateProgress(mapToStepId(newStage));
+  };
+
+  const handleTextSelection = () => {
+    const selection = window.getSelection();
+    if (!selection) return;
+    const selectedText = selection.toString().trim();
+    if (selectedText.length > 0) {
+      setActiveHighlight(selectedText);
+      try {
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        setSelectionCoords({
+          x: rect.left + window.scrollX + (rect.width / 2),
+          y: rect.top + window.scrollY - 55
+        });
+      } catch (e) {
+        setSelectionCoords(null);
+      }
+    } else {
+      setSelectionCoords(null);
+    }
+  };
 
   useEffect(() => {
     if (pathParam && dayParam > 0) {
@@ -219,13 +282,12 @@ function ReaderContent() {
       if (dayData) {
         setCurrentRef(dayData.reference);
         setSearchQuery(dayData.reference);
-        setActiveStage("read"); // Reset to read stage when transitioning days
+        handleStageChange("read"); // Reset to read stage when transitioning days
       }
     } else if (!searchQuery) {
       setSearchQuery(initialRef);
     }
   }, [pathParam, dayParam, initialRef, searchQuery]);
-
   useEffect(() => {
     if (currentRef) {
       loadScripture(currentRef, version);
@@ -330,15 +392,14 @@ function ReaderContent() {
       return;
     }
 
-    saveAnnotation(firestore, user, currentRef, "", commentText, selectedCircleId);
+    saveAnnotation(firestore, user, currentRef, activeHighlight, commentText, selectedCircleId);
+    setActiveHighlight("");
 
     toast({
       title: "Insight Shared",
       description: selectedCircleId ? "Note added to your study circle feed." : "Note added to the community feed.",
     });
-  };
-
-  const handleAddReply = (commentText: string, parentId: string) => {
+  };  const handleAddReply = (commentText: string, parentId: string) => {
     if (!user) {
       handleSignIn();
       return;
@@ -669,15 +730,17 @@ function ReaderContent() {
                         ) : pathParam === 'chronological' && (CHRONOLOGICAL_DAYS_DATA[dayParam] || dayParam === 20) ? (
                           <ChronologicalDesk day={dayParam} theme={theme} version={version} getThemeClass={getThemeClass} />
                         ) : (
-                          <div className={cn(
-                            "bible-reader-text leading-relaxed font-serif transition-all duration-300",
-                            getThemeClass("text-slate-800", "text-[#433422]", "text-slate-300"),
-                            pathParam === 'genre' && "poetic-lineation"
-                          )}>
+                          <div 
+                            onMouseUp={handleTextSelection}
+                            className={cn(
+                              "bible-reader-text leading-relaxed font-serif transition-all duration-300",
+                              getThemeClass("text-slate-800", "text-[#433422]", "text-slate-300"),
+                              pathParam === 'genre' && "poetic-lineation"
+                            )}
+                          >
                             <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
                           </div>
                         )}
-
                         {planDay?.mainTruth && (
                           <div className="p-10 rounded-3xl bg-slate-50/50 border border-slate-100 text-center space-y-6">
                             <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">The Core Truth</span>
@@ -1014,6 +1077,34 @@ function ReaderContent() {
                   ))}
                 </CardContent>
               </Card>
+
+            )}
+
+            {planDay?.symbolicMapping && (
+              <Card className={cn(
+                "border-none shadow-md rounded-2xl overflow-hidden border",
+                getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+              )}>
+                <CardHeader className="p-5 pb-3">
+                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-purple-600">
+                    <Sparkles className="h-5 w-5 animate-pulse" /> Symbolic Translation
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-5 pt-0 space-y-4">
+                  <div className="space-y-4">
+                    {planDay.symbolicMapping.map((item, i) => (
+                      <div key={i} className="p-3 rounded-xl bg-slate-50/50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-850 space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-bold text-xs uppercase tracking-wide text-purple-600 dark:text-purple-400">{item.symbol}</span>
+                          <span className="text-slate-300 dark:text-slate-650">→</span>
+                          <span className="font-bold text-xs uppercase tracking-wide text-slate-800 dark:text-slate-200">{item.reality}</span>
+                        </div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed italic">"{item.insight}"</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             )}
 
             {planDay?.scribalStrategy && (
@@ -1084,15 +1175,73 @@ function ReaderContent() {
               }}
               onToggleReaction={handleToggleAnnotationReaction}
               getThemeClass={getThemeClass}
+              activeHighlight={activeHighlight}
+              onClearHighlight={() => setActiveHighlight("")}
             />
           </aside>
         </div>
       </main>
+
+      {selectionCoords && activeHighlight && (
+        <div 
+          className="absolute z-50 flex items-center gap-1.5 p-1.5 rounded-full border border-slate-200 bg-white/95 dark:bg-slate-900/95 dark:border-slate-800 backdrop-blur-md shadow-lg animate-in fade-in zoom-in-95 duration-200"
+          style={{ 
+            left: `${selectionCoords.x}px`, 
+            top: `${selectionCoords.y}px`, 
+            transform: 'translateX(-50%)' 
+          }}
+          onMouseDown={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <Button
+            size="sm"
+            variant="ghost"
+            className="h-8 rounded-full text-xs font-bold gap-1 px-3 hover:bg-primary/5 text-primary"
+            onClick={() => {
+              setActiveStage("understand");
+              setAiAnalysis(null);
+              setIsAiLoading(true);
+              setSelectionCoords(null);
+              explainScripture({
+                scripturePassage: scripture?.text || "",
+                highlightedSnippet: activeHighlight
+              }).then(result => {
+                setAiAnalysis(result);
+                setIsAiLoading(false);
+              }).catch(() => {
+                setIsAiLoading(false);
+                toast({
+                  variant: "destructive",
+                  title: "AI Analysis Offline",
+                  description: "The guide is currently resting."
+                });
+              });
+            }}
+          >
+            💡 Explain
+          </Button>
+          <div className="h-4 w-[1px] bg-slate-200 dark:bg-slate-800" />
+          <Button
+            size="sm"
+            variant="ghost"
+            className="h-8 rounded-full text-xs font-bold gap-1 px-3 hover:bg-primary/5 text-primary"
+            onClick={() => {
+              setShowAddForm(true);
+              setSelectionCoords(null);
+              toast({
+                title: "Snippet Highlighted",
+                description: "Pre-filled comment form with selected text."
+              });
+            }}
+          >
+            ✍️ Annotate
+          </Button>
+        </div>
+      )}
     </div>
   );
-}
-
-export default function ReaderPage() {
+}export default function ReaderPage() {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]"><Loader2 className="h-12 w-12 animate-spin text-primary" /></div>}>
       <ReaderContent />

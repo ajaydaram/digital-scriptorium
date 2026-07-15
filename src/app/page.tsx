@@ -44,8 +44,7 @@ export default function LandingPage() {
               <p className="text-xl md:text-2xl text-slate-500 max-w-3xl leading-relaxed font-body">
                 A research-backed platform for serious scripture engagement. Master the Bible through structured paths, community hermeneutics, and AI-powered insights.
               </p>
-              
-              <div className="flex flex-col sm:flex-row items-center gap-6 pt-6">
+                            <div className="flex flex-col sm:flex-row items-center gap-6 pt-6">
                 <Link href="/reader" className="w-full sm:w-auto">
                   <Button size="lg" className="btn-gradient h-16 px-12 font-bold text-lg rounded-2xl w-full shadow-2xl shadow-blue-500/20">
                     Launch Enhanced Reader
@@ -53,7 +52,7 @@ export default function LandingPage() {
                 </Link>
                 <Link href="/paths" className="w-full sm:w-auto">
                   <Button variant="outline" size="lg" className="h-16 px-12 font-bold text-lg rounded-2xl w-full border-slate-200 hover:bg-slate-50 text-slate-900">
-                    Explore 3 Paths
+                    Explore 4 Paths
                   </Button>
                 </Link>
               </div>
@@ -98,13 +97,12 @@ export default function LandingPage() {
             <UserJourney />
           </div>
         </section>
-
-        {/* The Three Paths Framework */}
+        {/* The Four Paths Framework */}
         <section className="py-20 border-t border-slate-100 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12 space-y-4">
               <Badge variant="outline" className="px-5 py-1.5 text-primary font-bold uppercase tracking-widest border-slate-200">PEDAGOGICAL FRAMEWORK</Badge>
-              <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-slate-900">Three Structured Paths</h2>
+              <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-slate-900">Four Structured Paths</h2>
               <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
                 Move beyond random reading. Each path provides a specific lens to master the Bible's architecture.
               </p>

@@ -9,9 +9,9 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
-
 const AIAnnotatorExplanationInputSchema = z.object({
   scripturePassage: z.string().describe('The scripture passage to be explained or annotated.'),
+  highlightedSnippet: z.string().optional().describe('Specific highlighted portion of the text that the user wants to focus on.'),
 });
 export type AIAnnotatorExplanationInput = z.infer<typeof AIAnnotatorExplanationInputSchema>;
 
@@ -41,12 +41,16 @@ const aiAnnotatorExplanationPrompt = ai.definePrompt({
 Ground your analysis using historical commentaries (e.g., Early Church Fathers, Medieval Scholastics, Reformation Commentators) and original lexicons (e.g. Strong's, BDAG). Explain the passage through this scholarly, peer-reviewed lens.
 
 When explaining a passage:
-1. Provide a concise, clear explanation of the text's immediate meaning grounded in historical and scholarly commentaries. Include quotes or viewpoints from church history if relevant.
+1. Provide a concise, clear explanation of the text's immediate meaning grounded in historical and scholarly commentaries. Include quotes or viewpoints from church history if relevant. If a specific highlight/snippet is provided below, please tailor your explanation to focus heavily on analyzing that specific highlighted phrase, clause, or verse.
 2. Specifically address how this passage fits into the "Grand Historical Narrative" of scripture (Creation, Fall, Redemption, Restoration).
 3. Provide 2-3 highly relevant cross-references. For each, explain *why* it is pedagogically significant to understanding the broader narrative context.
 4. Select 3-5 key words from the passage that are central or interesting for original language (Greek or Hebrew) study.
 
-Scripture Passage: {{{scripturePassage}}}`,
+Scripture Passage: {{{scripturePassage}}}
+{{#if highlightedSnippet}}
+Focus Highlight: "{{{highlightedSnippet}}}"
+Please give extra weight to interpreting and detailing this specific highlight.
+{{/if}}`,
 });
 
 const aiAnnotatorExplanationFlow = ai.defineFlow(
