@@ -302,13 +302,14 @@ function ReaderContent() {
         loadInterlinearData(currentRef);
       }
 
-      if (typeof window !== "undefined") {
+      if (progress?.reflection) {
+        setScribeReflection(progress.reflection);
+      } else if (typeof window !== "undefined") {
         const savedReflection = localStorage.getItem(`scriptorium_reflection_${pathParam}_${dayParam}`);
         setScribeReflection(savedReflection || "");
       } else {
         setScribeReflection("");
-      }
-      setAiAnalysis(null); 
+      }      setAiAnalysis(null); 
       setSelectedWord(null);
       setWordStudyResult(null);
       setCustomWordQuery(""); 
@@ -905,9 +906,9 @@ function ReaderContent() {
                                       }
                                       setIsSealBroken(false); // Seal the scroll!
                                       localStorage.setItem(`scriptorium_reflection_${pathParam}_${dayParam}`, scribeReflection);
-                                      toast({ title: "Scroll Sealed", description: "Your reflection has been inscribed and preserved." });
-                                    }}
-                                  >
+                                      updateProgress("Master", scribeReflection);
+                                      toast({ title: "Scroll Sealed", description: "Your reflection has been inscribed, synced, and preserved." });
+                                    }}                                  >
                                     Seal the Scroll
                                   </Button>
                                 </div>
