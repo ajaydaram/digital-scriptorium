@@ -21,7 +21,8 @@ export function useUserProgress(readingUnitId: string) {
   }, [firestore, user, readingUnitId]);
 
   const { data: progress, isLoading, error } = useDoc(progressRef);
-  const updateProgress = (stage: StepId, reflection?: string) => {
+
+  const updateProgress = (stage: StepId, reflection?: string, structuralReflection?: string) => {
     if (!progressRef || !user) return;
 
     setDocumentNonBlocking(
@@ -34,11 +35,14 @@ export function useUserProgress(readingUnitId: string) {
         lastAccessedAt: serverTimestamp(),
         ...(stage === 'Read' && !progress?.startedAt ? { startedAt: serverTimestamp() } : {}),
         ...(stage === 'Master' ? { completedAt: serverTimestamp() } : {}),
-        ...(reflection !== undefined ? { reflection, sealedAt: serverTimestamp() } : {}),
+        ...(reflection !== undefined ? { reflection } : {}),
+        ...(structuralReflection !== undefined ? { structuralReflection } : {}),
+        ...(reflection !== undefined || structuralReflection !== undefined ? { sealedAt: serverTimestamp() } : {}),
       },
       { merge: true }
     );
   };
+
   /**
    * Specifically for setting the global active path context.
    */

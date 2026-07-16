@@ -128,6 +128,7 @@ function ReaderContent() {
   };
   const [error, setError] = useState<string | null>(null);
   const [scribeReflection, setScribeReflection] = useState("");
+  const [structuralReflection, setStructuralReflection] = useState("");
   
   // AI Flow State
   const [aiAnalysis, setAiAnalysis] = useState<AIAnnotatorExplanationOutput | null>(null);
@@ -309,7 +310,17 @@ function ReaderContent() {
         setScribeReflection(savedReflection || "");
       } else {
         setScribeReflection("");
-      }      setAiAnalysis(null); 
+      }
+
+      if (progress?.structuralReflection) {
+        setStructuralReflection(progress.structuralReflection);
+      } else if (typeof window !== "undefined") {
+        const savedStructural = localStorage.getItem(`scriptorium_structural_reflection_${pathParam}_${dayParam}`);
+        setStructuralReflection(savedStructural || "");
+      } else {
+        setStructuralReflection("");
+      }
+      setAiAnalysis(null); 
       setSelectedWord(null);
       setWordStudyResult(null);
       setCustomWordQuery(""); 
@@ -602,20 +613,27 @@ function ReaderContent() {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Interlinear view toggle */}
-            <Switch 
-              id="interlinear-mode"
-              checked={isInterlinear}
-              onCheckedChange={(checked) => {
-                setIsInterlinear(checked);
-                if (checked) {
-                  setIsComparative(false); // disable comparative when interlinear is active
-                }
-              }}
-            />
-            <label htmlFor="interlinear-mode" className="text-sm font-bold cursor-pointer select-none text-slate-700 dark:text-slate-200">
-              Interlinear View (Original Language)
-            </label>
+            {activeStage === "understand" ? (
+              <div className="flex items-center gap-3 animate-in fade-in slide-in-from-right-2 duration-300">
+                <Switch 
+                  id="interlinear-mode"
+                  checked={isInterlinear}
+                  onCheckedChange={(checked) => {
+                    setIsInterlinear(checked);
+                    if (checked) {
+                      setIsComparative(false); // disable comparative when interlinear is active
+                    }
+                  }}
+                />
+                <label htmlFor="interlinear-mode" className="text-sm font-bold cursor-pointer select-none text-slate-700 dark:text-slate-200">
+                  Interlinear View (Original Language)
+                </label>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2 text-xs text-slate-400 italic font-medium bg-slate-50 dark:bg-slate-900/50 px-3 py-1.5 rounded-full border border-slate-100 dark:border-slate-800">
+                <span>🔒 Interlinear view unlocks in Understand stage</span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -627,8 +645,9 @@ function ReaderContent() {
             )}>
               <div className="bg-brand-gradient h-1.5 w-full" />
               <div className="px-6 pt-8">
-                <GuidedAscentStepper activeStage={activeStage} onStageChange={setActiveStage} />
+                <GuidedAscentStepper activeStage={activeStage} onStageChange={handleStageChange} />
               </div>
+
 
               <CardContent className="p-6 md:p-8 flex-1 pt-4">
                 {loading ? (
@@ -659,8 +678,134 @@ function ReaderContent() {
                         {scripture.reference}
                       </h2>
                     </header>
-                                        {activeStage === "read" ? (
+                    {activeStage === "read" ? (
                       <>
+                        {isComparative ? (
+                          <ComparativeView
+                            scripture={scripture}
+                            version={version}
+                            secondaryScripture={secondaryScripture}
+                            secondaryVersion={secondaryVersion}
+                            isSecondaryLoading={isSecondaryLoading}
+                            secondaryError={secondaryError}
+                            getThemeClass={getThemeClass}
+                            SUPPORTED_VERSIONS={SUPPORTED_VERSIONS}
+                          />
+                        ) : isInterlinear ? (
+                          <div className="space-y-8 animate-in fade-in duration-500">
+                            {isInterlinearLoading ? (
+                              <div className="flex flex-col items-center justify-center py-40 space-y-4">
+                                <Loader2 className="h-10 w-10 animate-spin text-primary" />
+                                <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Loading original language analysis...</span>
+                              </div>
+                            ) : interlinearError ? (
+                              <div className="text-center py-20 space-y-4">
+                                <AlertCircle className="h-10 w-10 text-red-500 mx-auto" />
+                                <p className="text-sm text-slate-500">{interlinearError}</p>
+                                <Button onClick={() => loadInterlinearData(currentRef)} variant="outline" size="sm" className="rounded-full">Retry Analysis</Button>
+                              </div>
+                            ) : interlinearData && interlinearData.verses ? (
+                              <TooltipProvider delayDuration={150}>
+                                <div className="space-y-8">
+                                  {interlinearData.verses.map((verse) => (
+                                    <div key={verse.verseNumber} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
+                                      <span className="text-xs font-bold font-headline text-slate-400 bg-slate-100 dark:bg-slate-900 px-2 py-1 rounded shrink-0">
+                                        Verse {verse.verseNumber}
+                                      </span>
+                                      <div className="flex flex-wrap gap-x-6 gap-y-8 leading-loose">
+                                        {verse.words.map((wordObj, wIdx) => (
+                                          <Tooltip key={wIdx}>
+                                            <TooltipTrigger asChild>
+                                              <div className="flex flex-col items-center cursor-help border-b border-dashed border-slate-300 hover:border-primary/50 pb-1 transition-all">
+                                                <span className="text-2xl font-bold font-serif text-slate-900 dark:text-white pb-1 select-all">
+                                                  {wordObj.original}
+                                                </span>
+                                                <span className="text-xs text-slate-400 italic">
+                                                  {wordObj.transliteration}
+                                                </span>
+                                                <span className="text-xs font-bold text-primary dark:text-slate-300">
+                                                  {wordObj.english}
+                                                </span>
+                                              </div>
+                                            </TooltipTrigger>
+                                            <TooltipContent className="p-3 max-w-[260px] space-y-2 rounded-xl">
+                                              <div className="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-1">
+                                                <span className="font-bold text-xs font-headline text-primary">Concordance</span>
+                                                <Badge variant="outline" className="text-[10px] font-bold px-1.5 py-0 border-none rounded-full bg-slate-100">
+                                                  {wordObj.strongs}
+                                                </Badge>
+                                              </div>
+                                              <div className="space-y-1 text-xs">
+                                                <p className="text-slate-400 font-bold uppercase tracking-wider text-[9px]">Grammatical Parsing</p>
+                                                <p className="font-mono text-slate-800 dark:text-slate-200">{wordObj.parsing}</p>
+                                              </div>
+                                            </TooltipContent>
+                                          </Tooltip>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </TooltipProvider>
+                            ) : null}
+                          </div>
+                        ) : pathParam === 'chronological' && (CHRONOLOGICAL_DAYS_DATA[dayParam] || dayParam === 20) ? (
+                          <ChronologicalDesk day={dayParam} theme={theme} version={version} getThemeClass={getThemeClass} />
+                        ) : pathParam === 'genre' ? (
+                          <GenreWorkbench
+                            day={dayParam}
+                            scripture={scripture}
+                            planDay={planDay}
+                            theme={theme}
+                            getThemeClass={getThemeClass}
+                            onMouseUp={handleTextSelection}
+                          />
+                        ) : (
+                          <div 
+                            onMouseUp={handleTextSelection}
+                            className={cn(
+                              "bible-reader-text leading-relaxed font-serif transition-all duration-300",
+                              getThemeClass("text-slate-800", "text-[#433422]", "text-slate-355")
+                            )}
+                          >
+                            <div dangerouslySetInnerHTML={{ __html: scripture.text }} />
+                          </div>
+                        )}
+
+                        {planDay?.scribalStrategy && (
+                          <div className={cn(
+                            "p-6 rounded-2xl border space-y-3 mt-8 animate-in fade-in duration-300",
+                            getThemeClass("bg-slate-50 border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+                          )}>
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-450 font-headline font-bold flex items-center gap-2">
+                              <PenTool className="h-4 w-4 text-primary" /> Scribal Strategy Calligraphy Rules
+                            </h4>
+                            <p className="text-sm font-bold font-serif text-slate-955 dark:text-white">{planDay.scribalStrategy.title}</p>
+                            <ul className="list-disc pl-5 text-xs text-slate-650 dark:text-slate-355 space-y-1">
+                              {planDay.scribalStrategy.instructions.map((inst, idx) => (
+                                <li key={idx}>{inst}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        <ScribeReflection
+                          dayParam={dayParam}
+                          planDay={planDay}
+                          scribeReflection={scribeReflection}
+                          setScribeReflection={setScribeReflection}
+                          structuralReflection={structuralReflection}
+                          setStructuralReflection={setStructuralReflection}
+                          isSealBroken={isSealBroken}
+                          setIsSealBroken={setIsSealBroken}
+                          isShaking={isShaking}
+                          setIsShaking={setIsShaking}
+                          getThemeClass={getThemeClass}
+                          toast={toast}
+                        />
+                      </>
+                    ) : activeStage === "understand" ? (
+                      <div className="space-y-8 animate-in fade-in duration-500">
                         {isComparative ? (
                           <ComparativeView
                             scripture={scripture}
@@ -753,31 +898,7 @@ function ReaderContent() {
                           </div>
                         )}
 
-                        {planDay?.mainTruth && (
-                          <div className="p-10 rounded-3xl bg-slate-50/50 border border-slate-100 text-center space-y-6">
-                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">The Core Truth</span>
-                            <p className="text-2xl font-headline font-bold text-slate-900 leading-snug italic">
-                              "{planDay.mainTruth}"
-                            </p>
-                          </div>
-                        )}
-
-                        <ScribeReflection
-                          dayParam={dayParam}
-                          planDay={planDay}
-                          scribeReflection={scribeReflection}
-                          setScribeReflection={setScribeReflection}
-                          isSealBroken={isSealBroken}
-                          setIsSealBroken={setIsSealBroken}
-                          isShaking={isShaking}
-                          setIsShaking={setIsShaking}
-                          getThemeClass={getThemeClass}
-                          toast={toast}
-                        />
-                      </>
-                    ) : activeStage === "understand" ? (
-                      <div className="space-y-8 animate-in fade-in duration-500">
-                        <div className="p-6 rounded-3xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-100 dark:border-slate-800 space-y-4">
+                        <div className="p-6 rounded-3xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-100 dark:border-slate-800 space-y-4 mt-8">
                           <h3 className="text-lg font-headline font-bold flex items-center gap-2 text-primary">
                             <Search className="h-5 w-5" /> Contextual Clarity
                           </h3>
@@ -788,7 +909,7 @@ function ReaderContent() {
 
                         {planDay?.understandContext?.linguisticNuances && (
                           <div className="space-y-4">
-                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline">Linguistic Nuances (Original Languages)</h4>
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline font-bold">Linguistic Nuances (Original Languages)</h4>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                               {planDay.understandContext.linguisticNuances.map((nuance, i) => (
                                 <div key={i} className={cn(
@@ -796,11 +917,11 @@ function ReaderContent() {
                                   getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
                                 )}>
                                   <div className="flex items-baseline justify-between mb-2">
-                                    <span className="text-sm font-bold capitalize text-primary font-headline">{nuance.word}</span>
+                                    <span className="text-sm font-bold capitalize text-primary font-headline font-bold">{nuance.word}</span>
                                     <span className="text-xl font-serif font-bold text-amber-700 dark:text-amber-500">{nuance.original}</span>
                                   </div>
                                   <p className="text-xs text-slate-400 italic mb-2">Literal meaning: {nuance.meaning}</p>
-                                  <p className="text-xs leading-relaxed text-slate-650 dark:text-slate-350">{nuance.significance}</p>
+                                  <p className="text-xs leading-relaxed text-slate-655 dark:text-slate-355">{nuance.significance}</p>
                                 </div>
                               ))}
                             </div>
@@ -809,7 +930,7 @@ function ReaderContent() {
 
                         {planDay?.understandContext?.crossReferences && (
                           <div className="space-y-4">
-                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline">Theological Cross-References</h4>
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline font-bold">Theological Cross-References</h4>
                             <div className="space-y-4">
                               {planDay.understandContext.crossReferences.map((refItem, i) => (
                                 <div key={i} className={cn(
@@ -818,10 +939,10 @@ function ReaderContent() {
                                 )}>
                                   <div className="space-y-2 flex-1">
                                     <div className="flex items-center gap-2 font-headline">
-                                      <span className="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-500">Cross-Ref</span>
+                                      <span className="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-505 font-bold">Cross-Ref</span>
                                       <h5 className="font-bold text-sm text-slate-900 dark:text-white">{refItem.title}</h5>
                                     </div>
-                                    <p className="text-xs leading-relaxed text-slate-650 dark:text-slate-350">{refItem.explanation}</p>
+                                    <p className="text-xs leading-relaxed text-slate-650 dark:text-slate-355">{refItem.explanation}</p>
                                   </div>
                                   <Button
                                     variant="outline"
@@ -845,6 +966,24 @@ function ReaderContent() {
                       </div>
                     ) : (
                       <div className="space-y-8 animate-in fade-in duration-500">
+                        {planDay?.mainTruth && (
+                          <div className="p-10 rounded-3xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-100 dark:border-slate-800 text-center space-y-6 animate-in fade-in duration-500">
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-405">The Core Truth</span>
+                            <p className="text-2xl font-headline font-bold text-slate-900 dark:text-white leading-snug italic">
+                              "{planDay.mainTruth}"
+                            </p>
+                            {planDay.coreTruthExplanation && (
+                              <p className={cn(
+                                "text-xs leading-relaxed max-w-xl mx-auto border-t pt-4 border-slate-200/60 dark:border-slate-800/60 text-center",
+                                getThemeClass("text-slate-500", "text-[#5C4033]/80", "text-slate-400")
+                              )}>
+                                <span className="font-bold uppercase tracking-wider block mb-1 text-[10px] text-primary">Hermeneutical Pivot</span>
+                                {planDay.coreTruthExplanation}
+                              </p>
+                            )}
+                          </div>
+                        )}
+
                         <div className="p-6 rounded-3xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-100 dark:border-slate-800 space-y-4">
                           <h3 className="text-lg font-headline font-bold flex items-center gap-2 text-amber-700 dark:text-amber-500">
                             <GraduationCap className="h-5 w-5" /> Hermeneutical Mastery
@@ -854,70 +993,43 @@ function ReaderContent() {
                           </p>
                         </div>
 
-                        {planDay?.scribalStrategy && (
-                          <div className={cn(
-                            "p-6 rounded-2xl border space-y-3",
-                            getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+                        <div className="space-y-4">
+                          <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline font-bold">Scribe's Journal Reflection</h4>
+                          <Card className={cn(
+                            "border-none shadow-md rounded-2xl overflow-hidden border p-5",
+                            getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE]", "bg-[#1E293B]")
                           )}>
-                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline font-bold">Scribal Calligraphy Instructions</h4>
-                            <p className="text-sm font-bold font-serif text-slate-950 dark:text-white">{planDay.scribalStrategy.title}</p>
-                            <ul className="list-disc pl-5 text-xs text-slate-650 dark:text-slate-350 space-y-1">
-                              {planDay.scribalStrategy.instructions.map((inst, idx) => (
-                                <li key={idx}>{inst}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        {planDay?.reflectionQuestion && (
-                          <div className="space-y-4">
-                            <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400 font-headline font-bold">Scribe's Journal Reflection</h4>
-                            <Card className={cn(
-                              "border-none shadow-md rounded-2xl overflow-hidden border",
-                              getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
-                            )}>
-                              <CardHeader className="p-5 pb-3">
-                                <CardTitle className="text-sm font-bold italic font-serif text-primary">
-                                  "{planDay.reflectionQuestion}"
-                                </CardTitle>
-                              </CardHeader>
-                              <CardContent className="p-5 pt-0 space-y-4">
-                                <textarea
-                                  className={cn(
-                                    "w-full h-32 p-4 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-primary font-serif italic",
-                                    getThemeClass("bg-slate-50 border-slate-100 text-slate-850", "bg-[#F4ECD8] border-[#E6D7B8] text-[#433422]", "bg-slate-900 border-slate-800 text-slate-200")
-                                  )}
-                                  placeholder="Write down your hermeneutical synthesis or reflection here..."
-                                  value={scribeReflection}
-                                  onChange={(e) => setScribeReflection(e.target.value)}
-                                />
-                                <div className="flex items-center justify-between">
-                                  <span className="text-[10px] text-slate-400 uppercase tracking-wider">
-                                    Progress: {scribeReflection.trim().length > 0 ? "Drafting..." : "Awaiting input"}
-                                  </span>
-                                  <Button
-                                    variant="default"
-                                    size="sm"
-                                    className="rounded-full font-bold px-6 bg-brand-gradient hover:opacity-90 border-none text-white shadow-lg"
-                                    onClick={() => {
-                                      if (scribeReflection.trim().length === 0) {
-                                        toast({ title: "Error", description: "Please enter your reflection notes before sealing the scroll.", variant: "destructive" });
-                                        return;
-                                      }
-                                      setIsSealBroken(false); // Seal the scroll!
-                                      localStorage.setItem(`scriptorium_reflection_${pathParam}_${dayParam}`, scribeReflection);
-                                      updateProgress("Master", scribeReflection);
-                                      toast({ title: "Scroll Sealed", description: "Your reflection has been inscribed, synced, and preserved." });
-                                    }}                                  >
-                                    Seal the Scroll
-                                  </Button>
-                                </div>
-                              </CardContent>
-                            </Card>
-                          </div>
-                        )}
+                            <ScribeReflection
+                              dayParam={dayParam}
+                              planDay={planDay}
+                              scribeReflection={scribeReflection}
+                              setScribeReflection={setScribeReflection}
+                              structuralReflection={structuralReflection}
+                              setStructuralReflection={setStructuralReflection}
+                              isSealBroken={isSealBroken}
+                              setIsSealBroken={setIsSealBroken}
+                              isShaking={isShaking}
+                              setIsShaking={setIsShaking}
+                              getThemeClass={getThemeClass}
+                              toast={toast}
+                              showSealButton={true}
+                              onSealScroll={() => {
+                                if (scribeReflection.trim().length === 0 && structuralReflection.trim().length === 0) {
+                                  toast({ title: "Error", description: "Please enter your reflection notes (transformational or structural) before sealing the scroll.", variant: "destructive" });
+                                  return;
+                                }
+                                setIsSealBroken(false); // Seal the scroll!
+                                localStorage.setItem(`scriptorium_reflection_${pathParam}_${dayParam}`, scribeReflection);
+                                localStorage.setItem(`scriptorium_structural_reflection_${pathParam}_${dayParam}`, structuralReflection);
+                                updateProgress("Master", scribeReflection, structuralReflection);
+                                toast({ title: "Scroll Sealed", description: "Your reflections have been inscribed, synced, and preserved." });
+                              }}
+                            />
+                          </Card>
+                        </div>
                       </div>
                     )}
+
 
                     {pathParam && (
                       <div className="flex items-center justify-between border-t border-slate-100 pt-6">
@@ -961,7 +1073,8 @@ function ReaderContent() {
           </div>
 
           <aside className="lg:col-span-4 space-y-6">
-            {planDay?.historicalSnapshot && (
+            {/* Read/Understand narrative snapshot */}
+            {(activeStage === "read" || activeStage === "understand") && planDay?.historicalSnapshot && (
               <Card className={cn(
                 "border-none shadow-md rounded-2xl overflow-hidden border animate-in fade-in slide-in-from-right-4 duration-500",
                 getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
@@ -974,7 +1087,7 @@ function ReaderContent() {
                 <CardContent className="p-5 pt-0 space-y-3">
                   <div className={cn(
                     "p-4 rounded-xl border text-xs leading-relaxed italic font-serif",
-                    getThemeClass("bg-slate-50 border-slate-100 text-slate-650", "bg-[#F4ECD8] border-[#E6D7B8] text-[#5C4033]", "bg-slate-900/50 border-slate-800 text-slate-355")
+                    getThemeClass("bg-slate-50 border-slate-100 text-slate-655", "bg-[#F4ECD8] border-[#E6D7B8] text-[#5C4033]", "bg-slate-900/50 border-slate-800 text-slate-355")
                   )}>
                     "{planDay.historicalSnapshot.text}"
                   </div>
@@ -986,13 +1099,113 @@ function ReaderContent() {
                 </CardContent>
               </Card>
             )}
-            {planDay?.thematicLedger && (
-              <div className="relative w-full my-4">
+
+            {/* Read-only: Scribal Strategy */}
+            {activeStage === "read" && planDay?.scribalStrategy && (
+              <Card className={cn(
+                "border-none shadow-md rounded-2xl overflow-hidden border animate-in fade-in duration-300",
+                getThemeClass("bg-[#F1F5F9] border-slate-200", "bg-[#EAE1C9] border-[#D6C5A2]", "bg-slate-900 border-slate-800")
+              )}>
+                <CardHeader className="p-5 pb-3">
+                   <CardTitle className={cn("text-sm font-bold uppercase tracking-widest flex items-center gap-3", getThemeClass("text-slate-700", "text-[#433422]", "text-slate-200"))}>
+                    <PenTool className="h-5 w-5" /> Scribal Strategy
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-5 pt-0 space-y-4">
+                  <div className="space-y-4">
+                    {planDay.scribalStrategy.instructions.map((step, i) => (
+                      <div key={i} className="flex gap-3 animate-in fade-in duration-300">
+                        <span className={cn(
+                          "h-5 w-5 shrink-0 rounded-full flex items-center justify-center text-[10px] font-bold border",
+                          getThemeClass("bg-white text-slate-400 border-slate-200", "bg-[#FAF6EE] text-[#8C6D58] border-[#E6D7B8]", "bg-slate-800 text-slate-455 border-slate-750")
+                        )}>{i + 1}</span>
+                        <p className={cn("text-sm leading-relaxed", getThemeClass("text-slate-600", "text-[#5C4033]", "text-slate-300"))}>{step}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Understand-only: Marginalia (culturalInsights) */}
+            {activeStage === "understand" && planDay?.culturalInsights && (
+               <Card className={cn(
+                 "border-none shadow-md rounded-2xl overflow-hidden border animate-in fade-in duration-300",
+                 getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+               )}>
+                <CardHeader className="p-5 pb-3">
+                    <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-amber-600">
+                    <Compass className="h-5 w-5" /> Marginalia
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-5 pt-0 space-y-4">
+                  {planDay.culturalInsights.map((insight, i) => (
+                    <div key={i} className="space-y-2">
+                      <p className={cn("text-sm font-bold", getThemeClass("text-slate-900", "text-[#433422]", "text-white"))}>{insight.title}</p>
+                      <p className={cn("text-sm leading-relaxed italic", getThemeClass("text-slate-500", "text-[#5C4033]", "text-slate-400"))}>{insight.note}</p>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Understand-only: Symbolic Translation (symbolicMapping) */}
+            {activeStage === "understand" && planDay?.symbolicMapping && (
+              <Card className={cn(
+                "border-none shadow-md rounded-2xl overflow-hidden border animate-in fade-in duration-300",
+                getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
+              )}>
+                <CardHeader className="p-5 pb-3">
+                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-purple-600">
+                    <Sparkles className="h-5 w-5 animate-pulse" /> Symbolic Translation
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-5 pt-0 space-y-4">
+                  <div className="space-y-4">
+                    {planDay.symbolicMapping.map((item, i) => (
+                      <div key={i} className="p-3 rounded-xl bg-slate-50/50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-850 space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-bold text-xs uppercase tracking-wide text-purple-600 dark:text-purple-400">{item.symbol}</span>
+                          <span className="text-slate-300 dark:text-slate-650">→</span>
+                          <span className="font-bold text-xs uppercase tracking-wide text-slate-800 dark:text-slate-200">{item.reality}</span>
+                        </div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed italic">"{item.insight}"</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Understand-only: Scholar AI Panel */}
+            {activeStage === "understand" && (
+              <AIAssistantPanel
+                planDay={planDay}
+                aiAnalysis={aiAnalysis}
+                isAiLoading={isAiLoading}
+                selectedWord={selectedWord}
+                wordStudyResult={wordStudyResult}
+                isWordStudyLoading={isWordStudyLoading}
+                customWordQuery={customWordQuery}
+                setCustomWordQuery={setCustomWordQuery}
+                version={version}
+                setCurrentRef={setCurrentRef}
+                setSearchQuery={setSearchQuery}
+                loadScripture={loadScripture}
+                onAiAnalysis={handleAiAnalysis}
+                onWordStudy={handleWordStudy}
+                getThemeClass={getThemeClass}
+              />
+            )}
+
+            {/* Master-only: Golden Thread Ledger */}
+            {activeStage === "master" && planDay?.thematicLedger && (
+              <div className="relative w-full my-4 animate-in fade-in duration-300">
                 {/* Wooden top roller rod */}
                 <div className="relative h-4 w-full flex items-center justify-between px-2">
-                  <div className="h-5 w-3 rounded-l-md bg-amber-900 border border-amber-950 shadow-inner" />
+                  <div className="h-5 w-3 rounded-l-md bg-amber-900 border border-amber-955 shadow-inner" />
                   <div className="h-2 w-full bg-amber-800 border-y border-amber-900 shadow-md" />
-                  <div className="h-5 w-3 rounded-r-md bg-amber-900 border border-amber-950 shadow-inner" />
+                  <div className="h-5 w-3 rounded-r-md bg-amber-900 border border-amber-955 shadow-inner" />
                 </div>
                 
                 {/* Parchment scroll body */}
@@ -1032,7 +1245,7 @@ function ReaderContent() {
                           <div className={cn(
                             "absolute left-2 top-1 h-3 w-3 rounded-full border flex items-center justify-center transition-all duration-300",
                             isLast 
-                              ? "bg-red-600 border-red-700 scale-125 shadow-[0_0_8px_rgba(220,38,38,0.4)] animate-pulse" 
+                              ? "bg-red-650 border-red-750 scale-125 shadow-[0_0_8px_rgba(220,38,38,0.4)] animate-pulse" 
                               : getThemeClass("bg-amber-100 border-amber-300", "bg-[#FAF6EE] border-[#D9C4A2]", "bg-slate-800 border-slate-750")
                           )}>
                             {isLast && <div className="h-1 w-1 rounded-full bg-white" />}
@@ -1063,134 +1276,45 @@ function ReaderContent() {
 
                 {/* Wooden bottom roller rod */}
                 <div className="relative h-4 w-full flex items-center justify-between px-2 -mt-0.5">
-                  <div className="h-5 w-3 rounded-l-md bg-amber-900 border border-amber-950 shadow-inner" />
+                  <div className="h-5 w-3 rounded-l-md bg-amber-900 border border-amber-955 shadow-inner" />
                   <div className="h-2 w-full bg-amber-800 border-y border-amber-900 shadow-md" />
-                  <div className="h-5 w-3 rounded-r-md bg-amber-900 border border-amber-950 shadow-inner" />
+                  <div className="h-5 w-3 rounded-r-md bg-amber-900 border border-amber-955 shadow-inner" />
                 </div>
               </div>
             )}
 
-            {planDay?.culturalInsights && (
-               <Card className={cn(
-                 "border-none shadow-md rounded-2xl overflow-hidden border",
-                 getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
-               )}>
-                <CardHeader className="p-5 pb-3">
-                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-amber-600">
-                    <Compass className="h-5 w-5" /> Marginalia
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-5 pt-0 space-y-4">
-                  {planDay.culturalInsights.map((insight, i) => (
-                    <div key={i} className="space-y-2">
-                      <p className={cn("text-sm font-bold", getThemeClass("text-slate-900", "text-[#433422]", "text-white"))}>{insight.title}</p>
-                      <p className={cn("text-sm leading-relaxed italic", getThemeClass("text-slate-500", "text-[#5C4033]", "text-slate-400"))}>{insight.note}</p>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-
+            {/* Read/Master: Annotation Insights Feed */}
+            {(activeStage === "read" || activeStage === "master") && (
+              <AnnotationFeed
+                currentRef={currentRef}
+                user={user}
+                selectedCircleId={selectedCircleId}
+                userCircles={userCircles || []}
+                setSelectedCircleId={setSelectedCircleId}
+                annotationThreads={annotationThreads}
+                replyingToId={replyingToId}
+                setReplyingToId={setReplyingToId}
+                replyComment={replyComment}
+                setReplyComment={setReplyComment}
+                newComment={newComment}
+                setNewComment={setNewComment}
+                showAddForm={showAddForm}
+                setShowAddForm={setShowAddForm}
+                onSaveAnnotation={async (text, parentId) => {
+                  if (parentId) {
+                    handleAddReply(text, parentId);
+                  } else {
+                    handleAddInsight(text);
+                  }
+                }}
+                onToggleReaction={handleToggleAnnotationReaction}
+                getThemeClass={getThemeClass}
+                activeHighlight={activeHighlight}
+                onClearHighlight={() => setActiveHighlight("")}
+              />
             )}
-
-            {planDay?.symbolicMapping && (
-              <Card className={cn(
-                "border-none shadow-md rounded-2xl overflow-hidden border",
-                getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
-              )}>
-                <CardHeader className="p-5 pb-3">
-                   <CardTitle className="text-sm font-bold uppercase tracking-widest flex items-center gap-3 text-purple-600">
-                    <Sparkles className="h-5 w-5 animate-pulse" /> Symbolic Translation
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-5 pt-0 space-y-4">
-                  <div className="space-y-4">
-                    {planDay.symbolicMapping.map((item, i) => (
-                      <div key={i} className="p-3 rounded-xl bg-slate-50/50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-850 space-y-1">
-                        <div className="flex items-center gap-2">
-                          <span className="font-bold text-xs uppercase tracking-wide text-purple-600 dark:text-purple-400">{item.symbol}</span>
-                          <span className="text-slate-300 dark:text-slate-650">→</span>
-                          <span className="font-bold text-xs uppercase tracking-wide text-slate-800 dark:text-slate-200">{item.reality}</span>
-                        </div>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed italic">"{item.insight}"</p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
-            {planDay?.scribalStrategy && (
-              <Card className={cn(
-                "border-none shadow-md rounded-2xl overflow-hidden border",
-                getThemeClass("bg-[#F1F5F9] border-slate-200", "bg-[#EAE1C9] border-[#D6C5A2]", "bg-slate-900 border-slate-800")
-              )}>
-                <CardHeader className="p-5 pb-3">
-                   <CardTitle className={cn("text-sm font-bold uppercase tracking-widest flex items-center gap-3", getThemeClass("text-slate-700", "text-[#433422]", "text-slate-200"))}>
-                    <PenTool className="h-5 w-5" /> Scribal Strategy
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-5 pt-0 space-y-4">
-                  <div className="space-y-4">
-                    {planDay.scribalStrategy.instructions.map((step, i) => (
-                      <div key={i} className="flex gap-3 animate-in fade-in duration-300">
-                        <span className={cn(
-                          "h-5 w-5 shrink-0 rounded-full flex items-center justify-center text-[10px] font-bold border",
-                          getThemeClass("bg-white text-slate-400 border-slate-200", "bg-[#FAF6EE] text-[#8C6D58] border-[#E6D7B8]", "bg-slate-800 text-slate-450 border-slate-750")
-                        )}>{i + 1}</span>
-                        <p className={cn("text-sm leading-relaxed", getThemeClass("text-slate-600", "text-[#5C4033]", "text-slate-300"))}>{step}</p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
-            <AIAssistantPanel
-              planDay={planDay}
-              aiAnalysis={aiAnalysis}
-              isAiLoading={isAiLoading}
-              selectedWord={selectedWord}
-              wordStudyResult={wordStudyResult}
-              isWordStudyLoading={isWordStudyLoading}
-              customWordQuery={customWordQuery}
-              setCustomWordQuery={setCustomWordQuery}
-              version={version}
-              setCurrentRef={setCurrentRef}
-              setSearchQuery={setSearchQuery}
-              loadScripture={loadScripture}
-              onAiAnalysis={handleAiAnalysis}
-              onWordStudy={handleWordStudy}
-              getThemeClass={getThemeClass}
-            />
-
-            <AnnotationFeed
-              currentRef={currentRef}
-              user={user}
-              selectedCircleId={selectedCircleId}
-              userCircles={userCircles || []}
-              setSelectedCircleId={setSelectedCircleId}
-              annotationThreads={annotationThreads}
-              replyingToId={replyingToId}
-              setReplyingToId={setReplyingToId}
-              replyComment={replyComment}
-              setReplyComment={setReplyComment}
-              newComment={newComment}
-              setNewComment={setNewComment}
-              showAddForm={showAddForm}
-              setShowAddForm={setShowAddForm}
-              onSaveAnnotation={async (text, parentId) => {
-                if (parentId) {
-                  handleAddReply(text, parentId);
-                } else {
-                  handleAddInsight(text);
-                }
-              }}
-              onToggleReaction={handleToggleAnnotationReaction}
-              getThemeClass={getThemeClass}
-              activeHighlight={activeHighlight}
-              onClearHighlight={() => setActiveHighlight("")}
-            />
           </aside>
+
         </div>
       </main>
 

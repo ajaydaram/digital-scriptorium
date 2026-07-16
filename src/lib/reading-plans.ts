@@ -15,10 +15,12 @@ export interface ReadingPlanDay {
   title: string;
   audience?: string;
   mainTruth?: string;
+  coreTruthExplanation?: string;
   culturalInsights?: { title: string; note: string }[];
   symbolicMapping?: { symbol: string; reality: string; insight: string }[];
   scribalStrategy?: { title: string; instructions: string[] };
   reflectionQuestion?: string;
+  structuralReflectionQuestion?: string;
   historicalSnapshot?: { ref: string; text: string };
   thematicLedger?: { label: string; value: string }[];
   understandContext?: UnderstandContext;
@@ -2621,8 +2623,54 @@ export function getPlanDay(path: PathId, day: number): ReadingPlanDay | null {
   
   if (!dayData) return null;
   
+  let structuralReflectionQuestion = dayData.structuralReflectionQuestion;
+  if (!structuralReflectionQuestion) {
+    if (path === 'genre') {
+      if (day >= 1 && day <= 7) {
+        structuralReflectionQuestion = "How does the choice of narrative structure, character dynamics, or central comparison in this parable affect the rhetorical tension and demand a verdict?";
+      } else if (day >= 8 && day <= 14) {
+        structuralReflectionQuestion = "Analyze the grammatical and lineation structure of this Psalm. How does its parallelism (synonymous, antithetic, or synthetic) develop the poetic movement?";
+      } else {
+        structuralReflectionQuestion = "Examine the literary form and rhetorical structure of this passage. How does its genre shape the way its message is framed and delivered?";
+      }
+    } else if (path === 'chronological') {
+      structuralReflectionQuestion = "How does the historical and chronological context of this passage shape its literary structure and contrast with the corresponding poetic/prophetic response?";
+    } else {
+      structuralReflectionQuestion = "How do the structural linkages, parallelisms, and thematic progression in this text develop the overall covenantal message?";
+    }
+  }
+
+  // Override specific highlight days' structural questions
+  if (path === 'genre' && day === 1) {
+    structuralReflectionQuestion = "How does Jesus' choice to structure the four soils in a 3 (failures) to 1 (success) ratio affect the narrative tension of the parable?";
+  }
+
+  let coreTruthExplanation = dayData.coreTruthExplanation;
+  if (!coreTruthExplanation) {
+    if (path === 'genre') {
+      if (day >= 1 && day <= 7) {
+        coreTruthExplanation = "In parabolic literature, the structural climax always lands on the final contrast. The ultimate truth is found in the contrast of the final scene.";
+      } else if (day >= 8 && day <= 14) {
+        coreTruthExplanation = "In Hebrew poetry, the theological climax is structurally mirrored in the parallelism or chiasm. The core truth represents this structural pivot point.";
+      } else {
+        coreTruthExplanation = "In this literary genre, the core truth serves as the pivot where the structural flow resolves into its primary theological argument.";
+      }
+    } else if (path === 'chronological') {
+      coreTruthExplanation = "In chronological narrative, the core truth links historical events directly with the corresponding heart expression, revealing the spiritual pivot of the history.";
+    } else {
+      coreTruthExplanation = "In thematic study, the core truth acts as the golden thread connecting ancient biblical themes directly to their canonical fulfillment in the new covenant.";
+    }
+  }
+
+  // Specific Day 1 override
+  if (path === 'genre' && day === 1) {
+    coreTruthExplanation = "In parabolic literature, the structural climax always lands on the final contrast. The ultimate truth of the text is found in the sudden, exponential fruitfulness of the fourth soil.";
+  }
+
   return {
     ...dayData,
+    structuralReflectionQuestion,
+    coreTruthExplanation,
     understandContext: getUnderstandContextForDay(path, day, dayData.reference)
   };
 }
