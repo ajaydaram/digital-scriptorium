@@ -1127,8 +1127,8 @@ function ReaderContent() {
               </Card>
             )}
 
-            {/* Understand-only: Marginalia (culturalInsights) */}
-            {activeStage === "understand" && planDay?.culturalInsights && (
+            {/* Understand-only: Marginalia (culturalInsights & AI historical footnotes) */}
+            {activeStage === "understand" && (planDay?.culturalInsights || (aiAnalysis?.historicalMarginalia && aiAnalysis.historicalMarginalia.length > 0)) && (
                <Card className={cn(
                  "border-none shadow-md rounded-2xl overflow-hidden border animate-in fade-in duration-300",
                  getThemeClass("bg-white border-slate-100", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-[#1E293B] border-slate-800")
@@ -1139,10 +1139,21 @@ function ReaderContent() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-5 pt-0 space-y-4">
-                  {planDay.culturalInsights.map((insight, i) => (
+                  {planDay?.culturalInsights && planDay.culturalInsights.map((insight, i) => (
                     <div key={i} className="space-y-2">
                       <p className={cn("text-sm font-bold", getThemeClass("text-slate-900", "text-[#433422]", "text-white"))}>{insight.title}</p>
                       <p className={cn("text-sm leading-relaxed italic", getThemeClass("text-slate-500", "text-[#5C4033]", "text-slate-400"))}>{insight.note}</p>
+                    </div>
+                  ))}
+
+                  {aiAnalysis?.historicalMarginalia && aiAnalysis.historicalMarginalia.map((insight: any, i: number) => (
+                    <div key={`ai-${i}`} className={cn("space-y-2 pt-4 border-t border-slate-100 dark:border-slate-800", (!planDay?.culturalInsights || planDay.culturalInsights.length === 0) && "first:border-t-0 first:pt-0")}>
+                      <p className={cn("text-sm font-bold text-amber-600")}>
+                        [Historical-Cultural Footnote]: {insight.concept}
+                      </p>
+                      <p className={cn("text-sm leading-relaxed italic", getThemeClass("text-slate-500", "text-[#5C4033]", "text-slate-400"))}>
+                        {insight.explanation}
+                      </p>
                     </div>
                   ))}
                 </CardContent>
