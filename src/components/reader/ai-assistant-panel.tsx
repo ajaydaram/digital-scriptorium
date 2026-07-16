@@ -108,7 +108,7 @@ export default function AIAssistantPanel({
                       <p className={cn("text-sm font-bold", getThemeClass("text-slate-900", "text-[#433422]", "text-slate-100"))}>
                         {item.heading}
                       </p>
-                      <ul className="list-disc list-inside pl-4 space-y-1">
+                      <ul className="list-none pl-4 space-y-1">
                         {item.subPoints.map((sub: string, sIdx: number) => (
                           <li key={sIdx} className={cn("text-xs leading-relaxed", getThemeClass("text-slate-500", "text-[#5C4033]/80", "text-slate-400"))}>
                             {sub}
