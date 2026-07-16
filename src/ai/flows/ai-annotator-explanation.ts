@@ -24,7 +24,9 @@ const AIAnnotatorExplanationOutputSchema = z.object({
     ref: z.string(),
     reason: z.string().describe('Why this reference is relevant to the Grand Historical Narrative.')
   })).describe('Curated cross-references with pedagogical relevance.'),
-  keyWords: z.array(z.string()).describe('3-5 key words from the passage suitable for original language study.')
+  keyWords: z.array(z.string()).describe('3-5 key words from the passage suitable for original language study.'),
+  lineationDisplay: z.string().describe('A visual graphical display of the passage (Greek/Hebrew original clauses or English) using indented lineation (ZECNT style) to show main verbs vs. subordinate modifiers.'),
+  lineationEvaluation: z.string().describe('An assessment of standard/poetic lineation and structural indentation logic for this literary genre to help the user align their strategy.')
 });
 export type AIAnnotatorExplanationOutput = z.infer<typeof AIAnnotatorExplanationOutputSchema>;
 
@@ -45,6 +47,8 @@ When explaining a passage:
 2. Specifically address how this passage fits into the "Grand Historical Narrative" of scripture (Creation, Fall, Redemption, Restoration).
 3. Provide 2-3 highly relevant cross-references. For each, explain *why* it is pedagogically significant to understanding the broader narrative context.
 4. Select 3-5 key words from the passage that are central or interesting for original language (Greek or Hebrew) study.
+5. In the "lineationDisplay" field, provide a ZECNT-style Graphical Display of the text (either Greek/Hebrew original or English clauses) showing the main verbs aligned to the left, and subordinate clauses, participles, or relative clauses progressively indented underneath them to reveal the syntactic hierarchy.
+6. In the "lineationEvaluation" field, provide a clear, graduate-level discourse analysis explaining the syntactic logic of the graphical lineation (e.g. how participles support main verbs, or chiasm symmetry), and guide the user on how their reading/writing strategies should adapt to this literary shape.
 
 Scripture Passage: {{{scripturePassage}}}
 {{#if highlightedSnippet}}

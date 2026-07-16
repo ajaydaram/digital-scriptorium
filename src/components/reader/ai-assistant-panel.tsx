@@ -89,6 +89,27 @@ export default function AIAssistantPanel({
               </p>
             </div>
 
+            {aiAnalysis.lineationDisplay && (
+              <div className="space-y-2 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">ZECNT Graphical Text Display</h4>
+                <pre className={cn(
+                  "p-4 rounded-xl text-xs font-mono overflow-x-auto leading-relaxed border whitespace-pre",
+                  getThemeClass("bg-slate-50 border-slate-200 text-slate-700", "bg-[#F5ECD6]/50 border-[#E5D7B7] text-[#433422]", "bg-slate-900/60 border-slate-800 text-slate-300")
+                )}>
+                  {aiAnalysis.lineationDisplay}
+                </pre>
+              </div>
+            )}
+
+            {aiAnalysis.lineationEvaluation && (
+              <div className="space-y-2">
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Lineation Syntax Evaluation</h4>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+                  {aiAnalysis.lineationEvaluation}
+                </p>
+              </div>
+            )}
+
             {aiAnalysis.suggestedReferences && aiAnalysis.suggestedReferences.length > 0 && (
               <div className="space-y-3">
                 <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Thematic Cross-References</h4>
