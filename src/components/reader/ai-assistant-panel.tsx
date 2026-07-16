@@ -75,61 +75,71 @@ export default function AIAssistantPanel({
           </div>
         ) : aiAnalysis ? (
           <div className="space-y-6 animate-in fade-in duration-500">
-            <div className="space-y-2">
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Scholarly Commentary</h4>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-body">
-                {aiAnalysis.explanation}
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Canonical Context</h4>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-body">
-                {aiAnalysis.theologicalContext}
-              </p>
-            </div>
-
-            {aiAnalysis.lineationDisplay && (
-              <div className="space-y-2 pt-4 border-t border-slate-100 dark:border-slate-800">
-                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">ZECNT Graphical Text Display</h4>
-                <pre className={cn(
-                  "p-4 rounded-xl text-xs font-mono overflow-x-auto leading-relaxed border whitespace-pre",
-                  getThemeClass("bg-slate-50 border-slate-200 text-slate-700", "bg-[#F5ECD6]/50 border-[#E5D7B7] text-[#433422]", "bg-slate-900/60 border-slate-800 text-slate-300")
-                )}>
-                  {aiAnalysis.lineationDisplay}
-                </pre>
-              </div>
-            )}
-
-            {aiAnalysis.lineationEvaluation && (
+            {aiAnalysis.literaryContext && (
               <div className="space-y-2">
-                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Lineation Syntax Evaluation</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-body">
-                  {aiAnalysis.lineationEvaluation}
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">📑 1. Literary Context</h4>
+                <p className={cn(
+                  "text-sm leading-relaxed font-body",
+                  getThemeClass("text-slate-600", "text-[#5C4033]", "text-slate-300")
+                )}>
+                  {aiAnalysis.literaryContext}
                 </p>
               </div>
             )}
 
-            {aiAnalysis.suggestedReferences && aiAnalysis.suggestedReferences.length > 0 && (
-              <div className="space-y-3">
-                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Thematic Cross-References</h4>
-                <div className="space-y-2">
-                  {aiAnalysis.suggestedReferences.map((refObj: any, index: number) => (
-                    <button
-                      key={index}
-                      onClick={() => {
-                        setCurrentRef(refObj.ref);
-                        setSearchQuery(refObj.ref);
-                        loadScripture(refObj.ref, version);
-                      }}
-                      className="w-full text-left p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary/20 hover:bg-primary/5 transition-all text-xs space-y-1 group"
+            {aiAnalysis.structuralMechanics && (
+              <div className="space-y-2 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">🛠️ 2. Structural Mechanics</h4>
+                <p className={cn(
+                  "text-sm leading-relaxed font-body",
+                  getThemeClass("text-slate-600", "text-[#5C4033]", "text-slate-300")
+                )}>
+                  {aiAnalysis.structuralMechanics}
+                </p>
+              </div>
+            )}
+
+            {aiAnalysis.exegeticalOutline && aiAnalysis.exegeticalOutline.length > 0 && (
+              <div className="space-y-2 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">📋 3. Exegetical Outline</h4>
+                <div className="space-y-3 font-serif">
+                  {aiAnalysis.exegeticalOutline.map((item: any, idx: number) => (
+                    <div key={idx} className="space-y-1.5">
+                      <p className={cn("text-sm font-bold", getThemeClass("text-slate-900", "text-[#433422]", "text-slate-100"))}>
+                        {item.heading}
+                      </p>
+                      <ul className="list-disc list-inside pl-4 space-y-1">
+                        {item.subPoints.map((sub: string, sIdx: number) => (
+                          <li key={sIdx} className={cn("text-xs leading-relaxed", getThemeClass("text-slate-500", "text-[#5C4033]/80", "text-slate-400"))}>
+                            {sub}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {aiAnalysis.historicalMarginalia && aiAnalysis.historicalMarginalia.length > 0 && (
+              <div className="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">🏺 4. Historical Marginalia</h4>
+                <div className="grid grid-cols-1 gap-2.5">
+                  {aiAnalysis.historicalMarginalia.map((item: any, idx: number) => (
+                    <div 
+                      key={idx} 
+                      className={cn(
+                        "p-4 rounded-xl border text-xs space-y-1",
+                        getThemeClass("bg-slate-50/50 border-slate-150", "bg-[#F3EAD5]/40 border-[#E1D0B0]", "bg-slate-900/40 border-slate-800/80")
+                      )}
                     >
-                      <div className="flex items-center justify-between font-bold text-slate-900 dark:text-white group-hover:text-primary">
-                        <span>{refObj.ref}</span>
-                        <ChevronRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </div>
-                      <p className="text-slate-500 leading-relaxed">{refObj.reason}</p>
-                    </button>
+                      <span className={cn("font-bold uppercase tracking-wider block text-[10px]", getThemeClass("text-slate-800", "text-amber-900", "text-slate-200"))}>
+                        {item.concept}
+                      </span>
+                      <p className={cn("leading-relaxed", getThemeClass("text-slate-500", "text-[#5C4033]/90", "text-slate-400"))}>
+                        {item.explanation}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>
