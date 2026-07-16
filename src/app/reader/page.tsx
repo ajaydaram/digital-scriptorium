@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { getScripture, type Scripture, SUPPORTED_VERSIONS } from "@/services/bibleService";
 import { BibleVersionSwitcher } from "@/components/bible-version-switcher";
-import { getPlanDay, getPlanDays, type PathId } from "@/lib/reading-plans";
+import { getPlanDay, getPlanDays, type PathId, BIBLE_BOOKS, getDayForBookAndChapter } from "@/lib/reading-plans";
 import { useUser, useFirestore, useCollection, useMemoFirebase, useAuth } from "@/firebase";
 import { saveAnnotation, getAnnotationsQuery, toggleAnnotationReaction } from "@/services/annotationService";
 import { getUserCirclesQuery } from "@/services/circleService";
@@ -516,6 +516,112 @@ function ReaderContent() {
           </div>
         )}
 
+        {/* Codex Navigation Bar */}
+        {pathParam && (
+          <div className={cn(
+            "mb-6 p-4 rounded-2xl border shadow-sm flex flex-col md:flex-row items-stretch md:items-center gap-4 animate-in fade-in duration-300",
+            getThemeClass("bg-white border-slate-150", "bg-[#FAF6EE] border-[#E6D7B8]", "bg-slate-900/60 border-slate-800")
+          )}>
+            {/* 1. Plan Days Quick Dropdown */}
+            <div className="flex-1 flex flex-col md:flex-row md:items-center gap-3">
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Study Syllabus:</span>
+              </div>
+              <Select 
+                value={String(dayParam)} 
+                onValueChange={(val) => router.push(`/reader?path=${pathParam}&day=${val}`)}
+              >
+                <SelectTrigger className="w-full md:w-[260px] h-9 text-xs rounded-xl bg-slate-50/50 dark:bg-slate-955/20 border-slate-200 dark:border-slate-850 font-bold">
+                  <SelectValue placeholder="Jump to Plan Day..." />
+                </SelectTrigger>
+                <SelectContent className="max-h-[300px] rounded-xl">
+                  {getPlanDays(pathParam).map((dNum) => {
+                    const dData = getPlanDay(pathParam, dNum);
+                    return (
+                      <SelectItem key={dNum} value={String(dNum)} className="text-xs">
+                        Day {dNum}: {dData?.reference || `Day ${dNum}`} {dData?.title ? `— ${dData.title}` : ''}
+                      </SelectItem>
+                    );
+                  })}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Vertical divider */}
+            <div className="hidden md:block h-6 w-px bg-slate-200 dark:bg-slate-800" />
+
+            {/* 2. Canonical Bible Book & Chapter Selector */}
+            <div className="flex-1 flex flex-col md:flex-row md:items-center justify-end gap-3">
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Canonical Codex:</span>
+              </div>
+              
+              <div className="flex items-center gap-2 w-full md:w-auto">
+                {/* Book Select */}
+                <Select 
+                  value={(() => {
+                    if (!currentRef) return "Matthew";
+                    const match = currentRef.match(/^(\d?\s?[a-zA-Z\s]+)\s+(\d+)/);
+                    return match ? match[1].trim() : "Matthew";
+                  })()} 
+                  onValueChange={(selectedBook) => {
+                    const newDay = getDayForBookAndChapter(selectedBook, 1);
+                    router.push(`/reader?path=entire&day=${newDay}`);
+                  }}
+                >
+                  <SelectTrigger className="w-[150px] h-9 text-xs rounded-xl bg-slate-50/50 dark:bg-slate-955/20 border-slate-200 dark:border-slate-850 font-bold">
+                    <SelectValue placeholder="Book" />
+                  </SelectTrigger>
+                  <SelectContent className="max-h-[300px] rounded-xl">
+                    {BIBLE_BOOKS.map((b) => (
+                      <SelectItem key={b.name} value={b.name} className="text-xs">
+                        {b.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                {/* Chapter Select */}
+                <Select 
+                  value={(() => {
+                    if (!currentRef) return "1";
+                    const match = currentRef.match(/^(\d?\s?[a-zA-Z\s]+)\s+(\d+)/);
+                    return match ? match[2] : "1";
+                  })()} 
+                  onValueChange={(selectedChapter) => {
+                    const currentBook = (() => {
+                      if (!currentRef) return "Matthew";
+                      const match = currentRef.match(/^(\d?\s?[a-zA-Z\s]+)\s+(\d+)/);
+                      return match ? match[1].trim() : "Matthew";
+                    })();
+                    const newDay = getDayForBookAndChapter(currentBook, parseInt(selectedChapter, 10));
+                    router.push(`/reader?path=entire&day=${newDay}`);
+                  }}
+                >
+                  <SelectTrigger className="w-[85px] h-9 text-xs rounded-xl bg-slate-50/50 dark:bg-slate-955/20 border-slate-200 dark:border-slate-850 font-bold">
+                    <SelectValue placeholder="Chapter" />
+                  </SelectTrigger>
+                  <SelectContent className="max-h-[200px] rounded-xl">
+                    {(() => {
+                      const currentBook = (() => {
+                        if (!currentRef) return "Matthew";
+                        const match = currentRef.match(/^(\d?\s?[a-zA-Z\s]+)\s+(\d+)/);
+                        return match ? match[1].trim() : "Matthew";
+                      })();
+                      const bookData = BIBLE_BOOKS.find(b => b.name.toLowerCase() === currentBook.toLowerCase());
+                      const chapterCount = bookData ? bookData.chapters : 1;
+                      return Array.from({ length: chapterCount }, (_, i) => i + 1).map((ch) => (
+                        <SelectItem key={ch} value={String(ch)} className="text-xs">
+                          Ch. {ch}
+                        </SelectItem>
+                      ));
+                    })()}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </div>
+        )}
         {pathParam === 'chronological' && (
           <div className="mb-6">
             <JudeanMap

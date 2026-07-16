@@ -2225,6 +2225,18 @@ export function getBookAndChapterForDay(day: number): { book: string; chapter: n
   return null;
 }
 
+export function getDayForBookAndChapter(book: string, chapter: number): number {
+  let currentSum = 0;
+  for (const b of BIBLE_BOOKS) {
+    if (b.name.toLowerCase() === book.toLowerCase()) {
+      const chapVal = Math.min(Math.max(1, chapter), b.chapters);
+      return currentSum + chapVal;
+    }
+    currentSum += b.chapters;
+  }
+  return 1;
+}
+
 export type PathId = 'chronological' | 'thematic' | 'genre' | 'entire';
 
 export function getPlanDays(path: PathId): number[] {
