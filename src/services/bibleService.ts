@@ -120,60 +120,6 @@ function normalizeForABS(reference: string): string {
 import { getLocalStepBiblePassage, STEPBIBLE_DB } from "@/lib/stepbible-database";
 
 export async function getScripture(reference: string, versionId: string): Promise<Scripture> {
-  const cleanRef = reference.replace(/\s+/g, ' ').trim();
-  const hasPreCoded = !!(STEPBIBLE_DB[cleanRef] || Object.keys(STEPBIBLE_DB).find(k => k.startsWith(cleanRef) || cleanRef.startsWith(k)));
-
-  if (hasPreCoded) {
-    try {
-      const passage = getLocalStepBiblePassage(reference);
-      if (passage && passage.verses && passage.verses.length > 0) {
-        const textHtml = passage.verses
-          .map(v => {
-            const transText = v.translations[versionId] || v.translations["9879dbb7aec41528-01"] || "";
-            return `<sup>${v.verseNumber}</sup>${transText}`;
-          })
-          .join(" ");
-        return {
-          reference: passage.reference,
-          text: textHtml,
-          version: versionId,
-          translation_name: SUPPORTED_VERSIONS.find(sv => sv.id === versionId)?.name || versionId
-        };
-      }
-    } catch (dbErr) {
-      console.warn("Offline database fetch failed, trying API:", dbErr);
-    }
-  }
-
-  // Fallback to fetch from API
-  try {
-    const passageId = normalizeForABS(reference);
-    const response = await fetch(`/api/bible?versionId=${versionId}&passageId=${passageId}&originalRef=${encodeURIComponent(reference)}`);
-
-    if (response.ok) {
-      const json = await response.json();
-      if (json.data && json.data.content) {
-        return {
-          reference: json.data.reference,
-          text: json.data.content,
-          version: versionId,
-          translation_name: json.data.bibleId
-        };
-      }
-      if (json.text && json.reference) {
-        return {
-          reference: json.reference,
-          text: json.text,
-          version: versionId,
-          translation_name: json.translation_name
-        };
-      }
-    }
-  } catch (apiErr) {
-    console.warn("API fetch failed, falling back to local database generation:", apiErr);
-  }
-
-  // Ultimate fallback to local database generator
   const passage = getLocalStepBiblePassage(reference);
   const textHtml = passage.verses
     .map(v => {
